@@ -1,0 +1,4 @@
+Running: xsim.dir/PmodOLEDCtrl_behav/xsimk.exe -simmode gui -wdb PmodOLEDCtrl_behav.wdb -simrunnum 0 -socket 51131
+Design successfully loaded
+Design Loading Memory Usage: 24072 KB (Peak: 24072 KB)
+Design Loading CPU Usage: 155 ms

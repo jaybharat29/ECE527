@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1433184496">
+  <File Type="OPT-DCP" Name="PmodOLEDCtrl_opt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="PWROPT-DCP" Name="PmodOLEDCtrl_pwropt.dcp"/>
+  <File Type="ROUTE-DCP" Name="PmodOLEDCtrl_routed.dcp"/>
+  <File Type="PA-TCL" Name="PmodOLEDCtrl.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="PmodOLEDCtrl_drc_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="PmodOLEDCtrl_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="PmodOLEDCtrl.hwdef"/>
+  <File Type="PLACE-DCP" Name="PmodOLEDCtrl_placed.dcp"/>
+  <File Type="PLACE-IO" Name="PmodOLEDCtrl_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="PmodOLEDCtrl_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="PmodOLEDCtrl_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="PmodOLEDCtrl_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="PmodOLEDCtrl_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="PmodOLEDCtrl_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="PmodOLEDCtrl_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="PmodOLEDCtrl_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="PmodOLEDCtrl_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="PmodOLEDCtrl.vdi"/>
+  <File Type="PHYSOPT-DRC" Name="PmodOLEDCtrl_drc_physopted.rpt"/>
+  <File Type="ROUTE-DRC" Name="PmodOLEDCtrl_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="PmodOLEDCtrl_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="PmodOLEDCtrl_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="PmodOLEDCtrl_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="PmodOLEDCtrl_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="PmodOLEDCtrl_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="PmodOLEDCtrl_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="PmodOLEDCtrl_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="PmodOLEDCtrl_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="PmodOLEDCtrl_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="PmodOLEDCtrl_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="PmodOLEDCtrl_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="PmodOLEDCtrl_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="PmodOLEDCtrl_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="PmodOLEDCtrl_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="PmodOLEDCtrl.bit"/>
+  <File Type="BG-BIN" Name="PmodOLEDCtrl.bin"/>
+  <File Type="BITSTR-MSK" Name="PmodOLEDCtrl.msk"/>
+  <File Type="BITSTR-RBT" Name="PmodOLEDCtrl.rbt"/>
+  <File Type="BITSTR-NKY" Name="PmodOLEDCtrl.nky"/>
+  <File Type="BITSTR-BMM" Name="PmodOLEDCtrl_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="PmodOLEDCtrl.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="PmodOLEDCtrl.sysdef"/>
+  <File Type="BG-BGN" Name="PmodOLEDCtrl.bgn"/>
+  <File Type="BG-DRC" Name="PmodOLEDCtrl.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/SpiCtrl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ISE/PmodOLED_Source/SpiCtrl.vhd"/>
+        <Attr Name="ImportTime" Val="1320101068"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/Delay.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ISE/PmodOLED_Source/Delay.vhd"/>
+        <Attr Name="ImportTime" Val="1319793102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OledInit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ISE/PmodOLED_Source/OledInit.vhd"/>
+        <Attr Name="ImportTime" Val="1320105312"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OledExample.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ISE/PmodOLED_Source/OledExample.vhd"/>
+        <Attr Name="ImportTime" Val="1320104018"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ISE/PmodOLED_Source/PmodOLEDCtrl.vhd"/>
+        <Attr Name="ImportTime" Val="1320104786"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/charLib.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ISE/14/PmodOLED_Source/charLib.mif"/>
+        <Attr Name="ImportTime" Val="1319086474"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_v6_3/blk_mem_gen_v6_3.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/ip/charLib/charLib.upgrade_log"/>
+    <File Path="$PSRCDIR/characterLib.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../ISE/14/PmodOLED_Source/charLib.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="PmodOLEDCtrl"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/XDC/Nexys4_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../XDC/Nexys4_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1425007810"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="charLib"/>
+</GenRun>

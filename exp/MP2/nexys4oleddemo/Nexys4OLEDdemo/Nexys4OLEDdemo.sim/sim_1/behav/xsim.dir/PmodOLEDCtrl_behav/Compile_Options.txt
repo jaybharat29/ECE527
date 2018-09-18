@@ -1,0 +1,1 @@
+-wto "c288fe6717dd4fe28ad1cb931fab8921" --debug "typical" --relax --mt "2" -L "blk_mem_gen_v8_2" -L "xil_defaultlib" -L "secureip" --snapshot "PmodOLEDCtrl_behav" "xil_defaultlib.PmodOLEDCtrl" -log "elaborate.log" 

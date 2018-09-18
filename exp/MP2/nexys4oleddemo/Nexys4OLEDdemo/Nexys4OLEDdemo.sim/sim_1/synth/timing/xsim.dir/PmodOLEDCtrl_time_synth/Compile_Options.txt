@@ -1,0 +1,1 @@
+-wto "c288fe6717dd4fe28ad1cb931fab8921" --debug "typical" --relax --mt "2" --maxdelay -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "PmodOLEDCtrl_time_synth" -transport_int_delays -pulse_r "0" -pulse_int_r "0" "xil_defaultlib.PmodOLEDCtrl" "xil_defaultlib.glbl" -log "elaborate.log" 
