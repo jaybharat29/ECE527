@@ -1,0 +1,669 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 296.980 ; gain = 16.824
+Command: synth_design -top design_1_wrapper -part xc7z020clg484-1
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/ip/charLib/charLib.xci
+
+INFO: [IP_Flow 19-2162] IP 'charLib' is locked:
+* IP definition 'Block Memory Generator (8.2)' for IP 'charLib' (customized with software release 2015.1) has a newer minor version in the IP Catalog.
+* Current project part 'xc7z020clg484-1' and the part 'xc7a100tcsg324-1' used to customize the IP 'charLib' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9768 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 411.453 ; gain = 103.063
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'wrapper' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/new/wrapper.sv:23]
+WARNING: [Synth 8-567] referenced signal 'reset' should be on the sensitivity list [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/new/wrapper.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'wrapper' (1#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/new/wrapper.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (2#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_blk_mem_gen_0_0' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_blk_mem_gen_0_0' (3#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_1' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_processing_system7_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_1' (4#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_processing_system7_0_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_1_processing_system7_0_1' requires 68 connections, but only 63 given [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:189]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:325]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:630]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (5#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_0' requires 59 connections, but only 57 given [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:865]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (6#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:630]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (7#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:325]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (8#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:315]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (9#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+WARNING: [Synth 8-350] instance 'design_1_i' of module 'design_1' requires 27 connections, but only 5 given [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/imports/hdl/design_1_wrapper.v:50]
+INFO: [Synth 8-638] synthesizing module 'PmodOLEDCtrl' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.vhd:33]
+INFO: [Synth 8-3491] module 'OledInit' declared at 'C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledInit.vhd:19' bound to instance 'Init' of component 'OledInit' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'OledInit' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledInit.vhd:33]
+INFO: [Synth 8-3491] module 'SpiCtrl' declared at 'C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.vhd:21' bound to instance 'SPI_COMP' of component 'SpiCtrl' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledInit.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (10#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.vhd:32]
+INFO: [Synth 8-3491] module 'Delay' declared at 'C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/Delay.vhd:19' bound to instance 'DELAY_COMP' of component 'Delay' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledInit.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'Delay' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/Delay.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Delay' (11#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/Delay.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'OledInit' (12#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledInit.vhd:33]
+INFO: [Synth 8-3491] module 'OledEx' declared at 'C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledExample.vhd:23' bound to instance 'Example' of component 'OledEx' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'OledEx' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledExample.vhd:35]
+INFO: [Synth 8-3491] module 'SpiCtrl' declared at 'C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/SpiCtrl.vhd:21' bound to instance 'SPI_COMP' of component 'SpiCtrl' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledExample.vhd:157]
+INFO: [Synth 8-3491] module 'Delay' declared at 'C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/Delay.vhd:19' bound to instance 'DELAY_COMP' of component 'Delay' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledExample.vhd:168]
+INFO: [Synth 8-3491] module 'charLib' declared at 'C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/charLib_stub.v:7' bound to instance 'CHAR_LIB_COMP' of component 'charLib' [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledExample.vhd:176]
+INFO: [Synth 8-6157] synthesizing module 'charLib' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/charLib_stub.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'charLib' (13#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/.Xil/Vivado-4844-Jay/realtime/charLib_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'OledEx' (14#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/OledExample.vhd:35]
+INFO: [Synth 8-226] default block is never used [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.vhd:112]
+INFO: [Synth 8-256] done synthesizing module 'PmodOLEDCtrl' (15#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/nexys4oleddemo/Nexys4OLEDdemo/Nexys4OLEDdemo.srcs/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.vhd:33]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (16#1) [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ARESETN
+WARNING: [Synth 8-3331] design wrapper has unconnected port clk
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 476.332 ; gain = 167.941
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[4] to constant 0 [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/imports/hdl/design_1_wrapper.v:50]
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[3] to constant 0 [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/imports/hdl/design_1_wrapper.v:50]
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[2] to constant 0 [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/imports/hdl/design_1_wrapper.v:50]
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[1] to constant 0 [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/imports/hdl/design_1_wrapper.v:50]
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[0] to constant 0 [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/imports/hdl/design_1_wrapper.v:50]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 476.332 ; gain = 167.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 476.332 ; gain = 167.941
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_in_context.xdc] for cell 'design_1_i/blk_mem_gen_0'
+Finished Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_in_context.xdc] for cell 'design_1_i/blk_mem_gen_0'
+Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_1/design_1_processing_system7_0_1/design_1_processing_system7_0_1_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Finished Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_1/design_1_processing_system7_0_1/design_1_processing_system7_0_1_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Finished Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
+Finished Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
+Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/constrs_1/new/part1.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/constrs_1/new/part1.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/constrs_1/new/part1.xdc:15]
+Finished Parsing XDC File [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/constrs_1/new/part1.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/constrs_1/new/part1.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/constrs_1/new/part1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 846.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 846.602 ; gain = 538.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 846.602 ; gain = 538.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for P1/Example/CHAR_LIB_COMP. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 846.602 ; gain = 538.211
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SpiCtrl'
+INFO: [Synth 8-5544] ROM "SPI_FIN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "counter" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "shift_counter" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Delay'
+INFO: [Synth 8-5544] ROM "ms_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "temp_delay_ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FIN" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "after_page_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "after_char_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'PmodOLEDCtrl'
+INFO: [Synth 8-5544] ROM "init_en" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "example_en" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'addra_0_reg' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/new/wrapper.sv:36]
+WARNING: [Synth 8-327] inferring latch for variable 'dina_0_reg' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/new/wrapper.sv:35]
+WARNING: [Synth 8-327] inferring latch for variable 'BRAM_PORTA_0_we_reg' [C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/new/wrapper.sv:34]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                    send |                              001 |                              001
+                   hold1 |                              010 |                              010
+                   hold2 |                              011 |                              011
+                   hold3 |                              100 |                              100
+                   hold4 |                              101 |                              101
+                    done |                              110 |                              110
+                  iSTATE |                              111 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SpiCtrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+                    hold |                             0010 |                               01
+                    done |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'Delay'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+          oledinitialize |                             0010 |                               01
+             oledexample |                             0100 |                               10
+                    done |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'PmodOLEDCtrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 846.602 ; gain = 538.211
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 69    
+	                5 Bit    Registers := 9     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	  30 Input     12 Bit        Muxes := 1     
+	  30 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  28 Input      8 Bit        Muxes := 1     
+	  30 Input      8 Bit        Muxes := 65    
+	   4 Input      8 Bit        Muxes := 16    
+	   2 Input      7 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 1     
+	  30 Input      5 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 5     
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	  30 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 30    
+	   8 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+	  28 Input      1 Bit        Muxes := 10    
+	  30 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SpiCtrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   8 Input      1 Bit        Muxes := 1     
+Module Delay 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module OledInit 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	  28 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 1     
+	  28 Input      1 Bit        Muxes := 10    
+Module OledEx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 66    
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  30 Input     12 Bit        Muxes := 1     
+	  30 Input     11 Bit        Muxes := 1     
+	  30 Input      8 Bit        Muxes := 65    
+	   4 Input      8 Bit        Muxes := 16    
+	  30 Input      5 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  30 Input      2 Bit        Muxes := 1     
+	  30 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 2     
+Module PmodOLEDCtrl 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[0]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[1]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[2]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[3]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[4]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[5]' (LD) to 'w1/dina_0_reg[13]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[6]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[7]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[8]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[9]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[10]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[11]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[12]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[13]' (LD) to 'w1/dina_0_reg[21]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[14]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[15]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[16]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[17]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[18]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[19]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[20]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[21]' (LD) to 'w1/dina_0_reg[29]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[22]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[23]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[24]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[25]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[26]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[27]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[28]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[29]' (LD) to 'w1/dina_0_reg[37]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[30]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[31]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[32]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[33]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[34]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[35]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[36]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[37]' (LD) to 'w1/dina_0_reg[45]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[38]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[39]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[40]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[41]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[42]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[43]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[44]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[45]' (LD) to 'w1/dina_0_reg[53]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[46]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[47]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[48]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[49]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[50]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[51]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[52]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[53]' (LD) to 'w1/dina_0_reg[61]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[54]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[55]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[56]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[57]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[58]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[59]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[60]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[61]' (LD) to 'w1/dina_0_reg[69]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[62]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[63]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[64]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[65]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[66]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[67]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[68]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[69]' (LD) to 'w1/dina_0_reg[77]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[70]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[71]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[72]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[73]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[74]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[75]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[76]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[77]' (LD) to 'w1/dina_0_reg[85]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[78]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[79]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[80]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[81]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[82]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[83]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[84]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[85]' (LD) to 'w1/dina_0_reg[93]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[86]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[87]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[88]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[89]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[90]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[91]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[92]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[93]' (LD) to 'w1/dina_0_reg[101]'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[94]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[95]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[96]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[97]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[98]' (LD) to 'w1/addra_0_reg'
+INFO: [Synth 8-3886] merging instance 'w1/dina_0_reg[99]' (LD) to 'w1/addra_0_reg'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\w1/dina_0_reg[510] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\w1/addra_0_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\P1/Example/temp_delay_ms_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\P1/Example/temp_delay_ms_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\P1/Example/after_char_state_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\P1/Init/temp_dc_reg )
+WARNING: [Synth 8-3332] Sequential element (w1/addra_0_reg) is unused and will be removed from module design_1_wrapper.
+WARNING: [Synth 8-3332] Sequential element (w1/dina_0_reg[510]) is unused and will be removed from module design_1_wrapper.
+WARNING: [Synth 8-3332] Sequential element (P1/Init/temp_dc_reg) is unused and will be removed from module design_1_wrapper.
+WARNING: [Synth 8-3332] Sequential element (P1/Example/after_char_state_reg[1]) is unused and will be removed from module design_1_wrapper.
+WARNING: [Synth 8-3332] Sequential element (P1/Example/temp_delay_ms_reg[9]) is unused and will be removed from module design_1_wrapper.
+WARNING: [Synth 8-3332] Sequential element (P1/Example/temp_delay_ms_reg[4]) is unused and will be removed from module design_1_wrapper.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 846.602 ; gain = 538.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-----------------+-----------------------+---------------+----------------+
+|Module Name      | RTL Object            | Depth x Width | Implemented As | 
++-----------------+-----------------------+---------------+----------------+
+|OledInit         | after_state           | 32x1          | LUT            | 
+|OledInit         | after_state           | 32x5          | LUT            | 
+|OledInit         | temp_spi_data         | 32x1          | LUT            | 
+|OledEx           | after_state           | 32x1          | LUT            | 
+|OledEx           | temp_addr             | 32x1          | LUT            | 
+|OledEx           | after_state           | 32x1          | LUT            | 
+|OledEx           | temp_addr             | 32x1          | LUT            | 
+|design_1_wrapper | P1/Init/after_state   | 32x5          | LUT            | 
+|design_1_wrapper | P1/Init/after_state   | 32x1          | LUT            | 
+|design_1_wrapper | P1/Init/temp_spi_data | 32x1          | LUT            | 
++-----------------+-----------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_system7_0/FCLK_CLK0' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 846.602 ; gain = 538.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 846.602 ; gain = 538.211
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 861.332 ; gain = 552.941
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin design_1_i:btns_5bits_tri_i[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 861.332 ; gain = 552.941
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 861.332 ; gain = 552.941
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 861.332 ; gain = 552.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 861.332 ; gain = 552.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 861.332 ; gain = 552.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 861.332 ; gain = 552.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |design_1_auto_pc_0              |         1|
+|2     |design_1_axi_gpio_0_0           |         1|
+|3     |design_1_blk_mem_gen_0_0        |         1|
+|4     |design_1_processing_system7_0_1 |         1|
+|5     |design_1_rst_ps7_0_100M_0       |         1|
+|6     |charLib                         |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |charLib                         |     1|
+|2     |design_1_auto_pc_0              |     1|
+|3     |design_1_axi_gpio_0_0           |     1|
+|4     |design_1_blk_mem_gen_0_0        |     1|
+|5     |design_1_processing_system7_0_1 |     1|
+|6     |design_1_rst_ps7_0_100M_0       |     1|
+|7     |BUFG                            |     1|
+|8     |CARRY4                          |    18|
+|9     |LUT1                            |    14|
+|10    |LUT2                            |   534|
+|11    |LUT3                            |    33|
+|12    |LUT4                            |   285|
+|13    |LUT5                            |   103|
+|14    |LUT6                            |    58|
+|15    |MUXF7                           |    34|
+|16    |FDRE                            |   668|
+|17    |FDSE                            |    44|
+|18    |IBUF                            |     2|
+|19    |OBUF                            |     7|
++------+--------------------------------+------+
+
+Report Instance Areas: 
++------+---------------------+----------------------------+------+
+|      |Instance             |Module                      |Cells |
++------+---------------------+----------------------------+------+
+|1     |top                  |                            |  2738|
+|2     |  design_1_i         |design_1                    |   929|
+|3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |   177|
+|4     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   177|
+|5     |  P1                 |PmodOLEDCtrl                |  1799|
+|6     |    Example          |OledEx                      |  1629|
+|7     |      DELAY_COMP     |Delay_0                     |    57|
+|8     |      SPI_COMP       |SpiCtrl_1                   |    51|
+|9     |    Init             |OledInit                    |   166|
+|10    |      DELAY_COMP     |Delay                       |    61|
+|11    |      SPI_COMP       |SpiCtrl                     |    52|
++------+---------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 861.332 ; gain = 552.941
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 861.332 ; gain = 182.672
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 861.332 ; gain = 552.941
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'design_1_wrapper' is not ideal for floorplanning, since the cellview 'OledEx' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+178 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 861.332 ; gain = 564.352
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.075 . Memory (MB): peak = 861.332 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 21 15:55:48 2018...
