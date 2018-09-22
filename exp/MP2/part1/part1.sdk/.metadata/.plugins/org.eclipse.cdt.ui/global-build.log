@@ -1,0 +1,1365 @@
+16:06:31 **** Build of project exp_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/pspl_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/pspl_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/pspl_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/pspl_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling pspl..."
+pspl_selftest.c: In function 'PSPL_Reg_SelfTest':
+pspl_selftest.c:52:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( PSPL_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                     ^~
+pspl_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:07:11 **** Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19352	   1144	  22568	  43064	   a838	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:07:33 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../exp_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\Users\Patel\Downloads\ECE527\exp\MP2\part1\part1.sdk\exp_bsp\ps7_cortexa9_0\libsrc\standalone_v6_7\src/xil-crt0.S:142: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [exp.elf] Error 1
+16:15:40 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:1: error: expected ';' before '}' token
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+16:15:42 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72640	   2576	  23328	  98544	  180f0	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:15:52 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:16:10 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:25:02 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:20: error: invalid suffix "_0000" on integer constant
+  PSPL_Reg_SelfTest(0x43C0_0000);
+                    ^~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+16:25:21 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: error: invalid suffix "_0000" on integer constant
+  void * addr = 0x43C0_0000;
+                ^~~~~~~~~~~
+../src/helloworld.c:66:20: error: invalid suffix "_0000" on integer constant
+  PSPL_Reg_SelfTest(0x43C0_0000);
+                    ^~~~~~~~~~~
+../src/helloworld.c:65:9: warning: unused variable 'addr' [-Wunused-variable]
+  void * addr = 0x43C0_0000;
+         ^~~~
+make: *** [src/helloworld.o] Error 1
+16:25:28 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:66:2: error: too few arguments to function 'PSPL_Reg_SelfTest'
+  PSPL_Reg_SelfTest();
+  ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:31:9: note: declared here
+ XStatus PSPL_Reg_SelfTest(void * baseaddr_p)
+         ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:65:9: warning: unused variable 'addr' [-Wunused-variable]
+  void * addr = 0x43C00000;
+         ^~~~
+make: *** [src/helloworld.o] Error 1
+16:25:31 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35016	   2184	  22632	  59832	   e9b8	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:25:42 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:33:54 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:67:2: error: expected ',' or ';' before 'PSPL_Reg_SelfTest'
+  PSPL_Reg_SelfTest(addr);
+  ^~~~~~~~~~~~~~~~~
+In file included from ../src/helloworld.c:3:0:
+../src/helloworld.c:68:77: error: 'Dat' undeclared (first use in this function)
+  PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG0_OFFSET, Dat)
+                                                                             ^
+../../exp_bsp/ps7_cortexa9_0/include/pspl.h:47:49: note: in definition of macro 'PSPL_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                                                 ^~~~
+../src/helloworld.c:68:77: note: each undeclared identifier is reported only once for each function it appears in
+  PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG0_OFFSET, Dat)
+                                                                             ^
+../../exp_bsp/ps7_cortexa9_0/include/pspl.h:47:49: note: in definition of macro 'PSPL_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                                                 ^~~~
+../src/helloworld.c:69:1: error: expected ';' before '}' token
+ }
+ ^
+../src/helloworld.c:66:6: warning: unused variable 'jay' [-Wunused-variable]
+  int jay = 0x4A415920
+      ^~~
+../src/helloworld.c:65:9: warning: unused variable 'addr' [-Wunused-variable]
+  void * addr = 0x43C00000;
+         ^~~~
+make: *** [src/helloworld.o] Error 1
+16:34:02 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:67:2: error: expected ',' or ';' before 'PSPL_Reg_SelfTest'
+  PSPL_Reg_SelfTest(addr);
+  ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:65:9: warning: unused variable 'addr' [-Wunused-variable]
+  void * addr = 0x43C00000;
+         ^~~~
+make: *** [src/helloworld.o] Error 1
+16:34:07 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35080	   2184	  22632	  59896	   e9f8	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:34:21 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35080	   2184	  22632	  59896	   e9f8	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:36:05 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35400	   2184	  22632	  60216	   eb38	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:36:13 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:43:31 **** Clean-only build of configuration Debug for project exp ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  exp.elf.size  exp.elf
+' '
+16:43:32 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35400	   2184	  22632	  60216	   eb38	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:43:47 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:45:53 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:46:17 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:46:41 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35400	   2392	  22632	  60424	   ec08	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:50:41 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35464	   2392	  22632	  60488	   ec48	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:54:44 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:88:0: error: unterminated argument list invoking macro "PSPL_mWriteReg"
+ }
+ 
+../src/helloworld.c:70:2: error: 'PSPL_mWriteReg' undeclared (first use in this function)
+  PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG1_OFFSET, testvector[0][4]<<24|testvector[0][3]<<16|testvector[0][2]<<8|testvector[0][1]);
+  ^~~~~~~~~~~~~~
+../src/helloworld.c:70:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:70:2: error: expected ';' at end of input
+../src/helloworld.c:70:2: error: expected declaration or statement at end of input
+../src/helloworld.c:67:6: warning: unused variable 'jay' [-Wunused-variable]
+  int jay = 0x4A415920;
+      ^~~
+make: *** [src/helloworld.o] Error 1
+16:55:45 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:87:0: error: unterminated argument list invoking macro "PSPL_mWriteReg"
+ }
+ 
+../src/helloworld.c:69:2: error: 'PSPL_mWriteReg' undeclared (first use in this function)
+  PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG1_OFFSET, testvector[0][4]<<24|testvector[0][3]<<16|testvector[0][2]<<8|testvector[0][1]);
+  ^~~~~~~~~~~~~~
+../src/helloworld.c:69:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:69:2: error: expected ';' at end of input
+../src/helloworld.c:69:2: error: expected declaration or statement at end of input
+make: *** [src/helloworld.o] Error 1
+16:56:09 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36424	   2392	  22632	  61448	   f008	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:56:43 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:58:04 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35144	   2392	  22632	  60168	   eb08	exp.elf
+'Finished building: exp.elf.size'
+' '
+16:58:06 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:00:32 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35464	   2392	  22632	  60488	   ec48	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:00:48 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35464	   2392	  22632	  60488	   ec48	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:01:30 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35464	   2392	  22632	  60488	   ec48	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:01:32 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:03:41 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36424	   2392	  22632	  61448	   f008	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:03:44 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:09:16 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:37:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36424	   2392	  22632	  61448	   f008	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:09:19 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:11:33 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:38:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:67:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:70:6: error: expected expression before ')' token
+   if()
+      ^
+make: *** [src/helloworld.o] Error 1
+17:14:38 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:71:6: error: expected expression before ')' token
+   if()
+      ^
+make: *** [src/helloworld.o] Error 1
+17:15:48 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:71:29: error: 'Gpio' undeclared (first use in this function); did you mean 'XGpio'?
+  Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+                             ^~~~
+                             XGpio
+../src/helloworld.c:71:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:76:32: error: 'BTNS' undeclared (first use in this function)
+  XGpio_SetDataDirection(&Gpio, BTNS, 255);
+                                ^~~~
+../src/helloworld.c:78:6: error: expected expression before ')' token
+   if()
+      ^
+make: *** [src/helloworld.o] Error 1
+17:16:06 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:78:32: error: 'BTNS' undeclared (first use in this function)
+  XGpio_SetDataDirection(&Gpio, BTNS, 255);
+                                ^~~~
+../src/helloworld.c:78:32: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:80:6: error: expected expression before ')' token
+   if()
+      ^
+make: *** [src/helloworld.o] Error 1
+17:16:22 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:80:6: error: expected expression before ')' token
+   if()
+      ^
+make: *** [src/helloworld.o] Error 1
+17:16:47 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:80:32: error: 'SW_CHANNEL' undeclared (first use in this function); did you mean 'BTNS_CHANNEL'?
+   if(XGpio_DiscreteRead(&Gpio, SW_CHANNEL))
+                                ^~~~~~~~~~
+                                BTNS_CHANNEL
+../src/helloworld.c:80:32: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:81:2: error: expected expression before '}' token
+  }
+  ^
+make: *** [src/helloworld.o] Error 1
+17:17:04 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:81:2: error: expected expression before '}' token
+  }
+  ^
+make: *** [src/helloworld.o] Error 1
+17:17:21 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36436	   2408	  22664	  61508	   f044	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:19:43 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:79:6: warning: unused variable 'cur_number' [-Wunused-variable]
+  int cur_number = 0;
+      ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36436	   2408	  22664	  61508	   f044	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:19:47 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:79:6: warning: unused variable 'cur_number' [-Wunused-variable]
+  int cur_number = 0;
+      ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37844	   2408	  22664	  62916	   f5c4	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:20:24 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37844	   2408	  22664	  62916	   f5c4	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:21:40 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  38932	   2408	  22664	  64004	   fa04	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:21:48 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:22:39 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:100:4: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+    usleep(1000000);
+    ^~~~~~
+    fseek
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39124	   2408	  22664	  64196	   fac4	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:22:42 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:39:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:100:4: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+    usleep(10000000);
+    ^~~~~~
+    fseek
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39124	   2408	  22664	  64196	   fac4	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:23:11 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:40:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39124	   2408	  22664	  64196	   fac4	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:23:14 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:26:10 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:40:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39252	   2408	  22664	  64324	   fb44	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:26:13 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:28:17 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:32:08 **** Incremental Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:34:03 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:41:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39252	   2408	  22664	  64324	   fb44	exp.elf
+'Finished building: exp.elf.size'
+' '
+17:34:33 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:41:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+../src/helloworld.c:83:67: error: 'MAX_SENTENCE' undeclared (first use in this function); did you mean 'MAX_SENTENCES'?
+   if(XGpio_DiscreteRead(&Gpio, BTNS_CHANNEL) == 8 && cur_number < MAX_SENTENCE)
+                                                                   ^~~~~~~~~~~~
+                                                                   MAX_SENTENCES
+../src/helloworld.c:83:67: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+17:34:37 **** Auto Build of configuration Debug for project exp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../exp_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'PSPL_Reg_SelfTest':
+../src/helloworld.c:41:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  void * addr = 0x43C00000;
+                ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: exp.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../exp_bsp/ps7_cortexa9_0/lib -o "exp.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: exp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size exp.elf  |tee "exp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39316	   2408	  22664	  64388	   fb84	exp.elf
+'Finished building: exp.elf.size'
+' '

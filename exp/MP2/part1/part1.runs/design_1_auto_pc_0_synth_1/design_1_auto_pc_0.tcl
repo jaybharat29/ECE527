@@ -18,6 +18,10 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z020clg484-1
@@ -32,6 +36,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
+set_property ip_repo_paths {
+  c:/Users/Patel/Downloads/ECE527/exp/MP2/ip_repo/pspl_1.0
+  c:/Users/Patel/Downloads/ECE527/exp/MP2/ip_repo/ps-pl_1.0
+} [current_project]
 set_property ip_output_repo c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet c:/Users/Patel/Downloads/ECE527/exp/MP2/part1/part1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci

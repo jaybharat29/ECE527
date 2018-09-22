@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Sep 21 15:34:31 2018
+//Date        : Sat Sep 22 15:34:19 2018
 //Host        : Jay running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -10,9 +10,7 @@
 `timescale 1 ps / 1 ps
 
 module design_1_wrapper
-   (BRAM_PORTA_0_dout,
-    BRAM_PORTA_0_we,
-    DDR_addr,
+   (DDR_addr,
     DDR_ba,
     DDR_cas_n,
     DDR_ck_n,
@@ -33,12 +31,14 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    GPIO2_0_tri_o,
     addra_0,
     btns_5bits_tri_i,
     clka_0,
-    dina_0);
-  output [511:0]BRAM_PORTA_0_dout;
-  input [0:0]BRAM_PORTA_0_we;
+    data_pmod_0,
+    dina_0,
+    douta_0,
+    wea_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -60,13 +60,15 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  output [31:0]GPIO2_0_tri_o;
   input [0:0]addra_0;
   input [4:0]btns_5bits_tri_i;
   input clka_0;
+  output [511:0]data_pmod_0;
   input [511:0]dina_0;
+  output [511:0]douta_0;
+  input [0:0]wea_0;
 
-  wire [511:0]BRAM_PORTA_0_dout;
-  wire [0:0]BRAM_PORTA_0_we;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -88,15 +90,17 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [31:0]GPIO2_0_tri_o;
   wire [0:0]addra_0;
   wire [4:0]btns_5bits_tri_i;
   wire clka_0;
+  wire [511:0]data_pmod_0;
   wire [511:0]dina_0;
+  wire [511:0]douta_0;
+  wire [0:0]wea_0;
 
   design_1 design_1_i
-       (.BRAM_PORTA_0_dout(BRAM_PORTA_0_dout),
-        .BRAM_PORTA_0_we(BRAM_PORTA_0_we),
-        .DDR_addr(DDR_addr),
+       (.DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
         .DDR_ck_n(DDR_ck_n),
@@ -117,8 +121,12 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .GPIO2_0_tri_o(GPIO2_0_tri_o),
         .addra_0(addra_0),
         .btns_5bits_tri_i(btns_5bits_tri_i),
         .clka_0(clka_0),
-        .dina_0(dina_0));
+        .data_pmod_0(data_pmod_0),
+        .dina_0(dina_0),
+        .douta_0(douta_0),
+        .wea_0(wea_0));
 endmodule

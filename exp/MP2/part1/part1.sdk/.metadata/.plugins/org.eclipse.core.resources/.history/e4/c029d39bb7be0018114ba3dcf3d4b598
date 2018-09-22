@@ -1,0 +1,111 @@
+
+/***************************** Include Files *******************************/
+#include "pspl.h"
+#include "xparameters.h"
+#include "stdio.h"
+#include "xil_io.h"
+#include "testvector.h"
+#include "xgpio.h"
+#include "unistd.h"
+
+/************************** Constant Definitions ***************************/
+#define READ_WRITE_MUL_FACTOR 0x10
+#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+#define BTNS_CHANNEL 1
+/************************** Function Definitions ***************************/
+/**
+ *
+ * Run a self-test on the driver/device. Note this may be a destructive test if
+ * resets of the device are performed.
+ *
+ * If the hardware system is not built correctly, this function may never
+ * return to the caller.
+ *
+ * @param   baseaddr_p is the base address of the PSPLinstance to be worked on.
+ *
+ * @return
+ *
+ *    - XST_SUCCESS   if all self-test code passed
+ *    - XST_FAILURE   if any self-test code failed
+ *
+ * @note    Caching must be turned off for this function to work.
+ * @note    Self test may fail if data memory and device are not on the same bus.
+ *
+ */
+XStatus PSPL_Reg_SelfTest(void * baseaddr_p)
+{
+	u32 baseaddr;
+	int write_loop_index;
+	int read_loop_index;
+	int Index;
+
+	baseaddr = (u32) baseaddr_p;
+
+	xil_printf("******************************\n\r");
+	xil_printf("* User Peripheral Self Test\n\r");
+	xil_printf("******************************\n\n\r");
+
+	/*
+	 * Write to user logic slave module register(s) and read back
+	 */
+	xil_printf("User logic slave module test...\n\r");
+
+	for (write_loop_index = 0 ; write_loop_index < 4; write_loop_index++)
+	  PSPL_mWriteReg (baseaddr, write_loop_index*4, (write_loop_index+1)*READ_WRITE_MUL_FACTOR);
+	for (read_loop_index = 0 ; read_loop_index < 4; read_loop_index++)
+	  if ( PSPL_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+	    xil_printf ("Error reading register value at address %x\n", (int)baseaddr + read_loop_index*4);
+	    return XST_FAILURE;
+	  }
+
+	xil_printf("   - slave register write/read passed\n\n\r");
+
+	return XST_SUCCESS;
+}
+
+XGpio Gpio;
+
+int main()
+{
+	printf("Jay\n");
+	void * addr = 0x43C00000;
+	PSPL_Reg_SelfTest(addr);
+	int Status;
+	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+		if (Status != XST_SUCCESS) {
+			xil_printf("Gpio Initialization Failed\r\n");
+			return XST_FAILURE;
+		}
+	XGpio_SetDataDirection(&Gpio, BTNS_CHANNEL, 255);
+	int cur_number = 0;
+	while(1){
+		if(XGpio_DiscreteRead(&Gpio, BTNS_CHANNEL) == 8)
+		{
+			print("Reset was pressed\n");
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG15_OFFSET, testvector[cur_number][0]<<24|testvector[cur_number][1]<<16|testvector[cur_number][2]<<8|testvector[cur_number][3]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG14_OFFSET, testvector[cur_number][4]<<24|testvector[cur_number][5]<<16|testvector[cur_number][6]<<8|testvector[cur_number][7]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG13_OFFSET, testvector[cur_number][8]<<24|testvector[cur_number][9]<<16|testvector[cur_number][10]<<8|testvector[cur_number][11]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG12_OFFSET, testvector[cur_number][12]<<24|testvector[cur_number][13]<<16|testvector[cur_number][14]<<8|testvector[cur_number][15]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG11_OFFSET, testvector[cur_number][16]<<24|testvector[cur_number][17]<<16|testvector[cur_number][18]<<8|testvector[cur_number][19]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG10_OFFSET, testvector[cur_number][20]<<24|testvector[cur_number][21]<<16|testvector[cur_number][22]<<8|testvector[cur_number][23]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG9_OFFSET, testvector[cur_number][24]<<24|testvector[cur_number][25]<<16|testvector[cur_number][26]<<8|testvector[cur_number][27]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG8_OFFSET, testvector[cur_number][28]<<24|testvector[cur_number][29]<<16|testvector[cur_number][30]<<8|testvector[cur_number][31]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG7_OFFSET, testvector[cur_number][32]<<24|testvector[cur_number][33]<<16|testvector[cur_number][34]<<8|testvector[cur_number][35]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG6_OFFSET, testvector[cur_number][36]<<24|testvector[cur_number][37]<<16|testvector[cur_number][38]<<8|testvector[cur_number][39]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG5_OFFSET, testvector[cur_number][40]<<24|testvector[cur_number][41]<<16|testvector[cur_number][42]<<8|testvector[cur_number][43]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG4_OFFSET, testvector[cur_number][44]<<24|testvector[cur_number][45]<<16|testvector[cur_number][46]<<8|testvector[cur_number][47]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG3_OFFSET, testvector[cur_number][48]<<24|testvector[cur_number][49]<<16|testvector[cur_number][50]<<8|testvector[cur_number][51]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG2_OFFSET, testvector[cur_number][52]<<24|testvector[cur_number][53]<<16|testvector[cur_number][54]<<8|testvector[cur_number][55]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG1_OFFSET, testvector[cur_number][56]<<24|testvector[cur_number][57]<<16|testvector[cur_number][58]<<8|testvector[cur_number][59]);
+			PSPL_mWriteReg(XPAR_PSPL_0_S00_AXI_BASEADDR, PSPL_S00_AXI_SLV_REG0_OFFSET, testvector[cur_number][60]<<24|testvector[cur_number][61]<<16|testvector[cur_number][62]<<8|testvector[cur_number][63]);
+
+			cur_number++;
+			usleep(10000000);
+		}
+	}
+
+
+
+
+
+}

@@ -23,17 +23,27 @@
 module wrapper(
     input clk,
     input reset,
+    input [511:0] data_pmod_0,
     output logic addra_0,
     output logic [511:0] dina_0,
     output logic BRAM_PORTA_0_we
     );
     
-    always@(clk)
+    logic [511:0] rdata_pmod;
+    
+    always@(posedge clk)
     begin
-        if(reset) begin
+        rdata_pmod <= data_pmod_0;
+    end
+    always@(posedge clk)
+    begin
+        BRAM_PORTA_0_we = 0;
+        addra_0 = 0;
+        dina_0 = 0;
+        if(reset)
             BRAM_PORTA_0_we = 1'b1;
-            dina_0 = 512'h504154454c2020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020;
-            addra_0 = 0;
-         end
+            addra_0 = 1'b0;
+            dina_0 = data_pmod_0;
+            
     end
 endmodule
