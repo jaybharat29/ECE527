@@ -1,0 +1,40 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Sep 23 14:42:43 2018
+| Host         : DESKTOP-MMLDFG1 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file partb_methodology_drc_routed.rpt -pb partb_methodology_drc_routed.pb -rpx partb_methodology_drc_routed.rpx
+| Design       : partb
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 1
++----------+----------+-------------------------------------------------+------------+
+| Rule     | Severity | Description                                     | Violations |
++----------+----------+-------------------------------------------------+------------+
+| PDRC-190 | Warning  | Suboptimally placed synchronized register chain | 1          |
++----------+----------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axis_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X45Y24 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell axis_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+

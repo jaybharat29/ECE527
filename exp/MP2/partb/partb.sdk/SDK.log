@@ -1,0 +1,6 @@
+14:56:17 INFO  : Registering command handlers for SDK TCF services
+14:56:19 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP2\partb\partb.sdk\temp_xsdb_launch_script.tcl
+14:56:33 INFO  : XSCT server has started successfully.
+14:56:39 INFO  : Processing command line option -hwspec C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP2/partb/partb.sdk/partb.hdf.
+14:56:39 INFO  : Successfully done setting XSCT server connection channel  
+14:56:39 INFO  : Successfully done setting SDK workspace  
