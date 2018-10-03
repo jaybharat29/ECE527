@@ -1,5 +1,5 @@
-# 1 "unop_mm.cpp"
-# 1 "unop_mm.cpp" 1
+# 1 "PartA/unop_mm.cpp"
+# 1 "PartA/unop_mm.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 152 "<built-in>" 3
@@ -145,20 +145,20 @@ extern "C" {
 }
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "unop_mm.cpp" 2
+# 1 "PartA/unop_mm.cpp" 2
 
 
-void unop_mm(int *A, int *B, int *C,
+void unop_mm(int A[10000], int B[10000], int C[10000],
     int mA, int nA, int mB,
     int nB, int mC, int nC)
-{
+{_ssdm_SpecArrayDimSize(A, 10000);_ssdm_SpecArrayDimSize(B, 10000);_ssdm_SpecArrayDimSize(C, 10000);
  for_c_row : for(int i = 0; i < mC; i++)
  {
   for_c_col : for(int j = 0; j < nC; j++)
   {
    for_common : for(int k = 0; k < nA; k++)
    {
-    C[i][j] += A[i][k]*B[k][j];
+    C[i*nC+j] += A[i*nA+k]*B[k*nB+j];
    }
   }
  }

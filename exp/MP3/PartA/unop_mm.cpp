@@ -1,6 +1,6 @@
 
 
-void unop_mm(int *A, int *B, int *C,
+void unop_mm(int A[10000], int B[10000], int C[10000],
 			 int mA, int nA, int mB,
 			 int nB, int mC, int nC)
 {

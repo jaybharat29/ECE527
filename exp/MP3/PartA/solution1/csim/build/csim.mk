@@ -21,7 +21,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../unop_mm_tb.cpp ../../../gold.cpp ../../../unop_mm.cpp
+HLS_SOURCES = ../../../unop_mm_tb.cpp ../../../gold.cpp ../../../parta1_2.cpp ../../../unop_mm.cpp
 
 TARGET := csim.exe
 
@@ -84,6 +84,12 @@ $(ObjDir)/gold.o: ../../../gold.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/gold.d
+
+$(ObjDir)/parta1_2.o: ../../../parta1_2.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../parta1_2.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/parta1_2.d
 
 $(ObjDir)/unop_mm.o: ../../../unop_mm.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../unop_mm.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

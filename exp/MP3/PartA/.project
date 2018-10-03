@@ -52,6 +52,11 @@
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta.h</location>
 		</link>
 		<link>
+			<name>source/parta1_2.cpp</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta1_2.cpp</location>
+		</link>
+		<link>
 			<name>source/unop_mm.cpp</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm.cpp</location>

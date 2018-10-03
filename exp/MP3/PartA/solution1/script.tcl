@@ -7,6 +7,7 @@ open_project PartA
 set_top unop_mm
 add_files PartA/gold.cpp
 add_files PartA/parta.h
+add_files PartA/parta1_2.cpp
 add_files PartA/unop_mm.cpp
 add_files -tb PartA/unop_mm_tb.cpp
 open_solution "solution1"
