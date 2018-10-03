@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="gold.cpp" path="C:\Users\Patel\Downloads\ECE527\exp\MP3\PartA\gold.cpp"/>
+    <originFiles name="parta.h" path="C:\Users\Patel\Downloads\ECE527\exp\MP3\PartA\parta.h"/>
+    <originFiles name="unop_mm.cpp" path="C:\Users\Patel\Downloads\ECE527\exp\MP3\PartA\unop_mm.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="unop_mm_tb.cpp" path="C:\Users\Patel\Downloads\ECE527\exp\MP3\PartA\unop_mm_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

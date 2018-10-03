@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;unop_mm.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from unop_mm.cpp:1:
+unop_mm.cpp:13:9: error: subscripted value is not an array, pointer, or vector
+    C[i][j] += A[i][k]*B[k][j];
+    ~~~~^~
+unop_mm.cpp:13:20: error: subscripted value is not an array, pointer, or vector
+    C[i][j] += A[i][k]*B[k][j];
+               ~~~~^~
+unop_mm.cpp:13:28: error: subscripted value is not an array, pointer, or vector
+    C[i][j] += A[i][k]*B[k][j];
+                       ~~~~^~
+3 errors generated.\n"/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: Pragma processor failed: In file included from unop_mm.cpp:1:
+unop_mm.cpp:13:9: error: subscripted value is not an array, pointer, or vector
+    C[i][j] += A[i][k]*B[k][j];
+    ~~~~^~
+unop_mm.cpp:13:20: error: subscripted value is not an array, pointer, or vector
+    C[i][j] += A[i][k]*B[k][j];
+               ~~~~^~
+unop_mm.cpp:13:28: error: subscripted value is not an array, pointer, or vector
+    C[i][j] += A[i][k]*B[k][j];
+                       ~~~~^~
+3 errors generated."/>
+</Messages>

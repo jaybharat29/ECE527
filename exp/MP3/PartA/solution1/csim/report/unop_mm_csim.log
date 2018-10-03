@@ -1,0 +1,33 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../unop_mm_tb.cpp in debug mode
+   Generating csim.exe
+Passed for mA = 42, nA = 68, nB = 35, 
+Passed for mA = 42, nA = 68, nB = 25, 
+Passed for mA = 42, nA = 68, nB = 63, 
+Passed for mA = 42, nA = 70, nB = 35, 
+Passed for mA = 42, nA = 70, nB = 25, 
+Passed for mA = 42, nA = 70, nB = 63, 
+Passed for mA = 42, nA = 59, nB = 35, 
+Passed for mA = 42, nA = 59, nB = 25, 
+Passed for mA = 42, nA = 59, nB = 63, 
+Passed for mA = 1, nA = 68, nB = 35, 
+Passed for mA = 1, nA = 68, nB = 25, 
+Passed for mA = 1, nA = 68, nB = 63, 
+Passed for mA = 1, nA = 70, nB = 35, 
+Passed for mA = 1, nA = 70, nB = 25, 
+Passed for mA = 1, nA = 70, nB = 63, 
+Passed for mA = 1, nA = 59, nB = 35, 
+Passed for mA = 1, nA = 59, nB = 25, 
+Passed for mA = 1, nA = 59, nB = 63, 
+Passed for mA = 79, nA = 68, nB = 35, 
+Passed for mA = 79, nA = 68, nB = 25, 
+Passed for mA = 79, nA = 68, nB = 63, 
+Passed for mA = 79, nA = 70, nB = 35, 
+Passed for mA = 79, nA = 70, nB = 25, 
+Passed for mA = 79, nA = 70, nB = 63, 
+Passed for mA = 79, nA = 59, nB = 35, 
+Passed for mA = 79, nA = 59, nB = 25, 
+Passed for mA = 79, nA = 59, nB = 63, 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
