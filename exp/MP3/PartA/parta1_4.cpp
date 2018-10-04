@@ -6,6 +6,7 @@ void parta1_4(int A[100][100], int B[100][100], int C[100][100],
 {
 	for_c_row : for(int i = 0; i < mC; i++)
 	{
+#pragma HLS interface ap_fifo port=C[i]
 		for_c_col : for(int j = 0; j < nC; j++)
 		{
 #pragma HLS interface ap_fifo port=A[i]

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Oct  4 16:04:58 2018
+# Process ID: 11236
+# Current directory: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/parta1_6/xsim_script.tcl}
+# Log file: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/sim/verilog/xsim.log
+# Journal file: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/parta1_6/xsim_script.tcl
+source parta1_6.tcl

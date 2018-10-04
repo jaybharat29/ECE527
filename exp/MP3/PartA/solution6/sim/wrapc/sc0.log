@@ -1,0 +1,11 @@
+   Build using "C:/Xilinx/Vivado/2018.2/msys64/mingw64/bin/g++"
+   Compiling gold.cpp_pre.cpp.tb.cpp
+   Compiling parta1_4.cpp_pre.cpp.tb.cpp
+   Compiling apatb_parta1_6.cpp
+   Compiling parta1_5.cpp_pre.cpp.tb.cpp
+   Compiling parta1_6.cpp_pre.cpp.tb.cpp
+   Compiling unop_mm.cpp_pre.cpp.tb.cpp
+   Compiling parta1_3.cpp_pre.cpp.tb.cpp
+   Compiling parta1_2.cpp_pre.cpp.tb.cpp
+   Compiling unop_mm_tb.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

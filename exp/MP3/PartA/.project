@@ -57,6 +57,16 @@
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/.tcls</location>
 		</link>
 		<link>
+			<name>solution5/constraints</name>
+			<type>2</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/.tcls</location>
+		</link>
+		<link>
+			<name>solution6/constraints</name>
+			<type>2</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/.tcls</location>
+		</link>
+		<link>
 			<name>source/gold.cpp</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/gold.cpp</location>
@@ -80,6 +90,16 @@
 			<name>source/parta1_4.cpp</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta1_4.cpp</location>
+		</link>
+		<link>
+			<name>source/parta1_5.cpp</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta1_5.cpp</location>
+		</link>
+		<link>
+			<name>source/parta1_6.cpp</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta1_6.cpp</location>
 		</link>
 		<link>
 			<name>source/unop_mm.cpp</name>
@@ -150,6 +170,36 @@
 			<name>solution4/constraints/script.tcl</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/script.tcl</location>
+		</link>
+		<link>
+			<name>solution5/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/solution5.directive</location>
+		</link>
+		<link>
+			<name>solution5/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution5/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/script.tcl</location>
+		</link>
+		<link>
+			<name>solution6/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/solution6.directive</location>
+		</link>
+		<link>
+			<name>solution6/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution6/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -42,60 +42,6 @@ Passed A1-4 for mA = 79, nA = 70, nB = 63,
 Passed A1-4 for mA = 79, nA = 59, nB = 35, 
 Passed A1-4 for mA = 79, nA = 59, nB = 25, 
 Passed A1-4 for mA = 79, nA = 59, nB = 63, 
-Passed A1-4 for mA = 42, nA = 68, nB = 35, 
-Passed A1-4 for mA = 42, nA = 68, nB = 25, 
-Passed A1-4 for mA = 42, nA = 68, nB = 63, 
-Passed A1-4 for mA = 42, nA = 70, nB = 35, 
-Passed A1-4 for mA = 42, nA = 70, nB = 25, 
-Passed A1-4 for mA = 42, nA = 70, nB = 63, 
-Passed A1-4 for mA = 42, nA = 59, nB = 35, 
-Passed A1-4 for mA = 42, nA = 59, nB = 25, 
-Passed A1-4 for mA = 42, nA = 59, nB = 63, 
-Passed A1-4 for mA = 1, nA = 68, nB = 35, 
-Passed A1-4 for mA = 1, nA = 68, nB = 25, 
-Passed A1-4 for mA = 1, nA = 68, nB = 63, 
-Passed A1-4 for mA = 1, nA = 70, nB = 35, 
-Passed A1-4 for mA = 1, nA = 70, nB = 25, 
-Passed A1-4 for mA = 1, nA = 70, nB = 63, 
-Passed A1-4 for mA = 1, nA = 59, nB = 35, 
-Passed A1-4 for mA = 1, nA = 59, nB = 25, 
-Passed A1-4 for mA = 1, nA = 59, nB = 63, 
-Passed A1-4 for mA = 79, nA = 68, nB = 35, 
-Passed A1-4 for mA = 79, nA = 68, nB = 25, 
-Passed A1-4 for mA = 79, nA = 68, nB = 63, 
-Passed A1-4 for mA = 79, nA = 70, nB = 35, 
-Passed A1-4 for mA = 79, nA = 70, nB = 25, 
-Passed A1-4 for mA = 79, nA = 70, nB = 63, 
-Passed A1-4 for mA = 79, nA = 59, nB = 35, 
-Passed A1-4 for mA = 79, nA = 59, nB = 25, 
-Passed A1-4 for mA = 79, nA = 59, nB = 63, 
-Passed A1-4 for mA = 42, nA = 68, nB = 35, 
-Passed A1-4 for mA = 42, nA = 68, nB = 25, 
-Passed A1-4 for mA = 42, nA = 68, nB = 63, 
-Passed A1-4 for mA = 42, nA = 70, nB = 35, 
-Passed A1-4 for mA = 42, nA = 70, nB = 25, 
-Passed A1-4 for mA = 42, nA = 70, nB = 63, 
-Passed A1-4 for mA = 42, nA = 59, nB = 35, 
-Passed A1-4 for mA = 42, nA = 59, nB = 25, 
-Passed A1-4 for mA = 42, nA = 59, nB = 63, 
-Passed A1-4 for mA = 1, nA = 68, nB = 35, 
-Passed A1-4 for mA = 1, nA = 68, nB = 25, 
-Passed A1-4 for mA = 1, nA = 68, nB = 63, 
-Passed A1-4 for mA = 1, nA = 70, nB = 35, 
-Passed A1-4 for mA = 1, nA = 70, nB = 25, 
-Passed A1-4 for mA = 1, nA = 70, nB = 63, 
-Passed A1-4 for mA = 1, nA = 59, nB = 35, 
-Passed A1-4 for mA = 1, nA = 59, nB = 25, 
-Passed A1-4 for mA = 1, nA = 59, nB = 63, 
-Passed A1-4 for mA = 79, nA = 68, nB = 35, 
-Passed A1-4 for mA = 79, nA = 68, nB = 25, 
-Passed A1-4 for mA = 79, nA = 68, nB = 63, 
-Passed A1-4 for mA = 79, nA = 70, nB = 35, 
-Passed A1-4 for mA = 79, nA = 70, nB = 25, 
-Passed A1-4 for mA = 79, nA = 70, nB = 63, 
-Passed A1-4 for mA = 79, nA = 59, nB = 35, 
-Passed A1-4 for mA = 79, nA = 59, nB = 25, 
-Passed A1-4 for mA = 79, nA = 59, nB = 63, 
 
 C:\Users\Patel\Downloads\ECE527\exp\MP3\PartA\solution4\sim\verilog>set PATH= 
 
@@ -136,8 +82,8 @@ Built simulation snapshot parta1_4
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/xsim.dir/parta1_4/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/xsim.dir/parta1_4/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct  4 15:20:41 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Oct  4 15:20:41 2018...
+INFO: [Common 17-186] 'C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/xsim.dir/parta1_4/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct  4 15:33:07 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct  4 15:33:07 2018...
 
 ****** xsim v2018.2 (64-bit)
   **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
@@ -186,9 +132,9 @@ source parta1_4.tcl
 // RTL Simulation : 27 / 27 [n/a] @ "119170275000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 119170315 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/parta1_4.autotb.v" Line 523
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:29 . Memory (MB): peak = 213.250 ; gain = 0.000
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:19 . Memory (MB): peak = 213.207 ; gain = 0.000
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Oct  4 15:23:32 2018...
+INFO: [Common 17-206] Exiting xsim at Thu Oct  4 15:35:35 2018...
 Passed A1-4 for mA = 42, nA = 68, nB = 35, 
 Passed A1-4 for mA = 42, nA = 68, nB = 25, 
 Passed A1-4 for mA = 42, nA = 68, nB = 63, 
