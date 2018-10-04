@@ -1,6 +1,5 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../unop_mm_tb.cpp in debug mode
    Compiling ../../../parta1_4.cpp in debug mode
    Generating csim.exe
 Passed A1-4 for mA = 42, nA = 68, nB = 35, 

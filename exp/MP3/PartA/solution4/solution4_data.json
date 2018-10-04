@@ -52,18 +52,23 @@
     "IP": []
   },
   "Interfaces": {
-    "A": {
-      "type": "ap_fifo",
-      "fifo_width": "32",
-      "fifo_type": "read",
-      "ctype": {
-        "RD_DATA": {
+    "A_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "14",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "14"
+        }}
+    },
+    "A_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
           "Type": "integer signed",
           "Width": "32"
-        },
-        "EMPTY_N": {"Type": "bool"},
-        "RD_EN": {"Type": "bool"}
-      }
+        }}
     },
     "B_address0": {
       "type": "data",
@@ -210,17 +215,17 @@
       "dir": "out",
       "width": "1"
     },
-    "A_dout": {
-      "dir": "in",
-      "width": "32"
+    "A_address0": {
+      "dir": "out",
+      "width": "14"
     },
-    "A_empty_n": {
-      "dir": "in",
-      "width": "1"
-    },
-    "A_read": {
+    "A_ce0": {
       "dir": "out",
       "width": "1"
+    },
+    "A_q0": {
+      "dir": "in",
+      "width": "32"
     },
     "B_address0": {
       "dir": "out",
@@ -284,9 +289,13 @@
       "interfaceRef": "ap_ctrl",
       "dir": "out"
     },
-    "A": {
-      "interfaceRef": "A",
-      "dir": "in"
+    "A_q0": {
+      "interfaceRef": "A_q0",
+      "dir": "in",
+      "dataWidth": "32",
+      "busTypeRef": "ap_memory",
+      "arraySize": "10000",
+      "handshakeRef": "ap_none"
     },
     "B_q0": {
       "interfaceRef": "B_q0",
@@ -389,7 +398,7 @@
         "Area": {
           "DSP48E": "3",
           "FF": "517",
-          "LUT": "454",
+          "LUT": "466",
           "BRAM_18K": "0"
         }
       }}
@@ -401,7 +410,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-10-04 13:33:39 -0500",
+    "Time": "2018-10-04 15:19:31 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

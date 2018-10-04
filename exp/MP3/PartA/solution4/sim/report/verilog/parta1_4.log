@@ -1,0 +1,219 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vivado/2018.2/msys64/mingw64/bin/g++"
+   Compiling gold.cpp_pre.cpp.tb.cpp
+   Compiling parta1_4.cpp_pre.cpp.tb.cpp
+   Compiling unop_mm.cpp_pre.cpp.tb.cpp
+   Compiling apatb_parta1_4.cpp
+   Compiling parta1_3.cpp_pre.cpp.tb.cpp
+   Compiling parta1_2.cpp_pre.cpp.tb.cpp
+   Compiling unop_mm_tb.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Passed A1-4 for mA = 42, nA = 68, nB = 35, 
+Passed A1-4 for mA = 42, nA = 68, nB = 25, 
+Passed A1-4 for mA = 42, nA = 68, nB = 63, 
+Passed A1-4 for mA = 42, nA = 70, nB = 35, 
+Passed A1-4 for mA = 42, nA = 70, nB = 25, 
+Passed A1-4 for mA = 42, nA = 70, nB = 63, 
+Passed A1-4 for mA = 42, nA = 59, nB = 35, 
+Passed A1-4 for mA = 42, nA = 59, nB = 25, 
+Passed A1-4 for mA = 42, nA = 59, nB = 63, 
+Passed A1-4 for mA = 1, nA = 68, nB = 35, 
+Passed A1-4 for mA = 1, nA = 68, nB = 25, 
+Passed A1-4 for mA = 1, nA = 68, nB = 63, 
+Passed A1-4 for mA = 1, nA = 70, nB = 35, 
+Passed A1-4 for mA = 1, nA = 70, nB = 25, 
+Passed A1-4 for mA = 1, nA = 70, nB = 63, 
+Passed A1-4 for mA = 1, nA = 59, nB = 35, 
+Passed A1-4 for mA = 1, nA = 59, nB = 25, 
+Passed A1-4 for mA = 1, nA = 59, nB = 63, 
+Passed A1-4 for mA = 79, nA = 68, nB = 35, 
+Passed A1-4 for mA = 79, nA = 68, nB = 25, 
+Passed A1-4 for mA = 79, nA = 68, nB = 63, 
+Passed A1-4 for mA = 79, nA = 70, nB = 35, 
+Passed A1-4 for mA = 79, nA = 70, nB = 25, 
+Passed A1-4 for mA = 79, nA = 70, nB = 63, 
+Passed A1-4 for mA = 79, nA = 59, nB = 35, 
+Passed A1-4 for mA = 79, nA = 59, nB = 25, 
+Passed A1-4 for mA = 79, nA = 59, nB = 63, 
+Passed A1-4 for mA = 42, nA = 68, nB = 35, 
+Passed A1-4 for mA = 42, nA = 68, nB = 25, 
+Passed A1-4 for mA = 42, nA = 68, nB = 63, 
+Passed A1-4 for mA = 42, nA = 70, nB = 35, 
+Passed A1-4 for mA = 42, nA = 70, nB = 25, 
+Passed A1-4 for mA = 42, nA = 70, nB = 63, 
+Passed A1-4 for mA = 42, nA = 59, nB = 35, 
+Passed A1-4 for mA = 42, nA = 59, nB = 25, 
+Passed A1-4 for mA = 42, nA = 59, nB = 63, 
+Passed A1-4 for mA = 1, nA = 68, nB = 35, 
+Passed A1-4 for mA = 1, nA = 68, nB = 25, 
+Passed A1-4 for mA = 1, nA = 68, nB = 63, 
+Passed A1-4 for mA = 1, nA = 70, nB = 35, 
+Passed A1-4 for mA = 1, nA = 70, nB = 25, 
+Passed A1-4 for mA = 1, nA = 70, nB = 63, 
+Passed A1-4 for mA = 1, nA = 59, nB = 35, 
+Passed A1-4 for mA = 1, nA = 59, nB = 25, 
+Passed A1-4 for mA = 1, nA = 59, nB = 63, 
+Passed A1-4 for mA = 79, nA = 68, nB = 35, 
+Passed A1-4 for mA = 79, nA = 68, nB = 25, 
+Passed A1-4 for mA = 79, nA = 68, nB = 63, 
+Passed A1-4 for mA = 79, nA = 70, nB = 35, 
+Passed A1-4 for mA = 79, nA = 70, nB = 25, 
+Passed A1-4 for mA = 79, nA = 70, nB = 63, 
+Passed A1-4 for mA = 79, nA = 59, nB = 35, 
+Passed A1-4 for mA = 79, nA = 59, nB = 25, 
+Passed A1-4 for mA = 79, nA = 59, nB = 63, 
+Passed A1-4 for mA = 42, nA = 68, nB = 35, 
+Passed A1-4 for mA = 42, nA = 68, nB = 25, 
+Passed A1-4 for mA = 42, nA = 68, nB = 63, 
+Passed A1-4 for mA = 42, nA = 70, nB = 35, 
+Passed A1-4 for mA = 42, nA = 70, nB = 25, 
+Passed A1-4 for mA = 42, nA = 70, nB = 63, 
+Passed A1-4 for mA = 42, nA = 59, nB = 35, 
+Passed A1-4 for mA = 42, nA = 59, nB = 25, 
+Passed A1-4 for mA = 42, nA = 59, nB = 63, 
+Passed A1-4 for mA = 1, nA = 68, nB = 35, 
+Passed A1-4 for mA = 1, nA = 68, nB = 25, 
+Passed A1-4 for mA = 1, nA = 68, nB = 63, 
+Passed A1-4 for mA = 1, nA = 70, nB = 35, 
+Passed A1-4 for mA = 1, nA = 70, nB = 25, 
+Passed A1-4 for mA = 1, nA = 70, nB = 63, 
+Passed A1-4 for mA = 1, nA = 59, nB = 35, 
+Passed A1-4 for mA = 1, nA = 59, nB = 25, 
+Passed A1-4 for mA = 1, nA = 59, nB = 63, 
+Passed A1-4 for mA = 79, nA = 68, nB = 35, 
+Passed A1-4 for mA = 79, nA = 68, nB = 25, 
+Passed A1-4 for mA = 79, nA = 68, nB = 63, 
+Passed A1-4 for mA = 79, nA = 70, nB = 35, 
+Passed A1-4 for mA = 79, nA = 70, nB = 25, 
+Passed A1-4 for mA = 79, nA = 70, nB = 63, 
+Passed A1-4 for mA = 79, nA = 59, nB = 35, 
+Passed A1-4 for mA = 79, nA = 59, nB = 25, 
+Passed A1-4 for mA = 79, nA = 59, nB = 63, 
+
+C:\Users\Patel\Downloads\ECE527\exp\MP3\PartA\solution4\sim\verilog>set PATH= 
+
+C:\Users\Patel\Downloads\ECE527\exp\MP3\PartA\solution4\sim\verilog>call C:/Xilinx/Vivado/2018.2/bin/xelab xil_defaultlib.apatb_parta1_4_top glbl -prj parta1_4.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s parta1_4  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_parta1_4_top glbl -prj parta1_4.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s parta1_4 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/AESL_automem_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/AESL_automem_B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_B
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/AESL_automem_C.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_C
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/parta1_4.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_parta1_4_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/parta1_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parta1_4
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.parta1_4
+Compiling module xil_defaultlib.AESL_automem_A
+Compiling module xil_defaultlib.AESL_automem_B
+Compiling module xil_defaultlib.AESL_automem_C
+Compiling module xil_defaultlib.apatb_parta1_4_top
+Compiling module work.glbl
+Built simulation snapshot parta1_4
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/xsim.dir/parta1_4/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/xsim.dir/parta1_4/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct  4 15:20:41 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct  4 15:20:41 2018...
+
+****** xsim v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/parta1_4/xsim_script.tcl
+# xsim {parta1_4} -autoloadwcfg -tclbatch {parta1_4.tcl}
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source parta1_4.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 27 [n/a] @ "125000"
+// RTL Simulation : 1 / 27 [n/a] @ "4028795000"
+// RTL Simulation : 2 / 27 [n/a] @ "6906655000"
+// RTL Simulation : 3 / 27 [n/a] @ "14157555000"
+// RTL Simulation : 4 / 27 [n/a] @ "18303815000"
+// RTL Simulation : 5 / 27 [n/a] @ "21265675000"
+// RTL Simulation : 6 / 27 [n/a] @ "28728255000"
+// RTL Simulation : 7 / 27 [n/a] @ "32227715000"
+// RTL Simulation : 8 / 27 [n/a] @ "34727575000"
+// RTL Simulation : 9 / 27 [n/a] @ "41025915000"
+// RTL Simulation : 10 / 27 [n/a] @ "41121855000"
+// RTL Simulation : 11 / 27 [n/a] @ "41190395000"
+// RTL Simulation : 12 / 27 [n/a] @ "41363055000"
+// RTL Simulation : 13 / 27 [n/a] @ "41461795000"
+// RTL Simulation : 14 / 27 [n/a] @ "41532335000"
+// RTL Simulation : 15 / 27 [n/a] @ "41710035000"
+// RTL Simulation : 16 / 27 [n/a] @ "41793375000"
+// RTL Simulation : 17 / 27 [n/a] @ "41852915000"
+// RTL Simulation : 18 / 27 [n/a] @ "42002895000"
+// RTL Simulation : 19 / 27 [n/a] @ "49580595000"
+// RTL Simulation : 20 / 27 [n/a] @ "54993695000"
+// RTL Simulation : 21 / 27 [n/a] @ "68632275000"
+// RTL Simulation : 22 / 27 [n/a] @ "76431175000"
+// RTL Simulation : 23 / 27 [n/a] @ "82002275000"
+// RTL Simulation : 24 / 27 [n/a] @ "96039015000"
+// RTL Simulation : 25 / 27 [n/a] @ "102621315000"
+// RTL Simulation : 26 / 27 [n/a] @ "107323415000"
+// RTL Simulation : 27 / 27 [n/a] @ "119170275000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 119170315 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/parta1_4.autotb.v" Line 523
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:29 . Memory (MB): peak = 213.250 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Oct  4 15:23:32 2018...
+Passed A1-4 for mA = 42, nA = 68, nB = 35, 
+Passed A1-4 for mA = 42, nA = 68, nB = 25, 
+Passed A1-4 for mA = 42, nA = 68, nB = 63, 
+Passed A1-4 for mA = 42, nA = 70, nB = 35, 
+Passed A1-4 for mA = 42, nA = 70, nB = 25, 
+Passed A1-4 for mA = 42, nA = 70, nB = 63, 
+Passed A1-4 for mA = 42, nA = 59, nB = 35, 
+Passed A1-4 for mA = 42, nA = 59, nB = 25, 
+Passed A1-4 for mA = 42, nA = 59, nB = 63, 
+Passed A1-4 for mA = 1, nA = 68, nB = 35, 
+Passed A1-4 for mA = 1, nA = 68, nB = 25, 
+Passed A1-4 for mA = 1, nA = 68, nB = 63, 
+Passed A1-4 for mA = 1, nA = 70, nB = 35, 
+Passed A1-4 for mA = 1, nA = 70, nB = 25, 
+Passed A1-4 for mA = 1, nA = 70, nB = 63, 
+Passed A1-4 for mA = 1, nA = 59, nB = 35, 
+Passed A1-4 for mA = 1, nA = 59, nB = 25, 
+Passed A1-4 for mA = 1, nA = 59, nB = 63, 
+Passed A1-4 for mA = 79, nA = 68, nB = 35, 
+Passed A1-4 for mA = 79, nA = 68, nB = 25, 
+Passed A1-4 for mA = 79, nA = 68, nB = 63, 
+Passed A1-4 for mA = 79, nA = 70, nB = 35, 
+Passed A1-4 for mA = 79, nA = 70, nB = 25, 
+Passed A1-4 for mA = 79, nA = 70, nB = 63, 
+Passed A1-4 for mA = 79, nA = 59, nB = 35, 
+Passed A1-4 for mA = 79, nA = 59, nB = 25, 
+Passed A1-4 for mA = 79, nA = 59, nB = 63, 
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

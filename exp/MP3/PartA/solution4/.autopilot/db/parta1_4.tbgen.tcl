@@ -15,7 +15,7 @@ set isEnableWaveformDebug 1
 set C_modelName {parta1_4}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ A int 32 regular {fifo 0 volatile }  }
+	{ A int 32 regular {array 10000 { 1 3 } 1 1 }  }
 	{ B int 32 regular {array 10000 { 1 3 } 1 1 }  }
 	{ C int 32 regular {array 10000 { 2 3 } 1 1 }  }
 	{ mA int 32 unused  }
@@ -26,7 +26,7 @@ set C_modelArgList {
 	{ nC int 32 regular  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "A", "interface" : "fifo", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "A","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 99,"step" : 1},{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
+	{ "Name" : "A", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "A","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 99,"step" : 1},{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
  	{ "Name" : "B", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "B","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 99,"step" : 1},{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
  	{ "Name" : "C", "interface" : "memory", "bitwidth" : 32, "direction" : "READWRITE", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "C","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 99,"step" : 1},{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
  	{ "Name" : "mA", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "mA","cData": "int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
@@ -44,9 +44,9 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ A_dout sc_in sc_lv 32 signal 0 } 
-	{ A_empty_n sc_in sc_logic 1 signal 0 } 
-	{ A_read sc_out sc_logic 1 signal 0 } 
+	{ A_address0 sc_out sc_lv 14 signal 0 } 
+	{ A_ce0 sc_out sc_logic 1 signal 0 } 
+	{ A_q0 sc_in sc_lv 32 signal 0 } 
 	{ B_address0 sc_out sc_lv 14 signal 1 } 
 	{ B_ce0 sc_out sc_logic 1 signal 1 } 
 	{ B_q0 sc_in sc_lv 32 signal 1 } 
@@ -69,9 +69,9 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "A_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A", "role": "dout" }} , 
- 	{ "name": "A_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A", "role": "empty_n" }} , 
- 	{ "name": "A_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A", "role": "read" }} , 
+ 	{ "name": "A_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "A", "role": "address0" }} , 
+ 	{ "name": "A_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "A", "role": "ce0" }} , 
+ 	{ "name": "A_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "A", "role": "q0" }} , 
  	{ "name": "B_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "B", "role": "address0" }} , 
  	{ "name": "B_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "B", "role": "ce0" }} , 
  	{ "name": "B_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "B", "role": "q0" }} , 
@@ -102,9 +102,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
-			{"Name" : "A", "Type" : "Fifo", "Direction" : "I",
-				"BlockSignal" : [
-					{"Name" : "A_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "A", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "B", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "C", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "mA", "Type" : "None", "Direction" : "I"},
@@ -117,7 +115,7 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	parta1_4 {
-		A {Type I LastRead 4 FirstWrite -1}
+		A {Type I LastRead 3 FirstWrite -1}
 		B {Type I LastRead 3 FirstWrite -1}
 		C {Type IO LastRead 4 FirstWrite 6}
 		mA {Type I LastRead -1 FirstWrite -1}
@@ -138,7 +136,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	A { ap_fifo {  { A_dout fifo_data 0 32 }  { A_empty_n fifo_status 0 1 }  { A_read fifo_update 1 1 } } }
+	A { ap_memory {  { A_address0 mem_address 1 14 }  { A_ce0 mem_ce 1 1 }  { A_q0 mem_dout 0 32 } } }
 	B { ap_memory {  { B_address0 mem_address 1 14 }  { B_ce0 mem_ce 1 1 }  { B_q0 mem_dout 0 32 } } }
 	C { ap_memory {  { C_address0 mem_address 1 14 }  { C_ce0 mem_ce 1 1 }  { C_we0 mem_we 1 1 }  { C_d0 mem_din 1 32 }  { C_q0 mem_dout 0 32 } } }
 	mA { ap_none {  { mA in_data 0 32 } } }
@@ -154,7 +152,6 @@ set busDeadlockParameterList {
 
 # RTL port scheduling information:
 set fifoSchedulingInfoList { 
-	A { fifo_read 1 no_conditional }
 }
 
 # RTL bus port read request latency information:

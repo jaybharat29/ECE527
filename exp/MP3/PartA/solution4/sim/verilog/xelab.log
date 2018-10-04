@@ -5,8 +5,8 @@ Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.
 Multi-threading is on. Using 2 slave threads.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/AESL_autofifo_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_autofifo_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/AESL_automem_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_A
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/AESL_automem_B.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_B
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/sim/verilog/AESL_automem_C.v" into library xil_defaultlib
@@ -21,7 +21,7 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.parta1_4
-Compiling module xil_defaultlib.AESL_autofifo_A
+Compiling module xil_defaultlib.AESL_automem_A
 Compiling module xil_defaultlib.AESL_automem_B
 Compiling module xil_defaultlib.AESL_automem_C
 Compiling module xil_defaultlib.apatb_parta1_4_top

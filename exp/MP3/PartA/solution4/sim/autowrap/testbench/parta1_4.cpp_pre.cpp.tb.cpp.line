@@ -32,11 +32,11 @@ void parta1_4(int A[100][100], int B[100][100], int C[100][100],
     int mA, int nA, int mB,
     int nB, int mC, int nC)
 {
-#pragma HLS interface ap_fifo port=A
  for_c_row : for(int i = 0; i < mC; i++)
  {
   for_c_col : for(int j = 0; j < nC; j++)
   {
+#pragma HLS interface ap_fifo port=A[i]
    for_common : for(int k = 0; k < nA; k++)
    {
     C[i][j] += A[i][k]*B[k][j];

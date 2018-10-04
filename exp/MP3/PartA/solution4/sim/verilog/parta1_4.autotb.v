@@ -17,8 +17,8 @@
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
 `define AUTOTB_CLOCK_PERIOD_DIV2 5.00
 
-`define AESL_FIFO_A AESL_autofifo_A
-`define AESL_FIFO_INST_A AESL_autofifo_inst_A
+`define AESL_MEM_A AESL_automem_A
+`define AESL_MEM_INST_A mem_inst_A
 `define AESL_MEM_B AESL_automem_B
 `define AESL_MEM_INST_B mem_inst_B
 `define AESL_MEM_C AESL_automem_C
@@ -87,9 +87,9 @@ wire ap_start;
 wire ap_done;
 wire ap_idle;
 wire ap_ready;
-wire [31 : 0] A_dout;
-wire  A_empty_n;
-wire  A_read;
+wire [13 : 0] A_address0;
+wire  A_ce0;
+wire [31 : 0] A_q0;
 wire [13 : 0] B_address0;
 wire  B_ce0;
 wire [31 : 0] B_q0;
@@ -125,9 +125,9 @@ wire ap_rst_n;
     .ap_done(ap_done),
     .ap_idle(ap_idle),
     .ap_ready(ap_ready),
-    .A_dout(A_dout),
-    .A_empty_n(A_empty_n),
-    .A_read(A_read),
+    .A_address0(A_address0),
+    .A_ce0(A_ce0),
+    .A_q0(A_q0),
     .B_address0(B_address0),
     .B_ce0(B_ce0),
     .B_q0(B_q0),
@@ -173,48 +173,44 @@ assign AESL_continue = tb_continue;
             end
         end
     end
-// Fifo Instantiation A
+//------------------------arrayA Instantiation--------------
 
-wire fifoA_rd;
-wire [31 : 0] fifoA_dout;
-wire fifoA_empty_n;
-wire fifoA_ready;
-wire fifoA_done;
-reg [31:0] ap_c_n_tvin_trans_num_A;
-reg A_ready_reg;
+// The input and output of arrayA
+wire    arrayA_ce0, arrayA_ce1;
+wire    arrayA_we0, arrayA_we1;
+wire    [13 : 0]    arrayA_address0, arrayA_address1;
+wire    [31 : 0]    arrayA_din0, arrayA_din1;
+wire    [31 : 0]    arrayA_dout0, arrayA_dout1;
+wire    arrayA_ready;
+wire    arrayA_done;
 
-`AESL_FIFO_A `AESL_FIFO_INST_A (
-    .clk          (AESL_clock),
-    .reset        (AESL_reset),
-    .if_write     (),
-    .if_din       (),
-    .if_full_n    (),
-    .if_read      (fifoA_rd),
-    .if_dout      (fifoA_dout),
-    .if_empty_n   (fifoA_empty_n),
-    .ready        (fifoA_ready),
-    .done         (fifoA_done)
+`AESL_MEM_A `AESL_MEM_INST_A(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arrayA_ce0),
+    .we0        (arrayA_we0),
+    .address0   (arrayA_address0),
+    .din0       (arrayA_din0),
+    .dout0      (arrayA_dout0),
+    .ce1        (arrayA_ce1),
+    .we1        (arrayA_we1),
+    .address1   (arrayA_address1),
+    .din1       (arrayA_din1),
+    .dout1      (arrayA_dout1),
+    .ready      (arrayA_ready),
+    .done    (arrayA_done)
 );
 
-// Assignment between dut and fifoA
-
-// Assign input of fifoA
-assign      fifoA_rd        =   A_read & A_empty_n;
-assign    fifoA_ready   =   ready;
-assign    fifoA_done    =   0;
-// Assign input of dut
-assign      A_dout       =   fifoA_dout;
-reg   reg_fifoA_empty_n;
-initial begin : gen_reg_fifoA_empty_n_process
-    integer proc_rand;
-    reg_fifoA_empty_n = fifoA_empty_n;
-    while (1) begin
-        @ (fifoA_empty_n);
-        reg_fifoA_empty_n = fifoA_empty_n;
-    end
-end
-
-assign      A_empty_n    =   reg_fifoA_empty_n;
+// Assignment between dut and arrayA
+assign arrayA_address0 = A_address0;
+assign arrayA_ce0 = A_ce0;
+assign A_q0 = arrayA_dout0;
+assign arrayA_we0 = 0;
+assign arrayA_din0 = 0;
+assign arrayA_we1 = 0;
+assign arrayA_din1 = 0;
+assign arrayA_ready=    ready;
+assign arrayA_done = 0;
 
 
 //------------------------arrayB Instantiation--------------
@@ -651,94 +647,6 @@ begin
           interface_done = 0;
   end
 end
-initial begin : proc_gen_A_internal_ready
-    integer internal_trans_num;
-    wait(AESL_reset === 0);
-    wait (ready_initial === 1);
-    A_ready_reg <= 0;
-    @(posedge AESL_clock);
-    internal_trans_num = 1;
-    while(internal_trans_num != AUTOTB_TRANSACTION_NUM + 1) begin
-        if (ap_c_n_tvin_trans_num_A > internal_trans_num) begin
-            A_ready_reg <= 1;
-            @(posedge AESL_clock);
-            A_ready_reg <= 0;
-            internal_trans_num = internal_trans_num + 1;
-        end
-        else begin
-            @(posedge AESL_clock);
-        end
-    end
-    A_ready_reg <= 0;
-end
-    
-    `define STREAM_SIZE_IN_A "../tv/stream_size/stream_size_in_A.dat"
-    
-    initial begin : gen_ap_c_n_tvin_trans_num_A
-        integer fp_A;
-        reg [127:0] token_A;
-        integer ret;
-        
-        ap_c_n_tvin_trans_num_A = 0;
-        end_A = 0;
-        wait (AESL_reset === 0);
-        
-        fp_A = $fopen(`AUTOTB_TVIN_A, "r");
-        if(fp_A == 0) begin
-            $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_A);
-            $finish;
-        end
-        read_token(fp_A, token_A); // should be [[[runtime]]]
-        if (token_A != "[[[runtime]]]") begin
-            $display("ERROR: token_A != \"[[[runtime]]]\"");
-            $finish;
-        end
-        ap_c_n_tvin_trans_num_A = ap_c_n_tvin_trans_num_A + 1;
-        read_token(fp_A, token_A); // should be [[transaction]] or [[[/runtime]]]
-        if (token_A == "[[[/runtime]]]") begin
-            $fclose(fp_A);
-            end_A = 1;
-        end else begin
-            end_A = 0;
-            read_token(fp_A, token_A); // should be transaction number
-            read_token(fp_A, token_A);
-        end
-        while (token_A == "[[/transaction]]" && end_A == 0) begin
-            ap_c_n_tvin_trans_num_A = ap_c_n_tvin_trans_num_A + 1;
-            read_token(fp_A, token_A); // should be [[transaction]] or [[[/runtime]]]
-            if (token_A == "[[[/runtime]]]") begin
-                $fclose(fp_A);
-                end_A = 1;
-            end else begin
-                end_A = 0;
-                read_token(fp_A, token_A); // should be transaction number
-                read_token(fp_A, token_A);
-            end
-        end
-        forever begin
-            @ (posedge AESL_clock);
-            if (end_A == 0) begin
-                if (A_read == 1) begin
-                    read_token(fp_A, token_A);
-                    while (token_A == "[[/transaction]]" && end_A == 0) begin
-                        ap_c_n_tvin_trans_num_A = ap_c_n_tvin_trans_num_A + 1;
-                        read_token(fp_A, token_A); // should be [[transaction]] or [[[/runtime]]]
-                        if (token_A == "[[[/runtime]]]") begin
-                            $fclose(fp_A);
-                            end_A = 1;
-                        end else begin
-                            end_A = 0;
-                            read_token(fp_A, token_A); // should be transaction number
-                            read_token(fp_A, token_A);
-                        end
-                    end
-                end
-            end else begin
-                ap_c_n_tvin_trans_num_A = ap_c_n_tvin_trans_num_A + 1;
-            end
-        end
-    end
-    
 
 reg dump_tvout_finish_C;
 
