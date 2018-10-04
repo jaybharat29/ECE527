@@ -1,0 +1,4 @@
+Running: xsim.dir/parta1_4/xsimk.exe -simmode gui -wdb parta1_4.wdb -simrunnum 0 -socket 50318
+Design successfully loaded
+Design Loading Memory Usage: 5028 KB (Peak: 5028 KB)
+Design Loading CPU Usage: 46 ms

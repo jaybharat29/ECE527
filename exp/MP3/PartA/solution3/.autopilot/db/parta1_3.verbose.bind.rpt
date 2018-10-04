@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'parta1_3'
 ================================================================
-* Date:           Thu Oct  4 00:57:02 2018
+* Date:           Thu Oct  4 01:35:48 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        PartA
@@ -142,8 +142,8 @@ ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%i_cast = zext i31 %i to i32" [Part
 ST_2 : Operation 36 [1/1] (2.47ns)   --->   "%tmp = icmp slt i32 %i_cast, %mC_read" [PartA/parta1_3.cpp:8]   --->   Operation 36 'icmp' 'tmp' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 37 [1/1] (2.52ns)   --->   "%i_1 = add i31 1, %i" [PartA/parta1_3.cpp:8]   --->   Operation 37 'add' 'i_1' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 38 [1/1] (0.00ns)   --->   "br i1 %tmp, label %2, label %12" [PartA/parta1_3.cpp:8]   --->   Operation 38 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str3) nounwind" [PartA/parta1_3.cpp:9]   --->   Operation 39 'specloopname' <Predicate = (tmp)> <Delay = 0.00>
-ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str3) nounwind" [PartA/parta1_3.cpp:9]   --->   Operation 40 'specregionbegin' 'tmp_4' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str7) nounwind" [PartA/parta1_3.cpp:9]   --->   Operation 39 'specloopname' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str7) nounwind" [PartA/parta1_3.cpp:9]   --->   Operation 40 'specregionbegin' 'tmp_4' <Predicate = (tmp)> <Delay = 0.00>
 ST_2 : Operation 41 [1/1] (1.76ns)   --->   "br label %3" [PartA/parta1_3.cpp:10]   --->   Operation 41 'br' <Predicate = (tmp)> <Delay = 1.76>
 ST_2 : Operation 42 [1/1] (0.00ns)   --->   "ret void" [PartA/parta1_3.cpp:19]   --->   Operation 42 'ret' <Predicate = (!tmp)> <Delay = 0.00>
 
@@ -153,8 +153,8 @@ ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%j_cast = zext i31 %j to i32" [Part
 ST_3 : Operation 45 [1/1] (2.47ns)   --->   "%tmp_2 = icmp slt i32 %j_cast, %nC_read" [PartA/parta1_3.cpp:10]   --->   Operation 45 'icmp' 'tmp_2' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 46 [1/1] (2.52ns)   --->   "%j_1 = add i31 %j, 1" [PartA/parta1_3.cpp:10]   --->   Operation 46 'add' 'j_1' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 47 [1/1] (0.00ns)   --->   "br i1 %tmp_2, label %4, label %11" [PartA/parta1_3.cpp:10]   --->   Operation 47 'br' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str14) nounwind" [PartA/parta1_3.cpp:11]   --->   Operation 48 'specloopname' <Predicate = (tmp_2)> <Delay = 0.00>
-ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_5 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str14) nounwind" [PartA/parta1_3.cpp:11]   --->   Operation 49 'specregionbegin' 'tmp_5' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str18) nounwind" [PartA/parta1_3.cpp:11]   --->   Operation 48 'specloopname' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_5 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str18) nounwind" [PartA/parta1_3.cpp:11]   --->   Operation 49 'specregionbegin' 'tmp_5' <Predicate = (tmp_2)> <Delay = 0.00>
 ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_3 = trunc i31 %j to i15" [PartA/parta1_3.cpp:15]   --->   Operation 50 'trunc' 'tmp_3' <Predicate = (tmp_2)> <Delay = 0.00>
 ST_3 : Operation 51 [1/1] (1.94ns)   --->   "%tmp_s = add i15 %tmp_3, %tmp_1" [PartA/parta1_3.cpp:15]   --->   Operation 51 'add' 'tmp_s' <Predicate = (tmp_2)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_10_cast = zext i15 %tmp_s to i64" [PartA/parta1_3.cpp:15]   --->   Operation 52 'zext' 'tmp_10_cast' <Predicate = (tmp_2)> <Delay = 0.00>
@@ -170,7 +170,7 @@ ST_3 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node tmp_24)   ---
 ST_3 : Operation 62 [1/1] (0.76ns) (out node of the LUT)   --->   "%tmp_24 = select i1 %tmp_6, i30 0, i30 %tmp_23"   --->   Operation 62 'select' 'tmp_24' <Predicate = (tmp_2)> <Delay = 0.76> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_25 = call i32 @_ssdm_op_BitConcatenate.i32.i30.i2(i30 %tmp_24, i2 0)"   --->   Operation 63 'bitconcatenate' 'tmp_25' <Predicate = (tmp_2)> <Delay = 0.00>
 ST_3 : Operation 64 [1/1] (1.76ns)   --->   "br label %5" [PartA/parta1_3.cpp:12]   --->   Operation 64 'br' <Predicate = (tmp_2)> <Delay = 1.76>
-ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str3, i32 %tmp_4) nounwind" [PartA/parta1_3.cpp:18]   --->   Operation 65 'specregionend' 'empty_4' <Predicate = (!tmp_2)> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str7, i32 %tmp_4) nounwind" [PartA/parta1_3.cpp:18]   --->   Operation 65 'specregionend' 'empty_4' <Predicate = (!tmp_2)> <Delay = 0.00>
 ST_3 : Operation 66 [1/1] (0.00ns)   --->   "br label %1" [PartA/parta1_3.cpp:8]   --->   Operation 66 'br' <Predicate = (!tmp_2)> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 9.63>
@@ -198,7 +198,7 @@ ST_6 : Operation 83 [1/1] (8.51ns)   --->   "%tmp_7 = mul nsw i32 %B_load, %A_lo
 ST_6 : Operation 84 [1/2] (3.25ns)   --->   "%C_load = load i32* %C_addr, align 4" [PartA/parta1_3.cpp:15]   --->   Operation 84 'load' 'C_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
 
 State 7 <SV = 6> <Delay = 9.63>
-ST_7 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str25) nounwind" [PartA/parta1_3.cpp:13]   --->   Operation 85 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str29) nounwind" [PartA/parta1_3.cpp:13]   --->   Operation 85 'specloopname' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 86 [1/1] (2.55ns)   --->   "%tmp_8 = add nsw i32 %tmp_7, %C_load" [PartA/parta1_3.cpp:15]   --->   Operation 86 'add' 'tmp_8' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 87 [1/1] (3.25ns)   --->   "store i32 %tmp_8, i32* %C_addr, align 4" [PartA/parta1_3.cpp:15]   --->   Operation 87 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
 ST_7 : Operation 88 [1/1] (0.00ns)   --->   "%k_1_s = or i32 %k, 1" [PartA/parta1_3.cpp:12]   --->   Operation 88 'or' 'k_1_s' <Predicate = true> <Delay = 0.00>
@@ -263,7 +263,7 @@ ST_13 : Operation 134 [1/1] (0.00ns)   --->   "%B_addr_3 = getelementptr [10000 
 ST_13 : Operation 135 [2/2] (3.25ns)   --->   "%A_load_3 = load i32* %A_addr_3, align 4" [PartA/parta1_3.cpp:15]   --->   Operation 135 'load' 'A_load_3' <Predicate = (!tmp_26 & tmp_5_1 & tmp_5_2 & tmp_5_3)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
 ST_13 : Operation 136 [2/2] (3.25ns)   --->   "%B_load_3 = load i32* %B_addr_3, align 4" [PartA/parta1_3.cpp:15]   --->   Operation 136 'load' 'B_load_3' <Predicate = (!tmp_26 & tmp_5_1 & tmp_5_2 & tmp_5_3)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
 ST_13 : Operation 137 [1/1] (2.55ns)   --->   "%k_1_3 = add nsw i32 4, %k" [PartA/parta1_3.cpp:12]   --->   Operation 137 'add' 'k_1_3' <Predicate = (!tmp_26 & tmp_5_1 & tmp_5_2 & tmp_5_3)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 138 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str14, i32 %tmp_5) nounwind" [PartA/parta1_3.cpp:17]   --->   Operation 138 'specregionend' 'empty' <Predicate = (tmp_26) | (!tmp_5_1) | (!tmp_5_2) | (!tmp_5_3)> <Delay = 0.00>
+ST_13 : Operation 138 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str18, i32 %tmp_5) nounwind" [PartA/parta1_3.cpp:17]   --->   Operation 138 'specregionend' 'empty' <Predicate = (tmp_26) | (!tmp_5_1) | (!tmp_5_2) | (!tmp_5_3)> <Delay = 0.00>
 ST_13 : Operation 139 [1/1] (0.00ns)   --->   "br label %3" [PartA/parta1_3.cpp:10]   --->   Operation 139 'br' <Predicate = (tmp_26) | (!tmp_5_1) | (!tmp_5_2) | (!tmp_5_3)> <Delay = 0.00>
 
 State 14 <SV = 13> <Delay = 3.25>
@@ -600,7 +600,7 @@ StgValue_145 (br             ) [ 00111111111111111]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str3"/></StgValue>
+<StgValue><ssdm name="p_str7"/></StgValue>
 </bind>
 </comp>
 
@@ -618,7 +618,7 @@ StgValue_145 (br             ) [ 00111111111111111]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str14"/></StgValue>
+<StgValue><ssdm name="p_str18"/></StgValue>
 </bind>
 </comp>
 
@@ -744,7 +744,7 @@ StgValue_145 (br             ) [ 00111111111111111]
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str25"/></StgValue>
+<StgValue><ssdm name="p_str29"/></StgValue>
 </bind>
 </comp>
 

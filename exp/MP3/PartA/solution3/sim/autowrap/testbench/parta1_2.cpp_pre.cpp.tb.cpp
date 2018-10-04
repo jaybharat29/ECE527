@@ -29,6 +29,10 @@ void parta1_2(int A[100][100], int B[100][100], int C[100][100],
 void parta1_3(int A[100][100], int B[100][100], int C[100][100],
     int mA, int nA, int mB,
     int nB, int mC, int nC);
+
+void parta1_4(int A[100][100], int B[100][100], int C[100][100],
+    int mA, int nA, int mB,
+    int nB, int mC, int nC);
 #2 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta1_2.cpp" 2
 
 void parta1_2(int A[100][100], int B[100][100], int C[100][100],

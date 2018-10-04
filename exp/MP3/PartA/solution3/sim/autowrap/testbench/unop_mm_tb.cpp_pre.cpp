@@ -1895,6 +1895,10 @@ void parta1_2(int A[100][100], int B[100][100], int C[100][100],
 void parta1_3(int A[100][100], int B[100][100], int C[100][100],
     int mA, int nA, int mB,
     int nB, int mC, int nC);
+
+void parta1_4(int A[100][100], int B[100][100], int C[100][100],
+    int mA, int nA, int mB,
+    int nB, int mC, int nC);
 # 4 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp" 2
 
 
@@ -2082,6 +2086,66 @@ void parta1_3_test_func(int rowA, int colA, int colB)
 
 }
 
+void parta1_4_test_func(int rowA, int colA, int colB)
+{
+ int mA = rowA;
+ int nA = colA;
+ int mB = nA;
+ int nB = colB;
+ int mC = mA;
+ int nC = nB;
+ int A[100][100];
+ int B[100][100];
+ int C[100][100];
+ int gold_C[100][100];
+
+  for(int i = 0; i < mA; i++)
+  {
+   for(int j = 0; j < nA; j++)
+   {
+    A[i][j] = rand()%100;
+
+   }
+
+  }
+
+  for(int i = 0; i < mB; i++)
+  {
+   for(int j = 0; j < nB; j++)
+   {
+    B[i][j] = rand()%100;
+
+   }
+
+  }
+
+  for(int i = 0; i < mC; i++)
+   {
+    for(int j = 0; j < nC; j++)
+    {
+     C[i][j] = 0;
+    }
+   }
+
+  gold(A, B, gold_C, mA, nA, mB, nB, mC, nC);
+
+  parta1_4(A, B, C, mA, nA, mB, nB, mC, nC);
+
+  for(int i = 0; i < mC; i++)
+  {
+   for(int j = 0; j < nC; j++)
+   {
+    if(C[i][j] != gold_C[i][j])
+    {
+     printf("%d ", gold_C[i][j]);
+     printf("Failed\n");
+    }
+   }
+
+  }
+  printf("Passed A1-4 for mA = %d, nA = %d, nB = %d, \n", mA, nA, nB);
+
+}
 
 int main()
 {
@@ -2107,6 +2171,7 @@ int main()
 
 
     parta1_3_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
+
    }
   }
  }

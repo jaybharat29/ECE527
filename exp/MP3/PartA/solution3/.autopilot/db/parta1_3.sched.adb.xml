@@ -496,7 +496,7 @@
 
 <Node id="34" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str3) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str7) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -512,7 +512,7 @@
 
 <Node id="35" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:1  %tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str3) nounwind
+:1  %tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str7) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="tmp_4"/></StgValue>
@@ -638,7 +638,7 @@
 
 <Node id="44" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str14) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str18) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -654,7 +654,7 @@
 
 <Node id="45" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:1  %tmp_5 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str14) nounwind
+:1  %tmp_5 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str18) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="tmp_5"/></StgValue>
@@ -910,7 +910,7 @@
 
 <Node id="138" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:0  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str3, i32 %tmp_4) nounwind
+:0  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str7, i32 %tmp_4) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="empty_4"/></StgValue>
@@ -1233,7 +1233,7 @@
 
 <Node id="66" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str25) nounwind
+:0  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str29) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -2129,7 +2129,7 @@
 
 <Node id="135" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str14, i32 %tmp_5) nounwind
+:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str18, i32 %tmp_5) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>

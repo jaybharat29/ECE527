@@ -2,6 +2,7 @@ INFO: [COSIM-47] Using XSIM for RTL simulation.
 INFO: [COSIM-14] Instrumenting C test bench ...
    Build using "C:/Xilinx/Vivado/2018.2/msys64/mingw64/bin/g++"
    Compiling gold.cpp_pre.cpp.tb.cpp
+   Compiling parta1_4.cpp_pre.cpp.tb.cpp
    Compiling unop_mm.cpp_pre.cpp.tb.cpp
    Compiling apatb_parta1_3.cpp
    Compiling parta1_3.cpp_pre.cpp.tb.cpp
@@ -14,33 +15,6 @@ INFO: [COSIM-12] Generating RTL test bench ...
 INFO: [COSIM-323] Starting verilog simulation. 
 INFO: [COSIM-15] Starting XSIM ...
 INFO: [COSIM-316] Starting C post checking ...
-Passed A1-3 for mA = 42, nA = 68, nB = 35, 
-Passed A1-3 for mA = 42, nA = 68, nB = 25, 
-Passed A1-3 for mA = 42, nA = 68, nB = 63, 
-Passed A1-3 for mA = 42, nA = 70, nB = 35, 
-Passed A1-3 for mA = 42, nA = 70, nB = 25, 
-Passed A1-3 for mA = 42, nA = 70, nB = 63, 
-Passed A1-3 for mA = 42, nA = 59, nB = 35, 
-Passed A1-3 for mA = 42, nA = 59, nB = 25, 
-Passed A1-3 for mA = 42, nA = 59, nB = 63, 
-Passed A1-3 for mA = 1, nA = 68, nB = 35, 
-Passed A1-3 for mA = 1, nA = 68, nB = 25, 
-Passed A1-3 for mA = 1, nA = 68, nB = 63, 
-Passed A1-3 for mA = 1, nA = 70, nB = 35, 
-Passed A1-3 for mA = 1, nA = 70, nB = 25, 
-Passed A1-3 for mA = 1, nA = 70, nB = 63, 
-Passed A1-3 for mA = 1, nA = 59, nB = 35, 
-Passed A1-3 for mA = 1, nA = 59, nB = 25, 
-Passed A1-3 for mA = 1, nA = 59, nB = 63, 
-Passed A1-3 for mA = 79, nA = 68, nB = 35, 
-Passed A1-3 for mA = 79, nA = 68, nB = 25, 
-Passed A1-3 for mA = 79, nA = 68, nB = 63, 
-Passed A1-3 for mA = 79, nA = 70, nB = 35, 
-Passed A1-3 for mA = 79, nA = 70, nB = 25, 
-Passed A1-3 for mA = 79, nA = 70, nB = 63, 
-Passed A1-3 for mA = 79, nA = 59, nB = 35, 
-Passed A1-3 for mA = 79, nA = 59, nB = 25, 
-Passed A1-3 for mA = 79, nA = 59, nB = 63, 
 Passed A1-3 for mA = 42, nA = 68, nB = 35, 
 Passed A1-3 for mA = 42, nA = 68, nB = 25, 
 Passed A1-3 for mA = 42, nA = 68, nB = 63, 
@@ -113,8 +87,8 @@ Built simulation snapshot parta1_3
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution3/sim/verilog/xsim.dir/parta1_3/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution3/sim/verilog/xsim.dir/parta1_3/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct  4 00:58:10 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Oct  4 00:58:10 2018...
+INFO: [Common 17-186] 'C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution3/sim/verilog/xsim.dir/parta1_3/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct  4 01:37:10 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct  4 01:37:10 2018...
 
 ****** xsim v2018.2 (64-bit)
   **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
@@ -163,9 +137,9 @@ source parta1_3.tcl
 // RTL Simulation : 27 / 27 [n/a] @ "97111455000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 97111495 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution3/sim/verilog/parta1_3.autotb.v" Line 523
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:11 . Memory (MB): peak = 213.500 ; gain = 0.000
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:28 . Memory (MB): peak = 213.227 ; gain = 0.000
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Oct  4 01:00:29 2018...
+INFO: [Common 17-206] Exiting xsim at Thu Oct  4 01:40:03 2018...
 Passed A1-3 for mA = 42, nA = 68, nB = 35, 
 Passed A1-3 for mA = 42, nA = 68, nB = 25, 
 Passed A1-3 for mA = 42, nA = 68, nB = 63, 

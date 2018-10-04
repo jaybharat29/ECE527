@@ -80,8 +80,23 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1432776482.1233530126" name="unop_mm_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/unop_mm_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1270629853.1788958377">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1270629853.1788958377" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1270629853">
+							<option id="gnu.cpp.compiler.option.preprocessor.def.2005837201" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+							<option id="gnu.cpp.compiler.option.include.paths.609144382" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/ap_sysc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
+								<listOptionValue builtIn="false" value="C:/Users/Patel/Downloads/ECE527/exp/MP3"/>
+							</option>
+							<option id="gnu.cpp.compiler.option.other.other.1560770948" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.744690114" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
-						<entry excluding="solution1|solution2|solution3|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="solution1|solution2|solution3|solution4|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -156,8 +171,23 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1318925294.585528154" name="unop_mm_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/unop_mm_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1555083269.1094728695">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1555083269.1094728695" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1555083269">
+							<option id="gnu.cpp.compiler.option.preprocessor.def.255505991" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+							<option id="gnu.cpp.compiler.option.include.paths.186143428" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/ap_sysc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
+								<listOptionValue builtIn="false" value="C:/Users/Patel/Downloads/ECE527/exp/MP3"/>
+							</option>
+							<option id="gnu.cpp.compiler.option.other.other.1275987472" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.114755880" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
-						<entry excluding="solution1|solution2|solution3|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="solution1|solution2|solution3|solution4|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
