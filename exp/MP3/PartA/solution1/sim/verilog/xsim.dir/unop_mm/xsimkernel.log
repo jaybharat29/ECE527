@@ -1,7 +1,7 @@
-Running: xsim.dir/unop_mm/xsimk.exe -simmode gui -wdb unop_mm.wdb -simrunnum 0 -socket 60802
+Running: xsim.dir/unop_mm/xsimk.exe -simmode gui -wdb unop_mm.wdb -simrunnum 0 -socket 63653
 Design successfully loaded
-Design Loading Memory Usage: 5548 KB (Peak: 5548 KB)
-Design Loading CPU Usage: 109 ms
+Design Loading Memory Usage: 5040 KB (Peak: 5040 KB)
+Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 7008 KB (Peak: 7008 KB)
-Simulation CPU Usage: 139296 ms
+Simulation Memory Usage: 6476 KB (Peak: 6476 KB)
+Simulation CPU Usage: 147890 ms

@@ -42,6 +42,16 @@
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>solution2/constraints</name>
+			<type>2</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution2/.tcls</location>
+		</link>
+		<link>
+			<name>solution3/constraints</name>
+			<type>2</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution3/.tcls</location>
+		</link>
+		<link>
 			<name>source/gold.cpp</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/gold.cpp</location>
@@ -55,6 +65,11 @@
 			<name>source/parta1_2.cpp</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta1_2.cpp</location>
+		</link>
+		<link>
+			<name>source/parta1_3.cpp</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta1_3.cpp</location>
 		</link>
 		<link>
 			<name>source/unop_mm.cpp</name>
@@ -80,6 +95,36 @@
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution1/script.tcl</location>
+		</link>
+		<link>
+			<name>solution2/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution2/solution2.directive</location>
+		</link>
+		<link>
+			<name>solution2/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution2/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution2/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution2/script.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution3/solution3.directive</location>
+		</link>
+		<link>
+			<name>solution3/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution3/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution3/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

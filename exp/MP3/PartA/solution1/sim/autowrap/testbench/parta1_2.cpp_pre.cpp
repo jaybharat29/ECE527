@@ -20,7 +20,7 @@ void parta1_2(int *A, int *B, int *C,
     int nB, int mC, int nC);
 # 2 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/parta1_2.cpp" 2
 
-void parta1_2(int *A, int *B, int *C,
+void parta1_2(int A[10000], int B[10000], int C[10000],
     int mA, int nA, int mB,
     int nB, int mC, int nC)
 {

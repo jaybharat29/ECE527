@@ -4,14 +4,15 @@
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project PartA
-set_top unop_mm
+set_top parta1_3
 add_files PartA/gold.cpp
 add_files PartA/parta.h
 add_files PartA/parta1_2.cpp
+add_files PartA/parta1_3.cpp
 add_files PartA/unop_mm.cpp
 add_files -tb PartA/unop_mm_tb.cpp
 open_solution "solution1"
-set_part {xc7z020clg484-1} -tool vivado
+set_part {xc7z020clg484-1}
 create_clock -period 10 -name default
 #source "./PartA/solution1/directives.tcl"
 csim_design

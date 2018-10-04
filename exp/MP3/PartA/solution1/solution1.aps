@@ -3,7 +3,7 @@
         <value string="false"/>
     </checksum>
     <downStreamTool>
-        <DownStreamTool name="vivado"/>
+        <DownStreamTool name=""/>
     </downStreamTool>
     <clockList>
         <clock default="false" name="default" period="10"/>

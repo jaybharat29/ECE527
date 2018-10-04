@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName parta1_2.cpp_pre.cpp.tb.cpp

@@ -2040,7 +2040,7 @@ int main(void)
    for(int k = 0; k < 3; k++)
    {
     parta1_1_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
-    parta1_2_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
+
    }
   }
  }

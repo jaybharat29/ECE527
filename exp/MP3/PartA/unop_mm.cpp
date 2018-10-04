@@ -1,6 +1,6 @@
 
 
-void unop_mm(int A[10000], int B[10000], int C[10000],
+void unop_mm(int A[100][100], int B[100][100], int C[100][100],
 			 int mA, int nA, int mB,
 			 int nB, int mC, int nC)
 {
@@ -10,7 +10,7 @@ void unop_mm(int A[10000], int B[10000], int C[10000],
 		{
 			for_common : for(int k = 0; k < nA; k++)
 			{
-				C[i*nC+j] += A[i*nA+k]*B[k*nB+j];
+				C[i][j] += A[i][k]*B[k][j];
 			}
 		}
 	}

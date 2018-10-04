@@ -1,6 +1,6 @@
 #include "parta.h"
 
-void gold(int *A, int *B, int *C,
+void gold(int A[100][100], int B[100][100], int C[100][100],
 			 int mA, int nA, int mB,
 			 int nB, int mC, int nC)
 {
@@ -8,10 +8,10 @@ void gold(int *A, int *B, int *C,
 	{
 		for(int j = 0; j < nC; j++)
 		{
-			C[i*nC+j] = 0;
+			C[i][j] = 0;
 			for(int k = 0; k < nA; k++)
 			{
-				C[i*nC+j] += A[i*nA+k]*B[k*nB+j];
+				C[i][j] += A[i][k]*B[k][j];
 			}
 		}
 	}

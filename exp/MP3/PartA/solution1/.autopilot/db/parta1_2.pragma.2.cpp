@@ -312,10 +312,10 @@ void parta1_2(int *A, int *B, int *C,
     int nB, int mC, int nC);
 # 2 "PartA/parta1_2.cpp" 2
 
-void parta1_2(int *A, int *B, int *C,
+void parta1_2(int A[10000], int B[10000], int C[10000],
     int mA, int nA, int mB,
     int nB, int mC, int nC)
-{
+{_ssdm_SpecArrayDimSize(A, 10000);_ssdm_SpecArrayDimSize(B, 10000);_ssdm_SpecArrayDimSize(C, 10000);
 
  for_c_row : for(int i = 0; i < mC; i++)
  {
