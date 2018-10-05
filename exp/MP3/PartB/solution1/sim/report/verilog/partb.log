@@ -1,0 +1,167 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vivado/2018.2/msys64/mingw64/bin/g++"
+   Compiling apatb_partb.cpp
+   Compiling gold.cpp_pre.cpp.tb.cpp
+   Compiling partb.cpp_pre.cpp.tb.cpp
+   Compiling partb_tb.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Passed B for mA = 42, nA = 42, nB = 42, 
+Passed B for mA = 42, nA = 42, nB = 1, 
+Passed B for mA = 42, nA = 42, nB = 79, 
+Passed B for mA = 42, nA = 1, nB = 42, 
+Passed B for mA = 42, nA = 1, nB = 1, 
+Passed B for mA = 42, nA = 1, nB = 79, 
+Passed B for mA = 42, nA = 79, nB = 42, 
+Passed B for mA = 42, nA = 79, nB = 1, 
+Passed B for mA = 42, nA = 79, nB = 79, 
+Passed B for mA = 1, nA = 42, nB = 42, 
+Passed B for mA = 1, nA = 42, nB = 1, 
+Passed B for mA = 1, nA = 42, nB = 79, 
+Passed B for mA = 1, nA = 1, nB = 42, 
+Passed B for mA = 1, nA = 1, nB = 1, 
+Passed B for mA = 1, nA = 1, nB = 79, 
+Passed B for mA = 1, nA = 79, nB = 42, 
+Passed B for mA = 1, nA = 79, nB = 1, 
+Passed B for mA = 1, nA = 79, nB = 79, 
+Passed B for mA = 79, nA = 42, nB = 42, 
+Passed B for mA = 79, nA = 42, nB = 1, 
+Passed B for mA = 79, nA = 42, nB = 79, 
+Passed B for mA = 79, nA = 1, nB = 42, 
+Passed B for mA = 79, nA = 1, nB = 1, 
+Passed B for mA = 79, nA = 1, nB = 79, 
+Passed B for mA = 79, nA = 79, nB = 42, 
+Passed B for mA = 79, nA = 79, nB = 1, 
+Passed B for mA = 79, nA = 79, nB = 79, 
+
+C:\Users\Patel\Downloads\ECE527\exp\MP3\PartB\solution1\sim\verilog>set PATH= 
+
+C:\Users\Patel\Downloads\ECE527\exp\MP3\PartB\solution1\sim\verilog>call C:/Xilinx/Vivado/2018.2/bin/xelab xil_defaultlib.apatb_partb_top glbl -prj partb.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s partb  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_partb_top glbl -prj partb.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s partb 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/AESL_automem_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/AESL_automem_B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_B
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/AESL_automem_C.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_C
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_partb_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module partb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb_A_i.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module partb_A_i_ram
+INFO: [VRFC 10-311] analyzing module partb_A_i
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.partb_A_i_ram
+Compiling module xil_defaultlib.partb_A_i(DataWidth=32,AddressRa...
+Compiling module xil_defaultlib.partb
+Compiling module xil_defaultlib.AESL_automem_A
+Compiling module xil_defaultlib.AESL_automem_B
+Compiling module xil_defaultlib.AESL_automem_C
+Compiling module xil_defaultlib.apatb_partb_top
+Compiling module work.glbl
+Built simulation snapshot partb
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/xsim.dir/partb/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/xsim.dir/partb/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct  5 00:39:28 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct  5 00:39:28 2018...
+
+****** xsim v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/partb/xsim_script.tcl
+# xsim {partb} -autoloadwcfg -tclbatch {partb.tcl}
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source partb.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 27 [n/a] @ "125000"
+// RTL Simulation : 1 / 27 [n/a] @ "3126675000"
+// RTL Simulation : 2 / 27 [n/a] @ "3239715000"
+// RTL Simulation : 3 / 27 [n/a] @ "9085755000"
+// RTL Simulation : 4 / 27 [n/a] @ "9249635000"
+// RTL Simulation : 5 / 27 [n/a] @ "9257715000"
+// RTL Simulation : 6 / 27 [n/a] @ "9562195000"
+// RTL Simulation : 7 / 27 [n/a] @ "15362355000"
+// RTL Simulation : 8 / 27 [n/a] @ "15570115000"
+// RTL Simulation : 9 / 27 [n/a] @ "26417075000"
+// RTL Simulation : 10 / 27 [n/a] @ "26526835000"
+// RTL Simulation : 11 / 27 [n/a] @ "26531225000"
+// RTL Simulation : 12 / 27 [n/a] @ "26736075000"
+// RTL Simulation : 13 / 27 [n/a] @ "26740875000"
+// RTL Simulation : 14 / 27 [n/a] @ "26741165000"
+// RTL Simulation : 15 / 27 [n/a] @ "26750035000"
+// RTL Simulation : 16 / 27 [n/a] @ "26954515000"
+// RTL Simulation : 17 / 27 [n/a] @ "26962605000"
+// RTL Simulation : 18 / 27 [n/a] @ "27344315000"
+// RTL Simulation : 19 / 27 [n/a] @ "33193315000"
+// RTL Simulation : 20 / 27 [n/a] @ "33404405000"
+// RTL Simulation : 21 / 27 [n/a] @ "44341275000"
+// RTL Simulation : 22 / 27 [n/a] @ "44648715000"
+// RTL Simulation : 23 / 27 [n/a] @ "44663825000"
+// RTL Simulation : 24 / 27 [n/a] @ "45235075000"
+// RTL Simulation : 25 / 27 [n/a] @ "56084995000"
+// RTL Simulation : 26 / 27 [n/a] @ "56472945000"
+// RTL Simulation : 27 / 27 [n/a] @ "76764155000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 76764195 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb.autotb.v" Line 679
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:02:05 . Memory (MB): peak = 213.316 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Oct  5 00:41:55 2018...
+Passed B for mA = 42, nA = 42, nB = 42, 
+Passed B for mA = 42, nA = 42, nB = 1, 
+Passed B for mA = 42, nA = 42, nB = 79, 
+Passed B for mA = 42, nA = 1, nB = 42, 
+Passed B for mA = 42, nA = 1, nB = 1, 
+Passed B for mA = 42, nA = 1, nB = 79, 
+Passed B for mA = 42, nA = 79, nB = 42, 
+Passed B for mA = 42, nA = 79, nB = 1, 
+Passed B for mA = 42, nA = 79, nB = 79, 
+Passed B for mA = 1, nA = 42, nB = 42, 
+Passed B for mA = 1, nA = 42, nB = 1, 
+Passed B for mA = 1, nA = 42, nB = 79, 
+Passed B for mA = 1, nA = 1, nB = 42, 
+Passed B for mA = 1, nA = 1, nB = 1, 
+Passed B for mA = 1, nA = 1, nB = 79, 
+Passed B for mA = 1, nA = 79, nB = 42, 
+Passed B for mA = 1, nA = 79, nB = 1, 
+Passed B for mA = 1, nA = 79, nB = 79, 
+Passed B for mA = 79, nA = 42, nB = 42, 
+Passed B for mA = 79, nA = 42, nB = 1, 
+Passed B for mA = 79, nA = 42, nB = 79, 
+Passed B for mA = 79, nA = 1, nB = 42, 
+Passed B for mA = 79, nA = 1, nB = 1, 
+Passed B for mA = 79, nA = 1, nB = 79, 
+Passed B for mA = 79, nA = 79, nB = 42, 
+Passed B for mA = 79, nA = 79, nB = 1, 
+Passed B for mA = 79, nA = 79, nB = 79, 
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
