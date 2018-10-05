@@ -26,6 +26,14 @@ void parta1_3(int A[100][100], int B[100][100], int C[100][100],
 void parta1_4(int A[100][100], int B[100][100], int C[100][100],
     int mA, int nA, int mB,
     int nB, int mC, int nC);
+#pragma empty_line
+void parta1_5(int A[100][100], int B[100][100], int C[100][100],
+    int mA, int nA, int mB,
+    int nB, int mC, int nC);
+#pragma empty_line
+void parta1_6(int A[100][100], int B[100][100], int C[100][100],
+    int mA, int nA, int mB,
+    int nB, int mC, int nC);
 #pragma line 2 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/gold.cpp" 2
 #pragma empty_line
 void gold(int A[100][100], int B[100][100], int C[100][100],

@@ -21,7 +21,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../unop_mm_tb.cpp ../../../gold.cpp ../../../parta1_2.cpp ../../../parta1_3.cpp ../../../parta1_4.cpp ../../../parta1_5.cpp ../../../unop_mm.cpp
+HLS_SOURCES = ../../../unop_mm_tb.cpp ../../../gold.cpp ../../../parta1_2.cpp ../../../parta1_3.cpp ../../../parta1_4.cpp ../../../parta1_5.cpp ../../../parta1_6.cpp ../../../unop_mm.cpp
 
 TARGET := csim.exe
 
@@ -109,6 +109,12 @@ $(ObjDir)/parta1_5.o: ../../../parta1_5.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/parta1_5.d
+
+$(ObjDir)/parta1_6.o: ../../../parta1_6.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../parta1_6.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/parta1_6.d
 
 $(ObjDir)/unop_mm.o: ../../../unop_mm.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../unop_mm.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

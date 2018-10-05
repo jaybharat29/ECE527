@@ -15,11 +15,16 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE5
 INFO: [VRFC 10-311] analyzing module apatb_parta1_5_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/sim/verilog/parta1_5.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module parta1_5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/sim/verilog/parta1_5_mul_mul_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parta1_5_mul_mul_bkb_DSP48_0
+INFO: [VRFC 10-311] analyzing module parta1_5_mul_mul_bkb
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.parta1_5_mul_mul_bkb_DSP48_0
+Compiling module xil_defaultlib.parta1_5_mul_mul_bkb(ID=1,NUM_ST...
 Compiling module xil_defaultlib.parta1_5
 Compiling module xil_defaultlib.AESL_automem_A
 Compiling module xil_defaultlib.AESL_automem_B

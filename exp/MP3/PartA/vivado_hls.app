@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="PartA" top="parta1_6">
+<project xmlns="com.autoesl.autopilot.project" name="PartA" top="parta1_5">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -20,8 +20,8 @@
         <solution name="solution2" status="inactive"/>
         <solution name="solution3" status="inactive"/>
         <solution name="solution4" status="inactive"/>
-        <solution name="solution5" status="inactive"/>
-        <solution name="solution6" status="active"/>
+        <solution name="solution5" status="active"/>
+        <solution name="solution6" status="inactive"/>
     </solutions>
 </project>
 

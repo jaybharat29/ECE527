@@ -5,9 +5,9 @@
 // 
 // ==============================================================
 
-#ifndef __parta1_6_mac_mulabkb__HH__
-#define __parta1_6_mac_mulabkb__HH__
-#include "simcore_mac_0.h"
+#ifndef __parta1_5_mul_mul_bkb__HH__
+#define __parta1_5_mul_mul_bkb__HH__
+#include "ACMP_smul_us.h"
 #include <systemc>
 
 template<
@@ -15,23 +15,20 @@ template<
     int NUM_STAGE,
     int din0_WIDTH,
     int din1_WIDTH,
-    int din2_WIDTH,
     int dout_WIDTH>
-SC_MODULE(parta1_6_mac_mulabkb) {
+SC_MODULE(parta1_5_mul_mul_bkb) {
     sc_core::sc_in< sc_dt::sc_lv<din0_WIDTH> >   din0;
     sc_core::sc_in< sc_dt::sc_lv<din1_WIDTH> >   din1;
-    sc_core::sc_in< sc_dt::sc_lv<din2_WIDTH> >   din2;
     sc_core::sc_out< sc_dt::sc_lv<dout_WIDTH> >   dout;
 
 
 
-    simcore_mac_0<ID, 1, din0_WIDTH, din1_WIDTH, din2_WIDTH, dout_WIDTH> simcore_mac_0_U;
+    ACMP_smul_us<ID, 1, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_smul_us_U;
 
-    SC_CTOR(parta1_6_mac_mulabkb):  simcore_mac_0_U ("simcore_mac_0_U") {
-        simcore_mac_0_U.din0(din0);
-        simcore_mac_0_U.din1(din1);
-        simcore_mac_0_U.din2(din2);
-        simcore_mac_0_U.dout(dout);
+    SC_CTOR(parta1_5_mul_mul_bkb):  ACMP_smul_us_U ("ACMP_smul_us_U") {
+        ACMP_smul_us_U.din0(din0);
+        ACMP_smul_us_U.din1(din1);
+        ACMP_smul_us_U.dout(dout);
 
     }
 

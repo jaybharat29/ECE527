@@ -1910,9 +1910,24 @@ void parta1_4(int A[100][100], int B[100][100], int C[100][100],
 void parta1_5(int A[100][100], int B[100][100], int C[100][100],
     int mA, int nA, int mB,
     int nB, int mC, int nC);
+
+void parta1_6(int A[100][100], int B[100][100], int C[100][100],
+    int mA, int nA, int mB,
+    int nB, int mC, int nC);
 #4 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp" 2
 
 
+
+void transpose(int B[100][100], int B_T[100][100], int mB, int nB)
+{
+ for(int i = 0; i < mB; i ++)
+ {
+  for(int j = 0; j < nB; j++)
+  {
+   B_T[j][i] = B[i][j];
+  }
+ }
+}
 
 void parta1_1_test_func(int rowA, int colA, int colB)
 {
@@ -2107,6 +2122,7 @@ void parta1_4_test_func(int rowA, int colA, int colB)
  int nC = nB;
  int A[100][100];
  int B[100][100];
+ int B_T[100][100];
  int C[100][100];
  int gold_C[100][100];
 
@@ -2137,10 +2153,11 @@ void parta1_4_test_func(int rowA, int colA, int colB)
      C[i][j] = 0;
     }
    }
+  transpose(B,B_T,mB,nB);
 
   gold(A, B, gold_C, mA, nA, mB, nB, mC, nC);
 
-  parta1_4(A, B, C, mA, nA, mB, nB, mC, nC);
+  parta1_4(A, B_T, C, mA, nA, mB, nB, mC, nC);
 
   for(int i = 0; i < mC; i++)
   {
@@ -2148,8 +2165,9 @@ void parta1_4_test_func(int rowA, int colA, int colB)
    {
     if(C[i][j] != gold_C[i][j])
     {
-     printf("%d ", gold_C[i][j]);
+     printf("%d %d %d %d",i,j, gold_C[i][j], C[i][j]);
      printf("Failed\n");
+     return;
     }
    }
 
@@ -2163,7 +2181,7 @@ void parta1_4_test_func(int rowA, int colA, int colB)
 #include "apatb_parta1_5.h"
 #endif
 
-#251 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
+#265 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
 void parta1_5_test_func(int rowA, int colA, int colB)
 {
  int mA = rowA;
@@ -2174,6 +2192,7 @@ void parta1_5_test_func(int rowA, int colA, int colB)
  int nC = nB;
  int A[100][100];
  int B[100][100];
+ int B_T[100][100];
  int C[100][100];
  int gold_C[100][100];
 
@@ -2204,6 +2223,7 @@ void parta1_5_test_func(int rowA, int colA, int colB)
      C[i][j] = 0;
     }
    }
+  transpose(B,B_T,mB,nB);
 
   gold(A, B, gold_C, mA, nA, mB, nB, mC, nC);
 
@@ -2212,20 +2232,20 @@ void parta1_5_test_func(int rowA, int colA, int colB)
 #define parta1_5 AESL_WRAP_parta1_5
 #endif
 
-#294 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
+#310 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
 
 #ifndef HLS_FASTSIM
 #define parta1_5 AESL_WRAP_parta1_5
 #endif
 
-#294 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
+#310 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
 parta1_5
 #undef parta1_5
-#294 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
+#310 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
 
 #undef parta1_5
-#294 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
-(A, B, C, mA, nA, mB, nB, mC, nC);
+#310 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
+(A, B_T, C, mA, nA, mB, nB, mC, nC);
 
   for(int i = 0; i < mC; i++)
   {
@@ -2243,9 +2263,72 @@ parta1_5
 
 }
 
+void parta1_6_test_func(int rowA, int colA, int colB)
+{
+ int mA = rowA;
+ int nA = colA;
+ int mB = nA;
+ int nB = colB;
+ int mC = mA;
+ int nC = nB;
+ int A[100][100];
+ int B[100][100];
+ int B_T[100][100];
+ int C[100][100];
+ int gold_C[100][100];
+
+  for(int i = 0; i < mA; i++)
+  {
+   for(int j = 0; j < nA; j++)
+   {
+    A[i][j] = rand()%100;
+
+   }
+
+  }
+
+  for(int i = 0; i < mB; i++)
+  {
+   for(int j = 0; j < nB; j++)
+   {
+    B[i][j] = rand()%100;
+
+   }
+
+  }
+
+  for(int i = 0; i < mC; i++)
+   {
+    for(int j = 0; j < nC; j++)
+    {
+     C[i][j] = 0;
+    }
+   }
+  transpose(B,B_T,mB,nB);
+
+  gold(A, B, gold_C, mA, nA, mB, nB, mC, nC);
+
+  parta1_6(A, B_T, C, mA, nA, mB, nB, mC, nC);
+
+  for(int i = 0; i < mC; i++)
+  {
+   for(int j = 0; j < nC; j++)
+   {
+    if(C[i][j] != gold_C[i][j])
+    {
+     printf("%d ", gold_C[i][j]);
+     printf("Failed\n");
+    }
+   }
+
+  }
+  printf("Passed A1-6 for mA = %d, nA = %d, nB = %d, \n", mA, nA, nB);
+
+}
+
 
 #ifndef HLS_FASTSIM
-#312 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
+#391 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
 int main()
 {
  int t_vector_mA [3];
@@ -2272,10 +2355,11 @@ int main()
 
 
     parta1_5_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
+
    }
   }
  }
  return 0;
 }
 #endif
-#342 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"
+#422 "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/unop_mm_tb.cpp"

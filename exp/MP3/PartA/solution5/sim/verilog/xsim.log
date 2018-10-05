@@ -2,8 +2,8 @@
 # xsim v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Oct  4 15:48:13 2018
-# Process ID: 16988
+# Start of session at: Thu Oct  4 23:40:26 2018
+# Process ID: 12368
 # Current directory: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/parta1_5/xsim_script.tcl}
 # Log file: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/sim/verilog/xsim.log
@@ -22,35 +22,35 @@ source parta1_5.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 27 [n/a] @ "125000"
-// RTL Simulation : 1 / 27 [n/a] @ "4028795000"
-// RTL Simulation : 2 / 27 [n/a] @ "6906655000"
-// RTL Simulation : 3 / 27 [n/a] @ "14157555000"
-// RTL Simulation : 4 / 27 [n/a] @ "18303815000"
-// RTL Simulation : 5 / 27 [n/a] @ "21265675000"
-// RTL Simulation : 6 / 27 [n/a] @ "28728255000"
-// RTL Simulation : 7 / 27 [n/a] @ "32227715000"
-// RTL Simulation : 8 / 27 [n/a] @ "34727575000"
-// RTL Simulation : 9 / 27 [n/a] @ "41025915000"
-// RTL Simulation : 10 / 27 [n/a] @ "41121855000"
-// RTL Simulation : 11 / 27 [n/a] @ "41190395000"
-// RTL Simulation : 12 / 27 [n/a] @ "41363055000"
-// RTL Simulation : 13 / 27 [n/a] @ "41461795000"
-// RTL Simulation : 14 / 27 [n/a] @ "41532335000"
-// RTL Simulation : 15 / 27 [n/a] @ "41710035000"
-// RTL Simulation : 16 / 27 [n/a] @ "41793375000"
-// RTL Simulation : 17 / 27 [n/a] @ "41852915000"
-// RTL Simulation : 18 / 27 [n/a] @ "42002895000"
-// RTL Simulation : 19 / 27 [n/a] @ "49580595000"
-// RTL Simulation : 20 / 27 [n/a] @ "54993695000"
-// RTL Simulation : 21 / 27 [n/a] @ "68632275000"
-// RTL Simulation : 22 / 27 [n/a] @ "76431175000"
-// RTL Simulation : 23 / 27 [n/a] @ "82002275000"
-// RTL Simulation : 24 / 27 [n/a] @ "96039015000"
-// RTL Simulation : 25 / 27 [n/a] @ "102621315000"
-// RTL Simulation : 26 / 27 [n/a] @ "107323415000"
-// RTL Simulation : 27 / 27 [n/a] @ "119170275000"
+// RTL Simulation : 1 / 27 [n/a] @ "2001875000"
+// RTL Simulation : 2 / 27 [n/a] @ "3432415000"
+// RTL Simulation : 3 / 27 [n/a] @ "7033515000"
+// RTL Simulation : 4 / 27 [n/a] @ "9094055000"
+// RTL Simulation : 5 / 27 [n/a] @ "10566595000"
+// RTL Simulation : 6 / 27 [n/a] @ "14273535000"
+// RTL Simulation : 7 / 27 [n/a] @ "16010675000"
+// RTL Simulation : 8 / 27 [n/a] @ "17252215000"
+// RTL Simulation : 9 / 27 [n/a] @ "20377035000"
+// RTL Simulation : 10 / 27 [n/a] @ "20424715000"
+// RTL Simulation : 11 / 27 [n/a] @ "20458795000"
+// RTL Simulation : 12 / 27 [n/a] @ "20544555000"
+// RTL Simulation : 13 / 27 [n/a] @ "20593635000"
+// RTL Simulation : 14 / 27 [n/a] @ "20628715000"
+// RTL Simulation : 15 / 27 [n/a] @ "20716995000"
+// RTL Simulation : 16 / 27 [n/a] @ "20758375000"
+// RTL Simulation : 17 / 27 [n/a] @ "20787955000"
+// RTL Simulation : 18 / 27 [n/a] @ "20862375000"
+// RTL Simulation : 19 / 27 [n/a] @ "24627535000"
+// RTL Simulation : 20 / 27 [n/a] @ "27318295000"
+// RTL Simulation : 21 / 27 [n/a] @ "34091775000"
+// RTL Simulation : 22 / 27 [n/a] @ "37967535000"
+// RTL Simulation : 23 / 27 [n/a] @ "40737295000"
+// RTL Simulation : 24 / 27 [n/a] @ "47709855000"
+// RTL Simulation : 25 / 27 [n/a] @ "50977315000"
+// RTL Simulation : 26 / 27 [n/a] @ "53312575000"
+// RTL Simulation : 27 / 27 [n/a] @ "59190195000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 119170315 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/sim/verilog/parta1_5.autotb.v" Line 523
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:54 . Memory (MB): peak = 213.160 ; gain = 0.000
+$finish called at time : 59190235 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution5/sim/verilog/parta1_5.autotb.v" Line 523
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:46 . Memory (MB): peak = 213.504 ; gain = 0.000
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Oct  4 15:51:17 2018...
+INFO: [Common 17-206] Exiting xsim at Thu Oct  4 23:42:19 2018...

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'parta1_4'
 ================================================================
-* Date:           Thu Oct  4 15:31:52 2018
+* Date:           Thu Oct  4 22:31:36 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        PartA
@@ -122,66 +122,69 @@ ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%i_cast = zext i31 %i to i32" [Part
 ST_2 : Operation 28 [1/1] (2.47ns)   --->   "%tmp = icmp slt i32 %i_cast, %mC_read" [PartA/parta1_4.cpp:7]   --->   Operation 28 'icmp' 'tmp' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 29 [1/1] (2.52ns)   --->   "%i_1 = add i31 1, %i" [PartA/parta1_4.cpp:7]   --->   Operation 29 'add' 'i_1' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 30 [1/1] (0.00ns)   --->   "br i1 %tmp, label %2, label %9" [PartA/parta1_4.cpp:7]   --->   Operation 30 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str3) nounwind" [PartA/parta1_4.cpp:8]   --->   Operation 31 'specloopname' <Predicate = (tmp)> <Delay = 0.00>
-ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str3) nounwind" [PartA/parta1_4.cpp:8]   --->   Operation 32 'specregionbegin' 'tmp_4' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str12) nounwind" [PartA/parta1_4.cpp:8]   --->   Operation 31 'specloopname' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str12) nounwind" [PartA/parta1_4.cpp:8]   --->   Operation 32 'specregionbegin' 'tmp_4' <Predicate = (tmp)> <Delay = 0.00>
 ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%A_addr = getelementptr [10000 x i32]* %A, i64 0, i64 %phi_mul1_cast" [PartA/parta1_4.cpp:12]   --->   Operation 33 'getelementptr' 'A_addr' <Predicate = (tmp)> <Delay = 0.00>
 ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%C_addr = getelementptr [10000 x i32]* %C, i64 0, i64 %phi_mul1_cast" [PartA/parta1_4.cpp:9]   --->   Operation 34 'getelementptr' 'C_addr' <Predicate = (tmp)> <Delay = 0.00>
-ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %C_addr, [8 x i8]* @p_str14, i32 0, i32 0, [1 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str25, [1 x i8]* @p_str25, [1 x i8]* @p_str25, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str25, [1 x i8]* @p_str25) nounwind" [PartA/parta1_4.cpp:9]   --->   Operation 35 'specinterface' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %C_addr, [8 x i8]* @p_str113, i32 0, i32 0, [1 x i8]* @p_str214, i32 0, i32 0, [1 x i8]* @p_str214, [1 x i8]* @p_str214, [1 x i8]* @p_str214, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str214, [1 x i8]* @p_str214) nounwind" [PartA/parta1_4.cpp:9]   --->   Operation 35 'specinterface' <Predicate = (tmp)> <Delay = 0.00>
 ST_2 : Operation 36 [1/1] (1.76ns)   --->   "br label %3" [PartA/parta1_4.cpp:10]   --->   Operation 36 'br' <Predicate = (tmp)> <Delay = 1.76>
 ST_2 : Operation 37 [1/1] (0.00ns)   --->   "ret void" [PartA/parta1_4.cpp:19]   --->   Operation 37 'ret' <Predicate = (!tmp)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 2.52>
+State 3 <SV = 2> <Delay = 2.79>
 ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%j = phi i31 [ 0, %2 ], [ %j_1, %7 ]"   --->   Operation 38 'phi' 'j' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%j_cast = zext i31 %j to i32" [PartA/parta1_4.cpp:10]   --->   Operation 39 'zext' 'j_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 40 [1/1] (2.47ns)   --->   "%tmp_2 = icmp slt i32 %j_cast, %nC_read" [PartA/parta1_4.cpp:10]   --->   Operation 40 'icmp' 'tmp_2' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 41 [1/1] (2.52ns)   --->   "%j_1 = add i31 %j, 1" [PartA/parta1_4.cpp:10]   --->   Operation 41 'add' 'j_1' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 42 [1/1] (0.00ns)   --->   "br i1 %tmp_2, label %4, label %8" [PartA/parta1_4.cpp:10]   --->   Operation 42 'br' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str36) nounwind" [PartA/parta1_4.cpp:11]   --->   Operation 43 'specloopname' <Predicate = (tmp_2)> <Delay = 0.00>
-ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str36) nounwind" [PartA/parta1_4.cpp:11]   --->   Operation 44 'specregionbegin' 'tmp_9' <Predicate = (tmp_2)> <Delay = 0.00>
-ST_3 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %A_addr, [8 x i8]* @p_str14, i32 0, i32 0, [1 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str25, [1 x i8]* @p_str25, [1 x i8]* @p_str25, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str25, [1 x i8]* @p_str25) nounwind" [PartA/parta1_4.cpp:12]   --->   Operation 45 'specinterface' <Predicate = (tmp_2)> <Delay = 0.00>
-ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_3 = trunc i31 %j to i15" [PartA/parta1_4.cpp:15]   --->   Operation 46 'trunc' 'tmp_3' <Predicate = (tmp_2)> <Delay = 0.00>
-ST_3 : Operation 47 [1/1] (1.94ns)   --->   "%tmp_s = add i15 %tmp_1, %tmp_3" [PartA/parta1_4.cpp:15]   --->   Operation 47 'add' 'tmp_s' <Predicate = (tmp_2)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_11_cast = zext i15 %tmp_s to i64" [PartA/parta1_4.cpp:15]   --->   Operation 48 'zext' 'tmp_11_cast' <Predicate = (tmp_2)> <Delay = 0.00>
-ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%C_addr_1 = getelementptr [10000 x i32]* %C, i64 0, i64 %tmp_11_cast" [PartA/parta1_4.cpp:15]   --->   Operation 49 'getelementptr' 'C_addr_1' <Predicate = (tmp_2)> <Delay = 0.00>
-ST_3 : Operation 50 [1/1] (1.76ns)   --->   "br label %5" [PartA/parta1_4.cpp:13]   --->   Operation 50 'br' <Predicate = (tmp_2)> <Delay = 1.76>
-ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str3, i32 %tmp_4) nounwind" [PartA/parta1_4.cpp:18]   --->   Operation 51 'specregionend' 'empty_2' <Predicate = (!tmp_2)> <Delay = 0.00>
-ST_3 : Operation 52 [1/1] (0.00ns)   --->   "br label %1" [PartA/parta1_4.cpp:7]   --->   Operation 52 'br' <Predicate = (!tmp_2)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%phi_mul = phi i38 [ 0, %2 ], [ %next_mul, %7 ]"   --->   Operation 39 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_3 = trunc i38 %phi_mul to i15"   --->   Operation 40 'trunc' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%phi_mul_cast = zext i38 %phi_mul to i64"   --->   Operation 41 'zext' 'phi_mul_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (2.79ns)   --->   "%next_mul = add i38 100, %phi_mul"   --->   Operation 42 'add' 'next_mul' <Predicate = true> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%j_cast = zext i31 %j to i32" [PartA/parta1_4.cpp:10]   --->   Operation 43 'zext' 'j_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (2.47ns)   --->   "%tmp_2 = icmp slt i32 %j_cast, %nC_read" [PartA/parta1_4.cpp:10]   --->   Operation 44 'icmp' 'tmp_2' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (2.52ns)   --->   "%j_1 = add i31 1, %j" [PartA/parta1_4.cpp:10]   --->   Operation 45 'add' 'j_1' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "br i1 %tmp_2, label %4, label %8" [PartA/parta1_4.cpp:10]   --->   Operation 46 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str315) nounwind" [PartA/parta1_4.cpp:11]   --->   Operation 47 'specloopname' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str315) nounwind" [PartA/parta1_4.cpp:11]   --->   Operation 48 'specregionbegin' 'tmp_9' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %A_addr, [8 x i8]* @p_str113, i32 0, i32 0, [1 x i8]* @p_str214, i32 0, i32 0, [1 x i8]* @p_str214, [1 x i8]* @p_str214, [1 x i8]* @p_str214, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str214, [1 x i8]* @p_str214) nounwind" [PartA/parta1_4.cpp:12]   --->   Operation 49 'specinterface' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_6 = trunc i31 %j to i15" [PartA/parta1_4.cpp:12]   --->   Operation 50 'trunc' 'tmp_6' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [10000 x i32]* %B, i64 0, i64 %phi_mul_cast" [PartA/parta1_4.cpp:12]   --->   Operation 51 'getelementptr' 'B_addr' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (1.94ns)   --->   "%tmp_s = add i15 %tmp_1, %tmp_6" [PartA/parta1_4.cpp:15]   --->   Operation 52 'add' 'tmp_s' <Predicate = (tmp_2)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_12_cast = zext i15 %tmp_s to i64" [PartA/parta1_4.cpp:15]   --->   Operation 53 'zext' 'tmp_12_cast' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%C_addr_1 = getelementptr [10000 x i32]* %C, i64 0, i64 %tmp_12_cast" [PartA/parta1_4.cpp:15]   --->   Operation 54 'getelementptr' 'C_addr_1' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %B_addr, [8 x i8]* @p_str113, i32 0, i32 0, [1 x i8]* @p_str214, i32 0, i32 0, [1 x i8]* @p_str214, [1 x i8]* @p_str214, [1 x i8]* @p_str214, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str214, [1 x i8]* @p_str214) nounwind" [PartA/parta1_4.cpp:12]   --->   Operation 55 'specinterface' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (1.76ns)   --->   "br label %5" [PartA/parta1_4.cpp:13]   --->   Operation 56 'br' <Predicate = (tmp_2)> <Delay = 1.76>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str12, i32 %tmp_4) nounwind" [PartA/parta1_4.cpp:18]   --->   Operation 57 'specregionend' 'empty_2' <Predicate = (!tmp_2)> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "br label %1" [PartA/parta1_4.cpp:7]   --->   Operation 58 'br' <Predicate = (!tmp_2)> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 5.19>
-ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%k = phi i31 [ 0, %4 ], [ %k_1, %6 ]"   --->   Operation 53 'phi' 'k' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%phi_mul = phi i38 [ 0, %4 ], [ %next_mul, %6 ]"   --->   Operation 54 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_6 = trunc i38 %phi_mul to i15" [PartA/parta1_4.cpp:13]   --->   Operation 55 'trunc' 'tmp_6' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%k_cast = zext i31 %k to i32" [PartA/parta1_4.cpp:13]   --->   Operation 56 'zext' 'k_cast' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 57 [1/1] (2.47ns)   --->   "%tmp_5 = icmp slt i32 %k_cast, %nA_read" [PartA/parta1_4.cpp:13]   --->   Operation 57 'icmp' 'tmp_5' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 58 [1/1] (2.52ns)   --->   "%k_1 = add i31 1, %k" [PartA/parta1_4.cpp:13]   --->   Operation 58 'add' 'k_1' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 59 [1/1] (0.00ns)   --->   "br i1 %tmp_5, label %6, label %7" [PartA/parta1_4.cpp:13]   --->   Operation 59 'br' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_10 = trunc i31 %k to i15" [PartA/parta1_4.cpp:15]   --->   Operation 60 'trunc' 'tmp_10' <Predicate = (tmp_5)> <Delay = 0.00>
-ST_4 : Operation 61 [1/1] (1.94ns)   --->   "%tmp_11 = add i15 %tmp_1, %tmp_10" [PartA/parta1_4.cpp:15]   --->   Operation 61 'add' 'tmp_11' <Predicate = (tmp_5)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_12_cast = zext i15 %tmp_11 to i64" [PartA/parta1_4.cpp:15]   --->   Operation 62 'zext' 'tmp_12_cast' <Predicate = (tmp_5)> <Delay = 0.00>
-ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%A_addr_1 = getelementptr [10000 x i32]* %A, i64 0, i64 %tmp_12_cast" [PartA/parta1_4.cpp:15]   --->   Operation 63 'getelementptr' 'A_addr_1' <Predicate = (tmp_5)> <Delay = 0.00>
-ST_4 : Operation 64 [1/1] (2.79ns)   --->   "%next_mul = add i38 100, %phi_mul"   --->   Operation 64 'add' 'next_mul' <Predicate = (tmp_5)> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 65 [1/1] (1.94ns)   --->   "%tmp_12 = add i15 %tmp_6, %tmp_3" [PartA/parta1_4.cpp:15]   --->   Operation 65 'add' 'tmp_12' <Predicate = (tmp_5)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_14_cast = zext i15 %tmp_12 to i64" [PartA/parta1_4.cpp:15]   --->   Operation 66 'zext' 'tmp_14_cast' <Predicate = (tmp_5)> <Delay = 0.00>
-ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [10000 x i32]* %B, i64 0, i64 %tmp_14_cast" [PartA/parta1_4.cpp:15]   --->   Operation 67 'getelementptr' 'B_addr' <Predicate = (tmp_5)> <Delay = 0.00>
-ST_4 : Operation 68 [2/2] (3.25ns)   --->   "%A_load = load i32* %A_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 68 'load' 'A_load' <Predicate = (tmp_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
-ST_4 : Operation 69 [2/2] (3.25ns)   --->   "%B_load = load i32* %B_addr, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 69 'load' 'B_load' <Predicate = (tmp_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
-ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str36, i32 %tmp_9) nounwind" [PartA/parta1_4.cpp:17]   --->   Operation 70 'specregionend' 'empty' <Predicate = (!tmp_5)> <Delay = 0.00>
-ST_4 : Operation 71 [1/1] (0.00ns)   --->   "br label %3" [PartA/parta1_4.cpp:10]   --->   Operation 71 'br' <Predicate = (!tmp_5)> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%k = phi i31 [ 0, %4 ], [ %k_1, %6 ]"   --->   Operation 59 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%k_cast = zext i31 %k to i32" [PartA/parta1_4.cpp:13]   --->   Operation 60 'zext' 'k_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (2.47ns)   --->   "%tmp_5 = icmp slt i32 %k_cast, %nA_read" [PartA/parta1_4.cpp:13]   --->   Operation 61 'icmp' 'tmp_5' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [1/1] (2.52ns)   --->   "%k_1 = add i31 %k, 1" [PartA/parta1_4.cpp:13]   --->   Operation 62 'add' 'k_1' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "br i1 %tmp_5, label %6, label %7" [PartA/parta1_4.cpp:13]   --->   Operation 63 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_10 = trunc i31 %k to i15" [PartA/parta1_4.cpp:15]   --->   Operation 64 'trunc' 'tmp_10' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (1.94ns)   --->   "%tmp_11 = add i15 %tmp_1, %tmp_10" [PartA/parta1_4.cpp:15]   --->   Operation 65 'add' 'tmp_11' <Predicate = (tmp_5)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_13_cast = zext i15 %tmp_11 to i64" [PartA/parta1_4.cpp:15]   --->   Operation 66 'zext' 'tmp_13_cast' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%A_addr_1 = getelementptr [10000 x i32]* %A, i64 0, i64 %tmp_13_cast" [PartA/parta1_4.cpp:15]   --->   Operation 67 'getelementptr' 'A_addr_1' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (1.94ns)   --->   "%tmp_12 = add i15 %tmp_3, %tmp_10" [PartA/parta1_4.cpp:15]   --->   Operation 68 'add' 'tmp_12' <Predicate = (tmp_5)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_14_cast = zext i15 %tmp_12 to i64" [PartA/parta1_4.cpp:15]   --->   Operation 69 'zext' 'tmp_14_cast' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%B_addr_1 = getelementptr [10000 x i32]* %B, i64 0, i64 %tmp_14_cast" [PartA/parta1_4.cpp:15]   --->   Operation 70 'getelementptr' 'B_addr_1' <Predicate = (tmp_5)> <Delay = 0.00>
+ST_4 : Operation 71 [2/2] (3.25ns)   --->   "%A_load = load i32* %A_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 71 'load' 'A_load' <Predicate = (tmp_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_4 : Operation 72 [2/2] (3.25ns)   --->   "%B_load = load i32* %B_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 72 'load' 'B_load' <Predicate = (tmp_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str315, i32 %tmp_9) nounwind" [PartA/parta1_4.cpp:17]   --->   Operation 73 'specregionend' 'empty' <Predicate = (!tmp_5)> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "br label %3" [PartA/parta1_4.cpp:10]   --->   Operation 74 'br' <Predicate = (!tmp_5)> <Delay = 0.00>
 
 State 5 <SV = 4> <Delay = 3.25>
-ST_5 : Operation 72 [1/2] (3.25ns)   --->   "%A_load = load i32* %A_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 72 'load' 'A_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
-ST_5 : Operation 73 [1/2] (3.25ns)   --->   "%B_load = load i32* %B_addr, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 73 'load' 'B_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
-ST_5 : Operation 74 [2/2] (3.25ns)   --->   "%C_load = load i32* %C_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 74 'load' 'C_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_5 : Operation 75 [1/2] (3.25ns)   --->   "%A_load = load i32* %A_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 75 'load' 'A_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_5 : Operation 76 [1/2] (3.25ns)   --->   "%B_load = load i32* %B_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 76 'load' 'B_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_5 : Operation 77 [2/2] (3.25ns)   --->   "%C_load = load i32* %C_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 77 'load' 'C_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
 
 State 6 <SV = 5> <Delay = 8.51>
-ST_6 : Operation 75 [1/1] (8.51ns)   --->   "%tmp_7 = mul nsw i32 %B_load, %A_load" [PartA/parta1_4.cpp:15]   --->   Operation 75 'mul' 'tmp_7' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 76 [1/2] (3.25ns)   --->   "%C_load = load i32* %C_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 76 'load' 'C_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_6 : Operation 78 [1/1] (8.51ns)   --->   "%tmp_7 = mul nsw i32 %B_load, %A_load" [PartA/parta1_4.cpp:15]   --->   Operation 78 'mul' 'tmp_7' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 79 [1/2] (3.25ns)   --->   "%C_load = load i32* %C_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 79 'load' 'C_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
 
 State 7 <SV = 6> <Delay = 5.80>
-ST_7 : Operation 77 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str4) nounwind" [PartA/parta1_4.cpp:14]   --->   Operation 77 'specloopname' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 78 [1/1] (2.55ns)   --->   "%tmp_8 = add nsw i32 %tmp_7, %C_load" [PartA/parta1_4.cpp:15]   --->   Operation 78 'add' 'tmp_8' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 79 [1/1] (3.25ns)   --->   "store i32 %tmp_8, i32* %C_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 79 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
-ST_7 : Operation 80 [1/1] (0.00ns)   --->   "br label %5" [PartA/parta1_4.cpp:13]   --->   Operation 80 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 80 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str416) nounwind" [PartA/parta1_4.cpp:14]   --->   Operation 80 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 81 [1/1] (2.55ns)   --->   "%tmp_8 = add nsw i32 %tmp_7, %C_load" [PartA/parta1_4.cpp:15]   --->   Operation 81 'add' 'tmp_8' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 82 [1/1] (3.25ns)   --->   "store i32 %tmp_8, i32* %C_addr_1, align 4" [PartA/parta1_4.cpp:15]   --->   Operation 82 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_7 : Operation 83 [1/1] (0.00ns)   --->   "br label %5" [PartA/parta1_4.cpp:13]   --->   Operation 83 'br' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -198,30 +201,30 @@ The critical path consists of the following:
 	'phi' operation ('phi_mul1') with incoming values : ('next_mul2') [26]  (0 ns)
 	'add' operation ('next_mul2') [29]  (2.8 ns)
 
- <State 3>: 2.52ns
+ <State 3>: 2.8ns
 The critical path consists of the following:
-	'phi' operation ('j') with incoming values : ('j', PartA/parta1_4.cpp:10) [42]  (0 ns)
-	'add' operation ('j', PartA/parta1_4.cpp:10) [45]  (2.52 ns)
+	'phi' operation ('phi_mul') with incoming values : ('next_mul') [43]  (0 ns)
+	'add' operation ('next_mul') [46]  (2.8 ns)
 
  <State 4>: 5.2ns
 The critical path consists of the following:
-	'phi' operation ('k') with incoming values : ('k', PartA/parta1_4.cpp:13) [57]  (0 ns)
-	'add' operation ('tmp_11', PartA/parta1_4.cpp:15) [67]  (1.94 ns)
-	'getelementptr' operation ('A_addr_1', PartA/parta1_4.cpp:15) [69]  (0 ns)
-	'load' operation ('A_load', PartA/parta1_4.cpp:15) on array 'A' [74]  (3.25 ns)
+	'phi' operation ('k') with incoming values : ('k', PartA/parta1_4.cpp:13) [63]  (0 ns)
+	'add' operation ('tmp_12', PartA/parta1_4.cpp:15) [74]  (1.94 ns)
+	'getelementptr' operation ('B_addr_1', PartA/parta1_4.cpp:15) [76]  (0 ns)
+	'load' operation ('B_load', PartA/parta1_4.cpp:15) on array 'B' [78]  (3.25 ns)
 
  <State 5>: 3.25ns
 The critical path consists of the following:
-	'load' operation ('A_load', PartA/parta1_4.cpp:15) on array 'A' [74]  (3.25 ns)
+	'load' operation ('A_load', PartA/parta1_4.cpp:15) on array 'A' [77]  (3.25 ns)
 
  <State 6>: 8.51ns
 The critical path consists of the following:
-	'mul' operation ('tmp_7', PartA/parta1_4.cpp:15) [76]  (8.51 ns)
+	'mul' operation ('tmp_7', PartA/parta1_4.cpp:15) [79]  (8.51 ns)
 
  <State 7>: 5.81ns
 The critical path consists of the following:
-	'add' operation ('tmp_8', PartA/parta1_4.cpp:15) [78]  (2.55 ns)
-	'store' operation (PartA/parta1_4.cpp:15) of variable 'tmp_8', PartA/parta1_4.cpp:15 on array 'C' [79]  (3.25 ns)
+	'add' operation ('tmp_8', PartA/parta1_4.cpp:15) [81]  (2.55 ns)
+	'store' operation (PartA/parta1_4.cpp:15) of variable 'tmp_8', PartA/parta1_4.cpp:15 on array 'C' [82]  (3.25 ns)
 
 
 ============================================================

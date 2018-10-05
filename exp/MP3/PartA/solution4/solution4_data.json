@@ -37,6 +37,8 @@
   "Files": {
     "CSource": [
       "..\/unop_mm.cpp",
+      "..\/parta1_6.cpp",
+      "..\/parta1_5.cpp",
       "..\/parta1_4.cpp",
       "..\/parta1_3.cpp",
       "..\/parta1_2.cpp",
@@ -410,7 +412,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-10-04 15:31:54 -0500",
+    "Time": "2018-10-04 22:31:41 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

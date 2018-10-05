@@ -41,8 +41,8 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
-set SourceFiles {sc {} c {../unop_mm.cpp ../parta1_4.cpp ../parta1_3.cpp ../parta1_2.cpp ../gold.cpp}}
-set SourceFlags {sc {} c {{} {} {} {} {}}}
+set SourceFiles {sc {} c {../unop_mm.cpp ../parta1_6.cpp ../parta1_5.cpp ../parta1_4.cpp ../parta1_3.cpp ../parta1_2.cpp ../gold.cpp}}
+set SourceFlags {sc {} c {{} {} {} {} {} {} {}}}
 set DirectiveFile {C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution4/solution4.directive}
 set TBFiles {verilog ../unop_mm_tb.cpp bc ../unop_mm_tb.cpp vhdl ../unop_mm_tb.cpp sc ../unop_mm_tb.cpp cas ../unop_mm_tb.cpp c {}}
 set SpecLanguage "C"

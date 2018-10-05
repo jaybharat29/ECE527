@@ -337,11 +337,11 @@ void parta1_5(int A[100][100], int B[100][100], int C[100][100],
 _ssdm_op_SpecInterface(C[i], "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
  for_c_col : for(int j = 0; j < nC; j++)
   {
-_ssdm_op_SpecInterface(A[i], "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(A[i], "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");_ssdm_op_SpecInterface(B[j], "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
  for_common : for(int k = 0; k < nA; k++)
    {
-    C[i][j] += A[i][k]*B[k][j];
+    C[i][j] += A[i][k]*B[j][k];
    }
   }
  }

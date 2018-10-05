@@ -45,11 +45,11 @@ void parta1_5(int A[100][100], int B[100][100], int C[100][100],
 #pragma HLS interface ap_fifo port=C[i]
   for_c_col : for(int j = 0; j < nC; j++)
   {
-#pragma HLS interface ap_fifo port=A[i]
+#pragma HLS interface ap_fifo port=A[i],B[j]
 #pragma HLS PIPELINE II=1
    for_common : for(int k = 0; k < nA; k++)
    {
-    C[i][j] += A[i][k]*B[k][j];
+    C[i][j] += A[i][k]*B[j][k];
    }
   }
  }

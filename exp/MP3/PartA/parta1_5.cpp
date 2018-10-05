@@ -7,13 +7,14 @@ void parta1_5(int A[100][100], int B[100][100], int C[100][100],
 	for_c_row : for(int i = 0; i < mC; i++)
 	{
 #pragma HLS interface ap_fifo port=C[i]
+#pragma HLS interface ap_fifo port=A[i]
 		for_c_col : for(int j = 0; j < nC; j++)
 		{
-#pragma HLS interface ap_fifo port=A[i]
-			#pragma HLS PIPELINE II=1
+#pragma HLS PIPELINE II=1
 			for_common : for(int k = 0; k < nA; k++)
 			{
-				C[i][j] += A[i][k]*B[k][j];
+#pragma HLS interface ap_fifo port=B[j]
+				C[i][j] += A[i][k]*B[j][k];
 			}
 		}
 	}

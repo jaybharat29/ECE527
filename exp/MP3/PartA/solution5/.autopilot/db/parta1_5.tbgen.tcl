@@ -88,7 +88,7 @@ set NewPortList {[
  	{ "name": "nC", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "nC", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
 		"CDFG" : "parta1_5",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -110,14 +110,15 @@ set RtlHierarchyInfo {[
 			{"Name" : "mB", "Type" : "None", "Direction" : "I"},
 			{"Name" : "nB", "Type" : "None", "Direction" : "I"},
 			{"Name" : "mC", "Type" : "None", "Direction" : "I"},
-			{"Name" : "nC", "Type" : "None", "Direction" : "I"}]}]}
+			{"Name" : "nC", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.parta1_5_mul_mul_bkb_U1", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	parta1_5 {
-		A {Type I LastRead 3 FirstWrite -1}
-		B {Type I LastRead 3 FirstWrite -1}
-		C {Type IO LastRead 4 FirstWrite 6}
+		A {Type I LastRead 4 FirstWrite -1}
+		B {Type I LastRead 4 FirstWrite -1}
+		C {Type IO LastRead 6 FirstWrite 7}
 		mA {Type I LastRead -1 FirstWrite -1}
 		nA {Type I LastRead 0 FirstWrite -1}
 		mB {Type I LastRead -1 FirstWrite -1}
@@ -133,6 +134,7 @@ set PerformanceInfo {[
 ]}
 
 set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 

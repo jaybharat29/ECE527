@@ -37,14 +37,21 @@
   "Files": {
     "CSource": [
       "..\/unop_mm.cpp",
+      "..\/parta1_6.cpp",
       "..\/parta1_5.cpp",
       "..\/parta1_4.cpp",
       "..\/parta1_3.cpp",
       "..\/parta1_2.cpp",
       "..\/gold.cpp"
     ],
-    "Vhdl": ["impl\/vhdl\/parta1_5.vhd"],
-    "Verilog": ["impl\/verilog\/parta1_5.v"],
+    "Vhdl": [
+      "impl\/vhdl\/parta1_5_mul_mul_bkb.vhd",
+      "impl\/vhdl\/parta1_5.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/parta1_5_mul_mul_bkb.v",
+      "impl\/verilog\/parta1_5.v"
+    ],
     "Misc": ["impl\/misc\/logo.png"]
   },
   "SubcoreInfo": {
@@ -373,7 +380,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.510"
+          "Estimate": "9.060"
         },
         "Loops": [{
             "Name": "for_c_row",
@@ -382,25 +389,18 @@
             "PipelineII": "",
             "PipelineDepth": "",
             "Loops": [{
-                "Name": "for_c_col",
+                "Name": "for_c_col_for_common",
                 "TripCount": "",
                 "Latency": "",
-                "PipelineII": "",
-                "PipelineDepth": "",
-                "Loops": [{
-                    "Name": "for_common",
-                    "TripCount": "",
-                    "Latency": "",
-                    "PipelineII": "",
-                    "PipelineDepth": "4"
-                  }]
+                "PipelineII": "2",
+                "PipelineDepth": "6"
               }]
           }],
         "Area": {
-          "DSP48E": "3",
-          "FF": "517",
-          "LUT": "466",
-          "BRAM_18K": "0"
+          "BRAM_18K": "0",
+          "DSP48E": "7",
+          "FF": "742",
+          "LUT": "658"
         }
       }}
   },
@@ -411,7 +411,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-10-04 15:47:21 -0500",
+    "Time": "2018-10-04 23:38:29 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

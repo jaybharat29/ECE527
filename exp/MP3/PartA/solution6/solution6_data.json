@@ -44,14 +44,8 @@
       "..\/parta1_2.cpp",
       "..\/gold.cpp"
     ],
-    "Vhdl": [
-      "impl\/vhdl\/parta1_6_mac_mulabkb.vhd",
-      "impl\/vhdl\/parta1_6.vhd"
-    ],
-    "Verilog": [
-      "impl\/verilog\/parta1_6_mac_mulabkb.v",
-      "impl\/verilog\/parta1_6.v"
-    ],
+    "Vhdl": ["impl\/vhdl\/parta1_6.vhd"],
+    "Verilog": ["impl\/verilog\/parta1_6.v"],
     "Misc": ["impl\/misc\/logo.png"]
   },
   "SubcoreInfo": {
@@ -380,7 +374,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "9.634"
+          "Estimate": "8.510"
         },
         "Loops": [{
             "Name": "for_c_row",
@@ -404,9 +398,9 @@
               }]
           }],
         "Area": {
-          "DSP48E": "7",
-          "FF": "613",
-          "LUT": "1022",
+          "DSP48E": "3",
+          "FF": "689",
+          "LUT": "1160",
           "BRAM_18K": "0"
         }
       }}
@@ -418,7 +412,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-10-04 16:03:36 -0500",
+    "Time": "2018-10-04 22:56:40 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

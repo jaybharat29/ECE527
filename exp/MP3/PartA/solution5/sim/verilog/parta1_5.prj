@@ -4,4 +4,5 @@ sv xil_defaultlib "AESL_automem_B.v"
 sv xil_defaultlib "AESL_automem_C.v"
 sv xil_defaultlib "parta1_5.autotb.v"
 sv xil_defaultlib "parta1_5.v"
+sv xil_defaultlib "parta1_5_mul_mul_bkb.v"
 

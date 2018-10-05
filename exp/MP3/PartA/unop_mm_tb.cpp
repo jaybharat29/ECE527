@@ -4,6 +4,17 @@
 
 #define TEST_VECTORS 3
 
+void transpose(int B[100][100], int B_T[100][100], int mB, int nB)
+{
+	for(int i = 0; i < mB; i ++)
+	{
+		for(int j = 0; j < nB; j++)
+		{
+			B_T[j][i] = B[i][j];
+		}
+	}
+}
+
 void parta1_1_test_func(int rowA, int colA, int colB)
 {
 	int mA = rowA;
@@ -197,6 +208,7 @@ void parta1_4_test_func(int rowA, int colA, int colB)
 	int nC = nB;
 	int A[100][100];
 	int B[100][100];
+	int B_T[100][100];
 	int C[100][100];
 	int gold_C[100][100];
 	//generate matrix A
@@ -227,10 +239,11 @@ void parta1_4_test_func(int rowA, int colA, int colB)
 					C[i][j] = 0;
 				}
 			}
+		transpose(B,B_T,mB,nB);
 		//get gold
 		gold(A, B, gold_C, mA, nA, mB, nB, mC, nC);
 		//hardware out
-		parta1_4(A, B, C, mA, nA, mB, nB, mC, nC);
+		parta1_4(A, B_T, C, mA, nA, mB, nB, mC, nC);
 
 		for(int i = 0; i < mC; i++)
 		{
@@ -238,8 +251,9 @@ void parta1_4_test_func(int rowA, int colA, int colB)
 			{
 				if(C[i][j] != gold_C[i][j])
 				{
-					printf("%d ", gold_C[i][j]);
+					printf("%d %d %d %d",i,j, gold_C[i][j], C[i][j]);
 					printf("Failed\n");
+					return;
 				}
 			}
 			//printf("\n");
@@ -258,6 +272,7 @@ void parta1_5_test_func(int rowA, int colA, int colB)
 	int nC = nB;
 	int A[100][100];
 	int B[100][100];
+	int B_T[100][100];
 	int C[100][100];
 	int gold_C[100][100];
 	//generate matrix A
@@ -288,10 +303,11 @@ void parta1_5_test_func(int rowA, int colA, int colB)
 					C[i][j] = 0;
 				}
 			}
+		transpose(B,B_T,mB,nB);
 		//get gold
 		gold(A, B, gold_C, mA, nA, mB, nB, mC, nC);
 		//hardware out
-		parta1_5(A, B, C, mA, nA, mB, nB, mC, nC);
+		parta1_5(A, B_T, C, mA, nA, mB, nB, mC, nC);
 
 		for(int i = 0; i < mC; i++)
 		{
@@ -319,6 +335,7 @@ void parta1_6_test_func(int rowA, int colA, int colB)
 	int nC = nB;
 	int A[100][100];
 	int B[100][100];
+	int B_T[100][100];
 	int C[100][100];
 	int gold_C[100][100];
 	//generate matrix A
@@ -349,10 +366,11 @@ void parta1_6_test_func(int rowA, int colA, int colB)
 					C[i][j] = 0;
 				}
 			}
+		transpose(B,B_T,mB,nB);
 		//get gold
 		gold(A, B, gold_C, mA, nA, mB, nB, mC, nC);
 		//hardware out
-		parta1_6(A, B, C, mA, nA, mB, nB, mC, nC);
+		parta1_6(A, B_T, C, mA, nA, mB, nB, mC, nC);
 
 		for(int i = 0; i < mC; i++)
 		{
@@ -395,8 +413,8 @@ int main()
 				//parta1_2_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
 				//parta1_3_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
 				//parta1_4_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
-				//parta1_5_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
-				parta1_6_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
+				parta1_5_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
+				//parta1_6_test_func(t_vector_mA[i], t_vector_nA[j], t_vector_nB[k]);
 			}
 		}
 	}

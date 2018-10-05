@@ -4,7 +4,7 @@
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project PartA
-set_top parta1_6
+set_top parta1_5
 add_files PartA/gold.cpp
 add_files PartA/parta.h
 add_files PartA/parta1_2.cpp

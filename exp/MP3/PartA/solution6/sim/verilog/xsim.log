@@ -2,8 +2,8 @@
 # xsim v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Oct  4 16:04:58 2018
-# Process ID: 11236
+# Start of session at: Thu Oct  4 22:58:48 2018
+# Process ID: 7268
 # Current directory: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/parta1_6/xsim_script.tcl}
 # Log file: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/sim/verilog/xsim.log
@@ -51,6 +51,6 @@ source parta1_6.tcl
 // RTL Simulation : 27 / 27 [n/a] @ "97111455000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 97111495 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartA/solution6/sim/verilog/parta1_6.autotb.v" Line 523
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:34 . Memory (MB): peak = 213.230 ; gain = 0.000
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:37 . Memory (MB): peak = 213.348 ; gain = 0.000
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Oct  4 16:07:40 2018...
+INFO: [Common 17-206] Exiting xsim at Thu Oct  4 23:01:32 2018...
