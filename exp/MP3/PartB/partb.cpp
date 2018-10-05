@@ -18,6 +18,7 @@ void partb(int A[100][100], int B[100][100], int C[100][100],
 	//store B internally
 	for(int i = 0; i < mB; i++)
 	{
+#pragma HLS PIPELINE
 		for(int j = 0; j < nB; j++)
 		{
 			B_i[i][j] = B[i][j];
@@ -26,6 +27,7 @@ void partb(int A[100][100], int B[100][100], int C[100][100],
 
 	for(int i = 0; i < mC; i++)
 	{
+#pragma HLS PIPELINE
 		for(int j = 0; j < nC; j++)
 		{
 			C_i[i][j] = 0;
@@ -33,21 +35,24 @@ void partb(int A[100][100], int B[100][100], int C[100][100],
 	}
 
 
-	for_c_row : for(int i = 0; i < mC; i++)
+	for(int i = 0; i < mC; i++)
+	{
+		for(int j = 0; j < nC; j++)
 		{
-			for_c_col : for(int j = 0; j < nC; j++)
+			int sum = 0;
+			for(int k = 0; k < nA; k++)
 			{
-				int sum = 0;
-				for(int k = 0; k < nA; k++)
-				{
-					sum += A_i[i][k]*B_i[k][j];
-				}
-				C_i[i][j] = sum;
+#pragma HLS PIPELINE
+#pragma HLS unroll factor = 2
+				sum += A_i[i][k]*B_i[k][j];
 			}
+			C_i[i][j] = sum;
 		}
+	}
 	//write C externally
 	for(int i = 0; i < mC; i++)
 	{
+#pragma HLS PIPELINE
 		for(int j = 0; j < nC; j++)
 		{
 			C[i][j] = C_i[i][j];

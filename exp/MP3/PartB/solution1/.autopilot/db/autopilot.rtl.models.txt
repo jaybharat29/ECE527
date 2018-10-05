@@ -1,2 +1,4 @@
+partb_mac_muladd_bkb
+partb_mul_mul_8nscud
 partb_A_i
 partb

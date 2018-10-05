@@ -13,7 +13,7 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<EstimatedClockPeriod>8.510</EstimatedClockPeriod>
+<EstimatedClockPeriod>9.634</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>undef</Best-caseLatency>
@@ -41,73 +41,45 @@
 <Name>Loop 2</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
-<IterationLatency>undef</IterationLatency>
-<PipelineDepth>undef</PipelineDepth>
-<Loop2.1>
-<Name>Loop 2.1</Name>
-<TripCount>undef</TripCount>
-<Latency>undef</Latency>
-<IterationLatency>2</IterationLatency>
-<PipelineDepth>2</PipelineDepth>
-</Loop2.1>
+<PipelineII>1</PipelineII>
+<PipelineDepth>3</PipelineDepth>
 </Loop2>
 <Loop3>
 <Name>Loop 3</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
-<IterationLatency>undef</IterationLatency>
-<PipelineDepth>undef</PipelineDepth>
-<Loop3.1>
-<Name>Loop 3.1</Name>
-<TripCount>undef</TripCount>
-<Latency>undef</Latency>
-<IterationLatency>1</IterationLatency>
-<PipelineDepth>1</PipelineDepth>
-</Loop3.1>
+<PipelineII>1</PipelineII>
+<PipelineDepth>2</PipelineDepth>
 </Loop3>
-<for_c_row>
-<Name>for_c_row</Name>
+<Loop4>
+<Name>Loop 4</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <IterationLatency>undef</IterationLatency>
 <PipelineDepth>undef</PipelineDepth>
-<for_c_col>
-<Name>for_c_col</Name>
+<Loop4.1>
+<Name>Loop 4.1</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
-<IterationLatency>undef</IterationLatency>
-<PipelineDepth>undef</PipelineDepth>
-<for_c_col.1>
-<Name>for_c_col.1</Name>
-<TripCount>undef</TripCount>
-<Latency>undef</Latency>
-<IterationLatency>4</IterationLatency>
+<PipelineII>1</PipelineII>
 <PipelineDepth>4</PipelineDepth>
-</for_c_col.1>
-</for_c_col>
-</for_c_row>
+</Loop4.1>
+</Loop4>
 <Loop5>
 <Name>Loop 5</Name>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
-<IterationLatency>undef</IterationLatency>
-<PipelineDepth>undef</PipelineDepth>
-<Loop5.1>
-<Name>Loop 5.1</Name>
-<TripCount>undef</TripCount>
-<Latency>undef</Latency>
-<IterationLatency>2</IterationLatency>
-<PipelineDepth>2</PipelineDepth>
-</Loop5.1>
+<PipelineII>1</PipelineII>
+<PipelineDepth>3</PipelineDepth>
 </Loop5>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
 <BRAM_18K>96</BRAM_18K>
-<DSP48E>3</DSP48E>
-<FF>1402</FF>
-<LUT>1413</LUT>
+<DSP48E>13</DSP48E>
+<FF>1653</FF>
+<LUT>1902</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>

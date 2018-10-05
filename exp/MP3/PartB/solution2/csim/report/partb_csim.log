@@ -1,0 +1,35 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../partb_tb.cpp in debug mode
+   Compiling ../../../partb.cpp in debug mode
+   Compiling ../../../gold.cpp in debug mode
+   Generating csim.exe
+Passed B for mA = 42, nA = 42, nB = 42, 
+Passed B for mA = 42, nA = 42, nB = 1, 
+Passed B for mA = 42, nA = 42, nB = 79, 
+Passed B for mA = 42, nA = 1, nB = 42, 
+Passed B for mA = 42, nA = 1, nB = 1, 
+Passed B for mA = 42, nA = 1, nB = 79, 
+Passed B for mA = 42, nA = 79, nB = 42, 
+Passed B for mA = 42, nA = 79, nB = 1, 
+Passed B for mA = 42, nA = 79, nB = 79, 
+Passed B for mA = 1, nA = 42, nB = 42, 
+Passed B for mA = 1, nA = 42, nB = 1, 
+Passed B for mA = 1, nA = 42, nB = 79, 
+Passed B for mA = 1, nA = 1, nB = 42, 
+Passed B for mA = 1, nA = 1, nB = 1, 
+Passed B for mA = 1, nA = 1, nB = 79, 
+Passed B for mA = 1, nA = 79, nB = 42, 
+Passed B for mA = 1, nA = 79, nB = 1, 
+Passed B for mA = 1, nA = 79, nB = 79, 
+Passed B for mA = 79, nA = 42, nB = 42, 
+Passed B for mA = 79, nA = 42, nB = 1, 
+Passed B for mA = 79, nA = 42, nB = 79, 
+Passed B for mA = 79, nA = 1, nB = 42, 
+Passed B for mA = 79, nA = 1, nB = 1, 
+Passed B for mA = 79, nA = 1, nB = 79, 
+Passed B for mA = 79, nA = 79, nB = 42, 
+Passed B for mA = 79, nA = 79, nB = 1, 
+Passed B for mA = 79, nA = 79, nB = 79, 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -5,4 +5,6 @@ sv xil_defaultlib "AESL_automem_C.v"
 sv xil_defaultlib "partb.autotb.v"
 sv xil_defaultlib "partb.v"
 sv xil_defaultlib "partb_A_i.v"
+sv xil_defaultlib "partb_mac_muladd_bkb.v"
+sv xil_defaultlib "partb_mul_mul_8nscud.v"
 

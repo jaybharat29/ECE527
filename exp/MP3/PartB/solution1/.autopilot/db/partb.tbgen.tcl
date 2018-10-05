@@ -86,7 +86,7 @@ set NewPortList {[
  	{ "name": "nC", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "nC", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7"],
 		"CDFG" : "partb",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -111,14 +111,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "nC", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.A_i_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.B_i_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.C_i_U", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.C_i_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.partb_mac_muladd_bkb_U1", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.partb_mac_muladd_bkb_U2", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.partb_mul_mul_8nscud_U3", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.partb_mac_muladd_bkb_U4", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	partb {
 		A {Type I LastRead 2 FirstWrite -1}
 		B {Type I LastRead 3 FirstWrite -1}
-		C {Type O LastRead -1 FirstWrite 7}
+		C {Type O LastRead -1 FirstWrite 9}
 		mA {Type I LastRead 0 FirstWrite -1}
 		nA {Type I LastRead 0 FirstWrite -1}
 		mB {Type I LastRead 0 FirstWrite -1}
@@ -134,6 +138,10 @@ set PerformanceInfo {[
 ]}
 
 set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
+	{"Pipeline" : "1", "EnableSignal" : "ap_enable_pp1"}
+	{"Pipeline" : "2", "EnableSignal" : "ap_enable_pp2"}
+	{"Pipeline" : "3", "EnableSignal" : "ap_enable_pp3"}
 ]}
 
 set Spec2ImplPortList { 

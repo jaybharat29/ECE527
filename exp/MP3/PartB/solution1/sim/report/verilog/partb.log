@@ -63,6 +63,12 @@ INFO: [VRFC 10-311] analyzing module partb
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb_A_i.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module partb_A_i_ram
 INFO: [VRFC 10-311] analyzing module partb_A_i
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb_mac_muladd_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module partb_mac_muladd_bkb_DSP48_0
+INFO: [VRFC 10-311] analyzing module partb_mac_muladd_bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb_mul_mul_8nscud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module partb_mul_mul_8nscud_DSP48_1
+INFO: [VRFC 10-311] analyzing module partb_mul_mul_8nscud
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
@@ -70,6 +76,10 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.partb_A_i_ram
 Compiling module xil_defaultlib.partb_A_i(DataWidth=32,AddressRa...
+Compiling module xil_defaultlib.partb_mac_muladd_bkb_DSP48_0
+Compiling module xil_defaultlib.partb_mac_muladd_bkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.partb_mul_mul_8nscud_DSP48_1
+Compiling module xil_defaultlib.partb_mul_mul_8nscud(ID=1,NUM_ST...
 Compiling module xil_defaultlib.partb
 Compiling module xil_defaultlib.AESL_automem_A
 Compiling module xil_defaultlib.AESL_automem_B
@@ -84,8 +94,8 @@ Built simulation snapshot partb
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/xsim.dir/partb/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/xsim.dir/partb/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct  5 00:39:28 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Fri Oct  5 00:39:28 2018...
+INFO: [Common 17-186] 'C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/xsim.dir/partb/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct  5 01:00:58 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct  5 01:00:58 2018...
 
 ****** xsim v2018.2 (64-bit)
   **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
@@ -105,38 +115,38 @@ source partb.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 27 [n/a] @ "125000"
-// RTL Simulation : 1 / 27 [n/a] @ "3126675000"
-// RTL Simulation : 2 / 27 [n/a] @ "3239715000"
-// RTL Simulation : 3 / 27 [n/a] @ "9085755000"
-// RTL Simulation : 4 / 27 [n/a] @ "9249635000"
-// RTL Simulation : 5 / 27 [n/a] @ "9257715000"
-// RTL Simulation : 6 / 27 [n/a] @ "9562195000"
-// RTL Simulation : 7 / 27 [n/a] @ "15362355000"
-// RTL Simulation : 8 / 27 [n/a] @ "15570115000"
-// RTL Simulation : 9 / 27 [n/a] @ "26417075000"
-// RTL Simulation : 10 / 27 [n/a] @ "26526835000"
-// RTL Simulation : 11 / 27 [n/a] @ "26531225000"
-// RTL Simulation : 12 / 27 [n/a] @ "26736075000"
-// RTL Simulation : 13 / 27 [n/a] @ "26740875000"
-// RTL Simulation : 14 / 27 [n/a] @ "26741165000"
-// RTL Simulation : 15 / 27 [n/a] @ "26750035000"
-// RTL Simulation : 16 / 27 [n/a] @ "26954515000"
-// RTL Simulation : 17 / 27 [n/a] @ "26962605000"
-// RTL Simulation : 18 / 27 [n/a] @ "27344315000"
-// RTL Simulation : 19 / 27 [n/a] @ "33193315000"
-// RTL Simulation : 20 / 27 [n/a] @ "33404405000"
-// RTL Simulation : 21 / 27 [n/a] @ "44341275000"
-// RTL Simulation : 22 / 27 [n/a] @ "44648715000"
-// RTL Simulation : 23 / 27 [n/a] @ "44663825000"
-// RTL Simulation : 24 / 27 [n/a] @ "45235075000"
-// RTL Simulation : 25 / 27 [n/a] @ "56084995000"
-// RTL Simulation : 26 / 27 [n/a] @ "56472945000"
-// RTL Simulation : 27 / 27 [n/a] @ "76764155000"
+// RTL Simulation : 1 / 27 [n/a] @ "953645000"
+// RTL Simulation : 2 / 27 [n/a] @ "1011715000"
+// RTL Simulation : 3 / 27 [n/a] @ "2773305000"
+// RTL Simulation : 4 / 27 [n/a] @ "2951915000"
+// RTL Simulation : 5 / 27 [n/a] @ "2957915000"
+// RTL Simulation : 6 / 27 [n/a] @ "3292295000"
+// RTL Simulation : 7 / 27 [n/a] @ "4945105000"
+// RTL Simulation : 8 / 27 [n/a] @ "5050165000"
+// RTL Simulation : 9 / 27 [n/a] @ "8099725000"
+// RTL Simulation : 10 / 27 [n/a] @ "8139755000"
+// RTL Simulation : 11 / 27 [n/a] @ "8141655000"
+// RTL Simulation : 12 / 27 [n/a] @ "8216095000"
+// RTL Simulation : 13 / 27 [n/a] @ "8220865000"
+// RTL Simulation : 14 / 27 [n/a] @ "8221125000"
+// RTL Simulation : 15 / 27 [n/a] @ "8229965000"
+// RTL Simulation : 16 / 27 [n/a] @ "8301815000"
+// RTL Simulation : 17 / 27 [n/a] @ "8305195000"
+// RTL Simulation : 18 / 27 [n/a] @ "8438835000"
+// RTL Simulation : 19 / 27 [n/a] @ "10216705000"
+// RTL Simulation : 20 / 27 [n/a] @ "10325465000"
+// RTL Simulation : 21 / 27 [n/a] @ "13609605000"
+// RTL Simulation : 22 / 27 [n/a] @ "13945095000"
+// RTL Simulation : 23 / 27 [n/a] @ "13956275000"
+// RTL Simulation : 24 / 27 [n/a] @ "14584435000"
+// RTL Simulation : 25 / 27 [n/a] @ "17663965000"
+// RTL Simulation : 26 / 27 [n/a] @ "17860785000"
+// RTL Simulation : 27 / 27 [n/a] @ "23541785000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 76764195 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb.autotb.v" Line 679
-run: Time (s): cpu = 00:00:01 ; elapsed = 00:02:05 . Memory (MB): peak = 213.316 ; gain = 0.000
+$finish called at time : 23541825 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/sim/verilog/partb.autotb.v" Line 679
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:54 . Memory (MB): peak = 213.207 ; gain = 0.000
 ## quit
-INFO: [Common 17-206] Exiting xsim at Fri Oct  5 00:41:55 2018...
+INFO: [Common 17-206] Exiting xsim at Fri Oct  5 01:02:00 2018...
 Passed B for mA = 42, nA = 42, nB = 42, 
 Passed B for mA = 42, nA = 42, nB = 1, 
 Passed B for mA = 42, nA = 42, nB = 79, 

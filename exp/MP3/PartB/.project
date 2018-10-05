@@ -42,6 +42,11 @@
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>solution2/constraints</name>
+			<type>2</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution2/.tcls</location>
+		</link>
+		<link>
 			<name>source/gold.cpp</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/gold.cpp</location>
@@ -75,6 +80,21 @@
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
 			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution1/script.tcl</location>
+		</link>
+		<link>
+			<name>solution2/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution2/solution2.directive</location>
+		</link>
+		<link>
+			<name>solution2/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution2/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution2/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution2/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -41,10 +41,14 @@
     ],
     "Vhdl": [
       "impl\/vhdl\/partb_A_i.vhd",
+      "impl\/vhdl\/partb_mac_muladd_bkb.vhd",
+      "impl\/vhdl\/partb_mul_mul_8nscud.vhd",
       "impl\/vhdl\/partb.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/partb_A_i.v",
+      "impl\/verilog\/partb_mac_muladd_bkb.v",
+      "impl\/verilog\/partb_mul_mul_8nscud.v",
       "impl\/verilog\/partb.v"
     ],
     "Misc": ["impl\/misc\/logo.png"]
@@ -354,7 +358,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.510"
+          "Estimate": "9.634"
         },
         "Loops": [
           {
@@ -375,71 +379,43 @@
             "Name": "Loop 2",
             "TripCount": "",
             "Latency": "",
-            "PipelineII": "",
-            "PipelineDepth": "",
-            "Loops": [{
-                "Name": "Loop 2.1",
-                "TripCount": "",
-                "Latency": "",
-                "PipelineII": "",
-                "PipelineDepth": "2"
-              }]
+            "PipelineII": "1",
+            "PipelineDepth": "3"
           },
           {
             "Name": "Loop 3",
             "TripCount": "",
             "Latency": "",
-            "PipelineII": "",
-            "PipelineDepth": "",
-            "Loops": [{
-                "Name": "Loop 3.1",
-                "TripCount": "",
-                "Latency": "",
-                "PipelineII": "",
-                "PipelineDepth": "1"
-              }]
+            "PipelineII": "1",
+            "PipelineDepth": "2"
           },
           {
-            "Name": "for_c_row",
+            "Name": "Loop 4",
             "TripCount": "",
             "Latency": "",
             "PipelineII": "",
             "PipelineDepth": "",
             "Loops": [{
-                "Name": "for_c_col",
+                "Name": "Loop 4.1",
                 "TripCount": "",
                 "Latency": "",
-                "PipelineII": "",
-                "PipelineDepth": "",
-                "Loops": [{
-                    "Name": "for_c_col.1",
-                    "TripCount": "",
-                    "Latency": "",
-                    "PipelineII": "",
-                    "PipelineDepth": "4"
-                  }]
+                "PipelineII": "1",
+                "PipelineDepth": "4"
               }]
           },
           {
             "Name": "Loop 5",
             "TripCount": "",
             "Latency": "",
-            "PipelineII": "",
-            "PipelineDepth": "",
-            "Loops": [{
-                "Name": "Loop 5.1",
-                "TripCount": "",
-                "Latency": "",
-                "PipelineII": "",
-                "PipelineDepth": "2"
-              }]
+            "PipelineII": "1",
+            "PipelineDepth": "3"
           }
         ],
         "Area": {
           "BRAM_18K": "96",
-          "DSP48E": "3",
-          "FF": "1402",
-          "LUT": "1413"
+          "DSP48E": "13",
+          "FF": "1653",
+          "LUT": "1902"
         }
       }}
   },
@@ -450,7 +426,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-10-05 00:38:00 -0500",
+    "Time": "2018-10-05 00:59:59 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

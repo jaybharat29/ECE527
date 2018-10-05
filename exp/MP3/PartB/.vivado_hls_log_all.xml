@@ -11,7 +11,20 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('tmp_7', PartB/partb.cpp:24) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp_9', PartB/partb.cpp:24) (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('B_addr', PartB/partb.cpp:24) (0 ns)&#xD;&#xA;&#x9;'load' operation ('B_load', PartB/partb.cpp:24) on array 'B' (3.25 ns)" projectName="PartB" solutionName="solution2" date="2018-10-05T01:05:17.763-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="PartB" solutionName="solution2" date="2018-10-05T01:05:17.747-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-4.1' (PartB/partb.cpp:40:16) in function 'partb' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="PartB" solutionName="solution2" date="2018-10-05T01:05:16.875-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-5.1' (PartB/partb.cpp:56) in function 'partb': cannot completely unroll a loop with a variable trip count." projectName="PartB" solutionName="solution2" date="2018-10-05T01:05:16.633-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-3.1' (PartB/partb.cpp:31) in function 'partb': cannot completely unroll a loop with a variable trip count." projectName="PartB" solutionName="solution2" date="2018-10-05T01:05:16.343-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-2.1' (PartB/partb.cpp:22) in function 'partb': cannot completely unroll a loop with a variable trip count." projectName="PartB" solutionName="solution2" date="2018-10-05T01:05:16.328-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('tmp_7', PartB/partb.cpp:24) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp_9', PartB/partb.cpp:24) (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('B_addr', PartB/partb.cpp:24) (0 ns)&#xD;&#xA;&#x9;'load' operation ('B_load', PartB/partb.cpp:24) on array 'B' (3.25 ns)" projectName="PartB" solutionName="solution1" date="2018-10-05T00:59:56.767-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="PartB" solutionName="solution1" date="2018-10-05T00:59:56.751-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-4.1' (PartB/partb.cpp:40:16) in function 'partb' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic in the loop latch." projectName="PartB" solutionName="solution1" date="2018-10-05T00:59:56.329-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-5.1' (PartB/partb.cpp:55) in function 'partb': cannot completely unroll a loop with a variable trip count." projectName="PartB" solutionName="solution1" date="2018-10-05T00:59:56.257-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-3.1' (PartB/partb.cpp:31) in function 'partb': cannot completely unroll a loop with a variable trip count." projectName="PartB" solutionName="solution1" date="2018-10-05T00:59:55.964-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-2.1' (PartB/partb.cpp:22) in function 'partb': cannot completely unroll a loop with a variable trip count." projectName="PartB" solutionName="solution1" date="2018-10-05T00:59:55.941-0500" type="Warning"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>

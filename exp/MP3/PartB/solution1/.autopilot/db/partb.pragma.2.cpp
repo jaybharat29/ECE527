@@ -325,7 +325,8 @@ void partb(int A[100][100], int B[100][100], int C[100][100],
 
  for(int i = 0; i < mB; i++)
  {
-  for(int j = 0; j < nB; j++)
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ for(int j = 0; j < nB; j++)
   {
    B_i[i][j] = B[i][j];
   }
@@ -333,29 +334,32 @@ void partb(int A[100][100], int B[100][100], int C[100][100],
 
  for(int i = 0; i < mC; i++)
  {
-  for(int j = 0; j < nC; j++)
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ for(int j = 0; j < nC; j++)
   {
    C_i[i][j] = 0;
   }
  }
 
 
- for_c_row : for(int i = 0; i < mC; i++)
-  {
-   for_c_col : for(int j = 0; j < nC; j++)
-   {
-    int sum = 0;
-    for(int k = 0; k < nA; k++)
-    {
-     sum += A_i[i][k]*B_i[k][j];
-    }
-    C_i[i][j] = sum;
-   }
-  }
-
  for(int i = 0; i < mC; i++)
  {
   for(int j = 0; j < nC; j++)
+  {
+   int sum = 0;
+   for(int k = 0; k < nA; k++)
+   {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ sum += A_i[i][k]*B_i[k][j];
+   }
+   C_i[i][j] = sum;
+  }
+ }
+
+ for(int i = 0; i < mC; i++)
+ {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ for(int j = 0; j < nC; j++)
   {
    C[i][j] = C_i[i][j];
   }

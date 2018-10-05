@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# xsim v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Oct  5 01:06:11 2018
+# Process ID: 2432
+# Current directory: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution2/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/partb/xsim_script.tcl}
+# Log file: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution2/sim/verilog/xsim.log
+# Journal file: C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution2/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/partb/xsim_script.tcl
+# xsim {partb} -autoloadwcfg -tclbatch {partb.tcl}
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source partb.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 27 [n/a] @ "125000"
+// RTL Simulation : 1 / 27 [n/a] @ "600845000"
+// RTL Simulation : 2 / 27 [n/a] @ "650515000"
+// RTL Simulation : 3 / 27 [n/a] @ "1748505000"
+// RTL Simulation : 4 / 27 [n/a] @ "1927115000"
+// RTL Simulation : 5 / 27 [n/a] @ "1933115000"
+// RTL Simulation : 6 / 27 [n/a] @ "2267495000"
+// RTL Simulation : 7 / 27 [n/a] @ "3232345000"
+// RTL Simulation : 8 / 27 [n/a] @ "3321025000"
+// RTL Simulation : 9 / 27 [n/a] @ "5076565000"
+// RTL Simulation : 10 / 27 [n/a] @ "5108195000"
+// RTL Simulation : 11 / 27 [n/a] @ "5109895000"
+// RTL Simulation : 12 / 27 [n/a] @ "5168535000"
+// RTL Simulation : 13 / 27 [n/a] @ "5173305000"
+// RTL Simulation : 14 / 27 [n/a] @ "5173565000"
+// RTL Simulation : 15 / 27 [n/a] @ "5182405000"
+// RTL Simulation : 16 / 27 [n/a] @ "5237875000"
+// RTL Simulation : 17 / 27 [n/a] @ "5240865000"
+// RTL Simulation : 18 / 27 [n/a] @ "5343695000"
+// RTL Simulation : 19 / 27 [n/a] @ "6457965000"
+// RTL Simulation : 20 / 27 [n/a] @ "6550925000"
+// RTL Simulation : 21 / 27 [n/a] @ "8586865000"
+// RTL Simulation : 22 / 27 [n/a] @ "8922355000"
+// RTL Simulation : 23 / 27 [n/a] @ "8933535000"
+// RTL Simulation : 24 / 27 [n/a] @ "9561695000"
+// RTL Simulation : 25 / 27 [n/a] @ "11347205000"
+// RTL Simulation : 26 / 27 [n/a] @ "11513215000"
+// RTL Simulation : 27 / 27 [n/a] @ "14760225000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 14760265 ns : File "C:/Users/Patel/Downloads/ECE527/exp/MP3/PartB/solution2/sim/verilog/partb.autotb.v" Line 679
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:41 . Memory (MB): peak = 213.219 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Oct  5 01:06:58 2018...
