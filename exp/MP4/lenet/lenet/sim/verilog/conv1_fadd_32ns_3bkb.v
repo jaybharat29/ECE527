@@ -10,7 +10,7 @@
 
 module conv1_fadd_32ns_3bkb
 #(parameter
-    ID         = 1,
+    ID         = 10,
     NUM_STAGE  = 5,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

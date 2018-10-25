@@ -4,8 +4,8 @@
 // Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
 
-extern void AESL_WRAP_conv1 (
+extern int AESL_WRAP_conv1 (
 float input[1][32][32],
 float weights[6][1][5][5],
 float bias[6],
-float output[6][28][28]);
+float output[6][14][14]);

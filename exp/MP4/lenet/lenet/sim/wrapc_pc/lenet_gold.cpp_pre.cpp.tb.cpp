@@ -25514,7 +25514,10 @@ namespace std
 
 #1 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h"
 void convolution1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][28][28]);
-void conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][28][28]);
+int conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][14][14]);
+void relu1(float input[6][28][28], float output[6][28][28]);
+void max_pooling2(float input[6][28][28],float output[6][14][14]);
+void relu2(float input[6][14][14], float output[6][14][14]);
 #15 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp" 2
 using namespace std;
 

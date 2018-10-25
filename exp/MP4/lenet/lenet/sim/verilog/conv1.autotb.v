@@ -17,37 +17,50 @@
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
 `define AUTOTB_CLOCK_PERIOD_DIV2 5.00
 
-`define AESL_MEM_input_r AESL_automem_input_r
-`define AESL_MEM_INST_input_r mem_inst_input_r
-`define AESL_MEM_weights AESL_automem_weights
-`define AESL_MEM_INST_weights mem_inst_weights
-`define AESL_MEM_bias AESL_automem_bias
-`define AESL_MEM_INST_bias mem_inst_bias
-`define AESL_MEM_output_r AESL_automem_output_r
-`define AESL_MEM_INST_output_r mem_inst_output_r
+`define AESL_DEPTH_DATA_INPUT 1
+`define AESL_DEPTH_DATA_WEIGHT 1
+`define AESL_DEPTH_DATA_BIAS 1
+`define AESL_DEPTH_DATA_OUTPUT 1
+`define AESL_DEPTH_input_r 1
+`define AESL_DEPTH_weights 1
+`define AESL_DEPTH_bias 1
+`define AESL_DEPTH_output_r 1
+`define AUTOTB_TVIN_DATA_INPUT  "../tv/cdatafile/c.conv1.autotvin_DATA_INPUT.dat"
+`define AUTOTB_TVIN_DATA_WEIGHT  "../tv/cdatafile/c.conv1.autotvin_DATA_WEIGHT.dat"
+`define AUTOTB_TVIN_DATA_BIAS  "../tv/cdatafile/c.conv1.autotvin_DATA_BIAS.dat"
 `define AUTOTB_TVIN_input_r  "../tv/cdatafile/c.conv1.autotvin_input_r.dat"
 `define AUTOTB_TVIN_weights  "../tv/cdatafile/c.conv1.autotvin_weights.dat"
 `define AUTOTB_TVIN_bias  "../tv/cdatafile/c.conv1.autotvin_bias.dat"
 `define AUTOTB_TVIN_output_r  "../tv/cdatafile/c.conv1.autotvin_output_r.dat"
+`define AUTOTB_TVIN_DATA_INPUT_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_DATA_INPUT.dat"
+`define AUTOTB_TVIN_DATA_WEIGHT_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_DATA_WEIGHT.dat"
+`define AUTOTB_TVIN_DATA_BIAS_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_DATA_BIAS.dat"
 `define AUTOTB_TVIN_input_r_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_input_r.dat"
 `define AUTOTB_TVIN_weights_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_weights.dat"
 `define AUTOTB_TVIN_bias_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_bias.dat"
 `define AUTOTB_TVIN_output_r_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_output_r.dat"
-`define AUTOTB_TVOUT_output_r  "../tv/cdatafile/c.conv1.autotvout_output_r.dat"
-`define AUTOTB_TVOUT_output_r_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvout_output_r.dat"
+`define AUTOTB_TVOUT_DATA_OUTPUT  "../tv/cdatafile/c.conv1.autotvout_DATA_OUTPUT.dat"
+`define AUTOTB_TVOUT_ap_return  "../tv/cdatafile/c.conv1.autotvout_ap_return.dat"
+`define AUTOTB_TVOUT_DATA_OUTPUT_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvout_DATA_OUTPUT.dat"
+`define AUTOTB_TVOUT_ap_return_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvout_ap_return.dat"
 module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 63764;
-parameter LENGTH_input_r = 1024;
-parameter LENGTH_weights = 150;
-parameter LENGTH_bias = 6;
-parameter LENGTH_output_r = 4704;
+parameter LATENCY_ESTIMATION = 107274;
+parameter LENGTH_DATA_INPUT = 1024;
+parameter LENGTH_DATA_WEIGHT = 150;
+parameter LENGTH_DATA_BIAS = 6;
+parameter LENGTH_DATA_OUTPUT = 1176;
+parameter LENGTH_input_r = 1;
+parameter LENGTH_weights = 1;
+parameter LENGTH_bias = 1;
+parameter LENGTH_output_r = 1;
+parameter LENGTH_ap_return = 1;
 
 task read_token;
     input integer fp;
-    output reg [159 : 0] token;
+    output reg [231 : 0] token;
     integer ret;
     begin
         token = "";
@@ -73,23 +86,204 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
-wire ap_start;
-wire ap_done;
-wire ap_idle;
-wire ap_ready;
-wire [9 : 0] input_r_address0;
-wire  input_r_ce0;
-wire [31 : 0] input_r_q0;
-wire [7 : 0] weights_address0;
-wire  weights_ce0;
-wire [31 : 0] weights_q0;
-wire [2 : 0] bias_address0;
-wire  bias_ce0;
-wire [31 : 0] bias_q0;
-wire [12 : 0] output_r_address0;
-wire  output_r_ce0;
-wire  output_r_we0;
-wire [31 : 0] output_r_d0;
+wire [5 : 0] CTL_AWADDR;
+wire  CTL_AWVALID;
+wire  CTL_AWREADY;
+wire  CTL_WVALID;
+wire  CTL_WREADY;
+wire [31 : 0] CTL_WDATA;
+wire [3 : 0] CTL_WSTRB;
+wire [5 : 0] CTL_ARADDR;
+wire  CTL_ARVALID;
+wire  CTL_ARREADY;
+wire  CTL_RVALID;
+wire  CTL_RREADY;
+wire [31 : 0] CTL_RDATA;
+wire [1 : 0] CTL_RRESP;
+wire  CTL_BVALID;
+wire  CTL_BREADY;
+wire [1 : 0] CTL_BRESP;
+wire  CTL_INTERRUPT;
+wire  DATA_INPUT_AWVALID;
+wire  DATA_INPUT_AWREADY;
+wire [31 : 0] DATA_INPUT_AWADDR;
+wire [0 : 0] DATA_INPUT_AWID;
+wire [7 : 0] DATA_INPUT_AWLEN;
+wire [2 : 0] DATA_INPUT_AWSIZE;
+wire [1 : 0] DATA_INPUT_AWBURST;
+wire [1 : 0] DATA_INPUT_AWLOCK;
+wire [3 : 0] DATA_INPUT_AWCACHE;
+wire [2 : 0] DATA_INPUT_AWPROT;
+wire [3 : 0] DATA_INPUT_AWQOS;
+wire [3 : 0] DATA_INPUT_AWREGION;
+wire [0 : 0] DATA_INPUT_AWUSER;
+wire  DATA_INPUT_WVALID;
+wire  DATA_INPUT_WREADY;
+wire [31 : 0] DATA_INPUT_WDATA;
+wire [3 : 0] DATA_INPUT_WSTRB;
+wire  DATA_INPUT_WLAST;
+wire [0 : 0] DATA_INPUT_WID;
+wire [0 : 0] DATA_INPUT_WUSER;
+wire  DATA_INPUT_ARVALID;
+wire  DATA_INPUT_ARREADY;
+wire [31 : 0] DATA_INPUT_ARADDR;
+wire [0 : 0] DATA_INPUT_ARID;
+wire [7 : 0] DATA_INPUT_ARLEN;
+wire [2 : 0] DATA_INPUT_ARSIZE;
+wire [1 : 0] DATA_INPUT_ARBURST;
+wire [1 : 0] DATA_INPUT_ARLOCK;
+wire [3 : 0] DATA_INPUT_ARCACHE;
+wire [2 : 0] DATA_INPUT_ARPROT;
+wire [3 : 0] DATA_INPUT_ARQOS;
+wire [3 : 0] DATA_INPUT_ARREGION;
+wire [0 : 0] DATA_INPUT_ARUSER;
+wire  DATA_INPUT_RVALID;
+wire  DATA_INPUT_RREADY;
+wire [31 : 0] DATA_INPUT_RDATA;
+wire  DATA_INPUT_RLAST;
+wire [0 : 0] DATA_INPUT_RID;
+wire [0 : 0] DATA_INPUT_RUSER;
+wire [1 : 0] DATA_INPUT_RRESP;
+wire  DATA_INPUT_BVALID;
+wire  DATA_INPUT_BREADY;
+wire [1 : 0] DATA_INPUT_BRESP;
+wire [0 : 0] DATA_INPUT_BID;
+wire [0 : 0] DATA_INPUT_BUSER;
+wire  DATA_WEIGHT_AWVALID;
+wire  DATA_WEIGHT_AWREADY;
+wire [31 : 0] DATA_WEIGHT_AWADDR;
+wire [0 : 0] DATA_WEIGHT_AWID;
+wire [7 : 0] DATA_WEIGHT_AWLEN;
+wire [2 : 0] DATA_WEIGHT_AWSIZE;
+wire [1 : 0] DATA_WEIGHT_AWBURST;
+wire [1 : 0] DATA_WEIGHT_AWLOCK;
+wire [3 : 0] DATA_WEIGHT_AWCACHE;
+wire [2 : 0] DATA_WEIGHT_AWPROT;
+wire [3 : 0] DATA_WEIGHT_AWQOS;
+wire [3 : 0] DATA_WEIGHT_AWREGION;
+wire [0 : 0] DATA_WEIGHT_AWUSER;
+wire  DATA_WEIGHT_WVALID;
+wire  DATA_WEIGHT_WREADY;
+wire [31 : 0] DATA_WEIGHT_WDATA;
+wire [3 : 0] DATA_WEIGHT_WSTRB;
+wire  DATA_WEIGHT_WLAST;
+wire [0 : 0] DATA_WEIGHT_WID;
+wire [0 : 0] DATA_WEIGHT_WUSER;
+wire  DATA_WEIGHT_ARVALID;
+wire  DATA_WEIGHT_ARREADY;
+wire [31 : 0] DATA_WEIGHT_ARADDR;
+wire [0 : 0] DATA_WEIGHT_ARID;
+wire [7 : 0] DATA_WEIGHT_ARLEN;
+wire [2 : 0] DATA_WEIGHT_ARSIZE;
+wire [1 : 0] DATA_WEIGHT_ARBURST;
+wire [1 : 0] DATA_WEIGHT_ARLOCK;
+wire [3 : 0] DATA_WEIGHT_ARCACHE;
+wire [2 : 0] DATA_WEIGHT_ARPROT;
+wire [3 : 0] DATA_WEIGHT_ARQOS;
+wire [3 : 0] DATA_WEIGHT_ARREGION;
+wire [0 : 0] DATA_WEIGHT_ARUSER;
+wire  DATA_WEIGHT_RVALID;
+wire  DATA_WEIGHT_RREADY;
+wire [31 : 0] DATA_WEIGHT_RDATA;
+wire  DATA_WEIGHT_RLAST;
+wire [0 : 0] DATA_WEIGHT_RID;
+wire [0 : 0] DATA_WEIGHT_RUSER;
+wire [1 : 0] DATA_WEIGHT_RRESP;
+wire  DATA_WEIGHT_BVALID;
+wire  DATA_WEIGHT_BREADY;
+wire [1 : 0] DATA_WEIGHT_BRESP;
+wire [0 : 0] DATA_WEIGHT_BID;
+wire [0 : 0] DATA_WEIGHT_BUSER;
+wire  DATA_BIAS_AWVALID;
+wire  DATA_BIAS_AWREADY;
+wire [31 : 0] DATA_BIAS_AWADDR;
+wire [0 : 0] DATA_BIAS_AWID;
+wire [7 : 0] DATA_BIAS_AWLEN;
+wire [2 : 0] DATA_BIAS_AWSIZE;
+wire [1 : 0] DATA_BIAS_AWBURST;
+wire [1 : 0] DATA_BIAS_AWLOCK;
+wire [3 : 0] DATA_BIAS_AWCACHE;
+wire [2 : 0] DATA_BIAS_AWPROT;
+wire [3 : 0] DATA_BIAS_AWQOS;
+wire [3 : 0] DATA_BIAS_AWREGION;
+wire [0 : 0] DATA_BIAS_AWUSER;
+wire  DATA_BIAS_WVALID;
+wire  DATA_BIAS_WREADY;
+wire [31 : 0] DATA_BIAS_WDATA;
+wire [3 : 0] DATA_BIAS_WSTRB;
+wire  DATA_BIAS_WLAST;
+wire [0 : 0] DATA_BIAS_WID;
+wire [0 : 0] DATA_BIAS_WUSER;
+wire  DATA_BIAS_ARVALID;
+wire  DATA_BIAS_ARREADY;
+wire [31 : 0] DATA_BIAS_ARADDR;
+wire [0 : 0] DATA_BIAS_ARID;
+wire [7 : 0] DATA_BIAS_ARLEN;
+wire [2 : 0] DATA_BIAS_ARSIZE;
+wire [1 : 0] DATA_BIAS_ARBURST;
+wire [1 : 0] DATA_BIAS_ARLOCK;
+wire [3 : 0] DATA_BIAS_ARCACHE;
+wire [2 : 0] DATA_BIAS_ARPROT;
+wire [3 : 0] DATA_BIAS_ARQOS;
+wire [3 : 0] DATA_BIAS_ARREGION;
+wire [0 : 0] DATA_BIAS_ARUSER;
+wire  DATA_BIAS_RVALID;
+wire  DATA_BIAS_RREADY;
+wire [31 : 0] DATA_BIAS_RDATA;
+wire  DATA_BIAS_RLAST;
+wire [0 : 0] DATA_BIAS_RID;
+wire [0 : 0] DATA_BIAS_RUSER;
+wire [1 : 0] DATA_BIAS_RRESP;
+wire  DATA_BIAS_BVALID;
+wire  DATA_BIAS_BREADY;
+wire [1 : 0] DATA_BIAS_BRESP;
+wire [0 : 0] DATA_BIAS_BID;
+wire [0 : 0] DATA_BIAS_BUSER;
+wire  DATA_OUTPUT_AWVALID;
+wire  DATA_OUTPUT_AWREADY;
+wire [31 : 0] DATA_OUTPUT_AWADDR;
+wire [0 : 0] DATA_OUTPUT_AWID;
+wire [7 : 0] DATA_OUTPUT_AWLEN;
+wire [2 : 0] DATA_OUTPUT_AWSIZE;
+wire [1 : 0] DATA_OUTPUT_AWBURST;
+wire [1 : 0] DATA_OUTPUT_AWLOCK;
+wire [3 : 0] DATA_OUTPUT_AWCACHE;
+wire [2 : 0] DATA_OUTPUT_AWPROT;
+wire [3 : 0] DATA_OUTPUT_AWQOS;
+wire [3 : 0] DATA_OUTPUT_AWREGION;
+wire [0 : 0] DATA_OUTPUT_AWUSER;
+wire  DATA_OUTPUT_WVALID;
+wire  DATA_OUTPUT_WREADY;
+wire [31 : 0] DATA_OUTPUT_WDATA;
+wire [3 : 0] DATA_OUTPUT_WSTRB;
+wire  DATA_OUTPUT_WLAST;
+wire [0 : 0] DATA_OUTPUT_WID;
+wire [0 : 0] DATA_OUTPUT_WUSER;
+wire  DATA_OUTPUT_ARVALID;
+wire  DATA_OUTPUT_ARREADY;
+wire [31 : 0] DATA_OUTPUT_ARADDR;
+wire [0 : 0] DATA_OUTPUT_ARID;
+wire [7 : 0] DATA_OUTPUT_ARLEN;
+wire [2 : 0] DATA_OUTPUT_ARSIZE;
+wire [1 : 0] DATA_OUTPUT_ARBURST;
+wire [1 : 0] DATA_OUTPUT_ARLOCK;
+wire [3 : 0] DATA_OUTPUT_ARCACHE;
+wire [2 : 0] DATA_OUTPUT_ARPROT;
+wire [3 : 0] DATA_OUTPUT_ARQOS;
+wire [3 : 0] DATA_OUTPUT_ARREGION;
+wire [0 : 0] DATA_OUTPUT_ARUSER;
+wire  DATA_OUTPUT_RVALID;
+wire  DATA_OUTPUT_RREADY;
+wire [31 : 0] DATA_OUTPUT_RDATA;
+wire  DATA_OUTPUT_RLAST;
+wire [0 : 0] DATA_OUTPUT_RID;
+wire [0 : 0] DATA_OUTPUT_RUSER;
+wire [1 : 0] DATA_OUTPUT_RRESP;
+wire  DATA_OUTPUT_BVALID;
+wire  DATA_OUTPUT_BREADY;
+wire [1 : 0] DATA_OUTPUT_BRESP;
+wire [0 : 0] DATA_OUTPUT_BID;
+wire [0 : 0] DATA_OUTPUT_BUSER;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -99,224 +293,596 @@ reg ready_last_n;
 reg ready_delay_last_n;
 reg done_delay_last_n;
 reg interface_done = 0;
+wire CTL_read_data_finish;
+wire CTL_write_data_finish;
+wire AESL_slave_start;
+reg AESL_slave_start_lock = 0;
+wire AESL_slave_write_start_in;
+wire AESL_slave_write_start_finish;
+reg AESL_slave_ready;
+wire AESL_slave_output_done;
+wire AESL_slave_done;
+reg ready_rise = 0;
+reg start_rise = 0;
+reg slave_start_status = 0;
+reg slave_done_status = 0;
+reg ap_done_lock = 0;
 
 wire ap_clk;
-wire ap_rst;
 wire ap_rst_n;
+wire ap_rst_n_n;
 
 `AUTOTB_DUT `AUTOTB_DUT_INST(
+    .s_axi_CTL_AWADDR(CTL_AWADDR),
+    .s_axi_CTL_AWVALID(CTL_AWVALID),
+    .s_axi_CTL_AWREADY(CTL_AWREADY),
+    .s_axi_CTL_WVALID(CTL_WVALID),
+    .s_axi_CTL_WREADY(CTL_WREADY),
+    .s_axi_CTL_WDATA(CTL_WDATA),
+    .s_axi_CTL_WSTRB(CTL_WSTRB),
+    .s_axi_CTL_ARADDR(CTL_ARADDR),
+    .s_axi_CTL_ARVALID(CTL_ARVALID),
+    .s_axi_CTL_ARREADY(CTL_ARREADY),
+    .s_axi_CTL_RVALID(CTL_RVALID),
+    .s_axi_CTL_RREADY(CTL_RREADY),
+    .s_axi_CTL_RDATA(CTL_RDATA),
+    .s_axi_CTL_RRESP(CTL_RRESP),
+    .s_axi_CTL_BVALID(CTL_BVALID),
+    .s_axi_CTL_BREADY(CTL_BREADY),
+    .s_axi_CTL_BRESP(CTL_BRESP),
+    .interrupt(CTL_INTERRUPT),
     .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(ap_start),
-    .ap_done(ap_done),
-    .ap_idle(ap_idle),
-    .ap_ready(ap_ready),
-    .input_r_address0(input_r_address0),
-    .input_r_ce0(input_r_ce0),
-    .input_r_q0(input_r_q0),
-    .weights_address0(weights_address0),
-    .weights_ce0(weights_ce0),
-    .weights_q0(weights_q0),
-    .bias_address0(bias_address0),
-    .bias_ce0(bias_ce0),
-    .bias_q0(bias_q0),
-    .output_r_address0(output_r_address0),
-    .output_r_ce0(output_r_ce0),
-    .output_r_we0(output_r_we0),
-    .output_r_d0(output_r_d0));
+    .ap_rst_n(ap_rst_n),
+    .m_axi_DATA_INPUT_AWVALID(DATA_INPUT_AWVALID),
+    .m_axi_DATA_INPUT_AWREADY(DATA_INPUT_AWREADY),
+    .m_axi_DATA_INPUT_AWADDR(DATA_INPUT_AWADDR),
+    .m_axi_DATA_INPUT_AWID(DATA_INPUT_AWID),
+    .m_axi_DATA_INPUT_AWLEN(DATA_INPUT_AWLEN),
+    .m_axi_DATA_INPUT_AWSIZE(DATA_INPUT_AWSIZE),
+    .m_axi_DATA_INPUT_AWBURST(DATA_INPUT_AWBURST),
+    .m_axi_DATA_INPUT_AWLOCK(DATA_INPUT_AWLOCK),
+    .m_axi_DATA_INPUT_AWCACHE(DATA_INPUT_AWCACHE),
+    .m_axi_DATA_INPUT_AWPROT(DATA_INPUT_AWPROT),
+    .m_axi_DATA_INPUT_AWQOS(DATA_INPUT_AWQOS),
+    .m_axi_DATA_INPUT_AWREGION(DATA_INPUT_AWREGION),
+    .m_axi_DATA_INPUT_AWUSER(DATA_INPUT_AWUSER),
+    .m_axi_DATA_INPUT_WVALID(DATA_INPUT_WVALID),
+    .m_axi_DATA_INPUT_WREADY(DATA_INPUT_WREADY),
+    .m_axi_DATA_INPUT_WDATA(DATA_INPUT_WDATA),
+    .m_axi_DATA_INPUT_WSTRB(DATA_INPUT_WSTRB),
+    .m_axi_DATA_INPUT_WLAST(DATA_INPUT_WLAST),
+    .m_axi_DATA_INPUT_WID(DATA_INPUT_WID),
+    .m_axi_DATA_INPUT_WUSER(DATA_INPUT_WUSER),
+    .m_axi_DATA_INPUT_ARVALID(DATA_INPUT_ARVALID),
+    .m_axi_DATA_INPUT_ARREADY(DATA_INPUT_ARREADY),
+    .m_axi_DATA_INPUT_ARADDR(DATA_INPUT_ARADDR),
+    .m_axi_DATA_INPUT_ARID(DATA_INPUT_ARID),
+    .m_axi_DATA_INPUT_ARLEN(DATA_INPUT_ARLEN),
+    .m_axi_DATA_INPUT_ARSIZE(DATA_INPUT_ARSIZE),
+    .m_axi_DATA_INPUT_ARBURST(DATA_INPUT_ARBURST),
+    .m_axi_DATA_INPUT_ARLOCK(DATA_INPUT_ARLOCK),
+    .m_axi_DATA_INPUT_ARCACHE(DATA_INPUT_ARCACHE),
+    .m_axi_DATA_INPUT_ARPROT(DATA_INPUT_ARPROT),
+    .m_axi_DATA_INPUT_ARQOS(DATA_INPUT_ARQOS),
+    .m_axi_DATA_INPUT_ARREGION(DATA_INPUT_ARREGION),
+    .m_axi_DATA_INPUT_ARUSER(DATA_INPUT_ARUSER),
+    .m_axi_DATA_INPUT_RVALID(DATA_INPUT_RVALID),
+    .m_axi_DATA_INPUT_RREADY(DATA_INPUT_RREADY),
+    .m_axi_DATA_INPUT_RDATA(DATA_INPUT_RDATA),
+    .m_axi_DATA_INPUT_RLAST(DATA_INPUT_RLAST),
+    .m_axi_DATA_INPUT_RID(DATA_INPUT_RID),
+    .m_axi_DATA_INPUT_RUSER(DATA_INPUT_RUSER),
+    .m_axi_DATA_INPUT_RRESP(DATA_INPUT_RRESP),
+    .m_axi_DATA_INPUT_BVALID(DATA_INPUT_BVALID),
+    .m_axi_DATA_INPUT_BREADY(DATA_INPUT_BREADY),
+    .m_axi_DATA_INPUT_BRESP(DATA_INPUT_BRESP),
+    .m_axi_DATA_INPUT_BID(DATA_INPUT_BID),
+    .m_axi_DATA_INPUT_BUSER(DATA_INPUT_BUSER),
+    .m_axi_DATA_WEIGHT_AWVALID(DATA_WEIGHT_AWVALID),
+    .m_axi_DATA_WEIGHT_AWREADY(DATA_WEIGHT_AWREADY),
+    .m_axi_DATA_WEIGHT_AWADDR(DATA_WEIGHT_AWADDR),
+    .m_axi_DATA_WEIGHT_AWID(DATA_WEIGHT_AWID),
+    .m_axi_DATA_WEIGHT_AWLEN(DATA_WEIGHT_AWLEN),
+    .m_axi_DATA_WEIGHT_AWSIZE(DATA_WEIGHT_AWSIZE),
+    .m_axi_DATA_WEIGHT_AWBURST(DATA_WEIGHT_AWBURST),
+    .m_axi_DATA_WEIGHT_AWLOCK(DATA_WEIGHT_AWLOCK),
+    .m_axi_DATA_WEIGHT_AWCACHE(DATA_WEIGHT_AWCACHE),
+    .m_axi_DATA_WEIGHT_AWPROT(DATA_WEIGHT_AWPROT),
+    .m_axi_DATA_WEIGHT_AWQOS(DATA_WEIGHT_AWQOS),
+    .m_axi_DATA_WEIGHT_AWREGION(DATA_WEIGHT_AWREGION),
+    .m_axi_DATA_WEIGHT_AWUSER(DATA_WEIGHT_AWUSER),
+    .m_axi_DATA_WEIGHT_WVALID(DATA_WEIGHT_WVALID),
+    .m_axi_DATA_WEIGHT_WREADY(DATA_WEIGHT_WREADY),
+    .m_axi_DATA_WEIGHT_WDATA(DATA_WEIGHT_WDATA),
+    .m_axi_DATA_WEIGHT_WSTRB(DATA_WEIGHT_WSTRB),
+    .m_axi_DATA_WEIGHT_WLAST(DATA_WEIGHT_WLAST),
+    .m_axi_DATA_WEIGHT_WID(DATA_WEIGHT_WID),
+    .m_axi_DATA_WEIGHT_WUSER(DATA_WEIGHT_WUSER),
+    .m_axi_DATA_WEIGHT_ARVALID(DATA_WEIGHT_ARVALID),
+    .m_axi_DATA_WEIGHT_ARREADY(DATA_WEIGHT_ARREADY),
+    .m_axi_DATA_WEIGHT_ARADDR(DATA_WEIGHT_ARADDR),
+    .m_axi_DATA_WEIGHT_ARID(DATA_WEIGHT_ARID),
+    .m_axi_DATA_WEIGHT_ARLEN(DATA_WEIGHT_ARLEN),
+    .m_axi_DATA_WEIGHT_ARSIZE(DATA_WEIGHT_ARSIZE),
+    .m_axi_DATA_WEIGHT_ARBURST(DATA_WEIGHT_ARBURST),
+    .m_axi_DATA_WEIGHT_ARLOCK(DATA_WEIGHT_ARLOCK),
+    .m_axi_DATA_WEIGHT_ARCACHE(DATA_WEIGHT_ARCACHE),
+    .m_axi_DATA_WEIGHT_ARPROT(DATA_WEIGHT_ARPROT),
+    .m_axi_DATA_WEIGHT_ARQOS(DATA_WEIGHT_ARQOS),
+    .m_axi_DATA_WEIGHT_ARREGION(DATA_WEIGHT_ARREGION),
+    .m_axi_DATA_WEIGHT_ARUSER(DATA_WEIGHT_ARUSER),
+    .m_axi_DATA_WEIGHT_RVALID(DATA_WEIGHT_RVALID),
+    .m_axi_DATA_WEIGHT_RREADY(DATA_WEIGHT_RREADY),
+    .m_axi_DATA_WEIGHT_RDATA(DATA_WEIGHT_RDATA),
+    .m_axi_DATA_WEIGHT_RLAST(DATA_WEIGHT_RLAST),
+    .m_axi_DATA_WEIGHT_RID(DATA_WEIGHT_RID),
+    .m_axi_DATA_WEIGHT_RUSER(DATA_WEIGHT_RUSER),
+    .m_axi_DATA_WEIGHT_RRESP(DATA_WEIGHT_RRESP),
+    .m_axi_DATA_WEIGHT_BVALID(DATA_WEIGHT_BVALID),
+    .m_axi_DATA_WEIGHT_BREADY(DATA_WEIGHT_BREADY),
+    .m_axi_DATA_WEIGHT_BRESP(DATA_WEIGHT_BRESP),
+    .m_axi_DATA_WEIGHT_BID(DATA_WEIGHT_BID),
+    .m_axi_DATA_WEIGHT_BUSER(DATA_WEIGHT_BUSER),
+    .m_axi_DATA_BIAS_AWVALID(DATA_BIAS_AWVALID),
+    .m_axi_DATA_BIAS_AWREADY(DATA_BIAS_AWREADY),
+    .m_axi_DATA_BIAS_AWADDR(DATA_BIAS_AWADDR),
+    .m_axi_DATA_BIAS_AWID(DATA_BIAS_AWID),
+    .m_axi_DATA_BIAS_AWLEN(DATA_BIAS_AWLEN),
+    .m_axi_DATA_BIAS_AWSIZE(DATA_BIAS_AWSIZE),
+    .m_axi_DATA_BIAS_AWBURST(DATA_BIAS_AWBURST),
+    .m_axi_DATA_BIAS_AWLOCK(DATA_BIAS_AWLOCK),
+    .m_axi_DATA_BIAS_AWCACHE(DATA_BIAS_AWCACHE),
+    .m_axi_DATA_BIAS_AWPROT(DATA_BIAS_AWPROT),
+    .m_axi_DATA_BIAS_AWQOS(DATA_BIAS_AWQOS),
+    .m_axi_DATA_BIAS_AWREGION(DATA_BIAS_AWREGION),
+    .m_axi_DATA_BIAS_AWUSER(DATA_BIAS_AWUSER),
+    .m_axi_DATA_BIAS_WVALID(DATA_BIAS_WVALID),
+    .m_axi_DATA_BIAS_WREADY(DATA_BIAS_WREADY),
+    .m_axi_DATA_BIAS_WDATA(DATA_BIAS_WDATA),
+    .m_axi_DATA_BIAS_WSTRB(DATA_BIAS_WSTRB),
+    .m_axi_DATA_BIAS_WLAST(DATA_BIAS_WLAST),
+    .m_axi_DATA_BIAS_WID(DATA_BIAS_WID),
+    .m_axi_DATA_BIAS_WUSER(DATA_BIAS_WUSER),
+    .m_axi_DATA_BIAS_ARVALID(DATA_BIAS_ARVALID),
+    .m_axi_DATA_BIAS_ARREADY(DATA_BIAS_ARREADY),
+    .m_axi_DATA_BIAS_ARADDR(DATA_BIAS_ARADDR),
+    .m_axi_DATA_BIAS_ARID(DATA_BIAS_ARID),
+    .m_axi_DATA_BIAS_ARLEN(DATA_BIAS_ARLEN),
+    .m_axi_DATA_BIAS_ARSIZE(DATA_BIAS_ARSIZE),
+    .m_axi_DATA_BIAS_ARBURST(DATA_BIAS_ARBURST),
+    .m_axi_DATA_BIAS_ARLOCK(DATA_BIAS_ARLOCK),
+    .m_axi_DATA_BIAS_ARCACHE(DATA_BIAS_ARCACHE),
+    .m_axi_DATA_BIAS_ARPROT(DATA_BIAS_ARPROT),
+    .m_axi_DATA_BIAS_ARQOS(DATA_BIAS_ARQOS),
+    .m_axi_DATA_BIAS_ARREGION(DATA_BIAS_ARREGION),
+    .m_axi_DATA_BIAS_ARUSER(DATA_BIAS_ARUSER),
+    .m_axi_DATA_BIAS_RVALID(DATA_BIAS_RVALID),
+    .m_axi_DATA_BIAS_RREADY(DATA_BIAS_RREADY),
+    .m_axi_DATA_BIAS_RDATA(DATA_BIAS_RDATA),
+    .m_axi_DATA_BIAS_RLAST(DATA_BIAS_RLAST),
+    .m_axi_DATA_BIAS_RID(DATA_BIAS_RID),
+    .m_axi_DATA_BIAS_RUSER(DATA_BIAS_RUSER),
+    .m_axi_DATA_BIAS_RRESP(DATA_BIAS_RRESP),
+    .m_axi_DATA_BIAS_BVALID(DATA_BIAS_BVALID),
+    .m_axi_DATA_BIAS_BREADY(DATA_BIAS_BREADY),
+    .m_axi_DATA_BIAS_BRESP(DATA_BIAS_BRESP),
+    .m_axi_DATA_BIAS_BID(DATA_BIAS_BID),
+    .m_axi_DATA_BIAS_BUSER(DATA_BIAS_BUSER),
+    .m_axi_DATA_OUTPUT_AWVALID(DATA_OUTPUT_AWVALID),
+    .m_axi_DATA_OUTPUT_AWREADY(DATA_OUTPUT_AWREADY),
+    .m_axi_DATA_OUTPUT_AWADDR(DATA_OUTPUT_AWADDR),
+    .m_axi_DATA_OUTPUT_AWID(DATA_OUTPUT_AWID),
+    .m_axi_DATA_OUTPUT_AWLEN(DATA_OUTPUT_AWLEN),
+    .m_axi_DATA_OUTPUT_AWSIZE(DATA_OUTPUT_AWSIZE),
+    .m_axi_DATA_OUTPUT_AWBURST(DATA_OUTPUT_AWBURST),
+    .m_axi_DATA_OUTPUT_AWLOCK(DATA_OUTPUT_AWLOCK),
+    .m_axi_DATA_OUTPUT_AWCACHE(DATA_OUTPUT_AWCACHE),
+    .m_axi_DATA_OUTPUT_AWPROT(DATA_OUTPUT_AWPROT),
+    .m_axi_DATA_OUTPUT_AWQOS(DATA_OUTPUT_AWQOS),
+    .m_axi_DATA_OUTPUT_AWREGION(DATA_OUTPUT_AWREGION),
+    .m_axi_DATA_OUTPUT_AWUSER(DATA_OUTPUT_AWUSER),
+    .m_axi_DATA_OUTPUT_WVALID(DATA_OUTPUT_WVALID),
+    .m_axi_DATA_OUTPUT_WREADY(DATA_OUTPUT_WREADY),
+    .m_axi_DATA_OUTPUT_WDATA(DATA_OUTPUT_WDATA),
+    .m_axi_DATA_OUTPUT_WSTRB(DATA_OUTPUT_WSTRB),
+    .m_axi_DATA_OUTPUT_WLAST(DATA_OUTPUT_WLAST),
+    .m_axi_DATA_OUTPUT_WID(DATA_OUTPUT_WID),
+    .m_axi_DATA_OUTPUT_WUSER(DATA_OUTPUT_WUSER),
+    .m_axi_DATA_OUTPUT_ARVALID(DATA_OUTPUT_ARVALID),
+    .m_axi_DATA_OUTPUT_ARREADY(DATA_OUTPUT_ARREADY),
+    .m_axi_DATA_OUTPUT_ARADDR(DATA_OUTPUT_ARADDR),
+    .m_axi_DATA_OUTPUT_ARID(DATA_OUTPUT_ARID),
+    .m_axi_DATA_OUTPUT_ARLEN(DATA_OUTPUT_ARLEN),
+    .m_axi_DATA_OUTPUT_ARSIZE(DATA_OUTPUT_ARSIZE),
+    .m_axi_DATA_OUTPUT_ARBURST(DATA_OUTPUT_ARBURST),
+    .m_axi_DATA_OUTPUT_ARLOCK(DATA_OUTPUT_ARLOCK),
+    .m_axi_DATA_OUTPUT_ARCACHE(DATA_OUTPUT_ARCACHE),
+    .m_axi_DATA_OUTPUT_ARPROT(DATA_OUTPUT_ARPROT),
+    .m_axi_DATA_OUTPUT_ARQOS(DATA_OUTPUT_ARQOS),
+    .m_axi_DATA_OUTPUT_ARREGION(DATA_OUTPUT_ARREGION),
+    .m_axi_DATA_OUTPUT_ARUSER(DATA_OUTPUT_ARUSER),
+    .m_axi_DATA_OUTPUT_RVALID(DATA_OUTPUT_RVALID),
+    .m_axi_DATA_OUTPUT_RREADY(DATA_OUTPUT_RREADY),
+    .m_axi_DATA_OUTPUT_RDATA(DATA_OUTPUT_RDATA),
+    .m_axi_DATA_OUTPUT_RLAST(DATA_OUTPUT_RLAST),
+    .m_axi_DATA_OUTPUT_RID(DATA_OUTPUT_RID),
+    .m_axi_DATA_OUTPUT_RUSER(DATA_OUTPUT_RUSER),
+    .m_axi_DATA_OUTPUT_RRESP(DATA_OUTPUT_RRESP),
+    .m_axi_DATA_OUTPUT_BVALID(DATA_OUTPUT_BVALID),
+    .m_axi_DATA_OUTPUT_BREADY(DATA_OUTPUT_BREADY),
+    .m_axi_DATA_OUTPUT_BRESP(DATA_OUTPUT_BRESP),
+    .m_axi_DATA_OUTPUT_BID(DATA_OUTPUT_BID),
+    .m_axi_DATA_OUTPUT_BUSER(DATA_OUTPUT_BUSER));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
-assign ap_rst = AESL_reset;
-assign ap_rst_n = ~AESL_reset;
+assign ap_rst_n = AESL_reset;
+assign ap_rst_n_n = ~AESL_reset;
 assign AESL_reset = rst;
-assign ap_start = AESL_start;
 assign AESL_start = start;
-assign AESL_done = ap_done;
-assign AESL_idle = ap_idle;
-assign AESL_ready = ap_ready;
 assign AESL_ce = ce;
 assign AESL_continue = tb_continue;
-    always @(posedge AESL_clock) begin
-        if (AESL_reset) begin
-        end else begin
-            if (AESL_done !== 1 && AESL_done !== 0) begin
-                $display("ERROR: Control signal AESL_done is invalid!");
-                $finish;
-            end
+  assign AESL_slave_write_start_in = slave_start_status  & CTL_write_data_finish;
+  assign AESL_slave_start = AESL_slave_write_start_finish;
+  assign AESL_done = slave_done_status  & CTL_read_data_finish;
+
+always @(posedge AESL_clock)
+begin
+    if(AESL_reset === 0)
+    begin
+        slave_start_status <= 1;
+    end
+    else begin
+        if (AESL_start == 1 ) begin
+            start_rise = 1;
+        end
+        if (start_rise == 1 && AESL_done == 1 ) begin
+            slave_start_status <= 1;
+        end
+        if (AESL_slave_write_start_in == 1 && AESL_done == 0) begin 
+            slave_start_status <= 0;
+            start_rise = 0;
         end
     end
-    always @(posedge AESL_clock) begin
-        if (AESL_reset) begin
-        end else begin
-            if (AESL_ready !== 1 && AESL_ready !== 0) begin
-                $display("ERROR: Control signal AESL_ready is invalid!");
-                $finish;
-            end
+end
+
+always @(posedge AESL_clock)
+begin
+    if(AESL_reset === 0)
+    begin
+        AESL_slave_ready <= 0;
+        ready_rise = 0;
+    end
+    else begin
+        if (AESL_ready == 1 ) begin
+            ready_rise = 1;
+        end
+        if (ready_rise == 1 && AESL_done_delay == 1 ) begin
+            AESL_slave_ready <= 1;
+        end
+        if (AESL_slave_ready == 1) begin 
+            AESL_slave_ready <= 0;
+            ready_rise = 0;
         end
     end
-//------------------------arrayinput_r Instantiation--------------
+end
 
-// The input and output of arrayinput_r
-wire    arrayinput_r_ce0, arrayinput_r_ce1;
-wire    arrayinput_r_we0, arrayinput_r_we1;
-wire    [9 : 0]    arrayinput_r_address0, arrayinput_r_address1;
-wire    [31 : 0]    arrayinput_r_din0, arrayinput_r_din1;
-wire    [31 : 0]    arrayinput_r_dout0, arrayinput_r_dout1;
-wire    arrayinput_r_ready;
-wire    arrayinput_r_done;
+always @ (posedge AESL_clock)
+begin
+    if (AESL_done == 1) begin
+        slave_done_status <= 0;
+    end
+    else if (AESL_slave_output_done == 1 ) begin
+        slave_done_status <= 1;
+    end
+end
 
-`AESL_MEM_input_r `AESL_MEM_INST_input_r(
-    .clk        (AESL_clock),
-    .rst        (AESL_reset),
-    .ce0        (arrayinput_r_ce0),
-    .we0        (arrayinput_r_we0),
-    .address0   (arrayinput_r_address0),
-    .din0       (arrayinput_r_din0),
-    .dout0      (arrayinput_r_dout0),
-    .ce1        (arrayinput_r_ce1),
-    .we1        (arrayinput_r_we1),
-    .address1   (arrayinput_r_address1),
-    .din1       (arrayinput_r_din1),
-    .dout1      (arrayinput_r_dout1),
-    .ready      (arrayinput_r_ready),
-    .done    (arrayinput_r_done)
+
+
+
+
+
+
+
+wire    AESL_axi_master_DATA_INPUT_ready;
+wire    AESL_axi_master_DATA_INPUT_done;
+wire [32 - 1:0] input_r;
+AESL_axi_master_DATA_INPUT AESL_AXI_MASTER_DATA_INPUT(
+    .clk   (AESL_clock),
+    .reset (AESL_reset),
+    .TRAN_DATA_INPUT_AWVALID (DATA_INPUT_AWVALID),
+    .TRAN_DATA_INPUT_AWREADY (DATA_INPUT_AWREADY),
+    .TRAN_DATA_INPUT_AWADDR (DATA_INPUT_AWADDR),
+    .TRAN_DATA_INPUT_AWID (DATA_INPUT_AWID),
+    .TRAN_DATA_INPUT_AWLEN (DATA_INPUT_AWLEN),
+    .TRAN_DATA_INPUT_AWSIZE (DATA_INPUT_AWSIZE),
+    .TRAN_DATA_INPUT_AWBURST (DATA_INPUT_AWBURST),
+    .TRAN_DATA_INPUT_AWLOCK (DATA_INPUT_AWLOCK),
+    .TRAN_DATA_INPUT_AWCACHE (DATA_INPUT_AWCACHE),
+    .TRAN_DATA_INPUT_AWPROT (DATA_INPUT_AWPROT),
+    .TRAN_DATA_INPUT_AWQOS (DATA_INPUT_AWQOS),
+    .TRAN_DATA_INPUT_AWREGION (DATA_INPUT_AWREGION),
+    .TRAN_DATA_INPUT_AWUSER (DATA_INPUT_AWUSER),
+    .TRAN_DATA_INPUT_WVALID (DATA_INPUT_WVALID),
+    .TRAN_DATA_INPUT_WREADY (DATA_INPUT_WREADY),
+    .TRAN_DATA_INPUT_WDATA (DATA_INPUT_WDATA),
+    .TRAN_DATA_INPUT_WSTRB (DATA_INPUT_WSTRB),
+    .TRAN_DATA_INPUT_WLAST (DATA_INPUT_WLAST),
+    .TRAN_DATA_INPUT_WID (DATA_INPUT_WID),
+    .TRAN_DATA_INPUT_WUSER (DATA_INPUT_WUSER),
+    .TRAN_DATA_INPUT_ARVALID (DATA_INPUT_ARVALID),
+    .TRAN_DATA_INPUT_ARREADY (DATA_INPUT_ARREADY),
+    .TRAN_DATA_INPUT_ARADDR (DATA_INPUT_ARADDR),
+    .TRAN_DATA_INPUT_ARID (DATA_INPUT_ARID),
+    .TRAN_DATA_INPUT_ARLEN (DATA_INPUT_ARLEN),
+    .TRAN_DATA_INPUT_ARSIZE (DATA_INPUT_ARSIZE),
+    .TRAN_DATA_INPUT_ARBURST (DATA_INPUT_ARBURST),
+    .TRAN_DATA_INPUT_ARLOCK (DATA_INPUT_ARLOCK),
+    .TRAN_DATA_INPUT_ARCACHE (DATA_INPUT_ARCACHE),
+    .TRAN_DATA_INPUT_ARPROT (DATA_INPUT_ARPROT),
+    .TRAN_DATA_INPUT_ARQOS (DATA_INPUT_ARQOS),
+    .TRAN_DATA_INPUT_ARREGION (DATA_INPUT_ARREGION),
+    .TRAN_DATA_INPUT_ARUSER (DATA_INPUT_ARUSER),
+    .TRAN_DATA_INPUT_RVALID (DATA_INPUT_RVALID),
+    .TRAN_DATA_INPUT_RREADY (DATA_INPUT_RREADY),
+    .TRAN_DATA_INPUT_RDATA (DATA_INPUT_RDATA),
+    .TRAN_DATA_INPUT_RLAST (DATA_INPUT_RLAST),
+    .TRAN_DATA_INPUT_RID (DATA_INPUT_RID),
+    .TRAN_DATA_INPUT_RUSER (DATA_INPUT_RUSER),
+    .TRAN_DATA_INPUT_RRESP (DATA_INPUT_RRESP),
+    .TRAN_DATA_INPUT_BVALID (DATA_INPUT_BVALID),
+    .TRAN_DATA_INPUT_BREADY (DATA_INPUT_BREADY),
+    .TRAN_DATA_INPUT_BRESP (DATA_INPUT_BRESP),
+    .TRAN_DATA_INPUT_BID (DATA_INPUT_BID),
+    .TRAN_DATA_INPUT_BUSER (DATA_INPUT_BUSER),
+    .TRAN_DATA_INPUT_input_r (input_r),
+    .ready (AESL_axi_master_DATA_INPUT_ready),
+    .done  (AESL_axi_master_DATA_INPUT_done)
+);
+assign    AESL_axi_master_DATA_INPUT_ready    =   ready;
+assign    AESL_axi_master_DATA_INPUT_done    =   AESL_done_delay;
+wire    AESL_axi_master_DATA_WEIGHT_ready;
+wire    AESL_axi_master_DATA_WEIGHT_done;
+wire [32 - 1:0] weights;
+AESL_axi_master_DATA_WEIGHT AESL_AXI_MASTER_DATA_WEIGHT(
+    .clk   (AESL_clock),
+    .reset (AESL_reset),
+    .TRAN_DATA_WEIGHT_AWVALID (DATA_WEIGHT_AWVALID),
+    .TRAN_DATA_WEIGHT_AWREADY (DATA_WEIGHT_AWREADY),
+    .TRAN_DATA_WEIGHT_AWADDR (DATA_WEIGHT_AWADDR),
+    .TRAN_DATA_WEIGHT_AWID (DATA_WEIGHT_AWID),
+    .TRAN_DATA_WEIGHT_AWLEN (DATA_WEIGHT_AWLEN),
+    .TRAN_DATA_WEIGHT_AWSIZE (DATA_WEIGHT_AWSIZE),
+    .TRAN_DATA_WEIGHT_AWBURST (DATA_WEIGHT_AWBURST),
+    .TRAN_DATA_WEIGHT_AWLOCK (DATA_WEIGHT_AWLOCK),
+    .TRAN_DATA_WEIGHT_AWCACHE (DATA_WEIGHT_AWCACHE),
+    .TRAN_DATA_WEIGHT_AWPROT (DATA_WEIGHT_AWPROT),
+    .TRAN_DATA_WEIGHT_AWQOS (DATA_WEIGHT_AWQOS),
+    .TRAN_DATA_WEIGHT_AWREGION (DATA_WEIGHT_AWREGION),
+    .TRAN_DATA_WEIGHT_AWUSER (DATA_WEIGHT_AWUSER),
+    .TRAN_DATA_WEIGHT_WVALID (DATA_WEIGHT_WVALID),
+    .TRAN_DATA_WEIGHT_WREADY (DATA_WEIGHT_WREADY),
+    .TRAN_DATA_WEIGHT_WDATA (DATA_WEIGHT_WDATA),
+    .TRAN_DATA_WEIGHT_WSTRB (DATA_WEIGHT_WSTRB),
+    .TRAN_DATA_WEIGHT_WLAST (DATA_WEIGHT_WLAST),
+    .TRAN_DATA_WEIGHT_WID (DATA_WEIGHT_WID),
+    .TRAN_DATA_WEIGHT_WUSER (DATA_WEIGHT_WUSER),
+    .TRAN_DATA_WEIGHT_ARVALID (DATA_WEIGHT_ARVALID),
+    .TRAN_DATA_WEIGHT_ARREADY (DATA_WEIGHT_ARREADY),
+    .TRAN_DATA_WEIGHT_ARADDR (DATA_WEIGHT_ARADDR),
+    .TRAN_DATA_WEIGHT_ARID (DATA_WEIGHT_ARID),
+    .TRAN_DATA_WEIGHT_ARLEN (DATA_WEIGHT_ARLEN),
+    .TRAN_DATA_WEIGHT_ARSIZE (DATA_WEIGHT_ARSIZE),
+    .TRAN_DATA_WEIGHT_ARBURST (DATA_WEIGHT_ARBURST),
+    .TRAN_DATA_WEIGHT_ARLOCK (DATA_WEIGHT_ARLOCK),
+    .TRAN_DATA_WEIGHT_ARCACHE (DATA_WEIGHT_ARCACHE),
+    .TRAN_DATA_WEIGHT_ARPROT (DATA_WEIGHT_ARPROT),
+    .TRAN_DATA_WEIGHT_ARQOS (DATA_WEIGHT_ARQOS),
+    .TRAN_DATA_WEIGHT_ARREGION (DATA_WEIGHT_ARREGION),
+    .TRAN_DATA_WEIGHT_ARUSER (DATA_WEIGHT_ARUSER),
+    .TRAN_DATA_WEIGHT_RVALID (DATA_WEIGHT_RVALID),
+    .TRAN_DATA_WEIGHT_RREADY (DATA_WEIGHT_RREADY),
+    .TRAN_DATA_WEIGHT_RDATA (DATA_WEIGHT_RDATA),
+    .TRAN_DATA_WEIGHT_RLAST (DATA_WEIGHT_RLAST),
+    .TRAN_DATA_WEIGHT_RID (DATA_WEIGHT_RID),
+    .TRAN_DATA_WEIGHT_RUSER (DATA_WEIGHT_RUSER),
+    .TRAN_DATA_WEIGHT_RRESP (DATA_WEIGHT_RRESP),
+    .TRAN_DATA_WEIGHT_BVALID (DATA_WEIGHT_BVALID),
+    .TRAN_DATA_WEIGHT_BREADY (DATA_WEIGHT_BREADY),
+    .TRAN_DATA_WEIGHT_BRESP (DATA_WEIGHT_BRESP),
+    .TRAN_DATA_WEIGHT_BID (DATA_WEIGHT_BID),
+    .TRAN_DATA_WEIGHT_BUSER (DATA_WEIGHT_BUSER),
+    .TRAN_DATA_WEIGHT_weights (weights),
+    .ready (AESL_axi_master_DATA_WEIGHT_ready),
+    .done  (AESL_axi_master_DATA_WEIGHT_done)
+);
+assign    AESL_axi_master_DATA_WEIGHT_ready    =   ready;
+assign    AESL_axi_master_DATA_WEIGHT_done    =   AESL_done_delay;
+wire    AESL_axi_master_DATA_BIAS_ready;
+wire    AESL_axi_master_DATA_BIAS_done;
+wire [32 - 1:0] bias;
+AESL_axi_master_DATA_BIAS AESL_AXI_MASTER_DATA_BIAS(
+    .clk   (AESL_clock),
+    .reset (AESL_reset),
+    .TRAN_DATA_BIAS_AWVALID (DATA_BIAS_AWVALID),
+    .TRAN_DATA_BIAS_AWREADY (DATA_BIAS_AWREADY),
+    .TRAN_DATA_BIAS_AWADDR (DATA_BIAS_AWADDR),
+    .TRAN_DATA_BIAS_AWID (DATA_BIAS_AWID),
+    .TRAN_DATA_BIAS_AWLEN (DATA_BIAS_AWLEN),
+    .TRAN_DATA_BIAS_AWSIZE (DATA_BIAS_AWSIZE),
+    .TRAN_DATA_BIAS_AWBURST (DATA_BIAS_AWBURST),
+    .TRAN_DATA_BIAS_AWLOCK (DATA_BIAS_AWLOCK),
+    .TRAN_DATA_BIAS_AWCACHE (DATA_BIAS_AWCACHE),
+    .TRAN_DATA_BIAS_AWPROT (DATA_BIAS_AWPROT),
+    .TRAN_DATA_BIAS_AWQOS (DATA_BIAS_AWQOS),
+    .TRAN_DATA_BIAS_AWREGION (DATA_BIAS_AWREGION),
+    .TRAN_DATA_BIAS_AWUSER (DATA_BIAS_AWUSER),
+    .TRAN_DATA_BIAS_WVALID (DATA_BIAS_WVALID),
+    .TRAN_DATA_BIAS_WREADY (DATA_BIAS_WREADY),
+    .TRAN_DATA_BIAS_WDATA (DATA_BIAS_WDATA),
+    .TRAN_DATA_BIAS_WSTRB (DATA_BIAS_WSTRB),
+    .TRAN_DATA_BIAS_WLAST (DATA_BIAS_WLAST),
+    .TRAN_DATA_BIAS_WID (DATA_BIAS_WID),
+    .TRAN_DATA_BIAS_WUSER (DATA_BIAS_WUSER),
+    .TRAN_DATA_BIAS_ARVALID (DATA_BIAS_ARVALID),
+    .TRAN_DATA_BIAS_ARREADY (DATA_BIAS_ARREADY),
+    .TRAN_DATA_BIAS_ARADDR (DATA_BIAS_ARADDR),
+    .TRAN_DATA_BIAS_ARID (DATA_BIAS_ARID),
+    .TRAN_DATA_BIAS_ARLEN (DATA_BIAS_ARLEN),
+    .TRAN_DATA_BIAS_ARSIZE (DATA_BIAS_ARSIZE),
+    .TRAN_DATA_BIAS_ARBURST (DATA_BIAS_ARBURST),
+    .TRAN_DATA_BIAS_ARLOCK (DATA_BIAS_ARLOCK),
+    .TRAN_DATA_BIAS_ARCACHE (DATA_BIAS_ARCACHE),
+    .TRAN_DATA_BIAS_ARPROT (DATA_BIAS_ARPROT),
+    .TRAN_DATA_BIAS_ARQOS (DATA_BIAS_ARQOS),
+    .TRAN_DATA_BIAS_ARREGION (DATA_BIAS_ARREGION),
+    .TRAN_DATA_BIAS_ARUSER (DATA_BIAS_ARUSER),
+    .TRAN_DATA_BIAS_RVALID (DATA_BIAS_RVALID),
+    .TRAN_DATA_BIAS_RREADY (DATA_BIAS_RREADY),
+    .TRAN_DATA_BIAS_RDATA (DATA_BIAS_RDATA),
+    .TRAN_DATA_BIAS_RLAST (DATA_BIAS_RLAST),
+    .TRAN_DATA_BIAS_RID (DATA_BIAS_RID),
+    .TRAN_DATA_BIAS_RUSER (DATA_BIAS_RUSER),
+    .TRAN_DATA_BIAS_RRESP (DATA_BIAS_RRESP),
+    .TRAN_DATA_BIAS_BVALID (DATA_BIAS_BVALID),
+    .TRAN_DATA_BIAS_BREADY (DATA_BIAS_BREADY),
+    .TRAN_DATA_BIAS_BRESP (DATA_BIAS_BRESP),
+    .TRAN_DATA_BIAS_BID (DATA_BIAS_BID),
+    .TRAN_DATA_BIAS_BUSER (DATA_BIAS_BUSER),
+    .TRAN_DATA_BIAS_bias (bias),
+    .ready (AESL_axi_master_DATA_BIAS_ready),
+    .done  (AESL_axi_master_DATA_BIAS_done)
+);
+assign    AESL_axi_master_DATA_BIAS_ready    =   ready;
+assign    AESL_axi_master_DATA_BIAS_done    =   AESL_done_delay;
+wire    AESL_axi_master_DATA_OUTPUT_ready;
+wire    AESL_axi_master_DATA_OUTPUT_done;
+wire [32 - 1:0] output_r;
+AESL_axi_master_DATA_OUTPUT AESL_AXI_MASTER_DATA_OUTPUT(
+    .clk   (AESL_clock),
+    .reset (AESL_reset),
+    .TRAN_DATA_OUTPUT_AWVALID (DATA_OUTPUT_AWVALID),
+    .TRAN_DATA_OUTPUT_AWREADY (DATA_OUTPUT_AWREADY),
+    .TRAN_DATA_OUTPUT_AWADDR (DATA_OUTPUT_AWADDR),
+    .TRAN_DATA_OUTPUT_AWID (DATA_OUTPUT_AWID),
+    .TRAN_DATA_OUTPUT_AWLEN (DATA_OUTPUT_AWLEN),
+    .TRAN_DATA_OUTPUT_AWSIZE (DATA_OUTPUT_AWSIZE),
+    .TRAN_DATA_OUTPUT_AWBURST (DATA_OUTPUT_AWBURST),
+    .TRAN_DATA_OUTPUT_AWLOCK (DATA_OUTPUT_AWLOCK),
+    .TRAN_DATA_OUTPUT_AWCACHE (DATA_OUTPUT_AWCACHE),
+    .TRAN_DATA_OUTPUT_AWPROT (DATA_OUTPUT_AWPROT),
+    .TRAN_DATA_OUTPUT_AWQOS (DATA_OUTPUT_AWQOS),
+    .TRAN_DATA_OUTPUT_AWREGION (DATA_OUTPUT_AWREGION),
+    .TRAN_DATA_OUTPUT_AWUSER (DATA_OUTPUT_AWUSER),
+    .TRAN_DATA_OUTPUT_WVALID (DATA_OUTPUT_WVALID),
+    .TRAN_DATA_OUTPUT_WREADY (DATA_OUTPUT_WREADY),
+    .TRAN_DATA_OUTPUT_WDATA (DATA_OUTPUT_WDATA),
+    .TRAN_DATA_OUTPUT_WSTRB (DATA_OUTPUT_WSTRB),
+    .TRAN_DATA_OUTPUT_WLAST (DATA_OUTPUT_WLAST),
+    .TRAN_DATA_OUTPUT_WID (DATA_OUTPUT_WID),
+    .TRAN_DATA_OUTPUT_WUSER (DATA_OUTPUT_WUSER),
+    .TRAN_DATA_OUTPUT_ARVALID (DATA_OUTPUT_ARVALID),
+    .TRAN_DATA_OUTPUT_ARREADY (DATA_OUTPUT_ARREADY),
+    .TRAN_DATA_OUTPUT_ARADDR (DATA_OUTPUT_ARADDR),
+    .TRAN_DATA_OUTPUT_ARID (DATA_OUTPUT_ARID),
+    .TRAN_DATA_OUTPUT_ARLEN (DATA_OUTPUT_ARLEN),
+    .TRAN_DATA_OUTPUT_ARSIZE (DATA_OUTPUT_ARSIZE),
+    .TRAN_DATA_OUTPUT_ARBURST (DATA_OUTPUT_ARBURST),
+    .TRAN_DATA_OUTPUT_ARLOCK (DATA_OUTPUT_ARLOCK),
+    .TRAN_DATA_OUTPUT_ARCACHE (DATA_OUTPUT_ARCACHE),
+    .TRAN_DATA_OUTPUT_ARPROT (DATA_OUTPUT_ARPROT),
+    .TRAN_DATA_OUTPUT_ARQOS (DATA_OUTPUT_ARQOS),
+    .TRAN_DATA_OUTPUT_ARREGION (DATA_OUTPUT_ARREGION),
+    .TRAN_DATA_OUTPUT_ARUSER (DATA_OUTPUT_ARUSER),
+    .TRAN_DATA_OUTPUT_RVALID (DATA_OUTPUT_RVALID),
+    .TRAN_DATA_OUTPUT_RREADY (DATA_OUTPUT_RREADY),
+    .TRAN_DATA_OUTPUT_RDATA (DATA_OUTPUT_RDATA),
+    .TRAN_DATA_OUTPUT_RLAST (DATA_OUTPUT_RLAST),
+    .TRAN_DATA_OUTPUT_RID (DATA_OUTPUT_RID),
+    .TRAN_DATA_OUTPUT_RUSER (DATA_OUTPUT_RUSER),
+    .TRAN_DATA_OUTPUT_RRESP (DATA_OUTPUT_RRESP),
+    .TRAN_DATA_OUTPUT_BVALID (DATA_OUTPUT_BVALID),
+    .TRAN_DATA_OUTPUT_BREADY (DATA_OUTPUT_BREADY),
+    .TRAN_DATA_OUTPUT_BRESP (DATA_OUTPUT_BRESP),
+    .TRAN_DATA_OUTPUT_BID (DATA_OUTPUT_BID),
+    .TRAN_DATA_OUTPUT_BUSER (DATA_OUTPUT_BUSER),
+    .TRAN_DATA_OUTPUT_output_r (output_r),
+    .ready (AESL_axi_master_DATA_OUTPUT_ready),
+    .done  (AESL_axi_master_DATA_OUTPUT_done)
+);
+assign    AESL_axi_master_DATA_OUTPUT_ready    =   ready;
+assign    AESL_axi_master_DATA_OUTPUT_done    =   AESL_done_delay;
+
+AESL_axi_slave_CTL AESL_AXI_SLAVE_CTL(
+    .clk   (AESL_clock),
+    .reset (AESL_reset),
+    .TRAN_s_axi_CTL_AWADDR (CTL_AWADDR),
+    .TRAN_s_axi_CTL_AWVALID (CTL_AWVALID),
+    .TRAN_s_axi_CTL_AWREADY (CTL_AWREADY),
+    .TRAN_s_axi_CTL_WVALID (CTL_WVALID),
+    .TRAN_s_axi_CTL_WREADY (CTL_WREADY),
+    .TRAN_s_axi_CTL_WDATA (CTL_WDATA),
+    .TRAN_s_axi_CTL_WSTRB (CTL_WSTRB),
+    .TRAN_s_axi_CTL_ARADDR (CTL_ARADDR),
+    .TRAN_s_axi_CTL_ARVALID (CTL_ARVALID),
+    .TRAN_s_axi_CTL_ARREADY (CTL_ARREADY),
+    .TRAN_s_axi_CTL_RVALID (CTL_RVALID),
+    .TRAN_s_axi_CTL_RREADY (CTL_RREADY),
+    .TRAN_s_axi_CTL_RDATA (CTL_RDATA),
+    .TRAN_s_axi_CTL_RRESP (CTL_RRESP),
+    .TRAN_s_axi_CTL_BVALID (CTL_BVALID),
+    .TRAN_s_axi_CTL_BREADY (CTL_BREADY),
+    .TRAN_s_axi_CTL_BRESP (CTL_BRESP),
+    .TRAN_CTL_interrupt (CTL_INTERRUPT),
+    .TRAN_input_r (input_r),
+    .TRAN_weights (weights),
+    .TRAN_bias (bias),
+    .TRAN_output_r (output_r),
+    .TRAN_CTL_read_data_finish(CTL_read_data_finish),
+    .TRAN_CTL_write_data_finish(CTL_write_data_finish),
+    .TRAN_CTL_ready_out (AESL_ready),
+    .TRAN_CTL_ready_in (AESL_slave_ready),
+    .TRAN_CTL_done_out (AESL_slave_output_done),
+    .TRAN_CTL_idle_out (AESL_idle),
+    .TRAN_CTL_write_start_in     (AESL_slave_write_start_in),
+    .TRAN_CTL_write_start_finish (AESL_slave_write_start_finish),
+    .TRAN_CTL_transaction_done_in (AESL_done_delay),
+    .TRAN_CTL_start_in  (AESL_slave_start)
 );
 
-// Assignment between dut and arrayinput_r
-assign arrayinput_r_address0 = input_r_address0;
-assign arrayinput_r_ce0 = input_r_ce0;
-assign input_r_q0 = arrayinput_r_dout0;
-assign arrayinput_r_we0 = 0;
-assign arrayinput_r_din0 = 0;
-assign arrayinput_r_we1 = 0;
-assign arrayinput_r_din1 = 0;
-assign arrayinput_r_ready=    ready;
-assign arrayinput_r_done = 0;
 
+reg dump_tvout_finish_ap_return;
 
-//------------------------arrayweights Instantiation--------------
-
-// The input and output of arrayweights
-wire    arrayweights_ce0, arrayweights_ce1;
-wire    arrayweights_we0, arrayweights_we1;
-wire    [7 : 0]    arrayweights_address0, arrayweights_address1;
-wire    [31 : 0]    arrayweights_din0, arrayweights_din1;
-wire    [31 : 0]    arrayweights_dout0, arrayweights_dout1;
-wire    arrayweights_ready;
-wire    arrayweights_done;
-
-`AESL_MEM_weights `AESL_MEM_INST_weights(
-    .clk        (AESL_clock),
-    .rst        (AESL_reset),
-    .ce0        (arrayweights_ce0),
-    .we0        (arrayweights_we0),
-    .address0   (arrayweights_address0),
-    .din0       (arrayweights_din0),
-    .dout0      (arrayweights_dout0),
-    .ce1        (arrayweights_ce1),
-    .we1        (arrayweights_we1),
-    .address1   (arrayweights_address1),
-    .din1       (arrayweights_din1),
-    .dout1      (arrayweights_dout1),
-    .ready      (arrayweights_ready),
-    .done    (arrayweights_done)
-);
-
-// Assignment between dut and arrayweights
-assign arrayweights_address0 = weights_address0;
-assign arrayweights_ce0 = weights_ce0;
-assign weights_q0 = arrayweights_dout0;
-assign arrayweights_we0 = 0;
-assign arrayweights_din0 = 0;
-assign arrayweights_we1 = 0;
-assign arrayweights_din1 = 0;
-assign arrayweights_ready=    ready;
-assign arrayweights_done = 0;
-
-
-//------------------------arraybias Instantiation--------------
-
-// The input and output of arraybias
-wire    arraybias_ce0, arraybias_ce1;
-wire    arraybias_we0, arraybias_we1;
-wire    [2 : 0]    arraybias_address0, arraybias_address1;
-wire    [31 : 0]    arraybias_din0, arraybias_din1;
-wire    [31 : 0]    arraybias_dout0, arraybias_dout1;
-wire    arraybias_ready;
-wire    arraybias_done;
-
-`AESL_MEM_bias `AESL_MEM_INST_bias(
-    .clk        (AESL_clock),
-    .rst        (AESL_reset),
-    .ce0        (arraybias_ce0),
-    .we0        (arraybias_we0),
-    .address0   (arraybias_address0),
-    .din0       (arraybias_din0),
-    .dout0      (arraybias_dout0),
-    .ce1        (arraybias_ce1),
-    .we1        (arraybias_we1),
-    .address1   (arraybias_address1),
-    .din1       (arraybias_din1),
-    .dout1      (arraybias_dout1),
-    .ready      (arraybias_ready),
-    .done    (arraybias_done)
-);
-
-// Assignment between dut and arraybias
-assign arraybias_address0 = bias_address0;
-assign arraybias_ce0 = bias_ce0;
-assign bias_q0 = arraybias_dout0;
-assign arraybias_we0 = 0;
-assign arraybias_din0 = 0;
-assign arraybias_we1 = 0;
-assign arraybias_din1 = 0;
-assign arraybias_ready=    ready;
-assign arraybias_done = 0;
-
-
-//------------------------arrayoutput_r Instantiation--------------
-
-// The input and output of arrayoutput_r
-wire    arrayoutput_r_ce0, arrayoutput_r_ce1;
-wire    arrayoutput_r_we0, arrayoutput_r_we1;
-wire    [12 : 0]    arrayoutput_r_address0, arrayoutput_r_address1;
-wire    [31 : 0]    arrayoutput_r_din0, arrayoutput_r_din1;
-wire    [31 : 0]    arrayoutput_r_dout0, arrayoutput_r_dout1;
-wire    arrayoutput_r_ready;
-wire    arrayoutput_r_done;
-
-`AESL_MEM_output_r `AESL_MEM_INST_output_r(
-    .clk        (AESL_clock),
-    .rst        (AESL_reset),
-    .ce0        (arrayoutput_r_ce0),
-    .we0        (arrayoutput_r_we0),
-    .address0   (arrayoutput_r_address0),
-    .din0       (arrayoutput_r_din0),
-    .dout0      (arrayoutput_r_dout0),
-    .ce1        (arrayoutput_r_ce1),
-    .we1        (arrayoutput_r_we1),
-    .address1   (arrayoutput_r_address1),
-    .din1       (arrayoutput_r_din1),
-    .dout1      (arrayoutput_r_dout1),
-    .ready      (arrayoutput_r_ready),
-    .done    (arrayoutput_r_done)
-);
-
-// Assignment between dut and arrayoutput_r
-assign arrayoutput_r_address0 = output_r_address0;
-assign arrayoutput_r_ce0 = output_r_ce0;
-assign arrayoutput_r_we0 = output_r_we0;
-assign arrayoutput_r_din0 = output_r_d0;
-assign arrayoutput_r_we1 = 0;
-assign arrayoutput_r_din1 = 0;
-assign arrayoutput_r_ready= ready_initial | arrayoutput_r_done;
-assign arrayoutput_r_done =    AESL_done_delay;
-
+initial begin : dump_tvout_runtime_sign_ap_return
+    integer fp;
+    dump_tvout_finish_ap_return = 0;
+    fp = $fopen(`AUTOTB_TVOUT_ap_return_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_ap_return_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_ap_return_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_ap_return_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_ap_return = 1;
+end
 
 initial begin : generate_AESL_ready_cnt_proc
     AESL_ready_cnt = 0;
-    wait(AESL_reset === 0);
+    wait(AESL_reset === 1);
     while(AESL_ready_cnt != AUTOTB_TRANSACTION_NUM) begin
         while(AESL_ready !== 1) begin
             @(posedge AESL_clock);
@@ -333,7 +899,7 @@ end
     
     initial begin : gen_ready_cnt
         ready_cnt = 0;
-        wait (AESL_reset === 0);
+        wait (AESL_reset === 1);
         forever begin
             @ (posedge AESL_clock);
             if (ready == 1) begin
@@ -349,7 +915,7 @@ end
     
     // done_cnt
     always @ (posedge AESL_clock) begin
-        if (AESL_reset) begin
+        if (~AESL_reset) begin
             done_cnt <= 0;
         end else begin
             if (AESL_done == 1) begin
@@ -376,6 +942,15 @@ initial begin
 end
 
 
+reg end_DATA_INPUT;
+reg [31:0] size_DATA_INPUT;
+reg [31:0] size_DATA_INPUT_backup;
+reg end_DATA_WEIGHT;
+reg [31:0] size_DATA_WEIGHT;
+reg [31:0] size_DATA_WEIGHT_backup;
+reg end_DATA_BIAS;
+reg [31:0] size_DATA_BIAS;
+reg [31:0] size_DATA_BIAS_backup;
 reg end_input_r;
 reg [31:0] size_input_r;
 reg [31:0] size_input_r_backup;
@@ -388,13 +963,19 @@ reg [31:0] size_bias_backup;
 reg end_output_r;
 reg [31:0] size_output_r;
 reg [31:0] size_output_r_backup;
+reg end_DATA_OUTPUT;
+reg [31:0] size_DATA_OUTPUT;
+reg [31:0] size_DATA_OUTPUT_backup;
+reg end_ap_return;
+reg [31:0] size_ap_return;
+reg [31:0] size_ap_return_backup;
 
 initial begin : initial_process
     integer proc_rand;
-    rst = 1;
+    rst = 0;
     # 100;
     repeat(3) @ (posedge AESL_clock);
-    rst = 0;
+    rst = 1;
 end
 initial begin : start_process
     integer proc_rand;
@@ -402,7 +983,7 @@ initial begin : start_process
     ce = 1;
     start = 0;
     start_cnt = 0;
-    wait (AESL_reset === 0);
+    wait (AESL_reset === 1);
     @ (posedge AESL_clock);
     #0 start = 1;
     start_cnt = start_cnt + 1;
@@ -433,7 +1014,7 @@ end
 
 always @(posedge AESL_clock)
 begin
-    if(AESL_reset)
+    if(AESL_reset === 0)
       AESL_ready_delay = 0;
   else
       AESL_ready_delay = AESL_ready;
@@ -447,7 +1028,7 @@ end
 
 always @(posedge AESL_clock)
 begin
-    if(AESL_reset)
+    if(AESL_reset === 0)
       ready_delay_last_n = 0;
   else
       ready_delay_last_n <= ready_last_n;
@@ -464,7 +1045,7 @@ end
 
 always @(posedge AESL_clock)
 begin
-    if(AESL_reset)
+    if(AESL_reset === 0)
   begin
       AESL_done_delay <= 0;
       AESL_done_delay2 <= 0;
@@ -476,7 +1057,7 @@ begin
 end
 always @(posedge AESL_clock)
 begin
-    if(AESL_reset)
+    if(AESL_reset === 0)
       interface_done = 0;
   else begin
       # 0.01;
@@ -489,14 +1070,14 @@ begin
   end
 end
 
-reg dump_tvout_finish_output_r;
+reg dump_tvout_finish_DATA_OUTPUT;
 
-initial begin : dump_tvout_runtime_sign_output_r
+initial begin : dump_tvout_runtime_sign_DATA_OUTPUT
     integer fp;
-    dump_tvout_finish_output_r = 0;
-    fp = $fopen(`AUTOTB_TVOUT_output_r_out_wrapc, "w");
+    dump_tvout_finish_DATA_OUTPUT = 0;
+    fp = $fopen(`AUTOTB_TVOUT_DATA_OUTPUT_out_wrapc, "w");
     if (fp == 0) begin
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_output_r_out_wrapc);
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_DATA_OUTPUT_out_wrapc);
         $display("ERROR: Simulation using HLS TB failed.");
         $finish;
     end
@@ -507,15 +1088,15 @@ initial begin : dump_tvout_runtime_sign_output_r
     @ (posedge AESL_clock);
     @ (posedge AESL_clock);
     @ (posedge AESL_clock);
-    fp = $fopen(`AUTOTB_TVOUT_output_r_out_wrapc, "a");
+    fp = $fopen(`AUTOTB_TVOUT_DATA_OUTPUT_out_wrapc, "a");
     if (fp == 0) begin
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_output_r_out_wrapc);
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_DATA_OUTPUT_out_wrapc);
         $display("ERROR: Simulation using HLS TB failed.");
         $finish;
     end
     $fdisplay(fp,"[[[/runtime]]]");
     $fclose(fp);
-    dump_tvout_finish_output_r = 1;
+    dump_tvout_finish_DATA_OUTPUT = 1;
 end
 
 
@@ -551,7 +1132,7 @@ initial begin
     start_cnt = 0;
     finish_cnt = 0;
     ap_ready_cnt = 0;
-    wait (AESL_reset == 0);
+    wait (AESL_reset == 1);
     wait_start();
     start_timestamp[start_cnt] = clk_cnt;
     start_cnt = start_cnt + 1;
@@ -588,7 +1169,7 @@ reg [31:0] progress_timeout;
 
 initial begin : simulation_progress
     real intra_progress;
-    wait (AESL_reset == 0);
+    wait (AESL_reset == 1);
     progress_timeout = PROGRESS_TIMEOUT;
     $display("////////////////////////////////////////////////////////////////////////////////////");
     $display("// Inter-Transaction Progress: Completed Transaction / Total Transaction");

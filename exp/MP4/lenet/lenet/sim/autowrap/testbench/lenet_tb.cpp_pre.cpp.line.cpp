@@ -40908,7 +40908,10 @@ namespace std
 #pragma empty_line
 #pragma line 1 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h"
 void convolution1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][28][28]);
-void conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][28][28]);
+int conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][14][14]);
+void relu1(float input[6][28][28], float output[6][28][28]);
+void max_pooling2(float input[6][28][28],float output[6][14][14]);
+void relu2(float input[6][14][14], float output[6][14][14]);
 #pragma line 9 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp" 2
 #pragma empty_line
 #pragma empty_line
@@ -40931,7 +40934,7 @@ float image[1][32][32] = {0};
 float conv1_weights[6][1][5][5] = {0};
 float conv1_bias[6] = {0};
 float conv1_output[6][28][28] = {0};
-float conv1_hardoutput[6][28][28] = {0};
+float conv1_hardoutput[6][14][14] = {0};
 #pragma empty_line
 float pool2_output[6][14][14] = {0};
 #pragma empty_line
@@ -41226,13 +41229,14 @@ void verify_conv1()
 {
     for(int i = 0; i < 6; i++)
     {
-     for(int j = 0; j < 28; j++)
+     for(int j = 0; j < 14; j++)
      {
-      for(int k = 0; k < 28; k++)
+      for(int k = 0; k < 14; k++)
       {
-       if(conv1_hardoutput[i][j][k] != conv1_output[i][j][k])
+       if(conv1_hardoutput[i][j][k] != pool2_output[i][j][k])
        {
         cout << "Failed at " << i << j << k << endl;
+        return;
        }
       }
      }
@@ -41273,6 +41277,9 @@ int main(int argc, char **argv)
 #pragma empty_line
 #pragma empty_line
      convolution1(image, conv1_weights, conv1_bias, conv1_output);
+     relu1(conv1_output, conv1_output);
+     max_pooling2(conv1_output, pool2_output);
+     relu2(pool2_output, pool2_output);
      conv1(image, conv1_weights, conv1_bias, conv1_hardoutput);
      verify_conv1();
 #pragma empty_line

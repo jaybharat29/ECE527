@@ -33,7 +33,7 @@ set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
 set_property ip_repo_paths c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet [current_project]
 set_property ip_output_repo c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1.xci
+read_ip -quiet C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1.xci
 set_property used_in_implementation false [get_files -all c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/constraints/conv1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -89,32 +89,32 @@ write_checkpoint -force -noxdef design_1_conv1_0_1.dcp
 create_report "design_1_conv1_0_1_synth_1_synth_report_utilization_0" "report_utilization -file design_1_conv1_0_1_utilization_synth.rpt -pb design_1_conv1_0_1_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1.dcp c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1.dcp
+  file copy -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1.dcp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.v
+  write_verilog -force -mode synth_stub C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -124,32 +124,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1.dcp c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1.dcp
+  file copy -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1.dcp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1_stub.v c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.v
+  file rename -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1_stub.v C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1_stub.vhdl c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.vhdl
+  file rename -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1_stub.vhdl C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1_sim_netlist.v c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_sim_netlist.v
+  file rename -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1_sim_netlist.v C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1_sim_netlist.vhdl c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_sim_netlist.vhdl
+  file rename -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1/design_1_conv1_0_1_sim_netlist.vhdl C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -158,13 +158,13 @@ if { [catch {
 
 if {[file isdir C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.ip_user_files/ip/design_1_conv1_0_1]} {
   catch { 
-    file copy -force c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.v C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.ip_user_files/ip/design_1_conv1_0_1
+    file copy -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.v C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.ip_user_files/ip/design_1_conv1_0_1
   }
 }
 
 if {[file isdir C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.ip_user_files/ip/design_1_conv1_0_1]} {
   catch { 
-    file copy -force c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.vhdl C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.ip_user_files/ip/design_1_conv1_0_1
+    file copy -force C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_conv1_0_1/design_1_conv1_0_1_stub.vhdl C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.ip_user_files/ip/design_1_conv1_0_1
   }
 }
 file delete __synthesis_is_running__

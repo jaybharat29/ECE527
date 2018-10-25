@@ -1,4 +1,4 @@
-13:22:26 **** Build of project lenet_bsp ****
+17:00:13 **** Build of project lenet_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/conv1_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/conv1_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -113,7 +113,7 @@ make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
-13:23:21 **** Build of configuration Debug for project lenet ****
+17:00:58 **** Build of configuration Debug for project lenet ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -133,7 +133,7 @@ arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
   19024	   1144	  22576	  42744	   a6f8	lenet.elf
 'Finished building: lenet.elf.size'
 ' '
-13:23:56 **** Auto Build of project lenet_bsp ****
+17:01:34 **** Auto Build of project lenet_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/conv1_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/conv1_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -253,43 +253,23 @@ make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm
 make -C ps7_cortexa9_0/libsrc/xilffs_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling XilFFs Library"
 'Finished building libraries'
-13:24:43 **** Clean-only build of configuration Debug for project lenet ****
+17:02:30 **** Clean-only build of configuration Debug for project lenet ****
 make clean 
 rm -rf  ./src/main.d  ./src/main.o  lenet.elf.size  lenet.elf
 ' '
-13:24:44 **** Auto Build of configuration Debug for project lenet ****
+17:02:31 **** Auto Build of configuration Debug for project lenet ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/main.cc'
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19024	   1144	  22576	  42744	   a6f8	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:25:17 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc:55:10: fatal error: platform.h: No such file or directory
+../src/main.cc:60:10: fatal error: platform.h: No such file or directory
  #include "platform.h"
           ^~~~~~~~~~~~
 compilation terminated.
 make: *** [src/main.o] Error 1
-13:25:53 **** Auto Build of configuration Debug for project lenet ****
+17:03:09 **** Auto Build of configuration Debug for project lenet ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -297,19 +277,9 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 ../src/main.cc: In function 'int main()':
-../src/main.cc:167:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:171:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:172:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc: At global scope:
-../src/main.cc:75:14: warning: 'fatfs' defined but not used [-Wunused-variable]
- static FATFS fatfs;
-              ^~~~~
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
 'Finished building: ../src/main.cc'
 ' '
 'Building file: ../src/platform.c'
@@ -325,1872 +295,902 @@ arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  66664	   2256	  49472	 118392	  1ce78	lenet.elf
+ 807153	   2900	 281824	1091877	 10a925	lenet.elf
 'Finished building: lenet.elf.size'
 ' '
-13:26:39 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  66664	   2256	 295232	 364152	  58e78	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:28:17 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int parse_parameters(char*)':
-../src/main.cc:281:31: error: 'conv3_weights' was not declared in this scope
-  Res = f_read(&fil, (void*)***conv3_weights, sizeof(float)*2400, &NumBytesRead);
-                               ^~~~~~~~~~~~~
-../src/main.cc:281:31: note: suggested alternative: 'conv1_weights'
-  Res = f_read(&fil, (void*)***conv3_weights, sizeof(float)*2400, &NumBytesRead);
-                               ^~~~~~~~~~~~~
-                               conv1_weights
-../src/main.cc:292:28: error: 'conv3_bias' was not declared in this scope
-  Res = f_read(&fil, (void*)conv3_bias, sizeof(float)*16, &NumBytesRead);
-                            ^~~~~~~~~~
-../src/main.cc:292:28: note: suggested alternative: 'conv1_bias'
-  Res = f_read(&fil, (void*)conv3_bias, sizeof(float)*16, &NumBytesRead);
-                            ^~~~~~~~~~
-                            conv1_bias
-../src/main.cc:303:31: error: 'conv5_weights' was not declared in this scope
-  Res = f_read(&fil, (void*)***conv5_weights, sizeof(float)*48000, &NumBytesRead);
-                               ^~~~~~~~~~~~~
-../src/main.cc:303:31: note: suggested alternative: 'conv1_weights'
-  Res = f_read(&fil, (void*)***conv5_weights, sizeof(float)*48000, &NumBytesRead);
-                               ^~~~~~~~~~~~~
-                               conv1_weights
-../src/main.cc:314:28: error: 'conv5_bias' was not declared in this scope
-  Res = f_read(&fil, (void*)conv5_bias, sizeof(float)*120, &NumBytesRead);
-                            ^~~~~~~~~~
-../src/main.cc:314:28: note: suggested alternative: 'conv1_bias'
-  Res = f_read(&fil, (void*)conv5_bias, sizeof(float)*120, &NumBytesRead);
-                            ^~~~~~~~~~
-                            conv1_bias
-../src/main.cc:325:31: error: 'fc6_weights' was not declared in this scope
-  Res = f_read(&fil, (void*)***fc6_weights, sizeof(float)*1200, &NumBytesRead);
-                               ^~~~~~~~~~~
-../src/main.cc:325:31: note: suggested alternative: 'conv1_weights'
-  Res = f_read(&fil, (void*)***fc6_weights, sizeof(float)*1200, &NumBytesRead);
-                               ^~~~~~~~~~~
-                               conv1_weights
-../src/main.cc:336:28: error: 'fc6_bias' was not declared in this scope
-  Res = f_read(&fil, (void*)fc6_bias, sizeof(float)*10, &NumBytesRead);
-                            ^~~~~~~~
-../src/main.cc:336:28: note: suggested alternative: 'conv1_bias'
-  Res = f_read(&fil, (void*)fc6_bias, sizeof(float)*10, &NumBytesRead);
-                            ^~~~~~~~
-                            conv1_bias
-../src/main.cc: In function 'int main()':
-../src/main.cc:381:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:385:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:386:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc: At global scope:
-../src/main.cc:75:14: warning: 'fatfs' defined but not used [-Wunused-variable]
- static FATFS fatfs;
-              ^~~~~
-make: *** [src/main.o] Error 1
-13:28:58 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:396:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:400:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:401:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc: At global scope:
-../src/main.cc:75:14: warning: 'fatfs' defined but not used [-Wunused-variable]
- static FATFS fatfs;
-              ^~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  69216	   2256	 515456	 586928	  8f4b0	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:30:43 **** Auto Build of configuration Debug for project lenet ****
+17:03:39 **** Incremental Build of configuration Debug for project lenet ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-13:32:43 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:449:2: error: 'cout' was not declared in this scope
-  cout<<"Starting LeNet\n\r";
-  ^~~~
-../src/main.cc:453:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:469:41: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_mnist_images("images.bin", images);
-                                         ^
-../src/main.cc:473:41: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_mnist_labels("labels.bin", labels);
-                                         ^
-../src/main.cc:476:31: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_parameters("params.bin");
-                               ^
-../src/main.cc:396:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:400:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:401:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:33:23 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:474:41: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_mnist_images("images.bin", images);
-                                         ^
-../src/main.cc:478:41: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_mnist_labels("labels.bin", labels);
-                                         ^
-../src/main.cc:481:31: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_parameters("params.bin");
-                               ^
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801065	   2900	 522880	1326845	 143efd	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:34:13 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:478:41: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_mnist_labels("labels.bin", labels);
-                                         ^
-../src/main.cc:481:31: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_parameters("params.bin");
-                               ^
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801065	   2900	 522880	1326845	 143efd	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:34:46 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:481:31: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-  parse_parameters("params.bin");
-                               ^
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801065	   2900	 522880	1326845	 143efd	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:34:55 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801065	   2900	 522880	1326845	 143efd	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:36:09 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:486:2: error: 'Xil_L1DCacheFlush' was not declared in this scope
-  Xil_L1DCacheFlush();
-  ^~~~~~~~~~~~~~~~~
-../src/main.cc:486:2: note: suggested alternative: 'Xil_DCacheFlush'
-  Xil_L1DCacheFlush();
-  ^~~~~~~~~~~~~~~~~
-  Xil_DCacheFlush
-../src/main.cc:487:2: error: 'Xil_L2CacheFlush' was not declared in this scope
-  Xil_L2CacheFlush();
-  ^~~~~~~~~~~~~~~~
-../src/main.cc:487:2: note: suggested alternative: 'Xil_DCacheFlush'
-  Xil_L2CacheFlush();
-  ^~~~~~~~~~~~~~~~
-  Xil_DCacheFlush
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:37:53 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801105	   2900	 522880	1326885	 143f25	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:41:04 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:492:38: error: 'src_a' was not declared in this scope
-  XConv1_Set_input(&accelerator, (u32)src_a);
-                                      ^~~~~
-../src/main.cc:492:2: error: 'XConv1_Set_input' was not declared in this scope
-  XConv1_Set_input(&accelerator, (u32)src_a);
-  ^~~~~~~~~~~~~~~~
-../src/main.cc:492:2: note: suggested alternative: 'XConv1_Set_input_r'
-  XConv1_Set_input(&accelerator, (u32)src_a);
-  ^~~~~~~~~~~~~~~~
-  XConv1_Set_input_r
-../src/main.cc:493:40: error: 'src_b' was not declared in this scope
-  XConv1_Set_weights(&accelerator, (u32)src_b);
-                                        ^~~~~
-../src/main.cc:494:37: error: 'src_c' was not declared in this scope
-  XConv1_Set_bias(&accelerator, (u32)src_c);
-                                     ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:41:46 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:492:2: error: 'XConv1_Set_input' was not declared in this scope
-  XConv1_Set_input(&accelerator, image);
-  ^~~~~~~~~~~~~~~~
-../src/main.cc:492:2: note: suggested alternative: 'XConv1_Set_input_r'
-  XConv1_Set_input(&accelerator, image);
-  ^~~~~~~~~~~~~~~~
-  XConv1_Set_input_r
-../src/main.cc:493:40: error: 'src_b' was not declared in this scope
-  XConv1_Set_weights(&accelerator, (u32)src_b);
-                                        ^~~~~
-../src/main.cc:494:37: error: 'src_c' was not declared in this scope
-  XConv1_Set_bias(&accelerator, (u32)src_c);
-                                     ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:42:22 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:492:40: error: invalid conversion from 'float (*)[32][32]' to 'u32 {aka long unsigned int}' [-fpermissive]
-  XConv1_Set_input_r(&accelerator, image);
-                                        ^
-In file included from ../src/main.cc:63:0:
-../../lenet_bsp/ps7_cortexa9_0/include/xconv1.h:91:6: note:   initializing argument 2 of 'void XConv1_Set_input_r(XConv1*, u32)'
- void XConv1_Set_input_r(XConv1 *InstancePtr, u32 Data);
-      ^~~~~~~~~~~~~~~~~~
-../src/main.cc:493:40: error: 'src_b' was not declared in this scope
-  XConv1_Set_weights(&accelerator, (u32)src_b);
-                                        ^~~~~
-../src/main.cc:494:37: error: 'src_c' was not declared in this scope
-  XConv1_Set_bias(&accelerator, (u32)src_c);
-                                     ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:42:47 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:493:40: error: 'src_b' was not declared in this scope
-  XConv1_Set_weights(&accelerator, (u32)src_b);
-                                        ^~~~~
-../src/main.cc:494:37: error: 'src_c' was not declared in this scope
-  XConv1_Set_bias(&accelerator, (u32)src_c);
-                                     ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:43:02 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:494:37: error: 'src_c' was not declared in this scope
-  XConv1_Set_bias(&accelerator, (u32)src_c);
-                                     ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:43:11 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801169	   2900	 522880	1326949	 143f65	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:44:57 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:497:5: error: expected ';' before 'cleanup_platform'
-     cleanup_platform();
-     ^~~~~~~~~~~~~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:45:08 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801169	   2900	 522880	1326949	 143f65	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:46:33 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:498:17: error: 'XVector_multiplier_Get_a' was not declared in this scope
-  u32 offset_a = XVector_multiplier_Get_a(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:499:17: error: 'XVector_multiplier_Get_b' was not declared in this scope
-  u32 offset_b = XVector_multiplier_Get_b(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:500:17: error: 'XVector_multiplier_Get_c' was not declared in this scope
-  u32 offset_c = XVector_multiplier_Get_c(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:46:42 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:498:23: error: 'XVector_multiplier_Get_a' was not declared in this scope
-  u32 offset_input_r = XVector_multiplier_Get_a(&accelerator);
-                       ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:499:17: error: 'XVector_multiplier_Get_b' was not declared in this scope
-  u32 offset_b = XVector_multiplier_Get_b(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:500:17: error: 'XVector_multiplier_Get_c' was not declared in this scope
-  u32 offset_c = XVector_multiplier_Get_c(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:502:84: error: 'offset_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-../src/main.cc:502:84: note: suggested alternative: 'offset_c'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-                                                                                    offset_c
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:498:6: warning: unused variable 'offset_input_r' [-Wunused-variable]
-  u32 offset_input_r = XVector_multiplier_Get_a(&accelerator);
-      ^~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:46:59 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:499:17: error: 'XVector_multiplier_Get_b' was not declared in this scope
-  u32 offset_b = XVector_multiplier_Get_b(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:500:17: error: 'XVector_multiplier_Get_c' was not declared in this scope
-  u32 offset_c = XVector_multiplier_Get_c(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:502:84: error: 'offset_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-../src/main.cc:502:84: note: suggested alternative: 'offset_c'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-                                                                                    offset_c
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:498:6: warning: unused variable 'offset_input_r' [-Wunused-variable]
-  u32 offset_input_r = XConv1_Get_input_r(&accelerator);
-      ^~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:47:15 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:499:23: error: 'XVector_multiplier_Get_b' was not declared in this scope
-  u32 offset_weights = XVector_multiplier_Get_b(&accelerator);
-                       ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:500:17: error: 'XVector_multiplier_Get_c' was not declared in this scope
-  u32 offset_c = XVector_multiplier_Get_c(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:502:84: error: 'offset_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-../src/main.cc:502:84: note: suggested alternative: 'offset_c'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-                                                                                    offset_c
-../src/main.cc:502:94: error: 'offset_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-../src/main.cc:502:94: note: suggested alternative: 'offset_c'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-                                                                                              offset_c
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:498:6: warning: unused variable 'offset_input_r' [-Wunused-variable]
-  u32 offset_input_r = XConv1_Get_input_r(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:499:6: warning: unused variable 'offset_weights' [-Wunused-variable]
-  u32 offset_weights = XVector_multiplier_Get_b(&accelerator);
-      ^~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:47:22 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:499:23: error: 'XConv1_Get_b' was not declared in this scope
-  u32 offset_weights = XConv1_Get_b(&accelerator);
-                       ^~~~~~~~~~~~
-../src/main.cc:499:23: note: suggested alternative: 'XConv1_Get_bias'
-  u32 offset_weights = XConv1_Get_b(&accelerator);
-                       ^~~~~~~~~~~~
-                       XConv1_Get_bias
-../src/main.cc:500:17: error: 'XVector_multiplier_Get_c' was not declared in this scope
-  u32 offset_c = XVector_multiplier_Get_c(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:502:84: error: 'offset_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-../src/main.cc:502:84: note: suggested alternative: 'offset_c'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-                                                                                    offset_c
-../src/main.cc:502:94: error: 'offset_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-../src/main.cc:502:94: note: suggested alternative: 'offset_c'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-                                                                                              offset_c
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:498:6: warning: unused variable 'offset_input_r' [-Wunused-variable]
-  u32 offset_input_r = XConv1_Get_input_r(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:499:6: warning: unused variable 'offset_weights' [-Wunused-variable]
-  u32 offset_weights = XConv1_Get_b(&accelerator);
-      ^~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:47:31 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:500:17: error: 'XVector_multiplier_Get_c' was not declared in this scope
-  u32 offset_c = XVector_multiplier_Get_c(&accelerator);
-                 ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:502:84: error: 'offset_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-../src/main.cc:502:84: note: suggested alternative: 'offset_c'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-                                                                                    offset_c
-../src/main.cc:502:94: error: 'offset_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-../src/main.cc:502:94: note: suggested alternative: 'offset_c'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-                                                                                              offset_c
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:498:6: warning: unused variable 'offset_input_r' [-Wunused-variable]
-  u32 offset_input_r = XConv1_Get_input_r(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:499:6: warning: unused variable 'offset_weights' [-Wunused-variable]
-  u32 offset_weights = XConv1_Get_weights(&accelerator);
-      ^~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:47:36 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:500:20: error: 'XVector_multiplier_Get_c' was not declared in this scope
-  u32 offset_bias = XVector_multiplier_Get_c(&accelerator);
-                    ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:502:84: error: 'offset_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-../src/main.cc:502:84: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-                                                                                    offsetof
-../src/main.cc:502:94: error: 'offset_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-../src/main.cc:502:94: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-                                                                                              offsetof
-../src/main.cc:502:104: error: 'offset_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                        ^~~~~~~~
-../src/main.cc:502:104: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                        ^~~~~~~~
-                                                                                                        offsetof
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:498:6: warning: unused variable 'offset_input_r' [-Wunused-variable]
-  u32 offset_input_r = XConv1_Get_input_r(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:499:6: warning: unused variable 'offset_weights' [-Wunused-variable]
-  u32 offset_weights = XConv1_Get_weights(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:500:6: warning: unused variable 'offset_bias' [-Wunused-variable]
-  u32 offset_bias = XVector_multiplier_Get_c(&accelerator);
-      ^~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:47:50 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:500:20: error: 'XConv1_Get_c' was not declared in this scope
-  u32 offset_bias = XConv1_Get_c(&accelerator);
-                    ^~~~~~~~~~~~
-../src/main.cc:500:20: note: suggested alternative: 'XConv1_Get_bias'
-  u32 offset_bias = XConv1_Get_c(&accelerator);
-                    ^~~~~~~~~~~~
-                    XConv1_Get_bias
-../src/main.cc:502:84: error: 'offset_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-../src/main.cc:502:84: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-                                                                                    offsetof
-../src/main.cc:502:94: error: 'offset_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-../src/main.cc:502:94: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-                                                                                              offsetof
-../src/main.cc:502:104: error: 'offset_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                        ^~~~~~~~
-../src/main.cc:502:104: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                        ^~~~~~~~
-                                                                                                        offsetof
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:498:6: warning: unused variable 'offset_input_r' [-Wunused-variable]
-  u32 offset_input_r = XConv1_Get_input_r(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:499:6: warning: unused variable 'offset_weights' [-Wunused-variable]
-  u32 offset_weights = XConv1_Get_weights(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:500:6: warning: unused variable 'offset_bias' [-Wunused-variable]
-  u32 offset_bias = XConv1_Get_c(&accelerator);
-      ^~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:47:54 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:502:84: error: 'offset_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-../src/main.cc:502:84: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                    ^~~~~~~~
-                                                                                    offsetof
-../src/main.cc:502:94: error: 'offset_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-../src/main.cc:502:94: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                              ^~~~~~~~
-                                                                                              offsetof
-../src/main.cc:502:104: error: 'offset_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                        ^~~~~~~~
-../src/main.cc:502:104: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                        ^~~~~~~~
-                                                                                                        offsetof
-../src/main.cc:502:119: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                       ^~~~~
-../src/main.cc:502:131: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_a, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:498:6: warning: unused variable 'offset_input_r' [-Wunused-variable]
-  u32 offset_input_r = XConv1_Get_input_r(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:499:6: warning: unused variable 'offset_weights' [-Wunused-variable]
-  u32 offset_weights = XConv1_Get_weights(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:500:6: warning: unused variable 'offset_bias' [-Wunused-variable]
-  u32 offset_bias = XConv1_Get_bias(&accelerator);
-      ^~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:48:34 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:502:100: error: 'offset_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                    ^~~~~~~~
-../src/main.cc:502:100: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                    ^~~~~~~~
-                                                                                                    offsetof
-../src/main.cc:502:110: error: 'offset_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                              ^~~~~~~~
-../src/main.cc:502:110: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                              ^~~~~~~~
-                                                                                                              offsetof
-../src/main.cc:502:125: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                             ^~~~~
-../src/main.cc:502:137: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                         ^~~~~
-../src/main.cc:502:149: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_b, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                                     ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:499:6: warning: unused variable 'offset_weights' [-Wunused-variable]
-  u32 offset_weights = XConv1_Get_weights(&accelerator);
-      ^~~~~~~~~~~~~~
-../src/main.cc:500:6: warning: unused variable 'offset_bias' [-Wunused-variable]
-  u32 offset_bias = XConv1_Get_bias(&accelerator);
-      ^~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:48:44 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:502:116: error: 'offset_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                    ^~~~~~~~
-../src/main.cc:502:116: note: suggested alternative: 'offsetof'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                    ^~~~~~~~
-                                                                                                                    offsetof
-../src/main.cc:502:131: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                   ^~~~~
-../src/main.cc:502:143: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                               ^~~~~
-../src/main.cc:502:155: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_c, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                                           ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:500:6: warning: unused variable 'offset_bias' [-Wunused-variable]
-  u32 offset_bias = XConv1_Get_bias(&accelerator);
-      ^~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:48:51 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:502:134: error: 'src_a' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                      ^~~~~
-../src/main.cc:502:146: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                                  ^~~~~
-../src/main.cc:502:158: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)src_a, (u32)src_b, (u32)src_c);
-                                                                                                                                                              ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:48:59 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:502:134: error: 'input_image' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)src_b, (u32)src_c);
-                                                                                                                                      ^~~~~~~~~~~
-../src/main.cc:502:134: note: suggested alternative: 'get_image'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)src_b, (u32)src_c);
-                                                                                                                                      ^~~~~~~~~~~
-                                                                                                                                      get_image
-../src/main.cc:502:152: error: 'src_b' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)src_b, (u32)src_c);
-                                                                                                                                                        ^~~~~
-../src/main.cc:502:164: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)src_b, (u32)src_c);
-                                                                                                                                                                    ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:49:09 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:502:134: error: 'input_image' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)conv1_weights, (u32)src_c);
-                                                                                                                                      ^~~~~~~~~~~
-../src/main.cc:502:134: note: suggested alternative: 'get_image'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)conv1_weights, (u32)src_c);
-                                                                                                                                      ^~~~~~~~~~~
-                                                                                                                                      get_image
-../src/main.cc:502:172: error: 'src_c' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)conv1_weights, (u32)src_c);
-                                                                                                                                                                            ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:49:19 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:502:134: error: 'input_image' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)conv1_weights, (u32)conv1_bias);
-                                                                                                                                      ^~~~~~~~~~~
-../src/main.cc:502:134: note: suggested alternative: 'get_image'
-  xil_printf("Base offset set as %x %x %x on accelerator, from proc as %x %x %x\n", offset_input_r, offset_weights, offset_bias, (u32)input_image, (u32)conv1_weights, (u32)conv1_bias);
-                                                                                                                                      ^~~~~~~~~~~
-                                                                                                                                      get_image
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:50:10 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801385	   2900	 522880	1327165	 14403d	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:50:41 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:501:22: error: 'XConv1_Get_output' was not declared in this scope
-  u32 offset_output = XConv1_Get_output(&accelerator);
-                      ^~~~~~~~~~~~~~~~~
-../src/main.cc:501:22: note: suggested alternative: 'XConv1_Get_output_r'
-  u32 offset_output = XConv1_Get_output(&accelerator);
-                      ^~~~~~~~~~~~~~~~~
-                      XConv1_Get_output_r
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:501:6: warning: unused variable 'offset_output' [-Wunused-variable]
-  u32 offset_output = XConv1_Get_output(&accelerator);
-      ^~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:50:56 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:501:6: warning: unused variable 'offset_output' [-Wunused-variable]
-  u32 offset_output = XConv1_Get_output_r(&accelerator);
-      ^~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801449	   2900	 522880	1327229	 14407d	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:51:06 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:501:6: warning: unused variable 'offset_output' [-Wunused-variable]
-  u32 offset_output = XConv1_Get_output_r(&accelerator);
-      ^~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801449	   2900	 522880	1327229	 14407d	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:51:30 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:503:155: error: expected primary-expression before ')' token
-  xil_printf("Base offset set as %x %x %x %x on accelerator, from proc as %x %x %x %x\n", offset_input_r, offset_weights, offset_bias, offset_output_r (u32)image, (u32)conv1_weights, (u32)conv1_bias);
-                                                                                                                                                           ^
-../src/main.cc:503:135: error: 'offset_output_r' was not declared in this scope
-  xil_printf("Base offset set as %x %x %x %x on accelerator, from proc as %x %x %x %x\n", offset_input_r, offset_weights, offset_bias, offset_output_r (u32)image, (u32)conv1_weights, (u32)conv1_bias);
-                                                                                                                                       ^~~~~~~~~~~~~~~
-../src/main.cc:503:135: note: suggested alternative: 'offset_output'
-  xil_printf("Base offset set as %x %x %x %x on accelerator, from proc as %x %x %x %x\n", offset_input_r, offset_weights, offset_bias, offset_output_r (u32)image, (u32)conv1_weights, (u32)conv1_bias);
-                                                                                                                                       ^~~~~~~~~~~~~~~
-                                                                                                                                       offset_output
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-../src/main.cc:501:6: warning: unused variable 'offset_output' [-Wunused-variable]
-  u32 offset_output = XConv1_Get_output_r(&accelerator);
-      ^~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:51:36 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:503:155: error: expected primary-expression before ')' token
-  xil_printf("Base offset set as %x %x %x %x on accelerator, from proc as %x %x %x %x\n", offset_input_r, offset_weights, offset_bias, offset_output_r (u32)image, (u32)conv1_weights, (u32)conv1_bias);
-                                                                                                                                                           ^
-../src/main.cc:503:155: error: 'offset_output_r' cannot be used as a function
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:51:49 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:503:155: error: expected primary-expression before ')' token
-  xil_printf("Base offset set as %x %x %x %x on accelerator, from proc as %x %x %x %x\n", offset_input_r, offset_weights, offset_bias, offset_output_r (u32)image, (u32)conv1_weights, (u32)conv1_bias, (u32)conv1_output);
-                                                                                                                                                           ^
-../src/main.cc:503:155: error: 'offset_output_r' cannot be used as a function
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:52:43 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: unused variable 'timerCount_Start' [-Wunused-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801457	   2900	 522880	1327237	 144085	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:53:25 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: variable 'timerCount_Start' set but not used [-Wunused-but-set-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801793	   2900	 522880	1327573	 1441d5	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:54:08 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:516:9: error: 'XVector_multiplier_IsDone' was not declared in this scope
-  while(!XVector_multiplier_IsDone(&accelerator))
-         ^~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:54:17 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-../src/main.cc:405:9: warning: unused variable 'timerCount_Stop' [-Wunused-variable]
-     u32 timerCount_Stop;
-         ^~~~~~~~~~~~~~~
-../src/main.cc:406:9: warning: variable 'timerCount_Start' set but not used [-Wunused-but-set-variable]
-     u32 timerCount_Start;
-         ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801873	   2900	 522880	1327653	 144225	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:55:19 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:401:9: warning: unused variable 'ret' [-Wunused-variable]
-     int ret = 0;
-         ^~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 801977	   2900	 522880	1327757	 14428d	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-13:55:48 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:531:8: error: 'XVector_multiplier_Get_return' was not declared in this scope
-  ret = XVector_multiplier_Get_return(&accelerator);
-        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-13:56:08 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 802065	   2900	 522880	1327845	 1442e5	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-14:00:50 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:458:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:535:49: error: 'conv1_output_soft' was not declared in this scope
-  convolution1(image, conv1_weights, conv1_bias, conv1_output_soft);
-                                                 ^~~~~~~~~~~~~~~~~
-../src/main.cc:535:49: note: suggested alternative: 'conv1_output'
-  convolution1(image, conv1_weights, conv1_bias, conv1_output_soft);
-                                                 ^~~~~~~~~~~~~~~~~
-                                                 conv1_output
-../src/main.cc:535:2: error: 'convolution1' was not declared in this scope
-  convolution1(image, conv1_weights, conv1_bias, conv1_output_soft);
-  ^~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-14:01:19 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:459:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-../src/main.cc:536:2: error: 'convolution1' was not declared in this scope
-  convolution1(image, conv1_weights, conv1_bias, conv1_output_soft);
-  ^~~~~~~~~~~~
-make: *** [src/main.o] Error 1
-14:02:04 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:473:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 802593	   2900	 541696	1347189	 148e75	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-14:06:21 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'void verify_conv1()':
-../src/main.cc:421:11: error: 'conv1_hardoutput' was not declared in this scope
-        if(conv1_hardoutput[i][j][k] != conv1_output[i][j][k])
-           ^~~~~~~~~~~~~~~~
-../src/main.cc:421:11: note: suggested alternative: 'conv1_output'
-        if(conv1_hardoutput[i][j][k] != conv1_output[i][j][k])
-           ^~~~~~~~~~~~~~~~
-           conv1_output
-../src/main.cc: In function 'int main()':
-../src/main.cc:492:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-make: *** [src/main.o] Error 1
-14:06:35 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:492:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 803013	   2900	 541696	1347609	 149019	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-14:07:06 **** Auto Build of configuration Debug for project lenet ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.cc'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-../src/main.cc: In function 'int main()':
-../src/main.cc:492:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
-  TCHAR *Path = "0:/";
-                ^~~~~
-'Finished building: ../src/main.cc'
-' '
-'Building target: lenet.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: lenet.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 803013	   2900	 541696	1347609	 149019	lenet.elf
-'Finished building: lenet.elf.size'
-' '
-14:12:55 **** Incremental Build of configuration Debug for project lenet ****
+17:04:08 **** Incremental Build of configuration Debug for project lenet ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
-14:13:19 **** Incremental Build of configuration Debug for project lenet ****
+17:04:58 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 807001	   2900	 281824	1091725	 10a88d	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:05:56 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 807001	   2900	 281824	1091725	 10a88d	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:06:13 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 807001	   2900	 281824	1091725	 10a88d	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:06:20 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:07:49 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void print_conv1()':
+../src/main.cc:586:7: error: expected ';' before '}' token
+       }
+       ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+make: *** [src/main.o] Error 1
+17:07:54 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void print_conv1()':
+../src/main.cc:586:7: error: expected ';' before '}' token
+       }
+       ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+make: *** [src/main.o] Error 1
+17:07:56 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 806945	   2900	 281824	1091669	 10a855	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:09:00 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 806945	   2900	 281824	1091669	 10a855	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:09:06 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:09:50 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:10:33 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 806945	   2900	 281824	1091669	 10a855	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:10:38 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:11:22 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 806945	   2900	 281824	1091669	 10a855	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:11:36 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 806945	   2900	 281824	1091669	 10a855	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:12:04 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:12:36 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824117	   2900	 281824	1108841	 10eb69	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:12:44 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:13:14 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824117	   2900	 281824	1108841	 10eb69	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:13:20 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:651:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824117	   2900	 281824	1108841	 10eb69	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:13:45 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:653:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824221	   2900	 281824	1108945	 10ebd1	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:13:51 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:14:59 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824157	   2900	 281824	1108881	 10eb91	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:15:04 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:15:36 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824221	   2900	 281824	1108945	 10ebd1	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:16:04 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824221	   2900	 281824	1108945	 10ebd1	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:16:07 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:20:34 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824157	   2900	 281824	1108881	 10eb91	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:20:53 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824157	   2900	 281824	1108881	 10eb91	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:21:00 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824157	   2900	 281824	1108881	 10eb91	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:21:10 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824157	   2900	 281824	1108881	 10eb91	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:21:48 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void print_conv1()':
+../src/main.cc:582:6: error: expected ';' before 'for'
+      for(int j = 0; j < 28; j++)
+      ^~~
+../src/main.cc:582:21: error: 'j' was not declared in this scope
+      for(int j = 0; j < 28; j++)
+                     ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+make: *** [src/main.o] Error 1
+17:21:51 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'void print_conv1()':
+../src/main.cc:582:6: error: expected ';' before 'for'
+      for(int j = 0; j < 28; j++)
+      ^~~
+../src/main.cc:582:21: error: 'j' was not declared in this scope
+      for(int j = 0; j < 28; j++)
+                     ^
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+make: *** [src/main.o] Error 1
+17:21:57 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824173	   2900	 281824	1108897	 10eba1	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:22:02 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:23:17 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:23:39 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:24:53 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824173	   2900	 281824	1108897	 10eba1	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:25:02 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:28:07 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:678:20: error: 'k' was not declared in this scope
+  get_image(images, k, image);
+                    ^
+make: *** [src/main.o] Error 1
+17:28:11 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:678:20: error: 'k' was not declared in this scope
+  get_image(images, k, image);
+                    ^
+make: *** [src/main.o] Error 1
+17:28:25 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:678:20: error: 'k' was not declared in this scope
+  get_image(images, k, image);
+                    ^
+make: *** [src/main.o] Error 1
+17:28:28 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:678:20: error: 'k' was not declared in this scope
+  get_image(images, k, image);
+                    ^
+make: *** [src/main.o] Error 1
+17:29:20 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824237	   2900	 281824	1108961	 10ebe1	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:29:26 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824237	   2900	 281824	1108961	 10ebe1	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:29:30 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:31:30 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824301	   2900	 281824	1109025	 10ec21	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:31:44 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824301	   2900	 281824	1109025	 10ec21	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:31:49 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824301	   2900	 281824	1109025	 10ec21	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:31:53 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:32:29 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824301	   2900	 281824	1109025	 10ec21	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:32:34 **** Incremental Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:33:55 **** Auto Build of configuration Debug for project lenet ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lenet_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:654:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lenet_bsp/ps7_cortexa9_0/lib -o "lenet.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet.elf  |tee "lenet.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 824301	   2900	 281824	1109025	 10ec21	lenet.elf
+'Finished building: lenet.elf.size'
+' '
+17:34:00 **** Incremental Build of configuration Debug for project lenet ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

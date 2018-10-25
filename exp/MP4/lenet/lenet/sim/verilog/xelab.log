@@ -6,30 +6,103 @@ Multi-threading is on. Using 2 slave threads.
 Determining compilation order of HDL files.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_automem_bias.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_bias
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_automem_input_r.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_input_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_automem_output_r.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_output_r
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_automem_weights.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_weights
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_axi_master_DATA_BIAS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_DATA_BIAS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_axi_master_DATA_INPUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_DATA_INPUT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_axi_master_DATA_OUTPUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_DATA_OUTPUT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_axi_master_DATA_WEIGHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_DATA_WEIGHT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_axi_slave_CTL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_CTL
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_conv1_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module conv1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_bias_oc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_bias_oc_ram
+INFO: [VRFC 10-311] analyzing module conv1_bias_oc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_CTL_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_CTL_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_DATA_BIAS_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_DATA_BIAS_m_axi
+INFO: [VRFC 10-311] analyzing module conv1_DATA_BIAS_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module conv1_DATA_BIAS_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module conv1_DATA_BIAS_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module conv1_DATA_BIAS_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module conv1_DATA_BIAS_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module conv1_DATA_BIAS_m_axi_read
+INFO: [VRFC 10-311] analyzing module conv1_DATA_BIAS_m_axi_write
+INFO: [VRFC 10-2458] undeclared symbol data_valid, assumed default net type wire [C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_DATA_BIAS_m_axi.v:2236]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_DATA_INPUT_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_DATA_INPUT_m_axi
+INFO: [VRFC 10-311] analyzing module conv1_DATA_INPUT_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module conv1_DATA_INPUT_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module conv1_DATA_INPUT_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module conv1_DATA_INPUT_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module conv1_DATA_INPUT_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module conv1_DATA_INPUT_m_axi_read
+INFO: [VRFC 10-311] analyzing module conv1_DATA_INPUT_m_axi_write
+INFO: [VRFC 10-2458] undeclared symbol data_valid, assumed default net type wire [C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_DATA_INPUT_m_axi.v:2236]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_DATA_OUTPUT_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_DATA_OUTPUT_m_axi
+INFO: [VRFC 10-311] analyzing module conv1_DATA_OUTPUT_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module conv1_DATA_OUTPUT_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module conv1_DATA_OUTPUT_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module conv1_DATA_OUTPUT_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module conv1_DATA_OUTPUT_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module conv1_DATA_OUTPUT_m_axi_read
+INFO: [VRFC 10-311] analyzing module conv1_DATA_OUTPUT_m_axi_write
+INFO: [VRFC 10-2458] undeclared symbol data_valid, assumed default net type wire [C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_DATA_OUTPUT_m_axi.v:2236]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_DATA_WEIGHT_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_DATA_WEIGHT_m_axi
+INFO: [VRFC 10-311] analyzing module conv1_DATA_WEIGHT_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module conv1_DATA_WEIGHT_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module conv1_DATA_WEIGHT_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module conv1_DATA_WEIGHT_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module conv1_DATA_WEIGHT_m_axi_throttl
+INFO: [VRFC 10-311] analyzing module conv1_DATA_WEIGHT_m_axi_read
+INFO: [VRFC 10-311] analyzing module conv1_DATA_WEIGHT_m_axi_write
+INFO: [VRFC 10-2458] undeclared symbol data_valid, assumed default net type wire [C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_DATA_WEIGHT_m_axi.v:2236]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_fadd_32ns_3bkb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module conv1_fadd_32ns_3bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_fcmp_32ns_3dEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_fcmp_32ns_3dEe
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_fmul_32ns_3cud.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module conv1_fmul_32ns_3cud
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_input_oc_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module conv1_input_oc_0_ram
 INFO: [VRFC 10-311] analyzing module conv1_input_oc_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_output1_oc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_output1_oc_ram
+INFO: [VRFC 10-311] analyzing module conv1_output1_oc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_output2_oc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_output2_oc_ram
+INFO: [VRFC 10-311] analyzing module conv1_output2_oc
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_weights_oc_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module conv1_weights_oc_0_ram
 INFO: [VRFC 10-311] analyzing module conv1_weights_oc_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/convulution1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convulution1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/maxpool_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module maxpool_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/relu_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module relu_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/relu_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module relu_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/store_bias.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_bias
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/store_input.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_input
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/store_output.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_output
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/store_weights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_weights
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/ip/xil_defaultlib/conv1_ap_fadd_3_full_dsp_32.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity conv1_ap_fadd_3_full_dsp_32
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/ip/xil_defaultlib/conv1_ap_fcmp_0_no_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity conv1_ap_fcmp_0_no_dsp_32
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/ip/xil_defaultlib/conv1_ap_fmul_2_max_dsp_32.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity conv1_ap_fmul_2_max_dsp_32
 Starting static elaboration
@@ -65,6 +138,9 @@ WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018
 WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:12604]
 WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
 WARNING: [VRFC 10-982] library name floating_point_v7_1_6 of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/conv1_ap_fmul_2_max_dsp_32.vhd:195]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:90362]
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/2018.2/continuous/2018_06_14_2258646/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd:13629]
+WARNING: [VRFC 10-982] library name floating_point_v7_1_6 of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/conv1_ap_fcmp_0_no_dsp_32.vhd:194]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -89,10 +165,65 @@ Compiling package unisim.vcomponents
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
+Compiling module xil_defaultlib.conv1_CTL_s_axi
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_throttl_d...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_reg_slice...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_buffer(DA...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_fifo(DEPT...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_fifo(DATA...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_write(NUM...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_buffer(DA...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_reg_slice...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi_read(NUM_...
+Compiling module xil_defaultlib.conv1_DATA_INPUT_m_axi(NUM_READ_...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_throttl_...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_reg_slic...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_fifo(DAT...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_buffer(D...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_fifo(DEP...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_fifo(DAT...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_fifo(DAT...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_write(NU...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_buffer(D...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_reg_slic...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi_read(NUM...
+Compiling module xil_defaultlib.conv1_DATA_WEIGHT_m_axi(NUM_READ...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_throttl_de...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_reg_slice(...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_fifo(DATA_...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_buffer(DAT...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_fifo(DEPTH...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_fifo(DATA_...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_fifo(DATA_...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_write(NUM_...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_buffer(DAT...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_reg_slice(...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi_read(NUM_R...
+Compiling module xil_defaultlib.conv1_DATA_BIAS_m_axi(NUM_READ_O...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_throttl_...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_reg_slic...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_fifo(DAT...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_buffer(D...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_fifo(DEP...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_fifo(DAT...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_fifo(DAT...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_write(NU...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_buffer(D...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_reg_slic...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi_read(NUM...
+Compiling module xil_defaultlib.conv1_DATA_OUTPUT_m_axi(NUM_READ...
 Compiling module xil_defaultlib.conv1_input_oc_0_ram
 Compiling module xil_defaultlib.conv1_input_oc_0(DataWidth=32,Ad...
 Compiling module xil_defaultlib.conv1_weights_oc_0_ram
 Compiling module xil_defaultlib.conv1_weights_oc_0(DataWidth=32,...
+Compiling module xil_defaultlib.conv1_bias_oc_ram
+Compiling module xil_defaultlib.conv1_bias_oc(DataWidth=32,Addre...
+Compiling module xil_defaultlib.conv1_output1_oc_ram
+Compiling module xil_defaultlib.conv1_output1_oc(DataWidth=32,Ad...
+Compiling module xil_defaultlib.conv1_output2_oc_ram
+Compiling module xil_defaultlib.conv1_output2_oc(DataWidth=32,Ad...
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=7,length=0)\]
@@ -185,7 +316,7 @@ Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=3
 Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6_viv [\floating_point_v7_1_6_viv(c_xde...]
 Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6 [\floating_point_v7_1_6(c_xdevice...]
 Compiling architecture conv1_ap_fadd_3_full_dsp_32_arch of entity xil_defaultlib.conv1_ap_fadd_3_full_dsp_32 [conv1_ap_fadd_3_full_dsp_32_defa...]
-Compiling module xil_defaultlib.conv1_fadd_32ns_3bkb
+Compiling module xil_defaultlib.conv1_fadd_32ns_3bkb(ID=1)
 Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=17,length=0)\]
 Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
@@ -223,11 +354,38 @@ Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_
 Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6 [\floating_point_v7_1_6(c_xdevice...]
 Compiling architecture conv1_ap_fmul_2_max_dsp_32_arch of entity xil_defaultlib.conv1_ap_fmul_2_max_dsp_32 [conv1_ap_fmul_2_max_dsp_32_defau...]
 Compiling module xil_defaultlib.conv1_fmul_32ns_3cud(ID=1)
+Compiling module xil_defaultlib.convulution1
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=2,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=11,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_eq [\compare_eq(c_xdevicefamily="zyn...]
+Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_6.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_6.fp_cmp [\fp_cmp(c_xdevicefamily="zynq",c...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6_viv [\floating_point_v7_1_6_viv(c_xde...]
+Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_1_6 [\floating_point_v7_1_6(c_xdevice...]
+Compiling architecture conv1_ap_fcmp_0_no_dsp_32_arch of entity xil_defaultlib.conv1_ap_fcmp_0_no_dsp_32 [conv1_ap_fcmp_0_no_dsp_32_defaul...]
+Compiling module xil_defaultlib.conv1_fcmp_32ns_3dEe(ID=1)
+Compiling module xil_defaultlib.maxpool_2
+Compiling module xil_defaultlib.relu_1
+Compiling module xil_defaultlib.relu_2
+Compiling module xil_defaultlib.store_weights
+Compiling module xil_defaultlib.store_output
+Compiling module xil_defaultlib.store_input
+Compiling module xil_defaultlib.store_bias
 Compiling module xil_defaultlib.conv1
-Compiling module xil_defaultlib.AESL_automem_input_r
-Compiling module xil_defaultlib.AESL_automem_weights
-Compiling module xil_defaultlib.AESL_automem_bias
-Compiling module xil_defaultlib.AESL_automem_output_r
+Compiling module xil_defaultlib.AESL_axi_master_DATA_INPUT
+Compiling module xil_defaultlib.AESL_axi_master_DATA_WEIGHT
+Compiling module xil_defaultlib.AESL_axi_master_DATA_BIAS
+Compiling module xil_defaultlib.AESL_axi_master_DATA_OUTPUT
+Compiling module xil_defaultlib.AESL_axi_slave_CTL
 Compiling module xil_defaultlib.apatb_conv1_top
 Compiling module work.glbl
 Built simulation snapshot conv1

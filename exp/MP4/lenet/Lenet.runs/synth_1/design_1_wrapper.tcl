@@ -82,7 +82,7 @@ set_property used_in_implementation false [get_files -all c:/Users/Patel/Downloa
 set_property used_in_implementation false [get_files -all c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

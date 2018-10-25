@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet opened at Thu Oct 25 02:21:21 -0500 2018
+INFO-FLOW: Workspace C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet opened at Thu Oct 25 15:27:14 -0500 2018
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -46,12 +46,12 @@ Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interf
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.118 sec.
+Command           ap_source done; 0.161 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.276 sec.
+Command         ap_source done; 0.247 sec.
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.288 sec.
-Command     ap_source done; 0.289 sec.
+Command       ap_source done; 0.254 sec.
+Command     ap_source done; 0.254 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
@@ -81,7 +81,7 @@ Execute       get_default_platform
 Execute     get_default_platform 
 Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 0.526 sec.
+Command   open_solution done; 0.496 sec.
 Execute   set_part xc7z020clg484-1 -tool vivado 
 Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
 Execute       get_default_platform 
@@ -93,6 +93,7 @@ Execute       config_chip_info -quiet -speed slow
 Execute     add_library xilinx/zynq/zynq_fpv6 
 Execute       get_default_platform 
 Execute     get_default_platform 
+Command   set_part done; 0.103 sec.
 Execute   create_clock -period 10 -name default 
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -120,41 +121,41 @@ Execute       get_default_platform
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp
-Command       clang done; 4.445 sec.
+Command       clang done; 1.496 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp"  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc"  
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc
-Command       clang done; 1.939 sec.
-INFO-FLOW: GCC PP time: 6 seconds per iteration
+Command       clang done; 1.565 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 -directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.049 sec.
+Command       tidy_31 done; 0.266 sec.
 INFO-FLOW: CDT Preprocessing with tidy-3.1...
 Execute       tidy_31 xilinx-directive2pragma C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 -directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/lenet.json 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/lenet.json -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.269 sec.
+Command       tidy_31 done; 0.248 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.diag.yml C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.out.log 2> C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.err.log 
-Command       ap_eval done; 0.568 sec.
+Command       ap_eval done; 0.242 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.342 sec.
-INFO-FLOW: tidy-3.1 time 2 seconds per iteration
+Command       tidy_31 done; 0.816 sec.
+INFO-FLOW: tidy-3.1 time 1 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.3 sec.
+Command       tidy_31 done; 0.315 sec.
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp
-Command       clang done; 1.351 sec.
+Command       clang done; 1.517 sec.
 Execute       get_default_platform 
 INFO-FLOW: Processing labels
 Execute       clang -src C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.bc" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.bc
-Command       clang done; 1.49 sec.
+Command       clang done; 1.526 sec.
 INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -165,41 +166,41 @@ Execute       get_default_platform
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp
-Command       clang done; 1.376 sec.
+Command       clang done; 1.259 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp"  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc"  
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc
-Command       clang done; 1.435 sec.
+Command       clang done; 1.316 sec.
 INFO-FLOW: GCC PP time: 2 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 -directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.316 sec.
+Command       tidy_31 done; 0.126 sec.
 INFO-FLOW: CDT Preprocessing with tidy-3.1...
 Execute       tidy_31 xilinx-directive2pragma C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 -directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/lenet.json 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/lenet.json -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.217 sec.
+Command       tidy_31 done; 0.125 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.diag.yml C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.out.log 2> C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.err.log 
-Command       ap_eval done; 0.224 sec.
+Command       ap_eval done; 0.108 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.418 sec.
+Command       tidy_31 done; 0.28 sec.
 INFO-FLOW: tidy-3.1 time 0 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.18 sec.
+Command       tidy_31 done; 0.155 sec.
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp
-Command       clang done; 1.353 sec.
+Command       clang done; 1.274 sec.
 Execute       get_default_platform 
 INFO-FLOW: Processing labels
 Execute       clang -src C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.bc" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.bc
-Command       clang done; 1.466 sec.
+Command       clang done; 1.258 sec.
 INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -210,93 +211,93 @@ Execute       get_default_platform
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp
-Command       clang done; 1.445 sec.
+Command       clang done; 1.308 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp"  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc"  
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc
-Command       clang done; 1.321 sec.
+Command       clang done; 1.234 sec.
 INFO-FLOW: GCC PP time: 2 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 -directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.2 sec.
+Command       tidy_31 done; 0.128 sec.
 INFO-FLOW: CDT Preprocessing with tidy-3.1...
 Execute       tidy_31 xilinx-directive2pragma C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 -directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/lenet.json 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/lenet.json -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.17 sec.
+Command       tidy_31 done; 0.135 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.diag.yml C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.out.log 2> C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.err.log 
-Command       ap_eval done; 0.139 sec.
+Command       ap_eval done; 0.11 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.404 sec.
+Command       tidy_31 done; 0.261 sec.
 INFO-FLOW: tidy-3.1 time 0 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.251 sec.
+Command       tidy_31 done; 0.145 sec.
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp
-Command       clang done; 1.401 sec.
+Command       clang done; 1.283 sec.
 Execute       get_default_platform 
 INFO-FLOW: Processing labels
 Execute       clang -src C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.bc" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.bc
-Command       clang done; 1.339 sec.
+Command       clang done; 1.368 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.g.bc C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.g.bc C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.g.bc -hls-opt -except-internalize conv1 -LC:/Xilinx/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g 
-Command       llvm-ld done; 12.409 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:43 . Memory (MB): peak = 103.676 ; gain = 46.594
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:43 . Memory (MB): peak = 103.676 ; gain = 46.594
+Command       llvm-ld done; 1.784 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 103.582 ; gain = 46.598
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 103.582 ; gain = 46.598
 Execute       ::config_rtl 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.pp.bc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.pp.0.bc -f 
-Command         transform done; 0.846 sec.
 Execute         llvm-ld C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2018.2/win64/lib -lfloatconversion -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.0 
-Command         llvm-ld done; 0.984 sec.
+Command         llvm-ld done; 0.826 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top conv1 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.0.bc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:69) in function 'conv1(float (*) [32][32], float (*) [1][5][5], float*, float (*) [28][28])': changing partial unrolling into complete unrolling since the unrolling factor (=5) is no less than the loop trip count (=5).
-Command         transform done; 0.981 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:45 . Memory (MB): peak = 108.539 ; gain = 51.457
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:56) in function 'convulution1(float (*) [32][32], float (*) [1][5][5], float*, float (*) [28][28])': changing partial unrolling into complete unrolling since the unrolling factor (=5) is no less than the loop trip count (=5).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 108.672 ; gain = 51.688
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.1.bc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.2.prechk.bc -f 
-Command         transform done; 0.37 sec.
+Command         transform done; 0.15 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.2.prechk.bc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:46 . Memory (MB): peak = 111.055 ; gain = 53.973
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:27 . Memory (MB): peak = 111.398 ; gain = 54.414
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.1.bc to C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.1.bc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-3.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:65) in function 'conv1' for pipelining.
-WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-3.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:69) because its parent loop or function is pipelined.
-WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-3.1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:72) because its parent loop or function is pipelined.
-INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:69) in function 'conv1' completely.
-INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:72) in function 'conv1' completely.
-INFO: [XFORM 203-102] Partitioning array 'input_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:41) in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'weights_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:50) in dimension 2 automatically.
-Command         transform done; 1.953 sec.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:52) in function 'convulution1' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:56) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:59) because its parent loop or function is pipelined.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:56) in function 'convulution1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:59) in function 'convulution1' completely.
+INFO: [XFORM 203-102] Partitioning array 'input_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:114) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:117) in dimension 2 automatically.
+Command         transform done; 0.706 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.1.tmp.bc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.2.bc -f -phase presyn 
-Command         transform done; 1.431 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:49 . Memory (MB): peak = 136.547 ; gain = 79.465
+Command         transform done; 0.354 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:28 . Memory (MB): peak = 134.680 ; gain = 77.695
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.2.bc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-3.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:64:22) in function 'conv1'.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-3' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:63:19) in function 'conv1'.
-INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 32 on port 'DATA_INPUT' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:47:4). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 5 on port 'DATA_WEIGHT' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:58:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-Command         transform done; 1.961 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:51 . Memory (MB): peak = 136.547 ; gain = 79.465
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:51:22) in function 'convulution1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:50:19) in function 'convulution1'.
+INFO: [XFORM 203-811] Inferring multiple bus burst write of a total cumulative length 14 on port 'output' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:39:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 6 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:31:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 5 on port 'weights' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:22:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 32 on port 'input' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:9:4). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+Command         transform done; 1.069 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:29 . Memory (MB): peak = 207.410 ; gain = 150.426
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 8.726 sec.
-Command     elaborate done; 49.044 sec.
+Command       opt_and_import_c done; 3.465 sec.
+Command     elaborate done; 26.507 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -304,36 +305,304 @@ INFO: [HLS 200-10] Synthesizing 'conv1' ...
 Execute       ap_set_top_model conv1 
 Execute       get_model_list conv1 -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model conv1 
+Execute       preproc_iomode -model store_output 
+Execute       preproc_iomode -model relu_2 
+Execute       preproc_iomode -model maxpool_2 
+Execute       preproc_iomode -model relu_1 
+Execute       preproc_iomode -model convulution1 
+Execute       preproc_iomode -model store_bias 
+Execute       preproc_iomode -model store_weights 
+Execute       preproc_iomode -model store_input 
 Execute       get_model_list conv1 -filter all-wo-channel 
-INFO-FLOW: Model list for configure: conv1
+INFO-FLOW: Model list for configure: store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1
+INFO-FLOW: Configuring Module : store_input ...
+Execute       set_default_model store_input 
+Execute       apply_spec_resource_limit store_input 
+INFO-FLOW: Configuring Module : store_weights ...
+Execute       set_default_model store_weights 
+Execute       apply_spec_resource_limit store_weights 
+INFO-FLOW: Configuring Module : store_bias ...
+Execute       set_default_model store_bias 
+Execute       apply_spec_resource_limit store_bias 
+INFO-FLOW: Configuring Module : convulution1 ...
+Execute       set_default_model convulution1 
+Execute       apply_spec_resource_limit convulution1 
+INFO-FLOW: Configuring Module : relu_1 ...
+Execute       set_default_model relu_1 
+Execute       apply_spec_resource_limit relu_1 
+INFO-FLOW: Configuring Module : maxpool_2 ...
+Execute       set_default_model maxpool_2 
+Execute       apply_spec_resource_limit maxpool_2 
+INFO-FLOW: Configuring Module : relu_2 ...
+Execute       set_default_model relu_2 
+Execute       apply_spec_resource_limit relu_2 
+INFO-FLOW: Configuring Module : store_output ...
+Execute       set_default_model store_output 
+Execute       apply_spec_resource_limit store_output 
 INFO-FLOW: Configuring Module : conv1 ...
 Execute       set_default_model conv1 
 Execute       apply_spec_resource_limit conv1 
-INFO-FLOW: Model list for preprocess: conv1
+INFO-FLOW: Model list for preprocess: store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1
+INFO-FLOW: Preprocessing Module: store_input ...
+Execute       set_default_model store_input 
+Execute       cdfg_preprocess -model store_input 
+Execute       rtl_gen_preprocess store_input 
+INFO-FLOW: Preprocessing Module: store_weights ...
+Execute       set_default_model store_weights 
+Execute       cdfg_preprocess -model store_weights 
+Execute       rtl_gen_preprocess store_weights 
+INFO-FLOW: Preprocessing Module: store_bias ...
+Execute       set_default_model store_bias 
+Execute       cdfg_preprocess -model store_bias 
+Execute       rtl_gen_preprocess store_bias 
+INFO-FLOW: Preprocessing Module: convulution1 ...
+Execute       set_default_model convulution1 
+Execute       cdfg_preprocess -model convulution1 
+Execute       rtl_gen_preprocess convulution1 
+INFO-FLOW: Preprocessing Module: relu_1 ...
+Execute       set_default_model relu_1 
+Execute       cdfg_preprocess -model relu_1 
+Execute       rtl_gen_preprocess relu_1 
+INFO-FLOW: Preprocessing Module: maxpool_2 ...
+Execute       set_default_model maxpool_2 
+Execute       cdfg_preprocess -model maxpool_2 
+Execute       rtl_gen_preprocess maxpool_2 
+INFO-FLOW: Preprocessing Module: relu_2 ...
+Execute       set_default_model relu_2 
+Execute       cdfg_preprocess -model relu_2 
+Execute       rtl_gen_preprocess relu_2 
+INFO-FLOW: Preprocessing Module: store_output ...
+Execute       set_default_model store_output 
+Execute       cdfg_preprocess -model store_output 
+Execute       rtl_gen_preprocess store_output 
 INFO-FLOW: Preprocessing Module: conv1 ...
 Execute       set_default_model conv1 
 Execute       cdfg_preprocess -model conv1 
-Command       cdfg_preprocess done; 0.113 sec.
 Execute       rtl_gen_preprocess conv1 
 WARNING: [SYN 201-107] Renaming port name 'conv1/input' to 'conv1/input_r' to avoid the conflict with HDL keywords or other object names.
 WARNING: [SYN 201-107] Renaming port name 'conv1/output' to 'conv1/output_r' to avoid the conflict with HDL keywords or other object names.
-INFO-FLOW: Model list for synthesis: conv1
+INFO-FLOW: Model list for synthesis: store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_input' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model store_input 
+Execute       schedule -model store_input 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.001 seconds; current allocated memory: 164.503 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.sched.adb -f 
+INFO-FLOW: Finish scheduling store_input.
+Execute       set_default_model store_input 
+Execute       bind -model store_input 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=store_input
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 164.684 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.bind.adb -f 
+INFO-FLOW: Finish binding store_input.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_weights' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model store_weights 
+Execute       schedule -model store_weights 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 164.852 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.sched.adb -f 
+INFO-FLOW: Finish scheduling store_weights.
+Execute       set_default_model store_weights 
+Execute       bind -model store_weights 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=store_weights
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.142 seconds; current allocated memory: 164.999 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.bind.adb -f 
+INFO-FLOW: Finish binding store_weights.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_bias' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model store_bias 
+Execute       schedule -model store_bias 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.198 seconds; current allocated memory: 165.093 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.sched.adb -f 
+INFO-FLOW: Finish scheduling store_bias.
+Execute       set_default_model store_bias 
+Execute       bind -model store_bias 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=store_bias
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 165.176 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.bind.adb -f 
+INFO-FLOW: Finish binding store_bias.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convulution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model convulution1 
+Execute       schedule -model convulution1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 13, Final II = 13, Depth = 138.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.639 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.743 seconds; current allocated memory: 166.802 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.verbose.sched.rpt -verbose -f 
+Command       report done; 0.492 sec.
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.sched.adb -f 
+Command       db_write done; 0.122 sec.
+INFO-FLOW: Finish scheduling convulution1.
+Execute       set_default_model convulution1 
+Execute       bind -model convulution1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=convulution1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.169 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.8 seconds; current allocated memory: 168.281 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.575 sec.
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.bind.adb -f 
+Command       db_write done; 0.151 sec.
+INFO-FLOW: Finish binding convulution1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'relu_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model relu_1 
+Execute       schedule -model relu_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.839 seconds; current allocated memory: 168.576 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.sched.adb -f 
+INFO-FLOW: Finish scheduling relu_1.
+Execute       set_default_model relu_1 
+Execute       bind -model relu_1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=relu_1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 168.718 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.bind.adb -f 
+INFO-FLOW: Finish binding relu_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'maxpool_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model maxpool_2 
+Execute       schedule -model maxpool_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.103 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.277 seconds; current allocated memory: 168.987 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.sched.adb -f 
+INFO-FLOW: Finish scheduling maxpool_2.
+Execute       set_default_model maxpool_2 
+Execute       bind -model maxpool_2 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=maxpool_2
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.256 seconds; current allocated memory: 169.257 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.bind.adb -f 
+INFO-FLOW: Finish binding maxpool_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'relu_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model relu_2 
+Execute       schedule -model relu_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.273 seconds; current allocated memory: 169.461 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.sched.adb -f 
+INFO-FLOW: Finish scheduling relu_2.
+Execute       set_default_model relu_2 
+Execute       bind -model relu_2 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=relu_2
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 169.602 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.bind.adb -f 
+INFO-FLOW: Finish binding relu_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model store_output 
+Execute       schedule -model store_output 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.218 seconds; current allocated memory: 169.776 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.verbose.sched.rpt -verbose -f 
+Command       report done; 0.292 sec.
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.sched.adb -f 
+INFO-FLOW: Finish scheduling store_output.
+Execute       set_default_model store_output 
+Execute       bind -model store_output 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=store_output
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.411 seconds; current allocated memory: 169.934 MB.
+Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.bind.adb -f 
+INFO-FLOW: Finish binding store_output.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       set_default_model conv1 
 Execute       schedule -model conv1 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 13, Final II = 13, Depth = 143.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 2.717 sec.
-INFO: [HLS 200-111]  Elapsed time: 54.205 seconds; current allocated memory: 88.900 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 170.095 MB.
 Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.verbose.sched.rpt -verbose -f 
-INFO: [HLS 200-434] Only 1 loops out of a total 6 loops have been pipelined in this design.
-Command       report done; 0.817 sec.
 Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.sched.adb -f 
-Command       db_write done; 0.373 sec.
 INFO-FLOW: Finish scheduling conv1.
 Execute       set_default_model conv1 
 Execute       bind -model conv1 
@@ -345,17 +614,177 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 1.023 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.251 seconds; current allocated memory: 91.073 MB.
+Command       bind done; 0.811 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.904 seconds; current allocated memory: 170.575 MB.
 Execute       report -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.verbose.bind.rpt -verbose -f 
-Command       report done; 0.563 sec.
+Command       report done; 0.371 sec.
 Execute       db_write -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.bind.adb -f 
-Command       db_write done; 0.15 sec.
 INFO-FLOW: Finish binding conv1.
 Execute       get_model_list conv1 -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess store_input 
+Execute       rtl_gen_preprocess store_weights 
+Execute       rtl_gen_preprocess store_bias 
+Execute       rtl_gen_preprocess convulution1 
+Execute       rtl_gen_preprocess relu_1 
+Execute       rtl_gen_preprocess maxpool_2 
+Execute       rtl_gen_preprocess relu_2 
+Execute       rtl_gen_preprocess store_output 
 Execute       rtl_gen_preprocess conv1 
-INFO-FLOW: Model list for RTL generation: conv1
+INFO-FLOW: Model list for RTL generation: store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_input' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model store_input -vendor xilinx -mg_file C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_input'.
+INFO: [HLS 200-111]  Elapsed time: 0.525 seconds; current allocated memory: 171.091 MB.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute       gen_rtl store_input -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_input -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
+Execute       gen_rtl store_input -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_input 
+Execute       gen_rtl store_input -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/store_input 
+Execute       gen_tb_info store_input -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Execute       report -model store_input -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/store_input_csynth.rpt -f 
+Execute       report -model store_input -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/store_input_csynth.xml -f -x 
+Execute       report -model store_input -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.verbose.rpt -verbose -f 
+Execute       db_write -model store_input -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_weights' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model store_weights -vendor xilinx -mg_file C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_weights'.
+INFO: [HLS 200-111]  Elapsed time: 0.453 seconds; current allocated memory: 171.594 MB.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute       gen_rtl store_weights -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_weights -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
+Execute       gen_rtl store_weights -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_weights 
+Execute       gen_rtl store_weights -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/store_weights 
+Execute       gen_tb_info store_weights -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Execute       report -model store_weights -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/store_weights_csynth.rpt -f 
+Execute       report -model store_weights -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/store_weights_csynth.xml -f -x 
+Execute       report -model store_weights -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.verbose.rpt -verbose -f 
+Execute       db_write -model store_weights -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.adb -f 
+Command       db_write done; 0.16 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_bias' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model store_bias -vendor xilinx -mg_file C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_bias'.
+INFO: [HLS 200-111]  Elapsed time: 0.617 seconds; current allocated memory: 171.977 MB.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute       gen_rtl store_bias -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_bias -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
+Execute       gen_rtl store_bias -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_bias 
+Execute       gen_rtl store_bias -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/store_bias 
+Execute       gen_tb_info store_bias -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Execute       report -model store_bias -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/store_bias_csynth.rpt -f 
+Execute       report -model store_bias -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/store_bias_csynth.xml -f -x 
+Execute       report -model store_bias -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.verbose.rpt -verbose -f 
+Execute       db_write -model store_bias -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convulution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model convulution1 -vendor xilinx -mg_file C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'conv1_fadd_32ns_32ns_32_5_full_dsp_1' to 'conv1_fadd_32ns_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv1_fmul_32ns_32ns_32_4_max_dsp_1' to 'conv1_fmul_32ns_3cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convulution1'.
+Command       create_rtl_model done; 0.232 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.548 seconds; current allocated memory: 174.345 MB.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute       gen_rtl convulution1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/convulution1 -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
+Execute       gen_rtl convulution1 -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/convulution1 
+Execute       gen_rtl convulution1 -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/convulution1 
+Execute       gen_tb_info convulution1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1 -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Execute       report -model convulution1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/convulution1_csynth.rpt -f 
+Execute       report -model convulution1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/convulution1_csynth.xml -f -x 
+Execute       report -model convulution1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.verbose.rpt -verbose -f 
+Command       report done; 0.587 sec.
+Execute       db_write -model convulution1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.adb -f 
+Command       db_write done; 0.283 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'relu_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model relu_1 -vendor xilinx -mg_file C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'conv1_fcmp_32ns_32ns_1_1_1' to 'conv1_fcmp_32ns_3dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'relu_1'.
+INFO: [HLS 200-111]  Elapsed time: 3.073 seconds; current allocated memory: 175.011 MB.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute       gen_rtl relu_1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/relu_1 -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
+Execute       gen_rtl relu_1 -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/relu_1 
+Execute       gen_rtl relu_1 -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/relu_1 
+Execute       gen_tb_info relu_1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1 -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Execute       report -model relu_1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/relu_1_csynth.rpt -f 
+Execute       report -model relu_1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/relu_1_csynth.xml -f -x 
+Execute       report -model relu_1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.verbose.rpt -verbose -f 
+Execute       db_write -model relu_1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.adb -f 
+Command       db_write done; 0.121 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model maxpool_2 -vendor xilinx -mg_file C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.7 seconds; current allocated memory: 175.636 MB.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute       gen_rtl maxpool_2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/maxpool_2 -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
+Execute       gen_rtl maxpool_2 -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/maxpool_2 
+Execute       gen_rtl maxpool_2 -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/maxpool_2 
+Execute       gen_tb_info maxpool_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2 -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Execute       report -model maxpool_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/maxpool_2_csynth.rpt -f 
+Execute       report -model maxpool_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/maxpool_2_csynth.xml -f -x 
+Execute       report -model maxpool_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.verbose.rpt -verbose -f 
+Command       report done; 0.119 sec.
+Execute       db_write -model maxpool_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.adb -f 
+Command       db_write done; 0.144 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'relu_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model relu_2 -vendor xilinx -mg_file C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'relu_2'.
+INFO: [HLS 200-111]  Elapsed time: 1.003 seconds; current allocated memory: 176.070 MB.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute       gen_rtl relu_2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/relu_2 -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
+Execute       gen_rtl relu_2 -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/relu_2 
+Execute       gen_rtl relu_2 -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/relu_2 
+Execute       gen_tb_info relu_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2 -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Execute       report -model relu_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/relu_2_csynth.rpt -f 
+Execute       report -model relu_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/relu_2_csynth.xml -f -x 
+Execute       report -model relu_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.verbose.rpt -verbose -f 
+Execute       db_write -model relu_2 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.adb -f 
+Command       db_write done; 0.121 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model store_output -vendor xilinx -mg_file C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_output'.
+INFO: [HLS 200-111]  Elapsed time: 0.675 seconds; current allocated memory: 176.530 MB.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute       gen_rtl store_output -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_output -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
+Execute       gen_rtl store_output -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_output 
+Execute       gen_rtl store_output -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/store_output 
+Execute       gen_tb_info store_output -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Execute       report -model store_output -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/store_output_csynth.rpt -f 
+Execute       report -model store_output -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/store_output_csynth.xml -f -x 
+Execute       report -model store_output -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.verbose.rpt -verbose -f 
+Execute       db_write -model store_output -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.adb -f 
+Command       db_write done; 0.168 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -372,47 +801,61 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'conv1/bias' to 's_axilite 
 INFO: [RTGEN 206-500] Setting interface mode on port 'conv1/output_r' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'conv1' to 's_axilite & ap_ctrl_hs' (register).
 INFO: [RTGEN 206-100] Bundling port 'return', 'input_r', 'weights', 'bias' and 'output_r' to AXI-Lite port CTL.
-INFO: [SYN 201-210] Renamed object name 'conv1_fadd_32ns_32ns_32_5_full_dsp_1' to 'conv1_fadd_32ns_3bkb' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'conv1_fmul_32ns_32ns_32_4_max_dsp_1' to 'conv1_fmul_32ns_3cud' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-Command       create_rtl_model done; 1.936 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.698 seconds; current allocated memory: 95.368 MB.
+Command       create_rtl_model done; 0.283 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 178.930 MB.
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
-Execute       gen_rtl conv1 -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/conv1 -synmodules conv1 
+Execute       gen_rtl conv1 -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/systemc/conv1 -synmodules store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1 
 Execute       gen_rtl conv1 -istop -style xilinx -f -lang vhdl -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/vhdl/conv1 
-Command       gen_rtl done; 0.411 sec.
 Execute       gen_rtl conv1 -istop -style xilinx -f -lang vlog -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/verilog/conv1 
-Command       gen_rtl done; 0.505 sec.
 Execute       export_constraint_db -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.constraint.tcl -f -tool general 
-Command       export_constraint_db done; 0.285 sec.
 Execute       report -model conv1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.design.xml -verbose -f -dv 
-Command       report done; 0.366 sec.
+Command       report done; 0.402 sec.
 Execute       report -model conv1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.sdaccel.xml -verbose -f -sdaccel 
-Command       report done; 0.431 sec.
 Execute       gen_tb_info conv1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1 -p C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
-Command       gen_tb_info done; 0.217 sec.
 Execute       report -model conv1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/conv1_csynth.rpt -f 
-Command       report done; 0.111 sec.
 Execute       report -model conv1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/syn/report/conv1_csynth.xml -f -x 
 Execute       report -model conv1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.verbose.rpt -verbose -f 
-Command       report done; 0.593 sec.
+Command       report done; 0.372 sec.
 Execute       db_write -model conv1 -o C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.adb -f 
-Command       db_write done; 0.446 sec.
+Command       db_write done; 0.126 sec.
 Execute       sc_get_clocks conv1 
 Execute       sc_get_portdomain conv1 
-INFO-FLOW: Model list for RTL component generation: conv1
-INFO-FLOW: Handling components in module [conv1] ... 
-Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
+INFO-FLOW: Model list for RTL component generation: store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1
+INFO-FLOW: Handling components in module [store_input] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+INFO-FLOW: Handling components in module [store_weights] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+INFO-FLOW: Handling components in module [store_bias] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+INFO-FLOW: Handling components in module [convulution1] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
 INFO-FLOW: Found component conv1_fadd_32ns_3bkb.
 INFO-FLOW: Append model conv1_fadd_32ns_3bkb
 INFO-FLOW: Found component conv1_fmul_32ns_3cud.
 INFO-FLOW: Append model conv1_fmul_32ns_3cud
+INFO-FLOW: Handling components in module [relu_1] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+INFO-FLOW: Found component conv1_fcmp_32ns_3dEe.
+INFO-FLOW: Append model conv1_fcmp_32ns_3dEe
+INFO-FLOW: Handling components in module [maxpool_2] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+INFO-FLOW: Handling components in module [relu_2] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+INFO-FLOW: Handling components in module [store_output] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
+INFO-FLOW: Handling components in module [conv1] ... 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
 INFO-FLOW: Found component conv1_input_oc_0.
 INFO-FLOW: Append model conv1_input_oc_0
 INFO-FLOW: Found component conv1_weights_oc_0.
 INFO-FLOW: Append model conv1_weights_oc_0
+INFO-FLOW: Found component conv1_bias_oc.
+INFO-FLOW: Append model conv1_bias_oc
+INFO-FLOW: Found component conv1_output1_oc.
+INFO-FLOW: Append model conv1_output1_oc
+INFO-FLOW: Found component conv1_output2_oc.
+INFO-FLOW: Append model conv1_output2_oc
 INFO-FLOW: Found component conv1_CTL_s_axi.
 INFO-FLOW: Append model conv1_CTL_s_axi
 INFO-FLOW: Found component conv1_DATA_INPUT_m_axi.
@@ -423,18 +866,38 @@ INFO-FLOW: Found component conv1_DATA_BIAS_m_axi.
 INFO-FLOW: Append model conv1_DATA_BIAS_m_axi
 INFO-FLOW: Found component conv1_DATA_OUTPUT_m_axi.
 INFO-FLOW: Append model conv1_DATA_OUTPUT_m_axi
+INFO-FLOW: Append model store_input
+INFO-FLOW: Append model store_weights
+INFO-FLOW: Append model store_bias
+INFO-FLOW: Append model convulution1
+INFO-FLOW: Append model relu_1
+INFO-FLOW: Append model maxpool_2
+INFO-FLOW: Append model relu_2
+INFO-FLOW: Append model store_output
 INFO-FLOW: Append model conv1
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: conv1_fadd_32ns_3bkb conv1_fmul_32ns_3cud conv1_input_oc_0 conv1_weights_oc_0 conv1_CTL_s_axi conv1_DATA_INPUT_m_axi conv1_DATA_WEIGHT_m_axi conv1_DATA_BIAS_m_axi conv1_DATA_OUTPUT_m_axi conv1
+INFO-FLOW: All models in this session: conv1_fadd_32ns_3bkb conv1_fmul_32ns_3cud conv1_fcmp_32ns_3dEe conv1_input_oc_0 conv1_weights_oc_0 conv1_bias_oc conv1_output1_oc conv1_output2_oc conv1_CTL_s_axi conv1_DATA_INPUT_m_axi conv1_DATA_WEIGHT_m_axi conv1_DATA_BIAS_m_axi conv1_DATA_OUTPUT_m_axi store_input store_weights store_bias convulution1 relu_1 maxpool_2 relu_2 store_output conv1
 INFO-FLOW: To file: write model conv1_fadd_32ns_3bkb
 INFO-FLOW: To file: write model conv1_fmul_32ns_3cud
+INFO-FLOW: To file: write model conv1_fcmp_32ns_3dEe
 INFO-FLOW: To file: write model conv1_input_oc_0
 INFO-FLOW: To file: write model conv1_weights_oc_0
+INFO-FLOW: To file: write model conv1_bias_oc
+INFO-FLOW: To file: write model conv1_output1_oc
+INFO-FLOW: To file: write model conv1_output2_oc
 INFO-FLOW: To file: write model conv1_CTL_s_axi
 INFO-FLOW: To file: write model conv1_DATA_INPUT_m_axi
 INFO-FLOW: To file: write model conv1_DATA_WEIGHT_m_axi
 INFO-FLOW: To file: write model conv1_DATA_BIAS_m_axi
 INFO-FLOW: To file: write model conv1_DATA_OUTPUT_m_axi
+INFO-FLOW: To file: write model store_input
+INFO-FLOW: To file: write model store_weights
+INFO-FLOW: To file: write model store_bias
+INFO-FLOW: To file: write model convulution1
+INFO-FLOW: To file: write model relu_1
+INFO-FLOW: To file: write model maxpool_2
+INFO-FLOW: To file: write model relu_2
+INFO-FLOW: To file: write model store_output
 INFO-FLOW: To file: write model conv1
 INFO-FLOW: Finished generating RTL model list.
 
@@ -446,7 +909,6 @@ Execute       get_config_sdx -target
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source done; 0.132 sec.
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
@@ -465,23 +927,36 @@ Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/inte
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source done; 0.181 sec.
+Command             ap_source done; 0.11 sec.
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source done; 0.261 sec.
+Command           ap_source done; 0.165 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.267 sec.
-Command       ap_source done; 0.268 sec.
+Command         ap_source done; 0.169 sec.
+Command       ap_source done; 0.17 sec.
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
+Command       ap_source done; 0.248 sec.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+Command       ap_source done; 0.104 sec.
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
 INFO: [RTMG 210-278] Implementing memory 'conv1_input_oc_0_ram (RAM)' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'conv1_weights_oc_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv1_bias_oc_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv1_output1_oc_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv1_output2_oc_ram (RAM)' using block RAMs.
 Execute         source ./CTL.slave.tcl 
 Execute         is_m_axi_addr64 
-Command       ap_source done; 0.981 sec.
+Command       ap_source done; 0.748 sec.
 Execute       get_config_sdx -target 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
@@ -506,10 +981,10 @@ Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/u
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
 Command             ap_source done; 0.119 sec.
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source done; 0.178 sec.
+Command           ap_source done; 0.179 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.181 sec.
-Command       ap_source done; 0.182 sec.
+Command         ap_source done; 0.185 sec.
+Command       ap_source done; 0.185 sec.
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
@@ -518,11 +993,34 @@ Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopi
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
-Command       ap_source done; 0.142 sec.
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.constraint.tcl 
@@ -540,19 +1038,20 @@ Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopi
 Execute       sc_get_clocks conv1 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/impl/misc/conv1_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/impl/misc/conv1_ap_fcmp_0_no_dsp_32_ip.tcl 
 Execute       source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/impl/misc/conv1_ap_fmul_2_max_dsp_32_ip.tcl 
 Execute       get_config_sdx -target 
 Execute       get_config_sdx -profile 
 Execute       ::config_rtl 
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:01:11 . Memory (MB): peak = 157.895 ; gain = 100.813
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:54 . Memory (MB): peak = 247.109 ; gain = 190.125
 INFO: [SYSC 207-301] Generating SystemC RTL for conv1.
 INFO: [VHDL 208-304] Generating VHDL RTL for conv1.
 INFO: [VLOG 209-307] Generating Verilog RTL for conv1.
-Command     autosyn done; 19.774 sec.
-Command   csynth_design done; 68.836 sec.
-Command ap_source done; 69.609 sec.
+Command     autosyn done; 24.747 sec.
+Command   csynth_design done; 51.265 sec.
+Command ap_source done; 52.075 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet opened at Thu Oct 25 02:23:35 -0500 2018
+INFO-FLOW: Workspace C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet opened at Thu Oct 25 15:34:43 -0500 2018
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -586,6 +1085,7 @@ Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interfac
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.186 sec.
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
@@ -596,20 +1096,23 @@ Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interf
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source done; 0.391 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.115 sec.
+Command           ap_source done; 0.189 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.174 sec.
+Command         ap_source done; 0.75 sec.
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.177 sec.
-Command     ap_source done; 0.177 sec.
+Command       ap_source done; 0.794 sec.
+Command     ap_source done; 0.795 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source done; 0.16 sec.
+Command       ap_source done; 0.316 sec.
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
@@ -618,6 +1121,8 @@ Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/inte
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Command       ap_source done; 0.129 sec.
+Command     import_lib done; 0.609 sec.
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute     set_part xc7z020clg484-1 
@@ -632,10 +1137,11 @@ Execute       add_library xilinx/zynq/zynq_fpv6
 Execute         get_default_platform 
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
 Execute       get_default_platform 
+Command     set_part done; 0.224 sec.
 Execute     get_default_platform 
 Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 0.347 sec.
+Command   open_solution done; 2.002 sec.
 Execute   export_design -rtl verilog -format ip_catalog -display_name lenet 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
@@ -658,12 +1164,12 @@ Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interf
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.104 sec.
+Command           ap_source done; 0.156 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.157 sec.
+Command         ap_source done; 0.242 sec.
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.16 sec.
-Command     ap_source done; 0.16 sec.
+Command       ap_source done; 0.247 sec.
+Command     ap_source done; 0.248 sec.
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
@@ -691,25 +1197,51 @@ Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interf
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.104 sec.
+Command           ap_source done; 0.268 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.153 sec.
+Command         ap_source done; 0.351 sec.
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.157 sec.
-Command     ap_source done; 0.158 sec.
+Command       ap_source done; 0.356 sec.
+Command     ap_source done; 0.356 sec.
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Command     ap_source done; 0.545 sec.
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
+Command     ap_source done; 0.145 sec.
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+Command     ap_source done; 0.105 sec.
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
-Command     ap_source done; 0.114 sec.
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_1.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.compgen.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.constraint.tcl 
@@ -727,6 +1259,7 @@ Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilo
 Execute     sc_get_clocks conv1 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/impl/misc/conv1_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/impl/misc/conv1_ap_fcmp_0_no_dsp_32_ip.tcl 
 Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/impl/misc/conv1_ap_fmul_2_max_dsp_32_ip.tcl 
 Execute     get_config_sdx -target 
 Execute     get_config_sdx -profile 
@@ -781,14 +1314,582 @@ Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interf
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.118 sec.
+Command           ap_source done; 0.103 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.173 sec.
+Command         ap_source done; 0.242 sec.
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.177 sec.
-Command     ap_source done; 0.178 sec.
+Command       ap_source done; 0.268 sec.
+Command     ap_source done; 0.269 sec.
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command   export_design done; 99.593 sec.
-Command ap_source done; 99.958 sec.
+Command   export_design done; 74.251 sec.
+Command ap_source done; 76.297 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet opened at Thu Oct 25 15:36:20 -0500 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Command       ap_source done; 0.135 sec.
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.324 sec.
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source done; 0.398 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.13 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.655 sec.
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.706 sec.
+Command     ap_source done; 0.706 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Command     set_part done; 0.112 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 1.302 sec.
+Execute   cosim_design 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.107 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.16 sec.
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.164 sec.
+Command     ap_source done; 0.165 sec.
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_tb.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_tb.cpp_pre.cpp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_tb.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/lenet_tb.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/lenet_tb.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_gold.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_gold.cpp_pre.cpp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_gold.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/lenet_gold.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/lenet_gold.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_acc.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_acc.cpp_pre.cpp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/lenet_acc.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/lenet_acc.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/lenet_acc.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     get_default_platform 
+INFO-FLOW: TB processing: C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/accelerator.cpp_pre.cpp
+INFO-FLOW: Marker-Pragma convertor: C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/accelerator.cpp_pre.cpp C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/accelerator.cpp_pre.cpp.line.cpp ./sim/autowrap/testbench/line.tmp 1
+INFO-FLOW: Converting Markers to Pragmas...
+INFO-FLOW: Marker-Pragma convertor: ./sim/autowrap/testbench/accelerator.cpp_pre.cpp.tb.cpp.line ./sim/autowrap/testbench/accelerator.cpp_pre.cpp.tb.cpp ./sim/autowrap/testbench/line.tmp 0
+INFO-FLOW: Converting Pragmas to Markers...
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/./sim/autowrap/testbench/tb.status.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+WARNING: [COSIM 212-369] AXI_master port 'DATA_INPUT' has a depth of '1024'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM 212-369] AXI_master port 'DATA_WEIGHT' has a depth of '150'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM 212-369] AXI_master port 'DATA_BIAS' has a depth of '6'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM 212-369] AXI_master port 'DATA_OUTPUT' has a depth of '1176'. Insufficient depth may result in simulation mismatch or freeze.
+Execute     get_default_platform 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 2.33 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     get_default_platform 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.tbgen.tcl 
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 164.694 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 261.447 sec.
+Command ap_source done; 262.789 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet opened at Thu Oct 25 16:40:40 -0500 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Command       ap_source done; 0.108 sec.
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.234 sec.
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source done; 0.224 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.151 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.584 sec.
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.598 sec.
+Command     ap_source done; 0.603 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Command     set_part done; 0.143 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 1.338 sec.
+Execute   csim_design -quiet 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 
+Command     ap_source done; 1.225 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 35.431 sec.
+Command ap_source done; 36.798 sec.
+Execute cleanup_all 
+Command cleanup_all done; 0.162 sec.
+INFO-FLOW: Workspace C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet opened at Thu Oct 25 16:42:22 -0500 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.143 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.228 sec.
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.232 sec.
+Command     ap_source done; 0.232 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 0.148 sec.
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.178 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Command     set_part done; 0.281 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.633 sec.
+Execute   csim_design -quiet 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 
+Command     ap_source done; 1.163 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 7.841 sec.
+Command ap_source done; 8.494 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet opened at Thu Oct 25 17:19:41 -0500 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.171 sec.
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.248 sec.
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.253 sec.
+Command     ap_source done; 0.254 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.503 sec.
+Execute   csim_design -quiet 
+Execute     source C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
+Execute     is_encrypted C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp 
+Execute     is_xip C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.515 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 5.284 sec.
+Command ap_source done; 5.813 sec.
 Execute cleanup_all 
