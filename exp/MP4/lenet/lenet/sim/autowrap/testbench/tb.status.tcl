@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName lenet_acc.cpp_pre.cpp.tb.cpp
