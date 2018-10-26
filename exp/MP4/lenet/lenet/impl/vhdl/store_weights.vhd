@@ -117,26 +117,26 @@ architecture behav of store_weights is
     signal exitcond_fu_208_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal sext_fu_116_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal sext_reg_229 : STD_LOGIC_VECTOR (63 downto 0);
-    signal i_1_fu_126_p2 : STD_LOGIC_VECTOR (2 downto 0);
-    signal i_1_reg_237 : STD_LOGIC_VECTOR (2 downto 0);
+    signal i_3_fu_126_p2 : STD_LOGIC_VECTOR (2 downto 0);
+    signal i_3_reg_237 : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal tmp_3_fu_148_p2 : STD_LOGIC_VECTOR (5 downto 0);
-    signal tmp_3_reg_242 : STD_LOGIC_VECTOR (5 downto 0);
+    signal tmp_17_fu_148_p2 : STD_LOGIC_VECTOR (5 downto 0);
+    signal tmp_17_reg_242 : STD_LOGIC_VECTOR (5 downto 0);
     signal exitcond2_fu_120_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal j_1_fu_160_p2 : STD_LOGIC_VECTOR (2 downto 0);
-    signal j_1_reg_250 : STD_LOGIC_VECTOR (2 downto 0);
+    signal j_3_fu_160_p2 : STD_LOGIC_VECTOR (2 downto 0);
+    signal j_3_reg_250 : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal tmp_7_fu_191_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_7_reg_255 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_19_fu_191_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_19_reg_255 : STD_LOGIC_VECTOR (63 downto 0);
     signal exitcond1_fu_154_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal weights_addr_reg_260 : STD_LOGIC_VECTOR (31 downto 0);
-    signal k_1_fu_214_p2 : STD_LOGIC_VECTOR (2 downto 0);
-    signal k_1_reg_269 : STD_LOGIC_VECTOR (2 downto 0);
+    signal k_3_fu_214_p2 : STD_LOGIC_VECTOR (2 downto 0);
+    signal k_3_reg_269 : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_block_state11 : BOOLEAN;
-    signal tmp_8_fu_224_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_8_reg_274 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_20_fu_224_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_20_reg_274 : STD_LOGIC_VECTOR (63 downto 0);
     signal weights_addr_read_reg_279 : STD_LOGIC_VECTOR (31 downto 0);
     signal i_reg_83 : STD_LOGIC_VECTOR (2 downto 0);
     signal j_reg_94 : STD_LOGIC_VECTOR (2 downto 0);
@@ -145,18 +145,18 @@ architecture behav of store_weights is
     attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
     signal ap_CS_fsm_state10 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state10 : signal is "none";
-    signal tmp_2_fu_197_p2 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_9_fu_197_p2 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_reg_ioackin_m_axi_weights_ARREADY : STD_LOGIC := '0';
     signal ap_sig_ioackin_m_axi_weights_ARREADY : STD_LOGIC;
-    signal tmp_1_fu_136_p3 : STD_LOGIC_VECTOR (4 downto 0);
+    signal tmp_s_fu_136_p3 : STD_LOGIC_VECTOR (4 downto 0);
     signal tmp_cast_fu_132_p1 : STD_LOGIC_VECTOR (5 downto 0);
     signal p_shl_cast_fu_144_p1 : STD_LOGIC_VECTOR (5 downto 0);
-    signal tmp_2_cast_fu_166_p1 : STD_LOGIC_VECTOR (5 downto 0);
-    signal tmp_5_fu_170_p2 : STD_LOGIC_VECTOR (5 downto 0);
+    signal tmp_cast_12_fu_166_p1 : STD_LOGIC_VECTOR (5 downto 0);
+    signal tmp_18_fu_170_p2 : STD_LOGIC_VECTOR (5 downto 0);
     signal tmp_fu_179_p3 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_5_cast_fu_175_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_23_cast_fu_175_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal p_shl1_fu_187_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_4_fu_220_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_2_fu_220_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (11 downto 0);
 
 
@@ -199,7 +199,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state3) and (exitcond1_fu_154_p2 = ap_const_lv1_1))) then 
-                i_reg_83 <= i_1_reg_237;
+                i_reg_83 <= i_3_reg_237;
             elsif (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start = ap_const_logic_1))) then 
                 i_reg_83 <= ap_const_lv3_0;
             end if; 
@@ -210,7 +210,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((exitcond_fu_208_p2 = ap_const_lv1_0) and (m_axi_weights_RVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state11) and (exitcond_fu_208_p2 = ap_const_lv1_1))) then 
-                j_reg_94 <= j_1_reg_250;
+                j_reg_94 <= j_3_reg_250;
             elsif (((exitcond2_fu_120_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
                 j_reg_94 <= ap_const_lv3_0;
             end if; 
@@ -223,7 +223,7 @@ begin
             if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
                 k_reg_105 <= ap_const_lv3_0;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state12)) then 
-                k_reg_105 <= k_1_reg_269;
+                k_reg_105 <= k_3_reg_269;
             end if; 
         end if;
     end process;
@@ -231,7 +231,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state2)) then
-                i_1_reg_237 <= i_1_fu_126_p2;
+                i_3_reg_237 <= i_3_fu_126_p2;
             end if;
         end if;
     end process;
@@ -239,7 +239,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state3)) then
-                j_1_reg_250 <= j_1_fu_160_p2;
+                j_3_reg_250 <= j_3_fu_160_p2;
             end if;
         end if;
     end process;
@@ -247,7 +247,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((exitcond_fu_208_p2 = ap_const_lv1_0) and (m_axi_weights_RVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state11))) then
-                k_1_reg_269 <= k_1_fu_214_p2;
+                k_3_reg_269 <= k_3_fu_214_p2;
             end if;
         end if;
     end process;
@@ -263,7 +263,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((exitcond2_fu_120_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
-                tmp_3_reg_242 <= tmp_3_fu_148_p2;
+                tmp_17_reg_242 <= tmp_17_fu_148_p2;
             end if;
         end if;
     end process;
@@ -271,8 +271,8 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((exitcond1_fu_154_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
-                tmp_7_reg_255 <= tmp_7_fu_191_p2;
-                weights_addr_reg_260 <= tmp_2_fu_197_p2(32 - 1 downto 0);
+                tmp_19_reg_255 <= tmp_19_fu_191_p2;
+                weights_addr_reg_260 <= tmp_9_fu_197_p2(32 - 1 downto 0);
             end if;
         end if;
     end process;
@@ -280,7 +280,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((exitcond_fu_208_p2 = ap_const_lv1_0) and (m_axi_weights_RVALID = ap_const_logic_0))) and (exitcond_fu_208_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state11))) then
-                tmp_8_reg_274 <= tmp_8_fu_224_p2;
+                tmp_20_reg_274 <= tmp_20_fu_224_p2;
                 weights_addr_read_reg_279 <= m_axi_weights_RDATA;
             end if;
         end if;
@@ -396,9 +396,9 @@ begin
     exitcond1_fu_154_p2 <= "1" when (j_reg_94 = ap_const_lv3_5) else "0";
     exitcond2_fu_120_p2 <= "1" when (i_reg_83 = ap_const_lv3_6) else "0";
     exitcond_fu_208_p2 <= "1" when (k_reg_105 = ap_const_lv3_5) else "0";
-    i_1_fu_126_p2 <= std_logic_vector(unsigned(i_reg_83) + unsigned(ap_const_lv3_1));
-    j_1_fu_160_p2 <= std_logic_vector(unsigned(j_reg_94) + unsigned(ap_const_lv3_1));
-    k_1_fu_214_p2 <= std_logic_vector(unsigned(k_reg_105) + unsigned(ap_const_lv3_1));
+    i_3_fu_126_p2 <= std_logic_vector(unsigned(i_reg_83) + unsigned(ap_const_lv3_1));
+    j_3_fu_160_p2 <= std_logic_vector(unsigned(j_reg_94) + unsigned(ap_const_lv3_1));
+    k_3_fu_214_p2 <= std_logic_vector(unsigned(k_reg_105) + unsigned(ap_const_lv3_1));
     m_axi_weights_ARADDR <= weights_addr_reg_260;
     m_axi_weights_ARBURST <= ap_const_lv2_0;
     m_axi_weights_ARCACHE <= ap_const_lv4_0;
@@ -450,19 +450,19 @@ begin
     m_axi_weights_WUSER <= ap_const_lv1_0;
     m_axi_weights_WVALID <= ap_const_logic_0;
     p_shl1_fu_187_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_fu_179_p3),64));
-    p_shl_cast_fu_144_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_1_fu_136_p3),6));
+    p_shl_cast_fu_144_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_s_fu_136_p3),6));
     sext_fu_116_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(weights_offset),64));
-    tmp_1_fu_136_p3 <= (i_reg_83 & ap_const_lv2_0);
-    tmp_2_cast_fu_166_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(j_reg_94),6));
-    tmp_2_fu_197_p2 <= std_logic_vector(unsigned(sext_reg_229) + unsigned(tmp_7_fu_191_p2));
-    tmp_3_fu_148_p2 <= std_logic_vector(unsigned(tmp_cast_fu_132_p1) + unsigned(p_shl_cast_fu_144_p1));
-    tmp_4_fu_220_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(k_reg_105),64));
-    tmp_5_cast_fu_175_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_5_fu_170_p2),64));
-    tmp_5_fu_170_p2 <= std_logic_vector(unsigned(tmp_3_reg_242) + unsigned(tmp_2_cast_fu_166_p1));
-    tmp_7_fu_191_p2 <= std_logic_vector(unsigned(tmp_5_cast_fu_175_p1) + unsigned(p_shl1_fu_187_p1));
-    tmp_8_fu_224_p2 <= std_logic_vector(unsigned(tmp_4_fu_220_p1) + unsigned(tmp_7_reg_255));
+    tmp_17_fu_148_p2 <= std_logic_vector(unsigned(tmp_cast_fu_132_p1) + unsigned(p_shl_cast_fu_144_p1));
+    tmp_18_fu_170_p2 <= std_logic_vector(unsigned(tmp_17_reg_242) + unsigned(tmp_cast_12_fu_166_p1));
+    tmp_19_fu_191_p2 <= std_logic_vector(unsigned(tmp_23_cast_fu_175_p1) + unsigned(p_shl1_fu_187_p1));
+    tmp_20_fu_224_p2 <= std_logic_vector(unsigned(tmp_2_fu_220_p1) + unsigned(tmp_19_reg_255));
+    tmp_23_cast_fu_175_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_18_fu_170_p2),64));
+    tmp_2_fu_220_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(k_reg_105),64));
+    tmp_9_fu_197_p2 <= std_logic_vector(unsigned(sext_reg_229) + unsigned(tmp_19_fu_191_p2));
+    tmp_cast_12_fu_166_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(j_reg_94),6));
     tmp_cast_fu_132_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(i_reg_83),6));
-    tmp_fu_179_p3 <= (tmp_5_fu_170_p2 & ap_const_lv2_0);
+    tmp_fu_179_p3 <= (tmp_18_fu_170_p2 & ap_const_lv2_0);
+    tmp_s_fu_136_p3 <= (i_reg_83 & ap_const_lv2_0);
 
     weights_blk_n_AR_assign_proc : process(m_axi_weights_ARREADY, ap_CS_fsm_state4)
     begin
@@ -483,7 +483,7 @@ begin
         end if; 
     end process;
 
-    weights_oc_0_address0 <= tmp_8_reg_274(8 - 1 downto 0);
+    weights_oc_0_address0 <= tmp_20_reg_274(8 - 1 downto 0);
 
     weights_oc_0_ce0_assign_proc : process(ap_CS_fsm_state12)
     begin

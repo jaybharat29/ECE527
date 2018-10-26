@@ -7,5 +7,7 @@
 extern int AESL_WRAP_conv1 (
 float input[1][32][32],
 float weights[6][1][5][5],
+float weights_3[16][6][5][5],
 float bias[6],
-float output[6][14][14]);
+float bias_3[16],
+float output[16][10][10]);

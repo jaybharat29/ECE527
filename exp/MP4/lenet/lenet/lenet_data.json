@@ -20,7 +20,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "107274",
+    "Latency": "2115980",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -36,11 +36,13 @@
   },
   "Files": {
     "CSource": [
-      "..\/..\/ECE527_MP4_Tutorial_Files\/Tutorial_Files\/accelerator_hls\/lenet_gold.cpp",
+      "..\/..\/ECE527_MP4_Tutorial_Files\/Tutorial_Files\/accelerator_hls\/accelerator.cpp",
       "..\/..\/ECE527_MP4_Tutorial_Files\/Tutorial_Files\/accelerator_hls\/lenet_acc.cpp",
-      "..\/..\/ECE527_MP4_Tutorial_Files\/Tutorial_Files\/accelerator_hls\/accelerator.cpp"
+      "..\/..\/ECE527_MP4_Tutorial_Files\/Tutorial_Files\/accelerator_hls\/lenet_gold.cpp"
     ],
     "Vhdl": [
+      "impl\/vhdl\/conv1_bias_3_oc.vhd",
+      "impl\/vhdl\/conv1_bias_5_oc.vhd",
       "impl\/vhdl\/conv1_bias_oc.vhd",
       "impl\/vhdl\/conv1_CTL_s_axi.vhd",
       "impl\/vhdl\/conv1_DATA_BIAS_m_axi.vhd",
@@ -53,18 +55,35 @@
       "impl\/vhdl\/conv1_input_oc_0.vhd",
       "impl\/vhdl\/conv1_output1_oc.vhd",
       "impl\/vhdl\/conv1_output2_oc.vhd",
+      "impl\/vhdl\/conv1_output3_oc.vhd",
+      "impl\/vhdl\/conv1_output4_oc.vhd",
+      "impl\/vhdl\/conv1_output6_oc.vhd",
+      "impl\/vhdl\/conv1_weights_3_oc.vhd",
+      "impl\/vhdl\/conv1_weights_5_oc.vhd",
       "impl\/vhdl\/conv1_weights_oc_0.vhd",
+      "impl\/vhdl\/convolution_3.vhd",
+      "impl\/vhdl\/convolution_5.vhd",
       "impl\/vhdl\/convulution1.vhd",
+      "impl\/vhdl\/fc_6.vhd",
       "impl\/vhdl\/maxpool_2.vhd",
+      "impl\/vhdl\/maxpool_4.vhd",
       "impl\/vhdl\/relu_1.vhd",
       "impl\/vhdl\/relu_2.vhd",
+      "impl\/vhdl\/relu_3.vhd",
+      "impl\/vhdl\/relu_4.vhd",
       "impl\/vhdl\/store_bias.vhd",
+      "impl\/vhdl\/store_bias_3.vhd",
+      "impl\/vhdl\/store_bias_5.vhd",
       "impl\/vhdl\/store_input.vhd",
       "impl\/vhdl\/store_output.vhd",
       "impl\/vhdl\/store_weights.vhd",
+      "impl\/vhdl\/store_weights_3.vhd",
+      "impl\/vhdl\/store_weights_5.vhd",
       "impl\/vhdl\/conv1.vhd"
     ],
     "Verilog": [
+      "impl\/verilog\/conv1_bias_3_oc.v",
+      "impl\/verilog\/conv1_bias_5_oc.v",
       "impl\/verilog\/conv1_bias_oc.v",
       "impl\/verilog\/conv1_CTL_s_axi.v",
       "impl\/verilog\/conv1_DATA_BIAS_m_axi.v",
@@ -77,15 +96,30 @@
       "impl\/verilog\/conv1_input_oc_0.v",
       "impl\/verilog\/conv1_output1_oc.v",
       "impl\/verilog\/conv1_output2_oc.v",
+      "impl\/verilog\/conv1_output3_oc.v",
+      "impl\/verilog\/conv1_output4_oc.v",
+      "impl\/verilog\/conv1_output6_oc.v",
+      "impl\/verilog\/conv1_weights_3_oc.v",
+      "impl\/verilog\/conv1_weights_5_oc.v",
       "impl\/verilog\/conv1_weights_oc_0.v",
+      "impl\/verilog\/convolution_3.v",
+      "impl\/verilog\/convolution_5.v",
       "impl\/verilog\/convulution1.v",
+      "impl\/verilog\/fc_6.v",
       "impl\/verilog\/maxpool_2.v",
+      "impl\/verilog\/maxpool_4.v",
       "impl\/verilog\/relu_1.v",
       "impl\/verilog\/relu_2.v",
+      "impl\/verilog\/relu_3.v",
+      "impl\/verilog\/relu_4.v",
       "impl\/verilog\/store_bias.v",
+      "impl\/verilog\/store_bias_3.v",
+      "impl\/verilog\/store_bias_5.v",
       "impl\/verilog\/store_input.v",
       "impl\/verilog\/store_output.v",
       "impl\/verilog\/store_weights.v",
+      "impl\/verilog\/store_weights_3.v",
+      "impl\/verilog\/store_weights_5.v",
       "impl\/verilog\/conv1.v"
     ],
     "SwDriver": [
@@ -864,7 +898,7 @@
       "mode": "slave",
       "port_prefix": "s_axi_CTL",
       "param_prefix": "C_S_AXI_CTL",
-      "addr_bits": "6",
+      "addr_bits": "7",
       "registers": [
         {
           "offset": "0x00",
@@ -1069,6 +1103,51 @@
         },
         {
           "offset": "0x28",
+          "name": "weights_3",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of weights_3",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "weights_3",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of weights_3"
+            }]
+        },
+        {
+          "offset": "0x30",
+          "name": "weights_5",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of weights_5",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "weights_5",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of weights_5"
+            }]
+        },
+        {
+          "offset": "0x38",
+          "name": "weights_6",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of weights_6",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "weights_6",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of weights_6"
+            }]
+        },
+        {
+          "offset": "0x40",
           "name": "bias",
           "access": "W",
           "reset_value": "0x0",
@@ -1083,7 +1162,52 @@
             }]
         },
         {
-          "offset": "0x30",
+          "offset": "0x48",
+          "name": "bias_3",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias_3",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "bias_3",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of bias_3"
+            }]
+        },
+        {
+          "offset": "0x50",
+          "name": "bias_5",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias_5",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "bias_5",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of bias_5"
+            }]
+        },
+        {
+          "offset": "0x58",
+          "name": "bias_6",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias_6",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "bias_6",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of bias_6"
+            }]
+        },
+        {
+          "offset": "0x60",
           "name": "output_r",
           "access": "W",
           "reset_value": "0x0",
@@ -1120,7 +1244,7 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "6"
+          "Width": "7"
         },
         "WDATA": {
           "Type": "integer signed",
@@ -1132,7 +1256,7 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "6"
+          "Width": "7"
         },
         "RDATA": {
           "Type": "integer signed",
@@ -1141,8 +1265,8 @@
       },
       "data_width": "32",
       "port_width": {
-        "ARADDR": "6",
-        "AWADDR": "6",
+        "ARADDR": "7",
+        "AWADDR": "7",
         "RDATA": "32",
         "WDATA": "32",
         "WSTRB": "4"
@@ -1160,7 +1284,7 @@
     },
     "s_axi_CTL_AWADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "7"
     },
     "s_axi_CTL_WVALID": {
       "dir": "in",
@@ -1188,7 +1312,7 @@
     },
     "s_axi_CTL_ARADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "7"
     },
     "s_axi_CTL_RVALID": {
       "dir": "out",
@@ -2013,10 +2137,70 @@
       "aximmInterfaceRef": "m_axi_DATA_WEIGHT",
       "dataWidth": "32"
     },
-    "bias": {
+    "weights_3": {
       "interfaceRef": "s_axi_CTL",
       "dir": "in",
       "offset": "40",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "CTL",
+      "aximmInterfaceRef": "m_axi_DATA_WEIGHT",
+      "dataWidth": "32"
+    },
+    "weights_5": {
+      "interfaceRef": "s_axi_CTL",
+      "dir": "in",
+      "offset": "48",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "CTL",
+      "aximmInterfaceRef": "m_axi_DATA_WEIGHT",
+      "dataWidth": "32"
+    },
+    "weights_6": {
+      "interfaceRef": "s_axi_CTL",
+      "dir": "in",
+      "offset": "56",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "CTL",
+      "aximmInterfaceRef": "m_axi_DATA_WEIGHT",
+      "dataWidth": "32"
+    },
+    "bias": {
+      "interfaceRef": "s_axi_CTL",
+      "dir": "in",
+      "offset": "64",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "CTL",
+      "aximmInterfaceRef": "m_axi_DATA_BIAS",
+      "dataWidth": "32"
+    },
+    "bias_3": {
+      "interfaceRef": "s_axi_CTL",
+      "dir": "in",
+      "offset": "72",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "CTL",
+      "aximmInterfaceRef": "m_axi_DATA_BIAS",
+      "dataWidth": "32"
+    },
+    "bias_5": {
+      "interfaceRef": "s_axi_CTL",
+      "dir": "in",
+      "offset": "80",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "CTL",
+      "aximmInterfaceRef": "m_axi_DATA_BIAS",
+      "dataWidth": "32"
+    },
+    "bias_6": {
+      "interfaceRef": "s_axi_CTL",
+      "dir": "in",
+      "offset": "88",
       "statusOffset": "NA",
       "handshakeRef": "ap_none",
       "Object": "CTL",
@@ -2026,7 +2210,7 @@
     "output_r": {
       "interfaceRef": "s_axi_CTL",
       "dir": "in",
-      "offset": "48",
+      "offset": "96",
       "statusOffset": "NA",
       "handshakeRef": "ap_none",
       "Object": "CTL",
@@ -2069,35 +2253,75 @@
       "Instances": [
         {
           "ModuleName": "convulution1",
-          "InstanceName": "grp_convulution1_fu_142"
+          "InstanceName": "grp_convulution1_fu_354"
+        },
+        {
+          "ModuleName": "convolution_3",
+          "InstanceName": "grp_convolution_3_fu_362"
+        },
+        {
+          "ModuleName": "convolution_5",
+          "InstanceName": "grp_convolution_5_fu_370"
+        },
+        {
+          "ModuleName": "fc_6",
+          "InstanceName": "grp_fc_6_fu_378"
         },
         {
           "ModuleName": "maxpool_2",
-          "InstanceName": "grp_maxpool_2_fu_150"
+          "InstanceName": "grp_maxpool_2_fu_390"
+        },
+        {
+          "ModuleName": "maxpool_4",
+          "InstanceName": "grp_maxpool_4_fu_396"
+        },
+        {
+          "ModuleName": "store_weights_5",
+          "InstanceName": "grp_store_weights_5_fu_402"
+        },
+        {
+          "ModuleName": "store_weights_3",
+          "InstanceName": "grp_store_weights_3_fu_410"
         },
         {
           "ModuleName": "relu_1",
-          "InstanceName": "grp_relu_1_fu_156"
+          "InstanceName": "grp_relu_1_fu_418"
+        },
+        {
+          "ModuleName": "relu_3",
+          "InstanceName": "grp_relu_3_fu_423"
+        },
+        {
+          "ModuleName": "relu_4",
+          "InstanceName": "grp_relu_4_fu_428"
         },
         {
           "ModuleName": "relu_2",
-          "InstanceName": "grp_relu_2_fu_161"
+          "InstanceName": "grp_relu_2_fu_433"
         },
         {
           "ModuleName": "store_weights",
-          "InstanceName": "grp_store_weights_fu_166"
-        },
-        {
-          "ModuleName": "store_output",
-          "InstanceName": "grp_store_output_fu_175"
+          "InstanceName": "grp_store_weights_fu_438"
         },
         {
           "ModuleName": "store_input",
-          "InstanceName": "grp_store_input_fu_183"
+          "InstanceName": "grp_store_input_fu_447"
+        },
+        {
+          "ModuleName": "store_bias_5",
+          "InstanceName": "grp_store_bias_5_fu_456"
+        },
+        {
+          "ModuleName": "store_bias_3",
+          "InstanceName": "grp_store_bias_3_fu_464"
+        },
+        {
+          "ModuleName": "store_output",
+          "InstanceName": "grp_store_output_fu_472"
         },
         {
           "ModuleName": "store_bias",
-          "InstanceName": "grp_store_bias_fu_192"
+          "InstanceName": "grp_store_bias_fu_480"
         }
       ]
     },
@@ -2179,6 +2403,104 @@
           "DSP48E": "0"
         }
       },
+      "store_weights_3": {
+        "Latency": {
+          "LatencyBest": "9345",
+          "LatencyAvg": "9345",
+          "LatencyWorst": "9345",
+          "PipelineII": "9345",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "16",
+            "Latency": "9344",
+            "PipelineII": "",
+            "PipelineDepth": "584",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "6",
+                "Latency": "582",
+                "PipelineII": "",
+                "PipelineDepth": "97",
+                "Loops": [{
+                    "Name": "Loop 1.1.1",
+                    "TripCount": "5",
+                    "Latency": "95",
+                    "PipelineII": "",
+                    "PipelineDepth": "19",
+                    "Loops": [{
+                        "Name": "Loop 1.1.1.1",
+                        "TripCount": "5",
+                        "Latency": "10",
+                        "PipelineII": "",
+                        "PipelineDepth": "2"
+                      }]
+                  }]
+              }]
+          }],
+        "Area": {
+          "FF": "337",
+          "LUT": "597",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
+        }
+      },
+      "store_weights_5": {
+        "Latency": {
+          "LatencyBest": "186481",
+          "LatencyAvg": "186481",
+          "LatencyWorst": "186481",
+          "PipelineII": "186481",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "120",
+            "Latency": "186480",
+            "PipelineII": "",
+            "PipelineDepth": "1554",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "16",
+                "Latency": "1552",
+                "PipelineII": "",
+                "PipelineDepth": "97",
+                "Loops": [{
+                    "Name": "Loop 1.1.1",
+                    "TripCount": "5",
+                    "Latency": "95",
+                    "PipelineII": "",
+                    "PipelineDepth": "19",
+                    "Loops": [{
+                        "Name": "Loop 1.1.1.1",
+                        "TripCount": "5",
+                        "Latency": "10",
+                        "PipelineII": "",
+                        "PipelineDepth": "2"
+                      }]
+                  }]
+              }]
+          }],
+        "Area": {
+          "FF": "343",
+          "LUT": "585",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
+        }
+      },
       "store_bias": {
         "Latency": {
           "LatencyBest": "19",
@@ -2203,6 +2525,62 @@
         "Area": {
           "FF": "48",
           "LUT": "106",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
+        }
+      },
+      "store_bias_3": {
+        "Latency": {
+          "LatencyBest": "39",
+          "LatencyAvg": "39",
+          "LatencyWorst": "39",
+          "PipelineII": "39",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "16",
+            "Latency": "32",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "52",
+          "LUT": "111",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
+        }
+      },
+      "store_bias_5": {
+        "Latency": {
+          "LatencyBest": "247",
+          "LatencyAvg": "247",
+          "LatencyWorst": "247",
+          "PipelineII": "247",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "120",
+            "Latency": "240",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "56",
+          "LUT": "111",
           "BRAM_18K": "0",
           "DSP48E": "0"
         }
@@ -2232,7 +2610,7 @@
           "BRAM_18K": "0",
           "DSP48E": "10",
           "FF": "4307",
-          "LUT": "3736"
+          "LUT": "3742"
         }
       },
       "relu_1": {
@@ -2375,12 +2753,236 @@
           "BRAM_18K": "0"
         }
       },
-      "store_output": {
+      "convolution_3": {
         "Latency": {
-          "LatencyBest": "4129",
-          "LatencyAvg": "4129",
-          "LatencyWorst": "4129",
-          "PipelineII": "4129",
+          "LatencyBest": "1228801",
+          "LatencyAvg": "1228801",
+          "LatencyWorst": "1228801",
+          "PipelineII": "1228801",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.549"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "1600",
+            "Latency": "1228800",
+            "PipelineII": "",
+            "PipelineDepth": "768",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "150",
+                "Latency": "757",
+                "PipelineII": "5",
+                "PipelineDepth": "13"
+              }]
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "5",
+          "FF": "822",
+          "LUT": "1544"
+        }
+      },
+      "relu_3": {
+        "Latency": {
+          "LatencyBest": "5153",
+          "LatencyAvg": "5153",
+          "LatencyWorst": "5153",
+          "PipelineII": "5153",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.767"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "16",
+            "Latency": "5152",
+            "PipelineII": "",
+            "PipelineDepth": "322",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "10",
+                "Latency": "320",
+                "PipelineII": "",
+                "PipelineDepth": "32",
+                "Loops": [{
+                    "Name": "Loop 1.1.1",
+                    "TripCount": "10",
+                    "Latency": "30",
+                    "PipelineII": "",
+                    "PipelineDepth": "3"
+                  }]
+              }]
+          }],
+        "Area": {
+          "DSP48E": "0",
+          "FF": "160",
+          "LUT": "476",
+          "BRAM_18K": "0"
+        }
+      },
+      "maxpool_4": {
+        "Latency": {
+          "LatencyBest": "7393",
+          "LatencyAvg": "7393",
+          "LatencyWorst": "7393",
+          "PipelineII": "7393",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.465"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "16",
+            "Latency": "7392",
+            "PipelineII": "",
+            "PipelineDepth": "462",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "5",
+                "Latency": "460",
+                "PipelineII": "",
+                "PipelineDepth": "92",
+                "Loops": [{
+                    "Name": "Loop 1.1.1",
+                    "TripCount": "5",
+                    "Latency": "90",
+                    "PipelineII": "",
+                    "PipelineDepth": "18",
+                    "Loops": [{
+                        "Name": "Loop 1.1.1.1",
+                        "TripCount": "2",
+                        "Latency": "16",
+                        "PipelineII": "",
+                        "PipelineDepth": "8",
+                        "Loops": [{
+                            "Name": "Loop 1.1.1.1.1",
+                            "TripCount": "2",
+                            "Latency": "6",
+                            "PipelineII": "",
+                            "PipelineDepth": "3"
+                          }]
+                      }]
+                  }]
+              }]
+          }],
+        "Area": {
+          "DSP48E": "0",
+          "FF": "243",
+          "LUT": "688",
+          "BRAM_18K": "0"
+        }
+      },
+      "relu_4": {
+        "Latency": {
+          "LatencyBest": "1393",
+          "LatencyAvg": "1393",
+          "LatencyWorst": "1393",
+          "PipelineII": "1393",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.767"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "16",
+            "Latency": "1392",
+            "PipelineII": "",
+            "PipelineDepth": "87",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "5",
+                "Latency": "85",
+                "PipelineII": "",
+                "PipelineDepth": "17",
+                "Loops": [{
+                    "Name": "Loop 1.1.1",
+                    "TripCount": "5",
+                    "Latency": "15",
+                    "PipelineII": "",
+                    "PipelineDepth": "3"
+                  }]
+              }]
+          }],
+        "Area": {
+          "DSP48E": "0",
+          "FF": "153",
+          "LUT": "478",
+          "BRAM_18K": "0"
+        }
+      },
+      "convolution_5": {
+        "Latency": {
+          "LatencyBest": "584281",
+          "LatencyAvg": "584281",
+          "LatencyWorst": "584281",
+          "PipelineII": "584281",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "7.396"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "120",
+            "Latency": "584280",
+            "PipelineII": "",
+            "PipelineDepth": "4869",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "5",
+                "Latency": "4860",
+                "PipelineII": "",
+                "PipelineDepth": "972",
+                "Loops": [{
+                    "Name": "Loop 1.1.1",
+                    "TripCount": "5",
+                    "Latency": "970",
+                    "PipelineII": "",
+                    "PipelineDepth": "194",
+                    "Loops": [{
+                        "Name": "Loop 1.1.1.1",
+                        "TripCount": "16",
+                        "Latency": "192",
+                        "PipelineII": "",
+                        "PipelineDepth": "12"
+                      }]
+                  }]
+              }]
+          }],
+        "Area": {
+          "DSP48E": "5",
+          "FF": "731",
+          "LUT": "1159",
+          "BRAM_18K": "0"
+        }
+      },
+      "fc_6": {
+        "Latency": {
+          "LatencyBest": "13357",
+          "LatencyAvg": "13357",
+          "LatencyWorst": "13357",
+          "PipelineII": "13357",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -2391,38 +2993,31 @@
         },
         "Loops": [{
             "Name": "Loop 1",
-            "TripCount": "6",
-            "Latency": "4128",
+            "TripCount": "10",
+            "Latency": "13350",
             "PipelineII": "",
-            "PipelineDepth": "688",
+            "PipelineDepth": "1335",
             "Loops": [{
                 "Name": "Loop 1.1",
-                "TripCount": "14",
-                "Latency": "686",
+                "TripCount": "120",
+                "Latency": "1320",
                 "PipelineII": "",
-                "PipelineDepth": "49",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "14",
-                    "Latency": "42",
-                    "PipelineII": "",
-                    "PipelineDepth": "3"
-                  }]
+                "PipelineDepth": "11"
               }]
           }],
         "Area": {
-          "FF": "200",
-          "LUT": "433",
-          "BRAM_18K": "0",
-          "DSP48E": "0"
+          "DSP48E": "5",
+          "FF": "662",
+          "LUT": "1057",
+          "BRAM_18K": "0"
         }
       },
-      "conv1": {
+      "store_output": {
         "Latency": {
-          "LatencyBest": "107274",
-          "LatencyAvg": "107274",
-          "LatencyWorst": "107274",
-          "PipelineII": "107275",
+          "LatencyBest": "35",
+          "LatencyAvg": "35",
+          "LatencyWorst": "35",
+          "PipelineII": "35",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -2431,11 +3026,55 @@
           "Uncertainty": "1.25",
           "Estimate": "8.750"
         },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "10",
+            "Latency": "30",
+            "PipelineII": "",
+            "PipelineDepth": "3"
+          }],
         "Area": {
-          "BRAM_18K": "32",
-          "DSP48E": "10",
-          "FF": "8005",
-          "LUT": "9657"
+          "FF": "50",
+          "LUT": "120",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
+        }
+      },
+      "conv1": {
+        "Latency": {
+          "LatencyBest": "2115980",
+          "LatencyAvg": "2115980",
+          "LatencyWorst": "2115980",
+          "PipelineII": "2115981",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "120",
+            "Latency": "360",
+            "PipelineII": "",
+            "PipelineDepth": "3"
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "10",
+            "Latency": "30",
+            "PipelineII": "",
+            "PipelineDepth": "3"
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "175",
+          "DSP48E": "25",
+          "FF": "12139",
+          "LUT": "18142"
         }
       }
     }
@@ -2447,7 +3086,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-10-25 15:35:02 -0500",
+    "Time": "2018-10-25 23:34:08 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.2"
   }

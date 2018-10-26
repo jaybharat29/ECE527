@@ -30,6 +30,7 @@ module AESL_axi_slave_CTL (
     TRAN_s_axi_CTL_BRESP,
     TRAN_input_r,
     TRAN_weights,
+    TRAN_weights_3,
     TRAN_bias,
     TRAN_output_r,
     TRAN_CTL_write_data_finish,
@@ -48,6 +49,7 @@ module AESL_axi_slave_CTL (
 //------------------------Parameter----------------------
 `define TV_IN_input_r "../tv/cdatafile/c.conv1.autotvin_input_r.dat"
 `define TV_IN_weights "../tv/cdatafile/c.conv1.autotvin_weights.dat"
+`define TV_IN_weights_3 "../tv/cdatafile/c.conv1.autotvin_weights_3.dat"
 `define TV_IN_bias "../tv/cdatafile/c.conv1.autotvin_bias.dat"
 `define TV_IN_output_r "../tv/cdatafile/c.conv1.autotvin_output_r.dat"
 `define TV_OUT_ap_return "../tv/rtldatafile/rtl.conv1.autotvout_ap_return.dat"
@@ -59,6 +61,9 @@ parameter input_r_c_bitwidth = 32;
 parameter weights_DEPTH = 1;
 reg [31 : 0] weights_OPERATE_DEPTH = 1;
 parameter weights_c_bitwidth = 32;
+parameter weights_3_DEPTH = 1;
+reg [31 : 0] weights_3_OPERATE_DEPTH = 1;
+parameter weights_3_c_bitwidth = 32;
 parameter bias_DEPTH = 1;
 reg [31 : 0] bias_OPERATE_DEPTH = 1;
 parameter bias_c_bitwidth = 32;
@@ -73,8 +78,9 @@ parameter conv1_continue_addr = 0;
 parameter conv1_auto_start_addr = 0;
 parameter input_r_data_in_addr = 24;
 parameter weights_data_in_addr = 32;
-parameter bias_data_in_addr = 40;
-parameter output_r_data_in_addr = 48;
+parameter weights_3_data_in_addr = 40;
+parameter bias_data_in_addr = 48;
+parameter output_r_data_in_addr = 56;
 parameter ap_return_data_out_addr = 16;
 parameter STATUS_ADDR = 0;
 
@@ -97,6 +103,7 @@ output  TRAN_s_axi_CTL_BREADY;
 input [2 - 1 : 0] TRAN_s_axi_CTL_BRESP;
 input    [32 - 1 : 0] TRAN_input_r;
 input    [32 - 1 : 0] TRAN_weights;
+input    [32 - 1 : 0] TRAN_weights_3;
 input    [32 - 1 : 0] TRAN_bias;
 input    [32 - 1 : 0] TRAN_output_r;
 output TRAN_CTL_write_data_finish;
@@ -127,6 +134,8 @@ reg [input_r_c_bitwidth - 1 : 0] reg_input_r;
 reg input_r_write_data_finish;
 reg [weights_c_bitwidth - 1 : 0] reg_weights;
 reg weights_write_data_finish;
+reg [weights_3_c_bitwidth - 1 : 0] reg_weights_3;
+reg weights_3_write_data_finish;
 reg [bias_c_bitwidth - 1 : 0] reg_bias;
 reg bias_write_data_finish;
 reg [output_r_c_bitwidth - 1 : 0] reg_output_r;
@@ -147,6 +156,7 @@ reg process_3_finish = 0;
 reg process_4_finish = 0;
 reg process_5_finish = 0;
 reg process_6_finish = 0;
+reg process_7_finish = 0;
 //write input_r reg
 reg [31 : 0] write_input_r_count = 0;
 reg write_input_r_run_flag = 0;
@@ -155,6 +165,10 @@ reg write_one_input_r_data_done = 0;
 reg [31 : 0] write_weights_count = 0;
 reg write_weights_run_flag = 0;
 reg write_one_weights_data_done = 0;
+//write weights_3 reg
+reg [31 : 0] write_weights_3_count = 0;
+reg write_weights_3_run_flag = 0;
+reg write_one_weights_3_data_done = 0;
 //write bias reg
 reg [31 : 0] write_bias_count = 0;
 reg write_bias_run_flag = 0;
@@ -190,13 +204,13 @@ assign TRAN_CTL_done_out = AESL_done_index_reg;
 assign TRAN_CTL_ready_out = AESL_ready_out_index_reg;
 assign TRAN_CTL_idle_out = AESL_idle_index_reg;
 assign TRAN_CTL_read_data_finish = 1 & ap_return_read_data_finish;
-assign TRAN_CTL_write_data_finish = 1 & input_r_write_data_finish & weights_write_data_finish & bias_write_data_finish & output_r_write_data_finish;
+assign TRAN_CTL_write_data_finish = 1 & input_r_write_data_finish & weights_write_data_finish & weights_3_write_data_finish & bias_write_data_finish & output_r_write_data_finish;
 always @(TRAN_CTL_ready_in or ready_initial) 
 begin
     AESL_ready_reg <= TRAN_CTL_ready_in | ready_initial;
 end
 
-always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish or process_4_finish or process_5_finish or process_6_finish ) begin
+always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish or process_4_finish or process_5_finish or process_6_finish or process_7_finish ) begin
     if (reset == 0) begin
         ongoing_process_number <= 0;
     end
@@ -219,6 +233,9 @@ always @(reset or process_0_finish or process_1_finish or process_2_finish or pr
             ongoing_process_number <= ongoing_process_number + 1;
     end
     else if (ongoing_process_number == 6 && process_6_finish == 1) begin
+            ongoing_process_number <= ongoing_process_number + 1;
+    end
+    else if (ongoing_process_number == 7 && process_7_finish == 1) begin
             ongoing_process_number <= 0;
     end
 end
@@ -230,6 +247,10 @@ end
 always @(TRAN_weights) 
 begin
     reg_weights = TRAN_weights;
+end
+always @(TRAN_weights_3) 
+begin
+    reg_weights_3 = TRAN_weights_3;
 end
 always @(TRAN_bias) 
 begin
@@ -551,6 +572,79 @@ initial begin : write_weights
 end
 always @(reset or posedge clk) begin
     if (reset == 0) begin
+        weights_3_write_data_finish <= 0;
+        write_weights_3_run_flag <= 0; 
+        write_weights_3_count = 0;
+        count_operate_depth_by_bitwidth_and_depth (weights_3_c_bitwidth, weights_3_DEPTH, weights_3_OPERATE_DEPTH);
+    end
+    else begin
+        if (TRAN_CTL_start_in === 1) begin
+            weights_3_write_data_finish <= 0;
+        end
+        if (AESL_ready_reg === 1) begin
+            write_weights_3_run_flag <= 1; 
+            write_weights_3_count = 0;
+        end
+        if (write_one_weights_3_data_done === 1) begin
+            write_weights_3_count = write_weights_3_count + 1;
+            if (write_weights_3_count == weights_3_OPERATE_DEPTH) begin
+                write_weights_3_run_flag <= 0; 
+                weights_3_write_data_finish <= 1;
+            end
+        end
+    end
+end
+
+initial begin : write_weights_3
+    integer write_weights_3_resp;
+    integer process_num ;
+    integer get_ack;
+    integer four_byte_num;
+    integer c_bitwidth;
+    integer i;
+    integer j;
+    reg [31 : 0] weights_3_data_tmp_reg;
+    wait(reset === 1);
+    @(posedge clk);
+    c_bitwidth = weights_3_c_bitwidth;
+    process_num = 3;
+    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
+    while (1) begin
+        process_3_finish <= 0;
+
+        if (ongoing_process_number === process_num && process_busy === 0 ) begin
+            get_ack = 1;
+            if (write_weights_3_run_flag === 1 && get_ack === 1) begin
+                process_busy = 1;
+                //write weights_3 data 
+                for (i = 0 ; i < four_byte_num ; i = i+1) begin
+                    if (weights_3_c_bitwidth < 32) begin
+                        weights_3_data_tmp_reg = reg_weights_3;
+                    end
+                    else begin
+                        for (j=0 ; j<32 ; j = j + 1) begin
+                            if (i*32 + j < weights_3_c_bitwidth) begin
+                                weights_3_data_tmp_reg[j] = reg_weights_3[i*32 + j];
+                            end
+                            else begin
+                                weights_3_data_tmp_reg[j] = 0;
+                            end
+                        end
+                    end
+                    write (weights_3_data_in_addr + write_weights_3_count * four_byte_num * 4 + i * 4, weights_3_data_tmp_reg, write_weights_3_resp);
+                end
+                process_busy = 0;
+                write_one_weights_3_data_done <= 1;
+                @(posedge clk);
+                write_one_weights_3_data_done <= 0;
+            end   
+            process_3_finish <= 1;
+        end
+        @(posedge clk);
+    end    
+end
+always @(reset or posedge clk) begin
+    if (reset == 0) begin
         bias_write_data_finish <= 0;
         write_bias_run_flag <= 0; 
         write_bias_count = 0;
@@ -586,10 +680,10 @@ initial begin : write_bias
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = bias_c_bitwidth;
-    process_num = 3;
+    process_num = 4;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_3_finish <= 0;
+        process_4_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -617,7 +711,7 @@ initial begin : write_bias
                 @(posedge clk);
                 write_one_bias_data_done <= 0;
             end   
-            process_3_finish <= 1;
+            process_4_finish <= 1;
         end
         @(posedge clk);
     end    
@@ -659,10 +753,10 @@ initial begin : write_output_r
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = output_r_c_bitwidth;
-    process_num = 4;
+    process_num = 5;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_4_finish <= 0;
+        process_5_finish <= 0;
 
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             get_ack = 1;
@@ -690,7 +784,7 @@ initial begin : write_output_r
                 @(posedge clk);
                 write_one_output_r_data_done <= 0;
             end   
-            process_4_finish <= 1;
+            process_5_finish <= 1;
         end
         @(posedge clk);
     end    
@@ -721,9 +815,9 @@ initial begin : write_start
     integer write_start_resp;
     wait(reset === 1);
     @(posedge clk);
-    process_num = 5;
+    process_num = 6;
     while (1) begin
-        process_5_finish = 0;
+        process_6_finish = 0;
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             if (write_start_run_flag === 1) begin
                 process_busy = 1;
@@ -735,7 +829,7 @@ initial begin : write_start
                 @(posedge clk);
                 AESL_write_start_finish <= 0;
             end
-            process_5_finish <= 1;
+            process_6_finish <= 1;
         end 
         @(posedge clk);
     end
@@ -778,10 +872,10 @@ initial begin : read_ap_return
     wait(reset === 1);
     @(posedge clk);
     c_bitwidth = ap_return_c_bitwidth;
-    process_num = 6;
+    process_num = 7;
     count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
     while (1) begin
-        process_6_finish <= 0;
+        process_7_finish <= 0;
         if (ongoing_process_number === process_num && process_busy === 0 ) begin
             if (read_ap_return_run_flag === 1) begin
                 process_busy = 1;
@@ -808,7 +902,7 @@ initial begin : read_ap_return
                 end    
                 process_busy = 0;
             end    
-            process_6_finish <= 1;
+            process_7_finish <= 1;
         end
         @(posedge clk);
     end    

@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="conv1" xd:componentRef="conv1" xd:initiationInterval="107275" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="conv1" xd:componentRef="conv1" xd:initiationInterval="2115981" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:returnValue xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x10" xd:statusOffset="0x14"/>
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
   <xd:arg xd:name="input[][][]" xd:originalName="input" xd:direction="inout" xd:interfaceRef="m_axi_DATA_INPUT" xd:busTypeRef="aximm" xd:arraySize="1024" xd:dataWidth="32" xd:bufferDirection="in"/>
-  <xd:arg xd:name="weights[][][][]" xd:originalName="weights" xd:direction="inout" xd:interfaceRef="m_axi_DATA_WEIGHT" xd:busTypeRef="aximm" xd:arraySize="150" xd:dataWidth="32" xd:bufferDirection="in"/>
-  <xd:arg xd:name="bias[]" xd:originalName="bias" xd:direction="inout" xd:interfaceRef="m_axi_DATA_BIAS" xd:busTypeRef="aximm" xd:arraySize="6" xd:dataWidth="32" xd:bufferDirection="in"/>
-  <xd:arg xd:name="output[][][]" xd:originalName="output" xd:direction="inout" xd:interfaceRef="m_axi_DATA_OUTPUT" xd:busTypeRef="aximm" xd:arraySize="1176" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="weights[][][][]" xd:originalName="weights" xd:direction="inout" xd:interfaceRef="m_axi_DATA_WEIGHT" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="150" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="weights_3[][][][]" xd:originalName="weights_3" xd:direction="inout" xd:interfaceRef="m_axi_DATA_WEIGHT" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="2400" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="weights_5[][][][]" xd:originalName="weights_5" xd:direction="inout" xd:interfaceRef="m_axi_DATA_WEIGHT" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="48000" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="weights_6[][][][]" xd:originalName="weights_6" xd:direction="inout" xd:interfaceRef="m_axi_DATA_WEIGHT" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="1200" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="bias[]" xd:originalName="bias" xd:direction="inout" xd:interfaceRef="m_axi_DATA_BIAS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="6" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="bias_3[]" xd:originalName="bias_3" xd:direction="inout" xd:interfaceRef="m_axi_DATA_BIAS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="16" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="bias_5[]" xd:originalName="bias_5" xd:direction="inout" xd:interfaceRef="m_axi_DATA_BIAS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="120" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="bias_6[]" xd:originalName="bias_6" xd:direction="inout" xd:interfaceRef="m_axi_DATA_BIAS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="10" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="output[]" xd:originalName="output" xd:direction="inout" xd:interfaceRef="m_axi_DATA_OUTPUT" xd:busTypeRef="aximm" xd:arraySize="10" xd:dataWidth="32" xd:bufferDirection="out"/>
   <xd:arg xd:name="input_r" xd:originalName="input_r" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_INPUT" xd:dataWidth="32" xd:offset="0x18" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="weights" xd:originalName="weights" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_WEIGHT" xd:dataWidth="32" xd:offset="0x20" xd:handshakeRef="ap_none"/>
-  <xd:arg xd:name="bias" xd:originalName="bias" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_BIAS" xd:dataWidth="32" xd:offset="0x28" xd:handshakeRef="ap_none"/>
-  <xd:arg xd:name="output_r" xd:originalName="output_r" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_OUTPUT" xd:dataWidth="32" xd:offset="0x30" xd:handshakeRef="ap_none"/>
-  <xd:latencyEstimates xd:best-case="107274" xd:worst-case="107274" xd:average-case="107274"/>
-  <xd:resourceEstimates xd:LUT="9657" xd:FF="8005" xd:BRAM="32" xd:DSP="10"/>
+  <xd:arg xd:name="weights_3" xd:originalName="weights_3" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_WEIGHT" xd:dataWidth="32" xd:offset="0x28" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="weights_5" xd:originalName="weights_5" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_WEIGHT" xd:dataWidth="32" xd:offset="0x30" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="weights_6" xd:originalName="weights_6" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_WEIGHT" xd:dataWidth="32" xd:offset="0x38" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="bias" xd:originalName="bias" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_BIAS" xd:dataWidth="32" xd:offset="0x40" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="bias_3" xd:originalName="bias_3" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_BIAS" xd:dataWidth="32" xd:offset="0x48" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="bias_5" xd:originalName="bias_5" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_BIAS" xd:dataWidth="32" xd:offset="0x50" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="bias_6" xd:originalName="bias_6" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_BIAS" xd:dataWidth="32" xd:offset="0x58" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="output_r" xd:originalName="output_r" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_OUTPUT" xd:dataWidth="32" xd:offset="0x60" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="2115980" xd:worst-case="2115980" xd:average-case="2115980"/>
+  <xd:resourceEstimates xd:LUT="18142" xd:FF="12139" xd:BRAM="175" xd:DSP="25"/>
 </xd:acceleratorMap>

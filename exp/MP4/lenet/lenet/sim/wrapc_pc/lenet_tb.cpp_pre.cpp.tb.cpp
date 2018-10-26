@@ -40915,10 +40915,17 @@ namespace std
 
 #1 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h"
 void convolution1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][28][28]);
-int conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][14][14]);
 void relu1(float input[6][28][28], float output[6][28][28]);
 void max_pooling2(float input[6][28][28],float output[6][14][14]);
 void relu2(float input[6][14][14], float output[6][14][14]);
+void convolution3(float input[6][14][14], float weights[16][6][5][5], float bias[16], float output[16][10][10]);
+void relu3(float input[16][10][10], float output[16][10][10]);
+
+
+int conv1(float input[1][32][32],
+  float weights[6][1][5][5], float weights_3[16][6][5][5],
+  float bias[6], float bias_3[16],
+  float output[16][10][10]);
 #9 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp" 2
 
 
@@ -40941,7 +40948,7 @@ float image[1][32][32] = {0};
 float conv1_weights[6][1][5][5] = {0};
 float conv1_bias[6] = {0};
 float conv1_output[6][28][28] = {0};
-float conv1_hardoutput[6][14][14] = {0};
+float conv1_hardoutput[16][10][10] = {0};
 
 float pool2_output[6][14][14] = {0};
 
@@ -41131,7 +41138,7 @@ int parse_parameters(const char* filename)
   printf("Read conv1_bias from file\n\r");
  }
 
- read = fread((void*)***conv3_weights, sizeof(float)*2400, NumBytesRead, fil);
+ read = fread((void*)***conv3_weights, sizeof(float)*2400, 1, fil);
  if (!read)
  {
   printf("Cant read conv3_weights from file\n\r");
@@ -41142,7 +41149,7 @@ int parse_parameters(const char* filename)
   printf("Read conv3_weights from file\n\r");
  }
 
- read = fread((void*)conv3_bias, sizeof(float)*16, NumBytesRead, fil);
+ read = fread((void*)conv3_bias, sizeof(float)*16, 1, fil);
  if (!read)
  {
   printf("Cant read conv3_bias from file\n\r");
@@ -41234,32 +41241,38 @@ void print_conv1_bias()
 
 void verify_conv1()
 {
-    for(int i = 0; i < 6; i++)
+    for(int i = 0; i < 16; i++)
     {
-     for(int j = 0; j < 14; j++)
+     for(int j = 0; j < 10; j++)
      {
-      for(int k = 0; k < 14; k++)
+      for(int k = 0; k < 10; k++)
       {
-       if(conv1_hardoutput[i][j][k] != pool2_output[i][j][k])
+       if(conv1_hardoutput[i][j][k] != conv3_output[i][j][k])
        {
         cout << "Failed at " << i << j << k << endl;
         return;
        }
+       else
+       {
+        cout << conv1_hardoutput[i][j][k] << "	";
+       }
       }
+      cout << endl;
      }
+     cout << endl;
     }
     cout << "Passed" << endl;
 }
 
 
 #ifndef HLS_FASTSIM
-#362 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
+#368 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
 
 #ifndef HLS_FASTSIM
 #include "apatb_conv1.h"
 #endif
 
-#362 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
+#368 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
 int main(int argc, char **argv)
 {
  cout<<"Starting LeNet\n\r";
@@ -41296,25 +41309,30 @@ int main(int argc, char **argv)
      relu1(conv1_output, conv1_output);
      max_pooling2(conv1_output, pool2_output);
      relu2(pool2_output, pool2_output);
+     convolution3(pool2_output, conv3_weights, conv3_bias, conv3_output);
+     relu3(conv3_output, conv3_output);
      
 #ifndef HLS_FASTSIM
 #define conv1 AESL_WRAP_conv1
 #endif
 
-#398 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
+#406 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
 
 #ifndef HLS_FASTSIM
 #define conv1 AESL_WRAP_conv1
 #endif
 
-#398 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
+#406 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
 conv1
 #undef conv1
-#398 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
+#406 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
 
 #undef conv1
-#398 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
-(image, conv1_weights, conv1_bias, conv1_hardoutput);
+#406 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
+(image,
+        conv1_weights, conv3_weights,
+     conv1_bias, conv3_bias,
+     conv1_hardoutput);
      verify_conv1();
 
  }
@@ -41322,4 +41340,4 @@ conv1
 
 }
 #endif
-#404 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"
+#415 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp"

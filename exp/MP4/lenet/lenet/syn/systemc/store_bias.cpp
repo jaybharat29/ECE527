@@ -108,7 +108,7 @@ store_bias::store_bias(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( exitcond_fu_94_p2 );
     sensitive << ( i_reg_71 );
 
-    SC_METHOD(thread_i_4_fu_100_p2);
+    SC_METHOD(thread_i_8_fu_100_p2);
     sensitive << ( i_reg_71 );
 
     SC_METHOD(thread_m_axi_bias_ARADDR);
@@ -278,8 +278,8 @@ store_bias::store_bias(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, ap_CS_fsm_state8, "ap_CS_fsm_state8");
     sc_trace(mVcdFile, exitcond_fu_94_p2, "exitcond_fu_94_p2");
     sc_trace(mVcdFile, ap_sig_ioackin_m_axi_bias_ARREADY, "ap_sig_ioackin_m_axi_bias_ARREADY");
-    sc_trace(mVcdFile, i_4_fu_100_p2, "i_4_fu_100_p2");
-    sc_trace(mVcdFile, i_4_reg_120, "i_4_reg_120");
+    sc_trace(mVcdFile, i_8_fu_100_p2, "i_8_fu_100_p2");
+    sc_trace(mVcdFile, i_8_reg_120, "i_8_reg_120");
     sc_trace(mVcdFile, ap_block_state8, "ap_block_state8");
     sc_trace(mVcdFile, bias_addr_read_reg_125, "bias_addr_read_reg_125");
     sc_trace(mVcdFile, i_reg_71, "i_reg_71");
@@ -319,7 +319,7 @@ void store_bias::thread_ap_clk_no_reset_() {
         }
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state9.read())) {
-        i_reg_71 = i_4_reg_120.read();
+        i_reg_71 = i_8_reg_120.read();
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read())) {
         i_reg_71 = ap_const_lv3_0;
     }
@@ -327,7 +327,7 @@ void store_bias::thread_ap_clk_no_reset_() {
         bias_addr_read_reg_125 = m_axi_bias_RDATA.read();
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read()) && !(esl_seteq<1,1,1>(exitcond_fu_94_p2.read(), ap_const_lv1_0) && esl_seteq<1,1,1>(m_axi_bias_RVALID.read(), ap_const_logic_0)))) {
-        i_4_reg_120 = i_4_fu_100_p2.read();
+        i_8_reg_120 = i_8_fu_100_p2.read();
     }
 }
 
@@ -436,8 +436,8 @@ void store_bias::thread_exitcond_fu_94_p2() {
     exitcond_fu_94_p2 = (!i_reg_71.read().is_01() || !ap_const_lv3_6.is_01())? sc_lv<1>(): sc_lv<1>(i_reg_71.read() == ap_const_lv3_6);
 }
 
-void store_bias::thread_i_4_fu_100_p2() {
-    i_4_fu_100_p2 = (!i_reg_71.read().is_01() || !ap_const_lv3_1.is_01())? sc_lv<3>(): (sc_biguint<3>(i_reg_71.read()) + sc_biguint<3>(ap_const_lv3_1));
+void store_bias::thread_i_8_fu_100_p2() {
+    i_8_fu_100_p2 = (!i_reg_71.read().is_01() || !ap_const_lv3_1.is_01())? sc_lv<3>(): (sc_biguint<3>(i_reg_71.read()) + sc_biguint<3>(ap_const_lv3_1));
 }
 
 void store_bias::thread_m_axi_bias_ARADDR() {

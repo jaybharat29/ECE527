@@ -106,8 +106,8 @@ architecture behav of store_bias is
     attribute fsm_encoding of ap_CS_fsm_state8 : signal is "none";
     signal exitcond_fu_94_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_sig_ioackin_m_axi_bias_ARREADY : STD_LOGIC;
-    signal i_4_fu_100_p2 : STD_LOGIC_VECTOR (2 downto 0);
-    signal i_4_reg_120 : STD_LOGIC_VECTOR (2 downto 0);
+    signal i_8_fu_100_p2 : STD_LOGIC_VECTOR (2 downto 0);
+    signal i_8_reg_120 : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_block_state8 : BOOLEAN;
     signal bias_addr_read_reg_125 : STD_LOGIC_VECTOR (31 downto 0);
     signal i_reg_71 : STD_LOGIC_VECTOR (2 downto 0);
@@ -160,7 +160,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
-                i_reg_71 <= i_4_reg_120;
+                i_reg_71 <= i_8_reg_120;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
                 i_reg_71 <= ap_const_lv3_0;
             end if; 
@@ -178,7 +178,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((exitcond_fu_94_p2 = ap_const_lv1_0) and (m_axi_bias_RVALID = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state8))) then
-                i_4_reg_120 <= i_4_fu_100_p2;
+                i_8_reg_120 <= i_8_fu_100_p2;
             end if;
         end if;
     end process;
@@ -311,7 +311,7 @@ begin
     end process;
 
     exitcond_fu_94_p2 <= "1" when (i_reg_71 = ap_const_lv3_6) else "0";
-    i_4_fu_100_p2 <= std_logic_vector(unsigned(i_reg_71) + unsigned(ap_const_lv3_1));
+    i_8_fu_100_p2 <= std_logic_vector(unsigned(i_reg_71) + unsigned(ap_const_lv3_1));
     m_axi_bias_ARADDR <= sext_fu_83_p1(32 - 1 downto 0);
     m_axi_bias_ARBURST <= ap_const_lv2_0;
     m_axi_bias_ARCACHE <= ap_const_lv4_0;

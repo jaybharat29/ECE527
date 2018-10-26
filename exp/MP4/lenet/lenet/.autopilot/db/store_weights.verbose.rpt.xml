@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'store_weights'" level="0">
-<item name = "Date">Thu Oct 25 15:27:48 2018
+<item name = "Date">Thu Oct 25 23:32:27 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -80,14 +80,14 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_1_fu_126_p2">+, 0, 0, 12, 3, 1</column>
-<column name="j_1_fu_160_p2">+, 0, 0, 12, 3, 1</column>
-<column name="k_1_fu_214_p2">+, 0, 0, 12, 3, 1</column>
-<column name="tmp_2_fu_197_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_3_fu_148_p2">+, 0, 0, 15, 6, 6</column>
-<column name="tmp_5_fu_170_p2">+, 0, 0, 15, 6, 6</column>
-<column name="tmp_7_fu_191_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_8_fu_224_p2">+, 0, 0, 71, 64, 64</column>
+<column name="i_3_fu_126_p2">+, 0, 0, 12, 3, 1</column>
+<column name="j_3_fu_160_p2">+, 0, 0, 12, 3, 1</column>
+<column name="k_3_fu_214_p2">+, 0, 0, 12, 3, 1</column>
+<column name="tmp_17_fu_148_p2">+, 0, 0, 15, 6, 6</column>
+<column name="tmp_18_fu_170_p2">+, 0, 0, 15, 6, 6</column>
+<column name="tmp_19_fu_191_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_20_fu_224_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_9_fu_197_p2">+, 0, 0, 71, 64, 64</column>
 <column name="ap_block_state11">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond1_fu_154_p2">icmp, 0, 0, 9, 3, 3</column>
 <column name="exitcond2_fu_120_p2">icmp, 0, 0, 9, 3, 3</column>
@@ -109,16 +109,16 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">12, 0, 12, 0</column>
 <column name="ap_reg_ioackin_m_axi_weights_ARREADY">1, 0, 1, 0</column>
-<column name="i_1_reg_237">3, 0, 3, 0</column>
+<column name="i_3_reg_237">3, 0, 3, 0</column>
 <column name="i_reg_83">3, 0, 3, 0</column>
-<column name="j_1_reg_250">3, 0, 3, 0</column>
+<column name="j_3_reg_250">3, 0, 3, 0</column>
 <column name="j_reg_94">3, 0, 3, 0</column>
-<column name="k_1_reg_269">3, 0, 3, 0</column>
+<column name="k_3_reg_269">3, 0, 3, 0</column>
 <column name="k_reg_105">3, 0, 3, 0</column>
 <column name="sext_reg_229">30, 0, 64, 34</column>
-<column name="tmp_3_reg_242">6, 0, 6, 0</column>
-<column name="tmp_7_reg_255">64, 0, 64, 0</column>
-<column name="tmp_8_reg_274">64, 0, 64, 0</column>
+<column name="tmp_17_reg_242">6, 0, 6, 0</column>
+<column name="tmp_19_reg_255">64, 0, 64, 0</column>
+<column name="tmp_20_reg_274">64, 0, 64, 0</column>
 <column name="weights_addr_read_reg_279">32, 0, 32, 0</column>
 <column name="weights_addr_reg_260">32, 0, 32, 0</column>
 </table>

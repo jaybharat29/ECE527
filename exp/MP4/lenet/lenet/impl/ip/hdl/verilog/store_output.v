@@ -65,17 +65,14 @@ module store_output (
         output_oc_q0
 );
 
-parameter    ap_ST_fsm_state1 = 11'd1;
-parameter    ap_ST_fsm_state2 = 11'd2;
-parameter    ap_ST_fsm_state3 = 11'd4;
-parameter    ap_ST_fsm_state4 = 11'd8;
-parameter    ap_ST_fsm_state5 = 11'd16;
-parameter    ap_ST_fsm_state6 = 11'd32;
-parameter    ap_ST_fsm_state7 = 11'd64;
-parameter    ap_ST_fsm_state8 = 11'd128;
-parameter    ap_ST_fsm_state9 = 11'd256;
-parameter    ap_ST_fsm_state10 = 11'd512;
-parameter    ap_ST_fsm_state11 = 11'd1024;
+parameter    ap_ST_fsm_state1 = 8'd1;
+parameter    ap_ST_fsm_state2 = 8'd2;
+parameter    ap_ST_fsm_state3 = 8'd4;
+parameter    ap_ST_fsm_state4 = 8'd8;
+parameter    ap_ST_fsm_state5 = 8'd16;
+parameter    ap_ST_fsm_state6 = 8'd32;
+parameter    ap_ST_fsm_state7 = 8'd64;
+parameter    ap_ST_fsm_state8 = 8'd128;
 
 input   ap_clk;
 input   ap_rst;
@@ -129,7 +126,7 @@ input  [1:0] m_axi_output_r_BRESP;
 input  [0:0] m_axi_output_r_BID;
 input  [0:0] m_axi_output_r_BUSER;
 input  [29:0] output_offset;
-output  [10:0] output_oc_address0;
+output  [3:0] output_oc_address0;
 output   output_oc_ce0;
 input  [31:0] output_oc_q0;
 
@@ -141,61 +138,31 @@ reg m_axi_output_r_WVALID;
 reg m_axi_output_r_BREADY;
 reg output_oc_ce0;
 
-(* fsm_encoding = "none" *) reg   [10:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [7:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    output_r_blk_n_AW;
-wire    ap_CS_fsm_state4;
 reg    output_r_blk_n_W;
-wire    ap_CS_fsm_state7;
+wire    ap_CS_fsm_state4;
 reg    output_r_blk_n_B;
-wire    ap_CS_fsm_state11;
-wire   [63:0] sext_fu_132_p1;
-reg   [63:0] sext_reg_266;
-wire   [2:0] i_2_fu_142_p2;
-reg   [2:0] i_2_reg_274;
-wire    ap_CS_fsm_state2;
-wire  signed [8:0] tmp_11_cast_fu_178_p1;
-reg  signed [8:0] tmp_11_cast_reg_279;
-wire   [0:0] exitcond2_fu_136_p2;
-wire   [3:0] j_2_fu_188_p2;
-reg   [3:0] j_2_reg_287;
-wire    ap_CS_fsm_state3;
-wire   [63:0] tmp_5_fu_227_p2;
-reg   [63:0] tmp_5_reg_292;
-wire   [0:0] exitcond1_fu_182_p2;
-reg   [31:0] output_addr_reg_297;
-wire   [3:0] k_2_fu_250_p2;
-reg   [3:0] k_2_reg_306;
-wire    ap_CS_fsm_state5;
-wire   [0:0] exitcond_fu_244_p2;
-reg   [31:0] output_oc_load_reg_316;
-wire    ap_CS_fsm_state6;
-reg   [2:0] i_reg_99;
-reg   [3:0] j_reg_110;
-reg   [3:0] k_reg_121;
-reg    ap_sig_ioackin_m_axi_output_r_WREADY;
+wire    ap_CS_fsm_state8;
 reg    ap_sig_ioackin_m_axi_output_r_AWREADY;
-wire   [63:0] tmp_7_fu_260_p2;
-wire   [63:0] tmp_6_fu_233_p2;
+wire   [3:0] i_4_fu_107_p2;
+reg   [3:0] i_4_reg_127;
+wire    ap_CS_fsm_state2;
+wire   [0:0] exitcond_fu_101_p2;
+reg   [31:0] output_oc_load_reg_137;
+wire    ap_CS_fsm_state3;
+reg   [3:0] i_reg_79;
+reg    ap_sig_ioackin_m_axi_output_r_WREADY;
+wire   [63:0] tmp_fu_113_p1;
+wire   [63:0] sext_fu_90_p1;
 reg    ap_reg_ioackin_m_axi_output_r_AWREADY;
 reg    ap_reg_ioackin_m_axi_output_r_WREADY;
-wire   [6:0] tmp_fu_148_p3;
-wire   [3:0] tmp_s_fu_160_p3;
-wire   [7:0] p_shl_cast_fu_156_p1;
-wire   [7:0] p_shl1_cast_fu_168_p1;
-wire   [7:0] tmp_1_fu_172_p2;
-wire   [8:0] tmp_7_cast_fu_194_p1;
-wire   [8:0] tmp_2_fu_198_p2;
-wire   [12:0] tmp_3_fu_203_p3;
-wire   [9:0] tmp_4_fu_215_p3;
-wire  signed [63:0] p_shl2_fu_211_p1;
-wire  signed [63:0] p_shl3_fu_223_p1;
-wire   [63:0] tmp_9_fu_256_p1;
-reg   [10:0] ap_NS_fsm;
+reg   [7:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 11'd1;
+#0 ap_CS_fsm = 8'd1;
 #0 ap_reg_ioackin_m_axi_output_r_AWREADY = 1'b0;
 #0 ap_reg_ioackin_m_axi_output_r_WREADY = 1'b0;
 end
@@ -212,10 +179,10 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_reg_ioackin_m_axi_output_r_AWREADY <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state4)) begin
-            if ((ap_sig_ioackin_m_axi_output_r_AWREADY == 1'b1)) begin
+        if ((1'b1 == ap_CS_fsm_state1)) begin
+            if (~((ap_start == 1'b0) | (ap_sig_ioackin_m_axi_output_r_AWREADY == 1'b0))) begin
                 ap_reg_ioackin_m_axi_output_r_AWREADY <= 1'b0;
-            end else if ((m_axi_output_r_AWREADY == 1'b1)) begin
+            end else if (((m_axi_output_r_AWREADY == 1'b1) & (ap_start == 1'b1))) begin
                 ap_reg_ioackin_m_axi_output_r_AWREADY <= 1'b1;
             end
         end
@@ -226,7 +193,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_reg_ioackin_m_axi_output_r_WREADY <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state7)) begin
+        if ((1'b1 == ap_CS_fsm_state4)) begin
             if ((ap_sig_ioackin_m_axi_output_r_WREADY == 1'b1)) begin
                 ap_reg_ioackin_m_axi_output_r_WREADY <= 1'b0;
             end else if ((m_axi_output_r_WREADY == 1'b1)) begin
@@ -237,74 +204,27 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (exitcond1_fu_182_p2 == 1'd1))) begin
-        i_reg_99 <= i_2_reg_274;
-    end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        i_reg_99 <= 3'd0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((exitcond2_fu_136_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        j_reg_110 <= 4'd0;
-    end else if (((m_axi_output_r_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
-        j_reg_110 <= j_2_reg_287;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state4) & (ap_sig_ioackin_m_axi_output_r_AWREADY == 1'b1))) begin
-        k_reg_121 <= 4'd0;
-    end else if (((1'b1 == ap_CS_fsm_state7) & (ap_sig_ioackin_m_axi_output_r_WREADY == 1'b1))) begin
-        k_reg_121 <= k_2_reg_306;
+    if (((1'b1 == ap_CS_fsm_state4) & (ap_sig_ioackin_m_axi_output_r_WREADY == 1'b1))) begin
+        i_reg_79 <= i_4_reg_127;
+    end else if ((~((ap_start == 1'b0) | (ap_sig_ioackin_m_axi_output_r_AWREADY == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+        i_reg_79 <= 4'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        i_2_reg_274 <= i_2_fu_142_p2;
+        i_4_reg_127 <= i_4_fu_107_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        j_2_reg_287 <= j_2_fu_188_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
-        k_2_reg_306 <= k_2_fu_250_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((exitcond1_fu_182_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        output_addr_reg_297 <= tmp_6_fu_233_p2;
-        tmp_5_reg_292[63 : 1] <= tmp_5_fu_227_p2[63 : 1];
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
-        output_oc_load_reg_316 <= output_oc_q0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        sext_reg_266[29 : 0] <= sext_fu_132_p1[29 : 0];
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((exitcond2_fu_136_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        tmp_11_cast_reg_279[8 : 1] <= tmp_11_cast_fu_178_p1[8 : 1];
+        output_oc_load_reg_137 <= output_oc_q0;
     end
 end
 
 always @ (*) begin
-    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((1'b1 == ap_CS_fsm_state2) & (exitcond2_fu_136_p2 == 1'd1)))) begin
+    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((m_axi_output_r_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state8)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -320,7 +240,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (exitcond2_fu_136_p2 == 1'd1))) begin
+    if (((m_axi_output_r_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -344,7 +264,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_reg_ioackin_m_axi_output_r_AWREADY == 1'b0) & (1'b1 == ap_CS_fsm_state4))) begin
+    if (((ap_reg_ioackin_m_axi_output_r_AWREADY == 1'b0) & (1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
         m_axi_output_r_AWVALID = 1'b1;
     end else begin
         m_axi_output_r_AWVALID = 1'b0;
@@ -352,7 +272,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((m_axi_output_r_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
+    if (((m_axi_output_r_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
         m_axi_output_r_BREADY = 1'b1;
     end else begin
         m_axi_output_r_BREADY = 1'b0;
@@ -360,7 +280,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_reg_ioackin_m_axi_output_r_WREADY == 1'b0) & (1'b1 == ap_CS_fsm_state7))) begin
+    if (((ap_reg_ioackin_m_axi_output_r_WREADY == 1'b0) & (1'b1 == ap_CS_fsm_state4))) begin
         m_axi_output_r_WVALID = 1'b1;
     end else begin
         m_axi_output_r_WVALID = 1'b0;
@@ -368,7 +288,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
         output_oc_ce0 = 1'b1;
     end else begin
         output_oc_ce0 = 1'b0;
@@ -376,7 +296,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
         output_r_blk_n_AW = m_axi_output_r_AWREADY;
     end else begin
         output_r_blk_n_AW = 1'b1;
@@ -384,7 +304,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state11)) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
         output_r_blk_n_B = m_axi_output_r_BVALID;
     end else begin
         output_r_blk_n_B = 1'b1;
@@ -392,7 +312,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state7)) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
         output_r_blk_n_W = m_axi_output_r_WREADY;
     end else begin
         output_r_blk_n_W = 1'b1;
@@ -402,64 +322,43 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            if ((~((ap_start == 1'b0) | (ap_sig_ioackin_m_axi_output_r_AWREADY == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((1'b1 == ap_CS_fsm_state2) & (exitcond2_fu_136_p2 == 1'd1))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
+            if (((1'b1 == ap_CS_fsm_state2) & (exitcond_fu_101_p2 == 1'd1))) begin
+                ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b1 == ap_CS_fsm_state3) & (exitcond1_fu_182_p2 == 1'd1))) begin
+            ap_NS_fsm = ap_ST_fsm_state4;
+        end
+        ap_ST_fsm_state4 : begin
+            if (((1'b1 == ap_CS_fsm_state4) & (ap_sig_ioackin_m_axi_output_r_WREADY == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
-        ap_ST_fsm_state4 : begin
-            if (((1'b1 == ap_CS_fsm_state4) & (ap_sig_ioackin_m_axi_output_r_AWREADY == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state5;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end
-        end
         ap_ST_fsm_state5 : begin
-            if (((1'b1 == ap_CS_fsm_state5) & (exitcond_fu_244_p2 == 1'd1))) begin
-                ap_NS_fsm = ap_ST_fsm_state8;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state6;
-            end
+            ap_NS_fsm = ap_ST_fsm_state6;
         end
         ap_ST_fsm_state6 : begin
             ap_NS_fsm = ap_ST_fsm_state7;
         end
         ap_ST_fsm_state7 : begin
-            if (((1'b1 == ap_CS_fsm_state7) & (ap_sig_ioackin_m_axi_output_r_WREADY == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state5;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state7;
-            end
+            ap_NS_fsm = ap_ST_fsm_state8;
         end
         ap_ST_fsm_state8 : begin
-            ap_NS_fsm = ap_ST_fsm_state9;
-        end
-        ap_ST_fsm_state9 : begin
-            ap_NS_fsm = ap_ST_fsm_state10;
-        end
-        ap_ST_fsm_state10 : begin
-            ap_NS_fsm = ap_ST_fsm_state11;
-        end
-        ap_ST_fsm_state11 : begin
-            if (((m_axi_output_r_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
-                ap_NS_fsm = ap_ST_fsm_state3;
+            if (((m_axi_output_r_BVALID == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state11;
+                ap_NS_fsm = ap_ST_fsm_state8;
             end
         end
         default : begin
@@ -470,31 +369,17 @@ end
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state11 = ap_CS_fsm[32'd10];
-
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
-assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
+assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
 
-assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
+assign exitcond_fu_101_p2 = ((i_reg_79 == 4'd10) ? 1'b1 : 1'b0);
 
-assign ap_CS_fsm_state7 = ap_CS_fsm[32'd6];
-
-assign exitcond1_fu_182_p2 = ((j_reg_110 == 4'd14) ? 1'b1 : 1'b0);
-
-assign exitcond2_fu_136_p2 = ((i_reg_99 == 3'd6) ? 1'b1 : 1'b0);
-
-assign exitcond_fu_244_p2 = ((k_reg_121 == 4'd14) ? 1'b1 : 1'b0);
-
-assign i_2_fu_142_p2 = (i_reg_99 + 3'd1);
-
-assign j_2_fu_188_p2 = (j_reg_110 + 4'd1);
-
-assign k_2_fu_250_p2 = (k_reg_121 + 4'd1);
+assign i_4_fu_107_p2 = (i_reg_79 + 4'd1);
 
 assign m_axi_output_r_ARADDR = 32'd0;
 
@@ -520,7 +405,7 @@ assign m_axi_output_r_ARUSER = 1'd0;
 
 assign m_axi_output_r_ARVALID = 1'b0;
 
-assign m_axi_output_r_AWADDR = output_addr_reg_297;
+assign m_axi_output_r_AWADDR = sext_fu_90_p1;
 
 assign m_axi_output_r_AWBURST = 2'd0;
 
@@ -528,7 +413,7 @@ assign m_axi_output_r_AWCACHE = 4'd0;
 
 assign m_axi_output_r_AWID = 1'd0;
 
-assign m_axi_output_r_AWLEN = 32'd14;
+assign m_axi_output_r_AWLEN = 32'd10;
 
 assign m_axi_output_r_AWLOCK = 2'd0;
 
@@ -544,7 +429,7 @@ assign m_axi_output_r_AWUSER = 1'd0;
 
 assign m_axi_output_r_RREADY = 1'b0;
 
-assign m_axi_output_r_WDATA = output_oc_load_reg_316;
+assign m_axi_output_r_WDATA = output_oc_load_reg_137;
 
 assign m_axi_output_r_WID = 1'd0;
 
@@ -554,46 +439,10 @@ assign m_axi_output_r_WSTRB = 4'd15;
 
 assign m_axi_output_r_WUSER = 1'd0;
 
-assign output_oc_address0 = tmp_7_fu_260_p2;
+assign output_oc_address0 = tmp_fu_113_p1;
 
-assign p_shl1_cast_fu_168_p1 = tmp_s_fu_160_p3;
+assign sext_fu_90_p1 = output_offset;
 
-assign p_shl2_fu_211_p1 = $signed(tmp_3_fu_203_p3);
-
-assign p_shl3_fu_223_p1 = $signed(tmp_4_fu_215_p3);
-
-assign p_shl_cast_fu_156_p1 = tmp_fu_148_p3;
-
-assign sext_fu_132_p1 = output_offset;
-
-assign tmp_11_cast_fu_178_p1 = $signed(tmp_1_fu_172_p2);
-
-assign tmp_1_fu_172_p2 = (p_shl_cast_fu_156_p1 - p_shl1_cast_fu_168_p1);
-
-assign tmp_2_fu_198_p2 = ($signed(tmp_11_cast_reg_279) + $signed(tmp_7_cast_fu_194_p1));
-
-assign tmp_3_fu_203_p3 = {{tmp_2_fu_198_p2}, {4'd0}};
-
-assign tmp_4_fu_215_p3 = {{tmp_2_fu_198_p2}, {1'd0}};
-
-assign tmp_5_fu_227_p2 = ($signed(p_shl2_fu_211_p1) - $signed(p_shl3_fu_223_p1));
-
-assign tmp_6_fu_233_p2 = (sext_reg_266 + tmp_5_fu_227_p2);
-
-assign tmp_7_cast_fu_194_p1 = j_reg_110;
-
-assign tmp_7_fu_260_p2 = (tmp_9_fu_256_p1 + tmp_5_reg_292);
-
-assign tmp_9_fu_256_p1 = k_reg_121;
-
-assign tmp_fu_148_p3 = {{i_reg_99}, {4'd0}};
-
-assign tmp_s_fu_160_p3 = {{i_reg_99}, {1'd0}};
-
-always @ (posedge ap_clk) begin
-    sext_reg_266[63:30] <= 34'b0000000000000000000000000000000000;
-    tmp_11_cast_reg_279[0] <= 1'b0;
-    tmp_5_reg_292[0] <= 1'b0;
-end
+assign tmp_fu_113_p1 = i_reg_79;
 
 endmodule //store_output

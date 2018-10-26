@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Oct 25 16:04:06 2018
+| Date             : Thu Oct 25 23:53:42 2018
 | Host             : Jay running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.850        |
+| Total On-Chip Power (W)  | 2.033        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.703        |
-| Device Static (W)        | 0.147        |
+| Dynamic (W)              | 1.872        |
+| Device Static (W)        | 0.160        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 63.7         |
-| Junction Temperature (C) | 46.3         |
+| Max Ambient (C)          | 61.6         |
+| Junction Temperature (C) | 48.4         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.048 |        3 |       --- |             --- |
-| Slice Logic              |     0.030 |    27492 |       --- |             --- |
-|   LUT as Logic           |     0.024 |     8400 |     53200 |           15.79 |
-|   Register               |     0.003 |    13364 |    106400 |           12.56 |
-|   LUT as Distributed RAM |     0.002 |      752 |     17400 |            4.32 |
-|   LUT as Shift Register  |    <0.001 |      480 |     17400 |            2.76 |
-|   CARRY4                 |    <0.001 |      396 |     13300 |            2.98 |
-|   F7/F8 Muxes            |    <0.001 |        5 |     53200 |           <0.01 |
-|   Others                 |     0.000 |     1079 |       --- |             --- |
-| Signals                  |     0.044 |    19456 |       --- |             --- |
-| Block RAM                |     0.029 |       14 |       140 |           10.00 |
-| DSPs                     |     0.006 |       10 |       220 |            4.55 |
+| Clocks                   |     0.060 |        3 |       --- |             --- |
+| Slice Logic              |     0.046 |    34681 |       --- |             --- |
+|   LUT as Logic           |     0.037 |    11027 |     53200 |           20.73 |
+|   Register               |     0.004 |    16526 |    106400 |           15.53 |
+|   LUT as Distributed RAM |     0.002 |      816 |     17400 |            4.69 |
+|   CARRY4                 |     0.001 |      611 |     13300 |            4.59 |
+|   LUT as Shift Register  |    <0.001 |      484 |     17400 |            2.78 |
+|   F7/F8 Muxes            |    <0.001 |       37 |     53200 |            0.07 |
+|   Others                 |     0.000 |     1532 |       --- |             --- |
+| Signals                  |     0.079 |    25577 |       --- |             --- |
+| Block RAM                |     0.125 |     85.5 |       140 |           61.07 |
+| DSPs                     |     0.017 |       25 |       220 |           11.36 |
 | PS7                      |     1.546 |        1 |       --- |             --- |
-| Static Power             |     0.147 |          |           |                 |
-| Total                    |     1.850 |          |           |                 |
+| Static Power             |     0.160 |          |           |                 |
+| Total                    |     2.033 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,8 +76,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.172 |       0.155 |      0.017 |
-| Vccaux    |       1.800 |     0.016 |       0.000 |      0.016 |
+| Vccint    |       1.000 |     0.338 |       0.317 |      0.021 |
+| Vccaux    |       1.800 |     0.017 |       0.000 |      0.017 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -85,11 +85,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.004 |       0.002 |      0.002 |
+| Vccbram   |       1.000 |     0.017 |       0.009 |      0.007 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.767 |       0.735 |      0.032 |
+| Vccpint   |       1.000 |     0.769 |       0.735 |      0.034 |
 | Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
@@ -152,8 +152,8 @@ Table of Contents
 +---------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                              | Power (W) |
 +---------------------------------------------------------------------------------------------------+-----------+
-| design_1_wrapper                                                                                  |     1.703 |
-|   design_1_i                                                                                      |     1.703 |
+| design_1_wrapper                                                                                  |     1.872 |
+|   design_1_i                                                                                      |     1.872 |
 |     axi_smc                                                                                       |     0.012 |
 |       inst                                                                                        |     0.012 |
 |         clk_map                                                                                   |    <0.001 |
@@ -180,7 +180,7 @@ Table of Contents
 |                   gen_srls[3].srl_nx1                                                             |    <0.001 |
 |                 gen_w_cmd_fifo.w_cmd_fifo                                                         |    <0.001 |
 |               r_reg                                                                               |    <0.001 |
-|               splitter_inst                                                                       |     0.001 |
+|               splitter_inst                                                                       |     0.002 |
 |                 gen_axi3.axi3_conv_inst                                                           |     0.001 |
 |                   USE_READ.USE_SPLIT_R.read_addr_inst                                             |    <0.001 |
 |                     USE_R_CHANNEL.cmd_queue                                                       |    <0.001 |
@@ -326,8 +326,8 @@ Table of Contents
 |                     gen_wr.inst_wr_addra_p1                                                       |    <0.001 |
 |               inst_si_handler                                                                     |    <0.001 |
 |                 inst_arb_stall_late                                                               |    <0.001 |
-|     axi_smc_1                                                                                     |     0.012 |
-|       inst                                                                                        |     0.012 |
+|     axi_smc_1                                                                                     |     0.013 |
+|       inst                                                                                        |     0.013 |
 |         clk_map                                                                                   |    <0.001 |
 |           psr_aclk                                                                                |    <0.001 |
 |             U0                                                                                    |    <0.001 |
@@ -381,7 +381,7 @@ Table of Contents
 |               aw_sreg                                                                             |    <0.001 |
 |               b_sreg                                                                              |    <0.001 |
 |               gen_endpoint.decerr_slave_inst                                                      |    <0.001 |
-|               r_sreg                                                                              |    <0.001 |
+|               r_sreg                                                                              |     0.001 |
 |               w_sreg                                                                              |    <0.001 |
 |           s00_si_converter                                                                        |    <0.001 |
 |             inst                                                                                  |    <0.001 |
@@ -524,7 +524,7 @@ Table of Contents
 |                   gen_srls[3].srl_nx1                                                             |    <0.001 |
 |                 gen_w_cmd_fifo.w_cmd_fifo                                                         |    <0.001 |
 |               r_reg                                                                               |    <0.001 |
-|               splitter_inst                                                                       |     0.001 |
+|               splitter_inst                                                                       |     0.002 |
 |                 gen_axi3.axi3_conv_inst                                                           |     0.001 |
 |                   USE_READ.USE_SPLIT_R.read_addr_inst                                             |    <0.001 |
 |                     USE_R_CHANNEL.cmd_queue                                                       |    <0.001 |
@@ -670,8 +670,8 @@ Table of Contents
 |                     gen_wr.inst_wr_addra_p1                                                       |    <0.001 |
 |               inst_si_handler                                                                     |    <0.001 |
 |                 inst_arb_stall_late                                                               |    <0.001 |
-|     axi_smc_3                                                                                     |     0.011 |
-|       inst                                                                                        |     0.011 |
+|     axi_smc_3                                                                                     |     0.012 |
+|       inst                                                                                        |     0.012 |
 |         clk_map                                                                                   |    <0.001 |
 |           psr_aclk                                                                                |    <0.001 |
 |             U0                                                                                    |    <0.001 |
@@ -843,18 +843,54 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I                       |    <0.001 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I                       |    <0.001 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                       |    <0.001 |
-|         TC_CORE_I                                                                                 |     0.003 |
+|         TC_CORE_I                                                                                 |     0.002 |
 |           COUNTER_0_I                                                                             |     0.001 |
 |             COUNTER_I                                                                             |     0.001 |
 |           GEN_SECOND_TIMER.COUNTER_1_I                                                            |     0.001 |
-|             COUNTER_I                                                                             |     0.001 |
+|             COUNTER_I                                                                             |    <0.001 |
 |           READ_MUX_I                                                                              |    <0.001 |
 |           TIMER_CONTROL_I                                                                         |    <0.001 |
 |             INPUT_DOUBLE_REGS                                                                     |    <0.001 |
 |             INPUT_DOUBLE_REGS2                                                                    |    <0.001 |
 |             INPUT_DOUBLE_REGS3                                                                    |    <0.001 |
-|     conv1_0                                                                                       |     0.098 |
-|       inst                                                                                        |     0.098 |
+|     conv1_0                                                                                       |     0.267 |
+|       inst                                                                                        |     0.267 |
+|         bias_3_oc_U                                                                               |    <0.001 |
+|           conv1_bias_3_oc_ram_U                                                                   |    <0.001 |
+|             ram_reg_0_15_0_0                                                                      |    <0.001 |
+|             ram_reg_0_15_10_10                                                                    |    <0.001 |
+|             ram_reg_0_15_11_11                                                                    |    <0.001 |
+|             ram_reg_0_15_12_12                                                                    |    <0.001 |
+|             ram_reg_0_15_13_13                                                                    |    <0.001 |
+|             ram_reg_0_15_14_14                                                                    |    <0.001 |
+|             ram_reg_0_15_15_15                                                                    |    <0.001 |
+|             ram_reg_0_15_16_16                                                                    |    <0.001 |
+|             ram_reg_0_15_17_17                                                                    |    <0.001 |
+|             ram_reg_0_15_18_18                                                                    |    <0.001 |
+|             ram_reg_0_15_19_19                                                                    |    <0.001 |
+|             ram_reg_0_15_1_1                                                                      |    <0.001 |
+|             ram_reg_0_15_20_20                                                                    |    <0.001 |
+|             ram_reg_0_15_21_21                                                                    |    <0.001 |
+|             ram_reg_0_15_22_22                                                                    |    <0.001 |
+|             ram_reg_0_15_23_23                                                                    |    <0.001 |
+|             ram_reg_0_15_24_24                                                                    |    <0.001 |
+|             ram_reg_0_15_25_25                                                                    |    <0.001 |
+|             ram_reg_0_15_26_26                                                                    |    <0.001 |
+|             ram_reg_0_15_27_27                                                                    |    <0.001 |
+|             ram_reg_0_15_28_28                                                                    |    <0.001 |
+|             ram_reg_0_15_29_29                                                                    |    <0.001 |
+|             ram_reg_0_15_2_2                                                                      |    <0.001 |
+|             ram_reg_0_15_30_30                                                                    |    <0.001 |
+|             ram_reg_0_15_31_31                                                                    |    <0.001 |
+|             ram_reg_0_15_3_3                                                                      |    <0.001 |
+|             ram_reg_0_15_4_4                                                                      |    <0.001 |
+|             ram_reg_0_15_5_5                                                                      |    <0.001 |
+|             ram_reg_0_15_6_6                                                                      |    <0.001 |
+|             ram_reg_0_15_7_7                                                                      |    <0.001 |
+|             ram_reg_0_15_8_8                                                                      |    <0.001 |
+|             ram_reg_0_15_9_9                                                                      |    <0.001 |
+|         bias_5_oc_U                                                                               |    <0.001 |
+|           conv1_bias_5_oc_ram_U                                                                   |    <0.001 |
 |         bias_oc_U                                                                                 |    <0.001 |
 |           conv1_bias_oc_ram_U                                                                     |    <0.001 |
 |             ram_reg_0_7_0_0                                                                       |    <0.001 |
@@ -889,13 +925,13 @@ Table of Contents
 |             ram_reg_0_7_7_7                                                                       |    <0.001 |
 |             ram_reg_0_7_8_8                                                                       |    <0.001 |
 |             ram_reg_0_7_9_9                                                                       |    <0.001 |
-|         conv1_CTL_s_axi_U                                                                         |    <0.001 |
-|         conv1_DATA_BIAS_m_axi_U                                                                   |     0.007 |
-|           bus_read                                                                                |     0.007 |
+|         conv1_CTL_s_axi_U                                                                         |     0.002 |
+|         conv1_DATA_BIAS_m_axi_U                                                                   |     0.008 |
+|           bus_read                                                                                |     0.008 |
 |             buff_rdata                                                                            |     0.004 |
 |             fifo_rctl                                                                             |    <0.001 |
 |             fifo_rreq                                                                             |    <0.001 |
-|             rs_rdata                                                                              |    <0.001 |
+|             rs_rdata                                                                              |     0.001 |
 |             rs_rreq                                                                               |    <0.001 |
 |         conv1_DATA_INPUT_m_axi_U                                                                  |     0.007 |
 |           bus_read                                                                                |     0.007 |
@@ -904,7 +940,7 @@ Table of Contents
 |             fifo_rreq                                                                             |    <0.001 |
 |             rs_rdata                                                                              |    <0.001 |
 |             rs_rreq                                                                               |    <0.001 |
-|         conv1_DATA_OUTPUT_m_axi_U                                                                 |     0.006 |
+|         conv1_DATA_OUTPUT_m_axi_U                                                                 |     0.005 |
 |           bus_read                                                                                |    <0.001 |
 |             buff_rdata                                                                            |    <0.001 |
 |             rs_rdata                                                                              |    <0.001 |
@@ -916,15 +952,222 @@ Table of Contents
 |             fifo_wreq                                                                             |    <0.001 |
 |             rs_wreq                                                                               |    <0.001 |
 |           wreq_throttl                                                                            |    <0.001 |
-|         conv1_DATA_WEIGHT_m_axi_U                                                                 |     0.007 |
-|           bus_read                                                                                |     0.007 |
-|             buff_rdata                                                                            |     0.004 |
+|         conv1_DATA_WEIGHT_m_axi_U                                                                 |     0.008 |
+|           bus_read                                                                                |     0.008 |
+|             buff_rdata                                                                            |     0.005 |
 |             fifo_rctl                                                                             |    <0.001 |
 |             fifo_rreq                                                                             |    <0.001 |
-|             rs_rdata                                                                              |    <0.001 |
+|             rs_rdata                                                                              |     0.001 |
 |             rs_rreq                                                                               |    <0.001 |
-|         grp_convulution1_fu_142                                                                   |     0.043 |
-|           conv1_fadd_32ns_3bkb_U10                                                                |     0.005 |
+|         conv1_fcmp_32ns_3dEe_U70                                                                  |    <0.001 |
+|           conv1_ap_fcmp_0_no_dsp_32_u                                                             |    <0.001 |
+|             U0                                                                                    |    <0.001 |
+|               i_synth                                                                             |    <0.001 |
+|                 COMP_OP.SPD.OP                                                                    |    <0.001 |
+|                   STRUCT_CMP.A_EQ_B_DET                                                           |    <0.001 |
+|                     WIDE_AND                                                                      |    <0.001 |
+|                   STRUCT_CMP.A_EXP_ALL_ONE_DET                                                    |    <0.001 |
+|                     CARRY_ZERO_DET                                                                |    <0.001 |
+|                   STRUCT_CMP.A_FRAC_NOT_ZERO_DET                                                  |    <0.001 |
+|                     WIDE_NOR                                                                      |    <0.001 |
+|                   STRUCT_CMP.A_GT_B_DET                                                           |    <0.001 |
+|                     C_CHAIN                                                                       |    <0.001 |
+|                   STRUCT_CMP.EXP_ALL_ZERO_DET                                                     |    <0.001 |
+|                     CARRY_ZERO_DET                                                                |    <0.001 |
+|         grp_convolution_3_fu_362                                                                  |     0.014 |
+|           conv1_fadd_32ns_3bkb_U40                                                                |     0.006 |
+|             conv1_ap_fadd_3_full_dsp_32_u                                                         |     0.006 |
+|               U0                                                                                  |     0.006 |
+|                 i_synth                                                                           |     0.006 |
+|                   ADDSUB_OP.ADDSUB                                                                |     0.006 |
+|                     SPEED_OP.DSP.OP                                                               |     0.006 |
+|                       A_IP_DELAY                                                                  |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       B_IP_DELAY                                                                  |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       DSP48E1_BODY.ALIGN_ADD                                                      |     0.001 |
+|                         DSP2                                                                      |     0.001 |
+|                         ZERO_14_DET.CARRY_MUX                                                     |     0.000 |
+|                         ZERO_14_DET.ZERO_DET                                                      |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                         Z_14_LZD_DELAY                                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                       DSP48E1_BODY.EXP                                                            |     0.002 |
+|                         A_EXP_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         A_SIGN_DELAY                                                              |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         BMA_EXP_DELAY                                                             |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         B_EXP_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         B_SIGN_DELAY                                                              |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         CANCELLATION_DELAY                                                        |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         COND_DET_A                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ONE_DEL                                             |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ZERO_DEL                                            |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           MANT_CARRY.MANT_ALL_ZERO_DET                                            |    <0.001 |
+|                             CARRY_ZERO_DET                                                        |    <0.001 |
+|                         COND_DET_B                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ONE_DEL                                             |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ZERO_DEL                                            |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           MANT_CARRY.MANT_ALL_ZERO_DET                                            |    <0.001 |
+|                             CARRY_ZERO_DET                                                        |    <0.001 |
+|                         DET_SIGN_DELAY                                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         EXP_OFF.LRG_EXP_DELAY                                                     |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         EXP_OFF.STRUCT_ADD                                                        |    <0.001 |
+|                         NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY                                  |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         NUMB_CMP                                                                  |    <0.001 |
+|                           NOT_FAST.CMP                                                            |    <0.001 |
+|                             C_CHAIN                                                               |    <0.001 |
+|                         STATE_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         SUB_DELAY                                                                 |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         merged_sub_mux.STRUCT_ADD                                                 |    <0.001 |
+|                       DSP48E1_BODY.NORM_RND                                                       |     0.001 |
+|                         FULL_USAGE_DSP.LOD                                                        |    <0.001 |
+|                         FULL_USAGE_DSP.MSBS_DELAY                                                 |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         FULL_USAGE_DSP.ROUND_BIT_DELAY                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         FULL_USAGE_DSP.SHIFT_RND                                                  |     0.001 |
+|           conv1_fmul_32ns_3cud_U41                                                                |     0.005 |
+|             conv1_ap_fmul_2_max_dsp_32_u                                                          |     0.004 |
+|               U0                                                                                  |     0.004 |
+|                 i_synth                                                                           |     0.004 |
+|                   MULT.OP                                                                         |     0.004 |
+|                     EXP                                                                           |    <0.001 |
+|                       COND_DET_A                                                                  |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                                              |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                       COND_DET_B                                                                  |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                                              |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                       EXP_ADD.C_CHAIN                                                             |    <0.001 |
+|                       EXP_PRE_RND_DEL                                                             |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       IP_SIGN_DELAY                                                               |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       SIG_DELAY                                                                   |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       STATE_DELAY                                                                 |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                     MULT                                                                          |     0.002 |
+|                       DSP48E1_SPD_SGL_VARIANT.FIX_MULT                                            |     0.002 |
+|                         DSP1                                                                      |    <0.001 |
+|                         DSP2                                                                      |     0.001 |
+|                     OP                                                                            |    <0.001 |
+|                     R_AND_R                                                                       |    <0.001 |
+|                       LAT_OPT.FULL.R_AND_R                                                        |    <0.001 |
+|                         DSP48E1_SGL_EXP_IP.OLD_ADD.ADD                                            |    <0.001 |
+|         grp_convolution_5_fu_370                                                                  |     0.016 |
+|           conv1_fadd_32ns_3bkb_U53                                                                |     0.008 |
+|             conv1_ap_fadd_3_full_dsp_32_u                                                         |     0.007 |
+|               U0                                                                                  |     0.006 |
+|                 i_synth                                                                           |     0.006 |
+|                   ADDSUB_OP.ADDSUB                                                                |     0.006 |
+|                     SPEED_OP.DSP.OP                                                               |     0.006 |
+|                       A_IP_DELAY                                                                  |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       B_IP_DELAY                                                                  |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       DSP48E1_BODY.ALIGN_ADD                                                      |     0.001 |
+|                         DSP2                                                                      |     0.001 |
+|                         ZERO_14_DET.CARRY_MUX                                                     |     0.000 |
+|                         ZERO_14_DET.ZERO_DET                                                      |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                         Z_14_LZD_DELAY                                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                       DSP48E1_BODY.EXP                                                            |     0.003 |
+|                         A_EXP_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         A_SIGN_DELAY                                                              |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         BMA_EXP_DELAY                                                             |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         B_EXP_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         B_SIGN_DELAY                                                              |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         CANCELLATION_DELAY                                                        |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         COND_DET_A                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ONE_DEL                                             |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ZERO_DEL                                            |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           MANT_CARRY.MANT_ALL_ZERO_DET                                            |    <0.001 |
+|                             CARRY_ZERO_DET                                                        |    <0.001 |
+|                         COND_DET_B                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ONE_DEL                                             |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ZERO_DEL                                            |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           MANT_CARRY.MANT_ALL_ZERO_DET                                            |    <0.001 |
+|                             CARRY_ZERO_DET                                                        |    <0.001 |
+|                         DET_SIGN_DELAY                                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         EXP_OFF.LRG_EXP_DELAY                                                     |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         EXP_OFF.STRUCT_ADD                                                        |    <0.001 |
+|                         NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY                                  |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         NUMB_CMP                                                                  |    <0.001 |
+|                           NOT_FAST.CMP                                                            |    <0.001 |
+|                             C_CHAIN                                                               |    <0.001 |
+|                         STATE_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         SUB_DELAY                                                                 |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         merged_sub_mux.STRUCT_ADD                                                 |    <0.001 |
+|                       DSP48E1_BODY.NORM_RND                                                       |     0.001 |
+|                         FULL_USAGE_DSP.LOD                                                        |    <0.001 |
+|                         FULL_USAGE_DSP.MSBS_DELAY                                                 |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         FULL_USAGE_DSP.ROUND_BIT_DELAY                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         FULL_USAGE_DSP.SHIFT_RND                                                  |     0.001 |
+|           conv1_fmul_32ns_3cud_U54                                                                |     0.005 |
+|             conv1_ap_fmul_2_max_dsp_32_u                                                          |     0.004 |
+|               U0                                                                                  |     0.004 |
+|                 i_synth                                                                           |     0.004 |
+|                   MULT.OP                                                                         |     0.004 |
+|                     EXP                                                                           |    <0.001 |
+|                       COND_DET_A                                                                  |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                                              |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                       COND_DET_B                                                                  |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                                              |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                       EXP_ADD.C_CHAIN                                                             |    <0.001 |
+|                       EXP_PRE_RND_DEL                                                             |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       IP_SIGN_DELAY                                                               |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       SIG_DELAY                                                                   |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       STATE_DELAY                                                                 |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                     MULT                                                                          |     0.002 |
+|                       DSP48E1_SPD_SGL_VARIANT.FIX_MULT                                            |     0.002 |
+|                         DSP1                                                                      |    <0.001 |
+|                         DSP2                                                                      |     0.002 |
+|                     OP                                                                            |    <0.001 |
+|                     R_AND_R                                                                       |    <0.001 |
+|                       LAT_OPT.FULL.R_AND_R                                                        |    <0.001 |
+|                         DSP48E1_SGL_EXP_IP.OLD_ADD.ADD                                            |    <0.001 |
+|         grp_convulution1_fu_354                                                                   |     0.046 |
+|           conv1_fadd_32ns_3bkb_U22                                                                |     0.005 |
 |             conv1_ap_fadd_3_full_dsp_32_u                                                         |     0.004 |
 |               U0                                                                                  |     0.004 |
 |                 i_synth                                                                           |     0.004 |
@@ -990,12 +1233,12 @@ Table of Contents
 |                         FULL_USAGE_DSP.ROUND_BIT_DELAY                                            |    <0.001 |
 |                           i_pipe                                                                  |    <0.001 |
 |                         FULL_USAGE_DSP.SHIFT_RND                                                  |    <0.001 |
-|           conv1_fadd_32ns_3bkb_U11                                                                |     0.006 |
-|             conv1_ap_fadd_3_full_dsp_32_u                                                         |     0.005 |
-|               U0                                                                                  |     0.005 |
-|                 i_synth                                                                           |     0.005 |
-|                   ADDSUB_OP.ADDSUB                                                                |     0.005 |
-|                     SPEED_OP.DSP.OP                                                               |     0.005 |
+|           conv1_fadd_32ns_3bkb_U23                                                                |     0.006 |
+|             conv1_ap_fadd_3_full_dsp_32_u                                                         |     0.004 |
+|               U0                                                                                  |     0.004 |
+|                 i_synth                                                                           |     0.004 |
+|                   ADDSUB_OP.ADDSUB                                                                |     0.004 |
+|                     SPEED_OP.DSP.OP                                                               |     0.004 |
 |                       A_IP_DELAY                                                                  |    <0.001 |
 |                         i_pipe                                                                    |    <0.001 |
 |                       B_IP_DELAY                                                                  |    <0.001 |
@@ -1056,11 +1299,11 @@ Table of Contents
 |                         FULL_USAGE_DSP.ROUND_BIT_DELAY                                            |    <0.001 |
 |                           i_pipe                                                                  |    <0.001 |
 |                         FULL_USAGE_DSP.SHIFT_RND                                                  |    <0.001 |
-|           conv1_fmul_32ns_3cud_U12                                                                |     0.006 |
-|             conv1_ap_fmul_2_max_dsp_32_u                                                          |     0.005 |
-|               U0                                                                                  |     0.005 |
-|                 i_synth                                                                           |     0.005 |
-|                   MULT.OP                                                                         |     0.005 |
+|           conv1_fmul_32ns_3cud_U24                                                                |     0.007 |
+|             conv1_ap_fmul_2_max_dsp_32_u                                                          |     0.006 |
+|               U0                                                                                  |     0.006 |
+|                 i_synth                                                                           |     0.006 |
+|                   MULT.OP                                                                         |     0.006 |
 |                     EXP                                                                           |    <0.001 |
 |                       COND_DET_A                                                                  |    <0.001 |
 |                         MANT_CARRY.MANT_ALL_ZERO_DET                                              |    <0.001 |
@@ -1080,16 +1323,16 @@ Table of Contents
 |                     MULT                                                                          |     0.002 |
 |                       DSP48E1_SPD_SGL_VARIANT.FIX_MULT                                            |     0.002 |
 |                         DSP1                                                                      |    <0.001 |
-|                         DSP2                                                                      |     0.001 |
+|                         DSP2                                                                      |     0.002 |
 |                     OP                                                                            |     0.002 |
 |                     R_AND_R                                                                       |    <0.001 |
 |                       LAT_OPT.FULL.R_AND_R                                                        |    <0.001 |
 |                         DSP48E1_SGL_EXP_IP.OLD_ADD.ADD                                            |    <0.001 |
-|           conv1_fmul_32ns_3cud_U13                                                                |     0.006 |
-|             conv1_ap_fmul_2_max_dsp_32_u                                                          |     0.005 |
-|               U0                                                                                  |     0.005 |
-|                 i_synth                                                                           |     0.005 |
-|                   MULT.OP                                                                         |     0.005 |
+|           conv1_fmul_32ns_3cud_U25                                                                |     0.007 |
+|             conv1_ap_fmul_2_max_dsp_32_u                                                          |     0.006 |
+|               U0                                                                                  |     0.006 |
+|                 i_synth                                                                           |     0.006 |
+|                   MULT.OP                                                                         |     0.006 |
 |                     EXP                                                                           |    <0.001 |
 |                       COND_DET_A                                                                  |    <0.001 |
 |                         MANT_CARRY.MANT_ALL_ZERO_DET                                              |    <0.001 |
@@ -1109,13 +1352,109 @@ Table of Contents
 |                     MULT                                                                          |     0.002 |
 |                       DSP48E1_SPD_SGL_VARIANT.FIX_MULT                                            |     0.002 |
 |                         DSP1                                                                      |    <0.001 |
-|                         DSP2                                                                      |     0.001 |
+|                         DSP2                                                                      |     0.002 |
 |                     OP                                                                            |     0.002 |
 |                     R_AND_R                                                                       |    <0.001 |
 |                       LAT_OPT.FULL.R_AND_R                                                        |    <0.001 |
 |                         DSP48E1_SGL_EXP_IP.OLD_ADD.ADD                                            |    <0.001 |
-|         grp_maxpool_2_fu_150                                                                      |     0.002 |
-|           conv1_fcmp_32ns_3dEe_U23                                                                |    <0.001 |
+|         grp_fc_6_fu_378                                                                           |     0.012 |
+|           conv1_fadd_32ns_3bkb_U59                                                                |     0.006 |
+|             conv1_ap_fadd_3_full_dsp_32_u                                                         |     0.005 |
+|               U0                                                                                  |     0.005 |
+|                 i_synth                                                                           |     0.005 |
+|                   ADDSUB_OP.ADDSUB                                                                |     0.005 |
+|                     SPEED_OP.DSP.OP                                                               |     0.005 |
+|                       A_IP_DELAY                                                                  |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       B_IP_DELAY                                                                  |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       DSP48E1_BODY.ALIGN_ADD                                                      |     0.001 |
+|                         DSP2                                                                      |     0.001 |
+|                         ZERO_14_DET.CARRY_MUX                                                     |     0.000 |
+|                         ZERO_14_DET.ZERO_DET                                                      |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                         Z_14_LZD_DELAY                                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                       DSP48E1_BODY.EXP                                                            |     0.002 |
+|                         A_EXP_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         A_SIGN_DELAY                                                              |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         BMA_EXP_DELAY                                                             |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         B_EXP_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         B_SIGN_DELAY                                                              |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         CANCELLATION_DELAY                                                        |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         COND_DET_A                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ONE_DEL                                             |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ZERO_DEL                                            |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           MANT_CARRY.MANT_ALL_ZERO_DET                                            |    <0.001 |
+|                             CARRY_ZERO_DET                                                        |    <0.001 |
+|                         COND_DET_B                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ONE_DEL                                             |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           EXP_DET_LUT.EXP_ALL_ZERO_DEL                                            |    <0.001 |
+|                             i_pipe                                                                |    <0.001 |
+|                           MANT_CARRY.MANT_ALL_ZERO_DET                                            |    <0.001 |
+|                             CARRY_ZERO_DET                                                        |    <0.001 |
+|                         DET_SIGN_DELAY                                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         EXP_OFF.LRG_EXP_DELAY                                                     |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         EXP_OFF.STRUCT_ADD                                                        |    <0.001 |
+|                         NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY                                  |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         NUMB_CMP                                                                  |    <0.001 |
+|                           NOT_FAST.CMP                                                            |    <0.001 |
+|                             C_CHAIN                                                               |    <0.001 |
+|                         STATE_DELAY                                                               |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         SUB_DELAY                                                                 |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         merged_sub_mux.STRUCT_ADD                                                 |    <0.001 |
+|                       DSP48E1_BODY.NORM_RND                                                       |     0.001 |
+|                         FULL_USAGE_DSP.LOD                                                        |    <0.001 |
+|                         FULL_USAGE_DSP.MSBS_DELAY                                                 |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         FULL_USAGE_DSP.ROUND_BIT_DELAY                                            |    <0.001 |
+|                           i_pipe                                                                  |    <0.001 |
+|                         FULL_USAGE_DSP.SHIFT_RND                                                  |     0.001 |
+|           conv1_fmul_32ns_3cud_U60                                                                |     0.005 |
+|             conv1_ap_fmul_2_max_dsp_32_u                                                          |     0.004 |
+|               U0                                                                                  |     0.004 |
+|                 i_synth                                                                           |     0.004 |
+|                   MULT.OP                                                                         |     0.004 |
+|                     EXP                                                                           |    <0.001 |
+|                       COND_DET_A                                                                  |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                                              |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                       COND_DET_B                                                                  |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                                              |    <0.001 |
+|                           CARRY_ZERO_DET                                                          |    <0.001 |
+|                       EXP_ADD.C_CHAIN                                                             |    <0.001 |
+|                       EXP_PRE_RND_DEL                                                             |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       IP_SIGN_DELAY                                                               |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       SIG_DELAY                                                                   |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                       STATE_DELAY                                                                 |    <0.001 |
+|                         i_pipe                                                                    |    <0.001 |
+|                     MULT                                                                          |     0.002 |
+|                       DSP48E1_SPD_SGL_VARIANT.FIX_MULT                                            |     0.002 |
+|                         DSP1                                                                      |    <0.001 |
+|                         DSP2                                                                      |     0.002 |
+|                     OP                                                                            |    <0.001 |
+|                     R_AND_R                                                                       |    <0.001 |
+|                       LAT_OPT.FULL.R_AND_R                                                        |    <0.001 |
+|                         DSP48E1_SGL_EXP_IP.OLD_ADD.ADD                                            |    <0.001 |
+|         grp_maxpool_2_fu_390                                                                      |     0.002 |
+|           conv1_fcmp_32ns_3dEe_U35                                                                |    <0.001 |
 |             conv1_ap_fcmp_0_no_dsp_32_u                                                           |    <0.001 |
 |               U0                                                                                  |    <0.001 |
 |                 i_synth                                                                           |    <0.001 |
@@ -1134,8 +1473,28 @@ Table of Contents
 |                       WIDE_NOR                                                                    |    <0.001 |
 |                     STRUCT_CMP.EXP_ALL_ZERO_DET                                                   |    <0.001 |
 |                       CARRY_ZERO_DET                                                              |    <0.001 |
-|         grp_relu_1_fu_156                                                                         |     0.002 |
-|           conv1_fcmp_32ns_3dEe_U20                                                                |    <0.001 |
+|         grp_maxpool_4_fu_396                                                                      |     0.002 |
+|           conv1_fcmp_32ns_3dEe_U48                                                                |    <0.001 |
+|             conv1_ap_fcmp_0_no_dsp_32_u                                                           |    <0.001 |
+|               U0                                                                                  |    <0.001 |
+|                 i_synth                                                                           |    <0.001 |
+|                   COMP_OP.SPD.OP                                                                  |    <0.001 |
+|                     STRUCT_CMP.A_EQ_B_DET                                                         |    <0.001 |
+|                       WIDE_AND                                                                    |    <0.001 |
+|                     STRUCT_CMP.A_EXP_ALL_ONE_DET                                                  |    <0.001 |
+|                       CARRY_ZERO_DET                                                              |    <0.001 |
+|                     STRUCT_CMP.A_FRAC_NOT_ZERO_DET                                                |    <0.001 |
+|                       WIDE_NOR                                                                    |    <0.001 |
+|                     STRUCT_CMP.A_GT_B_DET                                                         |    <0.001 |
+|                       C_CHAIN                                                                     |    <0.001 |
+|                     STRUCT_CMP.B_EXP_ALL_ONE_DET                                                  |    <0.001 |
+|                       CARRY_ZERO_DET                                                              |    <0.001 |
+|                     STRUCT_CMP.B_FRAC_NOT_ZERO_DET                                                |    <0.001 |
+|                       WIDE_NOR                                                                    |    <0.001 |
+|                     STRUCT_CMP.EXP_ALL_ZERO_DET                                                   |    <0.001 |
+|                       CARRY_ZERO_DET                                                              |    <0.001 |
+|         grp_relu_1_fu_418                                                                         |     0.002 |
+|           conv1_fcmp_32ns_3dEe_U32                                                                |    <0.001 |
 |             conv1_ap_fcmp_0_no_dsp_32_u                                                           |    <0.001 |
 |               U0                                                                                  |    <0.001 |
 |                 i_synth                                                                           |    <0.001 |
@@ -1150,8 +1509,8 @@ Table of Contents
 |                       C_CHAIN                                                                     |    <0.001 |
 |                     STRUCT_CMP.EXP_ALL_ZERO_DET                                                   |    <0.001 |
 |                       CARRY_ZERO_DET                                                              |    <0.001 |
-|         grp_relu_2_fu_161                                                                         |     0.001 |
-|           conv1_fcmp_32ns_3dEe_U26                                                                |    <0.001 |
+|         grp_relu_2_fu_433                                                                         |     0.001 |
+|           conv1_fcmp_32ns_3dEe_U38                                                                |    <0.001 |
 |             conv1_ap_fcmp_0_no_dsp_32_u                                                           |    <0.001 |
 |               U0                                                                                  |    <0.001 |
 |                 i_synth                                                                           |    <0.001 |
@@ -1166,20 +1525,100 @@ Table of Contents
 |                       C_CHAIN                                                                     |    <0.001 |
 |                     STRUCT_CMP.EXP_ALL_ZERO_DET                                                   |    <0.001 |
 |                       CARRY_ZERO_DET                                                              |    <0.001 |
-|         grp_store_bias_fu_192                                                                     |    <0.001 |
-|         grp_store_input_fu_183                                                                    |    <0.001 |
-|         grp_store_output_fu_175                                                                   |     0.001 |
-|         grp_store_weights_fu_166                                                                  |    <0.001 |
-|         input_oc_0_U                                                                              |     0.001 |
-|           conv1_input_oc_0_ram_U                                                                  |     0.001 |
+|         grp_relu_3_fu_423                                                                         |     0.001 |
+|           conv1_fcmp_32ns_3dEe_U46                                                                |    <0.001 |
+|             conv1_ap_fcmp_0_no_dsp_32_u                                                           |    <0.001 |
+|               U0                                                                                  |    <0.001 |
+|                 i_synth                                                                           |    <0.001 |
+|                   COMP_OP.SPD.OP                                                                  |    <0.001 |
+|                     STRUCT_CMP.A_EQ_B_DET                                                         |    <0.001 |
+|                       WIDE_AND                                                                    |    <0.001 |
+|                     STRUCT_CMP.A_EXP_ALL_ONE_DET                                                  |    <0.001 |
+|                       CARRY_ZERO_DET                                                              |    <0.001 |
+|                     STRUCT_CMP.A_FRAC_NOT_ZERO_DET                                                |    <0.001 |
+|                       WIDE_NOR                                                                    |    <0.001 |
+|                     STRUCT_CMP.A_GT_B_DET                                                         |    <0.001 |
+|                       C_CHAIN                                                                     |    <0.001 |
+|                     STRUCT_CMP.EXP_ALL_ZERO_DET                                                   |    <0.001 |
+|                       CARRY_ZERO_DET                                                              |    <0.001 |
+|         grp_relu_4_fu_428                                                                         |    <0.001 |
+|           conv1_fcmp_32ns_3dEe_U51                                                                |    <0.001 |
+|             conv1_ap_fcmp_0_no_dsp_32_u                                                           |    <0.001 |
+|               U0                                                                                  |    <0.001 |
+|                 i_synth                                                                           |    <0.001 |
+|                   COMP_OP.SPD.OP                                                                  |    <0.001 |
+|                     STRUCT_CMP.A_EQ_B_DET                                                         |    <0.001 |
+|                       WIDE_AND                                                                    |    <0.001 |
+|                     STRUCT_CMP.A_EXP_ALL_ONE_DET                                                  |    <0.001 |
+|                       CARRY_ZERO_DET                                                              |    <0.001 |
+|                     STRUCT_CMP.A_FRAC_NOT_ZERO_DET                                                |    <0.001 |
+|                       WIDE_NOR                                                                    |    <0.001 |
+|                     STRUCT_CMP.A_GT_B_DET                                                         |    <0.001 |
+|                       C_CHAIN                                                                     |    <0.001 |
+|                     STRUCT_CMP.EXP_ALL_ZERO_DET                                                   |    <0.001 |
+|                       CARRY_ZERO_DET                                                              |    <0.001 |
+|         grp_store_bias_3_fu_464                                                                   |    <0.001 |
+|         grp_store_bias_5_fu_456                                                                   |    <0.001 |
+|         grp_store_bias_fu_480                                                                     |    <0.001 |
+|         grp_store_input_fu_447                                                                    |    <0.001 |
+|         grp_store_output_fu_472                                                                   |    <0.001 |
+|         grp_store_weights_3_fu_410                                                                |     0.002 |
+|         grp_store_weights_5_fu_402                                                                |     0.012 |
+|         grp_store_weights_fu_438                                                                  |    <0.001 |
+|         input_oc_0_U                                                                              |     0.003 |
+|           conv1_input_oc_0_ram_U                                                                  |     0.003 |
 |         output1_oc_U                                                                              |     0.013 |
 |           conv1_output1_oc_ram_U                                                                  |     0.013 |
 |         output2_oc_U                                                                              |     0.003 |
 |           conv1_output2_oc_ram_U                                                                  |     0.003 |
-|         weights_oc_0_U                                                                            |     0.001 |
-|           conv1_weights_oc_0_ram_U                                                                |     0.001 |
-|     processing_system7_0                                                                          |     1.547 |
-|       inst                                                                                        |     1.547 |
+|         output3_oc_U                                                                              |     0.004 |
+|           conv1_output3_oc_ram_U                                                                  |     0.004 |
+|         output4_oc_U                                                                              |     0.002 |
+|           conv1_output4_oc_ram_U                                                                  |     0.002 |
+|         output5_oc_0_0_U                                                                          |     0.003 |
+|           conv1_bias_5_oc_ram_U                                                                   |     0.003 |
+|         output6_oc_U                                                                              |    <0.001 |
+|           conv1_output6_oc_ram_U                                                                  |    <0.001 |
+|             ram_reg_0_15_0_0                                                                      |    <0.001 |
+|             ram_reg_0_15_10_10                                                                    |    <0.001 |
+|             ram_reg_0_15_11_11                                                                    |    <0.001 |
+|             ram_reg_0_15_12_12                                                                    |    <0.001 |
+|             ram_reg_0_15_13_13                                                                    |    <0.001 |
+|             ram_reg_0_15_14_14                                                                    |    <0.001 |
+|             ram_reg_0_15_15_15                                                                    |    <0.001 |
+|             ram_reg_0_15_16_16                                                                    |    <0.001 |
+|             ram_reg_0_15_17_17                                                                    |    <0.001 |
+|             ram_reg_0_15_18_18                                                                    |    <0.001 |
+|             ram_reg_0_15_19_19                                                                    |    <0.001 |
+|             ram_reg_0_15_1_1                                                                      |    <0.001 |
+|             ram_reg_0_15_20_20                                                                    |    <0.001 |
+|             ram_reg_0_15_21_21                                                                    |    <0.001 |
+|             ram_reg_0_15_22_22                                                                    |    <0.001 |
+|             ram_reg_0_15_23_23                                                                    |    <0.001 |
+|             ram_reg_0_15_24_24                                                                    |    <0.001 |
+|             ram_reg_0_15_25_25                                                                    |    <0.001 |
+|             ram_reg_0_15_26_26                                                                    |    <0.001 |
+|             ram_reg_0_15_27_27                                                                    |    <0.001 |
+|             ram_reg_0_15_28_28                                                                    |    <0.001 |
+|             ram_reg_0_15_29_29                                                                    |    <0.001 |
+|             ram_reg_0_15_2_2                                                                      |    <0.001 |
+|             ram_reg_0_15_30_30                                                                    |    <0.001 |
+|             ram_reg_0_15_31_31                                                                    |    <0.001 |
+|             ram_reg_0_15_3_3                                                                      |    <0.001 |
+|             ram_reg_0_15_4_4                                                                      |    <0.001 |
+|             ram_reg_0_15_5_5                                                                      |    <0.001 |
+|             ram_reg_0_15_6_6                                                                      |    <0.001 |
+|             ram_reg_0_15_7_7                                                                      |    <0.001 |
+|             ram_reg_0_15_8_8                                                                      |    <0.001 |
+|             ram_reg_0_15_9_9                                                                      |    <0.001 |
+|         weights_3_oc_U                                                                            |     0.005 |
+|           conv1_weights_3_oc_ram_U                                                                |     0.005 |
+|         weights_5_oc_U                                                                            |     0.083 |
+|           conv1_weights_5_oc_ram_U                                                                |     0.083 |
+|         weights_oc_0_U                                                                            |     0.002 |
+|           conv1_weights_oc_0_ram_U                                                                |     0.002 |
+|     processing_system7_0                                                                          |     1.548 |
+|       inst                                                                                        |     1.548 |
 |     ps7_0_axi_periph                                                                              |     0.005 |
 |       s00_couplers                                                                                |     0.004 |
 |         auto_pc                                                                                   |     0.004 |
@@ -1206,9 +1645,9 @@ Table of Contents
 |               WR.b_channel_0                                                                      |    <0.001 |
 |                 bid_fifo_0                                                                        |    <0.001 |
 |                 bresp_fifo_0                                                                      |    <0.001 |
-|       xbar                                                                                        |    <0.001 |
-|         inst                                                                                      |    <0.001 |
-|           gen_sasd.crossbar_sasd_0                                                                |    <0.001 |
+|       xbar                                                                                        |     0.001 |
+|         inst                                                                                      |     0.001 |
+|           gen_sasd.crossbar_sasd_0                                                                |     0.001 |
 |             addr_arbiter_inst                                                                     |    <0.001 |
 |             gen_decerr.decerr_slave_inst                                                          |    <0.001 |
 |             reg_slice_r                                                                           |    <0.001 |

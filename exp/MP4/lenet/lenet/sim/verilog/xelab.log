@@ -6,6 +6,8 @@ Multi-threading is on. Using 2 slave threads.
 Determining compilation order of HDL files.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_automem_bias_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_bias_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_axi_master_DATA_BIAS.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_master_DATA_BIAS
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/AESL_axi_master_DATA_INPUT.v" into library xil_defaultlib
@@ -80,9 +82,14 @@ INFO: [VRFC 10-311] analyzing module conv1_output1_oc
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_output2_oc.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module conv1_output2_oc_ram
 INFO: [VRFC 10-311] analyzing module conv1_output2_oc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_output3_oc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv1_output3_oc_ram
+INFO: [VRFC 10-311] analyzing module conv1_output3_oc
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/conv1_weights_oc_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module conv1_weights_oc_0_ram
 INFO: [VRFC 10-311] analyzing module conv1_weights_oc_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/convolution_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolution_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/convulution1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module convulution1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/maxpool_2.v" into library xil_defaultlib
@@ -91,6 +98,8 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE5
 INFO: [VRFC 10-311] analyzing module relu_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/relu_2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module relu_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/relu_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module relu_3
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/store_bias.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module store_bias
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/sim/verilog/store_input.v" into library xil_defaultlib
@@ -224,6 +233,8 @@ Compiling module xil_defaultlib.conv1_output1_oc_ram
 Compiling module xil_defaultlib.conv1_output1_oc(DataWidth=32,Ad...
 Compiling module xil_defaultlib.conv1_output2_oc_ram
 Compiling module xil_defaultlib.conv1_output2_oc(DataWidth=32,Ad...
+Compiling module xil_defaultlib.conv1_output3_oc_ram
+Compiling module xil_defaultlib.conv1_output3_oc(DataWidth=32,Ad...
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_6.delay [\delay(width=7,length=0)\]
@@ -355,6 +366,7 @@ Compiling architecture xilinx of entity floating_point_v7_1_6.floating_point_v7_
 Compiling architecture conv1_ap_fmul_2_max_dsp_32_arch of entity xil_defaultlib.conv1_ap_fmul_2_max_dsp_32 [conv1_ap_fmul_2_max_dsp_32_defau...]
 Compiling module xil_defaultlib.conv1_fmul_32ns_3cud(ID=1)
 Compiling module xil_defaultlib.convulution1
+Compiling module xil_defaultlib.convolution_3
 Compiling architecture struct of entity floating_point_v7_1_6.carry_chain [\carry_chain(c_xdevicefamily="zy...]
 Compiling architecture synth of entity floating_point_v7_1_6.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
 Compiling architecture synth of entity floating_point_v7_1_6.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
@@ -375,12 +387,14 @@ Compiling architecture conv1_ap_fcmp_0_no_dsp_32_arch of entity xil_defaultlib.c
 Compiling module xil_defaultlib.conv1_fcmp_32ns_3dEe(ID=1)
 Compiling module xil_defaultlib.maxpool_2
 Compiling module xil_defaultlib.relu_1
+Compiling module xil_defaultlib.relu_3
 Compiling module xil_defaultlib.relu_2
 Compiling module xil_defaultlib.store_weights
 Compiling module xil_defaultlib.store_output
 Compiling module xil_defaultlib.store_input
 Compiling module xil_defaultlib.store_bias
 Compiling module xil_defaultlib.conv1
+Compiling module xil_defaultlib.AESL_automem_bias_3
 Compiling module xil_defaultlib.AESL_axi_master_DATA_INPUT
 Compiling module xil_defaultlib.AESL_axi_master_DATA_WEIGHT
 Compiling module xil_defaultlib.AESL_axi_master_DATA_BIAS

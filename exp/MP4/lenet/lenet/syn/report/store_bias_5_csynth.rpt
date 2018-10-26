@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vivado HLS Report for 'store_bias_5'
+================================================================
+* Date:           Thu Oct 25 23:32:30 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        lenet
+* Solution:       lenet
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  247|  247|  247|  247|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  240|  240|         2|          -|          -|   120|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     28|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     83|
+|Register         |        -|      -|      56|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|      56|    111|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------+----------+-------+---+----+------------+------------+
+    |   Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------+----------+-------+---+----+------------+------------+
+    |i_6_fu_100_p2      |     +    |      0|  0|  15|           7|           1|
+    |ap_block_state8    |    and   |      0|  0|   2|           1|           1|
+    |exitcond_fu_94_p2  |   icmp   |      0|  0|  11|           7|           5|
+    +-------------------+----------+-------+---+----+------------+------------+
+    |Total              |          |      0|  0|  28|          15|           7|
+    +-------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                          |  47|         10|    1|         10|
+    |ap_sig_ioackin_m_axi_bias_ARREADY  |   9|          2|    1|          2|
+    |bias_blk_n_AR                      |   9|          2|    1|          2|
+    |bias_blk_n_R                       |   9|          2|    1|          2|
+    |i_reg_71                           |   9|          2|    7|         14|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              |  83|         18|   11|         30|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   9|   0|    9|          0|
+    |ap_reg_ioackin_m_axi_bias_ARREADY  |   1|   0|    1|          0|
+    |bias_addr_read_reg_125             |  32|   0|   32|          0|
+    |i_6_reg_120                        |   7|   0|    7|          0|
+    |i_reg_71                           |   7|   0|    7|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              |  56|   0|   56|          0|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|ap_clk               |  in |    1| ap_ctrl_hs | store_bias_5 | return value |
+|ap_rst               |  in |    1| ap_ctrl_hs | store_bias_5 | return value |
+|ap_start             |  in |    1| ap_ctrl_hs | store_bias_5 | return value |
+|ap_done              | out |    1| ap_ctrl_hs | store_bias_5 | return value |
+|ap_idle              | out |    1| ap_ctrl_hs | store_bias_5 | return value |
+|ap_ready             | out |    1| ap_ctrl_hs | store_bias_5 | return value |
+|m_axi_bias_AWVALID   | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWREADY   |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWADDR    | out |   32|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWID      | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWLEN     | out |   32|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWSIZE    | out |    3|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWBURST   | out |    2|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWLOCK    | out |    2|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWCACHE   | out |    4|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWPROT    | out |    3|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWQOS     | out |    4|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWREGION  | out |    4|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_AWUSER    | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_WVALID    | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_WREADY    |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_WDATA     | out |   32|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_WSTRB     | out |    4|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_WLAST     | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_WID       | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_WUSER     | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARVALID   | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARREADY   |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARADDR    | out |   32|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARID      | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARLEN     | out |   32|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARSIZE    | out |    3|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARBURST   | out |    2|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARLOCK    | out |    2|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARCACHE   | out |    4|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARPROT    | out |    3|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARQOS     | out |    4|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARREGION  | out |    4|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_ARUSER    | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_RVALID    |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_RREADY    | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_RDATA     |  in |   32|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_RLAST     |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_RID       |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_RUSER     |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_RRESP     |  in |    2|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_BVALID    |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_BREADY    | out |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_BRESP     |  in |    2|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_BID       |  in |    1|    m_axi   |     bias     |    pointer   |
+|m_axi_bias_BUSER     |  in |    1|    m_axi   |     bias     |    pointer   |
+|bias_offset          |  in |   30|   ap_none  |  bias_offset |    scalar    |
+|bias_oc_address0     | out |    7|  ap_memory |    bias_oc   |     array    |
+|bias_oc_ce0          | out |    1|  ap_memory |    bias_oc   |     array    |
+|bias_oc_we0          | out |    1|  ap_memory |    bias_oc   |     array    |
+|bias_oc_d0           | out |   32|  ap_memory |    bias_oc   |     array    |
++---------------------+-----+-----+------------+--------------+--------------+
+

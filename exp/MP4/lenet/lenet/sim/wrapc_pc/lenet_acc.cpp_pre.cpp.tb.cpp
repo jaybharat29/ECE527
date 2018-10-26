@@ -11,10 +11,17 @@
 #1 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp"
 #1 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h" 1
 void convolution1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][28][28]);
-int conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][14][14]);
 void relu1(float input[6][28][28], float output[6][28][28]);
 void max_pooling2(float input[6][28][28],float output[6][14][14]);
 void relu2(float input[6][14][14], float output[6][14][14]);
+void convolution3(float input[6][14][14], float weights[16][6][5][5], float bias[16], float output[16][10][10]);
+void relu3(float input[16][10][10], float output[16][10][10]);
+
+
+int conv1(float input[1][32][32],
+  float weights[6][1][5][5], float weights_3[16][6][5][5],
+  float bias[6], float bias_3[16],
+  float output[16][10][10]);
 #2 "C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp" 2
 
 void store_input(float input[1][32][32], float input_oc[1][32][32])
@@ -48,11 +55,11 @@ void store_bias(float bias[6], float bias_oc[6])
   bias_oc[i] = bias[i];
 }
 
-void store_output(float output[6][14][14], float output_oc[6][14][14])
+void store_output(float output[16][10][10], float output_oc[16][10][10])
 {
- for(int i = 0; i < 6; i++)
-  for(int j = 0; j < 14; j++)
-   for(int k = 0; k < 14; k++)
+ for(int i = 0; i < 16; i++)
+  for(int j = 0; j < 10; j++)
+   for(int k = 0; k < 10; k++)
     output[i][j][k] = output_oc[i][j][k];
 }
 
@@ -121,12 +128,50 @@ void relu_2(float output[6][14][14])
 }
 
 
-int conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][14][14])
+void convolution_3(float input[6][14][14], float weights[16][6][5][5], float bias[16], float output[16][10][10])
+{
+    for(int co = 0; co < 16; co++)
+        for(int h = 0; h < 10; h++)
+            for(int w = 0; w < 10; w++)
+            {
+                    float sum = 0;
+                    for(int m = 0; m < 5; m++)
+                    {
+                        for(int n = 0; n < 5; n++)
+
+                            for (int ci = 0; ci < 6; ci++)
+#pragma HLS PIPELINE II=5
+                                sum += weights[co][ci][m][n] * input[ci][h+m][w+n];
+                    }
+
+                    output[co][h][w] = sum + bias[co];
+            }
+}
+
+void relu_3(float output[16][10][10])
+{
+ for(int i = 0; i < 16; i++)
+  for(int j = 0; j < 10; j++)
+   for(int k = 0; k < 10; k++)
+    if(output[i][j][k] < 0)
+     output[i][j][k] = 0;
+}
+
+int conv1(float input[1][32][32],
+  float weights[6][1][5][5], float weights_3[16][6][5][5],
+  float bias[6], float bias_3[16],
+  float output[16][10][10])
 {
 #pragma HLS INTERFACE m_axi depth=1024 port=input offset=slave bundle=DATA_INPUT
+
 #pragma HLS INTERFACE m_axi depth=150 port=weights offset=slave bundle=DATA_WEIGHT
+#pragma HLS INTERFACE m_axi depth=2400 port=weights_3 offset=slave bundle=DATA_WEIGHT
+
 #pragma HLS INTERFACE m_axi depth=6 port=bias offset=slave bundle=DATA_BIAS
+#pragma HLS INTERFACE m_axi depth=16 port=bias offset=slave bundle=DATA_BIAS
+
 #pragma HLS INTERFACE m_axi depth=4704 port=output offset=slave bundle=DATA_OUTPUT
+
 #pragma HLS INTERFACE s_axilite register port=return bundle=CTL
  float input_oc[1][32][32];
 
@@ -139,6 +184,7 @@ int conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], floa
  store_bias(bias, bias_oc);
  float output1_oc[6][28][28];
  float output2_oc[6][14][14];
+ float output3_oc[16][10][10];
 
 
  convulution1(input_oc, weights_oc, bias_oc, output1_oc);
@@ -148,6 +194,10 @@ int conv1(float input[1][32][32], float weights[6][1][5][5], float bias[6], floa
  maxpool_2(output1_oc, output2_oc);
  relu_2(output2_oc);
 
- store_output(output, output2_oc);
+
+ convolution_3(output2_oc, weights_3, bias_3, output3_oc);
+ relu_3(output3_oc);
+
+ store_output(output, output3_oc);
     return 0;
 }

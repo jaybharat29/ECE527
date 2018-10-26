@@ -89,8 +89,8 @@ struct store_bias : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_state8;
     sc_signal< sc_lv<1> > exitcond_fu_94_p2;
     sc_signal< sc_logic > ap_sig_ioackin_m_axi_bias_ARREADY;
-    sc_signal< sc_lv<3> > i_4_fu_100_p2;
-    sc_signal< sc_lv<3> > i_4_reg_120;
+    sc_signal< sc_lv<3> > i_8_fu_100_p2;
+    sc_signal< sc_lv<3> > i_8_reg_120;
     sc_signal< bool > ap_block_state8;
     sc_signal< sc_lv<32> > bias_addr_read_reg_125;
     sc_signal< sc_lv<3> > i_reg_71;
@@ -141,7 +141,7 @@ struct store_bias : public sc_module {
     void thread_bias_oc_d0();
     void thread_bias_oc_we0();
     void thread_exitcond_fu_94_p2();
-    void thread_i_4_fu_100_p2();
+    void thread_i_8_fu_100_p2();
     void thread_m_axi_bias_ARADDR();
     void thread_m_axi_bias_ARBURST();
     void thread_m_axi_bias_ARCACHE();

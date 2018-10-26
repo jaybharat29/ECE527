@@ -14,23 +14,23 @@ preplace inst axi_smc_3 -pg 1 -lvl 4 -y 520 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 830 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 5 -y 500 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 5 1 NJ
-preplace netloc conv1_0_m_axi_DATA_INPUT 1 3 1 1100
-preplace netloc axi_smc_2_M00_AXI 1 4 1 1410
-preplace netloc conv1_0_m_axi_DATA_WEIGHT 1 3 1 1120
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 370 440 NJ 440 NJ 440 1420J 320 1910
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 390 730 710 450 1130
+preplace netloc conv1_0_m_axi_DATA_INPUT 1 3 1 980
+preplace netloc axi_smc_2_M00_AXI 1 4 1 1340
+preplace netloc conv1_0_m_axi_DATA_WEIGHT 1 3 1 990
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 250 440 NJ 440 980J 680 NJ 680 1840
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 250 720 570 240 1010
 preplace netloc axi_smc_3_M00_AXI 1 4 1 N
-preplace netloc axi_smc_M00_AXI 1 4 1 1440
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 730 380J 750 NJ 750 NJ 750 NJ 750 1900
+preplace netloc axi_smc_M00_AXI 1 4 1 1360
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 -120 430 NJ 430 550J 530 970J 700 NJ 700 1820
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N
-preplace netloc conv1_0_m_axi_DATA_OUTPUT 1 3 1 1100
+preplace netloc conv1_0_m_axi_DATA_OUTPUT 1 3 1 990
 preplace netloc conv1_0_m_axi_DATA_BIAS 1 3 1 N
 preplace netloc processing_system7_0_FIXED_IO 1 5 1 NJ
-preplace netloc axi_smc_1_M00_AXI 1 4 1 1430
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 720 380 720 690 240 1110 600 1420 680 1910
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 700
-preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 370
-levelinfo -pg 1 0 200 540 910 1270 1670 1930 -top 0 -bot 930
+preplace netloc axi_smc_1_M00_AXI 1 4 1 1350
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 -110 640 240 420 560 230 1000 440 1330 690 1830
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 580
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 230
+levelinfo -pg 1 -140 60 400 780 1190 1590 1860 -top 0 -bot 1460
 ",
 }
 {

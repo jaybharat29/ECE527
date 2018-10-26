@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity conv1_CTL_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 6;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 7;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     -- axi4 lite slave signals
@@ -44,7 +44,13 @@ port (
     ap_return             :in   STD_LOGIC_VECTOR(31 downto 0);
     input_r               :out  STD_LOGIC_VECTOR(31 downto 0);
     weights               :out  STD_LOGIC_VECTOR(31 downto 0);
+    weights_3             :out  STD_LOGIC_VECTOR(31 downto 0);
+    weights_5             :out  STD_LOGIC_VECTOR(31 downto 0);
+    weights_6             :out  STD_LOGIC_VECTOR(31 downto 0);
     bias                  :out  STD_LOGIC_VECTOR(31 downto 0);
+    bias_3                :out  STD_LOGIC_VECTOR(31 downto 0);
+    bias_5                :out  STD_LOGIC_VECTOR(31 downto 0);
+    bias_6                :out  STD_LOGIC_VECTOR(31 downto 0);
     output_r              :out  STD_LOGIC_VECTOR(31 downto 0)
 );
 end entity conv1_CTL_s_axi;
@@ -76,12 +82,30 @@ end entity conv1_CTL_s_axi;
 -- 0x20 : Data signal of weights
 --        bit 31~0 - weights[31:0] (Read/Write)
 -- 0x24 : reserved
--- 0x28 : Data signal of bias
---        bit 31~0 - bias[31:0] (Read/Write)
+-- 0x28 : Data signal of weights_3
+--        bit 31~0 - weights_3[31:0] (Read/Write)
 -- 0x2c : reserved
--- 0x30 : Data signal of output_r
---        bit 31~0 - output_r[31:0] (Read/Write)
+-- 0x30 : Data signal of weights_5
+--        bit 31~0 - weights_5[31:0] (Read/Write)
 -- 0x34 : reserved
+-- 0x38 : Data signal of weights_6
+--        bit 31~0 - weights_6[31:0] (Read/Write)
+-- 0x3c : reserved
+-- 0x40 : Data signal of bias
+--        bit 31~0 - bias[31:0] (Read/Write)
+-- 0x44 : reserved
+-- 0x48 : Data signal of bias_3
+--        bit 31~0 - bias_3[31:0] (Read/Write)
+-- 0x4c : reserved
+-- 0x50 : Data signal of bias_5
+--        bit 31~0 - bias_5[31:0] (Read/Write)
+-- 0x54 : reserved
+-- 0x58 : Data signal of bias_6
+--        bit 31~0 - bias_6[31:0] (Read/Write)
+-- 0x5c : reserved
+-- 0x60 : Data signal of output_r
+--        bit 31~0 - output_r[31:0] (Read/Write)
+-- 0x64 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of conv1_CTL_s_axi is
@@ -89,20 +113,32 @@ architecture behave of conv1_CTL_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_CTRL         : INTEGER := 16#00#;
-    constant ADDR_GIE             : INTEGER := 16#04#;
-    constant ADDR_IER             : INTEGER := 16#08#;
-    constant ADDR_ISR             : INTEGER := 16#0c#;
-    constant ADDR_AP_RETURN_0     : INTEGER := 16#10#;
-    constant ADDR_INPUT_R_DATA_0  : INTEGER := 16#18#;
-    constant ADDR_INPUT_R_CTRL    : INTEGER := 16#1c#;
-    constant ADDR_WEIGHTS_DATA_0  : INTEGER := 16#20#;
-    constant ADDR_WEIGHTS_CTRL    : INTEGER := 16#24#;
-    constant ADDR_BIAS_DATA_0     : INTEGER := 16#28#;
-    constant ADDR_BIAS_CTRL       : INTEGER := 16#2c#;
-    constant ADDR_OUTPUT_R_DATA_0 : INTEGER := 16#30#;
-    constant ADDR_OUTPUT_R_CTRL   : INTEGER := 16#34#;
-    constant ADDR_BITS         : INTEGER := 6;
+    constant ADDR_AP_CTRL          : INTEGER := 16#00#;
+    constant ADDR_GIE              : INTEGER := 16#04#;
+    constant ADDR_IER              : INTEGER := 16#08#;
+    constant ADDR_ISR              : INTEGER := 16#0c#;
+    constant ADDR_AP_RETURN_0      : INTEGER := 16#10#;
+    constant ADDR_INPUT_R_DATA_0   : INTEGER := 16#18#;
+    constant ADDR_INPUT_R_CTRL     : INTEGER := 16#1c#;
+    constant ADDR_WEIGHTS_DATA_0   : INTEGER := 16#20#;
+    constant ADDR_WEIGHTS_CTRL     : INTEGER := 16#24#;
+    constant ADDR_WEIGHTS_3_DATA_0 : INTEGER := 16#28#;
+    constant ADDR_WEIGHTS_3_CTRL   : INTEGER := 16#2c#;
+    constant ADDR_WEIGHTS_5_DATA_0 : INTEGER := 16#30#;
+    constant ADDR_WEIGHTS_5_CTRL   : INTEGER := 16#34#;
+    constant ADDR_WEIGHTS_6_DATA_0 : INTEGER := 16#38#;
+    constant ADDR_WEIGHTS_6_CTRL   : INTEGER := 16#3c#;
+    constant ADDR_BIAS_DATA_0      : INTEGER := 16#40#;
+    constant ADDR_BIAS_CTRL        : INTEGER := 16#44#;
+    constant ADDR_BIAS_3_DATA_0    : INTEGER := 16#48#;
+    constant ADDR_BIAS_3_CTRL      : INTEGER := 16#4c#;
+    constant ADDR_BIAS_5_DATA_0    : INTEGER := 16#50#;
+    constant ADDR_BIAS_5_CTRL      : INTEGER := 16#54#;
+    constant ADDR_BIAS_6_DATA_0    : INTEGER := 16#58#;
+    constant ADDR_BIAS_6_CTRL      : INTEGER := 16#5c#;
+    constant ADDR_OUTPUT_R_DATA_0  : INTEGER := 16#60#;
+    constant ADDR_OUTPUT_R_CTRL    : INTEGER := 16#64#;
+    constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(31 downto 0);
@@ -127,7 +163,13 @@ architecture behave of conv1_CTL_s_axi is
     signal int_ap_return       : UNSIGNED(31 downto 0);
     signal int_input_r         : UNSIGNED(31 downto 0) := (others => '0');
     signal int_weights         : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_weights_3       : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_weights_5       : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_weights_6       : UNSIGNED(31 downto 0) := (others => '0');
     signal int_bias            : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_bias_3          : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_bias_5          : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_bias_6          : UNSIGNED(31 downto 0) := (others => '0');
     signal int_output_r        : UNSIGNED(31 downto 0) := (others => '0');
 
 
@@ -256,8 +298,20 @@ begin
                         rdata_data <= RESIZE(int_input_r(31 downto 0), 32);
                     when ADDR_WEIGHTS_DATA_0 =>
                         rdata_data <= RESIZE(int_weights(31 downto 0), 32);
+                    when ADDR_WEIGHTS_3_DATA_0 =>
+                        rdata_data <= RESIZE(int_weights_3(31 downto 0), 32);
+                    when ADDR_WEIGHTS_5_DATA_0 =>
+                        rdata_data <= RESIZE(int_weights_5(31 downto 0), 32);
+                    when ADDR_WEIGHTS_6_DATA_0 =>
+                        rdata_data <= RESIZE(int_weights_6(31 downto 0), 32);
                     when ADDR_BIAS_DATA_0 =>
                         rdata_data <= RESIZE(int_bias(31 downto 0), 32);
+                    when ADDR_BIAS_3_DATA_0 =>
+                        rdata_data <= RESIZE(int_bias_3(31 downto 0), 32);
+                    when ADDR_BIAS_5_DATA_0 =>
+                        rdata_data <= RESIZE(int_bias_5(31 downto 0), 32);
+                    when ADDR_BIAS_6_DATA_0 =>
+                        rdata_data <= RESIZE(int_bias_6(31 downto 0), 32);
                     when ADDR_OUTPUT_R_DATA_0 =>
                         rdata_data <= RESIZE(int_output_r(31 downto 0), 32);
                     when others =>
@@ -273,7 +327,13 @@ begin
     ap_start             <= int_ap_start;
     input_r              <= STD_LOGIC_VECTOR(int_input_r);
     weights              <= STD_LOGIC_VECTOR(int_weights);
+    weights_3            <= STD_LOGIC_VECTOR(int_weights_3);
+    weights_5            <= STD_LOGIC_VECTOR(int_weights_5);
+    weights_6            <= STD_LOGIC_VECTOR(int_weights_6);
     bias                 <= STD_LOGIC_VECTOR(int_bias);
+    bias_3               <= STD_LOGIC_VECTOR(int_bias_3);
+    bias_5               <= STD_LOGIC_VECTOR(int_bias_5);
+    bias_6               <= STD_LOGIC_VECTOR(int_bias_6);
     output_r             <= STD_LOGIC_VECTOR(int_output_r);
 
     process (ACLK)
@@ -440,8 +500,74 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_WEIGHTS_3_DATA_0) then
+                    int_weights_3(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_weights_3(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_WEIGHTS_5_DATA_0) then
+                    int_weights_5(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_weights_5(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_WEIGHTS_6_DATA_0) then
+                    int_weights_6(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_weights_6(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_BIAS_DATA_0) then
                     int_bias(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_bias(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_BIAS_3_DATA_0) then
+                    int_bias_3(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_bias_3(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_BIAS_5_DATA_0) then
+                    int_bias_5(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_bias_5(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_BIAS_6_DATA_0) then
+                    int_bias_6(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_bias_6(31 downto 0));
                 end if;
             end if;
         end if;

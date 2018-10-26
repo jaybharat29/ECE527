@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'conv1'" level="0">
-<item name = "Date">Thu Oct 25 15:27:47 2018
+<item name = "Date">Thu Oct 25 23:32:25 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -24,25 +24,37 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">107274, 107274, 107274, 107274, none</column>
+<column name="">2115980, 2115980, 2115980, 2115980, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_convulution1_fu_142">convulution1, 61278, 61278, 61278, 61278, none</column>
-<column name="grp_maxpool_2_fu_150">maxpool_2, 21349, 21349, 21349, 21349, none</column>
-<column name="grp_relu_1_fu_156">relu_1, 14461, 14461, 14461, 14461, none</column>
-<column name="grp_relu_2_fu_161">relu_2, 3709, 3709, 3709, 3709, none</column>
-<column name="grp_store_weights_fu_166">store_weights, 583, 583, 583, 583, none</column>
-<column name="grp_store_output_fu_175">store_output, 4129, 4129, 4129, 4129, none</column>
-<column name="grp_store_input_fu_183">store_input, 2337, 2337, 2337, 2337, none</column>
-<column name="grp_store_bias_fu_192">store_bias, 19, 19, 19, 19, none</column>
+<column name="grp_convulution1_fu_354">convulution1, 61278, 61278, 61278, 61278, none</column>
+<column name="grp_convolution_3_fu_362">convolution_3, 1228801, 1228801, 1228801, 1228801, none</column>
+<column name="grp_convolution_5_fu_370">convolution_5, 584281, 584281, 584281, 584281, none</column>
+<column name="grp_fc_6_fu_378">fc_6, 13357, 13357, 13357, 13357, none</column>
+<column name="grp_maxpool_2_fu_390">maxpool_2, 21349, 21349, 21349, 21349, none</column>
+<column name="grp_maxpool_4_fu_396">maxpool_4, 7393, 7393, 7393, 7393, none</column>
+<column name="grp_store_weights_5_fu_402">store_weights_5, 186481, 186481, 186481, 186481, none</column>
+<column name="grp_store_weights_3_fu_410">store_weights_3, 9345, 9345, 9345, 9345, none</column>
+<column name="grp_relu_1_fu_418">relu_1, 14461, 14461, 14461, 14461, none</column>
+<column name="grp_relu_3_fu_423">relu_3, 5153, 5153, 5153, 5153, none</column>
+<column name="grp_relu_4_fu_428">relu_4, 1393, 1393, 1393, 1393, none</column>
+<column name="grp_relu_2_fu_433">relu_2, 3709, 3709, 3709, 3709, none</column>
+<column name="grp_store_weights_fu_438">store_weights, 583, 583, 583, 583, none</column>
+<column name="grp_store_input_fu_447">store_input, 2337, 2337, 2337, 2337, none</column>
+<column name="grp_store_bias_5_fu_456">store_bias_5, 247, 247, 247, 247, none</column>
+<column name="grp_store_bias_3_fu_464">store_bias_3, 39, 39, 39, 39, none</column>
+<column name="grp_store_output_fu_472">store_output, 35, 35, 35, 35, none</column>
+<column name="grp_store_bias_fu_480">store_bias, 19, 19, 19, 19, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">360, 360, 3, -, -, 120, no</column>
+<column name="- Loop 2">30, 30, 3, -, -, 10, no</column>
 </table>
 </item>
 </section>

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Oct 25 15:46:44 2018
+//Date        : Thu Oct 25 23:40:19 2018
 //Host        : Jay running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -850,10 +850,10 @@ module design_1
         .m_axi_DATA_WEIGHT_WREADY(conv1_0_m_axi_DATA_WEIGHT_WREADY),
         .m_axi_DATA_WEIGHT_WSTRB(conv1_0_m_axi_DATA_WEIGHT_WSTRB),
         .m_axi_DATA_WEIGHT_WVALID(conv1_0_m_axi_DATA_WEIGHT_WVALID),
-        .s_axi_CTL_ARADDR(ps7_0_axi_periph_M00_AXI_ARADDR[5:0]),
+        .s_axi_CTL_ARADDR(ps7_0_axi_periph_M00_AXI_ARADDR[6:0]),
         .s_axi_CTL_ARREADY(ps7_0_axi_periph_M00_AXI_ARREADY),
         .s_axi_CTL_ARVALID(ps7_0_axi_periph_M00_AXI_ARVALID),
-        .s_axi_CTL_AWADDR(ps7_0_axi_periph_M00_AXI_AWADDR[5:0]),
+        .s_axi_CTL_AWADDR(ps7_0_axi_periph_M00_AXI_AWADDR[6:0]),
         .s_axi_CTL_AWREADY(ps7_0_axi_periph_M00_AXI_AWREADY),
         .s_axi_CTL_AWVALID(ps7_0_axi_periph_M00_AXI_AWVALID),
         .s_axi_CTL_BREADY(ps7_0_axi_periph_M00_AXI_BREADY),

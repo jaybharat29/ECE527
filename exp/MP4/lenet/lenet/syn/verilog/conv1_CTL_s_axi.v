@@ -8,7 +8,7 @@
 `timescale 1ns/1ps
 module conv1_CTL_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 6,
+    C_S_AXI_ADDR_WIDTH = 7,
     C_S_AXI_DATA_WIDTH = 32
 )(
     // axi4 lite slave signals
@@ -41,7 +41,13 @@ module conv1_CTL_s_axi
     input  wire [31:0]                   ap_return,
     output wire [31:0]                   input_r,
     output wire [31:0]                   weights,
+    output wire [31:0]                   weights_3,
+    output wire [31:0]                   weights_5,
+    output wire [31:0]                   weights_6,
     output wire [31:0]                   bias,
+    output wire [31:0]                   bias_3,
+    output wire [31:0]                   bias_5,
+    output wire [31:0]                   bias_6,
     output wire [31:0]                   output_r
 );
 //------------------------Address Info-------------------
@@ -71,37 +77,67 @@ module conv1_CTL_s_axi
 // 0x20 : Data signal of weights
 //        bit 31~0 - weights[31:0] (Read/Write)
 // 0x24 : reserved
-// 0x28 : Data signal of bias
-//        bit 31~0 - bias[31:0] (Read/Write)
+// 0x28 : Data signal of weights_3
+//        bit 31~0 - weights_3[31:0] (Read/Write)
 // 0x2c : reserved
-// 0x30 : Data signal of output_r
-//        bit 31~0 - output_r[31:0] (Read/Write)
+// 0x30 : Data signal of weights_5
+//        bit 31~0 - weights_5[31:0] (Read/Write)
 // 0x34 : reserved
+// 0x38 : Data signal of weights_6
+//        bit 31~0 - weights_6[31:0] (Read/Write)
+// 0x3c : reserved
+// 0x40 : Data signal of bias
+//        bit 31~0 - bias[31:0] (Read/Write)
+// 0x44 : reserved
+// 0x48 : Data signal of bias_3
+//        bit 31~0 - bias_3[31:0] (Read/Write)
+// 0x4c : reserved
+// 0x50 : Data signal of bias_5
+//        bit 31~0 - bias_5[31:0] (Read/Write)
+// 0x54 : reserved
+// 0x58 : Data signal of bias_6
+//        bit 31~0 - bias_6[31:0] (Read/Write)
+// 0x5c : reserved
+// 0x60 : Data signal of output_r
+//        bit 31~0 - output_r[31:0] (Read/Write)
+// 0x64 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL         = 6'h00,
-    ADDR_GIE             = 6'h04,
-    ADDR_IER             = 6'h08,
-    ADDR_ISR             = 6'h0c,
-    ADDR_AP_RETURN_0     = 6'h10,
-    ADDR_INPUT_R_DATA_0  = 6'h18,
-    ADDR_INPUT_R_CTRL    = 6'h1c,
-    ADDR_WEIGHTS_DATA_0  = 6'h20,
-    ADDR_WEIGHTS_CTRL    = 6'h24,
-    ADDR_BIAS_DATA_0     = 6'h28,
-    ADDR_BIAS_CTRL       = 6'h2c,
-    ADDR_OUTPUT_R_DATA_0 = 6'h30,
-    ADDR_OUTPUT_R_CTRL   = 6'h34,
-    WRIDLE               = 2'd0,
-    WRDATA               = 2'd1,
-    WRRESP               = 2'd2,
-    WRRESET              = 2'd3,
-    RDIDLE               = 2'd0,
-    RDDATA               = 2'd1,
-    RDRESET              = 2'd2,
-    ADDR_BITS         = 6;
+    ADDR_AP_CTRL          = 7'h00,
+    ADDR_GIE              = 7'h04,
+    ADDR_IER              = 7'h08,
+    ADDR_ISR              = 7'h0c,
+    ADDR_AP_RETURN_0      = 7'h10,
+    ADDR_INPUT_R_DATA_0   = 7'h18,
+    ADDR_INPUT_R_CTRL     = 7'h1c,
+    ADDR_WEIGHTS_DATA_0   = 7'h20,
+    ADDR_WEIGHTS_CTRL     = 7'h24,
+    ADDR_WEIGHTS_3_DATA_0 = 7'h28,
+    ADDR_WEIGHTS_3_CTRL   = 7'h2c,
+    ADDR_WEIGHTS_5_DATA_0 = 7'h30,
+    ADDR_WEIGHTS_5_CTRL   = 7'h34,
+    ADDR_WEIGHTS_6_DATA_0 = 7'h38,
+    ADDR_WEIGHTS_6_CTRL   = 7'h3c,
+    ADDR_BIAS_DATA_0      = 7'h40,
+    ADDR_BIAS_CTRL        = 7'h44,
+    ADDR_BIAS_3_DATA_0    = 7'h48,
+    ADDR_BIAS_3_CTRL      = 7'h4c,
+    ADDR_BIAS_5_DATA_0    = 7'h50,
+    ADDR_BIAS_5_CTRL      = 7'h54,
+    ADDR_BIAS_6_DATA_0    = 7'h58,
+    ADDR_BIAS_6_CTRL      = 7'h5c,
+    ADDR_OUTPUT_R_DATA_0  = 7'h60,
+    ADDR_OUTPUT_R_CTRL    = 7'h64,
+    WRIDLE                = 2'd0,
+    WRDATA                = 2'd1,
+    WRRESP                = 2'd2,
+    WRRESET               = 2'd3,
+    RDIDLE                = 2'd0,
+    RDDATA                = 2'd1,
+    RDRESET               = 2'd2,
+    ADDR_BITS         = 7;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -127,7 +163,13 @@ localparam
     reg  [31:0]                   int_ap_return;
     reg  [31:0]                   int_input_r = 'b0;
     reg  [31:0]                   int_weights = 'b0;
+    reg  [31:0]                   int_weights_3 = 'b0;
+    reg  [31:0]                   int_weights_5 = 'b0;
+    reg  [31:0]                   int_weights_6 = 'b0;
     reg  [31:0]                   int_bias = 'b0;
+    reg  [31:0]                   int_bias_3 = 'b0;
+    reg  [31:0]                   int_bias_5 = 'b0;
+    reg  [31:0]                   int_bias_6 = 'b0;
     reg  [31:0]                   int_output_r = 'b0;
 
 //------------------------Instantiation------------------
@@ -245,8 +287,26 @@ always @(posedge ACLK) begin
                 ADDR_WEIGHTS_DATA_0: begin
                     rdata <= int_weights[31:0];
                 end
+                ADDR_WEIGHTS_3_DATA_0: begin
+                    rdata <= int_weights_3[31:0];
+                end
+                ADDR_WEIGHTS_5_DATA_0: begin
+                    rdata <= int_weights_5[31:0];
+                end
+                ADDR_WEIGHTS_6_DATA_0: begin
+                    rdata <= int_weights_6[31:0];
+                end
                 ADDR_BIAS_DATA_0: begin
                     rdata <= int_bias[31:0];
+                end
+                ADDR_BIAS_3_DATA_0: begin
+                    rdata <= int_bias_3[31:0];
+                end
+                ADDR_BIAS_5_DATA_0: begin
+                    rdata <= int_bias_5[31:0];
+                end
+                ADDR_BIAS_6_DATA_0: begin
+                    rdata <= int_bias_6[31:0];
                 end
                 ADDR_OUTPUT_R_DATA_0: begin
                     rdata <= int_output_r[31:0];
@@ -262,7 +322,13 @@ assign interrupt = int_gie & (|int_isr);
 assign ap_start  = int_ap_start;
 assign input_r   = int_input_r;
 assign weights   = int_weights;
+assign weights_3 = int_weights_3;
+assign weights_5 = int_weights_5;
+assign weights_6 = int_weights_6;
 assign bias      = int_bias;
+assign bias_3    = int_bias_3;
+assign bias_5    = int_bias_5;
+assign bias_6    = int_bias_6;
 assign output_r  = int_output_r;
 // int_ap_start
 always @(posedge ACLK) begin
@@ -390,6 +456,36 @@ always @(posedge ACLK) begin
     end
 end
 
+// int_weights_3[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_weights_3[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_WEIGHTS_3_DATA_0)
+            int_weights_3[31:0] <= (WDATA[31:0] & wmask) | (int_weights_3[31:0] & ~wmask);
+    end
+end
+
+// int_weights_5[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_weights_5[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_WEIGHTS_5_DATA_0)
+            int_weights_5[31:0] <= (WDATA[31:0] & wmask) | (int_weights_5[31:0] & ~wmask);
+    end
+end
+
+// int_weights_6[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_weights_6[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_WEIGHTS_6_DATA_0)
+            int_weights_6[31:0] <= (WDATA[31:0] & wmask) | (int_weights_6[31:0] & ~wmask);
+    end
+end
+
 // int_bias[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -397,6 +493,36 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_BIAS_DATA_0)
             int_bias[31:0] <= (WDATA[31:0] & wmask) | (int_bias[31:0] & ~wmask);
+    end
+end
+
+// int_bias_3[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bias_3[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_BIAS_3_DATA_0)
+            int_bias_3[31:0] <= (WDATA[31:0] & wmask) | (int_bias_3[31:0] & ~wmask);
+    end
+end
+
+// int_bias_5[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bias_5[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_BIAS_5_DATA_0)
+            int_bias_5[31:0] <= (WDATA[31:0] & wmask) | (int_bias_5[31:0] & ~wmask);
+    end
+end
+
+// int_bias_6[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_bias_6[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_BIAS_6_DATA_0)
+            int_bias_6[31:0] <= (WDATA[31:0] & wmask) | (int_bias_6[31:0] & ~wmask);
     end
 end
 

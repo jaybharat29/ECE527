@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'store_input'" level="0">
-<item name = "Date">Thu Oct 25 15:27:48 2018
+<item name = "Date">Thu Oct 25 23:32:26 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -79,9 +79,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_3_fu_109_p2">+, 0, 0, 15, 6, 1</column>
-<column name="j_3_fu_151_p2">+, 0, 0, 15, 6, 1</column>
-<column name="tmp_8_fu_127_p2">+, 0, 0, 38, 31, 31</column>
+<column name="i_5_fu_109_p2">+, 0, 0, 15, 6, 1</column>
+<column name="j_4_fu_151_p2">+, 0, 0, 15, 6, 1</column>
+<column name="tmp_11_fu_127_p2">+, 0, 0, 38, 31, 31</column>
 <column name="tmp_s_fu_161_p2">+, 0, 0, 12, 12, 12</column>
 <column name="ap_block_state10">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond1_fu_103_p2">icmp, 0, 0, 11, 6, 7</column>
@@ -102,14 +102,14 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">11, 0, 11, 0</column>
 <column name="ap_reg_ioackin_m_axi_input_r_ARREADY">1, 0, 1, 0</column>
-<column name="i_3_reg_178">6, 0, 6, 0</column>
+<column name="i_5_reg_178">6, 0, 6, 0</column>
 <column name="i_reg_77">6, 0, 6, 0</column>
 <column name="input_addr_read_reg_217">32, 0, 32, 0</column>
-<column name="j_3_reg_207">6, 0, 6, 0</column>
+<column name="j_4_reg_207">6, 0, 6, 0</column>
 <column name="j_reg_88">6, 0, 6, 0</column>
 <column name="sext_cast_reg_170">30, 0, 31, 1</column>
-<column name="tmp_17_cast_reg_199">6, 0, 12, 6</column>
-<column name="tmp_8_reg_188">31, 0, 31, 0</column>
+<column name="tmp_11_reg_188">31, 0, 31, 0</column>
+<column name="tmp_27_cast_reg_199">6, 0, 12, 6</column>
 <column name="tmp_reg_183">6, 0, 11, 5</column>
 <column name="tmp_s_reg_212">12, 0, 12, 0</column>
 </table>

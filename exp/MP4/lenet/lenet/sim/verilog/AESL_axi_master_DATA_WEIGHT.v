@@ -57,6 +57,7 @@ module AESL_axi_master_DATA_WEIGHT (
     TRAN_DATA_WEIGHT_BID,
     TRAN_DATA_WEIGHT_BUSER,
     TRAN_DATA_WEIGHT_weights,
+    TRAN_DATA_WEIGHT_weights_3,
     ready,
     done
     );
@@ -75,7 +76,7 @@ module AESL_axi_master_DATA_WEIGHT (
  parameter   mem_page_num            =   32'd 3;
  parameter   FIFO_DEPTH_ADDR_WIDTH   =    32'd 32;
 parameter DATA_WEIGHT_C_DATA_BITWIDTH = 32'd 32;
-parameter DATA_WEIGHT_mem_depth = 32'd 150;
+parameter DATA_WEIGHT_mem_depth = 32'd 2550;
 parameter ReadReqLatency = 32'd 1;
 parameter WriteReqLatency = 32'd 1;
 // Input and Output
@@ -127,6 +128,7 @@ output [2 - 1 : 0] TRAN_DATA_WEIGHT_BRESP;
 output [DATA_WEIGHT_ID_BITWIDTH - 1 : 0] TRAN_DATA_WEIGHT_BID;
 output [DATA_WEIGHT_BUSER_BITWIDTH - 1 : 0] TRAN_DATA_WEIGHT_BUSER;
 output [32 - 1 : 0] TRAN_DATA_WEIGHT_weights;
+output [32 - 1 : 0] TRAN_DATA_WEIGHT_weights_3;
 input ready;
 input done;
 
@@ -197,6 +199,7 @@ reg [2 - 1:0] RRESP_tmp = 0;
 reg RLAST_tmp = 0;
 reg RVALID_tmp = 0;
 reg [32 - 1 : 0] weights = 0;
+reg [32 - 1 : 0] weights_3 = 0;
 reg [DATA_WEIGHT_DATA_BITWIDTH - 1 : 0] DATA_WEIGHT_mem_0 [0: DATA_WEIGHT_mem_depth - 1]; 
 reg [DATA_WEIGHT_DATA_BITWIDTH - 1 : 0] DATA_WEIGHT_mem_1 [0: DATA_WEIGHT_mem_depth - 1]; 
 reg [DATA_WEIGHT_DATA_BITWIDTH - 1 : 0] DATA_WEIGHT_mem_2 [0: DATA_WEIGHT_mem_depth - 1]; 
@@ -218,6 +221,7 @@ assign TRAN_DATA_WEIGHT_RRESP = RRESP_tmp;
 assign TRAN_DATA_WEIGHT_RLAST = RLAST_tmp;
 assign TRAN_DATA_WEIGHT_RVALID = RVALID_tmp;
 assign    TRAN_DATA_WEIGHT_weights = weights;
+assign    TRAN_DATA_WEIGHT_weights_3 = weights_3;
 
 initial begin : initialize_offset
   integer DATA_byte_num; 
@@ -226,6 +230,7 @@ initial begin : initialize_offset
   c_bitwidth = DATA_WEIGHT_C_DATA_BITWIDTH;
   count_c_data_byte_num_by_bitwidth (c_bitwidth , DATA_byte_num);
   weights <= 0 * DATA_byte_num;
+  weights_3 <= 150 * DATA_byte_num;
 end
 
 initial begin : initialize_DATA_WEIGHT_mem
@@ -869,6 +874,76 @@ initial begin : read_file_process
       mem_page = transaction_num % mem_page_num ;
       mem_tmp [DATA_WEIGHT_DATA_BITWIDTH - 1: 0] = 0;
       for(i = 0; i < 150 ; i = i + 1) begin 
+          token = read_token(fp);
+          ret = $sscanf(token, "0x%x", token_tmp); 
+          if (factor == 4) begin
+              if (i%factor == 0) begin
+                  mem_tmp [7 : 0] = token_tmp;
+              end
+              if (i%factor == 1) begin
+                  mem_tmp [15 : 8] = token_tmp;
+              end
+              if (i%factor == 2) begin
+                  mem_tmp [23 : 16] = token_tmp;
+              end
+              if (i%factor == 3) begin
+                  mem_tmp [31 : 24] = token_tmp;
+                  case(mem_page)
+                      0 : DATA_WEIGHT_mem_0[i/factor] = mem_tmp;
+                      1 : DATA_WEIGHT_mem_1[i/factor] = mem_tmp;
+                      2 : DATA_WEIGHT_mem_2[i/factor] = mem_tmp;
+                      default: $display("The page_num of read file is not valid!");
+                  endcase
+                  mem_tmp [DATA_WEIGHT_DATA_BITWIDTH - 1 : 0] = 0;
+              end
+          end
+          if (factor == 2) begin
+              if (i%factor == 0) begin
+                  mem_tmp [15 : 0] = token_tmp;
+              end
+              if (i%factor == 1) begin
+                  mem_tmp [31 : 16] = token_tmp;
+                  case(mem_page)
+                      0 : DATA_WEIGHT_mem_0[i/factor] = mem_tmp;
+                      1 : DATA_WEIGHT_mem_1[i/factor] = mem_tmp;
+                      2 : DATA_WEIGHT_mem_2[i/factor] = mem_tmp;
+                      default: $display("The page_num of read file is not valid!");
+                  endcase
+                  mem_tmp [DATA_WEIGHT_DATA_BITWIDTH - 1: 0] = 0;
+              end
+          end
+          if (factor == 1) begin
+              mem_tmp = token_tmp;
+              case(mem_page)
+                  0 : DATA_WEIGHT_mem_0[i] = mem_tmp;
+                  1 : DATA_WEIGHT_mem_1[i] = mem_tmp;
+                  2 : DATA_WEIGHT_mem_2[i] = mem_tmp;
+                  default: $display("The page_num of read file is not valid!");
+              endcase
+              mem_tmp [DATA_WEIGHT_DATA_BITWIDTH - 1: 0] = 0;
+          end
+      end 
+      if (factor == 4) begin
+          if (i%factor != 0) begin
+              case(mem_page)
+                  0 : DATA_WEIGHT_mem_0[i/factor] = mem_tmp;
+                  1 : DATA_WEIGHT_mem_1[i/factor] = mem_tmp;
+                  2 : DATA_WEIGHT_mem_2[i/factor] = mem_tmp;
+                  default: $display("The page_num of read file is not valid!");
+              endcase
+          end
+      end
+      if (factor == 2) begin
+          if (i%factor != 0) begin
+              case(mem_page)
+                  0 : DATA_WEIGHT_mem_0[i/factor] = mem_tmp;
+                  1 : DATA_WEIGHT_mem_1[i/factor] = mem_tmp;
+                  2 : DATA_WEIGHT_mem_2[i/factor] = mem_tmp;
+                  default: $display("The page_num of read file is not valid!");
+              endcase
+          end
+      end 
+      for(i = 150; i < 2550 ; i = i + 1) begin 
           token = read_token(fp);
           ret = $sscanf(token, "0x%x", token_tmp); 
           if (factor == 4) begin

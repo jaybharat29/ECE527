@@ -75,7 +75,7 @@ module AESL_axi_master_DATA_OUTPUT (
  parameter   mem_page_num            =   32'd 3;
  parameter   FIFO_DEPTH_ADDR_WIDTH   =    32'd 32;
 parameter DATA_OUTPUT_C_DATA_BITWIDTH = 32'd 32;
-parameter DATA_OUTPUT_mem_depth = 32'd 1176;
+parameter DATA_OUTPUT_mem_depth = 32'd 1600;
 parameter ReadReqLatency = 32'd 1;
 parameter WriteReqLatency = 32'd 1;
 // Input and Output
@@ -868,7 +868,7 @@ initial begin : read_file_process
       end
       mem_page = transaction_num % mem_page_num ;
       mem_tmp [DATA_OUTPUT_DATA_BITWIDTH - 1: 0] = 0;
-      for(i = 0; i < 1176 ; i = i + 1) begin 
+      for(i = 0; i < 1600 ; i = i + 1) begin 
           token = read_token(fp);
           ret = $sscanf(token, "0x%x", token_tmp); 
           if (factor == 4) begin

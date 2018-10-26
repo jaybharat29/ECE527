@@ -148,8 +148,8 @@ reg    bias_blk_n_R;
 wire    ap_CS_fsm_state8;
 wire   [0:0] exitcond_fu_94_p2;
 reg    ap_sig_ioackin_m_axi_bias_ARREADY;
-wire   [2:0] i_4_fu_100_p2;
-reg   [2:0] i_4_reg_120;
+wire   [2:0] i_8_fu_100_p2;
+reg   [2:0] i_8_reg_120;
 reg    ap_block_state8;
 reg   [31:0] bias_addr_read_reg_125;
 reg   [2:0] i_reg_71;
@@ -190,7 +190,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state9)) begin
-        i_reg_71 <= i_4_reg_120;
+        i_reg_71 <= i_8_reg_120;
     end else if ((1'b1 == ap_CS_fsm_state7)) begin
         i_reg_71 <= 3'd0;
     end
@@ -204,7 +204,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((~((exitcond_fu_94_p2 == 1'd0) & (m_axi_bias_RVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state8))) begin
-        i_4_reg_120 <= i_4_fu_100_p2;
+        i_8_reg_120 <= i_8_fu_100_p2;
     end
 end
 
@@ -351,7 +351,7 @@ assign bias_oc_d0 = bias_addr_read_reg_125;
 
 assign exitcond_fu_94_p2 = ((i_reg_71 == 3'd6) ? 1'b1 : 1'b0);
 
-assign i_4_fu_100_p2 = (i_reg_71 + 3'd1);
+assign i_8_fu_100_p2 = (i_reg_71 + 3'd1);
 
 assign m_axi_bias_ARADDR = sext_fu_83_p1;
 

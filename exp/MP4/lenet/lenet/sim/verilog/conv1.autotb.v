@@ -23,21 +23,28 @@
 `define AESL_DEPTH_DATA_OUTPUT 1
 `define AESL_DEPTH_input_r 1
 `define AESL_DEPTH_weights 1
+`define AESL_DEPTH_weights_3 1
 `define AESL_DEPTH_bias 1
+`define AESL_MEM_bias_3 AESL_automem_bias_3
+`define AESL_MEM_INST_bias_3 mem_inst_bias_3
 `define AESL_DEPTH_output_r 1
 `define AUTOTB_TVIN_DATA_INPUT  "../tv/cdatafile/c.conv1.autotvin_DATA_INPUT.dat"
 `define AUTOTB_TVIN_DATA_WEIGHT  "../tv/cdatafile/c.conv1.autotvin_DATA_WEIGHT.dat"
 `define AUTOTB_TVIN_DATA_BIAS  "../tv/cdatafile/c.conv1.autotvin_DATA_BIAS.dat"
 `define AUTOTB_TVIN_input_r  "../tv/cdatafile/c.conv1.autotvin_input_r.dat"
 `define AUTOTB_TVIN_weights  "../tv/cdatafile/c.conv1.autotvin_weights.dat"
+`define AUTOTB_TVIN_weights_3  "../tv/cdatafile/c.conv1.autotvin_weights_3.dat"
 `define AUTOTB_TVIN_bias  "../tv/cdatafile/c.conv1.autotvin_bias.dat"
+`define AUTOTB_TVIN_bias_3  "../tv/cdatafile/c.conv1.autotvin_bias_3.dat"
 `define AUTOTB_TVIN_output_r  "../tv/cdatafile/c.conv1.autotvin_output_r.dat"
 `define AUTOTB_TVIN_DATA_INPUT_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_DATA_INPUT.dat"
 `define AUTOTB_TVIN_DATA_WEIGHT_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_DATA_WEIGHT.dat"
 `define AUTOTB_TVIN_DATA_BIAS_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_DATA_BIAS.dat"
 `define AUTOTB_TVIN_input_r_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_input_r.dat"
 `define AUTOTB_TVIN_weights_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_weights.dat"
+`define AUTOTB_TVIN_weights_3_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_weights_3.dat"
 `define AUTOTB_TVIN_bias_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_bias.dat"
+`define AUTOTB_TVIN_bias_3_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_bias_3.dat"
 `define AUTOTB_TVIN_output_r_out_wrapc  "../tv/rtldatafile/rtl.conv1.autotvin_output_r.dat"
 `define AUTOTB_TVOUT_DATA_OUTPUT  "../tv/cdatafile/c.conv1.autotvout_DATA_OUTPUT.dat"
 `define AUTOTB_TVOUT_ap_return  "../tv/cdatafile/c.conv1.autotvout_ap_return.dat"
@@ -47,14 +54,16 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 107274;
+parameter LATENCY_ESTIMATION = 1354256;
 parameter LENGTH_DATA_INPUT = 1024;
-parameter LENGTH_DATA_WEIGHT = 150;
+parameter LENGTH_DATA_WEIGHT = 2550;
 parameter LENGTH_DATA_BIAS = 6;
-parameter LENGTH_DATA_OUTPUT = 1176;
+parameter LENGTH_DATA_OUTPUT = 1600;
 parameter LENGTH_input_r = 1;
 parameter LENGTH_weights = 1;
+parameter LENGTH_weights_3 = 1;
 parameter LENGTH_bias = 1;
+parameter LENGTH_bias_3 = 16;
 parameter LENGTH_output_r = 1;
 parameter LENGTH_ap_return = 1;
 
@@ -284,6 +293,9 @@ wire  DATA_OUTPUT_BREADY;
 wire [1 : 0] DATA_OUTPUT_BRESP;
 wire [0 : 0] DATA_OUTPUT_BID;
 wire [0 : 0] DATA_OUTPUT_BUSER;
+wire [3 : 0] bias_3_address0;
+wire  bias_3_ce0;
+wire [31 : 0] bias_3_q0;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -512,7 +524,10 @@ wire ap_rst_n_n;
     .m_axi_DATA_OUTPUT_BREADY(DATA_OUTPUT_BREADY),
     .m_axi_DATA_OUTPUT_BRESP(DATA_OUTPUT_BRESP),
     .m_axi_DATA_OUTPUT_BID(DATA_OUTPUT_BID),
-    .m_axi_DATA_OUTPUT_BUSER(DATA_OUTPUT_BUSER));
+    .m_axi_DATA_OUTPUT_BUSER(DATA_OUTPUT_BUSER),
+    .bias_3_address0(bias_3_address0),
+    .bias_3_ce0(bias_3_ce0),
+    .bias_3_q0(bias_3_q0));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -584,6 +599,47 @@ end
 
 
 
+//------------------------arraybias_3 Instantiation--------------
+
+// The input and output of arraybias_3
+wire    arraybias_3_ce0, arraybias_3_ce1;
+wire    arraybias_3_we0, arraybias_3_we1;
+wire    [3 : 0]    arraybias_3_address0, arraybias_3_address1;
+wire    [31 : 0]    arraybias_3_din0, arraybias_3_din1;
+wire    [31 : 0]    arraybias_3_dout0, arraybias_3_dout1;
+wire    arraybias_3_ready;
+wire    arraybias_3_done;
+
+`AESL_MEM_bias_3 `AESL_MEM_INST_bias_3(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arraybias_3_ce0),
+    .we0        (arraybias_3_we0),
+    .address0   (arraybias_3_address0),
+    .din0       (arraybias_3_din0),
+    .dout0      (arraybias_3_dout0),
+    .ce1        (arraybias_3_ce1),
+    .we1        (arraybias_3_we1),
+    .address1   (arraybias_3_address1),
+    .din1       (arraybias_3_din1),
+    .dout1      (arraybias_3_dout1),
+    .ready      (arraybias_3_ready),
+    .done    (arraybias_3_done)
+);
+
+// Assignment between dut and arraybias_3
+assign arraybias_3_address0 = bias_3_address0;
+assign arraybias_3_ce0 = bias_3_ce0;
+assign bias_3_q0 = arraybias_3_dout0;
+assign arraybias_3_we0 = 0;
+assign arraybias_3_din0 = 0;
+assign arraybias_3_we1 = 0;
+assign arraybias_3_din1 = 0;
+assign arraybias_3_ready=    ready;
+assign arraybias_3_done = 0;
+
+
+
 wire    AESL_axi_master_DATA_INPUT_ready;
 wire    AESL_axi_master_DATA_INPUT_done;
 wire [32 - 1:0] input_r;
@@ -644,6 +700,7 @@ assign    AESL_axi_master_DATA_INPUT_done    =   AESL_done_delay;
 wire    AESL_axi_master_DATA_WEIGHT_ready;
 wire    AESL_axi_master_DATA_WEIGHT_done;
 wire [32 - 1:0] weights;
+wire [32 - 1:0] weights_3;
 AESL_axi_master_DATA_WEIGHT AESL_AXI_MASTER_DATA_WEIGHT(
     .clk   (AESL_clock),
     .reset (AESL_reset),
@@ -693,6 +750,7 @@ AESL_axi_master_DATA_WEIGHT AESL_AXI_MASTER_DATA_WEIGHT(
     .TRAN_DATA_WEIGHT_BID (DATA_WEIGHT_BID),
     .TRAN_DATA_WEIGHT_BUSER (DATA_WEIGHT_BUSER),
     .TRAN_DATA_WEIGHT_weights (weights),
+    .TRAN_DATA_WEIGHT_weights_3 (weights_3),
     .ready (AESL_axi_master_DATA_WEIGHT_ready),
     .done  (AESL_axi_master_DATA_WEIGHT_done)
 );
@@ -836,6 +894,7 @@ AESL_axi_slave_CTL AESL_AXI_SLAVE_CTL(
     .TRAN_CTL_interrupt (CTL_INTERRUPT),
     .TRAN_input_r (input_r),
     .TRAN_weights (weights),
+    .TRAN_weights_3 (weights_3),
     .TRAN_bias (bias),
     .TRAN_output_r (output_r),
     .TRAN_CTL_read_data_finish(CTL_read_data_finish),
@@ -957,9 +1016,15 @@ reg [31:0] size_input_r_backup;
 reg end_weights;
 reg [31:0] size_weights;
 reg [31:0] size_weights_backup;
+reg end_weights_3;
+reg [31:0] size_weights_3;
+reg [31:0] size_weights_3_backup;
 reg end_bias;
 reg [31:0] size_bias;
 reg [31:0] size_bias_backup;
+reg end_bias_3;
+reg [31:0] size_bias_3;
+reg [31:0] size_bias_3_backup;
 reg end_output_r;
 reg [31:0] size_output_r;
 reg [31:0] size_output_r_backup;

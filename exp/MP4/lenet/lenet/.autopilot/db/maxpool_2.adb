@@ -78,7 +78,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -93,7 +93,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
@@ -157,7 +157,7 @@
               <name>exitcond4</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -172,7 +172,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
@@ -200,10 +200,10 @@
             <Obj>
               <type>0</type>
               <id>8</id>
-              <name>c_1</name>
+              <name>c_2</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -218,13 +218,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>c</originalName>
-              <rtlName>c_1_fu_184_p2</rtlName>
+              <rtlName>c_2_fu_184_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -249,7 +249,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -264,7 +264,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
@@ -296,7 +296,7 @@
               <name>tmp</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -311,7 +311,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
@@ -343,7 +343,7 @@
               <name>p_shl2_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -358,7 +358,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
@@ -385,10 +385,10 @@
             <Obj>
               <type>0</type>
               <id>13</id>
-              <name>tmp_20</name>
+              <name>tmp_48</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -403,13 +403,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_20_fu_202_p3</rtlName>
+              <rtlName>tmp_48_fu_202_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -435,7 +435,7 @@
               <name>p_shl3_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -450,7 +450,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -477,10 +477,10 @@
             <Obj>
               <type>0</type>
               <id>15</id>
-              <name>tmp_21</name>
+              <name>tmp_49</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -495,13 +495,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_21_fu_214_p2</rtlName>
+              <rtlName>tmp_49_fu_214_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -523,10 +523,10 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>tmp_34_cast</name>
+              <name>tmp_71_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -541,13 +541,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_34_cast_fu_220_p1</rtlName>
+              <rtlName>tmp_71_cast_fu_220_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -568,10 +568,10 @@
             <Obj>
               <type>0</type>
               <id>17</id>
-              <name>tmp_22</name>
+              <name>tmp_50</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -586,13 +586,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_22_fu_224_p3</rtlName>
+              <rtlName>tmp_50_fu_224_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>7</bitwidth>
@@ -618,7 +618,7 @@
               <name>p_shl_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -633,7 +633,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
@@ -660,10 +660,10 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>tmp_23</name>
+              <name>tmp_51</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>82</lineNumber>
+              <lineNumber>122</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -678,13 +678,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>82</second>
+                      <second>122</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_23_fu_236_p3</rtlName>
+              <rtlName>tmp_51_fu_236_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -710,7 +710,7 @@
               <name>p_shl1_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -725,7 +725,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
@@ -752,10 +752,10 @@
             <Obj>
               <type>0</type>
               <id>21</id>
-              <name>tmp_24</name>
+              <name>tmp_52</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -770,13 +770,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_24_fu_248_p2</rtlName>
+              <rtlName>tmp_52_fu_248_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -798,10 +798,10 @@
             <Obj>
               <type>0</type>
               <id>22</id>
-              <name>tmp_37_cast</name>
+              <name>tmp_74_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -816,13 +816,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_37_cast_fu_254_p1</rtlName>
+              <rtlName>tmp_74_cast_fu_254_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -846,7 +846,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>83</lineNumber>
+              <lineNumber>123</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -861,7 +861,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>83</second>
+                      <second>123</second>
                     </item>
                   </second>
                 </item>
@@ -925,7 +925,7 @@
               <name>exitcond3</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>83</lineNumber>
+              <lineNumber>123</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -940,7 +940,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>83</second>
+                      <second>123</second>
                     </item>
                   </second>
                 </item>
@@ -968,10 +968,10 @@
             <Obj>
               <type>0</type>
               <id>28</id>
-              <name>h_1</name>
+              <name>h_2</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>83</lineNumber>
+              <lineNumber>123</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -986,13 +986,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>83</second>
+                      <second>123</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>h</originalName>
-              <rtlName>h_1_fu_264_p2</rtlName>
+              <rtlName>h_2_fu_264_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -1017,7 +1017,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>83</lineNumber>
+              <lineNumber>123</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1032,7 +1032,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>83</second>
+                      <second>123</second>
                     </item>
                   </second>
                 </item>
@@ -1064,7 +1064,7 @@
               <name>tmp_s</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1079,7 +1079,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -1108,10 +1108,10 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>tmp_5_cast</name>
+              <name>tmp_3_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1126,13 +1126,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_5_cast_fu_278_p1</rtlName>
+              <rtlName>tmp_3_cast_fu_278_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -1153,10 +1153,10 @@
             <Obj>
               <type>0</type>
               <id>33</id>
-              <name>tmp_25</name>
+              <name>tmp_53</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1171,13 +1171,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_25_fu_282_p2</rtlName>
+              <rtlName>tmp_53_fu_282_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -1199,10 +1199,10 @@
             <Obj>
               <type>0</type>
               <id>34</id>
-              <name>tmp_26</name>
+              <name>tmp_31</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1217,13 +1217,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_26_fu_287_p1</rtlName>
+              <rtlName>tmp_31_fu_287_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -1247,7 +1247,7 @@
               <name>p_shl4_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1262,7 +1262,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
@@ -1291,10 +1291,10 @@
             <Obj>
               <type>0</type>
               <id>36</id>
-              <name>tmp_27</name>
+              <name>tmp_33</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1309,13 +1309,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_27_fu_299_p3</rtlName>
+              <rtlName>tmp_33_fu_299_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -1341,7 +1341,7 @@
               <name>p_shl5_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1356,7 +1356,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
@@ -1383,10 +1383,10 @@
             <Obj>
               <type>0</type>
               <id>38</id>
-              <name>tmp_28</name>
+              <name>tmp_54</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1401,13 +1401,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_28_fu_311_p2</rtlName>
+              <rtlName>tmp_54_fu_311_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>12</bitwidth>
@@ -1432,7 +1432,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>84</lineNumber>
+              <lineNumber>124</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1447,7 +1447,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>84</second>
+                      <second>124</second>
                     </item>
                   </second>
                 </item>
@@ -1511,7 +1511,7 @@
               <name>exitcond2</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>84</lineNumber>
+              <lineNumber>124</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1526,7 +1526,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>84</second>
+                      <second>124</second>
                     </item>
                   </second>
                 </item>
@@ -1554,10 +1554,10 @@
             <Obj>
               <type>0</type>
               <id>44</id>
-              <name>w_1</name>
+              <name>w_2</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>84</lineNumber>
+              <lineNumber>124</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1572,13 +1572,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>84</second>
+                      <second>124</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>w</originalName>
-              <rtlName>w_1_fu_323_p2</rtlName>
+              <rtlName>w_2_fu_323_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>4</bitwidth>
@@ -1603,7 +1603,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>84</lineNumber>
+              <lineNumber>124</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1618,7 +1618,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>84</second>
+                      <second>124</second>
                     </item>
                   </second>
                 </item>
@@ -1647,10 +1647,10 @@
             <Obj>
               <type>0</type>
               <id>47</id>
-              <name>tmp_6</name>
+              <name>tmp_4</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1665,13 +1665,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_6_fu_329_p3</rtlName>
+              <rtlName>tmp_4_fu_329_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -1697,7 +1697,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>87</lineNumber>
+              <lineNumber>127</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1712,7 +1712,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>87</second>
+                      <second>127</second>
                     </item>
                   </second>
                 </item>
@@ -1742,7 +1742,7 @@
               <name>max_value</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1757,7 +1757,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -1824,7 +1824,7 @@
               <name>i_cast2</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>87</lineNumber>
+              <lineNumber>127</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1839,7 +1839,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>87</second>
+                      <second>127</second>
                     </item>
                   </second>
                 </item>
@@ -1869,7 +1869,7 @@
               <name>exitcond1</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>87</lineNumber>
+              <lineNumber>127</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1884,7 +1884,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>87</second>
+                      <second>127</second>
                     </item>
                   </second>
                 </item>
@@ -1912,10 +1912,10 @@
             <Obj>
               <type>0</type>
               <id>55</id>
-              <name>i_7</name>
+              <name>i_14</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>87</lineNumber>
+              <lineNumber>127</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1930,13 +1930,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>87</second>
+                      <second>127</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>i</originalName>
-              <rtlName>i_7_fu_347_p2</rtlName>
+              <rtlName>i_14_fu_347_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>2</bitwidth>
@@ -1961,7 +1961,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>87</lineNumber>
+              <lineNumber>127</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1976,7 +1976,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>87</second>
+                      <second>127</second>
                     </item>
                   </second>
                 </item>
@@ -2005,10 +2005,10 @@
             <Obj>
               <type>0</type>
               <id>58</id>
-              <name>tmp_8</name>
+              <name>tmp_6</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2023,13 +2023,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_8_fu_353_p2</rtlName>
+              <rtlName>tmp_6_fu_353_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2051,10 +2051,10 @@
             <Obj>
               <type>0</type>
               <id>59</id>
-              <name>tmp_9_cast</name>
+              <name>tmp_7_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2069,13 +2069,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_9_cast_fu_358_p1</rtlName>
+              <rtlName>tmp_7_cast_fu_358_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -2096,10 +2096,10 @@
             <Obj>
               <type>0</type>
               <id>60</id>
-              <name>tmp_30</name>
+              <name>tmp_56</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2114,13 +2114,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_30_fu_362_p2</rtlName>
+              <rtlName>tmp_56_fu_362_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -2142,10 +2142,10 @@
             <Obj>
               <type>0</type>
               <id>61</id>
-              <name>tmp_31</name>
+              <name>tmp_39</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2160,13 +2160,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_31_fu_367_p1</rtlName>
+              <rtlName>tmp_39_fu_367_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -2190,7 +2190,7 @@
               <name>p_shl6_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2205,7 +2205,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -2234,10 +2234,10 @@
             <Obj>
               <type>0</type>
               <id>63</id>
-              <name>tmp_32</name>
+              <name>tmp_40</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2252,13 +2252,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_32_fu_379_p3</rtlName>
+              <rtlName>tmp_40_fu_379_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>12</bitwidth>
@@ -2284,7 +2284,7 @@
               <name>p_shl7_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2299,7 +2299,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -2326,10 +2326,10 @@
             <Obj>
               <type>0</type>
               <id>65</id>
-              <name>tmp_33</name>
+              <name>tmp_57</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2344,13 +2344,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_33_fu_391_p2</rtlName>
+              <rtlName>tmp_57_fu_391_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>14</bitwidth>
@@ -2375,7 +2375,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>129</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2390,7 +2390,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>89</second>
+                      <second>129</second>
                     </item>
                   </second>
                 </item>
@@ -2488,7 +2488,7 @@
               <name>j_cast1</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>129</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2503,7 +2503,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>89</second>
+                      <second>129</second>
                     </item>
                   </second>
                 </item>
@@ -2533,7 +2533,7 @@
               <name>exitcond</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>129</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2548,7 +2548,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>89</second>
+                      <second>129</second>
                     </item>
                   </second>
                 </item>
@@ -2576,10 +2576,10 @@
             <Obj>
               <type>0</type>
               <id>73</id>
-              <name>j_6</name>
+              <name>j_10</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>129</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2594,13 +2594,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>89</second>
+                      <second>129</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>j</originalName>
-              <rtlName>j_6_fu_421_p2</rtlName>
+              <rtlName>j_10_fu_421_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>2</bitwidth>
@@ -2625,7 +2625,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>129</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2640,7 +2640,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>89</second>
+                      <second>129</second>
                     </item>
                   </second>
                 </item>
@@ -2669,10 +2669,10 @@
             <Obj>
               <type>0</type>
               <id>76</id>
-              <name>tmp_1</name>
+              <name>tmp_8</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2687,13 +2687,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_1_fu_427_p2</rtlName>
+              <rtlName>tmp_8_fu_427_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -2715,10 +2715,10 @@
             <Obj>
               <type>0</type>
               <id>77</id>
-              <name>tmp_2_cast</name>
+              <name>tmp_9_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2733,13 +2733,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_2_cast_fu_432_p1</rtlName>
+              <rtlName>tmp_9_cast_fu_432_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>14</bitwidth>
@@ -2760,10 +2760,10 @@
             <Obj>
               <type>0</type>
               <id>78</id>
-              <name>tmp_34</name>
+              <name>tmp_58</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2778,13 +2778,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_34_fu_436_p2</rtlName>
+              <rtlName>tmp_58_fu_436_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>14</bitwidth>
@@ -2806,10 +2806,10 @@
             <Obj>
               <type>0</type>
               <id>79</id>
-              <name>tmp_47_cast</name>
+              <name>tmp_84_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2824,13 +2824,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_47_cast_fu_441_p1</rtlName>
+              <rtlName>tmp_84_cast_fu_441_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2854,7 +2854,7 @@
               <name>input_addr</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2869,7 +2869,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -2901,7 +2901,7 @@
               <name>input_load</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2916,7 +2916,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -2946,7 +2946,7 @@
               <name>max_value_1_to_int</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2961,7 +2961,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -2988,10 +2988,10 @@
             <Obj>
               <type>0</type>
               <id>83</id>
-              <name>tmp_10</name>
+              <name>tmp_30</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3006,13 +3006,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_10_fu_450_p4</rtlName>
+              <rtlName>tmp_30_fu_450_p4</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -3036,10 +3036,10 @@
             <Obj>
               <type>0</type>
               <id>84</id>
-              <name>tmp_35</name>
+              <name>tmp_41</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3054,13 +3054,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_35_fu_460_p1</rtlName>
+              <rtlName>tmp_41_fu_460_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>23</bitwidth>
@@ -3084,7 +3084,7 @@
               <name>input_load_to_int</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3099,7 +3099,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -3126,10 +3126,10 @@
             <Obj>
               <type>0</type>
               <id>86</id>
-              <name>tmp_12</name>
+              <name>tmp_32</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3144,13 +3144,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_12_fu_467_p4</rtlName>
+              <rtlName>tmp_32_fu_467_p4</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>8</bitwidth>
@@ -3174,10 +3174,10 @@
             <Obj>
               <type>0</type>
               <id>87</id>
-              <name>tmp_36</name>
+              <name>tmp_42</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3192,13 +3192,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_36_fu_477_p1</rtlName>
+              <rtlName>tmp_42_fu_477_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>23</bitwidth>
@@ -3222,7 +3222,7 @@
               <name>notlhs</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3237,7 +3237,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -3268,7 +3268,7 @@
               <name>notrhs</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3283,7 +3283,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -3311,10 +3311,10 @@
             <Obj>
               <type>0</type>
               <id>90</id>
-              <name>tmp_14</name>
+              <name>tmp_34</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3329,13 +3329,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_14_fu_493_p2</rtlName>
+              <rtlName>tmp_34_fu_493_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3360,7 +3360,7 @@
               <name>notlhs6</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3375,7 +3375,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -3406,7 +3406,7 @@
               <name>notrhs7</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3421,7 +3421,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
@@ -3449,10 +3449,10 @@
             <Obj>
               <type>0</type>
               <id>93</id>
-              <name>tmp_15</name>
+              <name>tmp_35</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3467,13 +3467,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_15_fu_511_p2</rtlName>
+              <rtlName>tmp_35_fu_511_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3495,10 +3495,10 @@
             <Obj>
               <type>0</type>
               <id>94</id>
-              <name>tmp_16</name>
+              <name>tmp_36</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3513,13 +3513,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_16_fu_517_p2</rtlName>
+              <rtlName>tmp_36_fu_517_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3541,10 +3541,10 @@
             <Obj>
               <type>0</type>
               <id>95</id>
-              <name>tmp_17</name>
+              <name>tmp_37</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3559,13 +3559,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>conv1_fcmp_32ns_3dEe_U23</rtlName>
+              <rtlName>conv1_fcmp_32ns_3dEe_U35</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3587,10 +3587,10 @@
             <Obj>
               <type>0</type>
               <id>96</id>
-              <name>tmp_18</name>
+              <name>tmp_38</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3605,13 +3605,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_18_fu_523_p2</rtlName>
+              <rtlName>tmp_38_fu_523_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3633,10 +3633,10 @@
             <Obj>
               <type>0</type>
               <id>97</id>
-              <name>max_value_2</name>
+              <name>max_value_3</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>90</lineNumber>
+              <lineNumber>130</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3651,13 +3651,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>90</second>
+                      <second>130</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>max_value</originalName>
-              <rtlName>max_value_2_fu_529_p3</rtlName>
+              <rtlName>max_value_3_fu_529_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3683,7 +3683,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>129</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3698,7 +3698,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>89</second>
+                      <second>129</second>
                     </item>
                   </second>
                 </item>
@@ -3756,10 +3756,10 @@
             <Obj>
               <type>0</type>
               <id>102</id>
-              <name>tmp_7_cast</name>
+              <name>tmp_5_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3774,13 +3774,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_7_cast_fu_397_p1</rtlName>
+              <rtlName>tmp_5_cast_fu_397_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>12</bitwidth>
@@ -3801,10 +3801,10 @@
             <Obj>
               <type>0</type>
               <id>103</id>
-              <name>tmp_29</name>
+              <name>tmp_55</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3819,13 +3819,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_29_fu_401_p2</rtlName>
+              <rtlName>tmp_55_fu_401_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>12</bitwidth>
@@ -3847,10 +3847,10 @@
             <Obj>
               <type>0</type>
               <id>104</id>
-              <name>tmp_42_cast</name>
+              <name>tmp_79_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3865,13 +3865,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_42_cast_fu_406_p1</rtlName>
+              <rtlName>tmp_79_cast_fu_406_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -3895,7 +3895,7 @@
               <name>output_addr</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3910,7 +3910,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
@@ -3942,7 +3942,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>92</lineNumber>
+              <lineNumber>132</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3957,7 +3957,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>92</second>
+                      <second>132</second>
                     </item>
                   </second>
                 </item>
@@ -3988,7 +3988,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>84</lineNumber>
+              <lineNumber>124</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4003,7 +4003,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>84</second>
+                      <second>124</second>
                     </item>
                   </second>
                 </item>
@@ -4095,7 +4095,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>95</lineNumber>
+              <lineNumber>135</lineNumber>
               <contextFuncName>maxpool_2</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -4110,7 +4110,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>maxpool_2</second>
                       </first>
-                      <second>95</second>
+                      <second>135</second>
                     </item>
                   </second>
                 </item>
@@ -7486,7 +7486,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>conv1_fcmp_32ns_3dEe_U23 (conv1_fcmp_32ns_3dEe)</first>
+          <first>conv1_fcmp_32ns_3dEe_U35 (conv1_fcmp_32ns_3dEe)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
@@ -7509,7 +7509,7 @@
         <count>29</count>
         <item_version>0</item_version>
         <item>
-          <first>c_1_fu_184_p2 ( + ) </first>
+          <first>c_2_fu_184_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7647,7 +7647,7 @@
           </second>
         </item>
         <item>
-          <first>h_1_fu_264_p2 ( + ) </first>
+          <first>h_2_fu_264_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7670,7 +7670,7 @@
           </second>
         </item>
         <item>
-          <first>i_7_fu_347_p2 ( + ) </first>
+          <first>i_14_fu_347_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7693,7 +7693,7 @@
           </second>
         </item>
         <item>
-          <first>j_6_fu_421_p2 ( + ) </first>
+          <first>j_10_fu_421_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7716,7 +7716,7 @@
           </second>
         </item>
         <item>
-          <first>max_value_2_fu_529_p3 ( select ) </first>
+          <first>max_value_3_fu_529_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -7835,7 +7835,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_14_fu_493_p2 ( or ) </first>
+          <first>tmp_34_fu_493_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7858,7 +7858,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_15_fu_511_p2 ( or ) </first>
+          <first>tmp_35_fu_511_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7881,7 +7881,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_16_fu_517_p2 ( and ) </first>
+          <first>tmp_36_fu_517_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7904,7 +7904,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_18_fu_523_p2 ( and ) </first>
+          <first>tmp_38_fu_523_p2 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7927,30 +7927,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_1_fu_427_p2 ( + ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>15</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_21_fu_214_p2 ( - ) </first>
+          <first>tmp_49_fu_214_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7973,7 +7950,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_24_fu_248_p2 ( - ) </first>
+          <first>tmp_52_fu_248_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -7996,7 +7973,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_25_fu_282_p2 ( + ) </first>
+          <first>tmp_53_fu_282_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -8019,7 +7996,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_28_fu_311_p2 ( - ) </first>
+          <first>tmp_54_fu_311_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -8042,7 +8019,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_29_fu_401_p2 ( + ) </first>
+          <first>tmp_55_fu_401_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -8065,7 +8042,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_30_fu_362_p2 ( + ) </first>
+          <first>tmp_56_fu_362_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -8088,7 +8065,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_33_fu_391_p2 ( - ) </first>
+          <first>tmp_57_fu_391_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -8111,7 +8088,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_34_fu_436_p2 ( + ) </first>
+          <first>tmp_58_fu_436_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -8134,7 +8111,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_8_fu_353_p2 ( + ) </first>
+          <first>tmp_6_fu_353_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -8157,7 +8134,30 @@
           </second>
         </item>
         <item>
-          <first>w_1_fu_323_p2 ( + ) </first>
+          <first>tmp_8_fu_427_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>5</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>5</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>15</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>w_2_fu_323_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -8399,7 +8399,7 @@
           </second>
         </item>
         <item>
-          <first>c_1_reg_539</first>
+          <first>c_2_reg_539</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8437,7 +8437,7 @@
           </second>
         </item>
         <item>
-          <first>h_1_reg_557</first>
+          <first>h_2_reg_557</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8475,7 +8475,7 @@
           </second>
         </item>
         <item>
-          <first>i_7_reg_588</first>
+          <first>i_14_reg_588</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8532,7 +8532,7 @@
           </second>
         </item>
         <item>
-          <first>j_6_reg_601</first>
+          <first>j_10_reg_601</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8608,7 +8608,26 @@
           </second>
         </item>
         <item>
-          <first>tmp_28_reg_567</first>
+          <first>tmp_4_reg_580</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>5</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>4</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_54_reg_567</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8627,7 +8646,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_33_reg_593</first>
+          <first>tmp_57_reg_593</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8646,7 +8665,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_34_cast_reg_544</first>
+          <first>tmp_71_cast_reg_544</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8665,7 +8684,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_37_cast_reg_549</first>
+          <first>tmp_74_cast_reg_549</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8680,25 +8699,6 @@
             <item>
               <first>FF</first>
               <second>8</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_6_reg_580</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>4</second>
             </item>
           </second>
         </item>
@@ -8722,7 +8722,7 @@
           </second>
         </item>
         <item>
-          <first>w_1_reg_575</first>
+          <first>w_2_reg_575</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8764,7 +8764,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item>
-          <first>conv1_fcmp_32ns_3dEe_U23</first>
+          <first>conv1_fcmp_32ns_3dEe_U35</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -8775,7 +8775,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>conv1_fcmp_32ns_3dEe_U23 (conv1_fcmp_32ns_3dEe)</first>
+          <first>conv1_fcmp_32ns_3dEe_U35 (conv1_fcmp_32ns_3dEe)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8787,7 +8787,7 @@
         <count>29</count>
         <item_version>0</item_version>
         <item>
-          <first>c_1_fu_184_p2 ( + ) </first>
+          <first>c_2_fu_184_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8835,7 +8835,7 @@
           </second>
         </item>
         <item>
-          <first>h_1_fu_264_p2 ( + ) </first>
+          <first>h_2_fu_264_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8843,7 +8843,7 @@
           </second>
         </item>
         <item>
-          <first>i_7_fu_347_p2 ( + ) </first>
+          <first>i_14_fu_347_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8851,7 +8851,7 @@
           </second>
         </item>
         <item>
-          <first>j_6_fu_421_p2 ( + ) </first>
+          <first>j_10_fu_421_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8859,7 +8859,7 @@
           </second>
         </item>
         <item>
-          <first>max_value_2_fu_529_p3 ( select ) </first>
+          <first>max_value_3_fu_529_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8899,7 +8899,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_14_fu_493_p2 ( or ) </first>
+          <first>tmp_34_fu_493_p2 ( or ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8907,7 +8907,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_15_fu_511_p2 ( or ) </first>
+          <first>tmp_35_fu_511_p2 ( or ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8915,7 +8915,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_16_fu_517_p2 ( and ) </first>
+          <first>tmp_36_fu_517_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8923,7 +8923,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_18_fu_523_p2 ( and ) </first>
+          <first>tmp_38_fu_523_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8931,15 +8931,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_1_fu_427_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>76</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_21_fu_214_p2 ( - ) </first>
+          <first>tmp_49_fu_214_p2 ( - ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8947,7 +8939,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_24_fu_248_p2 ( - ) </first>
+          <first>tmp_52_fu_248_p2 ( - ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8955,7 +8947,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_25_fu_282_p2 ( + ) </first>
+          <first>tmp_53_fu_282_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8963,7 +8955,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_28_fu_311_p2 ( - ) </first>
+          <first>tmp_54_fu_311_p2 ( - ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8971,7 +8963,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_29_fu_401_p2 ( + ) </first>
+          <first>tmp_55_fu_401_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8979,7 +8971,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_30_fu_362_p2 ( + ) </first>
+          <first>tmp_56_fu_362_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8987,7 +8979,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_33_fu_391_p2 ( - ) </first>
+          <first>tmp_57_fu_391_p2 ( - ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8995,7 +8987,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_34_fu_436_p2 ( + ) </first>
+          <first>tmp_58_fu_436_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -9003,7 +8995,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_8_fu_353_p2 ( + ) </first>
+          <first>tmp_6_fu_353_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -9011,7 +9003,15 @@
           </second>
         </item>
         <item>
-          <first>w_1_fu_323_p2 ( + ) </first>
+          <first>tmp_8_fu_427_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>76</item>
+          </second>
+        </item>
+        <item>
+          <first>w_2_fu_323_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -10398,7 +10398,7 @@
       <count>73</count>
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
-        <first>c_1_fu_184</first>
+        <first>c_2_fu_184</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10454,7 +10454,7 @@
         </second>
       </item>
       <item>
-        <first>h_1_fu_264</first>
+        <first>h_2_fu_264</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10470,7 +10470,7 @@
         </second>
       </item>
       <item>
-        <first>i_7_fu_347</first>
+        <first>i_14_fu_347</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10510,7 +10510,7 @@
         </second>
       </item>
       <item>
-        <first>j_6_fu_421</first>
+        <first>j_10_fu_421</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10550,7 +10550,7 @@
         </second>
       </item>
       <item>
-        <first>max_value_2_fu_529</first>
+        <first>max_value_3_fu_529</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10670,7 +10670,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_10_fu_450</first>
+        <first>tmp_30_fu_450</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10678,111 +10678,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_12_fu_467</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>86</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_14_fu_493</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>90</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_15_fu_511</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>93</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_16_fu_517</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>94</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_17_fu_173</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>95</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_18_fu_523</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>96</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_1_fu_427</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>76</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_20_fu_202</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>13</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_21_fu_214</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>15</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_22_fu_224</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>17</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_23_fu_236</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>19</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_24_fu_248</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>21</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_25_fu_282</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>33</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_26_fu_287</first>
+        <first>tmp_31_fu_287</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10790,7 +10686,15 @@
         </second>
       </item>
       <item>
-        <first>tmp_27_fu_299</first>
+        <first>tmp_32_fu_467</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>86</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_33_fu_299</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10798,39 +10702,47 @@
         </second>
       </item>
       <item>
-        <first>tmp_28_fu_311</first>
+        <first>tmp_34_fu_493</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>38</item>
+          <item>90</item>
         </second>
       </item>
       <item>
-        <first>tmp_29_fu_401</first>
+        <first>tmp_35_fu_511</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>103</item>
+          <item>93</item>
         </second>
       </item>
       <item>
-        <first>tmp_2_cast_fu_432</first>
+        <first>tmp_36_fu_517</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>77</item>
+          <item>94</item>
         </second>
       </item>
       <item>
-        <first>tmp_30_fu_362</first>
+        <first>tmp_37_fu_173</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>60</item>
+          <item>95</item>
         </second>
       </item>
       <item>
-        <first>tmp_31_fu_367</first>
+        <first>tmp_38_fu_523</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>96</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_39_fu_367</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10838,79 +10750,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_32_fu_379</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>63</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_33_fu_391</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>65</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_34_cast_fu_220</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_34_fu_436</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>78</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_35_fu_460</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>84</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_36_fu_477</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>87</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_37_cast_fu_254</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>22</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_42_cast_fu_406</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>104</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_47_cast_fu_441</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>79</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_5_cast_fu_278</first>
+        <first>tmp_3_cast_fu_278</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10918,7 +10758,47 @@
         </second>
       </item>
       <item>
-        <first>tmp_6_fu_329</first>
+        <first>tmp_40_fu_379</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>63</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_41_fu_460</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>84</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_42_fu_477</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>87</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_48_fu_202</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>13</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_49_fu_214</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>15</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_4_fu_329</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10926,7 +10806,79 @@
         </second>
       </item>
       <item>
-        <first>tmp_7_cast_fu_397</first>
+        <first>tmp_50_fu_224</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>17</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_51_fu_236</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>19</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_52_fu_248</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>21</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_53_fu_282</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>33</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_54_fu_311</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>38</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_55_fu_401</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>103</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_56_fu_362</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>60</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_57_fu_391</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>65</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_58_fu_436</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>78</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_5_cast_fu_397</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10934,7 +10886,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_8_fu_353</first>
+        <first>tmp_6_fu_353</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10942,11 +10894,59 @@
         </second>
       </item>
       <item>
-        <first>tmp_9_cast_fu_358</first>
+        <first>tmp_71_cast_fu_220</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>16</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_74_cast_fu_254</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>22</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_79_cast_fu_406</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>104</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_7_cast_fu_358</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>59</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_84_cast_fu_441</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>79</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_8_fu_427</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>76</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_9_cast_fu_432</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>77</item>
         </second>
       </item>
       <item>
@@ -10966,7 +10966,7 @@
         </second>
       </item>
       <item>
-        <first>w_1_fu_323</first>
+        <first>w_2_fu_323</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11197,7 +11197,7 @@
       <count>21</count>
       <item_version>0</item_version>
       <item>
-        <first>c_1_reg_539</first>
+        <first>c_2_reg_539</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11213,7 +11213,7 @@
         </second>
       </item>
       <item>
-        <first>h_1_reg_557</first>
+        <first>h_2_reg_557</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11229,7 +11229,7 @@
         </second>
       </item>
       <item>
-        <first>i_7_reg_588</first>
+        <first>i_14_reg_588</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11261,7 +11261,7 @@
         </second>
       </item>
       <item>
-        <first>j_6_reg_601</first>
+        <first>j_10_reg_601</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11285,7 +11285,7 @@
         </second>
       </item>
       <item>
-        <first>max_value_2_reg_618</first>
+        <first>max_value_3_reg_618</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11301,7 +11301,15 @@
         </second>
       </item>
       <item>
-        <first>tmp_28_reg_567</first>
+        <first>tmp_4_reg_580</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>47</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_54_reg_567</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11309,7 +11317,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_33_reg_593</first>
+        <first>tmp_57_reg_593</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11317,7 +11325,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_34_cast_reg_544</first>
+        <first>tmp_71_cast_reg_544</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11325,19 +11333,11 @@
         </second>
       </item>
       <item>
-        <first>tmp_37_cast_reg_549</first>
+        <first>tmp_74_cast_reg_549</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>22</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_6_reg_580</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>47</item>
         </second>
       </item>
       <item>
@@ -11349,7 +11349,7 @@
         </second>
       </item>
       <item>
-        <first>w_1_reg_575</first>
+        <first>w_2_reg_575</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

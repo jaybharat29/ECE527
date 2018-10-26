@@ -291,7 +291,7 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>i_1</name>
+						<name>i_3</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -429,7 +429,7 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>tmp_1</name>
+						<name>tmp_s</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -521,7 +521,7 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>tmp_3</name>
+						<name>tmp_17</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -692,7 +692,7 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>j_1</name>
+						<name>j_3</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -785,7 +785,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>tmp_2_cast</name>
+						<name>tmp_cast_12</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -830,7 +830,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>tmp_5</name>
+						<name>tmp_18</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -876,7 +876,7 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>tmp_5_cast</name>
+						<name>tmp_23_cast</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1013,7 +1013,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_7</name>
+						<name>tmp_19</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1059,7 +1059,7 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>tmp_2</name>
+						<name>tmp_9</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1323,7 +1323,7 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>k_1</name>
+						<name>k_3</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>20</lineNumber>
@@ -1416,7 +1416,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>tmp_4</name>
+						<name>tmp_2</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1461,7 +1461,7 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>tmp_8</name>
+						<name>tmp_20</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\Patel\Downloads\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>

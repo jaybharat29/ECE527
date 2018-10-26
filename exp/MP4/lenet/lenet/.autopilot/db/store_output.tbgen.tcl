@@ -14,7 +14,7 @@ set C_modelType { void 0 }
 set C_modelArgList {
 	{ output_r float 32 regular {axi_master 1}  }
 	{ output_offset int 30 regular  }
-	{ output_oc float 32 regular {array 1176 { 1 3 } 1 1 }  }
+	{ output_oc float 32 regular {array 10 { 1 3 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "output_r", "interface" : "axi_master", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
@@ -75,7 +75,7 @@ set portList {
 	{ m_axi_output_r_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_output_r_BUSER sc_in sc_lv 1 signal 0 } 
 	{ output_offset sc_in sc_lv 30 signal 1 } 
-	{ output_oc_address0 sc_out sc_lv 11 signal 2 } 
+	{ output_oc_address0 sc_out sc_lv 4 signal 2 } 
 	{ output_oc_ce0 sc_out sc_logic 1 signal 2 } 
 	{ output_oc_q0 sc_in sc_lv 32 signal 2 } 
 }
@@ -132,7 +132,7 @@ set NewPortList {[
  	{ "name": "m_axi_output_r_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "output_r", "role": "BID" }} , 
  	{ "name": "m_axi_output_r_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "output_r", "role": "BUSER" }} , 
  	{ "name": "output_offset", "direction": "in", "datatype": "sc_lv", "bitwidth":30, "type": "signal", "bundle":{"name": "output_offset", "role": "default" }} , 
- 	{ "name": "output_oc_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "output_oc", "role": "address0" }} , 
+ 	{ "name": "output_oc_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "output_oc", "role": "address0" }} , 
  	{ "name": "output_oc_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_oc", "role": "ce0" }} , 
  	{ "name": "output_oc_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "output_oc", "role": "q0" }}  ]}
 
@@ -143,7 +143,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "4129", "EstimateLatencyMax" : "4129",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "35", "EstimateLatencyMax" : "35",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -162,15 +162,15 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	store_output {
-		output_r {Type O LastRead 4 FirstWrite 6}
+		output_r {Type O LastRead 1 FirstWrite 3}
 		output_offset {Type I LastRead 0 FirstWrite -1}
-		output_oc {Type I LastRead 4 FirstWrite -1}}}
+		output_oc {Type I LastRead 1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "4129", "Max" : "4129"}
-	, {"Name" : "Interval", "Min" : "4129", "Max" : "4129"}
+	{"Name" : "Latency", "Min" : "35", "Max" : "35"}
+	, {"Name" : "Interval", "Min" : "35", "Max" : "35"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -179,5 +179,5 @@ set PipelineEnableSignalInfo {[
 set Spec2ImplPortList { 
 	output_r { m_axi {  { m_axi_output_r_AWVALID VALID 1 1 }  { m_axi_output_r_AWREADY READY 0 1 }  { m_axi_output_r_AWADDR ADDR 1 32 }  { m_axi_output_r_AWID ID 1 1 }  { m_axi_output_r_AWLEN LEN 1 32 }  { m_axi_output_r_AWSIZE SIZE 1 3 }  { m_axi_output_r_AWBURST BURST 1 2 }  { m_axi_output_r_AWLOCK LOCK 1 2 }  { m_axi_output_r_AWCACHE CACHE 1 4 }  { m_axi_output_r_AWPROT PROT 1 3 }  { m_axi_output_r_AWQOS QOS 1 4 }  { m_axi_output_r_AWREGION REGION 1 4 }  { m_axi_output_r_AWUSER USER 1 1 }  { m_axi_output_r_WVALID VALID 1 1 }  { m_axi_output_r_WREADY READY 0 1 }  { m_axi_output_r_WDATA DATA 1 32 }  { m_axi_output_r_WSTRB STRB 1 4 }  { m_axi_output_r_WLAST LAST 1 1 }  { m_axi_output_r_WID ID 1 1 }  { m_axi_output_r_WUSER USER 1 1 }  { m_axi_output_r_ARVALID VALID 1 1 }  { m_axi_output_r_ARREADY READY 0 1 }  { m_axi_output_r_ARADDR ADDR 1 32 }  { m_axi_output_r_ARID ID 1 1 }  { m_axi_output_r_ARLEN LEN 1 32 }  { m_axi_output_r_ARSIZE SIZE 1 3 }  { m_axi_output_r_ARBURST BURST 1 2 }  { m_axi_output_r_ARLOCK LOCK 1 2 }  { m_axi_output_r_ARCACHE CACHE 1 4 }  { m_axi_output_r_ARPROT PROT 1 3 }  { m_axi_output_r_ARQOS QOS 1 4 }  { m_axi_output_r_ARREGION REGION 1 4 }  { m_axi_output_r_ARUSER USER 1 1 }  { m_axi_output_r_RVALID VALID 0 1 }  { m_axi_output_r_RREADY READY 1 1 }  { m_axi_output_r_RDATA DATA 0 32 }  { m_axi_output_r_RLAST LAST 0 1 }  { m_axi_output_r_RID ID 0 1 }  { m_axi_output_r_RUSER USER 0 1 }  { m_axi_output_r_RRESP RESP 0 2 }  { m_axi_output_r_BVALID VALID 0 1 }  { m_axi_output_r_BREADY READY 1 1 }  { m_axi_output_r_BRESP RESP 0 2 }  { m_axi_output_r_BID ID 0 1 }  { m_axi_output_r_BUSER USER 0 1 } } }
 	output_offset { ap_none {  { output_offset in_data 0 30 } } }
-	output_oc { ap_memory {  { output_oc_address0 mem_address 1 11 }  { output_oc_ce0 mem_ce 1 1 }  { output_oc_q0 mem_dout 0 32 } } }
+	output_oc { ap_memory {  { output_oc_address0 mem_address 1 4 }  { output_oc_ce0 mem_ce 1 1 }  { output_oc_q0 mem_dout 0 32 } } }
 }

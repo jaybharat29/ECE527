@@ -494,7 +494,7 @@ proc validate_PARAM_VALUE.C_M_AXI_DATA_OUTPUT_CACHE_VALUE { PARAM_VALUE.C_M_AXI_
 proc update_MODELPARAM_VALUE.C_S_AXI_CTL_ADDR_WIDTH { MODELPARAM_VALUE.C_S_AXI_CTL_ADDR_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	# WARNING: There is no corresponding user parameter named "C_S_AXI_CTL_ADDR_WIDTH". Setting updated value from the model parameter.
-set_property value 6 ${MODELPARAM_VALUE.C_S_AXI_CTL_ADDR_WIDTH}
+set_property value 7 ${MODELPARAM_VALUE.C_S_AXI_CTL_ADDR_WIDTH}
 }
 
 proc update_MODELPARAM_VALUE.C_M_AXI_DATA_INPUT_ID_WIDTH { MODELPARAM_VALUE.C_M_AXI_DATA_INPUT_ID_WIDTH PARAM_VALUE.C_M_AXI_DATA_INPUT_ID_WIDTH } {

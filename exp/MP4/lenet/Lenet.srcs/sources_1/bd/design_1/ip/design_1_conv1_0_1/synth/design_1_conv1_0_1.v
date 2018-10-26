@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:conv1:1.0
-// IP Revision: 1810251535
+// IP Revision: 1810252334
 
 (* X_CORE_INFO = "conv1,Vivado 2018.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_conv1_0_1,conv1,{}" *)
-(* CORE_GENERATION_INFO = "design_1_conv1_0_1,conv1,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=conv1,x_ipVersion=1.0,x_ipCoreRevision=1810251535,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTL_ADDR_WIDTH=6,C_S_AXI_CTL_DATA_WIDTH=32,C_M_AXI_DATA_INPUT_ID_WIDTH=1,C_M_AXI_DATA_INPUT_ADDR_WIDTH=32,C_M_AXI_DATA_INPUT_DATA_WIDTH=32,C_M_AXI_DATA_INPUT_AWUSER_WIDTH=1,C_M_AXI_DATA_INPUT_ARUSER_WIDTH=1,C_M_AXI_DATA_INPUT_WUSER_WIDTH=1,C_M_AXI_DATA_INPUT_RUSER_WIDTH=1,C_M_AXI_DATA_INPUT_BUSER_WI\
+(* CORE_GENERATION_INFO = "design_1_conv1_0_1,conv1,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=conv1,x_ipVersion=1.0,x_ipCoreRevision=1810252334,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTL_ADDR_WIDTH=7,C_S_AXI_CTL_DATA_WIDTH=32,C_M_AXI_DATA_INPUT_ID_WIDTH=1,C_M_AXI_DATA_INPUT_ADDR_WIDTH=32,C_M_AXI_DATA_INPUT_DATA_WIDTH=32,C_M_AXI_DATA_INPUT_AWUSER_WIDTH=1,C_M_AXI_DATA_INPUT_ARUSER_WIDTH=1,C_M_AXI_DATA_INPUT_WUSER_WIDTH=1,C_M_AXI_DATA_INPUT_RUSER_WIDTH=1,C_M_AXI_DATA_INPUT_BUSER_WI\
 DTH=1,C_M_AXI_DATA_INPUT_USER_VALUE=0x00000000,C_M_AXI_DATA_INPUT_PROT_VALUE=000,C_M_AXI_DATA_INPUT_CACHE_VALUE=0011,C_M_AXI_DATA_WEIGHT_ID_WIDTH=1,C_M_AXI_DATA_WEIGHT_ADDR_WIDTH=32,C_M_AXI_DATA_WEIGHT_DATA_WIDTH=32,C_M_AXI_DATA_WEIGHT_AWUSER_WIDTH=1,C_M_AXI_DATA_WEIGHT_ARUSER_WIDTH=1,C_M_AXI_DATA_WEIGHT_WUSER_WIDTH=1,C_M_AXI_DATA_WEIGHT_RUSER_WIDTH=1,C_M_AXI_DATA_WEIGHT_BUSER_WIDTH=1,C_M_AXI_DATA_WEIGHT_USER_VALUE=0x00000000,C_M_AXI_DATA_WEIGHT_PROT_VALUE=000,C_M_AXI_DATA_WEIGHT_CACHE_VALUE=001\
 1,C_M_AXI_DATA_BIAS_ID_WIDTH=1,C_M_AXI_DATA_BIAS_ADDR_WIDTH=32,C_M_AXI_DATA_BIAS_DATA_WIDTH=32,C_M_AXI_DATA_BIAS_AWUSER_WIDTH=1,C_M_AXI_DATA_BIAS_ARUSER_WIDTH=1,C_M_AXI_DATA_BIAS_WUSER_WIDTH=1,C_M_AXI_DATA_BIAS_RUSER_WIDTH=1,C_M_AXI_DATA_BIAS_BUSER_WIDTH=1,C_M_AXI_DATA_BIAS_USER_VALUE=0x00000000,C_M_AXI_DATA_BIAS_PROT_VALUE=000,C_M_AXI_DATA_BIAS_CACHE_VALUE=0011,C_M_AXI_DATA_OUTPUT_ID_WIDTH=1,C_M_AXI_DATA_OUTPUT_ADDR_WIDTH=32,C_M_AXI_DATA_OUTPUT_DATA_WIDTH=32,C_M_AXI_DATA_OUTPUT_AWUSER_WIDTH=1,C\
 _M_AXI_DATA_OUTPUT_ARUSER_WIDTH=1,C_M_AXI_DATA_OUTPUT_WUSER_WIDTH=1,C_M_AXI_DATA_OUTPUT_RUSER_WIDTH=1,C_M_AXI_DATA_OUTPUT_BUSER_WIDTH=1,C_M_AXI_DATA_OUTPUT_USER_VALUE=0x00000000,C_M_AXI_DATA_OUTPUT_PROT_VALUE=000,C_M_AXI_DATA_OUTPUT_CACHE_VALUE=0011}" *)
@@ -222,7 +222,7 @@ module design_1_conv1_0_1 (
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL AWADDR" *)
-input wire [5 : 0] s_axi_CTL_AWADDR;
+input wire [6 : 0] s_axi_CTL_AWADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL AWVALID" *)
 input wire s_axi_CTL_AWVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL AWREADY" *)
@@ -242,7 +242,7 @@ output wire s_axi_CTL_BVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL BREADY" *)
 input wire s_axi_CTL_BREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL ARADDR" *)
-input wire [5 : 0] s_axi_CTL_ARADDR;
+input wire [6 : 0] s_axi_CTL_ARADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL ARVALID" *)
 input wire s_axi_CTL_ARVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL ARREADY" *)
@@ -253,7 +253,7 @@ output wire [31 : 0] s_axi_CTL_RDATA;
 output wire [1 : 0] s_axi_CTL_RRESP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL RVALID" *)
 output wire s_axi_CTL_RVALID;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_CTL, ADDR_WIDTH 6, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, ID_W\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_CTL, ADDR_WIDTH 7, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, ID_W\
 IDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_1_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTL RREADY" *)
 input wire s_axi_CTL_RREADY;
@@ -557,7 +557,7 @@ DOMAIN design_1_processing_system7_0_1_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_
 output wire m_axi_DATA_OUTPUT_RREADY;
 
   conv1 #(
-    .C_S_AXI_CTL_ADDR_WIDTH(6),
+    .C_S_AXI_CTL_ADDR_WIDTH(7),
     .C_S_AXI_CTL_DATA_WIDTH(32),
     .C_M_AXI_DATA_INPUT_ID_WIDTH(1),
     .C_M_AXI_DATA_INPUT_ADDR_WIDTH(32),

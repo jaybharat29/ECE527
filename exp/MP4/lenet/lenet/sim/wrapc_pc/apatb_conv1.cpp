@@ -44,8 +44,12 @@ using namespace sc_dt;
 #define AUTOTB_TVIN_input_r  "../tv/cdatafile/c.conv1.autotvin_input_r.dat"
 // wrapc file define: "weights"
 #define AUTOTB_TVIN_weights  "../tv/cdatafile/c.conv1.autotvin_weights.dat"
+// wrapc file define: "weights_3"
+#define AUTOTB_TVIN_weights_3  "../tv/cdatafile/c.conv1.autotvin_weights_3.dat"
 // wrapc file define: "bias"
 #define AUTOTB_TVIN_bias  "../tv/cdatafile/c.conv1.autotvin_bias.dat"
+// wrapc file define: "bias_3"
+#define AUTOTB_TVIN_bias_3  "../tv/cdatafile/c.conv1.autotvin_bias_3.dat"
 // wrapc file define: "output_r"
 #define AUTOTB_TVIN_output_r  "../tv/cdatafile/c.conv1.autotvin_output_r.dat"
 // wrapc file define: "ap_return"
@@ -68,7 +72,9 @@ class INTER_TCL_FILE {
 			DATA_OUTPUT_depth = 0;
 			input_r_depth = 0;
 			weights_depth = 0;
+			weights_3_depth = 0;
 			bias_depth = 0;
+			bias_3_depth = 0;
 			output_r_depth = 0;
 			ap_return_depth = 0;
 			trans_num =0;
@@ -96,7 +102,9 @@ class INTER_TCL_FILE {
 			total_list << "{DATA_OUTPUT " << DATA_OUTPUT_depth << "}\n";
 			total_list << "{input_r " << input_r_depth << "}\n";
 			total_list << "{weights " << weights_depth << "}\n";
+			total_list << "{weights_3 " << weights_3_depth << "}\n";
 			total_list << "{bias " << bias_depth << "}\n";
+			total_list << "{bias_3 " << bias_3_depth << "}\n";
 			total_list << "{output_r " << output_r_depth << "}\n";
 			total_list << "{ap_return " << ap_return_depth << "}\n";
 			return total_list.str();
@@ -112,7 +120,9 @@ class INTER_TCL_FILE {
 		int DATA_OUTPUT_depth;
 		int input_r_depth;
 		int weights_depth;
+		int weights_3_depth;
 		int bias_depth;
+		int bias_3_depth;
 		int output_r_depth;
 		int ap_return_depth;
 		int trans_num;
@@ -125,14 +135,18 @@ class INTER_TCL_FILE {
 extern int conv1 (
 float input[1][32][32],
 float weights[6][1][5][5],
+float weights_3[16][6][5][5],
 float bias[6],
-float output[6][14][14]);
+float bias_3[16],
+float output[16][10][10]);
 
 int AESL_WRAP_conv1 (
 float input[1][32][32],
 float weights[6][1][5][5],
+float weights_3[16][6][5][5],
 float bias[6],
-float output[6][14][14])
+float bias_3[16],
+float output[16][10][10])
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -160,7 +174,7 @@ float output[6][14][14])
 		{
 			aesl_fh.read(AUTOTB_TVOUT_PC_DATA_OUTPUT, AESL_token); // data
 
-			sc_bv<32> *DATA_OUTPUT_pc_buffer = new sc_bv<32>[1176];
+			sc_bv<32> *DATA_OUTPUT_pc_buffer = new sc_bv<32>[1600];
 			int i = 0;
 
 			while (AESL_token != "[[/transaction]]")
@@ -233,7 +247,7 @@ float output[6][14][14])
 					// {
 						// celement: output(31, 0)
 						// {
-							sc_lv<32>* output_lv0_0_5_1_lv1_0_13_1_lv2_0_13_1 = new sc_lv<32>[1176];
+							sc_lv<32>* output_lv0_0_15_1_lv1_0_9_1_lv2_0_9_1 = new sc_lv<32>[1600];
 						// }
 					// }
 
@@ -242,18 +256,18 @@ float output[6][14][14])
 						int hls_map_index = 0;
 						// celement: output(31, 0)
 						{
-							// carray: (0) => (5) @ (1)
-							for (int i_0 = 0; i_0 <= 5; i_0 += 1)
+							// carray: (0) => (15) @ (1)
+							for (int i_0 = 0; i_0 <= 15; i_0 += 1)
 							{
-								// carray: (0) => (13) @ (1)
-								for (int i_1 = 0; i_1 <= 13; i_1 += 1)
+								// carray: (0) => (9) @ (1)
+								for (int i_1 = 0; i_1 <= 9; i_1 += 1)
 								{
-									// carray: (0) => (13) @ (1)
-									for (int i_2 = 0; i_2 <= 13; i_2 += 1)
+									// carray: (0) => (9) @ (1)
+									for (int i_2 = 0; i_2 <= 9; i_2 += 1)
 									{
 										if (&(output[0][0][0]) != NULL) // check the null address if the c port is array or others
 										{
-											output_lv0_0_5_1_lv1_0_13_1_lv2_0_13_1[hls_map_index].range(31, 0) = sc_bv<32>(DATA_OUTPUT_pc_buffer[hls_map_index].range(31, 0));
+											output_lv0_0_15_1_lv1_0_9_1_lv2_0_9_1[hls_map_index].range(31, 0) = sc_bv<32>(DATA_OUTPUT_pc_buffer[hls_map_index].range(31, 0));
 											hls_map_index++;
 										}
 									}
@@ -267,24 +281,24 @@ float output[6][14][14])
 						int hls_map_index = 0;
 						// celement: output(31, 0)
 						{
-							// carray: (0) => (5) @ (1)
-							for (int i_0 = 0; i_0 <= 5; i_0 += 1)
+							// carray: (0) => (15) @ (1)
+							for (int i_0 = 0; i_0 <= 15; i_0 += 1)
 							{
-								// carray: (0) => (13) @ (1)
-								for (int i_1 = 0; i_1 <= 13; i_1 += 1)
+								// carray: (0) => (9) @ (1)
+								for (int i_1 = 0; i_1 <= 9; i_1 += 1)
 								{
-									// carray: (0) => (13) @ (1)
-									for (int i_2 = 0; i_2 <= 13; i_2 += 1)
+									// carray: (0) => (9) @ (1)
+									for (int i_2 = 0; i_2 <= 9; i_2 += 1)
 									{
 										// sub                    : i_0 i_1 i_2
 										// ori_name               : output[i_0][i_1][i_2]
 										// sub_1st_elem           : 0 0 0
 										// ori_name_1st_elem      : output[0][0][0]
 										// output_left_conversion : *(int*)&output[i_0][i_1][i_2]
-										// output_type_conversion : (output_lv0_0_5_1_lv1_0_13_1_lv2_0_13_1[hls_map_index]).to_uint64()
+										// output_type_conversion : (output_lv0_0_15_1_lv1_0_9_1_lv2_0_9_1[hls_map_index]).to_uint64()
 										if (&(output[0][0][0]) != NULL) // check the null address if the c port is array or others
 										{
-											*(int*)&output[i_0][i_1][i_2] = (output_lv0_0_5_1_lv1_0_13_1_lv2_0_13_1[hls_map_index]).to_uint64();
+											*(int*)&output[i_0][i_1][i_2] = (output_lv0_0_15_1_lv1_0_9_1_lv2_0_9_1[hls_map_index]).to_uint64();
 											hls_map_index++;
 										}
 									}
@@ -462,9 +476,17 @@ float output[6][14][14])
 		char* tvin_weights = new char[50];
 		aesl_fh.touch(AUTOTB_TVIN_weights);
 
+		// "weights_3"
+		char* tvin_weights_3 = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_weights_3);
+
 		// "bias"
 		char* tvin_bias = new char[50];
 		aesl_fh.touch(AUTOTB_TVIN_bias);
+
+		// "bias_3"
+		char* tvin_bias_3 = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_bias_3);
 
 		// "output_r"
 		char* tvin_output_r = new char[50];
@@ -538,7 +560,7 @@ float output[6][14][14])
 		sprintf(tvin_DATA_WEIGHT, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_DATA_WEIGHT, tvin_DATA_WEIGHT);
 
-		sc_bv<32>* DATA_WEIGHT_tvin_wrapc_buffer = new sc_bv<32>[150];
+		sc_bv<32>* DATA_WEIGHT_tvin_wrapc_buffer = new sc_bv<32>[2550];
 
 		// RTL Name: DATA_WEIGHT
 		{
@@ -577,17 +599,49 @@ float output[6][14][14])
 						}
 					}
 				}
+				// celement: weights_3(31, 0)
+				{
+					// carray: (0) => (15) @ (1)
+					for (int i_0 = 0; i_0 <= 15; i_0 += 1)
+					{
+						// carray: (0) => (5) @ (1)
+						for (int i_1 = 0; i_1 <= 5; i_1 += 1)
+						{
+							// carray: (0) => (4) @ (1)
+							for (int i_2 = 0; i_2 <= 4; i_2 += 1)
+							{
+								// carray: (0) => (4) @ (1)
+								for (int i_3 = 0; i_3 <= 4; i_3 += 1)
+								{
+									// sub                   : i_0 i_1 i_2 i_3
+									// ori_name              : weights_3[i_0][i_1][i_2][i_3]
+									// sub_1st_elem          : 0 0 0 0
+									// ori_name_1st_elem     : weights_3[0][0][0][0]
+									// regulate_c_name       : weights_3
+									// input_type_conversion : *(int*)&weights_3[i_0][i_1][i_2][i_3]
+									if (&(weights_3[0][0][0][0]) != NULL) // check the null address if the c port is array or others
+									{
+										sc_lv<32> weights_3_tmp_mem;
+										weights_3_tmp_mem = *(int*)&weights_3[i_0][i_1][i_2][i_3];
+										DATA_WEIGHT_tvin_wrapc_buffer[hls_map_index].range(31, 0) = weights_3_tmp_mem.range(31, 0);
+                                 				       hls_map_index++;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 150; i++)
+		for (int i = 0; i < 2550; i++)
 		{
 			sprintf(tvin_DATA_WEIGHT, "%s\n", (DATA_WEIGHT_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_DATA_WEIGHT, tvin_DATA_WEIGHT);
 		}
 
-		tcl_file.set_num(150, &tcl_file.DATA_WEIGHT_depth);
+		tcl_file.set_num(2550, &tcl_file.DATA_WEIGHT_depth);
 		sprintf(tvin_DATA_WEIGHT, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_DATA_WEIGHT, tvin_DATA_WEIGHT);
 
@@ -646,7 +700,7 @@ float output[6][14][14])
 		sprintf(tvin_DATA_OUTPUT, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_DATA_OUTPUT, tvin_DATA_OUTPUT);
 
-		sc_bv<32>* DATA_OUTPUT_tvin_wrapc_buffer = new sc_bv<32>[1176];
+		sc_bv<32>* DATA_OUTPUT_tvin_wrapc_buffer = new sc_bv<32>[1600];
 
 		// RTL Name: DATA_OUTPUT
 		{
@@ -655,14 +709,14 @@ float output[6][14][14])
 				int hls_map_index = 0;
 				// celement: output(31, 0)
 				{
-					// carray: (0) => (5) @ (1)
-					for (int i_0 = 0; i_0 <= 5; i_0 += 1)
+					// carray: (0) => (15) @ (1)
+					for (int i_0 = 0; i_0 <= 15; i_0 += 1)
 					{
-						// carray: (0) => (13) @ (1)
-						for (int i_1 = 0; i_1 <= 13; i_1 += 1)
+						// carray: (0) => (9) @ (1)
+						for (int i_1 = 0; i_1 <= 9; i_1 += 1)
 						{
-							// carray: (0) => (13) @ (1)
-							for (int i_2 = 0; i_2 <= 13; i_2 += 1)
+							// carray: (0) => (9) @ (1)
+							for (int i_2 = 0; i_2 <= 9; i_2 += 1)
 							{
 								// sub                   : i_0 i_1 i_2
 								// ori_name              : output[i_0][i_1][i_2]
@@ -685,13 +739,13 @@ float output[6][14][14])
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 1176; i++)
+		for (int i = 0; i < 1600; i++)
 		{
 			sprintf(tvin_DATA_OUTPUT, "%s\n", (DATA_OUTPUT_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_DATA_OUTPUT, tvin_DATA_OUTPUT);
 		}
 
-		tcl_file.set_num(1176, &tcl_file.DATA_OUTPUT_depth);
+		tcl_file.set_num(1600, &tcl_file.DATA_OUTPUT_depth);
 		sprintf(tvin_DATA_OUTPUT, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_DATA_OUTPUT, tvin_DATA_OUTPUT);
 
@@ -741,6 +795,27 @@ float output[6][14][14])
 		aesl_fh.write(AUTOTB_TVIN_weights, tvin_weights);
 
 		// [[transaction]]
+		sprintf(tvin_weights_3, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_weights_3, tvin_weights_3);
+
+		sc_bv<32> weights_3_tvin_wrapc_buffer;
+
+		// RTL Name: weights_3
+		{
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 1; i++)
+		{
+			sprintf(tvin_weights_3, "%s\n", (weights_3_tvin_wrapc_buffer).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_weights_3, tvin_weights_3);
+		}
+
+		tcl_file.set_num(1, &tcl_file.weights_3_depth);
+		sprintf(tvin_weights_3, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_weights_3, tvin_weights_3);
+
+		// [[transaction]]
 		sprintf(tvin_bias, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_bias, tvin_bias);
 
@@ -760,6 +835,54 @@ float output[6][14][14])
 		tcl_file.set_num(1, &tcl_file.bias_depth);
 		sprintf(tvin_bias, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_bias, tvin_bias);
+
+		// [[transaction]]
+		sprintf(tvin_bias_3, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_bias_3, tvin_bias_3);
+
+		sc_bv<32>* bias_3_tvin_wrapc_buffer = new sc_bv<32>[16];
+
+		// RTL Name: bias_3
+		{
+			// bitslice(31, 0)
+			{
+				int hls_map_index = 0;
+				// celement: bias_3(31, 0)
+				{
+					// carray: (0) => (15) @ (1)
+					for (int i_0 = 0; i_0 <= 15; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : bias_3[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : bias_3[0]
+						// regulate_c_name       : bias_3
+						// input_type_conversion : *(int*)&bias_3[i_0]
+						if (&(bias_3[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> bias_3_tmp_mem;
+							bias_3_tmp_mem = *(int*)&bias_3[i_0];
+							bias_3_tvin_wrapc_buffer[hls_map_index].range(31, 0) = bias_3_tmp_mem.range(31, 0);
+                                 	       hls_map_index++;
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 16; i++)
+		{
+			sprintf(tvin_bias_3, "%s\n", (bias_3_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_bias_3, tvin_bias_3);
+		}
+
+		tcl_file.set_num(16, &tcl_file.bias_3_depth);
+		sprintf(tvin_bias_3, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_bias_3, tvin_bias_3);
+
+		// release memory allocation
+		delete [] bias_3_tvin_wrapc_buffer;
 
 		// [[transaction]]
 		sprintf(tvin_output_r, "[[transaction]] %d\n", AESL_transaction);
@@ -785,7 +908,7 @@ float output[6][14][14])
 // [call_c_dut] ---------->
 
 		CodeState = CALL_C_DUT;
-		int AESL_return = conv1(input, weights, bias, output);
+		int AESL_return = conv1(input, weights, weights_3, bias, bias_3, output);
 
 		CodeState = DUMP_OUTPUTS;
 
@@ -793,7 +916,7 @@ float output[6][14][14])
 		sprintf(tvout_DATA_OUTPUT, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVOUT_DATA_OUTPUT, tvout_DATA_OUTPUT);
 
-		sc_bv<32>* DATA_OUTPUT_tvout_wrapc_buffer = new sc_bv<32>[1176];
+		sc_bv<32>* DATA_OUTPUT_tvout_wrapc_buffer = new sc_bv<32>[1600];
 
 		// RTL Name: DATA_OUTPUT
 		{
@@ -802,14 +925,14 @@ float output[6][14][14])
 				int hls_map_index = 0;
 				// celement: output(31, 0)
 				{
-					// carray: (0) => (5) @ (1)
-					for (int i_0 = 0; i_0 <= 5; i_0 += 1)
+					// carray: (0) => (15) @ (1)
+					for (int i_0 = 0; i_0 <= 15; i_0 += 1)
 					{
-						// carray: (0) => (13) @ (1)
-						for (int i_1 = 0; i_1 <= 13; i_1 += 1)
+						// carray: (0) => (9) @ (1)
+						for (int i_1 = 0; i_1 <= 9; i_1 += 1)
 						{
-							// carray: (0) => (13) @ (1)
-							for (int i_2 = 0; i_2 <= 13; i_2 += 1)
+							// carray: (0) => (9) @ (1)
+							for (int i_2 = 0; i_2 <= 9; i_2 += 1)
 							{
 								// sub                   : i_0 i_1 i_2
 								// ori_name              : output[i_0][i_1][i_2]
@@ -832,13 +955,13 @@ float output[6][14][14])
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 1176; i++)
+		for (int i = 0; i < 1600; i++)
 		{
 			sprintf(tvout_DATA_OUTPUT, "%s\n", (DATA_OUTPUT_tvout_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVOUT_DATA_OUTPUT, tvout_DATA_OUTPUT);
 		}
 
-		tcl_file.set_num(1176, &tcl_file.DATA_OUTPUT_depth);
+		tcl_file.set_num(1600, &tcl_file.DATA_OUTPUT_depth);
 		sprintf(tvout_DATA_OUTPUT, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVOUT_DATA_OUTPUT, tvout_DATA_OUTPUT);
 
@@ -901,8 +1024,12 @@ float output[6][14][14])
 		delete [] tvin_input_r;
 		// release memory allocation: "weights"
 		delete [] tvin_weights;
+		// release memory allocation: "weights_3"
+		delete [] tvin_weights_3;
 		// release memory allocation: "bias"
 		delete [] tvin_bias;
+		// release memory allocation: "bias_3"
+		delete [] tvin_bias_3;
 		// release memory allocation: "output_r"
 		delete [] tvin_output_r;
 		// release memory allocation: "ap_return"

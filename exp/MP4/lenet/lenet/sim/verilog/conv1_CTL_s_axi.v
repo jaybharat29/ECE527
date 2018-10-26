@@ -41,6 +41,7 @@ module conv1_CTL_s_axi
     input  wire [31:0]                   ap_return,
     output wire [31:0]                   input_r,
     output wire [31:0]                   weights,
+    output wire [31:0]                   weights_3,
     output wire [31:0]                   bias,
     output wire [31:0]                   output_r
 );
@@ -71,36 +72,41 @@ module conv1_CTL_s_axi
 // 0x20 : Data signal of weights
 //        bit 31~0 - weights[31:0] (Read/Write)
 // 0x24 : reserved
-// 0x28 : Data signal of bias
-//        bit 31~0 - bias[31:0] (Read/Write)
+// 0x28 : Data signal of weights_3
+//        bit 31~0 - weights_3[31:0] (Read/Write)
 // 0x2c : reserved
-// 0x30 : Data signal of output_r
-//        bit 31~0 - output_r[31:0] (Read/Write)
+// 0x30 : Data signal of bias
+//        bit 31~0 - bias[31:0] (Read/Write)
 // 0x34 : reserved
+// 0x38 : Data signal of output_r
+//        bit 31~0 - output_r[31:0] (Read/Write)
+// 0x3c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL         = 6'h00,
-    ADDR_GIE             = 6'h04,
-    ADDR_IER             = 6'h08,
-    ADDR_ISR             = 6'h0c,
-    ADDR_AP_RETURN_0     = 6'h10,
-    ADDR_INPUT_R_DATA_0  = 6'h18,
-    ADDR_INPUT_R_CTRL    = 6'h1c,
-    ADDR_WEIGHTS_DATA_0  = 6'h20,
-    ADDR_WEIGHTS_CTRL    = 6'h24,
-    ADDR_BIAS_DATA_0     = 6'h28,
-    ADDR_BIAS_CTRL       = 6'h2c,
-    ADDR_OUTPUT_R_DATA_0 = 6'h30,
-    ADDR_OUTPUT_R_CTRL   = 6'h34,
-    WRIDLE               = 2'd0,
-    WRDATA               = 2'd1,
-    WRRESP               = 2'd2,
-    WRRESET              = 2'd3,
-    RDIDLE               = 2'd0,
-    RDDATA               = 2'd1,
-    RDRESET              = 2'd2,
+    ADDR_AP_CTRL          = 6'h00,
+    ADDR_GIE              = 6'h04,
+    ADDR_IER              = 6'h08,
+    ADDR_ISR              = 6'h0c,
+    ADDR_AP_RETURN_0      = 6'h10,
+    ADDR_INPUT_R_DATA_0   = 6'h18,
+    ADDR_INPUT_R_CTRL     = 6'h1c,
+    ADDR_WEIGHTS_DATA_0   = 6'h20,
+    ADDR_WEIGHTS_CTRL     = 6'h24,
+    ADDR_WEIGHTS_3_DATA_0 = 6'h28,
+    ADDR_WEIGHTS_3_CTRL   = 6'h2c,
+    ADDR_BIAS_DATA_0      = 6'h30,
+    ADDR_BIAS_CTRL        = 6'h34,
+    ADDR_OUTPUT_R_DATA_0  = 6'h38,
+    ADDR_OUTPUT_R_CTRL    = 6'h3c,
+    WRIDLE                = 2'd0,
+    WRDATA                = 2'd1,
+    WRRESP                = 2'd2,
+    WRRESET               = 2'd3,
+    RDIDLE                = 2'd0,
+    RDDATA                = 2'd1,
+    RDRESET               = 2'd2,
     ADDR_BITS         = 6;
 
 //------------------------Local signal-------------------
@@ -127,6 +133,7 @@ localparam
     reg  [31:0]                   int_ap_return;
     reg  [31:0]                   int_input_r = 'b0;
     reg  [31:0]                   int_weights = 'b0;
+    reg  [31:0]                   int_weights_3 = 'b0;
     reg  [31:0]                   int_bias = 'b0;
     reg  [31:0]                   int_output_r = 'b0;
 
@@ -245,6 +252,9 @@ always @(posedge ACLK) begin
                 ADDR_WEIGHTS_DATA_0: begin
                     rdata <= int_weights[31:0];
                 end
+                ADDR_WEIGHTS_3_DATA_0: begin
+                    rdata <= int_weights_3[31:0];
+                end
                 ADDR_BIAS_DATA_0: begin
                     rdata <= int_bias[31:0];
                 end
@@ -262,6 +272,7 @@ assign interrupt = int_gie & (|int_isr);
 assign ap_start  = int_ap_start;
 assign input_r   = int_input_r;
 assign weights   = int_weights;
+assign weights_3 = int_weights_3;
 assign bias      = int_bias;
 assign output_r  = int_output_r;
 // int_ap_start
@@ -387,6 +398,16 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_WEIGHTS_DATA_0)
             int_weights[31:0] <= (WDATA[31:0] & wmask) | (int_weights[31:0] & ~wmask);
+    end
+end
+
+// int_weights_3[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_weights_3[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_WEIGHTS_3_DATA_0)
+            int_weights_3[31:0] <= (WDATA[31:0] & wmask) | (int_weights_3[31:0] & ~wmask);
     end
 end
 

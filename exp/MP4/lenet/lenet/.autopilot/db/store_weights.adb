@@ -291,7 +291,7 @@
             <Obj>
               <type>0</type>
               <id>12</id>
-              <name>i_1</name>
+              <name>i_3</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -315,7 +315,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>i</originalName>
-              <rtlName>i_1_fu_126_p2</rtlName>
+              <rtlName>i_3_fu_126_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -429,7 +429,7 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>tmp_1</name>
+              <name>tmp_s</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -453,7 +453,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_1_fu_136_p3</rtlName>
+              <rtlName>tmp_s_fu_136_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>5</bitwidth>
@@ -521,7 +521,7 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>tmp_3</name>
+              <name>tmp_17</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
@@ -545,7 +545,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_3_fu_148_p2</rtlName>
+              <rtlName>tmp_17_fu_148_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>6</bitwidth>
@@ -692,7 +692,7 @@
             <Obj>
               <type>0</type>
               <id>24</id>
-              <name>j_1</name>
+              <name>j_3</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>18</lineNumber>
@@ -716,7 +716,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>j</originalName>
-              <rtlName>j_1_fu_160_p2</rtlName>
+              <rtlName>j_3_fu_160_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -785,7 +785,7 @@
             <Obj>
               <type>0</type>
               <id>27</id>
-              <name>tmp_2_cast</name>
+              <name>tmp_cast_12</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
@@ -809,7 +809,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_2_cast_fu_166_p1</rtlName>
+              <rtlName>tmp_cast_12_fu_166_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>6</bitwidth>
@@ -830,7 +830,7 @@
             <Obj>
               <type>0</type>
               <id>28</id>
-              <name>tmp_5</name>
+              <name>tmp_18</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
@@ -854,7 +854,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_5_fu_170_p2</rtlName>
+              <rtlName>tmp_18_fu_170_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>6</bitwidth>
@@ -876,7 +876,7 @@
             <Obj>
               <type>0</type>
               <id>29</id>
-              <name>tmp_5_cast</name>
+              <name>tmp_23_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
@@ -900,7 +900,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_5_cast_fu_175_p1</rtlName>
+              <rtlName>tmp_23_cast_fu_175_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1013,7 +1013,7 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>tmp_7</name>
+              <name>tmp_19</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
@@ -1037,7 +1037,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_7_fu_191_p2</rtlName>
+              <rtlName>tmp_19_fu_191_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1059,7 +1059,7 @@
             <Obj>
               <type>0</type>
               <id>33</id>
-              <name>tmp_2</name>
+              <name>tmp_9</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
@@ -1083,7 +1083,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_2_fu_197_p2</rtlName>
+              <rtlName>tmp_9_fu_197_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1323,7 +1323,7 @@
             <Obj>
               <type>0</type>
               <id>41</id>
-              <name>k_1</name>
+              <name>k_3</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>20</lineNumber>
@@ -1347,7 +1347,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>k</originalName>
-              <rtlName>k_1_fu_214_p2</rtlName>
+              <rtlName>k_3_fu_214_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -1416,7 +1416,7 @@
             <Obj>
               <type>0</type>
               <id>44</id>
-              <name>tmp_4</name>
+              <name>tmp_2</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
@@ -1440,7 +1440,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_4_fu_220_p1</rtlName>
+              <rtlName>tmp_2_fu_220_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1461,7 +1461,7 @@
             <Obj>
               <type>0</type>
               <id>45</id>
-              <name>tmp_8</name>
+              <name>tmp_20</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
@@ -1485,7 +1485,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_8_fu_224_p2</rtlName>
+              <rtlName>tmp_20_fu_224_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -3733,7 +3733,7 @@
           </second>
         </item>
         <item>
-          <first>i_1_fu_126_p2 ( + ) </first>
+          <first>i_3_fu_126_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3756,7 +3756,7 @@
           </second>
         </item>
         <item>
-          <first>j_1_fu_160_p2 ( + ) </first>
+          <first>j_3_fu_160_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3779,7 +3779,7 @@
           </second>
         </item>
         <item>
-          <first>k_1_fu_214_p2 ( + ) </first>
+          <first>k_3_fu_214_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3802,30 +3802,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_2_fu_197_p2 ( + ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>71</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_3_fu_148_p2 ( + ) </first>
+          <first>tmp_17_fu_148_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3848,7 +3825,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_5_fu_170_p2 ( + ) </first>
+          <first>tmp_18_fu_170_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3871,7 +3848,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_7_fu_191_p2 ( + ) </first>
+          <first>tmp_19_fu_191_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3894,7 +3871,30 @@
           </second>
         </item>
         <item>
-          <first>tmp_8_fu_224_p2 ( + ) </first>
+          <first>tmp_20_fu_224_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>71</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_9_fu_197_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -4132,7 +4132,7 @@
           </second>
         </item>
         <item>
-          <first>i_1_reg_237</first>
+          <first>i_3_reg_237</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -4170,7 +4170,7 @@
           </second>
         </item>
         <item>
-          <first>j_1_reg_250</first>
+          <first>j_3_reg_250</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -4208,7 +4208,7 @@
           </second>
         </item>
         <item>
-          <first>k_1_reg_269</first>
+          <first>k_3_reg_269</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -4265,7 +4265,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_3_reg_242</first>
+          <first>tmp_17_reg_242</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -4284,7 +4284,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_7_reg_255</first>
+          <first>tmp_19_reg_255</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -4303,7 +4303,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_8_reg_274</first>
+          <first>tmp_20_reg_274</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -4396,7 +4396,7 @@
           </second>
         </item>
         <item>
-          <first>i_1_fu_126_p2 ( + ) </first>
+          <first>i_3_fu_126_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4404,7 +4404,7 @@
           </second>
         </item>
         <item>
-          <first>j_1_fu_160_p2 ( + ) </first>
+          <first>j_3_fu_160_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4412,7 +4412,7 @@
           </second>
         </item>
         <item>
-          <first>k_1_fu_214_p2 ( + ) </first>
+          <first>k_3_fu_214_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4420,15 +4420,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_2_fu_197_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>33</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_3_fu_148_p2 ( + ) </first>
+          <first>tmp_17_fu_148_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4436,7 +4428,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_5_fu_170_p2 ( + ) </first>
+          <first>tmp_18_fu_170_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4444,7 +4436,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_7_fu_191_p2 ( + ) </first>
+          <first>tmp_19_fu_191_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4452,11 +4444,19 @@
           </second>
         </item>
         <item>
-          <first>tmp_8_fu_224_p2 ( + ) </first>
+          <first>tmp_20_fu_224_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
             <item>45</item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_9_fu_197_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>33</item>
           </second>
         </item>
       </dp_expression_map>
@@ -5094,7 +5094,7 @@
         </second>
       </item>
       <item>
-        <first>i_1_fu_126</first>
+        <first>i_3_fu_126</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5110,7 +5110,7 @@
         </second>
       </item>
       <item>
-        <first>j_1_fu_160</first>
+        <first>j_3_fu_160</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5126,7 +5126,7 @@
         </second>
       </item>
       <item>
-        <first>k_1_fu_214</first>
+        <first>k_3_fu_214</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5166,31 +5166,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_1_fu_136</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_2_cast_fu_166</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>27</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_2_fu_197</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>33</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_3_fu_148</first>
+        <first>tmp_17_fu_148</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5198,23 +5174,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_4_fu_220</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>44</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_5_cast_fu_175</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>29</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_5_fu_170</first>
+        <first>tmp_18_fu_170</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5222,7 +5182,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_7_fu_191</first>
+        <first>tmp_19_fu_191</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5230,11 +5190,43 @@
         </second>
       </item>
       <item>
-        <first>tmp_8_fu_224</first>
+        <first>tmp_20_fu_224</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>45</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_23_cast_fu_175</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>29</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_2_fu_220</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>44</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_9_fu_197</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>33</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_cast_12_fu_166</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>27</item>
         </second>
       </item>
       <item>
@@ -5251,6 +5243,14 @@
           <count>1</count>
           <item_version>0</item_version>
           <item>30</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_s_fu_136</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>16</item>
         </second>
       </item>
       <item>
@@ -5431,7 +5431,7 @@
       <count>12</count>
       <item_version>0</item_version>
       <item>
-        <first>i_1_reg_237</first>
+        <first>i_3_reg_237</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5447,7 +5447,7 @@
         </second>
       </item>
       <item>
-        <first>j_1_reg_250</first>
+        <first>j_3_reg_250</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5463,7 +5463,7 @@
         </second>
       </item>
       <item>
-        <first>k_1_reg_269</first>
+        <first>k_3_reg_269</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5487,7 +5487,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_3_reg_242</first>
+        <first>tmp_17_reg_242</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5495,7 +5495,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_7_reg_255</first>
+        <first>tmp_19_reg_255</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -5503,7 +5503,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_8_reg_274</first>
+        <first>tmp_20_reg_274</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

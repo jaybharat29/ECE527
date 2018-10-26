@@ -21,7 +21,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp
+HLS_SOURCES = ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp
 
 TARGET := csim.exe
 
@@ -58,6 +58,7 @@ IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E1__
+IFLAG += -Wno-unknown-pragmas 
 IFLAG += -g
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
@@ -75,15 +76,15 @@ all: $(TARGET)
 
 $(ObjDir)/lenet_tb.o: ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/lenet_tb.d
 
-$(ObjDir)/accelerator.o: ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/lenet_gold.o: ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/accelerator.d
+-include $(ObjDir)/lenet_gold.d
 
 $(ObjDir)/lenet_acc.o: ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -91,8 +92,8 @@ $(ObjDir)/lenet_acc.o: ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/acce
 
 -include $(ObjDir)/lenet_acc.d
 
-$(ObjDir)/lenet_gold.o: ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/accelerator.o: ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/lenet_gold.d
+-include $(ObjDir)/accelerator.d

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'store_bias'" level="0">
-<item name = "Date">Thu Oct 25 15:27:49 2018
+<item name = "Date">Thu Oct 25 23:32:29 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -78,7 +78,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_4_fu_100_p2">+, 0, 0, 12, 3, 1</column>
+<column name="i_8_fu_100_p2">+, 0, 0, 12, 3, 1</column>
 <column name="ap_block_state8">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond_fu_94_p2">icmp, 0, 0, 9, 3, 3</column>
 </table>
@@ -97,7 +97,7 @@
 <column name="ap_CS_fsm">9, 0, 9, 0</column>
 <column name="ap_reg_ioackin_m_axi_bias_ARREADY">1, 0, 1, 0</column>
 <column name="bias_addr_read_reg_125">32, 0, 32, 0</column>
-<column name="i_4_reg_120">3, 0, 3, 0</column>
+<column name="i_8_reg_120">3, 0, 3, 0</column>
 <column name="i_reg_71">3, 0, 3, 0</column>
 </table>
 </item>

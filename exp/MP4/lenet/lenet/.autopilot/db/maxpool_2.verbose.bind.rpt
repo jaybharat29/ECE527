@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'maxpool_2'
 ================================================================
-* Date:           Thu Oct 25 15:27:45 2018
+* Date:           Thu Oct 25 23:32:15 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -103,117 +103,117 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.76>
-ST_1 : Operation 9 [1/1] (1.76ns)   --->   "br label %.loopexit" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.76>
+ST_1 : Operation 9 [1/1] (1.76ns)   --->   "br label %.loopexit" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.76>
 
 State 2 <SV = 1> <Delay = 1.91>
-ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%c = phi i3 [ 0, %0 ], [ %c_1, %.loopexit.loopexit ]"   --->   Operation 10 'phi' 'c' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 11 [1/1] (1.13ns)   --->   "%exitcond4 = icmp eq i3 %c, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 11 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%c = phi i3 [ 0, %0 ], [ %c_2, %.loopexit.loopexit ]"   --->   Operation 10 'phi' 'c' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (1.13ns)   --->   "%exitcond4 = icmp eq i3 %c, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 11 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 13 [1/1] (1.65ns)   --->   "%c_1 = add i3 %c, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 13 'add' 'c_1' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %2, label %.preheader7.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = call i8 @_ssdm_op_BitConcatenate.i8.i3.i5(i3 %c, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 15 'bitconcatenate' 'tmp' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%p_shl2_cast = zext i8 %tmp to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 16 'zext' 'p_shl2_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_20 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %c, i2 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 17 'bitconcatenate' 'tmp_20' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%p_shl3_cast = zext i5 %tmp_20 to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 18 'zext' 'p_shl3_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 19 [1/1] (1.91ns)   --->   "%tmp_21 = sub i9 %p_shl2_cast, %p_shl3_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 19 'sub' 'tmp_21' <Predicate = (!exitcond4)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_34_cast = sext i9 %tmp_21 to i10" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 20 'sext' 'tmp_34_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_22 = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %c, i4 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 21 'bitconcatenate' 'tmp_22' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i7 %tmp_22 to i8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 22 'zext' 'p_shl_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_23 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %c, i1 false)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:82]   --->   Operation 23 'bitconcatenate' 'tmp_23' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i4 %tmp_23 to i8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 24 'zext' 'p_shl1_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (1.87ns)   --->   "%tmp_24 = sub i8 %p_shl_cast, %p_shl1_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 25 'sub' 'tmp_24' <Predicate = (!exitcond4)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_37_cast = sext i8 %tmp_24 to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 26 'sext' 'tmp_37_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
-ST_2 : Operation 27 [1/1] (1.76ns)   --->   "br label %.preheader7" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:83]   --->   Operation 27 'br' <Predicate = (!exitcond4)> <Delay = 1.76>
-ST_2 : Operation 28 [1/1] (0.00ns)   --->   "ret void" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:95]   --->   Operation 28 'ret' <Predicate = (exitcond4)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.65ns)   --->   "%c_2 = add i3 %c, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 13 'add' 'c_2' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %2, label %.preheader7.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = call i8 @_ssdm_op_BitConcatenate.i8.i3.i5(i3 %c, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 15 'bitconcatenate' 'tmp' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%p_shl2_cast = zext i8 %tmp to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 16 'zext' 'p_shl2_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_48 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %c, i2 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 17 'bitconcatenate' 'tmp_48' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%p_shl3_cast = zext i5 %tmp_48 to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 18 'zext' 'p_shl3_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (1.91ns)   --->   "%tmp_49 = sub i9 %p_shl2_cast, %p_shl3_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 19 'sub' 'tmp_49' <Predicate = (!exitcond4)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_71_cast = sext i9 %tmp_49 to i10" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 20 'sext' 'tmp_71_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_50 = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %c, i4 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 21 'bitconcatenate' 'tmp_50' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i7 %tmp_50 to i8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 22 'zext' 'p_shl_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_51 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %c, i1 false)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:122]   --->   Operation 23 'bitconcatenate' 'tmp_51' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i4 %tmp_51 to i8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 24 'zext' 'p_shl1_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.87ns)   --->   "%tmp_52 = sub i8 %p_shl_cast, %p_shl1_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 25 'sub' 'tmp_52' <Predicate = (!exitcond4)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_74_cast = sext i8 %tmp_52 to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 26 'sext' 'tmp_74_cast' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (1.76ns)   --->   "br label %.preheader7" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:123]   --->   Operation 27 'br' <Predicate = (!exitcond4)> <Delay = 1.76>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "ret void" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:135]   --->   Operation 28 'ret' <Predicate = (exitcond4)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 3.46>
-ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%h = phi i4 [ 0, %.preheader7.preheader ], [ %h_1, %.preheader7.loopexit ]"   --->   Operation 29 'phi' 'h' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 30 [1/1] (1.30ns)   --->   "%exitcond3 = icmp eq i4 %h, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:83]   --->   Operation 30 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)"   --->   Operation 31 'speclooptripcount' 'empty_14' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 32 [1/1] (1.73ns)   --->   "%h_1 = add i4 %h, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:83]   --->   Operation 32 'add' 'h_1' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 33 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.loopexit.loopexit, label %.preheader6.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:83]   --->   Operation 33 'br' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_s = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %h, i1 false)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 34 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i4 %h to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 35 'zext' 'tmp_5_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 36 [1/1] (1.91ns)   --->   "%tmp_25 = add i9 %tmp_5_cast, %tmp_37_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 36 'add' 'tmp_25' <Predicate = (!exitcond3)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_26 = trunc i9 %tmp_25 to i8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 37 'trunc' 'tmp_26' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%p_shl4_cast = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %tmp_26, i4 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 38 'bitconcatenate' 'p_shl4_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_27 = call i10 @_ssdm_op_BitConcatenate.i10.i9.i1(i9 %tmp_25, i1 false)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 39 'bitconcatenate' 'tmp_27' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%p_shl5_cast = sext i10 %tmp_27 to i12" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 40 'sext' 'p_shl5_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
-ST_3 : Operation 41 [1/1] (1.54ns)   --->   "%tmp_28 = sub i12 %p_shl4_cast, %p_shl5_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 41 'sub' 'tmp_28' <Predicate = (!exitcond3)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 42 [1/1] (1.76ns)   --->   "br label %.preheader6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:84]   --->   Operation 42 'br' <Predicate = (!exitcond3)> <Delay = 1.76>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%h = phi i4 [ 0, %.preheader7.preheader ], [ %h_2, %.preheader7.loopexit ]"   --->   Operation 29 'phi' 'h' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (1.30ns)   --->   "%exitcond3 = icmp eq i4 %h, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:123]   --->   Operation 30 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)"   --->   Operation 31 'speclooptripcount' 'empty_28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (1.73ns)   --->   "%h_2 = add i4 %h, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:123]   --->   Operation 32 'add' 'h_2' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.loopexit.loopexit, label %.preheader6.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:123]   --->   Operation 33 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_s = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %h, i1 false)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 34 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_3_cast = zext i4 %h to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 35 'zext' 'tmp_3_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.91ns)   --->   "%tmp_53 = add i9 %tmp_3_cast, %tmp_74_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 36 'add' 'tmp_53' <Predicate = (!exitcond3)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_31 = trunc i9 %tmp_53 to i8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 37 'trunc' 'tmp_31' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%p_shl4_cast = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %tmp_31, i4 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 38 'bitconcatenate' 'p_shl4_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_33 = call i10 @_ssdm_op_BitConcatenate.i10.i9.i1(i9 %tmp_53, i1 false)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 39 'bitconcatenate' 'tmp_33' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%p_shl5_cast = sext i10 %tmp_33 to i12" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 40 'sext' 'p_shl5_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (1.54ns)   --->   "%tmp_54 = sub i12 %p_shl4_cast, %p_shl5_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 41 'sub' 'tmp_54' <Predicate = (!exitcond3)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (1.76ns)   --->   "br label %.preheader6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:124]   --->   Operation 42 'br' <Predicate = (!exitcond3)> <Delay = 1.76>
 ST_3 : Operation 43 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 43 'br' <Predicate = (exitcond3)> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 1.76>
-ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%w = phi i4 [ %w_1, %1 ], [ 0, %.preheader6.preheader ]"   --->   Operation 44 'phi' 'w' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 45 [1/1] (1.30ns)   --->   "%exitcond2 = icmp eq i4 %w, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:84]   --->   Operation 45 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)"   --->   Operation 46 'speclooptripcount' 'empty_15' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 47 [1/1] (1.73ns)   --->   "%w_1 = add i4 %w, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:84]   --->   Operation 47 'add' 'w_1' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 48 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader7.loopexit, label %.preheader5.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:84]   --->   Operation 48 'br' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_6 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %w, i1 false)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 49 'bitconcatenate' 'tmp_6' <Predicate = (!exitcond2)> <Delay = 0.00>
-ST_4 : Operation 50 [1/1] (1.76ns)   --->   "br label %.preheader5" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:87]   --->   Operation 50 'br' <Predicate = (!exitcond2)> <Delay = 1.76>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%w = phi i4 [ %w_2, %1 ], [ 0, %.preheader6.preheader ]"   --->   Operation 44 'phi' 'w' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (1.30ns)   --->   "%exitcond2 = icmp eq i4 %w, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:124]   --->   Operation 45 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)"   --->   Operation 46 'speclooptripcount' 'empty_29' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (1.73ns)   --->   "%w_2 = add i4 %w, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:124]   --->   Operation 47 'add' 'w_2' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader7.loopexit, label %.preheader5.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:124]   --->   Operation 48 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_4 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %w, i1 false)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 49 'bitconcatenate' 'tmp_4' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (1.76ns)   --->   "br label %.preheader5" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:127]   --->   Operation 50 'br' <Predicate = (!exitcond2)> <Delay = 1.76>
 ST_4 : Operation 51 [1/1] (0.00ns)   --->   "br label %.preheader7"   --->   Operation 51 'br' <Predicate = (exitcond2)> <Delay = 0.00>
 
 State 5 <SV = 4> <Delay = 5.41>
-ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%max_value = phi float [ 0xC26D1A94A0000000, %.preheader5.preheader ], [ %max_value_1, %.preheader5.loopexit ]" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 52 'phi' 'max_value' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%i = phi i2 [ 0, %.preheader5.preheader ], [ %i_7, %.preheader5.loopexit ]"   --->   Operation 53 'phi' 'i' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%i_cast2 = zext i2 %i to i5" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:87]   --->   Operation 54 'zext' 'i_cast2' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 55 [1/1] (0.95ns)   --->   "%exitcond1 = icmp eq i2 %i, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:87]   --->   Operation 55 'icmp' 'exitcond1' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)"   --->   Operation 56 'speclooptripcount' 'empty_16' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 57 [1/1] (1.56ns)   --->   "%i_7 = add i2 %i, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:87]   --->   Operation 57 'add' 'i_7' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 58 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %1, label %.preheader.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:87]   --->   Operation 58 'br' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 59 [1/1] (1.78ns)   --->   "%tmp_8 = add i5 %i_cast2, %tmp_s" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 59 'add' 'tmp_8' <Predicate = (!exitcond1)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i5 %tmp_8 to i10" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 60 'zext' 'tmp_9_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
-ST_5 : Operation 61 [1/1] (1.82ns)   --->   "%tmp_30 = add i10 %tmp_34_cast, %tmp_9_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 61 'add' 'tmp_30' <Predicate = (!exitcond1)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_31 = trunc i10 %tmp_30 to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 62 'trunc' 'tmp_31' <Predicate = (!exitcond1)> <Delay = 0.00>
-ST_5 : Operation 63 [1/1] (0.00ns)   --->   "%p_shl6_cast = call i14 @_ssdm_op_BitConcatenate.i14.i9.i5(i9 %tmp_31, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 63 'bitconcatenate' 'p_shl6_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
-ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_32 = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_30, i2 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 64 'bitconcatenate' 'tmp_32' <Predicate = (!exitcond1)> <Delay = 0.00>
-ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%p_shl7_cast = sext i12 %tmp_32 to i14" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 65 'sext' 'p_shl7_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
-ST_5 : Operation 66 [1/1] (1.81ns)   --->   "%tmp_33 = sub i14 %p_shl6_cast, %p_shl7_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 66 'sub' 'tmp_33' <Predicate = (!exitcond1)> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 67 [1/1] (1.76ns)   --->   "br label %.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:89]   --->   Operation 67 'br' <Predicate = (!exitcond1)> <Delay = 1.76>
-ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_7_cast = zext i4 %w to i12" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 68 'zext' 'tmp_7_cast' <Predicate = (exitcond1)> <Delay = 0.00>
-ST_5 : Operation 69 [1/1] (1.54ns)   --->   "%tmp_29 = add i12 %tmp_28, %tmp_7_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 69 'add' 'tmp_29' <Predicate = (exitcond1)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_42_cast = zext i12 %tmp_29 to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 70 'zext' 'tmp_42_cast' <Predicate = (exitcond1)> <Delay = 0.00>
-ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [1176 x float]* %output_r, i64 0, i64 %tmp_42_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 71 'getelementptr' 'output_addr' <Predicate = (exitcond1)> <Delay = 0.00>
-ST_5 : Operation 72 [1/1] (3.25ns)   --->   "store float %max_value, float* %output_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 72 'store' <Predicate = (exitcond1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1176> <RAM>
-ST_5 : Operation 73 [1/1] (0.00ns)   --->   "br label %.preheader6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:84]   --->   Operation 73 'br' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%max_value = phi float [ 0xC26D1A94A0000000, %.preheader5.preheader ], [ %max_value_1, %.preheader5.loopexit ]" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 52 'phi' 'max_value' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%i = phi i2 [ 0, %.preheader5.preheader ], [ %i_14, %.preheader5.loopexit ]"   --->   Operation 53 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%i_cast2 = zext i2 %i to i5" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:127]   --->   Operation 54 'zext' 'i_cast2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.95ns)   --->   "%exitcond1 = icmp eq i2 %i, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:127]   --->   Operation 55 'icmp' 'exitcond1' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)"   --->   Operation 56 'speclooptripcount' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (1.56ns)   --->   "%i_14 = add i2 %i, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:127]   --->   Operation 57 'add' 'i_14' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %1, label %.preheader.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:127]   --->   Operation 58 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (1.78ns)   --->   "%tmp_6 = add i5 %i_cast2, %tmp_s" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 59 'add' 'tmp_6' <Predicate = (!exitcond1)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_7_cast = zext i5 %tmp_6 to i10" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 60 'zext' 'tmp_7_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_5 : Operation 61 [1/1] (1.82ns)   --->   "%tmp_56 = add i10 %tmp_71_cast, %tmp_7_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 61 'add' 'tmp_56' <Predicate = (!exitcond1)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_39 = trunc i10 %tmp_56 to i9" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 62 'trunc' 'tmp_39' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (0.00ns)   --->   "%p_shl6_cast = call i14 @_ssdm_op_BitConcatenate.i14.i9.i5(i9 %tmp_39, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 63 'bitconcatenate' 'p_shl6_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_40 = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_56, i2 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 64 'bitconcatenate' 'tmp_40' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%p_shl7_cast = sext i12 %tmp_40 to i14" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 65 'sext' 'p_shl7_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_5 : Operation 66 [1/1] (1.81ns)   --->   "%tmp_57 = sub i14 %p_shl6_cast, %p_shl7_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 66 'sub' 'tmp_57' <Predicate = (!exitcond1)> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 67 [1/1] (1.76ns)   --->   "br label %.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:129]   --->   Operation 67 'br' <Predicate = (!exitcond1)> <Delay = 1.76>
+ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_5_cast = zext i4 %w to i12" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 68 'zext' 'tmp_5_cast' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_5 : Operation 69 [1/1] (1.54ns)   --->   "%tmp_55 = add i12 %tmp_54, %tmp_5_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 69 'add' 'tmp_55' <Predicate = (exitcond1)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_79_cast = zext i12 %tmp_55 to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 70 'zext' 'tmp_79_cast' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_5 : Operation 71 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [1176 x float]* %output_r, i64 0, i64 %tmp_79_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 71 'getelementptr' 'output_addr' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_5 : Operation 72 [1/1] (3.25ns)   --->   "store float %max_value, float* %output_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:132]   --->   Operation 72 'store' <Predicate = (exitcond1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1176> <RAM>
+ST_5 : Operation 73 [1/1] (0.00ns)   --->   "br label %.preheader6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:124]   --->   Operation 73 'br' <Predicate = (exitcond1)> <Delay = 0.00>
 
 State 6 <SV = 5> <Delay = 6.84>
-ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%max_value_1 = phi float [ %max_value_2, %._crit_edge ], [ %max_value, %.preheader.preheader ]"   --->   Operation 74 'phi' 'max_value_1' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%j = phi i2 [ %j_6, %._crit_edge ], [ 0, %.preheader.preheader ]"   --->   Operation 75 'phi' 'j' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%j_cast1 = zext i2 %j to i5" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:89]   --->   Operation 76 'zext' 'j_cast1' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 77 [1/1] (0.95ns)   --->   "%exitcond = icmp eq i2 %j, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:89]   --->   Operation 77 'icmp' 'exitcond' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)"   --->   Operation 78 'speclooptripcount' 'empty_17' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 79 [1/1] (1.56ns)   --->   "%j_6 = add i2 %j, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:89]   --->   Operation 79 'add' 'j_6' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 80 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.preheader5.loopexit, label %._crit_edge" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:89]   --->   Operation 80 'br' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 81 [1/1] (1.78ns)   --->   "%tmp_1 = add i5 %j_cast1, %tmp_6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 81 'add' 'tmp_1' <Predicate = (!exitcond)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_2_cast = zext i5 %tmp_1 to i14" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 82 'zext' 'tmp_2_cast' <Predicate = (!exitcond)> <Delay = 0.00>
-ST_6 : Operation 83 [1/1] (1.81ns)   --->   "%tmp_34 = add i14 %tmp_33, %tmp_2_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 83 'add' 'tmp_34' <Predicate = (!exitcond)> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_47_cast = zext i14 %tmp_34 to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 84 'zext' 'tmp_47_cast' <Predicate = (!exitcond)> <Delay = 0.00>
-ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%input_addr = getelementptr [4704 x float]* %input_r, i64 0, i64 %tmp_47_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 85 'getelementptr' 'input_addr' <Predicate = (!exitcond)> <Delay = 0.00>
-ST_6 : Operation 86 [2/2] (3.25ns)   --->   "%input_load = load float* %input_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 86 'load' 'input_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1176> <RAM>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%max_value_1 = phi float [ %max_value_3, %._crit_edge ], [ %max_value, %.preheader.preheader ]"   --->   Operation 74 'phi' 'max_value_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%j = phi i2 [ %j_10, %._crit_edge ], [ 0, %.preheader.preheader ]"   --->   Operation 75 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%j_cast1 = zext i2 %j to i5" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:129]   --->   Operation 76 'zext' 'j_cast1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 77 [1/1] (0.95ns)   --->   "%exitcond = icmp eq i2 %j, -2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:129]   --->   Operation 77 'icmp' 'exitcond' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%empty_31 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)"   --->   Operation 78 'speclooptripcount' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (1.56ns)   --->   "%j_10 = add i2 %j, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:129]   --->   Operation 79 'add' 'j_10' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 80 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.preheader5.loopexit, label %._crit_edge" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:129]   --->   Operation 80 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 81 [1/1] (1.78ns)   --->   "%tmp_8 = add i5 %j_cast1, %tmp_4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 81 'add' 'tmp_8' <Predicate = (!exitcond)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i5 %tmp_8 to i14" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 82 'zext' 'tmp_9_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_6 : Operation 83 [1/1] (1.81ns)   --->   "%tmp_58 = add i14 %tmp_57, %tmp_9_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 83 'add' 'tmp_58' <Predicate = (!exitcond)> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_84_cast = zext i14 %tmp_58 to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 84 'zext' 'tmp_84_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%input_addr = getelementptr [4704 x float]* %input_r, i64 0, i64 %tmp_84_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 85 'getelementptr' 'input_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_6 : Operation 86 [2/2] (3.25ns)   --->   "%input_load = load float* %input_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 86 'load' 'input_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1176> <RAM>
 ST_6 : Operation 87 [1/1] (0.00ns)   --->   "br label %.preheader5"   --->   Operation 87 'br' <Predicate = (exitcond)> <Delay = 0.00>
 
 State 7 <SV = 6> <Delay = 3.25>
-ST_7 : Operation 88 [1/2] (3.25ns)   --->   "%input_load = load float* %input_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 88 'load' 'input_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1176> <RAM>
+ST_7 : Operation 88 [1/2] (3.25ns)   --->   "%input_load = load float* %input_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 88 'load' 'input_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1176> <RAM>
 
 State 8 <SV = 7> <Delay = 8.46>
-ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%max_value_1_to_int = bitcast float %max_value_1 to i32" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 89 'bitcast' 'max_value_1_to_int' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_10 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_value_1_to_int, i32 23, i32 30)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 90 'partselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_35 = trunc i32 %max_value_1_to_int to i23" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 91 'trunc' 'tmp_35' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 92 [1/1] (0.00ns)   --->   "%input_load_to_int = bitcast float %input_load to i32" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 92 'bitcast' 'input_load_to_int' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_12 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %input_load_to_int, i32 23, i32 30)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 93 'partselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_36 = trunc i32 %input_load_to_int to i23" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 94 'trunc' 'tmp_36' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 95 [1/1] (1.55ns)   --->   "%notlhs = icmp ne i8 %tmp_10, -1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 95 'icmp' 'notlhs' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 96 [1/1] (2.44ns)   --->   "%notrhs = icmp eq i23 %tmp_35, 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 96 'icmp' 'notrhs' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node tmp_18)   --->   "%tmp_14 = or i1 %notrhs, %notlhs" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 97 'or' 'tmp_14' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 98 [1/1] (1.55ns)   --->   "%notlhs6 = icmp ne i8 %tmp_12, -1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 98 'icmp' 'notlhs6' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 99 [1/1] (2.44ns)   --->   "%notrhs7 = icmp eq i23 %tmp_36, 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 99 'icmp' 'notrhs7' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node tmp_18)   --->   "%tmp_15 = or i1 %notrhs7, %notlhs6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 100 'or' 'tmp_15' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node tmp_18)   --->   "%tmp_16 = and i1 %tmp_14, %tmp_15" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 101 'and' 'tmp_16' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 102 [1/1] (6.78ns)   --->   "%tmp_17 = fcmp ogt float %max_value_1, %input_load" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 102 'fcmp' 'tmp_17' <Predicate = true> <Delay = 6.78> <Core = "FCmp">   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 6.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 103 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_18 = and i1 %tmp_16, %tmp_17" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 103 'and' 'tmp_18' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 104 [1/1] (0.69ns) (out node of the LUT)   --->   "%max_value_2 = select i1 %tmp_18, float %max_value_1, float %input_load" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90]   --->   Operation 104 'select' 'max_value_2' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 105 [1/1] (0.00ns)   --->   "br label %.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:89]   --->   Operation 105 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%max_value_1_to_int = bitcast float %max_value_1 to i32" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 89 'bitcast' 'max_value_1_to_int' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_30 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %max_value_1_to_int, i32 23, i32 30)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 90 'partselect' 'tmp_30' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_41 = trunc i32 %max_value_1_to_int to i23" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 91 'trunc' 'tmp_41' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 92 [1/1] (0.00ns)   --->   "%input_load_to_int = bitcast float %input_load to i32" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 92 'bitcast' 'input_load_to_int' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_32 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %input_load_to_int, i32 23, i32 30)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 93 'partselect' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_42 = trunc i32 %input_load_to_int to i23" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 94 'trunc' 'tmp_42' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 95 [1/1] (1.55ns)   --->   "%notlhs = icmp ne i8 %tmp_30, -1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 95 'icmp' 'notlhs' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 96 [1/1] (2.44ns)   --->   "%notrhs = icmp eq i23 %tmp_41, 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 96 'icmp' 'notrhs' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node tmp_38)   --->   "%tmp_34 = or i1 %notrhs, %notlhs" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 97 'or' 'tmp_34' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 98 [1/1] (1.55ns)   --->   "%notlhs6 = icmp ne i8 %tmp_32, -1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 98 'icmp' 'notlhs6' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 99 [1/1] (2.44ns)   --->   "%notrhs7 = icmp eq i23 %tmp_42, 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 99 'icmp' 'notrhs7' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node tmp_38)   --->   "%tmp_35 = or i1 %notrhs7, %notlhs6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 100 'or' 'tmp_35' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node tmp_38)   --->   "%tmp_36 = and i1 %tmp_34, %tmp_35" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 101 'and' 'tmp_36' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 102 [1/1] (6.78ns)   --->   "%tmp_37 = fcmp ogt float %max_value_1, %input_load" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 102 'fcmp' 'tmp_37' <Predicate = true> <Delay = 6.78> <Core = "FCmp">   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 6.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 103 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_38 = and i1 %tmp_36, %tmp_37" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 103 'and' 'tmp_38' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 104 [1/1] (0.69ns) (out node of the LUT)   --->   "%max_value_3 = select i1 %tmp_38, float %max_value_1, float %input_load" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:130]   --->   Operation 104 'select' 'max_value_3' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 105 [1/1] (0.00ns)   --->   "br label %.preheader" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:129]   --->   Operation 105 'br' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -239,64 +239,64 @@ StgValue_9         (br               ) [ 011111111]
 c                  (phi              ) [ 001000000]
 exitcond4          (icmp             ) [ 001111111]
 empty              (speclooptripcount) [ 000000000]
-c_1                (add              ) [ 011111111]
+c_2                (add              ) [ 011111111]
 StgValue_14        (br               ) [ 000000000]
 tmp                (bitconcatenate   ) [ 000000000]
 p_shl2_cast        (zext             ) [ 000000000]
-tmp_20             (bitconcatenate   ) [ 000000000]
+tmp_48             (bitconcatenate   ) [ 000000000]
 p_shl3_cast        (zext             ) [ 000000000]
-tmp_21             (sub              ) [ 000000000]
-tmp_34_cast        (sext             ) [ 000111111]
-tmp_22             (bitconcatenate   ) [ 000000000]
+tmp_49             (sub              ) [ 000000000]
+tmp_71_cast        (sext             ) [ 000111111]
+tmp_50             (bitconcatenate   ) [ 000000000]
 p_shl_cast         (zext             ) [ 000000000]
-tmp_23             (bitconcatenate   ) [ 000000000]
+tmp_51             (bitconcatenate   ) [ 000000000]
 p_shl1_cast        (zext             ) [ 000000000]
-tmp_24             (sub              ) [ 000000000]
-tmp_37_cast        (sext             ) [ 000111111]
+tmp_52             (sub              ) [ 000000000]
+tmp_74_cast        (sext             ) [ 000111111]
 StgValue_27        (br               ) [ 001111111]
 StgValue_28        (ret              ) [ 000000000]
 h                  (phi              ) [ 000100000]
 exitcond3          (icmp             ) [ 001111111]
-empty_14           (speclooptripcount) [ 000000000]
-h_1                (add              ) [ 001111111]
+empty_28           (speclooptripcount) [ 000000000]
+h_2                (add              ) [ 001111111]
 StgValue_33        (br               ) [ 000000000]
 tmp_s              (bitconcatenate   ) [ 000011111]
-tmp_5_cast         (zext             ) [ 000000000]
-tmp_25             (add              ) [ 000000000]
-tmp_26             (trunc            ) [ 000000000]
+tmp_3_cast         (zext             ) [ 000000000]
+tmp_53             (add              ) [ 000000000]
+tmp_31             (trunc            ) [ 000000000]
 p_shl4_cast        (bitconcatenate   ) [ 000000000]
-tmp_27             (bitconcatenate   ) [ 000000000]
+tmp_33             (bitconcatenate   ) [ 000000000]
 p_shl5_cast        (sext             ) [ 000000000]
-tmp_28             (sub              ) [ 000011111]
+tmp_54             (sub              ) [ 000011111]
 StgValue_42        (br               ) [ 001111111]
 StgValue_43        (br               ) [ 011111111]
 w                  (phi              ) [ 000011111]
 exitcond2          (icmp             ) [ 001111111]
-empty_15           (speclooptripcount) [ 000000000]
-w_1                (add              ) [ 001111111]
+empty_29           (speclooptripcount) [ 000000000]
+w_2                (add              ) [ 001111111]
 StgValue_48        (br               ) [ 000000000]
-tmp_6              (bitconcatenate   ) [ 000001111]
+tmp_4              (bitconcatenate   ) [ 000001111]
 StgValue_50        (br               ) [ 001111111]
 StgValue_51        (br               ) [ 001111111]
 max_value          (phi              ) [ 000001111]
 i                  (phi              ) [ 000001000]
 i_cast2            (zext             ) [ 000000000]
 exitcond1          (icmp             ) [ 001111111]
-empty_16           (speclooptripcount) [ 000000000]
-i_7                (add              ) [ 001111111]
+empty_30           (speclooptripcount) [ 000000000]
+i_14               (add              ) [ 001111111]
 StgValue_58        (br               ) [ 000000000]
-tmp_8              (add              ) [ 000000000]
-tmp_9_cast         (zext             ) [ 000000000]
-tmp_30             (add              ) [ 000000000]
-tmp_31             (trunc            ) [ 000000000]
-p_shl6_cast        (bitconcatenate   ) [ 000000000]
-tmp_32             (bitconcatenate   ) [ 000000000]
-p_shl7_cast        (sext             ) [ 000000000]
-tmp_33             (sub              ) [ 000000111]
-StgValue_67        (br               ) [ 001111111]
+tmp_6              (add              ) [ 000000000]
 tmp_7_cast         (zext             ) [ 000000000]
-tmp_29             (add              ) [ 000000000]
-tmp_42_cast        (zext             ) [ 000000000]
+tmp_56             (add              ) [ 000000000]
+tmp_39             (trunc            ) [ 000000000]
+p_shl6_cast        (bitconcatenate   ) [ 000000000]
+tmp_40             (bitconcatenate   ) [ 000000000]
+p_shl7_cast        (sext             ) [ 000000000]
+tmp_57             (sub              ) [ 000000111]
+StgValue_67        (br               ) [ 001111111]
+tmp_5_cast         (zext             ) [ 000000000]
+tmp_55             (add              ) [ 000000000]
+tmp_79_cast        (zext             ) [ 000000000]
 output_addr        (getelementptr    ) [ 000000000]
 StgValue_72        (store            ) [ 000000000]
 StgValue_73        (br               ) [ 001111111]
@@ -304,32 +304,32 @@ max_value_1        (phi              ) [ 001111111]
 j                  (phi              ) [ 000000100]
 j_cast1            (zext             ) [ 000000000]
 exitcond           (icmp             ) [ 001111111]
-empty_17           (speclooptripcount) [ 000000000]
-j_6                (add              ) [ 001111111]
+empty_31           (speclooptripcount) [ 000000000]
+j_10               (add              ) [ 001111111]
 StgValue_80        (br               ) [ 000000000]
-tmp_1              (add              ) [ 000000000]
-tmp_2_cast         (zext             ) [ 000000000]
-tmp_34             (add              ) [ 000000000]
-tmp_47_cast        (zext             ) [ 000000000]
+tmp_8              (add              ) [ 000000000]
+tmp_9_cast         (zext             ) [ 000000000]
+tmp_58             (add              ) [ 000000000]
+tmp_84_cast        (zext             ) [ 000000000]
 input_addr         (getelementptr    ) [ 000000010]
 StgValue_87        (br               ) [ 001111111]
 input_load         (load             ) [ 000000001]
 max_value_1_to_int (bitcast          ) [ 000000000]
-tmp_10             (partselect       ) [ 000000000]
-tmp_35             (trunc            ) [ 000000000]
+tmp_30             (partselect       ) [ 000000000]
+tmp_41             (trunc            ) [ 000000000]
 input_load_to_int  (bitcast          ) [ 000000000]
-tmp_12             (partselect       ) [ 000000000]
-tmp_36             (trunc            ) [ 000000000]
+tmp_32             (partselect       ) [ 000000000]
+tmp_42             (trunc            ) [ 000000000]
 notlhs             (icmp             ) [ 000000000]
 notrhs             (icmp             ) [ 000000000]
-tmp_14             (or               ) [ 000000000]
+tmp_34             (or               ) [ 000000000]
 notlhs6            (icmp             ) [ 000000000]
 notrhs7            (icmp             ) [ 000000000]
-tmp_15             (or               ) [ 000000000]
-tmp_16             (and              ) [ 000000000]
-tmp_17             (fcmp             ) [ 000000000]
-tmp_18             (and              ) [ 000000000]
-max_value_2        (select           ) [ 001111111]
+tmp_35             (or               ) [ 000000000]
+tmp_36             (and              ) [ 000000000]
+tmp_37             (fcmp             ) [ 000000000]
+tmp_38             (and              ) [ 000000000]
+max_value_3        (select           ) [ 001111111]
 StgValue_105       (br               ) [ 001111111]
 </LifeTime>
 
@@ -855,7 +855,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="173" class="1004" name="tmp_17_fu_173">
+<comp id="173" class="1004" name="tmp_37_fu_173">
 <pin_list>
 <pin id="174" dir="0" index="0" bw="32" slack="2"/>
 <pin id="175" dir="0" index="1" bw="32" slack="1"/>
@@ -863,7 +863,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="fcmp(46) " fcode="fcmp"/>
-<opset="tmp_17/8 "/>
+<opset="tmp_37/8 "/>
 </bind>
 </comp>
 
@@ -879,7 +879,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="184" class="1004" name="c_1_fu_184">
+<comp id="184" class="1004" name="c_2_fu_184">
 <pin_list>
 <pin id="185" dir="0" index="0" bw="3" slack="0"/>
 <pin id="186" dir="0" index="1" bw="1" slack="0"/>
@@ -887,7 +887,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="c_1/2 "/>
+<opset="c_2/2 "/>
 </bind>
 </comp>
 
@@ -915,7 +915,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="202" class="1004" name="tmp_20_fu_202">
+<comp id="202" class="1004" name="tmp_48_fu_202">
 <pin_list>
 <pin id="203" dir="0" index="0" bw="5" slack="0"/>
 <pin id="204" dir="0" index="1" bw="3" slack="0"/>
@@ -924,7 +924,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_20/2 "/>
+<opset="tmp_48/2 "/>
 </bind>
 </comp>
 
@@ -939,7 +939,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="214" class="1004" name="tmp_21_fu_214">
+<comp id="214" class="1004" name="tmp_49_fu_214">
 <pin_list>
 <pin id="215" dir="0" index="0" bw="8" slack="0"/>
 <pin id="216" dir="0" index="1" bw="5" slack="0"/>
@@ -947,22 +947,22 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="tmp_21/2 "/>
+<opset="tmp_49/2 "/>
 </bind>
 </comp>
 
-<comp id="220" class="1004" name="tmp_34_cast_fu_220">
+<comp id="220" class="1004" name="tmp_71_cast_fu_220">
 <pin_list>
 <pin id="221" dir="0" index="0" bw="9" slack="0"/>
 <pin id="222" dir="1" index="1" bw="10" slack="3"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="tmp_34_cast/2 "/>
+<opset="tmp_71_cast/2 "/>
 </bind>
 </comp>
 
-<comp id="224" class="1004" name="tmp_22_fu_224">
+<comp id="224" class="1004" name="tmp_50_fu_224">
 <pin_list>
 <pin id="225" dir="0" index="0" bw="7" slack="0"/>
 <pin id="226" dir="0" index="1" bw="3" slack="0"/>
@@ -971,7 +971,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_22/2 "/>
+<opset="tmp_50/2 "/>
 </bind>
 </comp>
 
@@ -986,7 +986,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="236" class="1004" name="tmp_23_fu_236">
+<comp id="236" class="1004" name="tmp_51_fu_236">
 <pin_list>
 <pin id="237" dir="0" index="0" bw="4" slack="0"/>
 <pin id="238" dir="0" index="1" bw="3" slack="0"/>
@@ -995,7 +995,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_23/2 "/>
+<opset="tmp_51/2 "/>
 </bind>
 </comp>
 
@@ -1010,7 +1010,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="248" class="1004" name="tmp_24_fu_248">
+<comp id="248" class="1004" name="tmp_52_fu_248">
 <pin_list>
 <pin id="249" dir="0" index="0" bw="7" slack="0"/>
 <pin id="250" dir="0" index="1" bw="4" slack="0"/>
@@ -1018,18 +1018,18 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="tmp_24/2 "/>
+<opset="tmp_52/2 "/>
 </bind>
 </comp>
 
-<comp id="254" class="1004" name="tmp_37_cast_fu_254">
+<comp id="254" class="1004" name="tmp_74_cast_fu_254">
 <pin_list>
 <pin id="255" dir="0" index="0" bw="8" slack="0"/>
 <pin id="256" dir="1" index="1" bw="9" slack="1"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="tmp_37_cast/2 "/>
+<opset="tmp_74_cast/2 "/>
 </bind>
 </comp>
 
@@ -1045,7 +1045,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="264" class="1004" name="h_1_fu_264">
+<comp id="264" class="1004" name="h_2_fu_264">
 <pin_list>
 <pin id="265" dir="0" index="0" bw="4" slack="0"/>
 <pin id="266" dir="0" index="1" bw="1" slack="0"/>
@@ -1053,7 +1053,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="h_1/3 "/>
+<opset="h_2/3 "/>
 </bind>
 </comp>
 
@@ -1070,18 +1070,18 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="278" class="1004" name="tmp_5_cast_fu_278">
+<comp id="278" class="1004" name="tmp_3_cast_fu_278">
 <pin_list>
 <pin id="279" dir="0" index="0" bw="4" slack="0"/>
 <pin id="280" dir="1" index="1" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_5_cast/3 "/>
+<opset="tmp_3_cast/3 "/>
 </bind>
 </comp>
 
-<comp id="282" class="1004" name="tmp_25_fu_282">
+<comp id="282" class="1004" name="tmp_53_fu_282">
 <pin_list>
 <pin id="283" dir="0" index="0" bw="4" slack="0"/>
 <pin id="284" dir="0" index="1" bw="8" slack="1"/>
@@ -1089,18 +1089,18 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_25/3 "/>
+<opset="tmp_53/3 "/>
 </bind>
 </comp>
 
-<comp id="287" class="1004" name="tmp_26_fu_287">
+<comp id="287" class="1004" name="tmp_31_fu_287">
 <pin_list>
 <pin id="288" dir="0" index="0" bw="9" slack="0"/>
 <pin id="289" dir="1" index="1" bw="8" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_26/3 "/>
+<opset="tmp_31/3 "/>
 </bind>
 </comp>
 
@@ -1117,7 +1117,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="299" class="1004" name="tmp_27_fu_299">
+<comp id="299" class="1004" name="tmp_33_fu_299">
 <pin_list>
 <pin id="300" dir="0" index="0" bw="10" slack="0"/>
 <pin id="301" dir="0" index="1" bw="9" slack="0"/>
@@ -1126,7 +1126,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_27/3 "/>
+<opset="tmp_33/3 "/>
 </bind>
 </comp>
 
@@ -1141,7 +1141,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="311" class="1004" name="tmp_28_fu_311">
+<comp id="311" class="1004" name="tmp_54_fu_311">
 <pin_list>
 <pin id="312" dir="0" index="0" bw="12" slack="0"/>
 <pin id="313" dir="0" index="1" bw="10" slack="0"/>
@@ -1149,7 +1149,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="tmp_28/3 "/>
+<opset="tmp_54/3 "/>
 </bind>
 </comp>
 
@@ -1165,7 +1165,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="323" class="1004" name="w_1_fu_323">
+<comp id="323" class="1004" name="w_2_fu_323">
 <pin_list>
 <pin id="324" dir="0" index="0" bw="4" slack="0"/>
 <pin id="325" dir="0" index="1" bw="1" slack="0"/>
@@ -1173,11 +1173,11 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="w_1/4 "/>
+<opset="w_2/4 "/>
 </bind>
 </comp>
 
-<comp id="329" class="1004" name="tmp_6_fu_329">
+<comp id="329" class="1004" name="tmp_4_fu_329">
 <pin_list>
 <pin id="330" dir="0" index="0" bw="5" slack="0"/>
 <pin id="331" dir="0" index="1" bw="4" slack="0"/>
@@ -1186,7 +1186,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_6/4 "/>
+<opset="tmp_4/4 "/>
 </bind>
 </comp>
 
@@ -1213,7 +1213,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="347" class="1004" name="i_7_fu_347">
+<comp id="347" class="1004" name="i_14_fu_347">
 <pin_list>
 <pin id="348" dir="0" index="0" bw="2" slack="0"/>
 <pin id="349" dir="0" index="1" bw="1" slack="0"/>
@@ -1221,11 +1221,11 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="i_7/5 "/>
+<opset="i_14/5 "/>
 </bind>
 </comp>
 
-<comp id="353" class="1004" name="tmp_8_fu_353">
+<comp id="353" class="1004" name="tmp_6_fu_353">
 <pin_list>
 <pin id="354" dir="0" index="0" bw="2" slack="0"/>
 <pin id="355" dir="0" index="1" bw="5" slack="2"/>
@@ -1233,22 +1233,22 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_8/5 "/>
+<opset="tmp_6/5 "/>
 </bind>
 </comp>
 
-<comp id="358" class="1004" name="tmp_9_cast_fu_358">
+<comp id="358" class="1004" name="tmp_7_cast_fu_358">
 <pin_list>
 <pin id="359" dir="0" index="0" bw="5" slack="0"/>
 <pin id="360" dir="1" index="1" bw="10" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_9_cast/5 "/>
+<opset="tmp_7_cast/5 "/>
 </bind>
 </comp>
 
-<comp id="362" class="1004" name="tmp_30_fu_362">
+<comp id="362" class="1004" name="tmp_56_fu_362">
 <pin_list>
 <pin id="363" dir="0" index="0" bw="9" slack="3"/>
 <pin id="364" dir="0" index="1" bw="5" slack="0"/>
@@ -1256,18 +1256,18 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_30/5 "/>
+<opset="tmp_56/5 "/>
 </bind>
 </comp>
 
-<comp id="367" class="1004" name="tmp_31_fu_367">
+<comp id="367" class="1004" name="tmp_39_fu_367">
 <pin_list>
 <pin id="368" dir="0" index="0" bw="10" slack="0"/>
 <pin id="369" dir="1" index="1" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_31/5 "/>
+<opset="tmp_39/5 "/>
 </bind>
 </comp>
 
@@ -1284,7 +1284,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="379" class="1004" name="tmp_32_fu_379">
+<comp id="379" class="1004" name="tmp_40_fu_379">
 <pin_list>
 <pin id="380" dir="0" index="0" bw="12" slack="0"/>
 <pin id="381" dir="0" index="1" bw="10" slack="0"/>
@@ -1293,7 +1293,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_32/5 "/>
+<opset="tmp_40/5 "/>
 </bind>
 </comp>
 
@@ -1308,7 +1308,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="391" class="1004" name="tmp_33_fu_391">
+<comp id="391" class="1004" name="tmp_57_fu_391">
 <pin_list>
 <pin id="392" dir="0" index="0" bw="14" slack="0"/>
 <pin id="393" dir="0" index="1" bw="12" slack="0"/>
@@ -1316,22 +1316,22 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="tmp_33/5 "/>
+<opset="tmp_57/5 "/>
 </bind>
 </comp>
 
-<comp id="397" class="1004" name="tmp_7_cast_fu_397">
+<comp id="397" class="1004" name="tmp_5_cast_fu_397">
 <pin_list>
 <pin id="398" dir="0" index="0" bw="4" slack="1"/>
 <pin id="399" dir="1" index="1" bw="12" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_7_cast/5 "/>
+<opset="tmp_5_cast/5 "/>
 </bind>
 </comp>
 
-<comp id="401" class="1004" name="tmp_29_fu_401">
+<comp id="401" class="1004" name="tmp_55_fu_401">
 <pin_list>
 <pin id="402" dir="0" index="0" bw="12" slack="2"/>
 <pin id="403" dir="0" index="1" bw="4" slack="0"/>
@@ -1339,18 +1339,18 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_29/5 "/>
+<opset="tmp_55/5 "/>
 </bind>
 </comp>
 
-<comp id="406" class="1004" name="tmp_42_cast_fu_406">
+<comp id="406" class="1004" name="tmp_79_cast_fu_406">
 <pin_list>
 <pin id="407" dir="0" index="0" bw="12" slack="0"/>
 <pin id="408" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_42_cast/5 "/>
+<opset="tmp_79_cast/5 "/>
 </bind>
 </comp>
 
@@ -1377,7 +1377,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="421" class="1004" name="j_6_fu_421">
+<comp id="421" class="1004" name="j_10_fu_421">
 <pin_list>
 <pin id="422" dir="0" index="0" bw="2" slack="0"/>
 <pin id="423" dir="0" index="1" bw="1" slack="0"/>
@@ -1385,11 +1385,11 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="j_6/6 "/>
+<opset="j_10/6 "/>
 </bind>
 </comp>
 
-<comp id="427" class="1004" name="tmp_1_fu_427">
+<comp id="427" class="1004" name="tmp_8_fu_427">
 <pin_list>
 <pin id="428" dir="0" index="0" bw="2" slack="0"/>
 <pin id="429" dir="0" index="1" bw="5" slack="2"/>
@@ -1397,22 +1397,22 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_1/6 "/>
+<opset="tmp_8/6 "/>
 </bind>
 </comp>
 
-<comp id="432" class="1004" name="tmp_2_cast_fu_432">
+<comp id="432" class="1004" name="tmp_9_cast_fu_432">
 <pin_list>
 <pin id="433" dir="0" index="0" bw="5" slack="0"/>
 <pin id="434" dir="1" index="1" bw="14" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_2_cast/6 "/>
+<opset="tmp_9_cast/6 "/>
 </bind>
 </comp>
 
-<comp id="436" class="1004" name="tmp_34_fu_436">
+<comp id="436" class="1004" name="tmp_58_fu_436">
 <pin_list>
 <pin id="437" dir="0" index="0" bw="14" slack="1"/>
 <pin id="438" dir="0" index="1" bw="5" slack="0"/>
@@ -1420,18 +1420,18 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_34/6 "/>
+<opset="tmp_58/6 "/>
 </bind>
 </comp>
 
-<comp id="441" class="1004" name="tmp_47_cast_fu_441">
+<comp id="441" class="1004" name="tmp_84_cast_fu_441">
 <pin_list>
 <pin id="442" dir="0" index="0" bw="14" slack="0"/>
 <pin id="443" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_47_cast/6 "/>
+<opset="tmp_84_cast/6 "/>
 </bind>
 </comp>
 
@@ -1446,7 +1446,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="450" class="1004" name="tmp_10_fu_450">
+<comp id="450" class="1004" name="tmp_30_fu_450">
 <pin_list>
 <pin id="451" dir="0" index="0" bw="8" slack="0"/>
 <pin id="452" dir="0" index="1" bw="32" slack="0"/>
@@ -1456,18 +1456,18 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_10/8 "/>
+<opset="tmp_30/8 "/>
 </bind>
 </comp>
 
-<comp id="460" class="1004" name="tmp_35_fu_460">
+<comp id="460" class="1004" name="tmp_41_fu_460">
 <pin_list>
 <pin id="461" dir="0" index="0" bw="32" slack="0"/>
 <pin id="462" dir="1" index="1" bw="23" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_35/8 "/>
+<opset="tmp_41/8 "/>
 </bind>
 </comp>
 
@@ -1482,7 +1482,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="467" class="1004" name="tmp_12_fu_467">
+<comp id="467" class="1004" name="tmp_32_fu_467">
 <pin_list>
 <pin id="468" dir="0" index="0" bw="8" slack="0"/>
 <pin id="469" dir="0" index="1" bw="32" slack="0"/>
@@ -1492,18 +1492,18 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_12/8 "/>
+<opset="tmp_32/8 "/>
 </bind>
 </comp>
 
-<comp id="477" class="1004" name="tmp_36_fu_477">
+<comp id="477" class="1004" name="tmp_42_fu_477">
 <pin_list>
 <pin id="478" dir="0" index="0" bw="32" slack="0"/>
 <pin id="479" dir="1" index="1" bw="23" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_36/8 "/>
+<opset="tmp_42/8 "/>
 </bind>
 </comp>
 
@@ -1531,7 +1531,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="493" class="1004" name="tmp_14_fu_493">
+<comp id="493" class="1004" name="tmp_34_fu_493">
 <pin_list>
 <pin id="494" dir="0" index="0" bw="1" slack="0"/>
 <pin id="495" dir="0" index="1" bw="1" slack="0"/>
@@ -1539,7 +1539,7 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="tmp_14/8 "/>
+<opset="tmp_34/8 "/>
 </bind>
 </comp>
 
@@ -1567,7 +1567,7 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="511" class="1004" name="tmp_15_fu_511">
+<comp id="511" class="1004" name="tmp_35_fu_511">
 <pin_list>
 <pin id="512" dir="0" index="0" bw="1" slack="0"/>
 <pin id="513" dir="0" index="1" bw="1" slack="0"/>
@@ -1575,11 +1575,11 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="tmp_15/8 "/>
+<opset="tmp_35/8 "/>
 </bind>
 </comp>
 
-<comp id="517" class="1004" name="tmp_16_fu_517">
+<comp id="517" class="1004" name="tmp_36_fu_517">
 <pin_list>
 <pin id="518" dir="0" index="0" bw="1" slack="0"/>
 <pin id="519" dir="0" index="1" bw="1" slack="0"/>
@@ -1587,11 +1587,11 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="tmp_16/8 "/>
+<opset="tmp_36/8 "/>
 </bind>
 </comp>
 
-<comp id="523" class="1004" name="tmp_18_fu_523">
+<comp id="523" class="1004" name="tmp_38_fu_523">
 <pin_list>
 <pin id="524" dir="0" index="0" bw="1" slack="0"/>
 <pin id="525" dir="0" index="1" bw="1" slack="0"/>
@@ -1599,11 +1599,11 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="tmp_18/8 "/>
+<opset="tmp_38/8 "/>
 </bind>
 </comp>
 
-<comp id="529" class="1004" name="max_value_2_fu_529">
+<comp id="529" class="1004" name="max_value_3_fu_529">
 <pin_list>
 <pin id="530" dir="0" index="0" bw="1" slack="0"/>
 <pin id="531" dir="0" index="1" bw="32" slack="2"/>
@@ -1612,47 +1612,47 @@ StgValue_105       (br               ) [ 001111111]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="max_value_2/8 "/>
+<opset="max_value_3/8 "/>
 </bind>
 </comp>
 
-<comp id="539" class="1005" name="c_1_reg_539">
+<comp id="539" class="1005" name="c_2_reg_539">
 <pin_list>
 <pin id="540" dir="0" index="0" bw="3" slack="0"/>
 <pin id="541" dir="1" index="1" bw="3" slack="0"/>
 </pin_list>
 <bind>
-<opset="c_1 "/>
+<opset="c_2 "/>
 </bind>
 </comp>
 
-<comp id="544" class="1005" name="tmp_34_cast_reg_544">
+<comp id="544" class="1005" name="tmp_71_cast_reg_544">
 <pin_list>
 <pin id="545" dir="0" index="0" bw="10" slack="3"/>
 <pin id="546" dir="1" index="1" bw="10" slack="3"/>
 </pin_list>
 <bind>
-<opset="tmp_34_cast "/>
+<opset="tmp_71_cast "/>
 </bind>
 </comp>
 
-<comp id="549" class="1005" name="tmp_37_cast_reg_549">
+<comp id="549" class="1005" name="tmp_74_cast_reg_549">
 <pin_list>
 <pin id="550" dir="0" index="0" bw="9" slack="1"/>
 <pin id="551" dir="1" index="1" bw="9" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_37_cast "/>
+<opset="tmp_74_cast "/>
 </bind>
 </comp>
 
-<comp id="557" class="1005" name="h_1_reg_557">
+<comp id="557" class="1005" name="h_2_reg_557">
 <pin_list>
 <pin id="558" dir="0" index="0" bw="4" slack="0"/>
 <pin id="559" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
-<opset="h_1 "/>
+<opset="h_2 "/>
 </bind>
 </comp>
 
@@ -1666,63 +1666,63 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="567" class="1005" name="tmp_28_reg_567">
+<comp id="567" class="1005" name="tmp_54_reg_567">
 <pin_list>
 <pin id="568" dir="0" index="0" bw="12" slack="2"/>
 <pin id="569" dir="1" index="1" bw="12" slack="2"/>
 </pin_list>
 <bind>
-<opset="tmp_28 "/>
+<opset="tmp_54 "/>
 </bind>
 </comp>
 
-<comp id="575" class="1005" name="w_1_reg_575">
+<comp id="575" class="1005" name="w_2_reg_575">
 <pin_list>
 <pin id="576" dir="0" index="0" bw="4" slack="0"/>
 <pin id="577" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
-<opset="w_1 "/>
+<opset="w_2 "/>
 </bind>
 </comp>
 
-<comp id="580" class="1005" name="tmp_6_reg_580">
+<comp id="580" class="1005" name="tmp_4_reg_580">
 <pin_list>
 <pin id="581" dir="0" index="0" bw="5" slack="2"/>
 <pin id="582" dir="1" index="1" bw="5" slack="2"/>
 </pin_list>
 <bind>
-<opset="tmp_6 "/>
+<opset="tmp_4 "/>
 </bind>
 </comp>
 
-<comp id="588" class="1005" name="i_7_reg_588">
+<comp id="588" class="1005" name="i_14_reg_588">
 <pin_list>
 <pin id="589" dir="0" index="0" bw="2" slack="0"/>
 <pin id="590" dir="1" index="1" bw="2" slack="0"/>
 </pin_list>
 <bind>
-<opset="i_7 "/>
+<opset="i_14 "/>
 </bind>
 </comp>
 
-<comp id="593" class="1005" name="tmp_33_reg_593">
+<comp id="593" class="1005" name="tmp_57_reg_593">
 <pin_list>
 <pin id="594" dir="0" index="0" bw="14" slack="1"/>
 <pin id="595" dir="1" index="1" bw="14" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_33 "/>
+<opset="tmp_57 "/>
 </bind>
 </comp>
 
-<comp id="601" class="1005" name="j_6_reg_601">
+<comp id="601" class="1005" name="j_10_reg_601">
 <pin_list>
 <pin id="602" dir="0" index="0" bw="2" slack="0"/>
 <pin id="603" dir="1" index="1" bw="2" slack="0"/>
 </pin_list>
 <bind>
-<opset="j_6 "/>
+<opset="j_10 "/>
 </bind>
 </comp>
 
@@ -1746,13 +1746,13 @@ StgValue_105       (br               ) [ 001111111]
 </bind>
 </comp>
 
-<comp id="618" class="1005" name="max_value_2_reg_618">
+<comp id="618" class="1005" name="max_value_3_reg_618">
 <pin_list>
 <pin id="619" dir="0" index="0" bw="32" slack="1"/>
 <pin id="620" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="max_value_2 "/>
+<opset="max_value_3 "/>
 </bind>
 </comp>
 
@@ -2109,80 +2109,80 @@ StgValue_105       (br               ) [ 001111111]
 	State 1
 	State 2
 		exitcond4 : 1
-		c_1 : 1
+		c_2 : 1
 		StgValue_14 : 2
 		tmp : 1
 		p_shl2_cast : 2
-		tmp_20 : 1
+		tmp_48 : 1
 		p_shl3_cast : 2
-		tmp_21 : 3
-		tmp_34_cast : 4
-		tmp_22 : 1
+		tmp_49 : 3
+		tmp_71_cast : 4
+		tmp_50 : 1
 		p_shl_cast : 2
-		tmp_23 : 1
+		tmp_51 : 1
 		p_shl1_cast : 2
-		tmp_24 : 3
-		tmp_37_cast : 4
+		tmp_52 : 3
+		tmp_74_cast : 4
 	State 3
 		exitcond3 : 1
-		h_1 : 1
+		h_2 : 1
 		StgValue_33 : 2
 		tmp_s : 1
-		tmp_5_cast : 1
-		tmp_25 : 2
-		tmp_26 : 3
+		tmp_3_cast : 1
+		tmp_53 : 2
+		tmp_31 : 3
 		p_shl4_cast : 4
-		tmp_27 : 3
+		tmp_33 : 3
 		p_shl5_cast : 4
-		tmp_28 : 5
+		tmp_54 : 5
 	State 4
 		exitcond2 : 1
-		w_1 : 1
+		w_2 : 1
 		StgValue_48 : 2
-		tmp_6 : 1
+		tmp_4 : 1
 	State 5
 		i_cast2 : 1
 		exitcond1 : 1
-		i_7 : 1
+		i_14 : 1
 		StgValue_58 : 2
-		tmp_8 : 2
-		tmp_9_cast : 3
-		tmp_30 : 4
-		tmp_31 : 5
+		tmp_6 : 2
+		tmp_7_cast : 3
+		tmp_56 : 4
+		tmp_39 : 5
 		p_shl6_cast : 6
-		tmp_32 : 5
+		tmp_40 : 5
 		p_shl7_cast : 6
-		tmp_33 : 7
-		tmp_29 : 1
-		tmp_42_cast : 2
+		tmp_57 : 7
+		tmp_55 : 1
+		tmp_79_cast : 2
 		output_addr : 3
 		StgValue_72 : 4
 	State 6
 		j_cast1 : 1
 		exitcond : 1
-		j_6 : 1
+		j_10 : 1
 		StgValue_80 : 2
-		tmp_1 : 2
-		tmp_2_cast : 3
-		tmp_34 : 4
-		tmp_47_cast : 5
+		tmp_8 : 2
+		tmp_9_cast : 3
+		tmp_58 : 4
+		tmp_84_cast : 5
 		input_addr : 6
 		input_load : 7
 	State 7
 	State 8
-		tmp_10 : 1
-		tmp_35 : 1
-		tmp_12 : 1
-		tmp_36 : 1
+		tmp_30 : 1
+		tmp_41 : 1
+		tmp_32 : 1
+		tmp_42 : 1
 		notlhs : 2
 		notrhs : 2
-		tmp_14 : 3
+		tmp_34 : 3
 		notlhs6 : 2
 		notrhs7 : 2
-		tmp_15 : 3
-		tmp_16 : 3
-		tmp_18 : 3
-		max_value_2 : 3
+		tmp_35 : 3
+		tmp_36 : 3
+		tmp_38 : 3
+		max_value_3 : 3
 
 
 ============================================================
@@ -2193,19 +2193,19 @@ StgValue_105       (br               ) [ 001111111]
 |----------|--------------------|---------|---------|---------|
 | Operation|   Functional Unit  |  DSP48E |    FF   |   LUT   |
 |----------|--------------------|---------|---------|---------|
-|   fcmp   |    tmp_17_fu_173   |    0    |    66   |   239   |
+|   fcmp   |    tmp_37_fu_173   |    0    |    66   |   239   |
 |----------|--------------------|---------|---------|---------|
-|          |     c_1_fu_184     |    0    |    0    |    12   |
-|          |     h_1_fu_264     |    0    |    0    |    13   |
-|          |    tmp_25_fu_282   |    0    |    0    |    15   |
-|          |     w_1_fu_323     |    0    |    0    |    13   |
-|          |     i_7_fu_347     |    0    |    0    |    10   |
-|    add   |    tmp_8_fu_353    |    0    |    0    |    15   |
-|          |    tmp_30_fu_362   |    0    |    0    |    15   |
-|          |    tmp_29_fu_401   |    0    |    0    |    12   |
-|          |     j_6_fu_421     |    0    |    0    |    10   |
-|          |    tmp_1_fu_427    |    0    |    0    |    15   |
-|          |    tmp_34_fu_436   |    0    |    0    |    19   |
+|          |     c_2_fu_184     |    0    |    0    |    12   |
+|          |     h_2_fu_264     |    0    |    0    |    13   |
+|          |    tmp_53_fu_282   |    0    |    0    |    15   |
+|          |     w_2_fu_323     |    0    |    0    |    13   |
+|          |     i_14_fu_347    |    0    |    0    |    10   |
+|    add   |    tmp_6_fu_353    |    0    |    0    |    15   |
+|          |    tmp_56_fu_362   |    0    |    0    |    15   |
+|          |    tmp_55_fu_401   |    0    |    0    |    12   |
+|          |     j_10_fu_421    |    0    |    0    |    10   |
+|          |    tmp_8_fu_427    |    0    |    0    |    15   |
+|          |    tmp_58_fu_436   |    0    |    0    |    19   |
 |----------|--------------------|---------|---------|---------|
 |          |  exitcond4_fu_178  |    0    |    0    |    9    |
 |          |  exitcond3_fu_258  |    0    |    0    |    9    |
@@ -2217,55 +2217,55 @@ StgValue_105       (br               ) [ 001111111]
 |          |   notlhs6_fu_499   |    0    |    0    |    11   |
 |          |   notrhs7_fu_505   |    0    |    0    |    18   |
 |----------|--------------------|---------|---------|---------|
-|          |    tmp_21_fu_214   |    0    |    0    |    15   |
-|    sub   |    tmp_24_fu_248   |    0    |    0    |    15   |
-|          |    tmp_28_fu_311   |    0    |    0    |    12   |
-|          |    tmp_33_fu_391   |    0    |    0    |    19   |
+|          |    tmp_49_fu_214   |    0    |    0    |    15   |
+|    sub   |    tmp_52_fu_248   |    0    |    0    |    15   |
+|          |    tmp_54_fu_311   |    0    |    0    |    12   |
+|          |    tmp_57_fu_391   |    0    |    0    |    19   |
 |----------|--------------------|---------|---------|---------|
-|  select  | max_value_2_fu_529 |    0    |    0    |    32   |
+|  select  | max_value_3_fu_529 |    0    |    0    |    32   |
 |----------|--------------------|---------|---------|---------|
-|    or    |    tmp_14_fu_493   |    0    |    0    |    2    |
-|          |    tmp_15_fu_511   |    0    |    0    |    2    |
+|    or    |    tmp_34_fu_493   |    0    |    0    |    2    |
+|          |    tmp_35_fu_511   |    0    |    0    |    2    |
 |----------|--------------------|---------|---------|---------|
-|    and   |    tmp_16_fu_517   |    0    |    0    |    2    |
-|          |    tmp_18_fu_523   |    0    |    0    |    2    |
+|    and   |    tmp_36_fu_517   |    0    |    0    |    2    |
+|          |    tmp_38_fu_523   |    0    |    0    |    2    |
 |----------|--------------------|---------|---------|---------|
 |          |     tmp_fu_190     |    0    |    0    |    0    |
-|          |    tmp_20_fu_202   |    0    |    0    |    0    |
-|          |    tmp_22_fu_224   |    0    |    0    |    0    |
-|          |    tmp_23_fu_236   |    0    |    0    |    0    |
+|          |    tmp_48_fu_202   |    0    |    0    |    0    |
+|          |    tmp_50_fu_224   |    0    |    0    |    0    |
+|          |    tmp_51_fu_236   |    0    |    0    |    0    |
 |bitconcatenate|    tmp_s_fu_270    |    0    |    0    |    0    |
 |          | p_shl4_cast_fu_291 |    0    |    0    |    0    |
-|          |    tmp_27_fu_299   |    0    |    0    |    0    |
-|          |    tmp_6_fu_329    |    0    |    0    |    0    |
+|          |    tmp_33_fu_299   |    0    |    0    |    0    |
+|          |    tmp_4_fu_329    |    0    |    0    |    0    |
 |          | p_shl6_cast_fu_371 |    0    |    0    |    0    |
-|          |    tmp_32_fu_379   |    0    |    0    |    0    |
+|          |    tmp_40_fu_379   |    0    |    0    |    0    |
 |----------|--------------------|---------|---------|---------|
 |          | p_shl2_cast_fu_198 |    0    |    0    |    0    |
 |          | p_shl3_cast_fu_210 |    0    |    0    |    0    |
 |          |  p_shl_cast_fu_232 |    0    |    0    |    0    |
 |          | p_shl1_cast_fu_244 |    0    |    0    |    0    |
-|          |  tmp_5_cast_fu_278 |    0    |    0    |    0    |
+|          |  tmp_3_cast_fu_278 |    0    |    0    |    0    |
 |   zext   |   i_cast2_fu_337   |    0    |    0    |    0    |
-|          |  tmp_9_cast_fu_358 |    0    |    0    |    0    |
-|          |  tmp_7_cast_fu_397 |    0    |    0    |    0    |
-|          | tmp_42_cast_fu_406 |    0    |    0    |    0    |
+|          |  tmp_7_cast_fu_358 |    0    |    0    |    0    |
+|          |  tmp_5_cast_fu_397 |    0    |    0    |    0    |
+|          | tmp_79_cast_fu_406 |    0    |    0    |    0    |
 |          |   j_cast1_fu_411   |    0    |    0    |    0    |
-|          |  tmp_2_cast_fu_432 |    0    |    0    |    0    |
-|          | tmp_47_cast_fu_441 |    0    |    0    |    0    |
+|          |  tmp_9_cast_fu_432 |    0    |    0    |    0    |
+|          | tmp_84_cast_fu_441 |    0    |    0    |    0    |
 |----------|--------------------|---------|---------|---------|
-|          | tmp_34_cast_fu_220 |    0    |    0    |    0    |
-|   sext   | tmp_37_cast_fu_254 |    0    |    0    |    0    |
+|          | tmp_71_cast_fu_220 |    0    |    0    |    0    |
+|   sext   | tmp_74_cast_fu_254 |    0    |    0    |    0    |
 |          | p_shl5_cast_fu_307 |    0    |    0    |    0    |
 |          | p_shl7_cast_fu_387 |    0    |    0    |    0    |
 |----------|--------------------|---------|---------|---------|
-|          |    tmp_26_fu_287   |    0    |    0    |    0    |
-|   trunc  |    tmp_31_fu_367   |    0    |    0    |    0    |
-|          |    tmp_35_fu_460   |    0    |    0    |    0    |
-|          |    tmp_36_fu_477   |    0    |    0    |    0    |
+|          |    tmp_31_fu_287   |    0    |    0    |    0    |
+|   trunc  |    tmp_39_fu_367   |    0    |    0    |    0    |
+|          |    tmp_41_fu_460   |    0    |    0    |    0    |
+|          |    tmp_42_fu_477   |    0    |    0    |    0    |
 |----------|--------------------|---------|---------|---------|
-|partselect|    tmp_10_fu_450   |    0    |    0    |    0    |
-|          |    tmp_12_fu_467   |    0    |    0    |    0    |
+|partselect|    tmp_30_fu_450   |    0    |    0    |    0    |
+|          |    tmp_32_fu_467   |    0    |    0    |    0    |
 |----------|--------------------|---------|---------|---------|
 |   Total  |                    |    0    |    66   |   590   |
 |----------|--------------------|---------|---------|---------|
@@ -2277,26 +2277,26 @@ N/A
 +-------------------+--------+
 |                   |   FF   |
 +-------------------+--------+
-|    c_1_reg_539    |    3   |
+|    c_2_reg_539    |    3   |
 |      c_reg_92     |    3   |
-|    h_1_reg_557    |    4   |
+|    h_2_reg_557    |    4   |
 |     h_reg_103     |    4   |
-|    i_7_reg_588    |    2   |
+|    i_14_reg_588   |    2   |
 |     i_reg_139     |    2   |
 | input_addr_reg_606|   13   |
 | input_load_reg_611|   32   |
-|    j_6_reg_601    |    2   |
+|    j_10_reg_601   |    2   |
 |     j_reg_162     |    2   |
 |max_value_1_reg_150|   32   |
-|max_value_2_reg_618|   32   |
+|max_value_3_reg_618|   32   |
 | max_value_reg_126 |   32   |
-|   tmp_28_reg_567  |   12   |
-|   tmp_33_reg_593  |   14   |
-|tmp_34_cast_reg_544|   10   |
-|tmp_37_cast_reg_549|    9   |
-|   tmp_6_reg_580   |    5   |
+|   tmp_4_reg_580   |    5   |
+|   tmp_54_reg_567  |   12   |
+|   tmp_57_reg_593  |   14   |
+|tmp_71_cast_reg_544|   10   |
+|tmp_74_cast_reg_549|    9   |
 |   tmp_s_reg_562   |    5   |
-|    w_1_reg_575    |    4   |
+|    w_2_reg_575    |    4   |
 |     w_reg_114     |    4   |
 +-------------------+--------+
 |       Total       |   226  |

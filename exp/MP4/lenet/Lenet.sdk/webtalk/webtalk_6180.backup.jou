@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# 
+# Start of session at: Thu Oct 25 20:34:14 2018
+# Process ID: 6180
+# Current directory: C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

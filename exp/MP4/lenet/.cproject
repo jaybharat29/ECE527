@@ -30,7 +30,6 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Patel/Downloads/ECE527/exp/MP4"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.711612525" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -48,7 +47,6 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Patel/Downloads/ECE527/exp/MP4"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1240127967" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -80,6 +78,24 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1912899114.2040469439" name="labels.bin" rcbsApplicability="disable" resourcePath="testbench/labels.bin" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1912899114.2044262475" name="params.bin" rcbsApplicability="disable" resourcePath="testbench/params.bin" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1912899114.1811863396" name="images.bin" rcbsApplicability="disable" resourcePath="testbench/images.bin" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1912899114.1905904921" name="lenet_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/lenet_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1127360011.1478422344">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1127360011.1478422344" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1127360011">
+							<option id="gnu.cpp.compiler.option.preprocessor.def.547464948" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+							<option id="gnu.cpp.compiler.option.include.paths.46703419" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/ap_sysc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
+								<listOptionValue builtIn="false" value="C:/Users/Patel/Downloads/ECE527/exp/MP4"/>
+							</option>
+							<option id="gnu.cpp.compiler.option.other.other.1499039253" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.654360139" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
 						<entry excluding="lenet|sol|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -116,7 +132,6 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Patel/Downloads/ECE527/exp/MP4"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1710204860" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -129,7 +144,6 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
-									<listOptionValue builtIn="false" value="C:/Users/Patel/Downloads/ECE527/exp/MP4"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.198201146" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -156,6 +170,24 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1767652496.417860070" name="labels.bin" rcbsApplicability="disable" resourcePath="testbench/labels.bin" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1767652496.390484328" name="params.bin" rcbsApplicability="disable" resourcePath="testbench/params.bin" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1767652496.1119551736" name="images.bin" rcbsApplicability="disable" resourcePath="testbench/images.bin" toolsToInvoke=""/>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.release.1767652496.582307721" name="lenet_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/lenet_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1323947318.1400894105">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1323947318.1400894105" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1323947318">
+							<option id="gnu.cpp.compiler.option.preprocessor.def.262103661" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+							<option id="gnu.cpp.compiler.option.include.paths.292754955" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/ap_sysc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/include/etc"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/auto_cc/include"/>
+								<listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.2/win64/tools/systemc/include"/>
+								<listOptionValue builtIn="false" value="C:/Users/Patel/Downloads/ECE527/exp/MP4"/>
+							</option>
+							<option id="gnu.cpp.compiler.option.other.other.414632132" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1747947955" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
 						<entry excluding="lenet|sol|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>

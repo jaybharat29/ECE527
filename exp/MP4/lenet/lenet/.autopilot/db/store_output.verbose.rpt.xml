@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'store_output'" level="0">
-<item name = "Date">Thu Oct 25 15:27:55 2018
+<item name = "Date">Thu Oct 25 23:32:44 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">4129, 4129, 4129, 4129, none</column>
+<column name="">35, 35, 35, 35, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,9 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">4128, 4128, 688, -, -, 6, no</column>
-<column name=" + Loop 1.1">686, 686, 49, -, -, 14, no</column>
-<column name="  ++ Loop 1.1.1">42, 42, 3, -, -, 14, no</column>
+<column name="- Loop 1">30, 30, 3, -, -, 10, no</column>
 </table>
 </item>
 </section>
@@ -50,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 308</column>
+<column name="Expression">-, -, 0, 22</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 125</column>
-<column name="Register">-, -, 200, -</column>
+<column name="Multiplexer">-, -, -, 98</column>
+<column name="Register">-, -, 50, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -80,27 +78,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_2_fu_142_p2">+, 0, 0, 12, 3, 1</column>
-<column name="j_2_fu_188_p2">+, 0, 0, 13, 4, 1</column>
-<column name="k_2_fu_250_p2">+, 0, 0, 13, 4, 1</column>
-<column name="tmp_2_fu_198_p2">+, 0, 0, 15, 9, 9</column>
-<column name="tmp_6_fu_233_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_7_fu_260_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_1_fu_172_p2">-, 0, 0, 15, 8, 8</column>
-<column name="tmp_5_fu_227_p2">-, 0, 0, 71, 64, 64</column>
-<column name="exitcond1_fu_182_p2">icmp, 0, 0, 9, 4, 3</column>
-<column name="exitcond2_fu_136_p2">icmp, 0, 0, 9, 3, 3</column>
-<column name="exitcond_fu_244_p2">icmp, 0, 0, 9, 4, 3</column>
+<column name="i_4_fu_107_p2">+, 0, 0, 13, 4, 1</column>
+<column name="exitcond_fu_101_p2">icmp, 0, 0, 9, 4, 4</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">53, 12, 1, 12</column>
+<column name="ap_NS_fsm">44, 9, 1, 9</column>
 <column name="ap_sig_ioackin_m_axi_output_r_AWREADY">9, 2, 1, 2</column>
 <column name="ap_sig_ioackin_m_axi_output_r_WREADY">9, 2, 1, 2</column>
-<column name="i_reg_99">9, 2, 3, 6</column>
-<column name="j_reg_110">9, 2, 4, 8</column>
-<column name="k_reg_121">9, 2, 4, 8</column>
+<column name="i_reg_79">9, 2, 4, 8</column>
 <column name="output_r_blk_n_AW">9, 2, 1, 2</column>
 <column name="output_r_blk_n_B">9, 2, 1, 2</column>
 <column name="output_r_blk_n_W">9, 2, 1, 2</column>
@@ -108,20 +95,12 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">11, 0, 11, 0</column>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
 <column name="ap_reg_ioackin_m_axi_output_r_AWREADY">1, 0, 1, 0</column>
 <column name="ap_reg_ioackin_m_axi_output_r_WREADY">1, 0, 1, 0</column>
-<column name="i_2_reg_274">3, 0, 3, 0</column>
-<column name="i_reg_99">3, 0, 3, 0</column>
-<column name="j_2_reg_287">4, 0, 4, 0</column>
-<column name="j_reg_110">4, 0, 4, 0</column>
-<column name="k_2_reg_306">4, 0, 4, 0</column>
-<column name="k_reg_121">4, 0, 4, 0</column>
-<column name="output_addr_reg_297">32, 0, 32, 0</column>
-<column name="output_oc_load_reg_316">32, 0, 32, 0</column>
-<column name="sext_reg_266">30, 0, 64, 34</column>
-<column name="tmp_11_cast_reg_279">8, 0, 9, 1</column>
-<column name="tmp_5_reg_292">63, 0, 64, 1</column>
+<column name="i_4_reg_127">4, 0, 4, 0</column>
+<column name="i_reg_79">4, 0, 4, 0</column>
+<column name="output_oc_load_reg_137">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -183,7 +162,7 @@
 <column name="m_axi_output_r_BID">in, 1, m_axi, output_r, pointer</column>
 <column name="m_axi_output_r_BUSER">in, 1, m_axi, output_r, pointer</column>
 <column name="output_offset">in, 30, ap_none, output_offset, scalar</column>
-<column name="output_oc_address0">out, 11, ap_memory, output_oc, array</column>
+<column name="output_oc_address0">out, 4, ap_memory, output_oc, array</column>
 <column name="output_oc_ce0">out, 1, ap_memory, output_oc, array</column>
 <column name="output_oc_q0">in, 32, ap_memory, output_oc, array</column>
 </table>

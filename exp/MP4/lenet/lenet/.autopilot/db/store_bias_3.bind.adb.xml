@@ -1,0 +1,598 @@
+<stg><name>store_bias_3</name>
+
+
+<trans_list>
+
+<trans id="33" from="1" to="2">
+<condition id="13">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="34" from="2" to="3">
+<condition id="14">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="35" from="3" to="4">
+<condition id="15">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="36" from="4" to="5">
+<condition id="16">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="37" from="5" to="6">
+<condition id="17">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="38" from="6" to="7">
+<condition id="18">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="39" from="7" to="8">
+<condition id="20">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="40" from="8" to="9">
+<condition id="21">
+<or_exp><and_exp><literal name="exitcond" val="0"/>
+</and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="42" from="9" to="8">
+<condition id="24">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="30" op_0_bw="30" op_1_bw="30">
+<![CDATA[
+:0  %bias_offset_read = call i30 @_ssdm_op_Read.ap_auto.i30(i30 %bias_offset)
+
+]]></Node>
+<StgValue><ssdm name="bias_offset_read"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="64" op_0_bw="30">
+<![CDATA[
+:2  %sext = zext i30 %bias_offset_read to i64
+
+]]></Node>
+<StgValue><ssdm name="sext"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="32" op_0_bw="32" op_1_bw="64">
+<![CDATA[
+:3  %bias_addr = getelementptr float* %bias, i64 %sext
+
+]]></Node>
+<StgValue><ssdm name="bias_addr"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="7" lat="7">
+<core>m_axi</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:4  %bias_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %bias_addr, i32 16)
+
+]]></Node>
+<StgValue><ssdm name="bias_addr_rd_req"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="14" st_id="2" stage="6" lat="7">
+<core>m_axi</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:4  %bias_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %bias_addr, i32 16)
+
+]]></Node>
+<StgValue><ssdm name="bias_addr_rd_req"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="15" st_id="3" stage="5" lat="7">
+<core>m_axi</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="2">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:4  %bias_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %bias_addr, i32 16)
+
+]]></Node>
+<StgValue><ssdm name="bias_addr_rd_req"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="16" st_id="4" stage="4" lat="7">
+<core>m_axi</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:4  %bias_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %bias_addr, i32 16)
+
+]]></Node>
+<StgValue><ssdm name="bias_addr_rd_req"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="17" st_id="5" stage="3" lat="7">
+<core>m_axi</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="4">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:4  %bias_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %bias_addr, i32 16)
+
+]]></Node>
+<StgValue><ssdm name="bias_addr_rd_req"/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="18" st_id="6" stage="2" lat="7">
+<core>m_axi</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="5">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:4  %bias_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %bias_addr, i32 16)
+
+]]></Node>
+<StgValue><ssdm name="bias_addr_rd_req"/></StgValue>
+</operation>
+</state>
+
+<state id="7" st_id="7">
+
+<operation id="19" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="6">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+:1  call void (...)* @_ssdm_op_SpecInterface(float* %bias, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str211, i32 0, i32 16, [10 x i8]* @p_str918, [6 x i8]* @p_str716, [1 x i8]* @p_str211, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str211, [1 x i8]* @p_str211)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="20" st_id="7" stage="1" lat="7">
+<core>m_axi</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="6">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+:4  %bias_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %bias_addr, i32 16)
+
+]]></Node>
+<StgValue><ssdm name="bias_addr_rd_req"/></StgValue>
+</operation>
+
+<operation id="21" st_id="7" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="6">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0" op_0_bw="0">
+<![CDATA[
+:5  br label %1
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="8" st_id="8">
+
+<operation id="22" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="5" op_0_bw="5" op_1_bw="0">
+<![CDATA[
+:0  %i = phi i5 [ 0, %0 ], [ %i_7, %2 ]
+
+]]></Node>
+<StgValue><ssdm name="i"/></StgValue>
+</operation>
+
+<operation id="23" st_id="8" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="1" op_0_bw="5" op_1_bw="5">
+<![CDATA[
+:1  %exitcond = icmp eq i5 %i, -16
+
+]]></Node>
+<StgValue><ssdm name="exitcond"/></StgValue>
+</operation>
+
+<operation id="24" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
+<![CDATA[
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)
+
+]]></Node>
+<StgValue><ssdm name="empty"/></StgValue>
+</operation>
+
+<operation id="25" st_id="8" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="5" op_0_bw="5" op_1_bw="5">
+<![CDATA[
+:3  %i_7 = add i5 %i, 1
+
+]]></Node>
+<StgValue><ssdm name="i_7"/></StgValue>
+</operation>
+
+<operation id="26" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="7">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:4  br i1 %exitcond, label %3, label %2
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="27" st_id="8" stage="1" lat="1">
+<core>m_axi</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="9">
+<or_exp><and_exp><literal name="exitcond" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+:1  %bias_addr_read = call float @_ssdm_op_Read.m_axi.floatP(float* %bias_addr)
+
+]]></Node>
+<StgValue><ssdm name="bias_addr_read"/></StgValue>
+</operation>
+
+<operation id="28" st_id="8" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="11">
+<or_exp><and_exp><literal name="exitcond" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="0">
+<![CDATA[
+:0  ret void
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="9" st_id="9">
+
+<operation id="29" st_id="9" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="12">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="64" op_0_bw="5">
+<![CDATA[
+:0  %tmp = zext i5 %i to i64
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="30" st_id="9" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="12">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="4" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %bias_oc_addr = getelementptr [16 x float]* %bias_oc, i64 0, i64 %tmp
+
+]]></Node>
+<StgValue><ssdm name="bias_oc_addr"/></StgValue>
+</operation>
+
+<operation id="31" st_id="9" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="12">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="0" op_0_bw="32" op_1_bw="4">
+<![CDATA[
+:3  store float %bias_addr_read, float* %bias_oc_addr, align 4
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="32" st_id="9" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="12">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="0" op_0_bw="0">
+<![CDATA[
+:4  br label %1
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="43" name="bias" dir="0" iftype="4">
+<core>NULL</core><StgValue><ssdm name="bias"/></StgValue>
+</port>
+<port id="44" name="bias_offset" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="bias_offset"/></StgValue>
+</port>
+<port id="45" name="bias_oc" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="bias_oc"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="47" from="_ssdm_op_Read.ap_auto.i30" to="bias_offset_read" fromId="46" toId="10">
+</dataflow>
+<dataflow id="48" from="bias_offset" to="bias_offset_read" fromId="44" toId="10">
+</dataflow>
+<dataflow id="49" from="bias_offset_read" to="sext" fromId="10" toId="11">
+</dataflow>
+<dataflow id="50" from="bias" to="bias_addr" fromId="43" toId="12">
+</dataflow>
+<dataflow id="51" from="sext" to="bias_addr" fromId="11" toId="12">
+</dataflow>
+<dataflow id="53" from="_ssdm_op_ReadReq.m_axi.floatP" to="bias_addr_rd_req" fromId="52" toId="13">
+</dataflow>
+<dataflow id="54" from="bias_addr" to="bias_addr_rd_req" fromId="12" toId="13">
+</dataflow>
+<dataflow id="56" from="StgValue_55" to="bias_addr_rd_req" fromId="55" toId="13">
+</dataflow>
+<dataflow id="57" from="_ssdm_op_ReadReq.m_axi.floatP" to="bias_addr_rd_req" fromId="52" toId="14">
+</dataflow>
+<dataflow id="58" from="bias_addr" to="bias_addr_rd_req" fromId="12" toId="14">
+</dataflow>
+<dataflow id="59" from="StgValue_55" to="bias_addr_rd_req" fromId="55" toId="14">
+</dataflow>
+<dataflow id="60" from="_ssdm_op_ReadReq.m_axi.floatP" to="bias_addr_rd_req" fromId="52" toId="15">
+</dataflow>
+<dataflow id="61" from="bias_addr" to="bias_addr_rd_req" fromId="12" toId="15">
+</dataflow>
+<dataflow id="62" from="StgValue_55" to="bias_addr_rd_req" fromId="55" toId="15">
+</dataflow>
+<dataflow id="63" from="_ssdm_op_ReadReq.m_axi.floatP" to="bias_addr_rd_req" fromId="52" toId="16">
+</dataflow>
+<dataflow id="64" from="bias_addr" to="bias_addr_rd_req" fromId="12" toId="16">
+</dataflow>
+<dataflow id="65" from="StgValue_55" to="bias_addr_rd_req" fromId="55" toId="16">
+</dataflow>
+<dataflow id="66" from="_ssdm_op_ReadReq.m_axi.floatP" to="bias_addr_rd_req" fromId="52" toId="17">
+</dataflow>
+<dataflow id="67" from="bias_addr" to="bias_addr_rd_req" fromId="12" toId="17">
+</dataflow>
+<dataflow id="68" from="StgValue_55" to="bias_addr_rd_req" fromId="55" toId="17">
+</dataflow>
+<dataflow id="69" from="_ssdm_op_ReadReq.m_axi.floatP" to="bias_addr_rd_req" fromId="52" toId="18">
+</dataflow>
+<dataflow id="70" from="bias_addr" to="bias_addr_rd_req" fromId="12" toId="18">
+</dataflow>
+<dataflow id="71" from="StgValue_55" to="bias_addr_rd_req" fromId="55" toId="18">
+</dataflow>
+<dataflow id="73" from="_ssdm_op_SpecInterface" to="StgValue_19" fromId="72" toId="19">
+</dataflow>
+<dataflow id="74" from="bias" to="StgValue_19" fromId="43" toId="19">
+</dataflow>
+<dataflow id="76" from="p_str514" to="StgValue_19" fromId="75" toId="19">
+</dataflow>
+<dataflow id="78" from="StgValue_77" to="StgValue_19" fromId="77" toId="19">
+</dataflow>
+<dataflow id="79" from="StgValue_77" to="StgValue_19" fromId="77" toId="19">
+</dataflow>
+<dataflow id="81" from="p_str211" to="StgValue_19" fromId="80" toId="19">
+</dataflow>
+<dataflow id="82" from="StgValue_77" to="StgValue_19" fromId="77" toId="19">
+</dataflow>
+<dataflow id="83" from="StgValue_55" to="StgValue_19" fromId="55" toId="19">
+</dataflow>
+<dataflow id="85" from="p_str918" to="StgValue_19" fromId="84" toId="19">
+</dataflow>
+<dataflow id="87" from="p_str716" to="StgValue_19" fromId="86" toId="19">
+</dataflow>
+<dataflow id="88" from="p_str211" to="StgValue_19" fromId="80" toId="19">
+</dataflow>
+<dataflow id="89" from="StgValue_55" to="StgValue_19" fromId="55" toId="19">
+</dataflow>
+<dataflow id="90" from="StgValue_55" to="StgValue_19" fromId="55" toId="19">
+</dataflow>
+<dataflow id="91" from="StgValue_55" to="StgValue_19" fromId="55" toId="19">
+</dataflow>
+<dataflow id="92" from="StgValue_55" to="StgValue_19" fromId="55" toId="19">
+</dataflow>
+<dataflow id="93" from="p_str211" to="StgValue_19" fromId="80" toId="19">
+</dataflow>
+<dataflow id="94" from="p_str211" to="StgValue_19" fromId="80" toId="19">
+</dataflow>
+<dataflow id="95" from="_ssdm_op_ReadReq.m_axi.floatP" to="bias_addr_rd_req" fromId="52" toId="20">
+</dataflow>
+<dataflow id="96" from="bias_addr" to="bias_addr_rd_req" fromId="12" toId="20">
+</dataflow>
+<dataflow id="97" from="StgValue_55" to="bias_addr_rd_req" fromId="55" toId="20">
+</dataflow>
+<dataflow id="99" from="StgValue_98" to="i" fromId="98" toId="22">
+<condition id="34">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</dataflow>
+<dataflow id="100" from="StgValue_21" to="i" fromId="21" toId="22">
+</dataflow>
+<dataflow id="101" from="i_7" to="i" fromId="25" toId="22">
+<BackEdge/>
+<condition id="35">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</dataflow>
+<dataflow id="102" from="StgValue_32" to="i" fromId="32" toId="22">
+<BackEdge/>
+</dataflow>
+<dataflow id="103" from="i" to="exitcond" fromId="22" toId="23">
+</dataflow>
+<dataflow id="105" from="StgValue_104" to="exitcond" fromId="104" toId="23">
+</dataflow>
+<dataflow id="107" from="_ssdm_op_SpecLoopTripCount" to="empty" fromId="106" toId="24">
+</dataflow>
+<dataflow id="109" from="StgValue_108" to="empty" fromId="108" toId="24">
+</dataflow>
+<dataflow id="110" from="StgValue_108" to="empty" fromId="108" toId="24">
+</dataflow>
+<dataflow id="111" from="StgValue_108" to="empty" fromId="108" toId="24">
+</dataflow>
+<dataflow id="112" from="i" to="i_7" fromId="22" toId="25">
+</dataflow>
+<dataflow id="114" from="StgValue_113" to="i_7" fromId="113" toId="25">
+</dataflow>
+<dataflow id="115" from="exitcond" to="StgValue_26" fromId="23" toId="26">
+</dataflow>
+<dataflow id="117" from="_ssdm_op_Read.m_axi.floatP" to="bias_addr_read" fromId="116" toId="27">
+</dataflow>
+<dataflow id="118" from="bias_addr" to="bias_addr_read" fromId="12" toId="27">
+</dataflow>
+<dataflow id="119" from="i" to="tmp" fromId="22" toId="29">
+</dataflow>
+<dataflow id="120" from="bias_oc" to="bias_oc_addr" fromId="45" toId="30">
+</dataflow>
+<dataflow id="122" from="StgValue_121" to="bias_oc_addr" fromId="121" toId="30">
+</dataflow>
+<dataflow id="123" from="tmp" to="bias_oc_addr" fromId="29" toId="30">
+</dataflow>
+<dataflow id="124" from="bias_addr_read" to="StgValue_31" fromId="27" toId="31">
+</dataflow>
+<dataflow id="125" from="bias_oc_addr" to="StgValue_31" fromId="30" toId="31">
+</dataflow>
+<dataflow id="126" from="exitcond" to="StgValue_8" fromId="23" toId="8">
+</dataflow>
+</dataflows>
+
+
+</stg>

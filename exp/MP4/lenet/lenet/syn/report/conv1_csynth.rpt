@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'conv1'
 ================================================================
-* Date:           Thu Oct 25 15:27:57 2018
+* Date:           Thu Oct 25 23:32:47 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -25,31 +25,47 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +--------+--------+--------+--------+---------+
-    |     Latency     |     Interval    | Pipeline|
-    |   min  |   max  |   min  |   max  |   Type  |
-    +--------+--------+--------+--------+---------+
-    |  107274|  107274|  107274|  107274|   none  |
-    +--------+--------+--------+--------+---------+
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  2115980|  2115980|  2115980|  2115980|   none  |
+    +---------+---------+---------+---------+---------+
 
     + Detail: 
         * Instance: 
-        +--------------------------+---------------+-------+-------+-------+-------+---------+
-        |                          |               |    Latency    |    Interval   | Pipeline|
-        |         Instance         |     Module    |  min  |  max  |  min  |  max  |   Type  |
-        +--------------------------+---------------+-------+-------+-------+-------+---------+
-        |grp_convulution1_fu_142   |convulution1   |  61278|  61278|  61278|  61278|   none  |
-        |grp_maxpool_2_fu_150      |maxpool_2      |  21349|  21349|  21349|  21349|   none  |
-        |grp_relu_1_fu_156         |relu_1         |  14461|  14461|  14461|  14461|   none  |
-        |grp_relu_2_fu_161         |relu_2         |   3709|   3709|   3709|   3709|   none  |
-        |grp_store_weights_fu_166  |store_weights  |    583|    583|    583|    583|   none  |
-        |grp_store_output_fu_175   |store_output   |   4129|   4129|   4129|   4129|   none  |
-        |grp_store_input_fu_183    |store_input    |   2337|   2337|   2337|   2337|   none  |
-        |grp_store_bias_fu_192     |store_bias     |     19|     19|     19|     19|   none  |
-        +--------------------------+---------------+-------+-------+-------+-------+---------+
+        +----------------------------+-----------------+---------+---------+---------+---------+---------+
+        |                            |                 |      Latency      |      Interval     | Pipeline|
+        |          Instance          |      Module     |   min   |   max   |   min   |   max   |   Type  |
+        +----------------------------+-----------------+---------+---------+---------+---------+---------+
+        |grp_convulution1_fu_354     |convulution1     |    61278|    61278|    61278|    61278|   none  |
+        |grp_convolution_3_fu_362    |convolution_3    |  1228801|  1228801|  1228801|  1228801|   none  |
+        |grp_convolution_5_fu_370    |convolution_5    |   584281|   584281|   584281|   584281|   none  |
+        |grp_fc_6_fu_378             |fc_6             |    13357|    13357|    13357|    13357|   none  |
+        |grp_maxpool_2_fu_390        |maxpool_2        |    21349|    21349|    21349|    21349|   none  |
+        |grp_maxpool_4_fu_396        |maxpool_4        |     7393|     7393|     7393|     7393|   none  |
+        |grp_store_weights_5_fu_402  |store_weights_5  |   186481|   186481|   186481|   186481|   none  |
+        |grp_store_weights_3_fu_410  |store_weights_3  |     9345|     9345|     9345|     9345|   none  |
+        |grp_relu_1_fu_418           |relu_1           |    14461|    14461|    14461|    14461|   none  |
+        |grp_relu_3_fu_423           |relu_3           |     5153|     5153|     5153|     5153|   none  |
+        |grp_relu_4_fu_428           |relu_4           |     1393|     1393|     1393|     1393|   none  |
+        |grp_relu_2_fu_433           |relu_2           |     3709|     3709|     3709|     3709|   none  |
+        |grp_store_weights_fu_438    |store_weights    |      583|      583|      583|      583|   none  |
+        |grp_store_input_fu_447      |store_input      |     2337|     2337|     2337|     2337|   none  |
+        |grp_store_bias_5_fu_456     |store_bias_5     |      247|      247|      247|      247|   none  |
+        |grp_store_bias_3_fu_464     |store_bias_3     |       39|       39|       39|       39|   none  |
+        |grp_store_output_fu_472     |store_output     |       35|       35|       35|       35|   none  |
+        |grp_store_bias_fu_480       |store_bias       |       19|       19|       19|       19|   none  |
+        +----------------------------+-----------------+---------+---------+---------+---------+---------+
 
         * Loop: 
-        N/A
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  360|  360|         3|          -|          -|   120|    no    |
+        |- Loop 2  |   30|   30|         3|          -|          -|    10|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
 
 
 
@@ -61,57 +77,76 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       0|      2|
+|Expression       |        -|      -|       0|    120|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        8|     10|    7801|   9236|
-|Memory           |       24|      -|      64|      3|
-|Multiplexer      |        -|      -|       -|    416|
-|Register         |        -|      -|     140|      -|
+|Instance         |        8|     25|   11504|  16358|
+|Memory           |      167|      -|     192|     16|
+|Multiplexer      |        -|      -|       -|   1648|
+|Register         |        -|      -|     443|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |       32|     10|    8005|   9657|
+|Total            |      175|     25|   12139|  18142|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |       11|      4|       7|     18|
+|Utilization (%)  |       62|     11|      11|     34|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
     * Instance: 
-    +---------------------------+-------------------------+---------+-------+------+------+
-    |          Instance         |          Module         | BRAM_18K| DSP48E|  FF  |  LUT |
-    +---------------------------+-------------------------+---------+-------+------+------+
-    |conv1_CTL_s_axi_U          |conv1_CTL_s_axi          |        0|      0|   220|   360|
-    |conv1_DATA_BIAS_m_axi_U    |conv1_DATA_BIAS_m_axi    |        2|      0|   512|   580|
-    |conv1_DATA_INPUT_m_axi_U   |conv1_DATA_INPUT_m_axi   |        2|      0|   512|   580|
-    |conv1_DATA_OUTPUT_m_axi_U  |conv1_DATA_OUTPUT_m_axi  |        2|      0|   512|   580|
-    |conv1_DATA_WEIGHT_m_axi_U  |conv1_DATA_WEIGHT_m_axi  |        2|      0|   512|   580|
-    |grp_convulution1_fu_142    |convulution1             |        0|     10|  4307|  3736|
-    |grp_maxpool_2_fu_150       |maxpool_2                |        0|      0|   247|   698|
-    |grp_relu_1_fu_156          |relu_1                   |        0|      0|   163|   492|
-    |grp_relu_2_fu_161          |relu_2                   |        0|      0|   156|   471|
-    |grp_store_bias_fu_192      |store_bias               |        0|      0|    48|   106|
-    |grp_store_input_fu_183     |store_input              |        0|      0|   153|   202|
-    |grp_store_output_fu_175    |store_output             |        0|      0|   200|   433|
-    |grp_store_weights_fu_166   |store_weights            |        0|      0|   259|   418|
-    +---------------------------+-------------------------+---------+-------+------+------+
-    |Total                      |                         |        8|     10|  7801|  9236|
-    +---------------------------+-------------------------+---------+-------+------+------+
+    +----------------------------+-------------------------+---------+-------+------+------+
+    |          Instance          |          Module         | BRAM_18K| DSP48E|  FF  |  LUT |
+    +----------------------------+-------------------------+---------+-------+------+------+
+    |conv1_CTL_s_axi_U           |conv1_CTL_s_axi          |        0|      0|   448|   744|
+    |conv1_DATA_BIAS_m_axi_U     |conv1_DATA_BIAS_m_axi    |        2|      0|   512|   580|
+    |conv1_DATA_INPUT_m_axi_U    |conv1_DATA_INPUT_m_axi   |        2|      0|   512|   580|
+    |conv1_DATA_OUTPUT_m_axi_U   |conv1_DATA_OUTPUT_m_axi  |        2|      0|   512|   580|
+    |conv1_DATA_WEIGHT_m_axi_U   |conv1_DATA_WEIGHT_m_axi  |        2|      0|   512|   580|
+    |conv1_fcmp_32ns_3dEe_U70    |conv1_fcmp_32ns_3dEe     |        0|      0|    66|   239|
+    |grp_convolution_3_fu_362    |convolution_3            |        0|      5|   822|  1544|
+    |grp_convolution_5_fu_370    |convolution_5            |        0|      5|   731|  1159|
+    |grp_convulution1_fu_354     |convulution1             |        0|     10|  4307|  3742|
+    |grp_fc_6_fu_378             |fc_6                     |        0|      5|   662|  1057|
+    |grp_maxpool_2_fu_390        |maxpool_2                |        0|      0|   247|   698|
+    |grp_maxpool_4_fu_396        |maxpool_4                |        0|      0|   243|   688|
+    |grp_relu_1_fu_418           |relu_1                   |        0|      0|   163|   492|
+    |grp_relu_2_fu_433           |relu_2                   |        0|      0|   156|   471|
+    |grp_relu_3_fu_423           |relu_3                   |        0|      0|   160|   476|
+    |grp_relu_4_fu_428           |relu_4                   |        0|      0|   153|   478|
+    |grp_store_bias_fu_480       |store_bias               |        0|      0|    48|   106|
+    |grp_store_bias_3_fu_464     |store_bias_3             |        0|      0|    52|   111|
+    |grp_store_bias_5_fu_456     |store_bias_5             |        0|      0|    56|   111|
+    |grp_store_input_fu_447      |store_input              |        0|      0|   153|   202|
+    |grp_store_output_fu_472     |store_output             |        0|      0|    50|   120|
+    |grp_store_weights_fu_438    |store_weights            |        0|      0|   259|   418|
+    |grp_store_weights_3_fu_410  |store_weights_3          |        0|      0|   337|   597|
+    |grp_store_weights_5_fu_402  |store_weights_5          |        0|      0|   343|   585|
+    +----------------------------+-------------------------+---------+-------+------+------+
+    |Total                       |                         |        8|     25| 11504| 16358|
+    +----------------------------+-------------------------+---------+-------+------+------+
 
     * DSP48: 
     N/A
 
     * Memory: 
-    +----------------+--------------------+---------+----+----+------+-----+------+-------------+
-    |     Memory     |       Module       | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
-    +----------------+--------------------+---------+----+----+------+-----+------+-------------+
-    |bias_oc_U       |conv1_bias_oc       |        0|  64|   3|     6|   32|     1|          192|
-    |input_oc_0_U    |conv1_input_oc_0    |        2|   0|   0|  1024|   32|     1|        32768|
-    |output1_oc_U    |conv1_output1_oc    |       16|   0|   0|  4704|   32|     1|       150528|
-    |output2_oc_U    |conv1_output2_oc    |        4|   0|   0|  1176|   32|     1|        37632|
-    |weights_oc_0_U  |conv1_weights_oc_0  |        2|   0|   0|   150|   32|     1|         4800|
-    +----------------+--------------------+---------+----+----+------+-----+------+-------------+
-    |Total           |                    |       24|  64|   3|  7060|  160|     5|       225920|
-    +----------------+--------------------+---------+----+----+------+-----+------+-------------+
+    +------------------+--------------------+---------+----+----+-------+-----+------+-------------+
+    |      Memory      |       Module       | BRAM_18K| FF | LUT| Words | Bits| Banks| W*Bits*Banks|
+    +------------------+--------------------+---------+----+----+-------+-----+------+-------------+
+    |bias_3_oc_U       |conv1_bias_3_oc     |        0|  64|   8|     16|   32|     1|          512|
+    |bias_5_oc_U       |conv1_bias_5_oc     |        1|   0|   0|    120|   32|     1|         3840|
+    |output5_oc_0_0_U  |conv1_bias_5_oc     |        1|   0|   0|    120|   32|     1|         3840|
+    |bias_oc_U         |conv1_bias_oc       |        0|  64|   3|      6|   32|     1|          192|
+    |input_oc_0_U      |conv1_input_oc_0    |        2|   0|   0|   1024|   32|     1|        32768|
+    |output1_oc_U      |conv1_output1_oc    |       16|   0|   0|   4704|   32|     1|       150528|
+    |output2_oc_U      |conv1_output2_oc    |        4|   0|   0|   1176|   32|     1|        37632|
+    |output3_oc_U      |conv1_output3_oc    |        4|   0|   0|   1600|   32|     1|        51200|
+    |output4_oc_U      |conv1_output4_oc    |        1|   0|   0|    400|   32|     1|        12800|
+    |output6_oc_U      |conv1_output6_oc    |        0|  64|   5|     10|   32|     1|          320|
+    |weights_3_oc_U    |conv1_weights_3_oc  |        8|   0|   0|   2400|   32|     1|        76800|
+    |weights_5_oc_U    |conv1_weights_5_oc  |      128|   0|   0|  48000|   32|     1|      1536000|
+    |weights_oc_0_U    |conv1_weights_oc_0  |        2|   0|   0|    150|   32|     1|         4800|
+    +------------------+--------------------+---------+----+----+-------+-----+------+-------------+
+    |Total             |                    |      167| 192|  16|  59726|  416|    13|      1911232|
+    +------------------+--------------------+---------+----+----+-------+-----+------+-------------+
 
     * FIFO: 
     N/A
@@ -120,68 +155,159 @@
     +---------------------------------+----------+-------+---+----+------------+------------+
     |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------------+----------+-------+---+----+------------+------------+
+    |i_16_fu_661_p2                   |     +    |      0|  0|  13|           4|           1|
+    |i_fu_603_p2                      |     +    |      0|  0|  15|           7|           1|
+    |tmp_42_fu_649_p2                 |    and   |      0|  0|   2|           1|           1|
+    |tmp_46_fu_707_p2                 |    and   |      0|  0|   2|           1|           1|
+    |exitcond2_i_fu_597_p2            |   icmp   |      0|  0|  11|           7|           5|
+    |exitcond_i1_fu_655_p2            |   icmp   |      0|  0|   9|           4|           4|
+    |notlhs4_fu_689_p2                |   icmp   |      0|  0|  11|           8|           2|
+    |notlhs_fu_631_p2                 |   icmp   |      0|  0|  11|           8|           2|
+    |notrhs5_fu_695_p2                |   icmp   |      0|  0|  18|          23|           1|
+    |notrhs_fu_637_p2                 |   icmp   |      0|  0|  18|          23|           1|
     |ap_block_state2_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state6_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    |tmp_40_fu_643_p2                 |    or    |      0|  0|   2|           1|           1|
+    |tmp_44_fu_701_p2                 |    or    |      0|  0|   2|           1|           1|
     +---------------------------------+----------+-------+---+----+------------+------------+
-    |Total                            |          |      0|  0|   2|           1|           1|
+    |Total                            |          |      0|  0| 120|          91|          24|
     +---------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    +-----------------------+----+-----------+-----+-----------+
-    |          Name         | LUT| Input Size| Bits| Total Bits|
-    +-----------------------+----+-----------+-----+-----------+
-    |DATA_BIAS_ARVALID      |   9|          2|    1|          2|
-    |DATA_BIAS_RREADY       |   9|          2|    1|          2|
-    |DATA_INPUT_ARVALID     |   9|          2|    1|          2|
-    |DATA_INPUT_RREADY      |   9|          2|    1|          2|
-    |DATA_OUTPUT_AWVALID    |   9|          2|    1|          2|
-    |DATA_OUTPUT_BREADY     |   9|          2|    1|          2|
-    |DATA_OUTPUT_WVALID     |   9|          2|    1|          2|
-    |DATA_WEIGHT_ARVALID    |   9|          2|    1|          2|
-    |DATA_WEIGHT_RREADY     |   9|          2|    1|          2|
-    |ap_NS_fsm              |  56|         13|    1|         13|
-    |bias_oc_address0       |  15|          3|    3|          9|
-    |bias_oc_ce0            |  15|          3|    1|          3|
-    |bias_oc_we0            |   9|          2|    1|          2|
-    |input_oc_0_address0    |  15|          3|   10|         30|
-    |input_oc_0_ce0         |  15|          3|    1|          3|
-    |input_oc_0_ce1         |   9|          2|    1|          2|
-    |input_oc_0_we0         |   9|          2|    1|          2|
-    |output1_oc_address0    |  21|          4|   13|         52|
-    |output1_oc_ce0         |  21|          4|    1|          4|
-    |output1_oc_d0          |  15|          3|   32|         96|
-    |output1_oc_we0         |  15|          3|    1|          3|
-    |output2_oc_address0    |  21|          4|   11|         44|
-    |output2_oc_ce0         |  21|          4|    1|          4|
-    |output2_oc_d0          |  15|          3|   32|         96|
-    |output2_oc_we0         |  15|          3|    1|          3|
-    |weights_oc_0_address0  |  15|          3|    8|         24|
-    |weights_oc_0_ce0       |  15|          3|    1|          3|
-    |weights_oc_0_ce1       |   9|          2|    1|          2|
-    |weights_oc_0_we0       |   9|          2|    1|          2|
-    +-----------------------+----+-----------+-----+-----------+
-    |Total                  | 416|         87|  131|        415|
-    +-----------------------+----+-----------+-----+-----------+
+    +-------------------------+-----+-----------+-----+-----------+
+    |           Name          | LUT | Input Size| Bits| Total Bits|
+    +-------------------------+-----+-----------+-----+-----------+
+    |DATA_BIAS_ARADDR         |   27|          5|   32|        160|
+    |DATA_BIAS_ARBURST        |   27|          5|    2|         10|
+    |DATA_BIAS_ARCACHE        |   27|          5|    4|         20|
+    |DATA_BIAS_ARID           |   27|          5|    1|          5|
+    |DATA_BIAS_ARLEN          |   27|          5|   32|        160|
+    |DATA_BIAS_ARLOCK         |   27|          5|    2|         10|
+    |DATA_BIAS_ARPROT         |   27|          5|    3|         15|
+    |DATA_BIAS_ARQOS          |   27|          5|    4|         20|
+    |DATA_BIAS_ARREGION       |   27|          5|    4|         20|
+    |DATA_BIAS_ARSIZE         |   27|          5|    3|         15|
+    |DATA_BIAS_ARUSER         |   27|          5|    1|          5|
+    |DATA_BIAS_ARVALID        |   27|          5|    1|          5|
+    |DATA_BIAS_RREADY         |   27|          5|    1|          5|
+    |DATA_INPUT_ARVALID       |    9|          2|    1|          2|
+    |DATA_INPUT_RREADY        |    9|          2|    1|          2|
+    |DATA_OUTPUT_AWVALID      |    9|          2|    1|          2|
+    |DATA_OUTPUT_BREADY       |    9|          2|    1|          2|
+    |DATA_OUTPUT_WVALID       |    9|          2|    1|          2|
+    |DATA_WEIGHT_ARADDR       |   27|          5|   32|        160|
+    |DATA_WEIGHT_ARBURST      |   27|          5|    2|         10|
+    |DATA_WEIGHT_ARCACHE      |   27|          5|    4|         20|
+    |DATA_WEIGHT_ARID         |   27|          5|    1|          5|
+    |DATA_WEIGHT_ARLEN        |   27|          5|   32|        160|
+    |DATA_WEIGHT_ARLOCK       |   27|          5|    2|         10|
+    |DATA_WEIGHT_ARPROT       |   27|          5|    3|         15|
+    |DATA_WEIGHT_ARQOS        |   27|          5|    4|         20|
+    |DATA_WEIGHT_ARREGION     |   27|          5|    4|         20|
+    |DATA_WEIGHT_ARSIZE       |   27|          5|    3|         15|
+    |DATA_WEIGHT_ARUSER       |   27|          5|    1|          5|
+    |DATA_WEIGHT_ARVALID      |   27|          5|    1|          5|
+    |DATA_WEIGHT_RREADY       |   27|          5|    1|          5|
+    |ap_NS_fsm                |  133|         29|    1|         29|
+    |bias_3_oc_address0       |   15|          3|    4|         12|
+    |bias_3_oc_ce0            |   15|          3|    1|          3|
+    |bias_3_oc_we0            |    9|          2|    1|          2|
+    |bias_5_oc_address0       |   15|          3|    7|         21|
+    |bias_5_oc_ce0            |   15|          3|    1|          3|
+    |bias_5_oc_we0            |    9|          2|    1|          2|
+    |bias_oc_address0         |   15|          3|    3|          9|
+    |bias_oc_ce0              |   15|          3|    1|          3|
+    |bias_oc_we0              |    9|          2|    1|          2|
+    |grp_fu_489_p0            |   15|          3|   32|         96|
+    |i_i1_reg_343             |    9|          2|    4|          8|
+    |i_i_reg_332              |    9|          2|    7|         14|
+    |input_oc_0_address0      |   15|          3|   10|         30|
+    |input_oc_0_ce0           |   15|          3|    1|          3|
+    |input_oc_0_ce1           |    9|          2|    1|          2|
+    |input_oc_0_we0           |    9|          2|    1|          2|
+    |output1_oc_address0      |   21|          4|   13|         52|
+    |output1_oc_ce0           |   21|          4|    1|          4|
+    |output1_oc_d0            |   15|          3|   32|         96|
+    |output1_oc_we0           |   15|          3|    1|          3|
+    |output2_oc_address0      |   21|          4|   11|         44|
+    |output2_oc_ce0           |   21|          4|    1|          4|
+    |output2_oc_d0            |   15|          3|   32|         96|
+    |output2_oc_we0           |   15|          3|    1|          3|
+    |output3_oc_address0      |   21|          4|   11|         44|
+    |output3_oc_ce0           |   21|          4|    1|          4|
+    |output3_oc_d0            |   15|          3|   32|         96|
+    |output3_oc_we0           |   15|          3|    1|          3|
+    |output4_oc_address0      |   21|          4|    9|         36|
+    |output4_oc_ce0           |   21|          4|    1|          4|
+    |output4_oc_d0            |   15|          3|   32|         96|
+    |output4_oc_we0           |   15|          3|    1|          3|
+    |output5_oc_0_0_address0  |   27|          5|    7|         35|
+    |output5_oc_0_0_ce0       |   21|          4|    1|          4|
+    |output5_oc_0_0_d0        |   15|          3|   32|         96|
+    |output5_oc_0_0_we0       |   15|          3|    1|          3|
+    |output6_oc_address0      |   27|          5|    4|         20|
+    |output6_oc_ce0           |   21|          4|    1|          4|
+    |output6_oc_d0            |   15|          3|   32|         96|
+    |output6_oc_we0           |   15|          3|    1|          3|
+    |weights_3_oc_address0    |   15|          3|   12|         36|
+    |weights_3_oc_ce0         |   15|          3|    1|          3|
+    |weights_3_oc_we0         |    9|          2|    1|          2|
+    |weights_5_oc_address0    |   15|          3|   16|         48|
+    |weights_5_oc_ce0         |   15|          3|    1|          3|
+    |weights_5_oc_we0         |    9|          2|    1|          2|
+    |weights_oc_0_address0    |   15|          3|    8|         24|
+    |weights_oc_0_ce0         |   15|          3|    1|          3|
+    |weights_oc_0_ce1         |    9|          2|    1|          2|
+    |weights_oc_0_we0         |    9|          2|    1|          2|
+    +-------------------------+-----+-----------+-----+-----------+
+    |Total                    | 1648|        322|  564|       2125|
+    +-------------------------+-----+-----------+-----+-----------+
 
     * Register: 
-    +---------------------------------------+----+----+-----+-----------+
-    |                  Name                 | FF | LUT| Bits| Const Bits|
-    +---------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                              |  12|   0|   12|          0|
-    |bias5_reg_249                          |  30|   0|   30|          0|
-    |grp_convulution1_fu_142_ap_start_reg   |   1|   0|    1|          0|
-    |grp_maxpool_2_fu_150_ap_start_reg      |   1|   0|    1|          0|
-    |grp_relu_1_fu_156_ap_start_reg         |   1|   0|    1|          0|
-    |grp_relu_2_fu_161_ap_start_reg         |   1|   0|    1|          0|
-    |grp_store_bias_fu_192_ap_start_reg     |   1|   0|    1|          0|
-    |grp_store_input_fu_183_ap_start_reg    |   1|   0|    1|          0|
-    |grp_store_output_fu_175_ap_start_reg   |   1|   0|    1|          0|
-    |grp_store_weights_fu_166_ap_start_reg  |   1|   0|    1|          0|
-    |input1_reg_259                         |  30|   0|   30|          0|
-    |output7_reg_244                        |  30|   0|   30|          0|
-    |weights3_reg_254                       |  30|   0|   30|          0|
-    +---------------------------------------+----+----+-----+-----------+
-    |Total                                  | 140|   0|  140|          0|
-    +---------------------------------------+----+----+-----+-----------+
+    +-----------------------------------------+----+----+-----+-----------+
+    |                   Name                  | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                |  28|   0|   28|          0|
+    |bias1_reg_733                            |  30|   0|   30|          0|
+    |bias_1_reg_723                           |  30|   0|   30|          0|
+    |bias_2_reg_728                           |  30|   0|   30|          0|
+    |bias_s_reg_718                           |  30|   0|   30|          0|
+    |grp_convolution_3_fu_362_ap_start_reg    |   1|   0|    1|          0|
+    |grp_convolution_5_fu_370_ap_start_reg    |   1|   0|    1|          0|
+    |grp_convulution1_fu_354_ap_start_reg     |   1|   0|    1|          0|
+    |grp_fc_6_fu_378_ap_start_reg             |   1|   0|    1|          0|
+    |grp_maxpool_2_fu_390_ap_start_reg        |   1|   0|    1|          0|
+    |grp_maxpool_4_fu_396_ap_start_reg        |   1|   0|    1|          0|
+    |grp_relu_1_fu_418_ap_start_reg           |   1|   0|    1|          0|
+    |grp_relu_2_fu_433_ap_start_reg           |   1|   0|    1|          0|
+    |grp_relu_3_fu_423_ap_start_reg           |   1|   0|    1|          0|
+    |grp_relu_4_fu_428_ap_start_reg           |   1|   0|    1|          0|
+    |grp_store_bias_3_fu_464_ap_start_reg     |   1|   0|    1|          0|
+    |grp_store_bias_5_fu_456_ap_start_reg     |   1|   0|    1|          0|
+    |grp_store_bias_fu_480_ap_start_reg       |   1|   0|    1|          0|
+    |grp_store_input_fu_447_ap_start_reg      |   1|   0|    1|          0|
+    |grp_store_output_fu_472_ap_start_reg     |   1|   0|    1|          0|
+    |grp_store_weights_3_fu_410_ap_start_reg  |   1|   0|    1|          0|
+    |grp_store_weights_5_fu_402_ap_start_reg  |   1|   0|    1|          0|
+    |grp_store_weights_fu_438_ap_start_reg    |   1|   0|    1|          0|
+    |i_16_reg_788                             |   4|   0|    4|          0|
+    |i_i1_reg_343                             |   4|   0|    4|          0|
+    |i_i_reg_332                              |   7|   0|    7|          0|
+    |i_reg_766                                |   7|   0|    7|          0|
+    |input1_reg_758                           |  30|   0|   30|          0|
+    |output1_reg_713                          |  30|   0|   30|          0|
+    |output5_oc_0_0_add_reg_771               |   7|   0|    7|          0|
+    |output5_oc_0_0_loa_reg_776               |  32|   0|   32|          0|
+    |output6_oc_addr_reg_793                  |   4|   0|    4|          0|
+    |output6_oc_load_reg_798                  |  32|   0|   32|          0|
+    |weights3_reg_753                         |  30|   0|   30|          0|
+    |weights_1_reg_743                        |  30|   0|   30|          0|
+    |weights_2_reg_748                        |  30|   0|   30|          0|
+    |weights_s_reg_738                        |  30|   0|   30|          0|
+    +-----------------------------------------+----+----+-----+-----------+
+    |Total                                    | 443|   0|  443|          0|
+    +-----------------------------------------+----+----+-----+-----------+
 
 
 
@@ -194,14 +320,14 @@
 +----------------------------+-----+-----+------------+--------------+--------------+
 |s_axi_CTL_AWVALID           |  in |    1|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_AWREADY           | out |    1|    s_axi   |      CTL     |    scalar    |
-|s_axi_CTL_AWADDR            |  in |    6|    s_axi   |      CTL     |    scalar    |
+|s_axi_CTL_AWADDR            |  in |    7|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_WVALID            |  in |    1|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_WREADY            | out |    1|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_WDATA             |  in |   32|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_WSTRB             |  in |    4|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_ARVALID           |  in |    1|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_ARREADY           | out |    1|    s_axi   |      CTL     |    scalar    |
-|s_axi_CTL_ARADDR            |  in |    6|    s_axi   |      CTL     |    scalar    |
+|s_axi_CTL_ARADDR            |  in |    7|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_RVALID            | out |    1|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_RREADY            |  in |    1|    s_axi   |      CTL     |    scalar    |
 |s_axi_CTL_RDATA             | out |   32|    s_axi   |      CTL     |    scalar    |

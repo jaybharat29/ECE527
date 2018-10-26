@@ -119,6 +119,57 @@ u32 XConv1_Get_weights(XConv1 *InstancePtr) {
     return Data;
 }
 
+void XConv1_Set_weights_3(XConv1 *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XConv1_WriteReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_WEIGHTS_3_DATA, Data);
+}
+
+u32 XConv1_Get_weights_3(XConv1 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XConv1_ReadReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_WEIGHTS_3_DATA);
+    return Data;
+}
+
+void XConv1_Set_weights_5(XConv1 *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XConv1_WriteReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_WEIGHTS_5_DATA, Data);
+}
+
+u32 XConv1_Get_weights_5(XConv1 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XConv1_ReadReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_WEIGHTS_5_DATA);
+    return Data;
+}
+
+void XConv1_Set_weights_6(XConv1 *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XConv1_WriteReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_WEIGHTS_6_DATA, Data);
+}
+
+u32 XConv1_Get_weights_6(XConv1 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XConv1_ReadReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_WEIGHTS_6_DATA);
+    return Data;
+}
+
 void XConv1_Set_bias(XConv1 *InstancePtr, u32 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -133,6 +184,57 @@ u32 XConv1_Get_bias(XConv1 *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XConv1_ReadReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_BIAS_DATA);
+    return Data;
+}
+
+void XConv1_Set_bias_3(XConv1 *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XConv1_WriteReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_BIAS_3_DATA, Data);
+}
+
+u32 XConv1_Get_bias_3(XConv1 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XConv1_ReadReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_BIAS_3_DATA);
+    return Data;
+}
+
+void XConv1_Set_bias_5(XConv1 *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XConv1_WriteReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_BIAS_5_DATA, Data);
+}
+
+u32 XConv1_Get_bias_5(XConv1 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XConv1_ReadReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_BIAS_5_DATA);
+    return Data;
+}
+
+void XConv1_Set_bias_6(XConv1 *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XConv1_WriteReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_BIAS_6_DATA, Data);
+}
+
+u32 XConv1_Get_bias_6(XConv1 *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XConv1_ReadReg(InstancePtr->Ctl_BaseAddress, XCONV1_CTL_ADDR_BIAS_6_DATA);
     return Data;
 }
 

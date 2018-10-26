@@ -32,26 +32,56 @@
 // 0x20 : Data signal of weights
 //        bit 31~0 - weights[31:0] (Read/Write)
 // 0x24 : reserved
-// 0x28 : Data signal of bias
-//        bit 31~0 - bias[31:0] (Read/Write)
+// 0x28 : Data signal of weights_3
+//        bit 31~0 - weights_3[31:0] (Read/Write)
 // 0x2c : reserved
-// 0x30 : Data signal of output_r
-//        bit 31~0 - output_r[31:0] (Read/Write)
+// 0x30 : Data signal of weights_5
+//        bit 31~0 - weights_5[31:0] (Read/Write)
 // 0x34 : reserved
+// 0x38 : Data signal of weights_6
+//        bit 31~0 - weights_6[31:0] (Read/Write)
+// 0x3c : reserved
+// 0x40 : Data signal of bias
+//        bit 31~0 - bias[31:0] (Read/Write)
+// 0x44 : reserved
+// 0x48 : Data signal of bias_3
+//        bit 31~0 - bias_3[31:0] (Read/Write)
+// 0x4c : reserved
+// 0x50 : Data signal of bias_5
+//        bit 31~0 - bias_5[31:0] (Read/Write)
+// 0x54 : reserved
+// 0x58 : Data signal of bias_6
+//        bit 31~0 - bias_6[31:0] (Read/Write)
+// 0x5c : reserved
+// 0x60 : Data signal of output_r
+//        bit 31~0 - output_r[31:0] (Read/Write)
+// 0x64 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
-#define XCONV1_CTL_ADDR_AP_CTRL       0x00
-#define XCONV1_CTL_ADDR_GIE           0x04
-#define XCONV1_CTL_ADDR_IER           0x08
-#define XCONV1_CTL_ADDR_ISR           0x0c
-#define XCONV1_CTL_ADDR_AP_RETURN     0x10
-#define XCONV1_CTL_BITS_AP_RETURN     32
-#define XCONV1_CTL_ADDR_INPUT_R_DATA  0x18
-#define XCONV1_CTL_BITS_INPUT_R_DATA  32
-#define XCONV1_CTL_ADDR_WEIGHTS_DATA  0x20
-#define XCONV1_CTL_BITS_WEIGHTS_DATA  32
-#define XCONV1_CTL_ADDR_BIAS_DATA     0x28
-#define XCONV1_CTL_BITS_BIAS_DATA     32
-#define XCONV1_CTL_ADDR_OUTPUT_R_DATA 0x30
-#define XCONV1_CTL_BITS_OUTPUT_R_DATA 32
+#define XCONV1_CTL_ADDR_AP_CTRL        0x00
+#define XCONV1_CTL_ADDR_GIE            0x04
+#define XCONV1_CTL_ADDR_IER            0x08
+#define XCONV1_CTL_ADDR_ISR            0x0c
+#define XCONV1_CTL_ADDR_AP_RETURN      0x10
+#define XCONV1_CTL_BITS_AP_RETURN      32
+#define XCONV1_CTL_ADDR_INPUT_R_DATA   0x18
+#define XCONV1_CTL_BITS_INPUT_R_DATA   32
+#define XCONV1_CTL_ADDR_WEIGHTS_DATA   0x20
+#define XCONV1_CTL_BITS_WEIGHTS_DATA   32
+#define XCONV1_CTL_ADDR_WEIGHTS_3_DATA 0x28
+#define XCONV1_CTL_BITS_WEIGHTS_3_DATA 32
+#define XCONV1_CTL_ADDR_WEIGHTS_5_DATA 0x30
+#define XCONV1_CTL_BITS_WEIGHTS_5_DATA 32
+#define XCONV1_CTL_ADDR_WEIGHTS_6_DATA 0x38
+#define XCONV1_CTL_BITS_WEIGHTS_6_DATA 32
+#define XCONV1_CTL_ADDR_BIAS_DATA      0x40
+#define XCONV1_CTL_BITS_BIAS_DATA      32
+#define XCONV1_CTL_ADDR_BIAS_3_DATA    0x48
+#define XCONV1_CTL_BITS_BIAS_3_DATA    32
+#define XCONV1_CTL_ADDR_BIAS_5_DATA    0x50
+#define XCONV1_CTL_BITS_BIAS_5_DATA    32
+#define XCONV1_CTL_ADDR_BIAS_6_DATA    0x58
+#define XCONV1_CTL_BITS_BIAS_6_DATA    32
+#define XCONV1_CTL_ADDR_OUTPUT_R_DATA  0x60
+#define XCONV1_CTL_BITS_OUTPUT_R_DATA  32
 
