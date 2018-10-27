@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lenet_gold.cpp" path="C:\Users\Patel\Downloads\ECE527\exp\MP4\ECE527_MP4_Tutorial_Files\Tutorial_Files\accelerator_hls\lenet_gold.cpp"/>
+    <originFiles name="lenet_acc.cpp" path="C:\Users\Patel\Downloads\ECE527\exp\MP4\ECE527_MP4_Tutorial_Files\Tutorial_Files\accelerator_hls\lenet_acc.cpp"/>
+    <originFiles name="lenet.h" path="C:\Users\Patel\Downloads\ECE527\exp\MP4\ECE527_MP4_Tutorial_Files\Tutorial_Files\accelerator_hls\lenet.h"/>
+    <originFiles name="accelerator.cpp" path="C:\Users\Patel\Downloads\ECE527\exp\MP4\ECE527_MP4_Tutorial_Files\Tutorial_Files\accelerator_hls\accelerator.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="params.bin" path="C:\Users\Patel\Downloads\ECE527\exp\MP4\ECE527_MP4_Tutorial_Files\Tutorial_Files\accelerator_hls\params.bin"/>
+    <originFiles name="lenet_tb.cpp" path="C:\Users\Patel\Downloads\ECE527\exp\MP4\ECE527_MP4_Tutorial_Files\Tutorial_Files\accelerator_hls\lenet_tb.cpp"/>
+    <originFiles name="labels.bin" path="C:\Users\Patel\Downloads\ECE527\exp\MP4\ECE527_MP4_Tutorial_Files\Tutorial_Files\accelerator_hls\labels.bin"/>
+    <originFiles name="images.bin" path="C:\Users\Patel\Downloads\ECE527\exp\MP4\ECE527_MP4_Tutorial_Files\Tutorial_Files\accelerator_hls\images.bin"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

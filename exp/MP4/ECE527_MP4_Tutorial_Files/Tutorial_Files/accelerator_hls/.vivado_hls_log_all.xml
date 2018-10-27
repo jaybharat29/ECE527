@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-366] Cannot delete directory  'sim/report': it is being used by another program. Please close the program and try again.&#xD;&#xA;error deleting &quot;C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet4/sim/report\cosim.log&quot;: permission denied&#xD;&#xA;can not find channel named &quot;cosim.log&quot;&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet4/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet4/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="accelerator_hls" solutionName="lenet4" date="2018-10-24T21:59:27.853-0500"/>
+      </simLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <simLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
