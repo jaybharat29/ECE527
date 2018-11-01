@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1'
+HD_PWD='C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/Lenet.runs/design_1_conv1_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

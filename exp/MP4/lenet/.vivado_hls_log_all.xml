@@ -24,7 +24,10 @@
       </synLog>
       <simLog/>
       <mgLog/>
-      <packageLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'conv1_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lenet" solutionName="lenet" date="2018-11-01T11:58:38.800-0500" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'conv1_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;&#xA;create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 345.797 ; gain = 42.887" projectName="lenet" solutionName="lenet" date="2018-11-01T11:58:33.582-0500" type="Warning"/>
+      </packageLog>
       <csimLog/>
     </logs>
   </warningLogs>

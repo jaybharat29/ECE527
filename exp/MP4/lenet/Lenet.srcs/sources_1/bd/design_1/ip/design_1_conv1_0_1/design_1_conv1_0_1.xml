@@ -3587,11 +3587,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 26 04:40:21 UTC 2018</spirit:value>
+            <spirit:value>Thu Nov 01 17:01:45 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:11063836</spirit:value>
+            <spirit:value>8:de87d092</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3607,11 +3607,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 26 04:40:21 UTC 2018</spirit:value>
+            <spirit:value>Thu Nov 01 17:01:45 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:11063836</spirit:value>
+            <spirit:value>8:de87d092</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3654,11 +3654,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 26 04:40:21 UTC 2018</spirit:value>
+            <spirit:value>Thu Nov 01 17:01:44 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:e25e7d5c</spirit:value>
+            <spirit:value>8:6c87c295</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3674,11 +3674,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 26 04:40:22 UTC 2018</spirit:value>
+            <spirit:value>Thu Nov 01 17:01:45 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:e25e7d5c</spirit:value>
+            <spirit:value>8:6c87c295</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3692,11 +3692,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Oct 26 04:45:05 UTC 2018</spirit:value>
+            <spirit:value>Thu Nov 01 17:24:39 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:11063836</spirit:value>
+            <spirit:value>8:de87d092</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7696,15 +7696,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/ip/conv1_ap_fadd_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/ip/conv1_ap_fadd_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/ip/conv1_ap_fcmp_0_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/ip/conv1_ap_fcmp_0_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/ip/conv1_ap_fmul_2_max_dsp_32.vhd</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/ip/conv1_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -7713,159 +7713,163 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_bias_3_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_bias_3_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_bias_5_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_bias_5_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_bias_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_bias_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_CTL_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_CTL_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_DATA_BIAS_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_DATA_BIAS_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_DATA_INPUT_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_DATA_INPUT_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_DATA_OUTPUT_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_DATA_OUTPUT_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_DATA_WEIGHT_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_DATA_WEIGHT_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_fadd_32ns_3bkb.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_fadd_32ns_3bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_fcmp_32ns_3dEe.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_fcmp_32ns_3dEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_fmul_32ns_3cud.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_fmul_32ns_3cud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_input_oc_0.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_input_oc_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output1_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_mul_mul_6nseOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output2_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output1_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output3_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output2_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output4_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output3_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output6_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output4_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_weights_3_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output6_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_weights_5_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_weights_3_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_weights_oc_0.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_weights_5_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/convolution_3.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_weights_oc_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/convolution_5.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/convolution_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/convulution1.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/convolution_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/fc_6.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/convulution1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/maxpool_2.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/fc_6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/maxpool_4.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/maxpool_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/relu_1.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/maxpool_4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/relu_2.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/relu_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/relu_3.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/relu_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/relu_4.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/relu_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_bias.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/relu_4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_bias_3.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_bias.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_bias_5.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_bias_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_input.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_bias_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_output.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_input.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_weights.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_output.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_weights_3.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_weights.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_weights_5.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_weights_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_weights_5.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -8024,212 +8028,217 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_bias_3_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_bias_3_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_bias_5_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_bias_5_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_bias_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_bias_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_CTL_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_CTL_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_DATA_BIAS_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_DATA_BIAS_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_DATA_INPUT_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_DATA_INPUT_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_DATA_OUTPUT_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_DATA_OUTPUT_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_DATA_WEIGHT_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_DATA_WEIGHT_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_fadd_32ns_3bkb.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_fadd_32ns_3bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_fcmp_32ns_3dEe.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_fcmp_32ns_3dEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_fmul_32ns_3cud.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_fmul_32ns_3cud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_input_oc_0.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_input_oc_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output1_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_mul_mul_6nseOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output2_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output1_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output3_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output2_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output4_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output3_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_output6_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output4_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_weights_3_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_output6_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_weights_5_oc.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_weights_3_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1_weights_oc_0.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_weights_5_oc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/convolution_3.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1_weights_oc_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/convolution_5.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/convolution_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/convulution1.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/convolution_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/fc_6.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/convulution1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/maxpool_2.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/fc_6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/maxpool_4.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/maxpool_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/relu_1.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/maxpool_4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/relu_2.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/relu_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/relu_3.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/relu_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/relu_4.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/relu_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_bias.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/relu_4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_bias_3.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_bias.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_bias_5.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_bias_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_input.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_bias_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_output.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_input.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_weights.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_output.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_weights_3.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_weights.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/store_weights_5.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_weights_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/verilog/conv1.v</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/store_weights_5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/ip/conv1_ap_fadd_3_full_dsp_32.vhd</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/verilog/conv1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/c117/hdl/ip/conv1_ap_fadd_3_full_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/ip/conv1_ap_fcmp_0_no_dsp_32.vhd</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/ip/conv1_ap_fcmp_0_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/6393/hdl/ip/conv1_ap_fmul_2_max_dsp_32.vhd</spirit:name>
+        <spirit:name>../../ipshared/c117/hdl/ip/conv1_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8756,7 +8765,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="53">2115980</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="53">527161</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8781,7 +8790,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>lenet</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1810252334</xilinx:coreRevision>
+      <xilinx:coreRevision>1811011158</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
@@ -8882,10 +8891,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="02b4aaef"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="adb97de4"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="0a4c4191"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f363f96f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="61a825c4"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="707459d8"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="fa309970"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8cd6be3e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="10a321aa"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
