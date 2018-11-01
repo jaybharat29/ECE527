@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 # Memory (RAM/ROM)  definition:
-set ID 71
+set ID 76
 set hasByteEnable 0
 set MemName conv1_input_oc_0
 set CoreName ap_simcore_mem
@@ -86,7 +86,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 72
+set ID 77
 set hasByteEnable 0
 set MemName conv1_weights_oc_0
 set CoreName ap_simcore_mem
@@ -171,11 +171,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 73
+set ID 78
 set hasByteEnable 0
 set MemName conv1_weights_3_oc
 set CoreName ap_simcore_mem
-set PortList { 2 3 }
+set PortList { 2 1 }
 set DataWd 32
 set AddrRange 2400
 set AddrWd 12
@@ -256,7 +256,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 74
+set ID 79
 set hasByteEnable 0
 set MemName conv1_weights_5_oc
 set CoreName ap_simcore_mem
@@ -341,7 +341,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 75
+set ID 80
 set hasByteEnable 0
 set MemName conv1_bias_oc
 set CoreName ap_simcore_mem
@@ -426,7 +426,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 76
+set ID 81
 set hasByteEnable 0
 set MemName conv1_bias_3_oc
 set CoreName ap_simcore_mem
@@ -511,7 +511,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 77
+set ID 82
 set hasByteEnable 0
 set MemName conv1_bias_5_oc
 set CoreName ap_simcore_mem
@@ -596,7 +596,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 78
+set ID 83
 set hasByteEnable 0
 set MemName conv1_output1_oc
 set CoreName ap_simcore_mem
@@ -681,11 +681,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 79
+set ID 84
 set hasByteEnable 0
 set MemName conv1_output2_oc
 set CoreName ap_simcore_mem
-set PortList { 2 3 }
+set PortList { 2 1 }
 set DataWd 32
 set AddrRange 1176
 set AddrWd 11
@@ -766,7 +766,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 80
+set ID 85
 set hasByteEnable 0
 set MemName conv1_output3_oc
 set CoreName ap_simcore_mem
@@ -851,7 +851,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 81
+set ID 86
 set hasByteEnable 0
 set MemName conv1_output4_oc
 set CoreName ap_simcore_mem
@@ -936,7 +936,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 82
+set ID 87
 set hasByteEnable 0
 set MemName conv1_output6_oc
 set CoreName ap_simcore_mem
@@ -1127,7 +1127,7 @@ output_r {
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 83 \
+			id 88 \
 			corename conv1_CTL_axilite \
 			name conv1_CTL_s_axi \
 			ports {$port_CTL} \
@@ -1147,7 +1147,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 84 \
+    id 89 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
@@ -1168,7 +1168,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 85 \
+    id 90 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
@@ -1189,7 +1189,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 86 \
+    id 91 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
@@ -1210,7 +1210,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 87 \
+    id 92 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 

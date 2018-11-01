@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'convulution1'" level="0">
-<item name = "Date">Thu Oct 25 23:32:31 2018
+<item name = "Date">Wed Oct 31 20:17:18 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -87,9 +87,9 @@
 <column name="h_3_dup_fu_893_p2">+, 0, 0, 15, 1, 5</column>
 <column name="h_3_mid1_fu_1010_p2">+, 0, 0, 15, 2, 5</column>
 <column name="h_s_fu_1015_p2">+, 0, 0, 15, 1, 5</column>
-<column name="indvar_flatten_next1_fu_794_p2">+, 0, 0, 17, 13, 1</column>
+<column name="indvar_flatten_next3_fu_794_p2">+, 0, 0, 17, 13, 1</column>
 <column name="indvar_flatten_op_fu_866_p2">+, 0, 0, 14, 1, 10</column>
-<column name="tmp_104_fu_1624_p2">+, 0, 0, 17, 14, 14</column>
+<column name="tmp_111_fu_1624_p2">+, 0, 0, 17, 14, 14</column>
 <column name="tmp_36_1_fu_1198_p2">+, 0, 0, 15, 2, 5</column>
 <column name="tmp_36_2_fu_1223_p2">+, 0, 0, 15, 3, 5</column>
 <column name="tmp_36_2_mid1_fu_1168_p2">+, 0, 0, 15, 2, 5</column>
@@ -99,7 +99,7 @@
 <column name="tmp_39_0_2_fu_956_p2">+, 0, 0, 15, 2, 5</column>
 <column name="tmp_39_0_3_fu_973_p2">+, 0, 0, 15, 2, 5</column>
 <column name="tmp_39_0_4_fu_1047_p2">+, 0, 0, 15, 3, 5</column>
-<column name="tmp_62_fu_936_p2">+, 0, 0, 15, 2, 8</column>
+<column name="tmp_61_fu_936_p2">+, 0, 0, 15, 2, 8</column>
 <column name="tmp_63_fu_946_p2">+, 0, 0, 15, 2, 8</column>
 <column name="tmp_64_fu_990_p2">+, 0, 0, 15, 3, 8</column>
 <column name="tmp_65_fu_1000_p2">+, 0, 0, 15, 3, 8</column>
@@ -126,23 +126,23 @@
 <column name="tmp_s_fu_883_p2">+, 0, 0, 15, 1, 8</column>
 <column name="w_3_fu_918_p2">+, 0, 0, 15, 1, 5</column>
 <column name="tmp_87_fu_1572_p2">-, 0, 0, 15, 9, 9</column>
-<column name="tmp_90_fu_1615_p2">-, 0, 0, 17, 14, 14</column>
+<column name="tmp_92_fu_1615_p2">-, 0, 0, 17, 14, 14</column>
 <column name="exitcond2_mid_fu_846_p2">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond_flatten1_fu_788_p2">icmp, 0, 0, 13, 13, 13</column>
+<column name="exitcond_flatten3_fu_788_p2">icmp, 0, 0, 13, 13, 13</column>
 <column name="exitcond_flatten_fu_806_p2">icmp, 0, 0, 13, 10, 9</column>
 <column name="exitcond_fu_840_p2">icmp, 0, 0, 11, 5, 4</column>
 <column name="tmp_88_fu_852_p2">or, 0, 0, 2, 1, 1</column>
 <column name="h_mid_fu_872_p3">select, 0, 0, 5, 1, 1</column>
 <column name="indvar_flatten_next_fu_1267_p3">select, 0, 0, 10, 1, 1</column>
-<column name="tmp_91_fu_1021_p3">select, 0, 0, 5, 1, 1</column>
-<column name="tmp_92_fu_1028_p3">select, 0, 0, 5, 1, 5</column>
-<column name="tmp_93_fu_1179_p3">select, 0, 0, 5, 1, 2</column>
-<column name="tmp_94_fu_1186_p3">select, 0, 0, 5, 1, 5</column>
-<column name="tmp_95_fu_1204_p3">select, 0, 0, 5, 1, 2</column>
-<column name="tmp_96_fu_1211_p3">select, 0, 0, 5, 1, 5</column>
-<column name="tmp_97_fu_1229_p3">select, 0, 0, 5, 1, 3</column>
-<column name="tmp_98_fu_1236_p3">select, 0, 0, 5, 1, 5</column>
-<column name="tmp_mid2_33_fu_899_p3">select, 0, 0, 5, 1, 5</column>
+<column name="tmp_100_fu_1236_p3">select, 0, 0, 5, 1, 5</column>
+<column name="tmp_93_fu_1021_p3">select, 0, 0, 5, 1, 1</column>
+<column name="tmp_94_fu_1028_p3">select, 0, 0, 5, 1, 5</column>
+<column name="tmp_95_fu_1179_p3">select, 0, 0, 5, 1, 2</column>
+<column name="tmp_96_fu_1186_p3">select, 0, 0, 5, 1, 5</column>
+<column name="tmp_97_fu_1204_p3">select, 0, 0, 5, 1, 2</column>
+<column name="tmp_98_fu_1211_p3">select, 0, 0, 5, 1, 5</column>
+<column name="tmp_99_fu_1229_p3">select, 0, 0, 5, 1, 3</column>
+<column name="tmp_mid2_58_fu_899_p3">select, 0, 0, 5, 1, 5</column>
 <column name="tmp_mid2_v_fu_812_p3">select, 0, 0, 3, 1, 3</column>
 <column name="w_mid2_fu_858_p3">select, 0, 0, 5, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
@@ -157,7 +157,7 @@
 <column name="ap_enable_reg_pp0_iter10">9, 2, 1, 2</column>
 <column name="ap_phi_mux_co_phi_fu_585_p4">9, 2, 3, 6</column>
 <column name="ap_phi_mux_h_phi_fu_607_p4">9, 2, 5, 10</column>
-<column name="ap_phi_mux_indvar_flatten1_phi_fu_574_p4">9, 2, 13, 26</column>
+<column name="ap_phi_mux_indvar_flatten3_phi_fu_574_p4">9, 2, 13, 26</column>
 <column name="ap_phi_mux_indvar_flatten_phi_fu_596_p4">9, 2, 10, 20</column>
 <column name="ap_phi_mux_w_phi_fu_619_p4">9, 2, 5, 10</column>
 <column name="co_reg_581">9, 2, 3, 6</column>
@@ -170,7 +170,7 @@
 <column name="grp_fu_639_p0">27, 5, 32, 160</column>
 <column name="grp_fu_639_p1">27, 5, 32, 160</column>
 <column name="h_reg_603">9, 2, 5, 10</column>
-<column name="indvar_flatten1_reg_570">9, 2, 13, 26</column>
+<column name="indvar_flatten3_reg_570">9, 2, 13, 26</column>
 <column name="indvar_flatten_reg_592">9, 2, 10, 20</column>
 <column name="input_0_address0">59, 14, 10, 140</column>
 <column name="input_0_address1">56, 13, 10, 130</column>
@@ -200,12 +200,12 @@
 <column name="bias_load_reg_2205">32, 0, 32, 0</column>
 <column name="co_reg_581">3, 0, 3, 0</column>
 <column name="exitcond2_mid_reg_1694">1, 0, 1, 0</column>
-<column name="exitcond_flatten1_reg_1634">1, 0, 1, 0</column>
+<column name="exitcond_flatten3_reg_1634">1, 0, 1, 0</column>
 <column name="exitcond_flatten_reg_1643">1, 0, 1, 0</column>
 <column name="h_mid_reg_1722">5, 0, 5, 0</column>
 <column name="h_reg_603">5, 0, 5, 0</column>
-<column name="indvar_flatten1_reg_570">13, 0, 13, 0</column>
-<column name="indvar_flatten_next1_reg_1638">13, 0, 13, 0</column>
+<column name="indvar_flatten3_reg_570">13, 0, 13, 0</column>
+<column name="indvar_flatten_next3_reg_1638">13, 0, 13, 0</column>
 <column name="indvar_flatten_next_reg_1935">10, 0, 10, 0</column>
 <column name="indvar_flatten_op_reg_1717">10, 0, 10, 0</column>
 <column name="indvar_flatten_reg_592">10, 0, 10, 0</column>
@@ -239,7 +239,9 @@
 <column name="reg_778">32, 0, 32, 0</column>
 <column name="reg_783">32, 0, 32, 0</column>
 <column name="sum_2_2_2_reg_2195">32, 0, 32, 0</column>
-<column name="tmp_104_reg_2210">14, 0, 14, 0</column>
+<column name="tmp_100_reg_1906">5, 0, 5, 0</column>
+<column name="tmp_111_reg_2210">14, 0, 14, 0</column>
+<column name="tmp_16_reg_1920">32, 0, 32, 0</column>
 <column name="tmp_39_0_2_reg_1778">5, 0, 5, 0</column>
 <column name="tmp_39_0_3_reg_1791">5, 0, 5, 0</column>
 <column name="tmp_39_0_4_reg_1827">5, 0, 5, 0</column>
@@ -269,20 +271,18 @@
 <column name="tmp_41_4_3_reg_2185">32, 0, 32, 0</column>
 <column name="tmp_41_4_4_reg_2190">32, 0, 32, 0</column>
 <column name="tmp_41_4_reg_2170">32, 0, 32, 0</column>
-<column name="tmp_46_reg_1666">8, 0, 8, 0</column>
-<column name="tmp_6_reg_1920">32, 0, 32, 0</column>
-<column name="tmp_92_reg_1814">5, 0, 5, 0</column>
-<column name="tmp_94_reg_1890">5, 0, 5, 0</column>
-<column name="tmp_96_reg_1897">5, 0, 5, 0</column>
-<column name="tmp_98_reg_1906">5, 0, 5, 0</column>
-<column name="tmp_mid2_33_reg_1740">5, 0, 5, 0</column>
+<column name="tmp_62_reg_1666">8, 0, 8, 0</column>
+<column name="tmp_94_reg_1814">5, 0, 5, 0</column>
+<column name="tmp_96_reg_1890">5, 0, 5, 0</column>
+<column name="tmp_98_reg_1897">5, 0, 5, 0</column>
+<column name="tmp_mid2_58_reg_1740">5, 0, 5, 0</column>
 <column name="tmp_mid2_v_reg_1653">3, 0, 3, 0</column>
 <column name="tmp_reg_1661">9, 0, 9, 0</column>
 <column name="w_3_reg_1754">5, 0, 5, 0</column>
 <column name="w_mid2_reg_1703">5, 0, 5, 0</column>
 <column name="w_reg_615">5, 0, 5, 0</column>
 <column name="weights_0_load_24_reg_2150">32, 0, 32, 0</column>
-<column name="exitcond_flatten1_reg_1634">64, 32, 1, 0</column>
+<column name="exitcond_flatten3_reg_1634">64, 32, 1, 0</column>
 <column name="tmp_41_1_1_reg_2020">64, 32, 32, 0</column>
 <column name="tmp_41_1_2_reg_2025">64, 32, 32, 0</column>
 <column name="tmp_41_1_3_reg_2050">64, 32, 32, 0</column>
@@ -303,7 +303,7 @@
 <column name="tmp_41_4_3_reg_2185">64, 32, 32, 0</column>
 <column name="tmp_41_4_4_reg_2190">64, 32, 32, 0</column>
 <column name="tmp_41_4_reg_2170">64, 32, 32, 0</column>
-<column name="tmp_mid2_33_reg_1740">64, 32, 5, 0</column>
+<column name="tmp_mid2_58_reg_1740">64, 32, 5, 0</column>
 <column name="tmp_mid2_v_reg_1653">64, 32, 3, 0</column>
 <column name="w_mid2_reg_1703">64, 32, 5, 0</column>
 </table>

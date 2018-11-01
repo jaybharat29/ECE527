@@ -1,5 +1,5 @@
-# 1 "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp"
-# 1 "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp" 1
+# 1 "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp"
+# 1 "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 152 "<built-in>" 3
@@ -145,7 +145,7 @@ extern "C" {
 }
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp" 2
+# 1 "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp" 2
 # 1 "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp"
 # 1 "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp" 1
 # 1 "<built-in>" 1
@@ -364,7 +364,8 @@ void store_weights_5(float weights[120][16][5][5], float weights_oc[120][16][5][
    {
     for(int k = 0; k < 5; k++)
     {
-     weights_oc[i][l][j][k] = weights[i][l][j][k];
+_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+ weights_oc[i][l][j][k] = weights[i][l][j][k];
     }
    }
  }
@@ -410,11 +411,11 @@ void convulution1(float input[1][32][32], float weights[6][1][5][5], float bias[
 
                 for(int m = 0; m < (5); m++)
                 {
-_ssdm_Unroll(1, 0, 5, "");
- for(int n = 0; n < 5; n++)
+
+                    for(int n = 0; n < 5; n++)
                     {
-_ssdm_op_SpecPipeline(5, 1, 1, 0, "");
- sum += weights[co][0][m][n] * input[0][h+m][w+n];
+
+                        sum += weights[co][0][m][n] * input[0][h+m][w+n];
                     }
                 }
 _ssdm_op_SpecPipeline(13, 1, 1, 0, "");
@@ -469,13 +470,17 @@ void convolution_3(float input[6][14][14], float weights[16][6][5][5], float bia
                     for(int m = 0; m < 5; m++)
                     {
                         for(int n = 0; n < 5; n++)
+                        {
 
                             for (int ci = 0; ci < 6; ci++)
-_ssdm_op_SpecPipeline(5, 1, 1, 0, "");
- sum += weights[co][ci][m][n] * input[ci][h+m][w+n];
-                    }
+                            {
 
-                    output[co][h][w] = sum + bias[co];
+                                sum += weights[co][ci][m][n] * input[ci][h+m][w+n];
+                            }
+                        }
+                    }
+_ssdm_op_SpecPipeline(75, 1, 1, 0, "");
+ output[co][h][w] = sum + bias[co];
             }
 }
 
@@ -523,7 +528,10 @@ void convolution_5(float input[16][5][5], float weights[120][16][5][5], float bi
             for(int j = 0, n = 0; j < 5; j++, n++)
             {
                 for (int ci = 0; ci < 16; ci++)
-                    sum += weights[co][ci][m][n] * input[ci][i][j];
+                {
+_ssdm_op_SpecPipeline(5, 1, 1, 0, "");
+ sum += weights[co][ci][m][n] * input[ci][i][j];
+                }
             }
         }
         output[co][0][0] = sum + bias[co];
@@ -544,7 +552,8 @@ void fc_6(const float input[120][1][1], const float weights[10][120][1][1], cons
     for(int n = 0; n < 10; n++)
     {
         output[n] = 0;
-        for(int c = 0; c < 120; c++)
+_ssdm_Unroll(1, 0, 120, "");
+ for(int c = 0; c < 120; c++)
         {
             output[n] += weights[n][c][0][0] * input[c][0][0];
         }

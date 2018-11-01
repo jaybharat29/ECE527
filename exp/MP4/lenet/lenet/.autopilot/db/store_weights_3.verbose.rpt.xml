@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'store_weights_3'" level="0">
-<item name = "Date">Thu Oct 25 23:32:28 2018
+<item name = "Date">Wed Oct 31 20:17:13 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -85,13 +85,13 @@
 <column name="j_2_fu_240_p2">+, 0, 0, 12, 3, 1</column>
 <column name="k_2_fu_284_p2">+, 0, 0, 12, 3, 1</column>
 <column name="l_2_fu_197_p2">+, 0, 0, 12, 3, 1</column>
-<column name="tmp_12_fu_207_p2">+, 0, 0, 14, 10, 10</column>
-<column name="tmp_13_fu_228_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_14_fu_250_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_15_fu_261_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_16_fu_294_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_8_fu_267_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_11_fu_181_p2">-, 0, 0, 15, 9, 9</column>
+<column name="tmp_11_fu_267_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_14_fu_207_p2">+, 0, 0, 14, 10, 10</column>
+<column name="tmp_15_fu_228_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_16_fu_250_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_17_fu_261_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_18_fu_294_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_13_fu_181_p2">-, 0, 0, 15, 9, 9</column>
 <column name="ap_block_state12">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond1_fu_234_p2">icmp, 0, 0, 9, 3, 3</column>
 <column name="exitcond2_fu_191_p2">icmp, 0, 0, 9, 3, 3</column>
@@ -124,10 +124,10 @@
 <column name="l_2_reg_320">3, 0, 3, 0</column>
 <column name="l_reg_108">3, 0, 3, 0</column>
 <column name="sext_reg_299">30, 0, 64, 34</column>
-<column name="tmp_13_cast_reg_312">9, 0, 10, 1</column>
-<column name="tmp_13_reg_325">64, 0, 64, 0</column>
-<column name="tmp_15_reg_338">64, 0, 64, 0</column>
-<column name="tmp_16_reg_357">64, 0, 64, 0</column>
+<column name="tmp_15_reg_325">64, 0, 64, 0</column>
+<column name="tmp_17_reg_338">64, 0, 64, 0</column>
+<column name="tmp_18_cast_reg_312">9, 0, 10, 1</column>
+<column name="tmp_18_reg_357">64, 0, 64, 0</column>
 <column name="weights_addr_read_reg_362">32, 0, 32, 0</column>
 <column name="weights_addr_reg_343">32, 0, 32, 0</column>
 </table>

@@ -52,14 +52,14 @@ wire    ap_CS_fsm_state1;
 wire   [2:0] i_12_fu_102_p2;
 reg   [2:0] i_12_reg_263;
 wire    ap_CS_fsm_state2;
-wire  signed [9:0] tmp_50_cast_fu_138_p1;
-reg  signed [9:0] tmp_50_cast_reg_268;
+wire  signed [9:0] tmp_55_cast_fu_138_p1;
+reg  signed [9:0] tmp_55_cast_reg_268;
 wire   [0:0] exitcond2_fu_96_p2;
 wire   [4:0] j_8_fu_148_p2;
 reg   [4:0] j_8_reg_276;
 wire    ap_CS_fsm_state3;
-wire   [13:0] tmp_35_fu_187_p2;
-reg   [13:0] tmp_35_reg_281;
+wire   [13:0] tmp_37_fu_187_p2;
+reg   [13:0] tmp_37_reg_281;
 wire   [0:0] exitcond1_fu_142_p2;
 wire   [4:0] k_7_fu_199_p2;
 reg   [4:0] k_7_reg_289;
@@ -72,21 +72,21 @@ reg   [2:0] i_reg_58;
 reg   [4:0] j_reg_69;
 reg   [4:0] k_reg_80;
 wire    ap_CS_fsm_state6;
-wire   [63:0] tmp_55_cast_fu_214_p1;
+wire   [63:0] tmp_60_cast_fu_214_p1;
 wire   [0:0] tmp_20_fu_254_p2;
 wire   [7:0] tmp_fu_108_p3;
 wire   [4:0] tmp_s_fu_120_p3;
 wire   [8:0] p_shl_cast_fu_116_p1;
 wire   [8:0] p_shl1_cast_fu_128_p1;
-wire   [8:0] tmp_33_fu_132_p2;
+wire   [8:0] tmp_35_fu_132_p2;
 wire   [9:0] tmp_cast_fu_154_p1;
-wire   [9:0] tmp_34_fu_158_p2;
+wire   [9:0] tmp_36_fu_158_p2;
 wire   [8:0] tmp_21_fu_163_p1;
 wire   [11:0] tmp_22_fu_175_p3;
 wire   [13:0] p_shl2_cast_fu_167_p3;
 wire  signed [13:0] p_shl3_cast_fu_183_p1;
 wire   [13:0] tmp_2_cast_fu_205_p1;
-wire   [13:0] tmp_36_fu_209_p2;
+wire   [13:0] tmp_38_fu_209_p2;
 wire   [31:0] output_load_to_int_fu_219_p1;
 wire   [7:0] tmp_16_fu_222_p4;
 wire   [22:0] tmp_23_fu_232_p1;
@@ -166,7 +166,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((exitcond_fu_193_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        output_addr_reg_294 <= tmp_55_cast_fu_214_p1;
+        output_addr_reg_294 <= tmp_60_cast_fu_214_p1;
     end
 end
 
@@ -178,13 +178,13 @@ end
 
 always @ (posedge ap_clk) begin
     if (((exitcond1_fu_142_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        tmp_35_reg_281[13 : 2] <= tmp_35_fu_187_p2[13 : 2];
+        tmp_37_reg_281[13 : 2] <= tmp_37_fu_187_p2[13 : 2];
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((exitcond2_fu_96_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        tmp_50_cast_reg_268[9 : 2] <= tmp_50_cast_fu_138_p1[9 : 2];
+        tmp_55_cast_reg_268[9 : 2] <= tmp_55_cast_fu_138_p1[9 : 2];
     end
 end
 
@@ -216,7 +216,7 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
         output_r_address0 = output_addr_reg_294;
     end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        output_r_address0 = tmp_55_cast_fu_214_p1;
+        output_r_address0 = tmp_60_cast_fu_214_p1;
     end else begin
         output_r_address0 = 'bx;
     end
@@ -326,25 +326,25 @@ assign tmp_18_fu_248_p2 = (notrhs_fu_242_p2 | notlhs_fu_236_p2);
 
 assign tmp_20_fu_254_p2 = (tmp_19_fu_91_p2 & tmp_18_fu_248_p2);
 
-assign tmp_21_fu_163_p1 = tmp_34_fu_158_p2[8:0];
+assign tmp_21_fu_163_p1 = tmp_36_fu_158_p2[8:0];
 
-assign tmp_22_fu_175_p3 = {{tmp_34_fu_158_p2}, {2'd0}};
+assign tmp_22_fu_175_p3 = {{tmp_36_fu_158_p2}, {2'd0}};
 
 assign tmp_23_fu_232_p1 = output_load_to_int_fu_219_p1[22:0];
 
 assign tmp_2_cast_fu_205_p1 = k_reg_80;
 
-assign tmp_33_fu_132_p2 = (p_shl_cast_fu_116_p1 - p_shl1_cast_fu_128_p1);
+assign tmp_35_fu_132_p2 = (p_shl_cast_fu_116_p1 - p_shl1_cast_fu_128_p1);
 
-assign tmp_34_fu_158_p2 = ($signed(tmp_50_cast_reg_268) + $signed(tmp_cast_fu_154_p1));
+assign tmp_36_fu_158_p2 = ($signed(tmp_55_cast_reg_268) + $signed(tmp_cast_fu_154_p1));
 
-assign tmp_35_fu_187_p2 = ($signed(p_shl2_cast_fu_167_p3) - $signed(p_shl3_cast_fu_183_p1));
+assign tmp_37_fu_187_p2 = ($signed(p_shl2_cast_fu_167_p3) - $signed(p_shl3_cast_fu_183_p1));
 
-assign tmp_36_fu_209_p2 = (tmp_35_reg_281 + tmp_2_cast_fu_205_p1);
+assign tmp_38_fu_209_p2 = (tmp_37_reg_281 + tmp_2_cast_fu_205_p1);
 
-assign tmp_50_cast_fu_138_p1 = $signed(tmp_33_fu_132_p2);
+assign tmp_55_cast_fu_138_p1 = $signed(tmp_35_fu_132_p2);
 
-assign tmp_55_cast_fu_214_p1 = tmp_36_fu_209_p2;
+assign tmp_60_cast_fu_214_p1 = tmp_38_fu_209_p2;
 
 assign tmp_cast_fu_154_p1 = j_reg_69;
 
@@ -353,8 +353,8 @@ assign tmp_fu_108_p3 = {{i_reg_58}, {5'd0}};
 assign tmp_s_fu_120_p3 = {{i_reg_58}, {2'd0}};
 
 always @ (posedge ap_clk) begin
-    tmp_50_cast_reg_268[1:0] <= 2'b00;
-    tmp_35_reg_281[1:0] <= 2'b00;
+    tmp_55_cast_reg_268[1:0] <= 2'b00;
+    tmp_37_reg_281[1:0] <= 2'b00;
 end
 
 endmodule //relu_1

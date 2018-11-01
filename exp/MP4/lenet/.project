@@ -29,92 +29,92 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/.apc/.src</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/.apc/.tb</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/.apc/.tb</location>
 		</link>
 		<link>
 			<name>lenet/constraints</name>
 			<type>2</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/.tcls</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.tcls</location>
 		</link>
 		<link>
 			<name>sol/constraints</name>
 			<type>2</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/sol/.tcls</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/sol/.tcls</location>
 		</link>
 		<link>
 			<name>source/accelerator.cpp</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp</location>
 		</link>
 		<link>
 			<name>source/lenet.h</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h</location>
 		</link>
 		<link>
 			<name>source/lenet_acc.cpp</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</location>
 		</link>
 		<link>
 			<name>source/lenet_gold.cpp</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp</location>
 		</link>
 		<link>
 			<name>testbench/images.bin</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin</location>
 		</link>
 		<link>
 			<name>testbench/labels.bin</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin</location>
 		</link>
 		<link>
 			<name>testbench/lenet_tb.cpp</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp</location>
 		</link>
 		<link>
 			<name>testbench/params.bin</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin</location>
 		</link>
 		<link>
 			<name>lenet/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/lenet.directive</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.directive</location>
 		</link>
 		<link>
 			<name>lenet/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/directives.tcl</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/directives.tcl</location>
 		</link>
 		<link>
 			<name>lenet/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/lenet/script.tcl</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/script.tcl</location>
 		</link>
 		<link>
 			<name>sol/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/sol/sol.directive</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/sol/sol.directive</location>
 		</link>
 		<link>
 			<name>sol/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/sol/directives.tcl</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/sol/directives.tcl</location>
 		</link>
 		<link>
 			<name>sol/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Patel/Downloads/ECE527/exp/MP4/lenet/sol/script.tcl</location>
+			<location>C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/sol/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

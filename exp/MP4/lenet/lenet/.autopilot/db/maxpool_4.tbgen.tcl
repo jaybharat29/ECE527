@@ -67,7 +67,7 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fcmp_32ns_3dEe_U48", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fcmp_32ns_3dEe_U53", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

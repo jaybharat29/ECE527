@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'relu_2'" level="0">
-<item name = "Date">Thu Oct 25 23:32:37 2018
+<item name = "Date">Wed Oct 31 20:17:25 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -84,10 +84,10 @@
 <column name="i_11_fu_102_p2">+, 0, 0, 12, 3, 1</column>
 <column name="j_7_fu_148_p2">+, 0, 0, 13, 4, 1</column>
 <column name="k_6_fu_199_p2">+, 0, 0, 13, 4, 1</column>
-<column name="tmp_30_fu_158_p2">+, 0, 0, 15, 9, 9</column>
-<column name="tmp_32_fu_209_p2">+, 0, 0, 12, 12, 12</column>
-<column name="tmp_29_fu_132_p2">-, 0, 0, 15, 8, 8</column>
-<column name="tmp_31_fu_187_p2">-, 0, 0, 12, 12, 12</column>
+<column name="tmp_32_fu_158_p2">+, 0, 0, 15, 9, 9</column>
+<column name="tmp_34_fu_209_p2">+, 0, 0, 12, 12, 12</column>
+<column name="tmp_31_fu_132_p2">-, 0, 0, 15, 8, 8</column>
+<column name="tmp_33_fu_187_p2">-, 0, 0, 12, 12, 12</column>
 <column name="tmp_15_fu_254_p2">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond1_fu_142_p2">icmp, 0, 0, 9, 4, 3</column>
 <column name="exitcond2_fu_96_p2">icmp, 0, 0, 9, 3, 3</column>
@@ -117,8 +117,8 @@
 <column name="k_reg_80">4, 0, 4, 0</column>
 <column name="output_addr_reg_294">11, 0, 11, 0</column>
 <column name="output_load_reg_299">32, 0, 32, 0</column>
-<column name="tmp_31_reg_281">11, 0, 12, 1</column>
-<column name="tmp_43_cast_reg_268">8, 0, 9, 1</column>
+<column name="tmp_33_reg_281">11, 0, 12, 1</column>
+<column name="tmp_48_cast_reg_268">8, 0, 9, 1</column>
 </table>
 </item>
 </section>

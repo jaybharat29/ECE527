@@ -249,7 +249,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "13357", "EstimateLatencyMax" : "13357",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "13356", "EstimateLatencyMax" : "13356",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -269,24 +269,24 @@ set RtlHierarchyInfo {[
 					{"Name" : "bias_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "bias_offset", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U59", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U60", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U64", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U65", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	fc_6 {
-		input_0_0 {Type I LastRead 15 FirstWrite -1}
-		weights {Type I LastRead 16 FirstWrite -1}
-		weights_offset {Type I LastRead 6 FirstWrite -1}
-		bias {Type I LastRead 15 FirstWrite -1}
-		bias_offset {Type I LastRead 0 FirstWrite -1}
+		input_0_0 {Type I LastRead 142 FirstWrite -1}
+		weights {Type I LastRead 143 FirstWrite -1}
+		weights_offset {Type I LastRead 0 FirstWrite -1}
+		bias {Type I LastRead 150 FirstWrite -1}
+		bias_offset {Type I LastRead 6 FirstWrite -1}
 		output_r {Type O LastRead -1 FirstWrite 21}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "13357", "Max" : "13357"}
-	, {"Name" : "Interval", "Min" : "13357", "Max" : "13357"}
+	{"Name" : "Latency", "Min" : "13356", "Max" : "13356"}
+	, {"Name" : "Interval", "Min" : "13356", "Max" : "13356"}
 ]}
 
 set PipelineEnableSignalInfo {[

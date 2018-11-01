@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'conv1'" level="0">
-<item name = "Date">Thu Oct 25 23:32:25 2018
+<item name = "Date">Wed Oct 31 20:17:09 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.750, 1.25</column>
+<column name="ap_clk">10.00, 9.571, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,20 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2115980, 2115980, 2115980, 2115980, none</column>
+<column name="">527161, 527161, 527161, 527161, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_convulution1_fu_354">convulution1, 61278, 61278, 61278, 61278, none</column>
-<column name="grp_convolution_3_fu_362">convolution_3, 1228801, 1228801, 1228801, 1228801, none</column>
-<column name="grp_convolution_5_fu_370">convolution_5, 584281, 584281, 584281, 584281, none</column>
-<column name="grp_fc_6_fu_378">fc_6, 13357, 13357, 13357, 13357, none</column>
+<column name="grp_convolution_3_fu_354">convolution_3, 120692, 120692, 120692, 120692, none</column>
+<column name="grp_convulution1_fu_362">convulution1, 61278, 61278, 61278, 61278, none</column>
+<column name="grp_fc_6_fu_370">fc_6, 13356, 13356, 13356, 13356, none</column>
+<column name="grp_convolution_5_fu_382">convolution_5, 242041, 242041, 242041, 242041, none</column>
 <column name="grp_maxpool_2_fu_390">maxpool_2, 21349, 21349, 21349, 21349, none</column>
 <column name="grp_maxpool_4_fu_396">maxpool_4, 7393, 7393, 7393, 7393, none</column>
-<column name="grp_store_weights_5_fu_402">store_weights_5, 186481, 186481, 186481, 186481, none</column>
+<column name="grp_store_weights_5_fu_402">store_weights_5, 48012, 48012, 48012, 48012, none</column>
 <column name="grp_store_weights_3_fu_410">store_weights_3, 9345, 9345, 9345, 9345, none</column>
 <column name="grp_relu_1_fu_418">relu_1, 14461, 14461, 14461, 14461, none</column>
 <column name="grp_relu_3_fu_423">relu_3, 5153, 5153, 5153, 5153, none</column>

@@ -12,24 +12,19 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-107] Renaming port name 'conv1/output' to 'conv1/output_r' to avoid the conflict with HDL keywords or other object names." projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:08.872-0500" type="Warning"/>
-        <logs message="WARNING: [SYN 201-107] Renaming port name 'conv1/input' to 'conv1/input_r' to avoid the conflict with HDL keywords or other object names." projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:08.855-0500" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'Loop-0' in function 'conv1'." projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:07.445-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-470] Port 'bias_5'() has different latency/depth on the same m_axi bundle:'DATA_BIAS'" projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:07.074-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-470] Port 'bias_3'() has different latency/depth on the same m_axi bundle:'DATA_BIAS'" projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:06.737-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-470] Port 'weights_6'() has different latency/depth on the same m_axi bundle:'DATA_WEIGHT'" projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:06.718-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-470] Port 'weights_5'() has different latency/depth on the same m_axi bundle:'DATA_WEIGHT'" projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:06.694-0500" type="Warning"/>
-        <logs message="WARNING: [HLS 200-470] Port 'weights_3'() has different latency/depth on the same m_axi bundle:'DATA_WEIGHT'" projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:06.663-0500" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:151:26) in function 'convolution_3' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic in the loop latch." projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:06.546-0500" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:99) because its parent loop or function is pipelined." projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:04.613-0500" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:96) because its parent loop or function is pipelined." projectName="lenet" solutionName="lenet" date="2018-10-25T23:32:04.536-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'conv1/output' to 'conv1/output_r' to avoid the conflict with HDL keywords or other object names." projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:20.245-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'conv1/input' to 'conv1/input_r' to avoid the conflict with HDL keywords or other object names." projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:20.218-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'Loop-0' in function 'conv1'." projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:17.289-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-470] Port 'bias_5'() has different latency/depth on the same m_axi bundle:'DATA_BIAS'" projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:16.617-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-470] Port 'bias_3'() has different latency/depth on the same m_axi bundle:'DATA_BIAS'" projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:15.777-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-470] Port 'weights_6'() has different latency/depth on the same m_axi bundle:'DATA_WEIGHT'" projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:15.728-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-470] Port 'weights_5'() has different latency/depth on the same m_axi bundle:'DATA_WEIGHT'" projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:15.694-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-470] Port 'weights_3'() has different latency/depth on the same m_axi bundle:'DATA_WEIGHT'" projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:15.673-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:208:19) in function 'convolution_5' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic in the loop latch." projectName="lenet" solutionName="lenet" date="2018-10-31T20:16:15.386-0500" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
-      <packageLog>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'conv1_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="lenet" solutionName="lenet" date="2018-10-25T23:35:45.360-0500" type="Warning"/>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'conv1_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;&#xA;create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 345.938 ; gain = 42.977" projectName="lenet" solutionName="lenet" date="2018-10-25T23:35:39.532-0500" type="Warning"/>
-      </packageLog>
+      <packageLog/>
       <csimLog/>
     </logs>
   </warningLogs>

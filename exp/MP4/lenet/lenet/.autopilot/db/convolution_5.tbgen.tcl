@@ -73,7 +73,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "584281", "EstimateLatencyMax" : "584281",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "242041", "EstimateLatencyMax" : "242041",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -85,25 +85,26 @@ set RtlHierarchyInfo {[
 			{"Name" : "weights", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "bias", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "output_0_0", "Type" : "Memory", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U53", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U54", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U58", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U59", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	convolution_5 {
-		input_r {Type I LastRead 5 FirstWrite -1}
-		weights {Type I LastRead 5 FirstWrite -1}
-		bias {Type I LastRead 2 FirstWrite -1}
-		output_0_0 {Type O LastRead -1 FirstWrite 9}}}
+		input_r {Type I LastRead 4 FirstWrite -1}
+		weights {Type I LastRead 4 FirstWrite -1}
+		bias {Type I LastRead 3 FirstWrite -1}
+		output_0_0 {Type O LastRead -1 FirstWrite 10}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "584281", "Max" : "584281"}
-	, {"Name" : "Interval", "Min" : "584281", "Max" : "584281"}
+	{"Name" : "Latency", "Min" : "242041", "Max" : "242041"}
+	, {"Name" : "Interval", "Min" : "242041", "Max" : "242041"}
 ]}
 
 set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 

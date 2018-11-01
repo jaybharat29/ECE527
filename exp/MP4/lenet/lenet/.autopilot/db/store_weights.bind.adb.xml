@@ -123,7 +123,7 @@
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str211, i32 0, i32 150, [12 x i8]* @p_str817, [6 x i8]* @p_str716, [1 x i8]* @p_str211, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str211, [1 x i8]* @p_str211)
+:1  call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 150, [12 x i8]* @p_str9, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -295,10 +295,10 @@
 
 <Node id="18" bw="6" op_0_bw="6" op_1_bw="6">
 <![CDATA[
-.preheader3.preheader:3  %tmp_17 = add i6 %tmp_cast, %p_shl_cast
+.preheader3.preheader:3  %tmp_19 = add i6 %tmp_cast, %p_shl_cast
 
 ]]></Node>
-<StgValue><ssdm name="tmp_17"/></StgValue>
+<StgValue><ssdm name="tmp_19"/></StgValue>
 </operation>
 
 <operation id="26" st_id="2" stage="1" lat="1">
@@ -375,10 +375,10 @@
 
 <Node id="23" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader3:2  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)
+.preheader3:2  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)
 
 ]]></Node>
-<StgValue><ssdm name="empty_11"/></StgValue>
+<StgValue><ssdm name="empty_9"/></StgValue>
 </operation>
 
 <operation id="31" st_id="3" stage="1" lat="1">
@@ -421,10 +421,10 @@
 
 <Node id="27" bw="6" op_0_bw="3">
 <![CDATA[
-.preheader.preheader:0  %tmp_cast_12 = zext i3 %j to i6
+.preheader.preheader:0  %tmp_cast_10 = zext i3 %j to i6
 
 ]]></Node>
-<StgValue><ssdm name="tmp_cast_12"/></StgValue>
+<StgValue><ssdm name="tmp_cast_10"/></StgValue>
 </operation>
 
 <operation id="34" st_id="3" stage="1" lat="1">
@@ -437,10 +437,10 @@
 
 <Node id="28" bw="6" op_0_bw="6" op_1_bw="6">
 <![CDATA[
-.preheader.preheader:1  %tmp_18 = add i6 %tmp_17, %tmp_cast_12
+.preheader.preheader:1  %tmp_20 = add i6 %tmp_19, %tmp_cast_10
 
 ]]></Node>
-<StgValue><ssdm name="tmp_18"/></StgValue>
+<StgValue><ssdm name="tmp_20"/></StgValue>
 </operation>
 
 <operation id="35" st_id="3" stage="1" lat="1">
@@ -453,10 +453,10 @@
 
 <Node id="29" bw="64" op_0_bw="6">
 <![CDATA[
-.preheader.preheader:2  %tmp_23_cast = zext i6 %tmp_18 to i64
+.preheader.preheader:2  %tmp_28_cast = zext i6 %tmp_20 to i64
 
 ]]></Node>
-<StgValue><ssdm name="tmp_23_cast"/></StgValue>
+<StgValue><ssdm name="tmp_28_cast"/></StgValue>
 </operation>
 
 <operation id="36" st_id="3" stage="1" lat="1">
@@ -469,7 +469,7 @@
 
 <Node id="30" bw="8" op_0_bw="8" op_1_bw="6" op_2_bw="2">
 <![CDATA[
-.preheader.preheader:3  %tmp = call i8 @_ssdm_op_BitConcatenate.i8.i6.i2(i6 %tmp_18, i2 0)
+.preheader.preheader:3  %tmp = call i8 @_ssdm_op_BitConcatenate.i8.i6.i2(i6 %tmp_20, i2 0)
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -501,10 +501,10 @@
 
 <Node id="32" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-.preheader.preheader:5  %tmp_19 = add i64 %tmp_23_cast, %p_shl1
+.preheader.preheader:5  %tmp_21 = add i64 %tmp_28_cast, %p_shl1
 
 ]]></Node>
-<StgValue><ssdm name="tmp_19"/></StgValue>
+<StgValue><ssdm name="tmp_21"/></StgValue>
 </operation>
 
 <operation id="39" st_id="3" stage="1" lat="1">
@@ -517,10 +517,10 @@
 
 <Node id="33" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-.preheader.preheader:6  %tmp_9 = add i64 %sext, %tmp_19
+.preheader.preheader:6  %tmp_12 = add i64 %sext, %tmp_21
 
 ]]></Node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="tmp_12"/></StgValue>
 </operation>
 
 <operation id="40" st_id="3" stage="1" lat="1">
@@ -533,7 +533,7 @@
 
 <Node id="34" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-.preheader.preheader:7  %weights_addr = getelementptr float* %weights, i64 %tmp_9
+.preheader.preheader:7  %weights_addr = getelementptr float* %weights, i64 %tmp_12
 
 ]]></Node>
 <StgValue><ssdm name="weights_addr"/></StgValue>
@@ -738,10 +738,10 @@
 
 <Node id="40" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader:2  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)
+.preheader:2  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)
 
 ]]></Node>
-<StgValue><ssdm name="empty_13"/></StgValue>
+<StgValue><ssdm name="empty_11"/></StgValue>
 </operation>
 
 <operation id="53" st_id="11" stage="1" lat="1">
@@ -800,10 +800,10 @@
 
 <Node id="45" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-:1  %tmp_20 = add i64 %tmp_2, %tmp_19
+:1  %tmp_22 = add i64 %tmp_2, %tmp_21
 
 ]]></Node>
-<StgValue><ssdm name="tmp_20"/></StgValue>
+<StgValue><ssdm name="tmp_22"/></StgValue>
 </operation>
 
 <operation id="57" st_id="11" stage="1" lat="1">
@@ -850,7 +850,7 @@
 
 <Node id="46" bw="8" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:2  %weights_oc_0_addr = getelementptr [150 x float]* %weights_oc_0, i64 0, i64 %tmp_20
+:2  %weights_oc_0_addr = getelementptr [150 x float]* %weights_oc_0, i64 0, i64 %tmp_22
 
 ]]></Node>
 <StgValue><ssdm name="weights_oc_0_addr"/></StgValue>
@@ -912,23 +912,23 @@
 </dataflow>
 <dataflow id="86" from="weights" to="StgValue_14" fromId="78" toId="14">
 </dataflow>
-<dataflow id="88" from="p_str514" to="StgValue_14" fromId="87" toId="14">
+<dataflow id="88" from="p_str6" to="StgValue_14" fromId="87" toId="14">
 </dataflow>
 <dataflow id="90" from="StgValue_89" to="StgValue_14" fromId="89" toId="14">
 </dataflow>
 <dataflow id="91" from="StgValue_89" to="StgValue_14" fromId="89" toId="14">
 </dataflow>
-<dataflow id="93" from="p_str211" to="StgValue_14" fromId="92" toId="14">
+<dataflow id="93" from="p_str1" to="StgValue_14" fromId="92" toId="14">
 </dataflow>
 <dataflow id="94" from="StgValue_89" to="StgValue_14" fromId="89" toId="14">
 </dataflow>
 <dataflow id="96" from="StgValue_95" to="StgValue_14" fromId="95" toId="14">
 </dataflow>
-<dataflow id="98" from="p_str817" to="StgValue_14" fromId="97" toId="14">
+<dataflow id="98" from="p_str9" to="StgValue_14" fromId="97" toId="14">
 </dataflow>
-<dataflow id="100" from="p_str716" to="StgValue_14" fromId="99" toId="14">
+<dataflow id="100" from="p_str8" to="StgValue_14" fromId="99" toId="14">
 </dataflow>
-<dataflow id="101" from="p_str211" to="StgValue_14" fromId="92" toId="14">
+<dataflow id="101" from="p_str1" to="StgValue_14" fromId="92" toId="14">
 </dataflow>
 <dataflow id="103" from="StgValue_102" to="StgValue_14" fromId="102" toId="14">
 </dataflow>
@@ -938,9 +938,9 @@
 </dataflow>
 <dataflow id="106" from="StgValue_102" to="StgValue_14" fromId="102" toId="14">
 </dataflow>
-<dataflow id="107" from="p_str211" to="StgValue_14" fromId="92" toId="14">
+<dataflow id="107" from="p_str1" to="StgValue_14" fromId="92" toId="14">
 </dataflow>
-<dataflow id="108" from="p_str211" to="StgValue_14" fromId="92" toId="14">
+<dataflow id="108" from="p_str1" to="StgValue_14" fromId="92" toId="14">
 </dataflow>
 <dataflow id="109" from="weights_offset_read" to="sext" fromId="13" toId="15">
 </dataflow>
@@ -989,9 +989,9 @@
 </dataflow>
 <dataflow id="134" from="tmp_s" to="p_shl_cast" fromId="23" toId="24">
 </dataflow>
-<dataflow id="135" from="tmp_cast" to="tmp_17" fromId="22" toId="25">
+<dataflow id="135" from="tmp_cast" to="tmp_19" fromId="22" toId="25">
 </dataflow>
-<dataflow id="136" from="p_shl_cast" to="tmp_17" fromId="24" toId="25">
+<dataflow id="136" from="p_shl_cast" to="tmp_19" fromId="24" toId="25">
 </dataflow>
 <dataflow id="137" from="StgValue_110" to="j" fromId="110" toId="28">
 <condition id="60">
@@ -1015,13 +1015,13 @@
 </dataflow>
 <dataflow id="143" from="StgValue_142" to="exitcond1" fromId="142" toId="29">
 </dataflow>
-<dataflow id="144" from="_ssdm_op_SpecLoopTripCount" to="empty_11" fromId="118" toId="30">
+<dataflow id="144" from="_ssdm_op_SpecLoopTripCount" to="empty_9" fromId="118" toId="30">
 </dataflow>
-<dataflow id="146" from="StgValue_145" to="empty_11" fromId="145" toId="30">
+<dataflow id="146" from="StgValue_145" to="empty_9" fromId="145" toId="30">
 </dataflow>
-<dataflow id="147" from="StgValue_145" to="empty_11" fromId="145" toId="30">
+<dataflow id="147" from="StgValue_145" to="empty_9" fromId="145" toId="30">
 </dataflow>
-<dataflow id="148" from="StgValue_145" to="empty_11" fromId="145" toId="30">
+<dataflow id="148" from="StgValue_145" to="empty_9" fromId="145" toId="30">
 </dataflow>
 <dataflow id="149" from="j" to="j_3" fromId="28" toId="31">
 </dataflow>
@@ -1029,33 +1029,33 @@
 </dataflow>
 <dataflow id="151" from="exitcond1" to="StgValue_32" fromId="29" toId="32">
 </dataflow>
-<dataflow id="152" from="j" to="tmp_cast_12" fromId="28" toId="33">
+<dataflow id="152" from="j" to="tmp_cast_10" fromId="28" toId="33">
 </dataflow>
-<dataflow id="153" from="tmp_17" to="tmp_18" fromId="25" toId="34">
+<dataflow id="153" from="tmp_19" to="tmp_20" fromId="25" toId="34">
 </dataflow>
-<dataflow id="154" from="tmp_cast_12" to="tmp_18" fromId="33" toId="34">
+<dataflow id="154" from="tmp_cast_10" to="tmp_20" fromId="33" toId="34">
 </dataflow>
-<dataflow id="155" from="tmp_18" to="tmp_23_cast" fromId="34" toId="35">
+<dataflow id="155" from="tmp_20" to="tmp_28_cast" fromId="34" toId="35">
 </dataflow>
 <dataflow id="157" from="_ssdm_op_BitConcatenate.i8.i6.i2" to="tmp" fromId="156" toId="36">
 </dataflow>
-<dataflow id="158" from="tmp_18" to="tmp" fromId="34" toId="36">
+<dataflow id="158" from="tmp_20" to="tmp" fromId="34" toId="36">
 </dataflow>
 <dataflow id="159" from="StgValue_132" to="tmp" fromId="132" toId="36">
 </dataflow>
 <dataflow id="160" from="tmp" to="p_shl1" fromId="36" toId="37">
 </dataflow>
-<dataflow id="161" from="tmp_23_cast" to="tmp_19" fromId="35" toId="38">
+<dataflow id="161" from="tmp_28_cast" to="tmp_21" fromId="35" toId="38">
 </dataflow>
-<dataflow id="162" from="p_shl1" to="tmp_19" fromId="37" toId="38">
+<dataflow id="162" from="p_shl1" to="tmp_21" fromId="37" toId="38">
 </dataflow>
-<dataflow id="163" from="sext" to="tmp_9" fromId="15" toId="39">
+<dataflow id="163" from="sext" to="tmp_12" fromId="15" toId="39">
 </dataflow>
-<dataflow id="164" from="tmp_19" to="tmp_9" fromId="38" toId="39">
+<dataflow id="164" from="tmp_21" to="tmp_12" fromId="38" toId="39">
 </dataflow>
 <dataflow id="165" from="weights" to="weights_addr" fromId="78" toId="40">
 </dataflow>
-<dataflow id="166" from="tmp_9" to="weights_addr" fromId="39" toId="40">
+<dataflow id="166" from="tmp_12" to="weights_addr" fromId="39" toId="40">
 </dataflow>
 <dataflow id="168" from="_ssdm_op_ReadReq.m_axi.floatP" to="p_rd_req" fromId="167" toId="42">
 </dataflow>
@@ -1119,13 +1119,13 @@
 </dataflow>
 <dataflow id="195" from="StgValue_142" to="exitcond" fromId="142" toId="51">
 </dataflow>
-<dataflow id="196" from="_ssdm_op_SpecLoopTripCount" to="empty_13" fromId="118" toId="52">
+<dataflow id="196" from="_ssdm_op_SpecLoopTripCount" to="empty_11" fromId="118" toId="52">
 </dataflow>
-<dataflow id="197" from="StgValue_145" to="empty_13" fromId="145" toId="52">
+<dataflow id="197" from="StgValue_145" to="empty_11" fromId="145" toId="52">
 </dataflow>
-<dataflow id="198" from="StgValue_145" to="empty_13" fromId="145" toId="52">
+<dataflow id="198" from="StgValue_145" to="empty_11" fromId="145" toId="52">
 </dataflow>
-<dataflow id="199" from="StgValue_145" to="empty_13" fromId="145" toId="52">
+<dataflow id="199" from="StgValue_145" to="empty_11" fromId="145" toId="52">
 </dataflow>
 <dataflow id="200" from="k" to="k_3" fromId="50" toId="53">
 </dataflow>
@@ -1135,9 +1135,9 @@
 </dataflow>
 <dataflow id="203" from="k" to="tmp_2" fromId="50" toId="55">
 </dataflow>
-<dataflow id="204" from="tmp_2" to="tmp_20" fromId="55" toId="56">
+<dataflow id="204" from="tmp_2" to="tmp_22" fromId="55" toId="56">
 </dataflow>
-<dataflow id="205" from="tmp_19" to="tmp_20" fromId="38" toId="56">
+<dataflow id="205" from="tmp_21" to="tmp_22" fromId="38" toId="56">
 </dataflow>
 <dataflow id="207" from="_ssdm_op_Read.m_axi.floatP" to="weights_addr_read" fromId="206" toId="57">
 </dataflow>
@@ -1147,7 +1147,7 @@
 </dataflow>
 <dataflow id="211" from="StgValue_210" to="weights_oc_0_addr" fromId="210" toId="59">
 </dataflow>
-<dataflow id="212" from="tmp_20" to="weights_oc_0_addr" fromId="56" toId="59">
+<dataflow id="212" from="tmp_22" to="weights_oc_0_addr" fromId="56" toId="59">
 </dataflow>
 <dataflow id="213" from="weights_addr_read" to="StgValue_60" fromId="57" toId="60">
 </dataflow>

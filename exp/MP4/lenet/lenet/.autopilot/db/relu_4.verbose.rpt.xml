@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'relu_4'" level="0">
-<item name = "Date">Thu Oct 25 23:32:41 2018
+<item name = "Date">Wed Oct 31 20:17:55 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -64,7 +64,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="conv1_fcmp_32ns_3dEe_U51">conv1_fcmp_32ns_3dEe, 0, 0, 66, 239</column>
+<column name="conv1_fcmp_32ns_3dEe_U56">conv1_fcmp_32ns_3dEe, 0, 0, 66, 239</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -84,10 +84,10 @@
 <column name="i_9_fu_98_p2">+, 0, 0, 15, 5, 1</column>
 <column name="j_5_fu_132_p2">+, 0, 0, 12, 3, 1</column>
 <column name="k_4_fu_171_p2">+, 0, 0, 12, 3, 1</column>
-<column name="tmp_21_fu_120_p2">+, 0, 0, 15, 8, 8</column>
-<column name="tmp_22_fu_142_p2">+, 0, 0, 15, 8, 8</column>
-<column name="tmp_23_fu_159_p2">+, 0, 0, 14, 10, 10</column>
-<column name="tmp_24_fu_181_p2">+, 0, 0, 14, 10, 10</column>
+<column name="tmp_23_fu_120_p2">+, 0, 0, 15, 8, 8</column>
+<column name="tmp_24_fu_142_p2">+, 0, 0, 15, 8, 8</column>
+<column name="tmp_25_fu_159_p2">+, 0, 0, 14, 10, 10</column>
+<column name="tmp_26_fu_181_p2">+, 0, 0, 14, 10, 10</column>
 <column name="tmp_4_fu_226_p2">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond1_fu_126_p2">icmp, 0, 0, 9, 3, 3</column>
 <column name="exitcond2_fu_92_p2">icmp, 0, 0, 11, 5, 6</column>
@@ -117,8 +117,8 @@
 <column name="k_reg_76">3, 0, 3, 0</column>
 <column name="output_addr_reg_266">9, 0, 9, 0</column>
 <column name="output_load_reg_271">32, 0, 32, 0</column>
-<column name="tmp_21_reg_240">8, 0, 8, 0</column>
-<column name="tmp_23_reg_253">10, 0, 10, 0</column>
+<column name="tmp_23_reg_240">8, 0, 8, 0</column>
+<column name="tmp_25_reg_253">10, 0, 10, 0</column>
 </table>
 </item>
 </section>

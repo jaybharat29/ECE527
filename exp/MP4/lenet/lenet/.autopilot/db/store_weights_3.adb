@@ -175,7 +175,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="11" tracking_level="0" version="0">
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second class_id="12" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -254,7 +254,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -300,7 +300,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -346,7 +346,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -393,7 +393,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -440,7 +440,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -476,7 +476,7 @@
             <Obj>
               <type>0</type>
               <id>17</id>
-              <name>tmp_10</name>
+              <name>tmp_12</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>30</lineNumber>
@@ -485,7 +485,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -500,7 +500,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_10_fu_169_p3</rtlName>
+              <rtlName>tmp_12_fu_169_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>6</bitwidth>
@@ -532,7 +532,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -568,7 +568,7 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>tmp_11</name>
+              <name>tmp_13</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -577,7 +577,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -592,7 +592,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_11_fu_181_p2</rtlName>
+              <rtlName>tmp_13_fu_181_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>9</bitwidth>
@@ -614,7 +614,7 @@
             <Obj>
               <type>0</type>
               <id>20</id>
-              <name>tmp_13_cast</name>
+              <name>tmp_18_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -623,7 +623,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -638,7 +638,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_13_cast_fu_187_p1</rtlName>
+              <rtlName>tmp_18_cast_fu_187_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -668,7 +668,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -747,7 +747,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -793,7 +793,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -839,7 +839,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -886,7 +886,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -922,7 +922,7 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>tmp_12</name>
+              <name>tmp_14</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -931,7 +931,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -946,7 +946,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_12_fu_207_p2</rtlName>
+              <rtlName>tmp_14_fu_207_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -968,7 +968,7 @@
             <Obj>
               <type>0</type>
               <id>31</id>
-              <name>tmp_14_cast</name>
+              <name>tmp_19_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -977,7 +977,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -992,7 +992,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_14_cast_fu_212_p1</rtlName>
+              <rtlName>tmp_19_cast_fu_212_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1013,7 +1013,7 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>tmp_6</name>
+              <name>tmp_9</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -1022,7 +1022,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1037,7 +1037,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_6_fu_216_p3</rtlName>
+              <rtlName>tmp_9_fu_216_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>12</bitwidth>
@@ -1069,7 +1069,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1105,7 +1105,7 @@
             <Obj>
               <type>0</type>
               <id>34</id>
-              <name>tmp_13</name>
+              <name>tmp_15</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -1114,7 +1114,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1129,7 +1129,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_13_fu_228_p2</rtlName>
+              <rtlName>tmp_15_fu_228_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1160,7 +1160,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1239,7 +1239,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1285,7 +1285,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1331,7 +1331,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1378,7 +1378,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1414,7 +1414,7 @@
             <Obj>
               <type>0</type>
               <id>44</id>
-              <name>tmp_14</name>
+              <name>tmp_16</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -1423,7 +1423,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1438,7 +1438,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_14_fu_250_p2</rtlName>
+              <rtlName>tmp_16_fu_250_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1460,7 +1460,7 @@
             <Obj>
               <type>0</type>
               <id>45</id>
-              <name>tmp_7</name>
+              <name>tmp_10</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -1469,7 +1469,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1484,7 +1484,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_7_fu_255_p2</rtlName>
+              <rtlName>tmp_10_fu_255_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1506,7 +1506,7 @@
             <Obj>
               <type>0</type>
               <id>46</id>
-              <name>tmp_15</name>
+              <name>tmp_17</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -1515,7 +1515,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1530,7 +1530,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_15_fu_261_p2</rtlName>
+              <rtlName>tmp_17_fu_261_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1552,7 +1552,7 @@
             <Obj>
               <type>0</type>
               <id>47</id>
-              <name>tmp_8</name>
+              <name>tmp_11</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -1561,7 +1561,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1576,7 +1576,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_8_fu_267_p2</rtlName>
+              <rtlName>tmp_11_fu_267_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1607,7 +1607,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1653,7 +1653,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1700,7 +1700,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1779,7 +1779,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1825,7 +1825,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1871,7 +1871,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1918,7 +1918,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1954,7 +1954,7 @@
             <Obj>
               <type>0</type>
               <id>59</id>
-              <name>tmp_16</name>
+              <name>tmp_18</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>37</lineNumber>
@@ -1963,7 +1963,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1978,7 +1978,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_16_fu_294_p2</rtlName>
+              <rtlName>tmp_18_fu_294_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2009,7 +2009,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2056,7 +2056,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2103,7 +2103,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2149,7 +2149,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2287,7 +2287,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>C:\Users\Patel\Downloads\ECE527\exp\MP4</first>
+                  <first>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -4939,7 +4939,30 @@
           </second>
         </item>
         <item>
-          <first>tmp_11_fu_181_p2 ( - ) </first>
+          <first>tmp_11_fu_267_p2 ( + ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>71</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_13_fu_181_p2 ( - ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -4962,7 +4985,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_12_fu_207_p2 ( + ) </first>
+          <first>tmp_14_fu_207_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -4985,7 +5008,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_13_fu_228_p2 ( + ) </first>
+          <first>tmp_15_fu_228_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5008,7 +5031,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_14_fu_250_p2 ( + ) </first>
+          <first>tmp_16_fu_250_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5031,7 +5054,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_15_fu_261_p2 ( + ) </first>
+          <first>tmp_17_fu_261_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5054,30 +5077,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_16_fu_294_p2 ( + ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>71</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_8_fu_267_p2 ( + ) </first>
+          <first>tmp_18_fu_294_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5509,7 +5509,45 @@
           </second>
         </item>
         <item>
-          <first>tmp_13_cast_reg_312</first>
+          <first>tmp_15_reg_325</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>64</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_17_reg_338</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>64</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_18_cast_reg_312</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -5528,45 +5566,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_13_reg_325</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>64</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_15_reg_338</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>64</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_16_reg_357</first>
+          <first>tmp_18_reg_357</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -5699,7 +5699,15 @@
           </second>
         </item>
         <item>
-          <first>tmp_11_fu_181_p2 ( - ) </first>
+          <first>tmp_11_fu_267_p2 ( + ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>47</item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_13_fu_181_p2 ( - ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -5707,7 +5715,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_12_fu_207_p2 ( + ) </first>
+          <first>tmp_14_fu_207_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -5715,7 +5723,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_13_fu_228_p2 ( + ) </first>
+          <first>tmp_15_fu_228_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -5723,7 +5731,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_14_fu_250_p2 ( + ) </first>
+          <first>tmp_16_fu_250_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -5731,7 +5739,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_15_fu_261_p2 ( + ) </first>
+          <first>tmp_17_fu_261_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -5739,19 +5747,11 @@
           </second>
         </item>
         <item>
-          <first>tmp_16_fu_294_p2 ( + ) </first>
+          <first>tmp_18_fu_294_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
             <item>59</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_8_fu_267_p2 ( + ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>47</item>
           </second>
         </item>
       </dp_expression_map>
@@ -6670,7 +6670,23 @@
         </second>
       </item>
       <item>
-        <first>tmp_10_fu_169</first>
+        <first>tmp_10_fu_255</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>45</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_11_fu_267</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>47</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_12_fu_169</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -6678,7 +6694,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_11_fu_181</first>
+        <first>tmp_13_fu_181</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -6686,7 +6702,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_12_fu_207</first>
+        <first>tmp_14_fu_207</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -6694,15 +6710,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_13_cast_fu_187</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>20</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_13_fu_228</first>
+        <first>tmp_15_fu_228</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -6710,15 +6718,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_14_cast_fu_212</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>31</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_14_fu_250</first>
+        <first>tmp_16_fu_250</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -6726,7 +6726,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_15_fu_261</first>
+        <first>tmp_17_fu_261</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -6734,11 +6734,27 @@
         </second>
       </item>
       <item>
-        <first>tmp_16_fu_294</first>
+        <first>tmp_18_cast_fu_187</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>20</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_18_fu_294</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>59</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_19_cast_fu_212</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>31</item>
         </second>
       </item>
       <item>
@@ -6750,35 +6766,19 @@
         </second>
       </item>
       <item>
-        <first>tmp_6_fu_216</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>32</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_7_fu_255</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>45</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_8_fu_267</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>47</item>
-        </second>
-      </item>
-      <item>
         <first>tmp_9_cast_fu_203</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>29</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_9_fu_216</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>32</item>
         </second>
       </item>
       <item>
@@ -7071,15 +7071,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_13_cast_reg_312</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>20</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_13_reg_325</first>
+        <first>tmp_15_reg_325</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7087,7 +7079,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_15_reg_338</first>
+        <first>tmp_17_reg_338</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -7095,7 +7087,15 @@
         </second>
       </item>
       <item>
-        <first>tmp_16_reg_357</first>
+        <first>tmp_18_cast_reg_312</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>20</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_18_reg_357</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
