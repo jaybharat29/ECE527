@@ -25,16 +25,15 @@ void store_weights(float weights[6][1][5][5], float weights_oc[6][1][5][5])
 	}
 }
 
-void store_weights_3(float weights[16][6][5][5], float weights_oc[16][6][5][5])
+void store_weights_3(float weights[16][6][5][5], float weights_oc[16][5][5], int input_channel)
 {
 	for(int i = 0; i < 16; i++)
 	{
-		for(int l = 0; l < 6; l++)
 			for(int j = 0; j < 5; j ++)
 			{
 				for(int k = 0; k < 5; k++)
 				{
-					weights_oc[i][l][j][k] = weights[i][l][j][k];
+					weights_oc[i][j][k] = weights[i][input_channel][j][k];
 				}
 			}
 	}
@@ -99,7 +98,7 @@ void convulution1(float input[1][32][32], float weights[6][1][5][5], float bias[
 					//#pragma HLS unroll factor = 5
                     for(int n = 0; n < 5; n++)
                     {
-						//#pragma HLS PIPELINE II = 5
+//						#pragma HLS PIPELINE II = 5
                         sum += weights[co][0][m][n] * input[0][h+m][w+n];
                     }
                 }
@@ -145,27 +144,34 @@ void relu_2(float output[6][14][14])
 }
 
 // Convolution Layer 3
-void convolution_3(float input[6][14][14], float weights[16][6][5][5], float bias[16], float output[16][10][10])
+void convolution_3(float input[6][14][14], float weights_0[16][5][5], float weights_1[16][5][5],
+				   float weights_2[16][5][5], float weights_3[16][5][5],
+				   float weights_4[16][5][5], float weights_5[16][5][5],
+				   float bias[16], float output[16][10][10])
 {
     for(int co = 0; co < 16; co++)
+//		#pragma HLS unroll factor = 16
         for(int h = 0; h < 10; h++)
             for(int w = 0; w < 10; w++)
             {
-                    float sum = 0;
+                    float sum[6] = {0};
                     for(int m = 0; m < 5; m++)
                     {
-                        for(int n = 0; n < 5; n++)
+                    	for(int n = 0; n < 5; n++)
                         {
 							//#pragma HLS unroll factor = 5
-                            for (int ci = 0; ci < 6; ci++)
-                            {
-								//#pragma HLS PIPELINE II=5
-                                sum += weights[co][ci][m][n] * input[ci][h+m][w+n];
-                            }
+#pragma HLS PIPELINE II=5
+                                sum[0] += weights_0[co][m][n] * input[0][h+m][w+n];
+                                sum[1] += weights_1[co][m][n] * input[1][h+m][w+n];
+                                sum[2] += weights_2[co][m][n] * input[2][h+m][w+n];
+                                sum[3] += weights_3[co][m][n] * input[3][h+m][w+n];
+                                sum[4] += weights_4[co][m][n] * input[4][h+m][w+n];
+                                sum[5] += weights_5[co][m][n] * input[5][h+m][w+n];
                         }
                     }
-					#pragma HLS PIPELINE II=75
-                    output[co][h][w] = sum + bias[co];
+//					#pragma HLS PIPELINE II=75
+//                    output[co][h][w] = sum + bias[co];
+                   output[co][h][w] = sum[0] + sum[1] + /*sum[2] + sum[3] + sum[4] + sum[5] + sum[6] +*/ bias[co];
             }
 }
 
@@ -237,9 +243,9 @@ void fc_6(const float input[120][1][1], const float weights[10][120][1][1], cons
     for(int n = 0; n < 10; n++)
     {
         output[n] = 0;
-		#pragma HLS unroll factor = 120
         for(int c = 0; c < 120; c++)
         {
+#pragma HLS PIPELINE II=5
             output[n] += weights[n][c][0][0] * input[c][0][0];
         }
         output[n]+=bias[n];
@@ -282,11 +288,21 @@ int conv1(float input[1][32][32],
 	//store input on chip
 	store_input(input, input_oc);
 	float weights_oc[6][1][5][5];
-	float weights_3_oc[16][6][5][5];
+	float weights_3_0_oc[16][5][5];
+	float weights_3_1_oc[16][5][5];
+	float weights_3_2_oc[16][5][5];
+	float weights_3_3_oc[16][5][5];
+	float weights_3_4_oc[16][5][5];
+	float weights_3_5_oc[16][5][5];
 	float weights_5_oc[120][16][5][5];
 	//store weights on chip
 	store_weights(weights, weights_oc);
-	store_weights_3(weights_3, weights_3_oc);
+	store_weights_3(weights_3, weights_3_0_oc, 0);
+	store_weights_3(weights_3, weights_3_1_oc, 1);
+	store_weights_3(weights_3, weights_3_2_oc, 2);
+	store_weights_3(weights_3, weights_3_3_oc, 3);
+	store_weights_3(weights_3, weights_3_4_oc, 4);
+	store_weights_3(weights_3, weights_3_5_oc, 5);
 	store_weights_5(weights_5, weights_5_oc);
 	float bias_oc[6];
 	float bias_3_oc[16];
@@ -310,7 +326,10 @@ int conv1(float input[1][32][32],
 	relu_2(output2_oc);
 
 	//third layer
-	convolution_3(output2_oc, weights_3_oc, bias_3_oc, output3_oc);
+	convolution_3(output2_oc, weights_3_0_oc, weights_3_1_oc,
+							  weights_3_2_oc, weights_3_3_oc,
+							  weights_3_4_oc, weights_3_5_oc,
+							  bias_3_oc, output3_oc);
 	relu_3(output3_oc);
 
 	//fourth layer
