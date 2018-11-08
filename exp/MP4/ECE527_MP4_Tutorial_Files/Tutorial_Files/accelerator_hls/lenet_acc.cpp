@@ -220,11 +220,12 @@ void convolution_5(float input[16][5][5], float weights[120][16][5][5], float bi
             {
                 for (int ci = 0; ci < 16; ci++)
                 {
-					#pragma HLS PIPELINE II=5
+//					#pragma HLS PIPELINE II=5
                     sum += weights[co][ci][m][n] * input[ci][i][j];
                 }
             }
         }
+//#pragma HLS PIPELINE II=200
         output[co][0][0] = sum + bias[co];
     }
 }
@@ -319,7 +320,7 @@ int conv1(float input[1][32][32],
 	float output6_oc[10];
 	//first layer conv
 	convulution1(input_oc, weights_oc, bias_oc, output1_oc);
-	relu_1(output1_oc);
+//	relu_1(output1_oc);
 
 	//second layer
 	maxpool_2(output1_oc, output2_oc);
@@ -330,7 +331,7 @@ int conv1(float input[1][32][32],
 							  weights_3_2_oc, weights_3_3_oc,
 							  weights_3_4_oc, weights_3_5_oc,
 							  bias_3_oc, output3_oc);
-	relu_3(output3_oc);
+//	relu_3(output3_oc);
 
 	//fourth layer
 	maxpool_4(output3_oc, output4_oc);
