@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'store_weights_3'
 ================================================================
-* Date:           Wed Nov  7 21:45:28 2018
+* Date:           Thu Nov  8 11:27:09 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -109,7 +109,7 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 1.76>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%input_channel_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %input_channel)"   --->   Operation 13 'read' 'input_channel_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%weights_offset_read = call i30 @_ssdm_op_Read.ap_auto.i30(i30 %weights_offset)"   --->   Operation 14 'read' 'weights_offset_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 2400, [12 x i8]* @p_str817, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 2400, [12 x i8]* @p_str9, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_cast = zext i4 %input_channel_read to i10"   --->   Operation 16 'zext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%sext = zext i30 %weights_offset_read to i64"   --->   Operation 17 'zext' 'sext' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (1.76ns)   --->   "br label %.loopexit" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:30]   --->   Operation 18 'br' <Predicate = true> <Delay = 1.76>
@@ -352,7 +352,7 @@ StgValue_78         (br               ) [ 0011111111111]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str514"/></StgValue>
+<StgValue><ssdm name="p_str6"/></StgValue>
 </bind>
 </comp>
 
@@ -370,7 +370,7 @@ StgValue_78         (br               ) [ 0011111111111]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str110"/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -388,7 +388,7 @@ StgValue_78         (br               ) [ 0011111111111]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str817"/></StgValue>
+<StgValue><ssdm name="p_str9"/></StgValue>
 </bind>
 </comp>
 
@@ -397,7 +397,7 @@ StgValue_78         (br               ) [ 0011111111111]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str716"/></StgValue>
+<StgValue><ssdm name="p_str8"/></StgValue>
 </bind>
 </comp>
 

@@ -52,20 +52,20 @@ const sc_lv<7> fc_6::ap_const_lv7_1 = "1";
 const sc_lv<32> fc_6::ap_const_lv32_C = "1100";
 
 fc_6::fc_6(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    conv1_fadd_32ns_3bkb_U82 = new conv1_fadd_32ns_3bkb<1,5,32,32,32>("conv1_fadd_32ns_3bkb_U82");
-    conv1_fadd_32ns_3bkb_U82->clk(ap_clk);
-    conv1_fadd_32ns_3bkb_U82->reset(ap_rst);
-    conv1_fadd_32ns_3bkb_U82->din0(grp_fu_189_p0);
-    conv1_fadd_32ns_3bkb_U82->din1(grp_fu_189_p1);
-    conv1_fadd_32ns_3bkb_U82->ce(grp_fu_189_ce);
-    conv1_fadd_32ns_3bkb_U82->dout(grp_fu_189_p2);
-    conv1_fmul_32ns_3cud_U83 = new conv1_fmul_32ns_3cud<1,4,32,32,32>("conv1_fmul_32ns_3cud_U83");
-    conv1_fmul_32ns_3cud_U83->clk(ap_clk);
-    conv1_fmul_32ns_3cud_U83->reset(ap_rst);
-    conv1_fmul_32ns_3cud_U83->din0(weights_addr_read_reg_404);
-    conv1_fmul_32ns_3cud_U83->din1(input_0_0_load_reg_409);
-    conv1_fmul_32ns_3cud_U83->ce(grp_fu_193_ce);
-    conv1_fmul_32ns_3cud_U83->dout(grp_fu_193_p2);
+    conv1_fadd_32ns_3bkb_U84 = new conv1_fadd_32ns_3bkb<1,5,32,32,32>("conv1_fadd_32ns_3bkb_U84");
+    conv1_fadd_32ns_3bkb_U84->clk(ap_clk);
+    conv1_fadd_32ns_3bkb_U84->reset(ap_rst);
+    conv1_fadd_32ns_3bkb_U84->din0(grp_fu_189_p0);
+    conv1_fadd_32ns_3bkb_U84->din1(grp_fu_189_p1);
+    conv1_fadd_32ns_3bkb_U84->ce(grp_fu_189_ce);
+    conv1_fadd_32ns_3bkb_U84->dout(grp_fu_189_p2);
+    conv1_fmul_32ns_3cud_U85 = new conv1_fmul_32ns_3cud<1,4,32,32,32>("conv1_fmul_32ns_3cud_U85");
+    conv1_fmul_32ns_3cud_U85->clk(ap_clk);
+    conv1_fmul_32ns_3cud_U85->reset(ap_rst);
+    conv1_fmul_32ns_3cud_U85->din0(weights_addr_read_reg_404);
+    conv1_fmul_32ns_3cud_U85->din1(input_0_0_load_reg_409);
+    conv1_fmul_32ns_3cud_U85->ce(grp_fu_193_ce);
+    conv1_fmul_32ns_3cud_U85->dout(grp_fu_193_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -909,8 +909,8 @@ fc_6::~fc_6() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete conv1_fadd_32ns_3bkb_U82;
-    delete conv1_fmul_32ns_3cud_U83;
+    delete conv1_fadd_32ns_3bkb_U84;
+    delete conv1_fmul_32ns_3cud_U85;
 }
 
 void fc_6::thread_ap_clk_no_reset_() {

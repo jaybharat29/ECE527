@@ -123,7 +123,7 @@
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 150, [12 x i8]* @p_str817, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)
+:1  call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 150, [12 x i8]* @p_str9, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -912,23 +912,23 @@
 </dataflow>
 <dataflow id="86" from="weights" to="StgValue_14" fromId="78" toId="14">
 </dataflow>
-<dataflow id="88" from="p_str514" to="StgValue_14" fromId="87" toId="14">
+<dataflow id="88" from="p_str6" to="StgValue_14" fromId="87" toId="14">
 </dataflow>
 <dataflow id="90" from="StgValue_89" to="StgValue_14" fromId="89" toId="14">
 </dataflow>
 <dataflow id="91" from="StgValue_89" to="StgValue_14" fromId="89" toId="14">
 </dataflow>
-<dataflow id="93" from="p_str110" to="StgValue_14" fromId="92" toId="14">
+<dataflow id="93" from="p_str1" to="StgValue_14" fromId="92" toId="14">
 </dataflow>
 <dataflow id="94" from="StgValue_89" to="StgValue_14" fromId="89" toId="14">
 </dataflow>
 <dataflow id="96" from="StgValue_95" to="StgValue_14" fromId="95" toId="14">
 </dataflow>
-<dataflow id="98" from="p_str817" to="StgValue_14" fromId="97" toId="14">
+<dataflow id="98" from="p_str9" to="StgValue_14" fromId="97" toId="14">
 </dataflow>
-<dataflow id="100" from="p_str716" to="StgValue_14" fromId="99" toId="14">
+<dataflow id="100" from="p_str8" to="StgValue_14" fromId="99" toId="14">
 </dataflow>
-<dataflow id="101" from="p_str110" to="StgValue_14" fromId="92" toId="14">
+<dataflow id="101" from="p_str1" to="StgValue_14" fromId="92" toId="14">
 </dataflow>
 <dataflow id="103" from="StgValue_102" to="StgValue_14" fromId="102" toId="14">
 </dataflow>
@@ -938,9 +938,9 @@
 </dataflow>
 <dataflow id="106" from="StgValue_102" to="StgValue_14" fromId="102" toId="14">
 </dataflow>
-<dataflow id="107" from="p_str110" to="StgValue_14" fromId="92" toId="14">
+<dataflow id="107" from="p_str1" to="StgValue_14" fromId="92" toId="14">
 </dataflow>
-<dataflow id="108" from="p_str110" to="StgValue_14" fromId="92" toId="14">
+<dataflow id="108" from="p_str1" to="StgValue_14" fromId="92" toId="14">
 </dataflow>
 <dataflow id="109" from="weights_offset_read" to="sext" fromId="13" toId="15">
 </dataflow>

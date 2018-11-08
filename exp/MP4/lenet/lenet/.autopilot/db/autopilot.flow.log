@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet opened at Wed Nov 07 21:43:18 -0600 2018
+INFO-FLOW: Workspace C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet opened at Thu Nov 08 11:25:07 -0600 2018
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -14,6 +14,7 @@ Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/d
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Command       ap_source done; 0.101 sec.
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
@@ -32,7 +33,7 @@ Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interfac
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
-Command     import_lib done; 0.206 sec.
+Command     import_lib done; 0.256 sec.
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
@@ -43,17 +44,17 @@ Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interf
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source done; 0.142 sec.
+Command           ap_source done; 0.168 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.186 sec.
+Command           ap_source done; 0.181 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.468 sec.
+Command         ap_source done; 0.479 sec.
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.486 sec.
-Command     ap_source done; 0.492 sec.
+Command       ap_source done; 0.5 sec.
+Command     ap_source done; 0.509 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
@@ -66,6 +67,7 @@ Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/inte
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Command     import_lib done; 0.101 sec.
 Execute     source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute     set_part xc7z020clg484-1 
@@ -84,7 +86,7 @@ Command     set_part done; 0.195 sec.
 Execute     get_default_platform 
 Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Execute     config_chip_info -quiet -speed slow 
-Command   open_solution done; 1.053 sec.
+Command   open_solution done; 1.188 sec.
 Execute   set_part xc7z020clg484-1 -tool vivado 
 Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
 Execute       get_default_platform 
@@ -96,7 +98,6 @@ Execute       config_chip_info -quiet -speed slow
 Execute     add_library xilinx/zynq/zynq_fpv6 
 Execute       get_default_platform 
 Execute     get_default_platform 
-Command   set_part done; 0.106 sec.
 Execute   create_clock -period 10 -name default 
 Execute   csynth_design 
 Execute     get_config_compile -effort 
@@ -112,95 +113,6 @@ Execute     get_config_compile -keep_printf
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
 Execute       get_config_schedule -relax_ii_for_timing 
 Execute       get_config_schedule -suppress_dependence_error_break 
-INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp' ... 
-INFO-FLOW: Compiling one TU...
-Execute       is_m_axi_addr64 
-INFO-FLOW: Handling ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp as C++
-Execute       get_default_platform 
-Execute       is_encrypted ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
-Execute       get_default_platform 
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp
-Command       clang done; 2.27 sec.
-INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp"  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc
-Command       clang done; 1.595 sec.
-INFO-FLOW: GCC PP time: 3 seconds per iteration
-Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.226 sec.
-INFO-FLOW: CDT Preprocessing with tidy-3.1...
-Execute       tidy_31 xilinx-directive2pragma C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.13 sec.
-Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.diag.yml C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.out.log 2> C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.err.log 
-Command       ap_eval done; 0.347 sec.
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.308 sec.
-INFO-FLOW: tidy-3.1 time 0 seconds per iteration
-INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.119 sec.
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp
-Command       clang done; 1.459 sec.
-Execute       get_default_platform 
-INFO-FLOW: Processing labels
-Execute       clang -src C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.bc
-Command       clang done; 1.336 sec.
-INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp' ... 
-INFO-FLOW: Compiling one TU...
-Execute       is_m_axi_addr64 
-INFO-FLOW: Handling ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp as C++
-Execute       get_default_platform 
-Execute       is_encrypted ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
-Execute       get_default_platform 
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp
-Command       clang done; 1.334 sec.
-INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp"  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc
-Command       clang done; 1.268 sec.
-INFO-FLOW: GCC PP time: 2 seconds per iteration
-Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.273 sec.
-INFO-FLOW: CDT Preprocessing with tidy-3.1...
-Execute       tidy_31 xilinx-directive2pragma C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.diag.yml C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.out.log 2> C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.err.log 
-Command       ap_eval done; 0.187 sec.
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.358 sec.
-INFO-FLOW: tidy-3.1 time 0 seconds per iteration
-INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.139 sec.
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp
-Command       clang done; 1.357 sec.
-Execute       get_default_platform 
-INFO-FLOW: Processing labels
-Execute       clang -src C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.bc
-Command       clang done; 1.817 sec.
 INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -211,96 +123,185 @@ Execute       get_default_platform
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp
-Command       clang done; 2.917 sec.
+Command       clang done; 3.381 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp"  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc"  
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc
-Command       clang done; 1.458 sec.
-INFO-FLOW: GCC PP time: 4 seconds per iteration
+Command       clang done; 2.02 sec.
+INFO-FLOW: GCC PP time: 5 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.37 sec.
+Command       tidy_31 done; 0.954 sec.
 INFO-FLOW: CDT Preprocessing with tidy-3.1...
 Execute       tidy_31 xilinx-directive2pragma C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.197 sec.
+Command       tidy_31 done; 0.157 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.diag.yml C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.out.log 2> C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.err.log 
-Command       ap_eval done; 0.322 sec.
+Command       ap_eval done; 0.39 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.825 sec.
+Command       tidy_31 done; 0.779 sec.
 INFO-FLOW: tidy-3.1 time 1 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.249 sec.
+Command       tidy_31 done; 0.18 sec.
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp
-Command       clang done; 1.284 sec.
+Command       clang done; 1.104 sec.
 Execute       get_default_platform 
 INFO-FLOW: Processing labels
 Execute       clang -src C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.bc" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.bc
-Command       clang done; 1.461 sec.
+Command       clang done; 1.433 sec.
+INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp
+Command       clang done; 1.79 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp"  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc
+Command       clang done; 1.804 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.124 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.107 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.diag.yml C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.out.log 2> C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.lenet_acc.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.273 sec.
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.17 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp
+Command       clang done; 1.847 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.bc
+Command       clang done; 1.865 sec.
+INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp
+Command       clang done; 1.769 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp"  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/useless.bc
+Command       clang done; 1.83 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 -directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.json -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.diag.yml C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.out.log 2> C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/xilinx-dataflow-lawyer.accelerator.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.207 sec.
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.12 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp
+Command       clang done; 1.926 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot -I C:/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.bc
+Command       clang done; 1.757 sec.
 INFO-FLOW: Linking Debug ...
-Execute       llvm-ld C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.g.bc C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.g.bc C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.g.bc -hls-opt -except-internalize conv1 -LC:/Xilinx/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g 
-Command       llvm-ld done; 3.438 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 103.766 ; gain = 46.668
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 103.766 ; gain = 46.668
+Execute       llvm-ld C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_gold.g.bc C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/lenet_acc.g.bc C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/accelerator.g.bc -hls-opt -except-internalize conv1 -LC:/Xilinx/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g 
+Command       llvm-ld done; 3.705 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 103.629 ; gain = 46.449
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 103.629 ; gain = 46.449
 Execute       ::config_rtl 
+Command       config_rtl done; 0.218 sec.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.pp.bc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.pp.0.bc -f 
-Command         transform done; 0.338 sec.
+Command         transform done; 0.91 sec.
 Execute         llvm-ld C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2018.2/win64/lib -lfloatconversion -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.147 sec.
+Command         llvm-ld done; 0.899 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top conv1 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.0.bc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 13.081 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:14 ; elapsed = 00:00:48 . Memory (MB): peak = 109.742 ; gain = 52.645
+Command         transform done; 17.052 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:53 . Memory (MB): peak = 109.777 ; gain = 52.598
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.1.bc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.2.prechk.bc -f 
-INFO: [XFORM 203-602] Inlining function 'relu_6' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433) automatically.
-Command         transform done; 16.949 sec.
+INFO: [XFORM 203-602] Inlining function 'relu_6' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434) automatically.
+Command         transform done; 17.149 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.2.prechk.bc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:30 ; elapsed = 00:01:05 . Memory (MB): peak = 112.941 ; gain = 55.844
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:34 ; elapsed = 00:01:10 . Memory (MB): peak = 113.277 ; gain = 56.098
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.g.1.bc to C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.1.bc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285) in function 'relu_5' automatically.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:286) in function 'relu_5' automatically.
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:91) in function 'convulution1' for pipelining.
-INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285) in function 'relu_5' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:286) in function 'relu_5' completely.
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:94) in function 'convulution1' completely.
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:97) in function 'convulution1' completely.
 INFO: [XFORM 203-102] Partitioning array 'output.0' in dimension 2 automatically.
 INFO: [XFORM 203-102] Partitioning array 'output.0' in dimension 2 automatically.
 INFO: [XFORM 203-102] Partitioning array 'input.0' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'input_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:337) in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'weights_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:340) in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'output5_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:398) in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'output5_oc.0' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:398) in dimension 2 automatically.
-INFO: [XFORM 203-602] Inlining function 'relu_5' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429) automatically.
-INFO: [XFORM 203-602] Inlining function 'relu_6' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433) automatically.
-Command         transform done; 26.322 sec.
+INFO: [XFORM 203-102] Partitioning array 'input_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:338) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:341) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'output5_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:399) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'output5_oc.0' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:399) in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'relu_5' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu_6' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434) automatically.
+Command         transform done; 13.839 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.1.tmp.bc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.2.bc -f -phase presyn 
-Command         transform done; 1.206 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:01:32 . Memory (MB): peak = 137.137 ; gain = 80.039
+Command         transform done; 0.708 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:48 ; elapsed = 00:01:25 . Memory (MB): peak = 137.090 ; gain = 79.910
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.2.bc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:46:17) in function 'store_weights_5'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:44:15) in function 'store_weights_5'.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:293:18) in function 'fc_6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:294:18) in function 'fc_6'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90:22) in function 'convulution1'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:89:19) in function 'convulution1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:231:29) in function 'convolution_5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:228:19) in function 'convolution_5'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:156:34) in function 'convolution_3'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:154:26) in function 'convolution_3'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:153:22) in function 'convolution_3'.
@@ -312,18 +313,18 @@ WARNING: [HLS 200-470] Port 'bias_3'() has different latency/depth on the same m
 WARNING: [HLS 200-470] Port 'bias_5'() has different latency/depth on the same m_axi bundle:'DATA_BIAS'
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'Loop-0' in function 'conv1'.
 INFO: [XFORM 203-811] Inferring multiple bus burst write of a total cumulative length 10 on port 'output' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:78:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 10 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:301:9). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 10 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:302:9). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 120 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:72:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 16 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:66:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 6 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:60:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 5 on port 'weights' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36:6). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 5 on port 'weights' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:22:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 32 on port 'input' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:9:4). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-Command         transform done; 37.592 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:24 ; elapsed = 00:02:10 . Memory (MB): peak = 301.418 ; gain = 244.320
+Command         transform done; 35.49 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:22 ; elapsed = 00:02:00 . Memory (MB): peak = 301.598 ; gain = 244.418
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 96.926 sec.
-Command     elaborate done; 125.727 sec.
+Command       opt_and_import_c done; 86.301 sec.
+Command     elaborate done; 117.857 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -479,11 +480,10 @@ Execute       set_default_model store_input
 Execute       schedule -model store_input 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.242 sec.
-INFO: [HLS 200-111]  Elapsed time: 131.217 seconds; current allocated memory: 255.448 MB.
+Command       schedule done; 0.119 sec.
+INFO: [HLS 200-111]  Elapsed time: 120.684 seconds; current allocated memory: 255.316 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.verbose.sched.rpt -verbose -f 
 INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
-Command       report done; 0.224 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.sched.adb -f 
 INFO-FLOW: Finish scheduling store_input.
 Execute       set_default_model store_input 
@@ -496,8 +496,8 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.103 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.441 seconds; current allocated memory: 255.572 MB.
+Command       bind done; 0.104 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 255.441 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.bind.adb -f 
 INFO-FLOW: Finish binding store_input.
@@ -508,7 +508,8 @@ Execute       set_default_model store_weights
 Execute       schedule -model store_weights 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 255.778 MB.
+Command       schedule done; 0.121 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.371 seconds; current allocated memory: 255.647 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.sched.adb -f 
 INFO-FLOW: Finish scheduling store_weights.
@@ -522,8 +523,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.285 seconds; current allocated memory: 255.926 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 255.794 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.verbose.bind.rpt -verbose -f 
+Command       report done; 0.121 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.bind.adb -f 
 INFO-FLOW: Finish binding store_weights.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -533,8 +535,8 @@ Execute       set_default_model store_weights_3
 Execute       schedule -model store_weights_3 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.193 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.528 seconds; current allocated memory: 256.129 MB.
+Command       schedule done; 0.151 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 255.998 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_3.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_3.sched.adb -f 
 INFO-FLOW: Finish scheduling store_weights_3.
@@ -548,9 +550,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.296 seconds; current allocated memory: 256.320 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.304 seconds; current allocated memory: 256.189 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_3.verbose.bind.rpt -verbose -f 
-Command       report done; 0.122 sec.
+Command       report done; 0.145 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_3.bind.adb -f 
 INFO-FLOW: Finish binding store_weights_3.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -562,10 +564,10 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.376 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.667 seconds; current allocated memory: 256.597 MB.
+Command       schedule done; 0.199 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.537 seconds; current allocated memory: 256.482 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_5.verbose.sched.rpt -verbose -f 
-Command       report done; 0.2 sec.
+Command       report done; 0.159 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_5.sched.adb -f 
 INFO-FLOW: Finish scheduling store_weights_5.
 Execute       set_default_model store_weights_5 
@@ -578,10 +580,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.197 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.534 seconds; current allocated memory: 256.835 MB.
+Command       bind done; 0.131 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.392 seconds; current allocated memory: 256.719 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_5.verbose.bind.rpt -verbose -f 
-Command       report done; 0.167 sec.
+Command       report done; 0.183 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_5.bind.adb -f 
 INFO-FLOW: Finish binding store_weights_5.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -591,7 +593,8 @@ Execute       set_default_model store_bias
 Execute       schedule -model store_bias 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.409 seconds; current allocated memory: 257.004 MB.
+Command       schedule done; 0.102 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.496 seconds; current allocated memory: 256.857 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.sched.adb -f 
 INFO-FLOW: Finish scheduling store_bias.
@@ -605,8 +608,8 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.126 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.252 seconds; current allocated memory: 257.087 MB.
+Command       bind done; 0.101 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.263 seconds; current allocated memory: 256.940 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.bind.adb -f 
 INFO-FLOW: Finish binding store_bias.
@@ -617,8 +620,7 @@ Execute       set_default_model store_bias_3
 Execute       schedule -model store_bias_3 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.196 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.485 seconds; current allocated memory: 257.165 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.267 seconds; current allocated memory: 257.034 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_3.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_3.sched.adb -f 
 INFO-FLOW: Finish scheduling store_bias_3.
@@ -632,7 +634,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 257.248 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 257.116 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_3.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_3.bind.adb -f 
 INFO-FLOW: Finish binding store_bias_3.
@@ -643,7 +645,8 @@ Execute       set_default_model store_bias_5
 Execute       schedule -model store_bias_5 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.245 seconds; current allocated memory: 257.342 MB.
+Command       schedule done; 0.107 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.331 seconds; current allocated memory: 257.195 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.sched.adb -f 
 INFO-FLOW: Finish scheduling store_bias_5.
@@ -657,7 +660,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 257.425 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.233 seconds; current allocated memory: 257.278 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.bind.adb -f 
 INFO-FLOW: Finish binding store_bias_5.
@@ -670,12 +673,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 13, Final II = 13, Depth = 138.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 1.035 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.219 seconds; current allocated memory: 258.978 MB.
+Command       schedule done; 1.218 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.378 seconds; current allocated memory: 258.863 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.verbose.sched.rpt -verbose -f 
-Command       report done; 0.663 sec.
+Command       report done; 0.803 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.sched.adb -f 
-Command       db_write done; 0.386 sec.
+Command       db_write done; 0.321 sec.
 INFO-FLOW: Finish scheduling convulution1.
 Execute       set_default_model convulution1 
 Execute       bind -model convulution1 
@@ -687,12 +690,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.277 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.379 seconds; current allocated memory: 260.494 MB.
+Command       bind done; 0.3 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.469 seconds; current allocated memory: 260.379 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.verbose.bind.rpt -verbose -f 
-Command       report done; 0.824 sec.
+Command       report done; 0.875 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.bind.adb -f 
-Command       db_write done; 0.302 sec.
+Command       db_write done; 0.267 sec.
 INFO-FLOW: Finish binding convulution1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'maxpool_2' 
@@ -701,10 +704,12 @@ Execute       set_default_model maxpool_2
 Execute       schedule -model maxpool_2 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.147 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.377 seconds; current allocated memory: 260.866 MB.
+Command       schedule done; 0.153 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.417 seconds; current allocated memory: 260.720 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.verbose.sched.rpt -verbose -f 
+Command       report done; 0.102 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.sched.adb -f 
+Command       db_write done; 0.124 sec.
 INFO-FLOW: Finish scheduling maxpool_2.
 Execute       set_default_model maxpool_2 
 Execute       bind -model maxpool_2 
@@ -716,12 +721,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.108 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 261.136 MB.
+Command       bind done; 0.171 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.447 seconds; current allocated memory: 260.989 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.verbose.bind.rpt -verbose -f 
-Command       report done; 0.147 sec.
+Command       report done; 0.157 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.bind.adb -f 
-Command       db_write done; 0.128 sec.
 INFO-FLOW: Finish binding maxpool_2.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'relu_2' 
@@ -730,8 +734,7 @@ Execute       set_default_model relu_2
 Execute       schedule -model relu_2 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.112 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.488 seconds; current allocated memory: 261.357 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.475 seconds; current allocated memory: 261.226 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.sched.adb -f 
 INFO-FLOW: Finish scheduling relu_2.
@@ -745,9 +748,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.11 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 261.499 MB.
+Command       bind done; 0.118 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.352 seconds; current allocated memory: 261.367 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.verbose.bind.rpt -verbose -f 
+Command       report done; 0.112 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.bind.adb -f 
 INFO-FLOW: Finish binding relu_2.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -759,12 +763,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 5, Final II = 5, Depth = 47.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.498 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.768 seconds; current allocated memory: 262.313 MB.
+Command       schedule done; 0.503 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.793 seconds; current allocated memory: 262.182 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3.verbose.sched.rpt -verbose -f 
-Command       report done; 0.311 sec.
+Command       report done; 0.284 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3.sched.adb -f 
-Command       db_write done; 0.261 sec.
+Command       db_write done; 0.146 sec.
 INFO-FLOW: Finish scheduling convolution_3.
 Execute       set_default_model convolution_3 
 Execute       bind -model convolution_3 
@@ -776,12 +780,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.352 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.978 seconds; current allocated memory: 263.171 MB.
+Command       bind done; 0.192 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.692 seconds; current allocated memory: 263.040 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3.verbose.bind.rpt -verbose -f 
-Command       report done; 0.456 sec.
+Command       report done; 0.61 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3.bind.adb -f 
-Command       db_write done; 0.188 sec.
+Command       db_write done; 0.182 sec.
 INFO-FLOW: Finish binding convolution_3.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'maxpool_4' 
@@ -790,10 +794,12 @@ Execute       set_default_model maxpool_4
 Execute       schedule -model maxpool_4 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.225 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.996 seconds; current allocated memory: 263.554 MB.
+Command       schedule done; 0.156 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.042 seconds; current allocated memory: 263.423 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_4.verbose.sched.rpt -verbose -f 
+Command       report done; 0.125 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_4.sched.adb -f 
+Command       db_write done; 0.109 sec.
 INFO-FLOW: Finish scheduling maxpool_4.
 Execute       set_default_model maxpool_4 
 Execute       bind -model maxpool_4 
@@ -805,10 +811,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.112 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.312 seconds; current allocated memory: 263.803 MB.
+Command       bind done; 0.125 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.417 seconds; current allocated memory: 263.671 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_4.verbose.bind.rpt -verbose -f 
-Command       report done; 0.134 sec.
+Command       report done; 0.179 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_4.bind.adb -f 
 INFO-FLOW: Finish binding maxpool_4.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -818,7 +824,8 @@ Execute       set_default_model relu_4
 Execute       schedule -model relu_4 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.422 seconds; current allocated memory: 264.001 MB.
+Command       schedule done; 0.132 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 263.870 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_4.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_4.sched.adb -f 
 INFO-FLOW: Finish scheduling relu_4.
@@ -832,9 +839,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.124 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.307 seconds; current allocated memory: 264.132 MB.
+Command       bind done; 0.136 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.343 seconds; current allocated memory: 264.001 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_4.verbose.bind.rpt -verbose -f 
+Command       report done; 0.115 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_4.bind.adb -f 
 INFO-FLOW: Finish binding relu_4.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -843,13 +851,16 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       set_default_model convolution_5 
 Execute       schedule -model convolution_5 
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_load_10', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:265) on array 'input_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'input_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 5, Final II = 8, Depth = 94.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.572 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.791 seconds; current allocated memory: 265.204 MB.
+Command       schedule done; 1.049 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.397 seconds; current allocated memory: 265.314 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_5.verbose.sched.rpt -verbose -f 
-Command       report done; 0.463 sec.
+Command       report done; 0.653 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_5.sched.adb -f 
-Command       db_write done; 0.178 sec.
+Command       db_write done; 0.296 sec.
 INFO-FLOW: Finish scheduling convolution_5.
 Execute       set_default_model convolution_5 
 Execute       bind -model convolution_5 
@@ -861,12 +872,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.258 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.973 seconds; current allocated memory: 266.638 MB.
+Command       bind done; 0.288 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.299 seconds; current allocated memory: 266.846 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_5.verbose.bind.rpt -verbose -f 
-Command       report done; 0.589 sec.
+Command       report done; 1.052 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_5.bind.adb -f 
-Command       db_write done; 0.319 sec.
+Command       db_write done; 0.297 sec.
 INFO-FLOW: Finish binding convolution_5.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'fc_6' 
@@ -877,10 +888,10 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 5, Final II = 5, Depth = 25.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.212 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.233 seconds; current allocated memory: 267.059 MB.
+Command       schedule done; 0.251 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.784 seconds; current allocated memory: 267.200 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/fc_6.verbose.sched.rpt -verbose -f 
-Command       report done; 0.131 sec.
+Command       report done; 0.198 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/fc_6.sched.adb -f 
 INFO-FLOW: Finish scheduling fc_6.
 Execute       set_default_model fc_6 
@@ -893,10 +904,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.16 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.392 seconds; current allocated memory: 267.326 MB.
+Command       bind done; 0.203 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.536 seconds; current allocated memory: 267.504 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/fc_6.verbose.bind.rpt -verbose -f 
-Command       report done; 0.114 sec.
+Command       report done; 0.168 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/fc_6.bind.adb -f 
 INFO-FLOW: Finish binding fc_6.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -906,8 +917,8 @@ Execute       set_default_model store_output
 Execute       schedule -model store_output 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.106 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.408 seconds; current allocated memory: 267.456 MB.
+Command       schedule done; 0.117 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.554 seconds; current allocated memory: 267.613 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.verbose.sched.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.sched.adb -f 
 INFO-FLOW: Finish scheduling store_output.
@@ -921,7 +932,8 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 267.541 MB.
+Command       bind done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 267.698 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.verbose.bind.rpt -verbose -f 
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.bind.adb -f 
 INFO-FLOW: Finish binding store_output.
@@ -932,12 +944,12 @@ Execute       set_default_model conv1
 Execute       schedule -model conv1 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.128 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.312 seconds; current allocated memory: 268.103 MB.
+Command       schedule done; 0.221 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.457 seconds; current allocated memory: 268.244 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.verbose.sched.rpt -verbose -f 
-Command       report done; 0.124 sec.
+Command       report done; 0.138 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.sched.adb -f 
-Command       db_write done; 0.134 sec.
+Command       db_write done; 0.152 sec.
 INFO-FLOW: Finish scheduling conv1.
 Execute       set_default_model conv1 
 Execute       bind -model conv1 
@@ -949,12 +961,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 3.335 sec.
-INFO: [HLS 200-111]  Elapsed time: 3.652 seconds; current allocated memory: 269.921 MB.
+Command       bind done; 5.017 sec.
+INFO: [HLS 200-111]  Elapsed time: 5.374 seconds; current allocated memory: 270.046 MB.
 Execute       report -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.verbose.bind.rpt -verbose -f 
-Command       report done; 1.028 sec.
+Command       report done; 1.556 sec.
 Execute       db_write -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.bind.adb -f 
-Command       db_write done; 0.18 sec.
+Command       db_write done; 0.156 sec.
 INFO-FLOW: Finish binding conv1.
 Execute       get_model_list conv1 -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
@@ -983,7 +995,7 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model store_input -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_input'.
-INFO: [HLS 200-111]  Elapsed time: 1.472 seconds; current allocated memory: 270.643 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.004 seconds; current allocated memory: 270.768 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl store_input -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_input -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl store_input -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_input 
@@ -993,6 +1005,7 @@ Execute       report -model store_input -o C:/Users/nados/OneDrive/Documents/UIU
 Execute       report -model store_input -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/store_input_csynth.xml -f -x 
 Execute       report -model store_input -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.verbose.rpt -verbose -f 
 Execute       db_write -model store_input -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_input.adb -f 
+Command       db_write done; 0.109 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_weights' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1000,7 +1013,7 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model store_weights -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_weights'.
-INFO: [HLS 200-111]  Elapsed time: 0.656 seconds; current allocated memory: 271.141 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.809 seconds; current allocated memory: 271.314 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl store_weights -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_weights -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl store_weights -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_weights 
@@ -1009,9 +1022,9 @@ Execute       gen_tb_info store_weights -o C:/Users/nados/OneDrive/Documents/UIU
 Execute       report -model store_weights -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/store_weights_csynth.rpt -f 
 Execute       report -model store_weights -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/store_weights_csynth.xml -f -x 
 Execute       report -model store_weights -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.verbose.rpt -verbose -f 
-Command       report done; 0.141 sec.
+Command       report done; 0.117 sec.
 Execute       db_write -model store_weights -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights.adb -f 
-Command       db_write done; 0.112 sec.
+Command       db_write done; 0.123 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_weights_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1019,7 +1032,8 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model store_weights_3 -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_3.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_weights_3'.
-INFO: [HLS 200-111]  Elapsed time: 0.817 seconds; current allocated memory: 271.678 MB.
+Command       create_rtl_model done; 0.113 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.95 seconds; current allocated memory: 271.850 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl store_weights_3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_weights_3 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl store_weights_3 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_weights_3 
@@ -1028,9 +1042,9 @@ Execute       gen_tb_info store_weights_3 -o C:/Users/nados/OneDrive/Documents/U
 Execute       report -model store_weights_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/store_weights_3_csynth.rpt -f 
 Execute       report -model store_weights_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/store_weights_3_csynth.xml -f -x 
 Execute       report -model store_weights_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_3.verbose.rpt -verbose -f 
-Command       report done; 0.112 sec.
+Command       report done; 0.162 sec.
 Execute       db_write -model store_weights_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_3.adb -f 
-Command       db_write done; 0.173 sec.
+Command       db_write done; 0.162 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_weights_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1038,7 +1052,8 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model store_weights_5 -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_5.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_weights_5'.
-INFO: [HLS 200-111]  Elapsed time: 0.981 seconds; current allocated memory: 272.448 MB.
+Command       create_rtl_model done; 0.113 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.243 seconds; current allocated memory: 272.636 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl store_weights_5 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_weights_5 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl store_weights_5 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_weights_5 
@@ -1049,7 +1064,7 @@ Execute       report -model store_weights_5 -o C:/Users/nados/OneDrive/Documents
 Execute       report -model store_weights_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_5.verbose.rpt -verbose -f 
 Command       report done; 0.208 sec.
 Execute       db_write -model store_weights_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_weights_5.adb -f 
-Command       db_write done; 0.187 sec.
+Command       db_write done; 0.234 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_bias' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1057,7 +1072,7 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model store_bias -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_bias'.
-INFO: [HLS 200-111]  Elapsed time: 1.091 seconds; current allocated memory: 272.873 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.275 seconds; current allocated memory: 273.061 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl store_bias -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_bias -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl store_bias -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_bias 
@@ -1067,7 +1082,7 @@ Execute       report -model store_bias -o C:/Users/nados/OneDrive/Documents/UIUC
 Execute       report -model store_bias -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/store_bias_csynth.xml -f -x 
 Execute       report -model store_bias -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.verbose.rpt -verbose -f 
 Execute       db_write -model store_bias -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias.adb -f 
-Command       db_write done; 0.115 sec.
+Command       db_write done; 0.11 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_bias_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1075,7 +1090,7 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model store_bias_3 -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_3.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_bias_3'.
-INFO: [HLS 200-111]  Elapsed time: 0.564 seconds; current allocated memory: 273.189 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.661 seconds; current allocated memory: 273.377 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl store_bias_3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_bias_3 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl store_bias_3 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_bias_3 
@@ -1093,7 +1108,7 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model store_bias_5 -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_bias_5'.
-INFO: [HLS 200-111]  Elapsed time: 0.543 seconds; current allocated memory: 273.572 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 273.723 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl store_bias_5 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_bias_5 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl store_bias_5 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_bias_5 
@@ -1103,7 +1118,7 @@ Execute       report -model store_bias_5 -o C:/Users/nados/OneDrive/Documents/UI
 Execute       report -model store_bias_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/store_bias_5_csynth.xml -f -x 
 Execute       report -model store_bias_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.verbose.rpt -verbose -f 
 Execute       db_write -model store_bias_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.adb -f 
-Command       db_write done; 0.191 sec.
+Command       db_write done; 0.118 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convulution1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1115,22 +1130,22 @@ INFO: [SYN 201-210] Renamed object name 'conv1_fmul_32ns_32ns_32_4_max_dsp_1' to
 INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convulution1'.
-Command       create_rtl_model done; 0.539 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.329 seconds; current allocated memory: 275.888 MB.
+Command       create_rtl_model done; 0.474 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.104 seconds; current allocated memory: 276.039 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl convulution1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/convulution1 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl convulution1 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/convulution1 
 Execute       gen_rtl convulution1 -style xilinx -f -lang vlog -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/verilog/convulution1 
 Execute       gen_tb_info convulution1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1 -p C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
-Command       gen_tb_info done; 0.142 sec.
+Command       gen_tb_info done; 0.146 sec.
 Execute       report -model convulution1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/convulution1_csynth.rpt -f 
-Command       report done; 0.127 sec.
+Command       report done; 0.153 sec.
 Execute       report -model convulution1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/convulution1_csynth.xml -f -x 
-Command       report done; 0.113 sec.
+Command       report done; 0.143 sec.
 Execute       report -model convulution1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.verbose.rpt -verbose -f 
-Command       report done; 0.894 sec.
+Command       report done; 0.98 sec.
 Execute       db_write -model convulution1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.adb -f 
-Command       db_write done; 0.648 sec.
+Command       db_write done; 0.679 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1140,8 +1155,8 @@ Execute       create_rtl_model maxpool_2 -vendor xilinx -mg_file C:/Users/nados/
 INFO: [SYN 201-210] Renamed object name 'conv1_fcmp_32ns_32ns_1_1_1' to 'conv1_fcmp_32ns_3dEe' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_2'.
-Command       create_rtl_model done; 0.12 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.029 seconds; current allocated memory: 276.790 MB.
+Command       create_rtl_model done; 0.127 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.88 seconds; current allocated memory: 276.963 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl maxpool_2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/maxpool_2 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl maxpool_2 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/maxpool_2 
@@ -1150,9 +1165,9 @@ Execute       gen_tb_info maxpool_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fa
 Execute       report -model maxpool_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/maxpool_2_csynth.rpt -f 
 Execute       report -model maxpool_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/maxpool_2_csynth.xml -f -x 
 Execute       report -model maxpool_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.verbose.rpt -verbose -f 
-Command       report done; 0.135 sec.
+Command       report done; 0.203 sec.
 Execute       db_write -model maxpool_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.adb -f 
-Command       db_write done; 0.405 sec.
+Command       db_write done; 0.297 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'relu_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1161,7 +1176,7 @@ Execute       get_config_rtl -auto_prefix
 Execute       create_rtl_model relu_2 -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'relu_2'.
-INFO: [HLS 200-111]  Elapsed time: 1.35 seconds; current allocated memory: 277.228 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.59 seconds; current allocated memory: 277.400 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl relu_2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/relu_2 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl relu_2 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/relu_2 
@@ -1170,9 +1185,9 @@ Execute       gen_tb_info relu_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2
 Execute       report -model relu_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/relu_2_csynth.rpt -f 
 Execute       report -model relu_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/relu_2_csynth.xml -f -x 
 Execute       report -model relu_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.verbose.rpt -verbose -f 
-Command       report done; 0.108 sec.
+Command       report done; 0.122 sec.
 Execute       db_write -model relu_2 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.adb -f 
-Command       db_write done; 0.206 sec.
+Command       db_write done; 0.22 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convolution_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1182,20 +1197,22 @@ Execute       create_rtl_model convolution_3 -vendor xilinx -mg_file C:/Users/na
 INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 3 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_3'.
-Command       create_rtl_model done; 0.16 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.957 seconds; current allocated memory: 278.716 MB.
+Command       create_rtl_model done; 0.217 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.224 seconds; current allocated memory: 278.889 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl convolution_3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/convolution_3 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl convolution_3 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/convolution_3 
 Execute       gen_rtl convolution_3 -style xilinx -f -lang vlog -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/verilog/convolution_3 
 Execute       gen_tb_info convolution_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3 -p C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
-Command       gen_tb_info done; 0.104 sec.
+Command       gen_tb_info done; 0.117 sec.
 Execute       report -model convolution_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/convolution_3_csynth.rpt -f 
+Command       report done; 0.136 sec.
 Execute       report -model convolution_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/convolution_3_csynth.xml -f -x 
+Command       report done; 0.115 sec.
 Execute       report -model convolution_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3.verbose.rpt -verbose -f 
-Command       report done; 0.462 sec.
+Command       report done; 0.7 sec.
 Execute       db_write -model convolution_3 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3.adb -f 
-Command       db_write done; 0.383 sec.
+Command       db_write done; 0.655 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1204,7 +1221,8 @@ Execute       get_config_rtl -auto_prefix
 Execute       create_rtl_model maxpool_4 -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_4.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_4'.
-INFO: [HLS 200-111]  Elapsed time: 2.289 seconds; current allocated memory: 279.698 MB.
+Command       create_rtl_model done; 0.133 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.426 seconds; current allocated memory: 279.870 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl maxpool_4 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/maxpool_4 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl maxpool_4 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/maxpool_4 
@@ -1213,9 +1231,9 @@ Execute       gen_tb_info maxpool_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fa
 Execute       report -model maxpool_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/maxpool_4_csynth.rpt -f 
 Execute       report -model maxpool_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/maxpool_4_csynth.xml -f -x 
 Execute       report -model maxpool_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_4.verbose.rpt -verbose -f 
-Command       report done; 0.144 sec.
+Command       report done; 0.259 sec.
 Execute       db_write -model maxpool_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_4.adb -f 
-Command       db_write done; 0.278 sec.
+Command       db_write done; 0.321 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'relu_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1224,7 +1242,7 @@ Execute       get_config_rtl -auto_prefix
 Execute       create_rtl_model relu_4 -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_4.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'relu_4'.
-INFO: [HLS 200-111]  Elapsed time: 1.148 seconds; current allocated memory: 280.121 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.633 seconds; current allocated memory: 280.294 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl relu_4 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/relu_4 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl relu_4 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/relu_4 
@@ -1233,30 +1251,34 @@ Execute       gen_tb_info relu_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2
 Execute       report -model relu_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/relu_4_csynth.rpt -f 
 Execute       report -model relu_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/relu_4_csynth.xml -f -x 
 Execute       report -model relu_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_4.verbose.rpt -verbose -f 
+Command       report done; 0.126 sec.
 Execute       db_write -model relu_4 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_4.adb -f 
-Command       db_write done; 0.248 sec.
+Command       db_write done; 0.296 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convolution_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -prefix 
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model convolution_5 -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_5.compgen.tcl 
-INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 4 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_5'.
-Command       create_rtl_model done; 0.208 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.034 seconds; current allocated memory: 282.258 MB.
+Command       create_rtl_model done; 0.32 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.491 seconds; current allocated memory: 282.408 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl convolution_5 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/convolution_5 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl convolution_5 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/convolution_5 
 Execute       gen_rtl convolution_5 -style xilinx -f -lang vlog -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/verilog/convolution_5 
 Execute       gen_tb_info convolution_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_5 -p C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
+Command       gen_tb_info done; 0.173 sec.
 Execute       report -model convolution_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/convolution_5_csynth.rpt -f 
+Command       report done; 0.184 sec.
 Execute       report -model convolution_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/convolution_5_csynth.xml -f -x 
+Command       report done; 0.148 sec.
 Execute       report -model convolution_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_5.verbose.rpt -verbose -f 
-Command       report done; 0.581 sec.
+Command       report done; 1.106 sec.
 Execute       db_write -model convolution_5 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_5.adb -f 
-Command       db_write done; 0.514 sec.
+Command       db_write done; 0.754 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fc_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1266,8 +1288,8 @@ Execute       create_rtl_model fc_6 -vendor xilinx -mg_file C:/Users/nados/OneDr
 INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fc_6'.
-Command       create_rtl_model done; 0.245 sec.
-INFO: [HLS 200-111]  Elapsed time: 3.168 seconds; current allocated memory: 283.488 MB.
+Command       create_rtl_model done; 0.178 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.893 seconds; current allocated memory: 283.648 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl fc_6 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/fc_6 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl fc_6 -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/fc_6 
@@ -1276,9 +1298,9 @@ Execute       gen_tb_info fc_6 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall201
 Execute       report -model fc_6 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/fc_6_csynth.rpt -f 
 Execute       report -model fc_6 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/fc_6_csynth.xml -f -x 
 Execute       report -model fc_6 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/fc_6.verbose.rpt -verbose -f 
-Command       report done; 0.133 sec.
+Command       report done; 0.227 sec.
 Execute       db_write -model fc_6 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/fc_6.adb -f 
-Command       db_write done; 0.32 sec.
+Command       db_write done; 0.453 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_output' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1286,7 +1308,7 @@ Execute       get_config_rtl -prefix
 Execute       get_config_rtl -auto_prefix 
 Execute       create_rtl_model store_output -vendor xilinx -mg_file C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_output'.
-INFO: [HLS 200-111]  Elapsed time: 1.127 seconds; current allocated memory: 283.911 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.592 seconds; current allocated memory: 284.071 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl store_output -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/store_output -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
 Execute       gen_rtl store_output -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/store_output 
@@ -1296,7 +1318,7 @@ Execute       report -model store_output -o C:/Users/nados/OneDrive/Documents/UI
 Execute       report -model store_output -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/store_output_csynth.xml -f -x 
 Execute       report -model store_output -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.verbose.rpt -verbose -f 
 Execute       db_write -model store_output -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_output.adb -f 
-Command       db_write done; 0.26 sec.
+Command       db_write done; 0.265 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1344,30 +1366,29 @@ INFO: [SYN 201-210] Renamed object name 'conv1_weights_5_15_oc' to 'conv1_weight
 INFO: [SYN 201-210] Renamed object name 'conv1_output5_oc_0_0' to 'conv1_output5_oc_Aem' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-Command       create_rtl_model done; 2.167 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.821 seconds; current allocated memory: 288.853 MB.
+Command       create_rtl_model done; 2.632 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.395 seconds; current allocated memory: 289.012 MB.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
 Execute       gen_rtl conv1 -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/systemc/conv1 -synmodules store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1 
-Command       gen_rtl done; 0.148 sec.
 Execute       gen_rtl conv1 -istop -style xilinx -f -lang vhdl -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/vhdl/conv1 
-Command       gen_rtl done; 0.253 sec.
+Command       gen_rtl done; 0.307 sec.
 Execute       gen_rtl conv1 -istop -style xilinx -f -lang vlog -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/verilog/conv1 
-Command       gen_rtl done; 0.129 sec.
+Command       gen_rtl done; 0.211 sec.
 Execute       export_constraint_db -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.constraint.tcl -f -tool general 
 Execute       report -model conv1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.design.xml -verbose -f -dv 
-Command       report done; 0.891 sec.
+Command       report done; 1.462 sec.
 Execute       report -model conv1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.sdaccel.xml -verbose -f -sdaccel 
-Command       report done; 0.345 sec.
+Command       report done; 0.422 sec.
 Execute       gen_tb_info conv1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1 -p C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db 
-Command       gen_tb_info done; 0.158 sec.
+Command       gen_tb_info done; 0.108 sec.
 Execute       report -model conv1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/conv1_csynth.rpt -f 
-Command       report done; 0.178 sec.
+Command       report done; 0.246 sec.
 Execute       report -model conv1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/syn/report/conv1_csynth.xml -f -x 
-Command       report done; 0.319 sec.
+Command       report done; 0.216 sec.
 Execute       report -model conv1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.verbose.rpt -verbose -f 
-Command       report done; 1.967 sec.
+Command       report done; 1.852 sec.
 Execute       db_write -model conv1 -o C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.adb -f 
-Command       db_write done; 0.707 sec.
+Command       db_write done; 0.725 sec.
 Execute       sc_get_clocks conv1 
 Execute       sc_get_portdomain conv1 
 INFO-FLOW: Model list for RTL component generation: store_input store_weights store_weights_3 store_weights_5 store_bias store_bias_3 store_bias_5 convulution1 maxpool_2 relu_2 convolution_3 maxpool_4 relu_4 convolution_5 fc_6 store_output conv1
@@ -1525,17 +1546,17 @@ Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/inte
 Execute               source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
 Execute               source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command             ap_source done; 0.157 sec.
+Command             ap_source done; 0.225 sec.
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source done; 0.285 sec.
+Command             ap_source done; 0.309 sec.
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source done; 0.649 sec.
+Command           ap_source done; 0.687 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.698 sec.
-Command       ap_source done; 0.71 sec.
+Command         ap_source done; 0.718 sec.
+Command       ap_source done; 0.72 sec.
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
@@ -1549,9 +1570,9 @@ Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_3.compgen.tcl 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.compgen.tcl 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
-Command       ap_source done; 0.466 sec.
+Command       ap_source done; 0.493 sec.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
-Command       ap_source done; 0.199 sec.
+Command       ap_source done; 0.181 sec.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3.compgen.tcl 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_4.compgen.tcl 
@@ -1574,7 +1595,7 @@ INFO: [RTMG 210-278] Implementing memory 'conv1_output4_oc_ram (RAM)' using bloc
 INFO: [RTMG 210-278] Implementing memory 'conv1_output6_oc_ram (RAM)' using distributed RAMs.
 Execute         source ./CTL.slave.tcl 
 Execute         is_m_axi_addr64 
-Command       ap_source done; 2.257 sec.
+Command       ap_source done; 2.774 sec.
 Execute       get_config_sdx -target 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/global.setting.tcl 
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
@@ -1597,12 +1618,12 @@ Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/inte
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source done; 0.245 sec.
+Command             ap_source done; 0.321 sec.
 Execute             source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source done; 0.338 sec.
+Command           ap_source done; 0.452 sec.
 Execute           source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.342 sec.
-Command       ap_source done; 0.343 sec.
+Command         ap_source done; 0.461 sec.
+Command       ap_source done; 0.461 sec.
 Execute       source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/conv1.rtl_wrap.cfg.tcl 
@@ -1619,7 +1640,7 @@ Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_3.compgen.tcl 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/store_bias_5.compgen.tcl 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convulution1.compgen.tcl 
-Command       ap_source done; 0.157 sec.
+Command       ap_source done; 0.28 sec.
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/maxpool_2.compgen.tcl 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/relu_2.compgen.tcl 
 Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/.autopilot/db/convolution_3.compgen.tcl 
@@ -1686,12 +1707,12 @@ Execute       source C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/
 Execute       get_config_sdx -target 
 Execute       get_config_sdx -profile 
 Execute       ::config_rtl 
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:55 ; elapsed = 00:03:22 . Memory (MB): peak = 378.852 ; gain = 321.754
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:07 ; elapsed = 00:03:22 . Memory (MB): peak = 379.645 ; gain = 322.465
 INFO: [SYSC 207-301] Generating SystemC RTL for conv1.
 INFO: [VHDL 208-304] Generating VHDL RTL for conv1.
 INFO: [VLOG 209-307] Generating Verilog RTL for conv1.
-Command     autosyn done; 72.455 sec.
-Command   csynth_design done; 198.193 sec.
-Command ap_source done; 199.655 sec.
+Command     autosyn done; 81.516 sec.
+Command   csynth_design done; 199.38 sec.
+Command ap_source done; 200.867 sec.
 Execute cleanup_all 
-Command cleanup_all done; 0.332 sec.
+Command cleanup_all done; 0.138 sec.

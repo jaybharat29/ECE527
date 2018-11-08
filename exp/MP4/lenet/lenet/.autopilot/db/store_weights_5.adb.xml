@@ -135,7 +135,7 @@
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 48000, [12 x i8]* @p_str817, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)
+:2  call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 48000, [12 x i8]* @p_str9, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1119,7 +1119,7 @@
 
 <Node id="54" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-.preheader3.preheader:32  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)
+.preheader3.preheader:32  %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str)
 
 ]]></Node>
 <StgValue><ssdm name="tmp_2"/></StgValue>
@@ -1135,7 +1135,7 @@
 
 <Node id="55" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-.preheader3.preheader:33  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str110) nounwind
+.preheader3.preheader:33  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1231,7 +1231,7 @@
 
 <Node id="67" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-.preheader3.preheader:45  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_2)
+.preheader3.preheader:45  %empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str, i32 %tmp_2)
 
 ]]></Node>
 <StgValue><ssdm name="empty_5"/></StgValue>
@@ -1304,23 +1304,23 @@
 </dataflow>
 <dataflow id="128" from="weights" to="StgValue_17" fromId="116" toId="17">
 </dataflow>
-<dataflow id="130" from="p_str514" to="StgValue_17" fromId="129" toId="17">
+<dataflow id="130" from="p_str6" to="StgValue_17" fromId="129" toId="17">
 </dataflow>
 <dataflow id="132" from="StgValue_131" to="StgValue_17" fromId="131" toId="17">
 </dataflow>
 <dataflow id="133" from="StgValue_131" to="StgValue_17" fromId="131" toId="17">
 </dataflow>
-<dataflow id="135" from="p_str110" to="StgValue_17" fromId="134" toId="17">
+<dataflow id="135" from="p_str1" to="StgValue_17" fromId="134" toId="17">
 </dataflow>
 <dataflow id="136" from="StgValue_131" to="StgValue_17" fromId="131" toId="17">
 </dataflow>
 <dataflow id="138" from="StgValue_137" to="StgValue_17" fromId="137" toId="17">
 </dataflow>
-<dataflow id="140" from="p_str817" to="StgValue_17" fromId="139" toId="17">
+<dataflow id="140" from="p_str9" to="StgValue_17" fromId="139" toId="17">
 </dataflow>
-<dataflow id="142" from="p_str716" to="StgValue_17" fromId="141" toId="17">
+<dataflow id="142" from="p_str8" to="StgValue_17" fromId="141" toId="17">
 </dataflow>
-<dataflow id="143" from="p_str110" to="StgValue_17" fromId="134" toId="17">
+<dataflow id="143" from="p_str1" to="StgValue_17" fromId="134" toId="17">
 </dataflow>
 <dataflow id="145" from="StgValue_144" to="StgValue_17" fromId="144" toId="17">
 </dataflow>
@@ -1330,9 +1330,9 @@
 </dataflow>
 <dataflow id="148" from="StgValue_144" to="StgValue_17" fromId="144" toId="17">
 </dataflow>
-<dataflow id="149" from="p_str110" to="StgValue_17" fromId="134" toId="17">
+<dataflow id="149" from="p_str1" to="StgValue_17" fromId="134" toId="17">
 </dataflow>
-<dataflow id="150" from="p_str110" to="StgValue_17" fromId="134" toId="17">
+<dataflow id="150" from="p_str1" to="StgValue_17" fromId="134" toId="17">
 </dataflow>
 <dataflow id="151" from="input_channel_read" to="tmp_cast" fromId="15" toId="18">
 </dataflow>
@@ -1643,7 +1643,7 @@
 </dataflow>
 <dataflow id="307" from="_ssdm_op_SpecRegionBegin" to="tmp_2" fromId="306" toId="77">
 </dataflow>
-<dataflow id="309" from="p_str9" to="tmp_2" fromId="308" toId="77">
+<dataflow id="309" from="p_str" to="tmp_2" fromId="308" toId="77">
 </dataflow>
 <dataflow id="311" from="_ssdm_op_SpecPipeline" to="StgValue_78" fromId="310" toId="78">
 </dataflow>
@@ -1655,7 +1655,7 @@
 </dataflow>
 <dataflow id="315" from="StgValue_131" to="StgValue_78" fromId="131" toId="78">
 </dataflow>
-<dataflow id="316" from="p_str110" to="StgValue_78" fromId="134" toId="78">
+<dataflow id="316" from="p_str1" to="StgValue_78" fromId="134" toId="78">
 </dataflow>
 <dataflow id="317" from="k_mid2" to="tmp_5_cast" fromId="39" toId="79">
 </dataflow>
@@ -1677,7 +1677,7 @@
 </dataflow>
 <dataflow id="328" from="_ssdm_op_SpecRegionEnd" to="empty_5" fromId="327" toId="84">
 </dataflow>
-<dataflow id="329" from="p_str9" to="empty_5" fromId="308" toId="84">
+<dataflow id="329" from="p_str" to="empty_5" fromId="308" toId="84">
 </dataflow>
 <dataflow id="330" from="tmp_2" to="empty_5" fromId="77" toId="84">
 </dataflow>

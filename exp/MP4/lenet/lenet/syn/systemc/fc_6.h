@@ -133,8 +133,8 @@ struct fc_6 : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    conv1_fadd_32ns_3bkb<1,5,32,32,32>* conv1_fadd_32ns_3bkb_U82;
-    conv1_fmul_32ns_3cud<1,4,32,32,32>* conv1_fmul_32ns_3cud_U83;
+    conv1_fadd_32ns_3bkb<1,5,32,32,32>* conv1_fadd_32ns_3bkb_U84;
+    conv1_fmul_32ns_3cud<1,4,32,32,32>* conv1_fmul_32ns_3cud_U85;
     sc_signal< sc_lv<13> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_logic > weights_blk_n_AR;

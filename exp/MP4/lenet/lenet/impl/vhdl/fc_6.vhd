@@ -341,7 +341,7 @@ architecture behav of fc_6 is
 
 
 begin
-    conv1_fadd_32ns_3bkb_U82 : component conv1_fadd_32ns_3bkb
+    conv1_fadd_32ns_3bkb_U84 : component conv1_fadd_32ns_3bkb
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -356,7 +356,7 @@ begin
         ce => grp_fu_189_ce,
         dout => grp_fu_189_p2);
 
-    conv1_fmul_32ns_3cud_U83 : component conv1_fmul_32ns_3cud
+    conv1_fmul_32ns_3cud_U85 : component conv1_fmul_32ns_3cud
     generic map (
         ID => 1,
         NUM_STAGE => 4,

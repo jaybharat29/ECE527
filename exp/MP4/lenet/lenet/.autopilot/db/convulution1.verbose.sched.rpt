@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'convulution1'
 ================================================================
-* Date:           Wed Nov  7 21:45:33 2018
+* Date:           Thu Nov  8 11:27:13 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -1183,12 +1183,12 @@ ST_138 : Operation 683 [1/1] (3.84ns) (root node of TernaryAdder)   --->   "%tmp
 ST_138 : Operation 684 [1/5] (7.25ns)   --->   "%tmp_3 = fadd float %sum_2_4_4, %bias_load" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 684 'fadd' 'tmp_3' <Predicate = (!exitcond_flatten2)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 139 <SV = 138> <Delay = 3.25>
-ST_139 : Operation 685 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str211)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 685 'specregionbegin' 'tmp_4' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
+ST_139 : Operation 685 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 685 'specregionbegin' 'tmp_4' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_139 : Operation 686 [1/1] (0.00ns)   --->   "%tmp_143_cast = zext i14 %tmp_106 to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 686 'zext' 'tmp_143_cast' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_139 : Operation 687 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [4704 x float]* %output_r, i64 0, i64 %tmp_143_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 687 'getelementptr' 'output_addr' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
-ST_139 : Operation 688 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 13, i32 1, i32 1, i32 0, [1 x i8]* @p_str110) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:103]   --->   Operation 688 'specpipeline' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
+ST_139 : Operation 688 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 13, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:103]   --->   Operation 688 'specpipeline' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_139 : Operation 689 [1/1] (3.25ns)   --->   "store float %tmp_3, float* %output_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 689 'store' <Predicate = (!exitcond_flatten2)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 4704> <RAM>
-ST_139 : Operation 690 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str211, i32 %tmp_4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:105]   --->   Operation 690 'specregionend' 'empty_30' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
+ST_139 : Operation 690 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str2, i32 %tmp_4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:105]   --->   Operation 690 'specregionend' 'empty_30' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_139 : Operation 691 [1/1] (0.00ns)   --->   "br label %.preheader5" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:91]   --->   Operation 691 'br' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 
 State 140 <SV = 2> <Delay = 0.00>
@@ -1216,8 +1216,8 @@ The critical path consists of the following:
 	'select' operation ('h_mid', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104) [19]  (1.22 ns)
 	'add' operation ('h_3_dup', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) [108]  (1.78 ns)
 	'select' operation ('tmp_mid2_28', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104) [111]  (1.22 ns)
-	'getelementptr' operation ('input_0_addr', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) [140]  (0 ns)
-	'load' operation ('input_0_load', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) on array 'input_0' [156]  (3.25 ns)
+	'getelementptr' operation ('input_0_addr_1', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) [163]  (0 ns)
+	'load' operation ('input_0_load_1', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) on array 'input_0' [176]  (3.25 ns)
 
  <State 4>: 5.17ns
 The critical path consists of the following:
@@ -1244,8 +1244,8 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'add' operation ('tmp_31_2_mid1', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) [123]  (1.78 ns)
 	'select' operation ('tmp_96', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) [126]  (1.22 ns)
-	'getelementptr' operation ('input_0_addr_11', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) [169]  (0 ns)
-	'load' operation ('input_0_load_11', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) on array 'input_0' [264]  (3.25 ns)
+	'getelementptr' operation ('input_0_addr_10', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) [146]  (0 ns)
+	'load' operation ('input_0_load_10', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100) on array 'input_0' [260]  (3.25 ns)
 
  <State 9>: 7.26ns
 The critical path consists of the following:

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'conv1'
 ================================================================
-* Date:           Wed Nov  7 21:46:17 2018
+* Date:           Thu Nov  8 11:28:09 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|     9.043|        1.25|
+    |ap_clk  |  10.00|     8.750|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |     Latency     |     Interval    | Pipeline|
     |   min  |   max  |   min  |   max  |   Type  |
     +--------+--------+--------+--------+---------+
-    |  407880|  644880|  407880|  644880|   none  |
+    |  373526|  373526|  373526|  373526|   none  |
     +--------+--------+--------+--------+---------+
 
     + Detail: 
@@ -38,15 +38,15 @@
         |                            |                 |     Latency     |     Interval    | Pipeline|
         |          Instance          |      Module     |   min  |   max  |   min  |   max  |   Type  |
         +----------------------------+-----------------+--------+--------+--------+--------+---------+
-        |grp_convolution_5_fu_470    |convolution_5    |   58441|  295441|   58441|  295441|   none  |
+        |grp_convolution_5_fu_470    |convolution_5    |   24087|   24087|   24087|   24087|   none  |
         |grp_convulution1_fu_493     |convulution1     |   61278|   61278|   61278|   61278|   none  |
         |grp_convolution_3_fu_501    |convolution_3    |  200043|  200043|  200043|  200043|   none  |
         |grp_fc_6_fu_514             |fc_6             |    6027|    6027|    6027|    6027|   none  |
         |grp_maxpool_2_fu_526        |maxpool_2        |   21349|   21349|   21349|   21349|   none  |
         |grp_maxpool_4_fu_532        |maxpool_4        |    7393|    7393|    7393|    7393|   none  |
-        |grp_relu_4_fu_538           |relu_4           |    1393|    1393|    1393|    1393|   none  |
-        |grp_relu_2_fu_543           |relu_2           |    3709|    3709|    3709|    3709|   none  |
-        |grp_store_weights_5_fu_548  |store_weights_5  |    3012|    3012|    3012|    3012|   none  |
+        |grp_store_weights_5_fu_538  |store_weights_5  |    3012|    3012|    3012|    3012|   none  |
+        |grp_relu_4_fu_563           |relu_4           |    1393|    1393|    1393|    1393|   none  |
+        |grp_relu_2_fu_568           |relu_2           |    3709|    3709|    3709|    3709|   none  |
         |grp_store_weights_3_fu_573  |store_weights_3  |    1553|    1553|    1553|    1553|   none  |
         |grp_store_weights_fu_588    |store_weights    |     583|     583|     583|     583|   none  |
         |grp_store_input_fu_597      |store_input      |    2337|    2337|    2337|    2337|   none  |
@@ -77,16 +77,16 @@
 |DSP              |        -|      -|       -|      -|
 |Expression       |        -|      -|       0|    128|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        8|     37|   16830|  19914|
+|Instance         |        8|     41|   18390|  21048|
 |Memory           |      166|      -|     192|     16|
 |Multiplexer      |        -|      -|       -|   2615|
 |Register         |        -|      -|     469|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |      174|     37|   17491|  22673|
+|Total            |      174|     41|   19051|  23807|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |       62|     16|      16|     42|
+|Utilization (%)  |       62|     18|      17|     44|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
@@ -99,25 +99,25 @@
     |conv1_DATA_INPUT_m_axi_U    |conv1_DATA_INPUT_m_axi   |        2|      0|   512|   580|
     |conv1_DATA_OUTPUT_m_axi_U   |conv1_DATA_OUTPUT_m_axi  |        2|      0|   512|   580|
     |conv1_DATA_WEIGHT_m_axi_U   |conv1_DATA_WEIGHT_m_axi  |        2|      0|   512|   580|
-    |conv1_fcmp_32ns_3dEe_U93    |conv1_fcmp_32ns_3dEe     |        0|      0|    66|   239|
-    |grp_convolution_3_fu_501    |convolution_3            |        0|     12|  2844|  3393|
-    |grp_convolution_5_fu_470    |convolution_5            |        0|     10|  4006|  3800|
-    |grp_convulution1_fu_493     |convulution1             |        0|     10|  4307|  3732|
+    |conv1_fcmp_32ns_3dEe_U95    |conv1_fcmp_32ns_3dEe     |        0|      0|    66|   239|
+    |grp_convolution_3_fu_501    |convolution_3            |        0|     12|  2844|  3411|
+    |grp_convolution_5_fu_470    |convolution_5            |        0|     14|  5566|  4904|
+    |grp_convulution1_fu_493     |convulution1             |        0|     10|  4307|  3734|
     |grp_fc_6_fu_514             |fc_6                     |        0|      5|   971|  1275|
     |grp_maxpool_2_fu_526        |maxpool_2                |        0|      0|   247|   698|
     |grp_maxpool_4_fu_532        |maxpool_4                |        0|      0|   243|   688|
-    |grp_relu_2_fu_543           |relu_2                   |        0|      0|   156|   471|
-    |grp_relu_4_fu_538           |relu_4                   |        0|      0|   153|   478|
+    |grp_relu_2_fu_568           |relu_2                   |        0|      0|   156|   471|
+    |grp_relu_4_fu_563           |relu_4                   |        0|      0|   153|   478|
     |grp_store_bias_fu_630       |store_bias               |        0|      0|    48|   106|
     |grp_store_bias_3_fu_614     |store_bias_3             |        0|      0|    52|   111|
     |grp_store_bias_5_fu_606     |store_bias_5             |        0|      0|    56|   111|
     |grp_store_input_fu_597      |store_input              |        0|      0|   153|   202|
     |grp_store_output_fu_622     |store_output             |        0|      0|    50|   120|
     |grp_store_weights_fu_588    |store_weights            |        0|      0|   259|   418|
-    |grp_store_weights_3_fu_573  |store_weights_3          |        0|      0|   233|   433|
-    |grp_store_weights_5_fu_548  |store_weights_5          |        0|      0|   490|   575|
+    |grp_store_weights_3_fu_573  |store_weights_3          |        0|      0|   233|   435|
+    |grp_store_weights_5_fu_538  |store_weights_5          |        0|      0|   490|   583|
     +----------------------------+-------------------------+---------+-------+------+------+
-    |Total                       |                         |        8|     37| 16830| 19914|
+    |Total                       |                         |        8|     41| 18390| 21048|
     +----------------------------+-------------------------+---------+-------+------+------+
 
     * DSP48: 
@@ -171,7 +171,7 @@
     +----------------------------------+----------+-------+---+----+------------+------------+
     |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+-------+---+----+------------+------------+
-    |i_14_fu_811_p2                    |     +    |      0|  0|  13|           4|           1|
+    |i_16_fu_811_p2                    |     +    |      0|  0|  13|           4|           1|
     |i_fu_753_p2                       |     +    |      0|  0|  15|           7|           1|
     |tmp_42_fu_857_p2                  |    and   |      0|  0|   2|           1|           1|
     |tmp_47_fu_799_p2                  |    and   |      0|  0|   2|           1|           1|
@@ -241,7 +241,7 @@
     |bias_oc_we0                               |    9|          2|    1|          2|
     |grp_fu_639_p0                             |   15|          3|   32|         96|
     |grp_store_weights_3_fu_573_input_channel  |   38|          7|    4|         28|
-    |grp_store_weights_5_fu_548_input_channel  |   85|         17|    5|         85|
+    |grp_store_weights_5_fu_538_input_channel  |   85|         17|    5|         85|
     |i_i1_reg_459                              |    9|          2|    4|          8|
     |i_i_reg_448                               |    9|          2|    7|         14|
     |input_oc_0_address0                       |   15|          3|   10|         30|
@@ -361,17 +361,17 @@
     |grp_fc_6_fu_514_ap_start_reg             |   1|   0|    1|          0|
     |grp_maxpool_2_fu_526_ap_start_reg        |   1|   0|    1|          0|
     |grp_maxpool_4_fu_532_ap_start_reg        |   1|   0|    1|          0|
-    |grp_relu_2_fu_543_ap_start_reg           |   1|   0|    1|          0|
-    |grp_relu_4_fu_538_ap_start_reg           |   1|   0|    1|          0|
+    |grp_relu_2_fu_568_ap_start_reg           |   1|   0|    1|          0|
+    |grp_relu_4_fu_563_ap_start_reg           |   1|   0|    1|          0|
     |grp_store_bias_3_fu_614_ap_start_reg     |   1|   0|    1|          0|
     |grp_store_bias_5_fu_606_ap_start_reg     |   1|   0|    1|          0|
     |grp_store_bias_fu_630_ap_start_reg       |   1|   0|    1|          0|
     |grp_store_input_fu_597_ap_start_reg      |   1|   0|    1|          0|
     |grp_store_output_fu_622_ap_start_reg     |   1|   0|    1|          0|
     |grp_store_weights_3_fu_573_ap_start_reg  |   1|   0|    1|          0|
-    |grp_store_weights_5_fu_548_ap_start_reg  |   1|   0|    1|          0|
+    |grp_store_weights_5_fu_538_ap_start_reg  |   1|   0|    1|          0|
     |grp_store_weights_fu_588_ap_start_reg    |   1|   0|    1|          0|
-    |i_14_reg_938                             |   4|   0|    4|          0|
+    |i_16_reg_938                             |   4|   0|    4|          0|
     |i_i1_reg_459                             |   4|   0|    4|          0|
     |i_i_reg_448                              |   7|   0|    7|          0|
     |i_reg_916                                |   7|   0|    7|          0|
@@ -768,198 +768,198 @@ ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%weights_1 = call i30 @_ssdm_op_Par
 ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%weights_2 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %weights_3_read, i32 2, i32 31)"   --->   Operation 74 'partselect' 'weights_2' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%weights3 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %weights_read, i32 2, i32 31)"   --->   Operation 75 'partselect' 'weights3' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%input1 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %input_read, i32 2, i32 31)"   --->   Operation 76 'partselect' 'input1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 77 [1/1] (3.25ns)   --->   "%input_oc_0 = alloca [1024 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:337]   --->   Operation 77 'alloca' 'input_oc_0' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 78 [1/1] (3.25ns)   --->   "%weights_oc_0 = alloca [150 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:340]   --->   Operation 78 'alloca' 'weights_oc_0' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 79 [1/1] (3.25ns)   --->   "%weights_3_0_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:341]   --->   Operation 79 'alloca' 'weights_3_0_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 80 [1/1] (3.25ns)   --->   "%weights_3_1_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:342]   --->   Operation 80 'alloca' 'weights_3_1_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 81 [1/1] (3.25ns)   --->   "%weights_3_2_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:343]   --->   Operation 81 'alloca' 'weights_3_2_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 82 [1/1] (3.25ns)   --->   "%weights_3_3_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:344]   --->   Operation 82 'alloca' 'weights_3_3_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 83 [1/1] (3.25ns)   --->   "%weights_3_4_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:345]   --->   Operation 83 'alloca' 'weights_3_4_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 84 [1/1] (3.25ns)   --->   "%weights_3_5_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:346]   --->   Operation 84 'alloca' 'weights_3_5_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 85 [1/1] (3.25ns)   --->   "%weights_5_0_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:347]   --->   Operation 85 'alloca' 'weights_5_0_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 86 [1/1] (3.25ns)   --->   "%weights_5_1_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:348]   --->   Operation 86 'alloca' 'weights_5_1_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 87 [1/1] (3.25ns)   --->   "%weights_5_2_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:349]   --->   Operation 87 'alloca' 'weights_5_2_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 88 [1/1] (3.25ns)   --->   "%weights_5_3_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:350]   --->   Operation 88 'alloca' 'weights_5_3_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 89 [1/1] (3.25ns)   --->   "%weights_5_4_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:351]   --->   Operation 89 'alloca' 'weights_5_4_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 90 [1/1] (3.25ns)   --->   "%weights_5_5_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:352]   --->   Operation 90 'alloca' 'weights_5_5_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 91 [1/1] (3.25ns)   --->   "%weights_5_6_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:353]   --->   Operation 91 'alloca' 'weights_5_6_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 92 [1/1] (3.25ns)   --->   "%weights_5_7_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:354]   --->   Operation 92 'alloca' 'weights_5_7_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 93 [1/1] (3.25ns)   --->   "%weights_5_8_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:355]   --->   Operation 93 'alloca' 'weights_5_8_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 94 [1/1] (3.25ns)   --->   "%weights_5_9_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:356]   --->   Operation 94 'alloca' 'weights_5_9_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 95 [1/1] (3.25ns)   --->   "%weights_5_10_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:357]   --->   Operation 95 'alloca' 'weights_5_10_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 96 [1/1] (3.25ns)   --->   "%weights_5_11_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:358]   --->   Operation 96 'alloca' 'weights_5_11_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 97 [1/1] (3.25ns)   --->   "%weights_5_12_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:359]   --->   Operation 97 'alloca' 'weights_5_12_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 98 [1/1] (3.25ns)   --->   "%weights_5_13_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:360]   --->   Operation 98 'alloca' 'weights_5_13_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 99 [1/1] (3.25ns)   --->   "%weights_5_14_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:361]   --->   Operation 99 'alloca' 'weights_5_14_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 100 [1/1] (3.25ns)   --->   "%weights_5_15_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:362]   --->   Operation 100 'alloca' 'weights_5_15_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 101 [1/1] (2.32ns)   --->   "%bias_oc = alloca [6 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:387]   --->   Operation 101 'alloca' 'bias_oc' <Predicate = true> <Delay = 2.32>
-ST_1 : Operation 102 [1/1] (2.32ns)   --->   "%bias_3_oc = alloca [16 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:388]   --->   Operation 102 'alloca' 'bias_3_oc' <Predicate = true> <Delay = 2.32>
-ST_1 : Operation 103 [1/1] (3.25ns)   --->   "%bias_5_oc = alloca [120 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:389]   --->   Operation 103 'alloca' 'bias_5_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 104 [1/1] (3.25ns)   --->   "%output1_oc = alloca [4704 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:394]   --->   Operation 104 'alloca' 'output1_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 105 [1/1] (3.25ns)   --->   "%output2_oc = alloca [1176 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:395]   --->   Operation 105 'alloca' 'output2_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 106 [1/1] (3.25ns)   --->   "%output3_oc = alloca [1600 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:396]   --->   Operation 106 'alloca' 'output3_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 107 [1/1] (3.25ns)   --->   "%output4_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:397]   --->   Operation 107 'alloca' 'output4_oc' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 108 [1/1] (3.25ns)   --->   "%output5_oc_0_0 = alloca [120 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:398]   --->   Operation 108 'alloca' 'output5_oc_0_0' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
-ST_1 : Operation 109 [1/1] (2.32ns)   --->   "%output6_oc = alloca [10 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:399]   --->   Operation 109 'alloca' 'output6_oc' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
-ST_1 : Operation 110 [2/2] (0.00ns)   --->   "call fastcc void @store_input(float* %DATA_INPUT, i30 %input1, [1024 x float]* nocapture %input_oc_0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:339]   --->   Operation 110 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 111 [2/2] (0.00ns)   --->   "call fastcc void @store_weights(float* %DATA_WEIGHT, i30 %weights3, [150 x float]* nocapture %weights_oc_0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:364]   --->   Operation 111 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 112 [2/2] (0.00ns)   --->   "call fastcc void @store_bias(float* %DATA_BIAS, i30 %bias1, [6 x float]* nocapture %bias_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:391]   --->   Operation 112 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 77 [1/1] (3.25ns)   --->   "%input_oc_0 = alloca [1024 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:338]   --->   Operation 77 'alloca' 'input_oc_0' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 78 [1/1] (3.25ns)   --->   "%weights_oc_0 = alloca [150 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:341]   --->   Operation 78 'alloca' 'weights_oc_0' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 79 [1/1] (3.25ns)   --->   "%weights_3_0_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:342]   --->   Operation 79 'alloca' 'weights_3_0_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 80 [1/1] (3.25ns)   --->   "%weights_3_1_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:343]   --->   Operation 80 'alloca' 'weights_3_1_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 81 [1/1] (3.25ns)   --->   "%weights_3_2_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:344]   --->   Operation 81 'alloca' 'weights_3_2_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 82 [1/1] (3.25ns)   --->   "%weights_3_3_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:345]   --->   Operation 82 'alloca' 'weights_3_3_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 83 [1/1] (3.25ns)   --->   "%weights_3_4_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:346]   --->   Operation 83 'alloca' 'weights_3_4_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 84 [1/1] (3.25ns)   --->   "%weights_3_5_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:347]   --->   Operation 84 'alloca' 'weights_3_5_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 85 [1/1] (3.25ns)   --->   "%weights_5_0_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:348]   --->   Operation 85 'alloca' 'weights_5_0_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 86 [1/1] (3.25ns)   --->   "%weights_5_1_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:349]   --->   Operation 86 'alloca' 'weights_5_1_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 87 [1/1] (3.25ns)   --->   "%weights_5_2_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:350]   --->   Operation 87 'alloca' 'weights_5_2_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 88 [1/1] (3.25ns)   --->   "%weights_5_3_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:351]   --->   Operation 88 'alloca' 'weights_5_3_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 89 [1/1] (3.25ns)   --->   "%weights_5_4_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:352]   --->   Operation 89 'alloca' 'weights_5_4_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 90 [1/1] (3.25ns)   --->   "%weights_5_5_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:353]   --->   Operation 90 'alloca' 'weights_5_5_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 91 [1/1] (3.25ns)   --->   "%weights_5_6_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:354]   --->   Operation 91 'alloca' 'weights_5_6_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 92 [1/1] (3.25ns)   --->   "%weights_5_7_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:355]   --->   Operation 92 'alloca' 'weights_5_7_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 93 [1/1] (3.25ns)   --->   "%weights_5_8_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:356]   --->   Operation 93 'alloca' 'weights_5_8_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 94 [1/1] (3.25ns)   --->   "%weights_5_9_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:357]   --->   Operation 94 'alloca' 'weights_5_9_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 95 [1/1] (3.25ns)   --->   "%weights_5_10_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:358]   --->   Operation 95 'alloca' 'weights_5_10_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 96 [1/1] (3.25ns)   --->   "%weights_5_11_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:359]   --->   Operation 96 'alloca' 'weights_5_11_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 97 [1/1] (3.25ns)   --->   "%weights_5_12_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:360]   --->   Operation 97 'alloca' 'weights_5_12_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 98 [1/1] (3.25ns)   --->   "%weights_5_13_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:361]   --->   Operation 98 'alloca' 'weights_5_13_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 99 [1/1] (3.25ns)   --->   "%weights_5_14_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:362]   --->   Operation 99 'alloca' 'weights_5_14_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 100 [1/1] (3.25ns)   --->   "%weights_5_15_oc = alloca [3000 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:363]   --->   Operation 100 'alloca' 'weights_5_15_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 101 [1/1] (2.32ns)   --->   "%bias_oc = alloca [6 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:388]   --->   Operation 101 'alloca' 'bias_oc' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 102 [1/1] (2.32ns)   --->   "%bias_3_oc = alloca [16 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:389]   --->   Operation 102 'alloca' 'bias_3_oc' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 103 [1/1] (3.25ns)   --->   "%bias_5_oc = alloca [120 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:390]   --->   Operation 103 'alloca' 'bias_5_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 104 [1/1] (3.25ns)   --->   "%output1_oc = alloca [4704 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:395]   --->   Operation 104 'alloca' 'output1_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 105 [1/1] (3.25ns)   --->   "%output2_oc = alloca [1176 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:396]   --->   Operation 105 'alloca' 'output2_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 106 [1/1] (3.25ns)   --->   "%output3_oc = alloca [1600 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:397]   --->   Operation 106 'alloca' 'output3_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 107 [1/1] (3.25ns)   --->   "%output4_oc = alloca [400 x float], align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:398]   --->   Operation 107 'alloca' 'output4_oc' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 108 [1/1] (3.25ns)   --->   "%output5_oc_0_0 = alloca [120 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:399]   --->   Operation 108 'alloca' 'output5_oc_0_0' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 109 [1/1] (2.32ns)   --->   "%output6_oc = alloca [10 x float], align 16" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:400]   --->   Operation 109 'alloca' 'output6_oc' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 110 [2/2] (0.00ns)   --->   "call fastcc void @store_input(float* %DATA_INPUT, i30 %input1, [1024 x float]* nocapture %input_oc_0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:340]   --->   Operation 110 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 111 [2/2] (0.00ns)   --->   "call fastcc void @store_weights(float* %DATA_WEIGHT, i30 %weights3, [150 x float]* nocapture %weights_oc_0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:365]   --->   Operation 111 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 112 [2/2] (0.00ns)   --->   "call fastcc void @store_bias(float* %DATA_BIAS, i30 %bias1, [6 x float]* nocapture %bias_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:392]   --->   Operation 112 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 113 [1/2] (0.00ns)   --->   "call fastcc void @store_input(float* %DATA_INPUT, i30 %input1, [1024 x float]* nocapture %input_oc_0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:339]   --->   Operation 113 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 114 [1/2] (0.00ns)   --->   "call fastcc void @store_weights(float* %DATA_WEIGHT, i30 %weights3, [150 x float]* nocapture %weights_oc_0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:364]   --->   Operation 114 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 115 [1/2] (0.00ns)   --->   "call fastcc void @store_bias(float* %DATA_BIAS, i30 %bias1, [6 x float]* nocapture %bias_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:391]   --->   Operation 115 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 113 [1/2] (0.00ns)   --->   "call fastcc void @store_input(float* %DATA_INPUT, i30 %input1, [1024 x float]* nocapture %input_oc_0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:340]   --->   Operation 113 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 114 [1/2] (0.00ns)   --->   "call fastcc void @store_weights(float* %DATA_WEIGHT, i30 %weights3, [150 x float]* nocapture %weights_oc_0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:365]   --->   Operation 114 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 115 [1/2] (0.00ns)   --->   "call fastcc void @store_bias(float* %DATA_BIAS, i30 %bias1, [6 x float]* nocapture %bias_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:392]   --->   Operation 115 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 3.12>
-ST_3 : Operation 116 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_0_oc, i4 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:365]   --->   Operation 116 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 117 [2/2] (0.00ns)   --->   "call fastcc void @store_bias_3(float* %DATA_BIAS, i30 %bias_2, [16 x float]* nocapture %bias_3_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:392]   --->   Operation 117 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 118 [2/2] (0.00ns)   --->   "call fastcc void @convulution1([1024 x float]* %input_oc_0, [150 x float]* %weights_oc_0, [6 x float]* %bias_oc, [4704 x float]* %output1_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:401]   --->   Operation 118 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 116 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_0_oc, i4 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:366]   --->   Operation 116 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 117 [2/2] (0.00ns)   --->   "call fastcc void @store_bias_3(float* %DATA_BIAS, i30 %bias_2, [16 x float]* nocapture %bias_3_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:393]   --->   Operation 117 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 118 [2/2] (0.00ns)   --->   "call fastcc void @convulution1([1024 x float]* %input_oc_0, [150 x float]* %weights_oc_0, [6 x float]* %bias_oc, [4704 x float]* %output1_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:402]   --->   Operation 118 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 119 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_0_oc, i4 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:365]   --->   Operation 119 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_4 : Operation 120 [1/2] (0.00ns)   --->   "call fastcc void @store_bias_3(float* %DATA_BIAS, i30 %bias_2, [16 x float]* nocapture %bias_3_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:392]   --->   Operation 120 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_4 : Operation 121 [1/2] (0.00ns)   --->   "call fastcc void @convulution1([1024 x float]* %input_oc_0, [150 x float]* %weights_oc_0, [6 x float]* %bias_oc, [4704 x float]* %output1_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:401]   --->   Operation 121 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 119 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_0_oc, i4 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:366]   --->   Operation 119 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 120 [1/2] (0.00ns)   --->   "call fastcc void @store_bias_3(float* %DATA_BIAS, i30 %bias_2, [16 x float]* nocapture %bias_3_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:393]   --->   Operation 120 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 121 [1/2] (0.00ns)   --->   "call fastcc void @convulution1([1024 x float]* %input_oc_0, [150 x float]* %weights_oc_0, [6 x float]* %bias_oc, [4704 x float]* %output1_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:402]   --->   Operation 121 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 3.12>
-ST_5 : Operation 122 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_1_oc, i4 1)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:366]   --->   Operation 122 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_5 : Operation 123 [2/2] (0.00ns)   --->   "call fastcc void @store_bias_5(float* %DATA_BIAS, i30 %bias_1, [120 x float]* nocapture %bias_5_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:393]   --->   Operation 123 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_5 : Operation 124 [2/2] (0.00ns)   --->   "call fastcc void @maxpool_2([4704 x float]* %output1_oc, [1176 x float]* %output2_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:405]   --->   Operation 124 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 122 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_1_oc, i4 1)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:367]   --->   Operation 122 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 123 [2/2] (0.00ns)   --->   "call fastcc void @store_bias_5(float* %DATA_BIAS, i30 %bias_1, [120 x float]* nocapture %bias_5_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:394]   --->   Operation 123 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 124 [2/2] (0.00ns)   --->   "call fastcc void @maxpool_2([4704 x float]* %output1_oc, [1176 x float]* %output2_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:406]   --->   Operation 124 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 125 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_1_oc, i4 1)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:366]   --->   Operation 125 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_6 : Operation 126 [1/2] (0.00ns)   --->   "call fastcc void @store_bias_5(float* %DATA_BIAS, i30 %bias_1, [120 x float]* nocapture %bias_5_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:393]   --->   Operation 126 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_6 : Operation 127 [1/2] (0.00ns)   --->   "call fastcc void @maxpool_2([4704 x float]* %output1_oc, [1176 x float]* %output2_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:405]   --->   Operation 127 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 125 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_1_oc, i4 1)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:367]   --->   Operation 125 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 126 [1/2] (0.00ns)   --->   "call fastcc void @store_bias_5(float* %DATA_BIAS, i30 %bias_1, [120 x float]* nocapture %bias_5_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:394]   --->   Operation 126 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 127 [1/2] (0.00ns)   --->   "call fastcc void @maxpool_2([4704 x float]* %output1_oc, [1176 x float]* %output2_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:406]   --->   Operation 127 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 7 <SV = 6> <Delay = 3.12>
-ST_7 : Operation 128 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_2_oc, i4 2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:367]   --->   Operation 128 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_7 : Operation 129 [2/2] (0.00ns)   --->   "call fastcc void @relu_2([1176 x float]* %output2_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:406]   --->   Operation 129 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 128 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_2_oc, i4 2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:368]   --->   Operation 128 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 129 [2/2] (0.00ns)   --->   "call fastcc void @relu_2([1176 x float]* %output2_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:407]   --->   Operation 129 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 130 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_2_oc, i4 2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:367]   --->   Operation 130 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_8 : Operation 131 [1/2] (0.00ns)   --->   "call fastcc void @relu_2([1176 x float]* %output2_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:406]   --->   Operation 131 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 130 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_2_oc, i4 2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:368]   --->   Operation 130 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 131 [1/2] (0.00ns)   --->   "call fastcc void @relu_2([1176 x float]* %output2_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:407]   --->   Operation 131 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 3.12>
-ST_9 : Operation 132 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_3_oc, i4 3)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:368]   --->   Operation 132 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 132 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_3_oc, i4 3)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:369]   --->   Operation 132 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 10 <SV = 9> <Delay = 0.00>
-ST_10 : Operation 133 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_3_oc, i4 3)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:368]   --->   Operation 133 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 133 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_3_oc, i4 3)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:369]   --->   Operation 133 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 11 <SV = 10> <Delay = 3.12>
-ST_11 : Operation 134 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_4_oc, i4 4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:369]   --->   Operation 134 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 134 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_4_oc, i4 4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:370]   --->   Operation 134 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 12 <SV = 11> <Delay = 0.00>
-ST_12 : Operation 135 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_4_oc, i4 4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:369]   --->   Operation 135 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 135 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_4_oc, i4 4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:370]   --->   Operation 135 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 13 <SV = 12> <Delay = 3.12>
-ST_13 : Operation 136 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_5_oc, i4 5)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:370]   --->   Operation 136 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 136 [2/2] (3.12ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_5_oc, i4 5)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:371]   --->   Operation 136 'call' <Predicate = true> <Delay = 3.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 14 <SV = 13> <Delay = 0.00>
-ST_14 : Operation 137 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_5_oc, i4 5)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:370]   --->   Operation 137 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 137 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_3(float* %DATA_WEIGHT, i30 %weights_2, [400 x float]* nocapture %weights_3_5_oc, i4 5)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:371]   --->   Operation 137 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 15 <SV = 14> <Delay = 3.26>
-ST_15 : Operation 138 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_0_oc, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:371]   --->   Operation 138 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_15 : Operation 139 [2/2] (0.00ns)   --->   "call fastcc void @convolution_3([1176 x float]* %output2_oc, [400 x float]* %weights_3_0_oc, [400 x float]* %weights_3_1_oc, [400 x float]* %weights_3_2_oc, [400 x float]* %weights_3_3_oc, [400 x float]* %weights_3_4_oc, [400 x float]* %weights_3_5_oc, [16 x float]* %bias_3_oc, [1600 x float]* %output3_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:409]   --->   Operation 139 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 138 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_0_oc, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:372]   --->   Operation 138 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 139 [2/2] (0.00ns)   --->   "call fastcc void @convolution_3([1176 x float]* %output2_oc, [400 x float]* %weights_3_0_oc, [400 x float]* %weights_3_1_oc, [400 x float]* %weights_3_2_oc, [400 x float]* %weights_3_3_oc, [400 x float]* %weights_3_4_oc, [400 x float]* %weights_3_5_oc, [16 x float]* %bias_3_oc, [1600 x float]* %output3_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:410]   --->   Operation 139 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 16 <SV = 15> <Delay = 0.00>
-ST_16 : Operation 140 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_0_oc, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:371]   --->   Operation 140 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_16 : Operation 141 [1/2] (0.00ns)   --->   "call fastcc void @convolution_3([1176 x float]* %output2_oc, [400 x float]* %weights_3_0_oc, [400 x float]* %weights_3_1_oc, [400 x float]* %weights_3_2_oc, [400 x float]* %weights_3_3_oc, [400 x float]* %weights_3_4_oc, [400 x float]* %weights_3_5_oc, [16 x float]* %bias_3_oc, [1600 x float]* %output3_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:409]   --->   Operation 141 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 140 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_0_oc, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:372]   --->   Operation 140 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 141 [1/2] (0.00ns)   --->   "call fastcc void @convolution_3([1176 x float]* %output2_oc, [400 x float]* %weights_3_0_oc, [400 x float]* %weights_3_1_oc, [400 x float]* %weights_3_2_oc, [400 x float]* %weights_3_3_oc, [400 x float]* %weights_3_4_oc, [400 x float]* %weights_3_5_oc, [16 x float]* %bias_3_oc, [1600 x float]* %output3_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:410]   --->   Operation 141 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 17 <SV = 16> <Delay = 3.26>
-ST_17 : Operation 142 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_1_oc, i5 1)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:372]   --->   Operation 142 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_17 : Operation 143 [2/2] (0.00ns)   --->   "call fastcc void @maxpool_4([1600 x float]* %output3_oc, [400 x float]* %output4_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:416]   --->   Operation 143 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 142 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_1_oc, i5 1)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:373]   --->   Operation 142 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 143 [2/2] (0.00ns)   --->   "call fastcc void @maxpool_4([1600 x float]* %output3_oc, [400 x float]* %output4_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:417]   --->   Operation 143 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 18 <SV = 17> <Delay = 0.00>
-ST_18 : Operation 144 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_1_oc, i5 1)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:372]   --->   Operation 144 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_18 : Operation 145 [1/2] (0.00ns)   --->   "call fastcc void @maxpool_4([1600 x float]* %output3_oc, [400 x float]* %output4_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:416]   --->   Operation 145 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 144 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_1_oc, i5 1)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:373]   --->   Operation 144 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 145 [1/2] (0.00ns)   --->   "call fastcc void @maxpool_4([1600 x float]* %output3_oc, [400 x float]* %output4_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:417]   --->   Operation 145 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 19 <SV = 18> <Delay = 3.26>
-ST_19 : Operation 146 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_2_oc, i5 2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:373]   --->   Operation 146 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_19 : Operation 147 [2/2] (0.00ns)   --->   "call fastcc void @relu_4([400 x float]* %output4_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:417]   --->   Operation 147 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 146 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_2_oc, i5 2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:374]   --->   Operation 146 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 147 [2/2] (0.00ns)   --->   "call fastcc void @relu_4([400 x float]* %output4_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:418]   --->   Operation 147 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 20 <SV = 19> <Delay = 0.00>
-ST_20 : Operation 148 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_2_oc, i5 2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:373]   --->   Operation 148 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_20 : Operation 149 [1/2] (0.00ns)   --->   "call fastcc void @relu_4([400 x float]* %output4_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:417]   --->   Operation 149 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 148 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_2_oc, i5 2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:374]   --->   Operation 148 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 149 [1/2] (0.00ns)   --->   "call fastcc void @relu_4([400 x float]* %output4_oc) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:418]   --->   Operation 149 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 21 <SV = 20> <Delay = 3.26>
-ST_21 : Operation 150 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_3_oc, i5 3)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:374]   --->   Operation 150 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 150 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_3_oc, i5 3)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:375]   --->   Operation 150 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 22 <SV = 21> <Delay = 0.00>
-ST_22 : Operation 151 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_3_oc, i5 3)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:374]   --->   Operation 151 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 151 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_3_oc, i5 3)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:375]   --->   Operation 151 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 23 <SV = 22> <Delay = 3.26>
-ST_23 : Operation 152 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_4_oc, i5 4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:375]   --->   Operation 152 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 152 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_4_oc, i5 4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:376]   --->   Operation 152 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 24 <SV = 23> <Delay = 0.00>
-ST_24 : Operation 153 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_4_oc, i5 4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:375]   --->   Operation 153 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 153 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_4_oc, i5 4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:376]   --->   Operation 153 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 25 <SV = 24> <Delay = 3.26>
-ST_25 : Operation 154 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_5_oc, i5 5)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:376]   --->   Operation 154 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 154 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_5_oc, i5 5)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:377]   --->   Operation 154 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 26 <SV = 25> <Delay = 0.00>
-ST_26 : Operation 155 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_5_oc, i5 5)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:376]   --->   Operation 155 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_26 : Operation 155 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_5_oc, i5 5)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:377]   --->   Operation 155 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 27 <SV = 26> <Delay = 3.26>
-ST_27 : Operation 156 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_6_oc, i5 6)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:377]   --->   Operation 156 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_27 : Operation 156 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_6_oc, i5 6)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:378]   --->   Operation 156 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 28 <SV = 27> <Delay = 0.00>
-ST_28 : Operation 157 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_6_oc, i5 6)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:377]   --->   Operation 157 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 157 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_6_oc, i5 6)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:378]   --->   Operation 157 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 29 <SV = 28> <Delay = 3.26>
-ST_29 : Operation 158 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_7_oc, i5 7)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:378]   --->   Operation 158 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_29 : Operation 158 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_7_oc, i5 7)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:379]   --->   Operation 158 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 30 <SV = 29> <Delay = 0.00>
-ST_30 : Operation 159 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_7_oc, i5 7)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:378]   --->   Operation 159 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_30 : Operation 159 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_7_oc, i5 7)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:379]   --->   Operation 159 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 31 <SV = 30> <Delay = 3.26>
-ST_31 : Operation 160 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_8_oc, i5 8)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:379]   --->   Operation 160 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_31 : Operation 160 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_8_oc, i5 8)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:380]   --->   Operation 160 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 32 <SV = 31> <Delay = 0.00>
-ST_32 : Operation 161 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_8_oc, i5 8)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:379]   --->   Operation 161 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_32 : Operation 161 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_8_oc, i5 8)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:380]   --->   Operation 161 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 33 <SV = 32> <Delay = 3.26>
-ST_33 : Operation 162 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_9_oc, i5 9)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:380]   --->   Operation 162 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_33 : Operation 162 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_9_oc, i5 9)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:381]   --->   Operation 162 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 34 <SV = 33> <Delay = 0.00>
-ST_34 : Operation 163 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_9_oc, i5 9)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:380]   --->   Operation 163 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_34 : Operation 163 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_9_oc, i5 9)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:381]   --->   Operation 163 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 35 <SV = 34> <Delay = 3.26>
-ST_35 : Operation 164 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_10_oc, i5 10)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:381]   --->   Operation 164 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_35 : Operation 164 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_10_oc, i5 10)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:382]   --->   Operation 164 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 36 <SV = 35> <Delay = 0.00>
-ST_36 : Operation 165 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_10_oc, i5 10)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:381]   --->   Operation 165 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_36 : Operation 165 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_10_oc, i5 10)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:382]   --->   Operation 165 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 37 <SV = 36> <Delay = 3.26>
-ST_37 : Operation 166 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_11_oc, i5 11)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:382]   --->   Operation 166 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_37 : Operation 166 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_11_oc, i5 11)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:383]   --->   Operation 166 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 38 <SV = 37> <Delay = 0.00>
-ST_38 : Operation 167 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_11_oc, i5 11)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:382]   --->   Operation 167 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_38 : Operation 167 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_11_oc, i5 11)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:383]   --->   Operation 167 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 39 <SV = 38> <Delay = 3.26>
-ST_39 : Operation 168 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_12_oc, i5 12)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:383]   --->   Operation 168 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_39 : Operation 168 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_12_oc, i5 12)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:384]   --->   Operation 168 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 40 <SV = 39> <Delay = 0.00>
-ST_40 : Operation 169 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_12_oc, i5 12)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:383]   --->   Operation 169 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_40 : Operation 169 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_12_oc, i5 12)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:384]   --->   Operation 169 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 41 <SV = 40> <Delay = 3.26>
-ST_41 : Operation 170 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_13_oc, i5 13)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:384]   --->   Operation 170 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_41 : Operation 170 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_13_oc, i5 13)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:385]   --->   Operation 170 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 42 <SV = 41> <Delay = 0.00>
-ST_42 : Operation 171 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_13_oc, i5 13)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:384]   --->   Operation 171 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_42 : Operation 171 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_13_oc, i5 13)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:385]   --->   Operation 171 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 43 <SV = 42> <Delay = 3.26>
-ST_43 : Operation 172 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_14_oc, i5 14)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:385]   --->   Operation 172 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_43 : Operation 172 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_14_oc, i5 14)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:386]   --->   Operation 172 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 44 <SV = 43> <Delay = 0.00>
-ST_44 : Operation 173 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_14_oc, i5 14)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:385]   --->   Operation 173 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_44 : Operation 173 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_14_oc, i5 14)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:386]   --->   Operation 173 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 45 <SV = 44> <Delay = 3.26>
-ST_45 : Operation 174 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_15_oc, i5 15)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:386]   --->   Operation 174 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_45 : Operation 174 [2/2] (3.26ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_15_oc, i5 15)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:387]   --->   Operation 174 'call' <Predicate = true> <Delay = 3.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 46 <SV = 45> <Delay = 0.00>
-ST_46 : Operation 175 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_15_oc, i5 15)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:386]   --->   Operation 175 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_46 : Operation 175 [1/2] (0.00ns)   --->   "call fastcc void @store_weights_5(float* %DATA_WEIGHT, i30 %weights_1, [3000 x float]* nocapture %weights_5_15_oc, i5 15)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:387]   --->   Operation 175 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 47 <SV = 46> <Delay = 0.00>
-ST_47 : Operation 176 [2/2] (0.00ns)   --->   "call fastcc void @convolution_5([400 x float]* %output4_oc, [3000 x float]* %weights_5_0_oc, [3000 x float]* %weights_5_1_oc, [3000 x float]* %weights_5_2_oc, [3000 x float]* %weights_5_3_oc, [3000 x float]* %weights_5_4_oc, [3000 x float]* %weights_5_5_oc, [3000 x float]* %weights_5_6_oc, [3000 x float]* %weights_5_7_oc, [3000 x float]* %weights_5_8_oc, [3000 x float]* %weights_5_9_oc, [3000 x float]* %weights_5_10_oc, [3000 x float]* %weights_5_11_oc, [3000 x float]* %weights_5_12_oc, [3000 x float]* %weights_5_13_oc, [3000 x float]* %weights_5_14_oc, [3000 x float]* %weights_5_15_oc, [120 x float]* %bias_5_oc, [120 x float]* %output5_oc_0_0) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:420]   --->   Operation 176 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_47 : Operation 176 [2/2] (0.00ns)   --->   "call fastcc void @convolution_5([400 x float]* %output4_oc, [3000 x float]* %weights_5_0_oc, [3000 x float]* %weights_5_1_oc, [3000 x float]* %weights_5_2_oc, [3000 x float]* %weights_5_3_oc, [3000 x float]* %weights_5_4_oc, [3000 x float]* %weights_5_5_oc, [3000 x float]* %weights_5_6_oc, [3000 x float]* %weights_5_7_oc, [3000 x float]* %weights_5_8_oc, [3000 x float]* %weights_5_9_oc, [3000 x float]* %weights_5_10_oc, [3000 x float]* %weights_5_11_oc, [3000 x float]* %weights_5_12_oc, [3000 x float]* %weights_5_13_oc, [3000 x float]* %weights_5_14_oc, [3000 x float]* %weights_5_15_oc, [120 x float]* %bias_5_oc, [120 x float]* %output5_oc_0_0) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:421]   --->   Operation 176 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 48 <SV = 47> <Delay = 1.76>
 ST_48 : Operation 177 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %DATA_OUTPUT), !map !116"   --->   Operation 177 'specbitsmap' <Predicate = true> <Delay = 0.00>
@@ -968,88 +968,88 @@ ST_48 : Operation 179 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBi
 ST_48 : Operation 180 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %DATA_INPUT), !map !147"   --->   Operation 180 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_48 : Operation 181 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !153"   --->   Operation 181 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_48 : Operation 182 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @conv1_str) nounwind"   --->   Operation 182 'spectopmodule' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 183 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %DATA_INPUT, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 1024, [11 x i8]* @p_str615, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 183 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 184 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %input_r, [10 x i8]* @mode, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 1024, [1 x i8]* @bundle, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 184 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 185 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %DATA_WEIGHT, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 48000, [12 x i8]* @p_str817, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 185 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 186 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights, [10 x i8]* @mode33, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 150, [1 x i8]* @bundle34, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 186 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 187 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights_3, [10 x i8]* @mode35, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 2400, [1 x i8]* @bundle36, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 187 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 188 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights_5, [10 x i8]* @mode37, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 48000, [1 x i8]* @bundle38, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 188 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 189 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights_6, [10 x i8]* @mode39, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 1200, [1 x i8]* @bundle40, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 189 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 190 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %DATA_BIAS, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 120, [10 x i8]* @p_str918, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 190 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 191 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %bias, [10 x i8]* @mode41, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 6, [1 x i8]* @bundle42, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 191 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 192 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %bias_3, [10 x i8]* @mode43, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 16, [1 x i8]* @bundle44, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 192 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 193 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %bias_5, [10 x i8]* @mode45, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 120, [1 x i8]* @bundle46, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 193 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 194 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %bias_6, [10 x i8]* @mode47, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 120, [1 x i8]* @bundle48, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 194 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 195 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %DATA_OUTPUT, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 10, [12 x i8]* @p_str10, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 195 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 196 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %output_r, [10 x i8]* @mode49, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 10, [1 x i8]* @bundle50, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 196 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 197 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str11, i32 1, i32 1, [1 x i8]* @p_str110, i32 0, i32 0, [4 x i8]* @p_str12, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:336]   --->   Operation 197 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_48 : Operation 198 [1/2] (0.00ns)   --->   "call fastcc void @convolution_5([400 x float]* %output4_oc, [3000 x float]* %weights_5_0_oc, [3000 x float]* %weights_5_1_oc, [3000 x float]* %weights_5_2_oc, [3000 x float]* %weights_5_3_oc, [3000 x float]* %weights_5_4_oc, [3000 x float]* %weights_5_5_oc, [3000 x float]* %weights_5_6_oc, [3000 x float]* %weights_5_7_oc, [3000 x float]* %weights_5_8_oc, [3000 x float]* %weights_5_9_oc, [3000 x float]* %weights_5_10_oc, [3000 x float]* %weights_5_11_oc, [3000 x float]* %weights_5_12_oc, [3000 x float]* %weights_5_13_oc, [3000 x float]* %weights_5_14_oc, [3000 x float]* %weights_5_15_oc, [120 x float]* %bias_5_oc, [120 x float]* %output5_oc_0_0) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:420]   --->   Operation 198 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_48 : Operation 199 [1/1] (1.76ns)   --->   "br label %1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:284->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 199 'br' <Predicate = true> <Delay = 1.76>
+ST_48 : Operation 183 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %DATA_INPUT, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 1024, [11 x i8]* @p_str7, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 183 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 184 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %input_r, [10 x i8]* @mode, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 1024, [1 x i8]* @bundle, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 184 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 185 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %DATA_WEIGHT, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 48000, [12 x i8]* @p_str9, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 185 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 186 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights, [10 x i8]* @mode33, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 150, [1 x i8]* @bundle34, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 186 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 187 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights_3, [10 x i8]* @mode35, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 2400, [1 x i8]* @bundle36, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 187 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 188 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights_5, [10 x i8]* @mode37, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 48000, [1 x i8]* @bundle38, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 188 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 189 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %weights_6, [10 x i8]* @mode39, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 1200, [1 x i8]* @bundle40, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 189 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 190 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %DATA_BIAS, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 120, [10 x i8]* @p_str10, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 190 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 191 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %bias, [10 x i8]* @mode41, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 6, [1 x i8]* @bundle42, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 191 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 192 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %bias_3, [10 x i8]* @mode43, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 16, [1 x i8]* @bundle44, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 192 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 193 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %bias_5, [10 x i8]* @mode45, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 120, [1 x i8]* @bundle46, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 193 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 194 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %bias_6, [10 x i8]* @mode47, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 120, [1 x i8]* @bundle48, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 194 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 195 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %DATA_OUTPUT, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 10, [12 x i8]* @p_str11, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 195 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 196 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %output_r, [10 x i8]* @mode49, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 10, [1 x i8]* @bundle50, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 196 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 197 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str12, i32 1, i32 1, [1 x i8]* @p_str1, i32 0, i32 0, [4 x i8]* @p_str13, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:337]   --->   Operation 197 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 198 [1/2] (0.00ns)   --->   "call fastcc void @convolution_5([400 x float]* %output4_oc, [3000 x float]* %weights_5_0_oc, [3000 x float]* %weights_5_1_oc, [3000 x float]* %weights_5_2_oc, [3000 x float]* %weights_5_3_oc, [3000 x float]* %weights_5_4_oc, [3000 x float]* %weights_5_5_oc, [3000 x float]* %weights_5_6_oc, [3000 x float]* %weights_5_7_oc, [3000 x float]* %weights_5_8_oc, [3000 x float]* %weights_5_9_oc, [3000 x float]* %weights_5_10_oc, [3000 x float]* %weights_5_11_oc, [3000 x float]* %weights_5_12_oc, [3000 x float]* %weights_5_13_oc, [3000 x float]* %weights_5_14_oc, [3000 x float]* %weights_5_15_oc, [120 x float]* %bias_5_oc, [120 x float]* %output5_oc_0_0) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:421]   --->   Operation 198 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_48 : Operation 199 [1/1] (1.76ns)   --->   "br label %1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 199 'br' <Predicate = true> <Delay = 1.76>
 
 State 49 <SV = 48> <Delay = 3.25>
 ST_49 : Operation 200 [1/1] (0.00ns)   --->   "%i_i = phi i7 [ 0, %0 ], [ %i, %.preheader3.1.i.critedge ]"   --->   Operation 200 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
-ST_49 : Operation 201 [1/1] (1.48ns)   --->   "%exitcond2_i = icmp eq i7 %i_i, -8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:284->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 201 'icmp' 'exitcond2_i' <Predicate = true> <Delay = 1.48> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 201 [1/1] (1.48ns)   --->   "%exitcond2_i = icmp eq i7 %i_i, -8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 201 'icmp' 'exitcond2_i' <Predicate = true> <Delay = 1.48> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_49 : Operation 202 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 120, i64 120, i64 120) nounwind"   --->   Operation 202 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_49 : Operation 203 [1/1] (1.87ns)   --->   "%i = add i7 %i_i, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:284->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 203 'add' 'i' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_49 : Operation 204 [1/1] (0.00ns)   --->   "br i1 %exitcond2_i, label %relu_5.exit, label %.preheader3.preheader.i" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:284->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 204 'br' <Predicate = true> <Delay = 0.00>
-ST_49 : Operation 205 [1/1] (0.00ns)   --->   "%tmp_i = zext i7 %i_i to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 205 'zext' 'tmp_i' <Predicate = (!exitcond2_i)> <Delay = 0.00>
-ST_49 : Operation 206 [1/1] (0.00ns)   --->   "%output5_oc_0_0_add = getelementptr [120 x float]* %output5_oc_0_0, i64 0, i64 %tmp_i" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 206 'getelementptr' 'output5_oc_0_0_add' <Predicate = (!exitcond2_i)> <Delay = 0.00>
-ST_49 : Operation 207 [2/2] (3.25ns)   --->   "%output5_oc_0_0_loa = load float* %output5_oc_0_0_add, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 207 'load' 'output5_oc_0_0_loa' <Predicate = (!exitcond2_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
-ST_49 : Operation 208 [2/2] (0.00ns)   --->   "call fastcc void @fc_6([120 x float]* nocapture %output5_oc_0_0, float* %DATA_WEIGHT, i30 %weights_s, float* %DATA_BIAS, i30 %bias_s, [10 x float]* nocapture %output6_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:432]   --->   Operation 208 'call' <Predicate = (exitcond2_i)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_49 : Operation 203 [1/1] (1.87ns)   --->   "%i = add i7 %i_i, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 203 'add' 'i' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 204 [1/1] (0.00ns)   --->   "br i1 %exitcond2_i, label %relu_5.exit, label %.preheader3.preheader.i" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 204 'br' <Predicate = true> <Delay = 0.00>
+ST_49 : Operation 205 [1/1] (0.00ns)   --->   "%tmp_i = zext i7 %i_i to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 205 'zext' 'tmp_i' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_49 : Operation 206 [1/1] (0.00ns)   --->   "%output5_oc_0_0_add = getelementptr [120 x float]* %output5_oc_0_0, i64 0, i64 %tmp_i" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 206 'getelementptr' 'output5_oc_0_0_add' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_49 : Operation 207 [2/2] (3.25ns)   --->   "%output5_oc_0_0_loa = load float* %output5_oc_0_0_add, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 207 'load' 'output5_oc_0_0_loa' <Predicate = (!exitcond2_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_49 : Operation 208 [2/2] (0.00ns)   --->   "call fastcc void @fc_6([120 x float]* nocapture %output5_oc_0_0, float* %DATA_WEIGHT, i30 %weights_s, float* %DATA_BIAS, i30 %bias_s, [10 x float]* nocapture %output6_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 208 'call' <Predicate = (exitcond2_i)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 50 <SV = 49> <Delay = 3.25>
-ST_50 : Operation 209 [1/2] (3.25ns)   --->   "%output5_oc_0_0_loa = load float* %output5_oc_0_0_add, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 209 'load' 'output5_oc_0_0_loa' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_50 : Operation 209 [1/2] (3.25ns)   --->   "%output5_oc_0_0_loa = load float* %output5_oc_0_0_add, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 209 'load' 'output5_oc_0_0_loa' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
 
 State 51 <SV = 50> <Delay = 7.76>
-ST_51 : Operation 210 [1/1] (0.00ns)   --->   "%output_0_0_assign_s = bitcast float %output5_oc_0_0_loa to i32" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 210 'bitcast' 'output_0_0_assign_s' <Predicate = true> <Delay = 0.00>
-ST_51 : Operation 211 [1/1] (0.00ns)   --->   "%tmp_43 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %output_0_0_assign_s, i32 23, i32 30)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 211 'partselect' 'tmp_43' <Predicate = true> <Delay = 0.00>
-ST_51 : Operation 212 [1/1] (0.00ns)   --->   "%tmp_100 = trunc i32 %output_0_0_assign_s to i23" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 212 'trunc' 'tmp_100' <Predicate = true> <Delay = 0.00>
-ST_51 : Operation 213 [1/1] (1.55ns)   --->   "%notlhs = icmp ne i8 %tmp_43, -1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 213 'icmp' 'notlhs' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_51 : Operation 214 [1/1] (2.44ns)   --->   "%notrhs = icmp eq i23 %tmp_100, 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 214 'icmp' 'notrhs' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_51 : Operation 215 [1/1] (0.00ns) (grouped into LUT with out node tmp_47)   --->   "%tmp_45 = or i1 %notrhs, %notlhs" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 215 'or' 'tmp_45' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_51 : Operation 216 [1/1] (6.78ns)   --->   "%tmp_46 = fcmp olt float %output5_oc_0_0_loa, 0.000000e+00" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 216 'fcmp' 'tmp_46' <Predicate = true> <Delay = 6.78> <Core = "FCmp">   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 6.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
-ST_51 : Operation 217 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_47 = and i1 %tmp_45, %tmp_46" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 217 'and' 'tmp_47' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_51 : Operation 218 [1/1] (0.00ns)   --->   "br i1 %tmp_47, label %2, label %.preheader3.1.i.critedge" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:287->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 218 'br' <Predicate = true> <Delay = 0.00>
-ST_51 : Operation 219 [1/1] (3.25ns)   --->   "store float 0.000000e+00, float* %output5_oc_0_0_add, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 219 'store' <Predicate = (tmp_47)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
-ST_51 : Operation 220 [1/1] (0.00ns)   --->   "br label %.preheader3.1.i.critedge" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 220 'br' <Predicate = (tmp_47)> <Delay = 0.00>
-ST_51 : Operation 221 [1/1] (0.00ns)   --->   "br label %1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:284->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429]   --->   Operation 221 'br' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 210 [1/1] (0.00ns)   --->   "%output_0_0_assign_s = bitcast float %output5_oc_0_0_loa to i32" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 210 'bitcast' 'output_0_0_assign_s' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 211 [1/1] (0.00ns)   --->   "%tmp_43 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %output_0_0_assign_s, i32 23, i32 30)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 211 'partselect' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 212 [1/1] (0.00ns)   --->   "%tmp_100 = trunc i32 %output_0_0_assign_s to i23" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 212 'trunc' 'tmp_100' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 213 [1/1] (1.55ns)   --->   "%notlhs = icmp ne i8 %tmp_43, -1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 213 'icmp' 'notlhs' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 214 [1/1] (2.44ns)   --->   "%notrhs = icmp eq i23 %tmp_100, 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 214 'icmp' 'notrhs' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 215 [1/1] (0.00ns) (grouped into LUT with out node tmp_47)   --->   "%tmp_45 = or i1 %notrhs, %notlhs" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 215 'or' 'tmp_45' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 216 [1/1] (6.78ns)   --->   "%tmp_46 = fcmp olt float %output5_oc_0_0_loa, 0.000000e+00" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 216 'fcmp' 'tmp_46' <Predicate = true> <Delay = 6.78> <Core = "FCmp">   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 6.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 217 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_47 = and i1 %tmp_45, %tmp_46" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 217 'and' 'tmp_47' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 218 [1/1] (0.00ns)   --->   "br i1 %tmp_47, label %2, label %.preheader3.1.i.critedge" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:288->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 218 'br' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 219 [1/1] (3.25ns)   --->   "store float 0.000000e+00, float* %output5_oc_0_0_add, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:289->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 219 'store' <Predicate = (tmp_47)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_51 : Operation 220 [1/1] (0.00ns)   --->   "br label %.preheader3.1.i.critedge" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:289->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 220 'br' <Predicate = (tmp_47)> <Delay = 0.00>
+ST_51 : Operation 221 [1/1] (0.00ns)   --->   "br label %1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430]   --->   Operation 221 'br' <Predicate = true> <Delay = 0.00>
 
 State 52 <SV = 49> <Delay = 1.76>
-ST_52 : Operation 222 [1/2] (0.00ns)   --->   "call fastcc void @fc_6([120 x float]* nocapture %output5_oc_0_0, float* %DATA_WEIGHT, i30 %weights_s, float* %DATA_BIAS, i30 %bias_s, [10 x float]* nocapture %output6_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:432]   --->   Operation 222 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_52 : Operation 223 [1/1] (1.76ns)   --->   "br label %3" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:307->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 223 'br' <Predicate = true> <Delay = 1.76>
+ST_52 : Operation 222 [1/2] (0.00ns)   --->   "call fastcc void @fc_6([120 x float]* nocapture %output5_oc_0_0, float* %DATA_WEIGHT, i30 %weights_s, float* %DATA_BIAS, i30 %bias_s, [10 x float]* nocapture %output6_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 222 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_52 : Operation 223 [1/1] (1.76ns)   --->   "br label %3" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:308->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 223 'br' <Predicate = true> <Delay = 1.76>
 
 State 53 <SV = 50> <Delay = 8.75>
-ST_53 : Operation 224 [1/1] (0.00ns)   --->   "%i_i1 = phi i4 [ 0, %relu_5.exit ], [ %i_14, %._crit_edge.i ]"   --->   Operation 224 'phi' 'i_i1' <Predicate = true> <Delay = 0.00>
-ST_53 : Operation 225 [1/1] (1.30ns)   --->   "%exitcond_i1 = icmp eq i4 %i_i1, -6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:307->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 225 'icmp' 'exitcond_i1' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_53 : Operation 226 [1/1] (0.00ns)   --->   "%empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 226 'speclooptripcount' 'empty_34' <Predicate = true> <Delay = 0.00>
-ST_53 : Operation 227 [1/1] (1.73ns)   --->   "%i_14 = add i4 %i_i1, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:307->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 227 'add' 'i_14' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_53 : Operation 228 [1/1] (0.00ns)   --->   "br i1 %exitcond_i1, label %relu_6.exit, label %4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:307->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 228 'br' <Predicate = true> <Delay = 0.00>
-ST_53 : Operation 229 [1/1] (0.00ns)   --->   "%tmp_i1 = zext i4 %i_i1 to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 229 'zext' 'tmp_i1' <Predicate = (!exitcond_i1)> <Delay = 0.00>
-ST_53 : Operation 230 [1/1] (0.00ns)   --->   "%output6_oc_addr = getelementptr [10 x float]* %output6_oc, i64 0, i64 %tmp_i1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 230 'getelementptr' 'output6_oc_addr' <Predicate = (!exitcond_i1)> <Delay = 0.00>
-ST_53 : Operation 231 [2/2] (2.32ns)   --->   "%output6_oc_load = load float* %output6_oc_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 231 'load' 'output6_oc_load' <Predicate = (!exitcond_i1)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
-ST_53 : Operation 232 [2/2] (8.75ns)   --->   "call fastcc void @store_output(float* %DATA_OUTPUT, i30 %output1, [10 x float]* nocapture %output6_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:435]   --->   Operation 232 'call' <Predicate = (exitcond_i1)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_53 : Operation 233 [2/2] (0.00ns)   --->   "ret i32 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:436]   --->   Operation 233 'ret' <Predicate = (exitcond_i1)> <Delay = 0.00>
+ST_53 : Operation 224 [1/1] (0.00ns)   --->   "%i_i1 = phi i4 [ 0, %relu_5.exit ], [ %i_16, %._crit_edge.i ]"   --->   Operation 224 'phi' 'i_i1' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 225 [1/1] (1.30ns)   --->   "%exitcond_i1 = icmp eq i4 %i_i1, -6" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:308->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 225 'icmp' 'exitcond_i1' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 226 [1/1] (0.00ns)   --->   "%empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 226 'speclooptripcount' 'empty_33' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 227 [1/1] (1.73ns)   --->   "%i_16 = add i4 %i_i1, 1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:308->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 227 'add' 'i_16' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 228 [1/1] (0.00ns)   --->   "br i1 %exitcond_i1, label %relu_6.exit, label %4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:308->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 228 'br' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 229 [1/1] (0.00ns)   --->   "%tmp_i1 = zext i4 %i_i1 to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 229 'zext' 'tmp_i1' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_53 : Operation 230 [1/1] (0.00ns)   --->   "%output6_oc_addr = getelementptr [10 x float]* %output6_oc, i64 0, i64 %tmp_i1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 230 'getelementptr' 'output6_oc_addr' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_53 : Operation 231 [2/2] (2.32ns)   --->   "%output6_oc_load = load float* %output6_oc_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 231 'load' 'output6_oc_load' <Predicate = (!exitcond_i1)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_53 : Operation 232 [2/2] (8.75ns)   --->   "call fastcc void @store_output(float* %DATA_OUTPUT, i30 %output1, [10 x float]* nocapture %output6_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:436]   --->   Operation 232 'call' <Predicate = (exitcond_i1)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_53 : Operation 233 [2/2] (0.00ns)   --->   "ret i32 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:437]   --->   Operation 233 'ret' <Predicate = (exitcond_i1)> <Delay = 0.00>
 
 State 54 <SV = 51> <Delay = 2.32>
-ST_54 : Operation 234 [1/2] (2.32ns)   --->   "%output6_oc_load = load float* %output6_oc_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 234 'load' 'output6_oc_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_54 : Operation 234 [1/2] (2.32ns)   --->   "%output6_oc_load = load float* %output6_oc_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 234 'load' 'output6_oc_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
 
 State 55 <SV = 52> <Delay = 7.76>
-ST_55 : Operation 235 [1/1] (0.00ns)   --->   "%output_assign_load_t = bitcast float %output6_oc_load to i32" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 235 'bitcast' 'output_assign_load_t' <Predicate = true> <Delay = 0.00>
-ST_55 : Operation 236 [1/1] (0.00ns)   --->   "%tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %output_assign_load_t, i32 23, i32 30)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 236 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_55 : Operation 237 [1/1] (0.00ns)   --->   "%tmp_101 = trunc i32 %output_assign_load_t to i23" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 237 'trunc' 'tmp_101' <Predicate = true> <Delay = 0.00>
-ST_55 : Operation 238 [1/1] (1.55ns)   --->   "%notlhs1 = icmp ne i8 %tmp, -1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 238 'icmp' 'notlhs1' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_55 : Operation 239 [1/1] (2.44ns)   --->   "%notrhs1 = icmp eq i23 %tmp_101, 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 239 'icmp' 'notrhs1' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_55 : Operation 240 [1/1] (0.00ns) (grouped into LUT with out node tmp_42)   --->   "%tmp_40 = or i1 %notrhs1, %notlhs1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 240 'or' 'tmp_40' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_55 : Operation 241 [1/1] (6.78ns)   --->   "%tmp_41 = fcmp olt float %output6_oc_load, 0.000000e+00" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 241 'fcmp' 'tmp_41' <Predicate = true> <Delay = 6.78> <Core = "FCmp">   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 6.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
-ST_55 : Operation 242 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_42 = and i1 %tmp_40, %tmp_41" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 242 'and' 'tmp_42' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_55 : Operation 243 [1/1] (0.00ns)   --->   "br i1 %tmp_42, label %5, label %._crit_edge.i" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:309->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 243 'br' <Predicate = true> <Delay = 0.00>
-ST_55 : Operation 244 [1/1] (2.32ns)   --->   "store float 0.000000e+00, float* %output6_oc_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 244 'store' <Predicate = (tmp_42)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
-ST_55 : Operation 245 [1/1] (0.00ns)   --->   "br label %._crit_edge.i" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 245 'br' <Predicate = (tmp_42)> <Delay = 0.00>
-ST_55 : Operation 246 [1/1] (0.00ns)   --->   "br label %3" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:307->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433]   --->   Operation 246 'br' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 235 [1/1] (0.00ns)   --->   "%output_assign_load_t = bitcast float %output6_oc_load to i32" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 235 'bitcast' 'output_assign_load_t' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 236 [1/1] (0.00ns)   --->   "%tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %output_assign_load_t, i32 23, i32 30)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 236 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 237 [1/1] (0.00ns)   --->   "%tmp_101 = trunc i32 %output_assign_load_t to i23" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 237 'trunc' 'tmp_101' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 238 [1/1] (1.55ns)   --->   "%notlhs1 = icmp ne i8 %tmp, -1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 238 'icmp' 'notlhs1' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 239 [1/1] (2.44ns)   --->   "%notrhs1 = icmp eq i23 %tmp_101, 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 239 'icmp' 'notrhs1' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 240 [1/1] (0.00ns) (grouped into LUT with out node tmp_42)   --->   "%tmp_40 = or i1 %notrhs1, %notlhs1" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 240 'or' 'tmp_40' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 241 [1/1] (6.78ns)   --->   "%tmp_41 = fcmp olt float %output6_oc_load, 0.000000e+00" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 241 'fcmp' 'tmp_41' <Predicate = true> <Delay = 6.78> <Core = "FCmp">   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 6.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 242 [1/1] (0.97ns) (out node of the LUT)   --->   "%tmp_42 = and i1 %tmp_40, %tmp_41" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 242 'and' 'tmp_42' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 243 [1/1] (0.00ns)   --->   "br i1 %tmp_42, label %5, label %._crit_edge.i" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:310->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 243 'br' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 244 [1/1] (2.32ns)   --->   "store float 0.000000e+00, float* %output6_oc_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:311->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 244 'store' <Predicate = (tmp_42)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_55 : Operation 245 [1/1] (0.00ns)   --->   "br label %._crit_edge.i" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:311->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 245 'br' <Predicate = (tmp_42)> <Delay = 0.00>
+ST_55 : Operation 246 [1/1] (0.00ns)   --->   "br label %3" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:308->ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434]   --->   Operation 246 'br' <Predicate = true> <Delay = 0.00>
 
 State 56 <SV = 51> <Delay = 0.00>
-ST_56 : Operation 247 [1/2] (0.00ns)   --->   "call fastcc void @store_output(float* %DATA_OUTPUT, i30 %output1, [10 x float]* nocapture %output6_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:435]   --->   Operation 247 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_56 : Operation 248 [1/2] (0.00ns)   --->   "ret i32 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:436]   --->   Operation 248 'ret' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 247 [1/2] (0.00ns)   --->   "call fastcc void @store_output(float* %DATA_OUTPUT, i30 %output1, [10 x float]* nocapture %output6_oc)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:436]   --->   Operation 247 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_56 : Operation 248 [1/2] (0.00ns)   --->   "ret i32 0" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:437]   --->   Operation 248 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -1216,8 +1216,8 @@ StgValue_222         (call             ) [ 0000000000000000000000000000000000000
 StgValue_223         (br               ) [ 000000000000000000000000000000000000000000000000000011110]
 i_i1                 (phi              ) [ 000000000000000000000000000000000000000000000000000001000]
 exitcond_i1          (icmp             ) [ 000000000000000000000000000000000000000000000000000001110]
-empty_34             (speclooptripcount) [ 000000000000000000000000000000000000000000000000000000000]
-i_14                 (add              ) [ 000000000000000000000000000000000000000000000000000011110]
+empty_33             (speclooptripcount) [ 000000000000000000000000000000000000000000000000000000000]
+i_16                 (add              ) [ 000000000000000000000000000000000000000000000000000011110]
 StgValue_228         (br               ) [ 000000000000000000000000000000000000000000000000000000000]
 tmp_i1               (zext             ) [ 000000000000000000000000000000000000000000000000000000000]
 output6_oc_addr      (getelementptr    ) [ 000000000000000000000000000000000000000000000000000000110]
@@ -1786,7 +1786,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="121" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str514"/></StgValue>
+<StgValue><ssdm name="p_str6"/></StgValue>
 </bind>
 </comp>
 
@@ -1795,7 +1795,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="123" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str110"/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -1813,7 +1813,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="127" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str615"/></StgValue>
+<StgValue><ssdm name="p_str7"/></StgValue>
 </bind>
 </comp>
 
@@ -1822,7 +1822,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="129" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str716"/></StgValue>
+<StgValue><ssdm name="p_str8"/></StgValue>
 </bind>
 </comp>
 
@@ -1867,7 +1867,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="139" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str817"/></StgValue>
+<StgValue><ssdm name="p_str9"/></StgValue>
 </bind>
 </comp>
 
@@ -1984,7 +1984,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="165" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str918"/></StgValue>
+<StgValue><ssdm name="p_str10"/></StgValue>
 </bind>
 </comp>
 
@@ -2083,7 +2083,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="187" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str10"/></StgValue>
+<StgValue><ssdm name="p_str11"/></StgValue>
 </bind>
 </comp>
 
@@ -2110,7 +2110,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="193" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str11"/></StgValue>
+<StgValue><ssdm name="p_str12"/></StgValue>
 </bind>
 </comp>
 
@@ -2128,7 +2128,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="197" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str12"/></StgValue>
+<StgValue><ssdm name="p_str13"/></StgValue>
 </bind>
 </comp>
 
@@ -2967,11 +2967,26 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="538" class="1004" name="grp_relu_4_fu_538">
+<comp id="538" class="1004" name="grp_store_weights_5_fu_538">
 <pin_list>
 <pin id="539" dir="0" index="0" bw="0" slack="0"/>
-<pin id="540" dir="0" index="1" bw="32" slack="2147483647"/>
-<pin id="541" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="540" dir="0" index="1" bw="32" slack="0"/>
+<pin id="541" dir="0" index="2" bw="30" slack="14"/>
+<pin id="542" dir="0" index="3" bw="32" slack="2147483647"/>
+<pin id="543" dir="0" index="4" bw="5" slack="0"/>
+<pin id="544" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_138/15 StgValue_142/17 StgValue_146/19 StgValue_150/21 StgValue_152/23 StgValue_154/25 StgValue_156/27 StgValue_158/29 StgValue_160/31 StgValue_162/33 StgValue_164/35 StgValue_166/37 StgValue_168/39 StgValue_170/41 StgValue_172/43 StgValue_174/45 "/>
+</bind>
+</comp>
+
+<comp id="563" class="1004" name="grp_relu_4_fu_563">
+<pin_list>
+<pin id="564" dir="0" index="0" bw="0" slack="0"/>
+<pin id="565" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="566" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
@@ -2979,30 +2994,15 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="543" class="1004" name="grp_relu_2_fu_543">
+<comp id="568" class="1004" name="grp_relu_2_fu_568">
 <pin_list>
-<pin id="544" dir="0" index="0" bw="0" slack="0"/>
-<pin id="545" dir="0" index="1" bw="32" slack="2147483647"/>
-<pin id="546" dir="1" index="2" bw="0" slack="2147483647"/>
+<pin id="569" dir="0" index="0" bw="0" slack="0"/>
+<pin id="570" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="571" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
 <opset="StgValue_129/7 "/>
-</bind>
-</comp>
-
-<comp id="548" class="1004" name="grp_store_weights_5_fu_548">
-<pin_list>
-<pin id="549" dir="0" index="0" bw="0" slack="0"/>
-<pin id="550" dir="0" index="1" bw="32" slack="0"/>
-<pin id="551" dir="0" index="2" bw="30" slack="14"/>
-<pin id="552" dir="0" index="3" bw="32" slack="2147483647"/>
-<pin id="553" dir="0" index="4" bw="5" slack="0"/>
-<pin id="554" dir="1" index="5" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="call(48) " fcode="call"/>
-<opset="StgValue_138/15 StgValue_142/17 StgValue_146/19 StgValue_150/21 StgValue_152/23 StgValue_154/25 StgValue_156/27 StgValue_158/29 StgValue_160/31 StgValue_162/33 StgValue_164/35 StgValue_166/37 StgValue_168/39 StgValue_170/41 StgValue_172/43 StgValue_174/45 "/>
 </bind>
 </comp>
 
@@ -3388,7 +3388,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="811" class="1004" name="i_14_fu_811">
+<comp id="811" class="1004" name="i_16_fu_811">
 <pin_list>
 <pin id="812" dir="0" index="0" bw="4" slack="0"/>
 <pin id="813" dir="0" index="1" bw="1" slack="0"/>
@@ -3396,7 +3396,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="i_14/53 "/>
+<opset="i_16/53 "/>
 </bind>
 </comp>
 
@@ -3625,13 +3625,13 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 </bind>
 </comp>
 
-<comp id="938" class="1005" name="i_14_reg_938">
+<comp id="938" class="1005" name="i_16_reg_938">
 <pin_list>
 <pin id="939" dir="0" index="0" bw="4" slack="0"/>
 <pin id="940" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
-<opset="i_14 "/>
+<opset="i_16 "/>
 </bind>
 </comp>
 
@@ -3800,45 +3800,45 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 
 <net id="537"><net_src comp="76" pin="0"/><net_sink comp="532" pin=0"/></net>
 
-<net id="542"><net_src comp="80" pin="0"/><net_sink comp="538" pin=0"/></net>
+<net id="545"><net_src comp="68" pin="0"/><net_sink comp="538" pin=0"/></net>
 
-<net id="547"><net_src comp="60" pin="0"/><net_sink comp="543" pin=0"/></net>
+<net id="546"><net_src comp="2" pin="0"/><net_sink comp="538" pin=1"/></net>
 
-<net id="555"><net_src comp="68" pin="0"/><net_sink comp="548" pin=0"/></net>
+<net id="547"><net_src comp="70" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="556"><net_src comp="2" pin="0"/><net_sink comp="548" pin=1"/></net>
+<net id="548"><net_src comp="74" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="557"><net_src comp="70" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="549"><net_src comp="78" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="558"><net_src comp="74" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="550"><net_src comp="82" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="559"><net_src comp="78" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="551"><net_src comp="84" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="560"><net_src comp="82" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="552"><net_src comp="86" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="561"><net_src comp="84" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="553"><net_src comp="88" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="562"><net_src comp="86" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="554"><net_src comp="90" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="563"><net_src comp="88" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="555"><net_src comp="92" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="564"><net_src comp="90" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="556"><net_src comp="94" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="565"><net_src comp="92" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="557"><net_src comp="96" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="566"><net_src comp="94" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="558"><net_src comp="98" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="567"><net_src comp="96" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="559"><net_src comp="100" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="568"><net_src comp="98" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="560"><net_src comp="102" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="569"><net_src comp="100" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="561"><net_src comp="104" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="570"><net_src comp="102" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="562"><net_src comp="106" pin="0"/><net_sink comp="538" pin=4"/></net>
 
-<net id="571"><net_src comp="104" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="567"><net_src comp="80" pin="0"/><net_sink comp="563" pin=0"/></net>
 
-<net id="572"><net_src comp="106" pin="0"/><net_sink comp="548" pin=4"/></net>
+<net id="572"><net_src comp="60" pin="0"/><net_sink comp="568" pin=0"/></net>
 
 <net id="580"><net_src comp="44" pin="0"/><net_sink comp="573" pin=0"/></net>
 
@@ -4076,7 +4076,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 
 <net id="896"><net_src comp="705" pin="4"/><net_sink comp="893" pin=0"/></net>
 
-<net id="897"><net_src comp="893" pin="1"/><net_sink comp="548" pin=2"/></net>
+<net id="897"><net_src comp="893" pin="1"/><net_sink comp="538" pin=2"/></net>
 
 <net id="901"><net_src comp="715" pin="4"/><net_sink comp="898" pin=0"/></net>
 
@@ -4211,7 +4211,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 	State 52
 	State 53
 		exitcond_i1 : 1
-		i_14 : 1
+		i_16 : 1
 		StgValue_228 : 2
 		tmp_i1 : 1
 		output6_oc_addr : 2
@@ -4236,16 +4236,16 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 |----------|----------------------------|---------|---------|---------|---------|
 | Operation|       Functional Unit      |  DSP48E |  Delay  |    FF   |   LUT   |
 |----------|----------------------------|---------|---------|---------|---------|
-|          |  grp_convolution_5_fu_470  |    10   | 79.0707 |   4613  |   3367  |
-|          |   grp_convulution1_fu_493  |    10   | 36.3527 |   3134  |   3017  |
-|          |  grp_convolution_3_fu_501  |    12   | 34.9414 |   2650  |   2979  |
+|          |  grp_convolution_5_fu_470  |    14   | 88.7584 |   5266  |   4312  |
+|          |   grp_convulution1_fu_493  |    10   | 36.3527 |   3134  |   3019  |
+|          |  grp_convolution_3_fu_501  |    12   | 34.9414 |   2650  |   2997  |
 |          |       grp_fc_6_fu_514      |    5    | 10.6597 |   793   |   952   |
 |          |    grp_maxpool_2_fu_526    |    0    |  5.307  |   292   |   617   |
 |          |    grp_maxpool_4_fu_532    |    0    |  5.307  |   282   |   606   |
-|          |      grp_relu_4_fu_538     |    0    |  1.769  |   147   |   407   |
-|   call   |      grp_relu_2_fu_543     |    0    |  1.769  |   152   |   400   |
-|          | grp_store_weights_5_fu_548 |    0    |    0    |   280   |   261   |
-|          | grp_store_weights_3_fu_573 |    0    |    0    |   260   |   209   |
+|          | grp_store_weights_5_fu_538 |    0    |    0    |   280   |   269   |
+|   call   |      grp_relu_4_fu_563     |    0    |  1.769  |   147   |   407   |
+|          |      grp_relu_2_fu_568     |    0    |  1.769  |   152   |   400   |
+|          | grp_store_weights_3_fu_573 |    0    |    0    |   260   |   211   |
 |          |  grp_store_weights_fu_588  |    0    |    0    |   280   |   160   |
 |          |   grp_store_input_fu_597   |    0    |  1.769  |   185   |   111   |
 |          |   grp_store_bias_5_fu_606  |    0    |  3.538  |    78   |    44   |
@@ -4263,7 +4263,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 |          |       notrhs1_fu_845       |    0    |    0    |    0    |    18   |
 |----------|----------------------------|---------|---------|---------|---------|
 |    add   |          i_fu_753          |    0    |    0    |    0    |    15   |
-|          |         i_14_fu_811        |    0    |    0    |    0    |    13   |
+|          |         i_16_fu_811        |    0    |    0    |    0    |    13   |
 |----------|----------------------------|---------|---------|---------|---------|
 |    or    |        tmp_45_fu_793       |    0    |    0    |    0    |    2    |
 |          |        tmp_40_fu_851       |    0    |    0    |    0    |    2    |
@@ -4301,7 +4301,7 @@ StgValue_248         (ret              ) [ 0000000000000000000000000000000000000
 |   trunc  |       tmp_100_fu_777       |    0    |    0    |    0    |    0    |
 |          |       tmp_101_fu_835       |    0    |    0    |    0    |    0    |
 |----------|----------------------------|---------|---------|---------|---------|
-|   Total  |                            |    37   | 192.867 |  13432  |  13606  |
+|   Total  |                            |    41   | 202.554 |  14085  |  14581  |
 |----------|----------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -4353,7 +4353,7 @@ Memories:
 |      bias_1_reg_873      |   30   |
 |      bias_2_reg_878      |   30   |
 |      bias_s_reg_868      |   30   |
-|       i_14_reg_938       |    4   |
+|       i_16_reg_938       |    4   |
 |       i_i1_reg_459       |    4   |
 |        i_i_reg_448       |    7   |
 |         i_reg_916        |    7   |
@@ -4377,7 +4377,7 @@ Memories:
 |----------------------------|------|------|------|--------||---------||---------|
 |      grp_access_fu_428     |  p0  |   2  |   7  |   14   ||    9    |
 |      grp_access_fu_441     |  p0  |   2  |   4  |    8   ||    9    |
-| grp_store_weights_5_fu_548 |  p4  |  16  |   5  |   80   ||    33   |
+| grp_store_weights_5_fu_538 |  p4  |  16  |   5  |   80   ||    33   |
 | grp_store_weights_3_fu_573 |  p4  |   6  |   4  |   24   ||    9    |
 |  grp_store_weights_fu_588  |  p2  |   2  |  30  |   60   ||    9    |
 |   grp_store_input_fu_597   |  p2  |   2  |  30  |   60   ||    9    |
@@ -4393,10 +4393,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+
 |           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+--------+
-|  Function |    -   |   37   |   192  |  13432 |  13606 |
+|  Function |    -   |   41   |   202  |  14085 |  14581 |
 |   Memory  |   166  |    -   |    -   |   192  |   16   |
 |Multiplexer|    -   |    -   |   14   |    -   |   96   |
 |  Register |    -   |    -   |    -   |   397  |    -   |
 +-----------+--------+--------+--------+--------+--------+
-|   Total   |   166  |   37   |   207  |  14021 |  13718 |
+|   Total   |   166  |   41   |   217  |  14674 |  14693 |
 +-----------+--------+--------+--------+--------+--------+

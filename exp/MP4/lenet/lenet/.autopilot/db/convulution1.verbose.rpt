@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'convulution1'
 ================================================================
-* Date:           Wed Nov  7 21:45:57 2018
+* Date:           Thu Nov  8 11:27:43 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      0|       0|    783|
+|Expression       |        -|      0|       0|    785|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        -|     10|     696|   1422|
 |Memory           |        -|      -|       -|      -|
 |Multiplexer      |        -|      -|       -|    759|
 |Register         |        0|      -|    3611|    768|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|     10|    4307|   3732|
+|Total            |        0|     10|    4307|   3734|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -101,7 +101,7 @@
     |h_s_fu_1015_p2                  |     +    |      0|  0|  15|           1|           5|
     |indvar_flatten_next2_fu_794_p2  |     +    |      0|  0|  17|          13|           1|
     |indvar_flatten_op_fu_866_p2     |     +    |      0|  0|  14|           1|          10|
-    |tmp_106_fu_1624_p2              |     +    |      0|  0|  12|          14|          14|
+    |tmp_106_fu_1624_p2              |     +    |      0|  0|  13|          14|          14|
     |tmp_31_1_fu_1198_p2             |     +    |      0|  0|  15|           2|           5|
     |tmp_31_2_fu_1223_p2             |     +    |      0|  0|  15|           3|           5|
     |tmp_31_2_mid1_fu_1168_p2        |     +    |      0|  0|  15|           2|           5|
@@ -138,7 +138,7 @@
     |tmp_s_fu_883_p2                 |     +    |      0|  0|  15|           1|           8|
     |w_3_fu_918_p2                   |     +    |      0|  0|  15|           1|           5|
     |tmp_89_fu_1572_p2               |     -    |      0|  0|  15|           9|           9|
-    |tmp_92_fu_1615_p2               |     -    |      0|  0|  12|          14|          14|
+    |tmp_92_fu_1615_p2               |     -    |      0|  0|  13|          14|          14|
     |exitcond2_mid_fu_846_p2         |    and   |      0|  0|   2|           1|           1|
     |exitcond_flatten2_fu_788_p2     |   icmp   |      0|  0|  13|          13|          13|
     |exitcond_flatten_fu_806_p2      |   icmp   |      0|  0|  13|          10|           9|
@@ -161,7 +161,7 @@
     |ap_enable_reg_pp0_iter1         |    xor   |      0|  0|   2|           2|           1|
     |not_exitcond_flatten_fu_834_p2  |    xor   |      0|  0|   2|           1|           2|
     +--------------------------------+----------+-------+---+----+------------+------------+
-    |Total                           |          |      0|  0| 783|         235|         393|
+    |Total                           |          |      0|  0| 785|         235|         393|
     +--------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
@@ -1499,18 +1499,18 @@ ST_138 : Operation 677 [1/1] (0.00ns)   --->   "%tmp_36 = trunc i10 %tmp_91 to i
 ST_138 : Operation 678 [1/1] (0.00ns)   --->   "%p_shl_cast = call i14 @_ssdm_op_BitConcatenate.i14.i9.i5(i9 %tmp_36, i5 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 678 'bitconcatenate' 'p_shl_cast' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_138 : Operation 679 [1/1] (0.00ns)   --->   "%tmp_37 = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_91, i2 0)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 679 'bitconcatenate' 'tmp_37' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_138 : Operation 680 [1/1] (0.00ns)   --->   "%p_shl1_cast = sext i12 %tmp_37 to i14" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 680 'sext' 'p_shl1_cast' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
-ST_138 : Operation 681 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_92 = sub i14 %p_shl_cast, %p_shl1_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 681 'sub' 'tmp_92' <Predicate = (!exitcond_flatten2)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.89> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_138 : Operation 681 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_92 = sub i14 %p_shl_cast, %p_shl1_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 681 'sub' 'tmp_92' <Predicate = (!exitcond_flatten2)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_138 : Operation 682 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i5 %w_mid2 to i14" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:100]   --->   Operation 682 'zext' 'tmp_1_cast' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
-ST_138 : Operation 683 [1/1] (3.84ns) (root node of TernaryAdder)   --->   "%tmp_106 = add i14 %tmp_92, %tmp_1_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 683 'add' 'tmp_106' <Predicate = (!exitcond_flatten2)> <Delay = 3.84> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.89> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_138 : Operation 683 [1/1] (3.84ns) (root node of TernaryAdder)   --->   "%tmp_106 = add i14 %tmp_92, %tmp_1_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 683 'add' 'tmp_106' <Predicate = (!exitcond_flatten2)> <Delay = 3.84> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_138 : Operation 684 [1/5] (7.25ns)   --->   "%tmp_3 = fadd float %sum_2_4_4, %bias_load" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 684 'fadd' 'tmp_3' <Predicate = (!exitcond_flatten2)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 139 <SV = 138> <Delay = 3.25>
-ST_139 : Operation 685 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str211)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 685 'specregionbegin' 'tmp_4' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
+ST_139 : Operation 685 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str2)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:92]   --->   Operation 685 'specregionbegin' 'tmp_4' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_139 : Operation 686 [1/1] (0.00ns)   --->   "%tmp_143_cast = zext i14 %tmp_106 to i64" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 686 'zext' 'tmp_143_cast' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_139 : Operation 687 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [4704 x float]* %output_r, i64 0, i64 %tmp_143_cast" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 687 'getelementptr' 'output_addr' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
-ST_139 : Operation 688 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 13, i32 1, i32 1, i32 0, [1 x i8]* @p_str110) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:103]   --->   Operation 688 'specpipeline' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
+ST_139 : Operation 688 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 13, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:103]   --->   Operation 688 'specpipeline' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_139 : Operation 689 [1/1] (3.25ns)   --->   "store float %tmp_3, float* %output_addr, align 4" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:104]   --->   Operation 689 'store' <Predicate = (!exitcond_flatten2)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
-ST_139 : Operation 690 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str211, i32 %tmp_4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:105]   --->   Operation 690 'specregionend' 'empty_30' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
+ST_139 : Operation 690 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str2, i32 %tmp_4)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:105]   --->   Operation 690 'specregionend' 'empty_30' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 ST_139 : Operation 691 [1/1] (0.00ns)   --->   "br label %.preheader5" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:91]   --->   Operation 691 'br' <Predicate = (!exitcond_flatten2)> <Delay = 0.00>
 
 State 140 <SV = 2> <Delay = 0.00>
@@ -2378,7 +2378,7 @@ StgValue_692         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str211"/></StgValue>
+<StgValue><ssdm name="p_str2"/></StgValue>
 </bind>
 </comp>
 
@@ -2423,7 +2423,7 @@ StgValue_692         (ret              ) [ 0000000000000000000000000000000000000
 <pin id="123" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str110"/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -8382,7 +8382,7 @@ StgValue_692         (ret              ) [ 0000000000000000000000000000000000000
 |          |        tmp_85_fu_1493       |    0    |    0    |    15   |
 |          |        tmp_86_fu_1525       |    0    |    0    |    15   |
 |          |        tmp_91_fu_1585       |    0    |    0    |    15   |
-|          |       tmp_106_fu_1624       |    0    |    0    |    12   |
+|          |       tmp_106_fu_1624       |    0    |    0    |    13   |
 |----------|-----------------------------|---------|---------|---------|
 |          |      tmp_mid2_v_fu_812      |    0    |    0    |    3    |
 |          |        w_mid2_fu_858        |    0    |    0    |    5    |
@@ -8403,7 +8403,7 @@ StgValue_692         (ret              ) [ 0000000000000000000000000000000000000
 |          |       exitcond_fu_840       |    0    |    0    |    11   |
 |----------|-----------------------------|---------|---------|---------|
 |    sub   |        tmp_89_fu_1572       |    0    |    0    |    15   |
-|          |        tmp_92_fu_1615       |    0    |    0    |    12   |
+|          |        tmp_92_fu_1615       |    0    |    0    |    13   |
 |----------|-----------------------------|---------|---------|---------|
 |    mul   |          tmp_fu_824         |    0    |    0    |    26   |
 |----------|-----------------------------|---------|---------|---------|
@@ -8507,7 +8507,7 @@ StgValue_692         (ret              ) [ 0000000000000000000000000000000000000
 |   sext   |     tmp_115_cast_fu_1578    |    0    |    0    |    0    |
 |          |     p_shl1_cast_fu_1611     |    0    |    0    |    0    |
 |----------|-----------------------------|---------|---------|---------|
-|   Total  |                             |    10   |   696   |   2211  |
+|   Total  |                             |    10   |   696   |   2213  |
 |----------|-----------------------------|---------|---------|---------|
 
 Memories:
@@ -8687,10 +8687,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |   10   |    -   |   696  |  2211  |
+|  Function |   10   |    -   |   696  |  2213  |
 |   Memory  |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |   36   |    -   |   806  |
 |  Register |    -   |    -   |  2438  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |   10   |   36   |  3134  |  3017  |
+|   Total   |   10   |   36   |  3134  |  3019  |
 +-----------+--------+--------+--------+--------+

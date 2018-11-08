@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'conv1'" level="0">
-<item name = "Date">Wed Nov  7 21:45:45 2018
+<item name = "Date">Thu Nov  8 11:27:28 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 9.043, 1.25</column>
+<column name="ap_clk">10.00, 8.750, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">407880, 644880, 407880, 644880, none</column>
+<column name="">373526, 373526, 373526, 373526, none</column>
 </table>
 </item>
 <item name = "Detail">

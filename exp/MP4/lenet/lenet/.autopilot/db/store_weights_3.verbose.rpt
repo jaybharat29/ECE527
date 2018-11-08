@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'store_weights_3'
 ================================================================
-* Date:           Wed Nov  7 21:45:52 2018
+* Date:           Thu Nov  8 11:27:37 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -56,14 +56,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       0|    323|
+|Expression       |        -|      -|       0|    325|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        -|      -|       -|      -|
 |Memory           |        -|      -|       -|      -|
 |Multiplexer      |        -|      -|       -|    110|
 |Register         |        -|      -|     233|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      0|     233|    433|
+|Total            |        0|      0|     233|    435|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -90,12 +90,12 @@
     |i_2_fu_154_p2        |     +    |      0|  0|  15|           5|           1|
     |j_2_fu_249_p2        |     +    |      0|  0|  12|           3|           1|
     |k_2_fu_318_p2        |     +    |      0|  0|  12|           3|           1|
-    |tmp_14_fu_285_p2     |     +    |      0|  0|  12|          64|          64|
+    |tmp_14_fu_285_p2     |     +    |      0|  0|  13|          64|          64|
     |tmp_18_fu_198_p2     |     +    |      0|  0|  14|          10|          10|
     |tmp_19_fu_219_p2     |     +    |      0|  0|  71|          64|          64|
     |tmp_21_fu_237_p2     |     +    |      0|  0|  15|           8|           8|
     |tmp_22_fu_263_p2     |     +    |      0|  0|  71|          64|          64|
-    |tmp_23_fu_274_p2     |     +    |      0|  0|  12|          64|          64|
+    |tmp_23_fu_274_p2     |     +    |      0|  0|  13|          64|          64|
     |tmp_24_fu_280_p2     |     +    |      0|  0|  15|           8|           8|
     |tmp_25_fu_306_p2     |     +    |      0|  0|  14|          10|          10|
     |tmp_26_fu_328_p2     |     +    |      0|  0|  14|          10|          10|
@@ -105,7 +105,7 @@
     |exitcond2_fu_148_p2  |   icmp   |      0|  0|  11|           5|           6|
     |exitcond_fu_312_p2   |   icmp   |      0|  0|   9|           3|           3|
     +---------------------+----------+-------+---+----+------------+------------+
-    |Total                |          |      0|  0| 323|         334|         327|
+    |Total                |          |      0|  0| 325|         334|         327|
     +---------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
@@ -279,7 +279,7 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 1.76>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%input_channel_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %input_channel)"   --->   Operation 13 'read' 'input_channel_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%weights_offset_read = call i30 @_ssdm_op_Read.ap_auto.i30(i30 %weights_offset)"   --->   Operation 14 'read' 'weights_offset_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 2400, [12 x i8]* @p_str817, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 2400, [12 x i8]* @p_str9, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_cast = zext i4 %input_channel_read to i10"   --->   Operation 16 'zext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%sext = zext i30 %weights_offset_read to i64"   --->   Operation 17 'zext' 'sext' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (1.76ns)   --->   "br label %.loopexit" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:30]   --->   Operation 18 'br' <Predicate = true> <Delay = 1.76>
@@ -318,9 +318,9 @@ ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_9 = zext i3 %j to i64" [ECE527
 ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i3 %j to i8" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 47 'zext' 'tmp_9_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
 ST_3 : Operation 48 [1/1] (1.67ns)   --->   "%tmp_22 = add i64 %tmp_9, %tmp_19" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 48 'add' 'tmp_22' <Predicate = (!exitcond1)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_13 = shl i64 %tmp_22, 2" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 49 'shl' 'tmp_13' <Predicate = (!exitcond1)> <Delay = 0.00>
-ST_3 : Operation 50 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_23 = add i64 %tmp_13, %tmp_22" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 50 'add' 'tmp_23' <Predicate = (!exitcond1)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.89> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 50 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_23 = add i64 %tmp_13, %tmp_22" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 50 'add' 'tmp_23' <Predicate = (!exitcond1)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_3 : Operation 51 [1/1] (1.91ns)   --->   "%tmp_24 = add i8 %tmp_9_cast, %tmp_21" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 51 'add' 'tmp_24' <Predicate = (!exitcond1)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 52 [1/1] (4.31ns) (root node of TernaryAdder)   --->   "%tmp_14 = add i64 %tmp_23, %sext" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 52 'add' 'tmp_14' <Predicate = (!exitcond1)> <Delay = 4.31> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.89> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 52 [1/1] (4.31ns) (root node of TernaryAdder)   --->   "%tmp_14 = add i64 %tmp_23, %sext" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 52 'add' 'tmp_14' <Predicate = (!exitcond1)> <Delay = 4.31> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.90> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%weights_addr = getelementptr float* %weights, i64 %tmp_14" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36]   --->   Operation 53 'getelementptr' 'weights_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
 ST_3 : Operation 54 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 54 'br' <Predicate = (exitcond1)> <Delay = 0.00>
 
@@ -522,7 +522,7 @@ StgValue_78         (br               ) [ 0011111111111]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str514"/></StgValue>
+<StgValue><ssdm name="p_str6"/></StgValue>
 </bind>
 </comp>
 
@@ -540,7 +540,7 @@ StgValue_78         (br               ) [ 0011111111111]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str110"/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -558,7 +558,7 @@ StgValue_78         (br               ) [ 0011111111111]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str817"/></StgValue>
+<StgValue><ssdm name="p_str9"/></StgValue>
 </bind>
 </comp>
 
@@ -567,7 +567,7 @@ StgValue_78         (br               ) [ 0011111111111]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str716"/></StgValue>
+<StgValue><ssdm name="p_str8"/></StgValue>
 </bind>
 </comp>
 
@@ -1753,9 +1753,9 @@ StgValue_78         (br               ) [ 0011111111111]
 |          |          tmp_21_fu_237         |    0    |    15   |
 |          |           j_2_fu_249           |    0    |    12   |
 |    add   |          tmp_22_fu_263         |    0    |    17   |
-|          |          tmp_23_fu_274         |    0    |    12   |
+|          |          tmp_23_fu_274         |    0    |    13   |
 |          |          tmp_24_fu_280         |    0    |    15   |
-|          |          tmp_14_fu_285         |    0    |    12   |
+|          |          tmp_14_fu_285         |    0    |    13   |
 |          |          tmp_25_fu_306         |    0    |    14   |
 |          |           k_2_fu_318           |    0    |    12   |
 |          |          tmp_26_fu_328         |    0    |    14   |
@@ -1796,7 +1796,7 @@ StgValue_78         (br               ) [ 0011111111111]
 |----------|--------------------------------|---------|---------|
 |    shl   |          tmp_13_fu_268         |    0    |    0    |
 |----------|--------------------------------|---------|---------|
-|   Total  |                                |    0    |   209   |
+|   Total  |                                |    0    |   211   |
 |----------|--------------------------------|---------|---------|
 
 Memories:
@@ -1838,10 +1838,10 @@ N/A
 +-----------+--------+--------+
 |           |   FF   |   LUT  |
 +-----------+--------+--------+
-|  Function |    0   |   209  |
+|  Function |    0   |   211  |
 |   Memory  |    -   |    -   |
 |Multiplexer|    -   |    -   |
 |  Register |   260  |    -   |
 +-----------+--------+--------+
-|   Total   |   260  |   209  |
+|   Total   |   260  |   211  |
 +-----------+--------+--------+

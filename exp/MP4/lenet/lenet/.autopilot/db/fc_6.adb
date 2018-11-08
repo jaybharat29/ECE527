@@ -348,7 +348,7 @@
               <name>bias_addr_rd_req</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>301</lineNumber>
+              <lineNumber>302</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -363,7 +363,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>301</second>
+                      <second>302</second>
                     </item>
                   </second>
                 </item>
@@ -395,7 +395,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>293</lineNumber>
+              <lineNumber>294</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -410,7 +410,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>293</second>
+                      <second>294</second>
                     </item>
                   </second>
                 </item>
@@ -474,7 +474,7 @@
               <name>n</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>295</lineNumber>
+              <lineNumber>296</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -489,7 +489,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>295</second>
+                      <second>296</second>
                     </item>
                   </second>
                 </item>
@@ -522,7 +522,7 @@
               <name>tmp_s</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -537,7 +537,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -701,7 +701,7 @@
               <name>n_1</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>293</lineNumber>
+              <lineNumber>294</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -716,7 +716,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>293</second>
+                      <second>294</second>
                     </item>
                   </second>
                 </item>
@@ -747,7 +747,7 @@
               <name>exitcond</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>296</lineNumber>
+              <lineNumber>297</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -762,7 +762,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>296</second>
+                      <second>297</second>
                     </item>
                   </second>
                 </item>
@@ -793,7 +793,7 @@
               <name>tmp_mid2</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>296</lineNumber>
+              <lineNumber>297</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -808,7 +808,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>296</second>
+                      <second>297</second>
                     </item>
                   </second>
                 </item>
@@ -840,7 +840,7 @@
               <name>c_mid2</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>296</lineNumber>
+              <lineNumber>297</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -855,7 +855,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>296</second>
+                      <second>297</second>
                     </item>
                   </second>
                 </item>
@@ -887,7 +887,7 @@
               <name>tmp_mid2_v</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>295</lineNumber>
+              <lineNumber>296</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -902,7 +902,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>295</second>
+                      <second>296</second>
                     </item>
                   </second>
                 </item>
@@ -934,7 +934,7 @@
               <name>tmp_mid2_26</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>295</lineNumber>
+              <lineNumber>296</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -949,7 +949,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>295</second>
+                      <second>296</second>
                     </item>
                   </second>
                 </item>
@@ -979,7 +979,7 @@
               <name>tmp</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>295</lineNumber>
+              <lineNumber>296</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -994,7 +994,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>295</second>
+                      <second>296</second>
                     </item>
                   </second>
                 </item>
@@ -1026,7 +1026,7 @@
               <name>p_shl_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>295</lineNumber>
+              <lineNumber>296</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1041,7 +1041,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>295</second>
+                      <second>296</second>
                     </item>
                   </second>
                 </item>
@@ -1071,7 +1071,7 @@
               <name>tmp_61</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>295</lineNumber>
+              <lineNumber>296</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1086,7 +1086,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>295</second>
+                      <second>296</second>
                     </item>
                   </second>
                 </item>
@@ -1118,7 +1118,7 @@
               <name>p_shl6_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1133,7 +1133,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1163,7 +1163,7 @@
               <name>tmp_62</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1178,7 +1178,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1209,7 +1209,7 @@
               <name>tmp_87_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1224,7 +1224,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1254,7 +1254,7 @@
               <name>tmp_7</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1269,7 +1269,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1299,7 +1299,7 @@
               <name>tmp_7_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1314,7 +1314,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1344,7 +1344,7 @@
               <name>tmp_63</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1359,7 +1359,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1390,7 +1390,7 @@
               <name>tmp_88_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1405,7 +1405,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1435,7 +1435,7 @@
               <name>sum</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1450,7 +1450,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1481,7 +1481,7 @@
               <name>sum_cast</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1496,7 +1496,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1526,7 +1526,7 @@
               <name>weights_addr</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1541,7 +1541,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1572,7 +1572,7 @@
               <name>weights_load_req</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1587,7 +1587,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1619,7 +1619,7 @@
               <name>weights_addr_read</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1634,7 +1634,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1666,7 +1666,7 @@
               <name>input_0_0_addr</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1681,7 +1681,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1713,7 +1713,7 @@
               <name>input_0_0_load</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1728,7 +1728,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
@@ -1758,7 +1758,7 @@
               <name>tmp_8</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1773,13 +1773,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>conv1_fmul_32ns_3cud_U83</rtlName>
+              <rtlName>conv1_fmul_32ns_3cud_U85</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1804,7 +1804,7 @@
               <name>tmp_9</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>299</lineNumber>
+              <lineNumber>300</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1819,13 +1819,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>299</second>
+                      <second>300</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>conv1_fadd_32ns_3bkb_U82</rtlName>
+              <rtlName>conv1_fadd_32ns_3bkb_U84</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1850,7 +1850,7 @@
               <name>c_3</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>296</lineNumber>
+              <lineNumber>297</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1865,7 +1865,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>296</second>
+                      <second>297</second>
                     </item>
                   </second>
                 </item>
@@ -1896,7 +1896,7 @@
               <name>ifzero</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>296</lineNumber>
+              <lineNumber>297</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1911,7 +1911,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>296</second>
+                      <second>297</second>
                     </item>
                   </second>
                 </item>
@@ -1942,7 +1942,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>296</lineNumber>
+              <lineNumber>297</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1957,7 +1957,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>296</second>
+                      <second>297</second>
                     </item>
                   </second>
                 </item>
@@ -1989,7 +1989,7 @@
               <name>bias_addr_read</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>301</lineNumber>
+              <lineNumber>302</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2004,7 +2004,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>301</second>
+                      <second>302</second>
                     </item>
                   </second>
                 </item>
@@ -2036,7 +2036,7 @@
               <name>tmp_6</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>301</lineNumber>
+              <lineNumber>302</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2051,13 +2051,13 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>301</second>
+                      <second>302</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>conv1_fadd_32ns_3bkb_U82</rtlName>
+              <rtlName>conv1_fadd_32ns_3bkb_U84</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2082,7 +2082,7 @@
               <name>output_addr</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>295</lineNumber>
+              <lineNumber>296</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2097,7 +2097,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>295</second>
+                      <second>296</second>
                     </item>
                   </second>
                 </item>
@@ -2129,7 +2129,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>301</lineNumber>
+              <lineNumber>302</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2144,7 +2144,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>301</second>
+                      <second>302</second>
                     </item>
                   </second>
                 </item>
@@ -2237,7 +2237,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>303</lineNumber>
+              <lineNumber>304</lineNumber>
               <contextFuncName>fc_6</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2252,7 +2252,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>fc_6</second>
                       </first>
-                      <second>303</second>
+                      <second>304</second>
                     </item>
                   </second>
                 </item>
@@ -4728,7 +4728,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>conv1_fadd_32ns_3bkb_U82 (conv1_fadd_32ns_3bkb)</first>
+          <first>conv1_fadd_32ns_3bkb_U84 (conv1_fadd_32ns_3bkb)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
@@ -4747,7 +4747,7 @@
           </second>
         </item>
         <item>
-          <first>conv1_fmul_32ns_3cud_U83 (conv1_fmul_32ns_3cud)</first>
+          <first>conv1_fmul_32ns_3cud_U85 (conv1_fmul_32ns_3cud)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6231,14 +6231,14 @@
         <count>2</count>
         <item_version>0</item_version>
         <item>
-          <first>conv1_fadd_32ns_3bkb_U82</first>
+          <first>conv1_fadd_32ns_3bkb_U84</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>conv1_fmul_32ns_3cud_U83</first>
+          <first>conv1_fmul_32ns_3cud_U85</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -6249,7 +6249,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>conv1_fadd_32ns_3bkb_U82 (conv1_fadd_32ns_3bkb)</first>
+          <first>conv1_fadd_32ns_3bkb_U84 (conv1_fadd_32ns_3bkb)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -6258,7 +6258,7 @@
           </second>
         </item>
         <item>
-          <first>conv1_fmul_32ns_3cud_U83 (conv1_fmul_32ns_3cud)</first>
+          <first>conv1_fmul_32ns_3cud_U85 (conv1_fmul_32ns_3cud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

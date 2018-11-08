@@ -1,48 +1,50 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'nados' on host 'desktop-mmldfg1' (Windows NT_amd64 version 6.2) on Wed Nov 07 21:43:18 -0600 2018
+INFO: [HLS 200-10] For user 'nados' on host 'desktop-mmldfg1' (Windows NT_amd64 version 6.2) on Thu Nov 08 11:25:07 -0600 2018
 INFO: [HLS 200-10] In directory 'C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4'
 INFO: [HLS 200-10] Opening project 'C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet'.
-INFO: [HLS 200-10] Adding design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp' to the project
-INFO: [HLS 200-10] Adding design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp' to the project
-INFO: [HLS 200-10] Adding design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h' to the project
 INFO: [HLS 200-10] Adding design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp' to the project
-INFO: [HLS 200-10] Adding test bench file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin' to the project
-INFO: [HLS 200-10] Adding test bench file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp' to the project
-INFO: [HLS 200-10] Adding test bench file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin' to the project
+INFO: [HLS 200-10] Adding design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet.h' to the project
+INFO: [HLS 200-10] Adding design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin' to the project
+INFO: [HLS 200-10] Adding test bench file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin' to the project
+INFO: [HLS 200-10] Adding test bench file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin' to the project
 INFO: [HLS 200-10] Opening solution 'C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
-INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp' ... 
-INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 103.766 ; gain = 46.668
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 103.766 ; gain = 46.668
+INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 103.629 ; gain = 46.449
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 103.629 ; gain = 46.449
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:14 ; elapsed = 00:00:48 . Memory (MB): peak = 109.742 ; gain = 52.645
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:53 . Memory (MB): peak = 109.777 ; gain = 52.598
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'relu_6' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:30 ; elapsed = 00:01:05 . Memory (MB): peak = 112.941 ; gain = 55.844
-INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285) in function 'relu_5' automatically.
+INFO: [XFORM 203-602] Inlining function 'relu_6' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:34 ; elapsed = 00:01:10 . Memory (MB): peak = 113.277 ; gain = 56.098
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:286) in function 'relu_5' automatically.
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:91) in function 'convulution1' for pipelining.
-INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:285) in function 'relu_5' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:286) in function 'relu_5' completely.
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:94) in function 'convulution1' completely.
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:97) in function 'convulution1' completely.
 INFO: [XFORM 203-102] Partitioning array 'output.0' in dimension 2 automatically.
 INFO: [XFORM 203-102] Partitioning array 'output.0' in dimension 2 automatically.
 INFO: [XFORM 203-102] Partitioning array 'input.0' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'input_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:337) in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'weights_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:340) in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'output5_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:398) in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'output5_oc.0' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:398) in dimension 2 automatically.
-INFO: [XFORM 203-602] Inlining function 'relu_5' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:429) automatically.
-INFO: [XFORM 203-602] Inlining function 'relu_6' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:433) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:01:32 . Memory (MB): peak = 137.137 ; gain = 80.039
+INFO: [XFORM 203-102] Partitioning array 'input_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:338) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:341) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'output5_oc' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:399) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'output5_oc.0' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:399) in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'relu_5' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:430) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu_6' into 'conv1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:434) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:48 ; elapsed = 00:01:25 . Memory (MB): peak = 137.090 ; gain = 79.910
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:46:17) in function 'store_weights_5'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:44:15) in function 'store_weights_5'.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:293:18) in function 'fc_6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:294:18) in function 'fc_6'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:90:22) in function 'convulution1'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:89:19) in function 'convulution1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:231:29) in function 'convolution_5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:228:19) in function 'convolution_5'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:156:34) in function 'convolution_3'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:154:26) in function 'convolution_3'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:153:22) in function 'convolution_3'.
@@ -54,14 +56,14 @@ WARNING: [HLS 200-470] Port 'bias_3'() has different latency/depth on the same m
 WARNING: [HLS 200-470] Port 'bias_5'() has different latency/depth on the same m_axi bundle:'DATA_BIAS'
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'Loop-0' in function 'conv1'.
 INFO: [XFORM 203-811] Inferring multiple bus burst write of a total cumulative length 10 on port 'output' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:78:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 10 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:301:9). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 10 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:302:9). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 120 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:72:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 16 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:66:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 6 on port 'bias' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:60:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 5 on port 'weights' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:36:6). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 5 on port 'weights' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:22:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [XFORM 203-811] Inferring multiple bus burst read of a total cumulative length 32 on port 'input' (ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:9:4). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:24 ; elapsed = 00:02:10 . Memory (MB): peak = 301.418 ; gain = 244.320
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:22 ; elapsed = 00:02:00 . Memory (MB): peak = 301.598 ; gain = 244.418
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'conv1' ...
 WARNING: [SYN 201-107] Renaming port name 'conv1/input' to 'conv1/input_r' to avoid the conflict with HDL keywords or other object names.
@@ -71,38 +73,38 @@ INFO: [HLS 200-42] -- Implementing module 'store_input'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 131.217 seconds; current allocated memory: 255.448 MB.
+INFO: [HLS 200-111]  Elapsed time: 120.684 seconds; current allocated memory: 255.316 MB.
 INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.441 seconds; current allocated memory: 255.572 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 255.441 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_weights' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 255.778 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.371 seconds; current allocated memory: 255.647 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.285 seconds; current allocated memory: 255.926 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 255.794 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_weights_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.528 seconds; current allocated memory: 256.129 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.43 seconds; current allocated memory: 255.998 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.296 seconds; current allocated memory: 256.320 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.304 seconds; current allocated memory: 256.189 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_weights_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -110,49 +112,49 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.667 seconds; current allocated memory: 256.597 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.537 seconds; current allocated memory: 256.482 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.534 seconds; current allocated memory: 256.835 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.392 seconds; current allocated memory: 256.719 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_bias' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.409 seconds; current allocated memory: 257.004 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.496 seconds; current allocated memory: 256.857 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.252 seconds; current allocated memory: 257.087 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.263 seconds; current allocated memory: 256.940 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_bias_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.485 seconds; current allocated memory: 257.165 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.267 seconds; current allocated memory: 257.034 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 257.248 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 257.116 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_bias_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.245 seconds; current allocated memory: 257.342 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.331 seconds; current allocated memory: 257.195 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.276 seconds; current allocated memory: 257.425 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.233 seconds; current allocated memory: 257.278 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'convulution1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -160,37 +162,37 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 13, Final II = 13, Depth = 138.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.219 seconds; current allocated memory: 258.978 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.378 seconds; current allocated memory: 258.863 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 1.379 seconds; current allocated memory: 260.494 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.469 seconds; current allocated memory: 260.379 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'maxpool_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.377 seconds; current allocated memory: 260.866 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.417 seconds; current allocated memory: 260.720 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 261.136 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.447 seconds; current allocated memory: 260.989 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'relu_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.488 seconds; current allocated memory: 261.357 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.475 seconds; current allocated memory: 261.226 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 261.499 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.352 seconds; current allocated memory: 261.367 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'convolution_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -198,49 +200,52 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 5, Final II = 5, Depth = 47.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.768 seconds; current allocated memory: 262.313 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.793 seconds; current allocated memory: 262.182 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.978 seconds; current allocated memory: 263.171 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.692 seconds; current allocated memory: 263.040 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'maxpool_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.996 seconds; current allocated memory: 263.554 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.042 seconds; current allocated memory: 263.423 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.312 seconds; current allocated memory: 263.803 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.417 seconds; current allocated memory: 263.671 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'relu_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.422 seconds; current allocated memory: 264.001 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.52 seconds; current allocated memory: 263.870 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.307 seconds; current allocated memory: 264.132 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.343 seconds; current allocated memory: 264.001 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'convolution_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_load_10', ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:265) on array 'input_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'input_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 5, Final II = 8, Depth = 94.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.791 seconds; current allocated memory: 265.204 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.397 seconds; current allocated memory: 265.314 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.973 seconds; current allocated memory: 266.638 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.299 seconds; current allocated memory: 266.846 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'fc_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -248,72 +253,72 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 5, Final II = 5, Depth = 25.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.233 seconds; current allocated memory: 267.059 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.784 seconds; current allocated memory: 267.200 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.392 seconds; current allocated memory: 267.326 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.536 seconds; current allocated memory: 267.504 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_output' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.408 seconds; current allocated memory: 267.456 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.554 seconds; current allocated memory: 267.613 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 267.541 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 267.698 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.312 seconds; current allocated memory: 268.103 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.457 seconds; current allocated memory: 268.244 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 3.652 seconds; current allocated memory: 269.921 MB.
+INFO: [HLS 200-111]  Elapsed time: 5.374 seconds; current allocated memory: 270.046 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_input' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_input'.
-INFO: [HLS 200-111]  Elapsed time: 1.472 seconds; current allocated memory: 270.643 MB.
+INFO: [HLS 200-111]  Elapsed time: 2.004 seconds; current allocated memory: 270.768 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_weights' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_weights'.
-INFO: [HLS 200-111]  Elapsed time: 0.656 seconds; current allocated memory: 271.141 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.809 seconds; current allocated memory: 271.314 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_weights_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_weights_3'.
-INFO: [HLS 200-111]  Elapsed time: 0.817 seconds; current allocated memory: 271.678 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.95 seconds; current allocated memory: 271.850 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_weights_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_weights_5'.
-INFO: [HLS 200-111]  Elapsed time: 0.981 seconds; current allocated memory: 272.448 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.243 seconds; current allocated memory: 272.636 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_bias' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_bias'.
-INFO: [HLS 200-111]  Elapsed time: 1.091 seconds; current allocated memory: 272.873 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.275 seconds; current allocated memory: 273.061 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_bias_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_bias_3'.
-INFO: [HLS 200-111]  Elapsed time: 0.564 seconds; current allocated memory: 273.189 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.661 seconds; current allocated memory: 273.377 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_bias_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_bias_5'.
-INFO: [HLS 200-111]  Elapsed time: 0.543 seconds; current allocated memory: 273.572 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 273.723 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convulution1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -322,58 +327,58 @@ INFO: [SYN 201-210] Renamed object name 'conv1_fmul_32ns_32ns_32_4_max_dsp_1' to
 INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convulution1'.
-INFO: [HLS 200-111]  Elapsed time: 1.329 seconds; current allocated memory: 275.888 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.104 seconds; current allocated memory: 276.039 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'conv1_fcmp_32ns_32ns_1_1_1' to 'conv1_fcmp_32ns_3dEe' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_2'.
-INFO: [HLS 200-111]  Elapsed time: 4.029 seconds; current allocated memory: 276.790 MB.
+INFO: [HLS 200-111]  Elapsed time: 4.88 seconds; current allocated memory: 276.963 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'relu_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'relu_2'.
-INFO: [HLS 200-111]  Elapsed time: 1.35 seconds; current allocated memory: 277.228 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.59 seconds; current allocated memory: 277.400 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convolution_3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 3 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_3'.
-INFO: [HLS 200-111]  Elapsed time: 0.957 seconds; current allocated memory: 278.716 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.224 seconds; current allocated memory: 278.889 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'maxpool_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'maxpool_4'.
-INFO: [HLS 200-111]  Elapsed time: 2.289 seconds; current allocated memory: 279.698 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.426 seconds; current allocated memory: 279.870 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'relu_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'relu_4'.
-INFO: [HLS 200-111]  Elapsed time: 1.148 seconds; current allocated memory: 280.121 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.633 seconds; current allocated memory: 280.294 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convolution_5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 4 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution_5'.
-INFO: [HLS 200-111]  Elapsed time: 1.034 seconds; current allocated memory: 282.258 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.491 seconds; current allocated memory: 282.408 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fc_6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'conv1_fadd_32ns_3bkb': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv1_fmul_32ns_3cud': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fc_6'.
-INFO: [HLS 200-111]  Elapsed time: 3.168 seconds; current allocated memory: 283.488 MB.
+INFO: [HLS 200-111]  Elapsed time: 4.893 seconds; current allocated memory: 283.648 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_output' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_output'.
-INFO: [HLS 200-111]  Elapsed time: 1.127 seconds; current allocated memory: 283.911 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.592 seconds; current allocated memory: 284.071 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -418,7 +423,7 @@ INFO: [SYN 201-210] Renamed object name 'conv1_weights_5_15_oc' to 'conv1_weight
 INFO: [SYN 201-210] Renamed object name 'conv1_output5_oc_0_0' to 'conv1_output5_oc_Aem' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'conv1_fcmp_32ns_3dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-INFO: [HLS 200-111]  Elapsed time: 2.821 seconds; current allocated memory: 288.853 MB.
+INFO: [HLS 200-111]  Elapsed time: 3.395 seconds; current allocated memory: 289.012 MB.
 INFO: [RTMG 210-278] Implementing memory 'conv1_input_oc_0_ram (RAM)' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'conv1_weights_oc_0_ram (RAM)' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'conv1_weights_3_0eOg_ram (RAM)' using block RAMs.
@@ -431,8 +436,8 @@ INFO: [RTMG 210-278] Implementing memory 'conv1_output2_oc_ram (RAM)' using bloc
 INFO: [RTMG 210-278] Implementing memory 'conv1_output3_oc_ram (RAM)' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'conv1_output4_oc_ram (RAM)' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'conv1_output6_oc_ram (RAM)' using distributed RAMs.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:55 ; elapsed = 00:03:22 . Memory (MB): peak = 378.852 ; gain = 321.754
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:07 ; elapsed = 00:03:22 . Memory (MB): peak = 379.645 ; gain = 322.465
 INFO: [SYSC 207-301] Generating SystemC RTL for conv1.
 INFO: [VHDL 208-304] Generating VHDL RTL for conv1.
 INFO: [VLOG 209-307] Generating Verilog RTL for conv1.
-INFO: [HLS 200-112] Total elapsed time: 203.026 seconds; peak allocated memory: 288.853 MB.
+INFO: [HLS 200-112] Total elapsed time: 201.96 seconds; peak allocated memory: 289.012 MB.

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'convolution_5'" level="0">
-<item name = "Date">Wed Nov  7 21:45:43 2018
+<item name = "Date">Thu Nov  8 11:27:24 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 9.043, 1.25</column>
+<column name="ap_clk">10.00, 8.703, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">58441, 295441, 58441, 295441, none</column>
+<column name="">24087, 24087, 24087, 24087, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,9 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">58440, 295440, 487 ~ 2462, -, -, 120, no</column>
-<column name=" + Loop 1.1">485, 2460, 97 ~ 492, -, -, 5, no</column>
-<column name="  ++ Loop 1.1.1">95, 490, 19 ~ 98, -, -, 5, no</column>
+<column name="- Loop 1">24085, 24085, 94, 8, 5, 3000, yes</column>
 </table>
 </item>
 </section>

@@ -227,7 +227,7 @@
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecInterface(float* %bias, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 6, [10 x i8]* @p_str918, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)
+:1  call void (...)* @_ssdm_op_SpecInterface(float* %bias, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 6, [10 x i8]* @p_str10, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -504,23 +504,23 @@
 </dataflow>
 <dataflow id="74" from="bias" to="StgValue_19" fromId="43" toId="19">
 </dataflow>
-<dataflow id="76" from="p_str514" to="StgValue_19" fromId="75" toId="19">
+<dataflow id="76" from="p_str6" to="StgValue_19" fromId="75" toId="19">
 </dataflow>
 <dataflow id="78" from="StgValue_77" to="StgValue_19" fromId="77" toId="19">
 </dataflow>
 <dataflow id="79" from="StgValue_77" to="StgValue_19" fromId="77" toId="19">
 </dataflow>
-<dataflow id="81" from="p_str110" to="StgValue_19" fromId="80" toId="19">
+<dataflow id="81" from="p_str1" to="StgValue_19" fromId="80" toId="19">
 </dataflow>
 <dataflow id="82" from="StgValue_77" to="StgValue_19" fromId="77" toId="19">
 </dataflow>
 <dataflow id="83" from="StgValue_55" to="StgValue_19" fromId="55" toId="19">
 </dataflow>
-<dataflow id="85" from="p_str918" to="StgValue_19" fromId="84" toId="19">
+<dataflow id="85" from="p_str10" to="StgValue_19" fromId="84" toId="19">
 </dataflow>
-<dataflow id="87" from="p_str716" to="StgValue_19" fromId="86" toId="19">
+<dataflow id="87" from="p_str8" to="StgValue_19" fromId="86" toId="19">
 </dataflow>
-<dataflow id="88" from="p_str110" to="StgValue_19" fromId="80" toId="19">
+<dataflow id="88" from="p_str1" to="StgValue_19" fromId="80" toId="19">
 </dataflow>
 <dataflow id="90" from="StgValue_89" to="StgValue_19" fromId="89" toId="19">
 </dataflow>
@@ -530,9 +530,9 @@
 </dataflow>
 <dataflow id="93" from="StgValue_89" to="StgValue_19" fromId="89" toId="19">
 </dataflow>
-<dataflow id="94" from="p_str110" to="StgValue_19" fromId="80" toId="19">
+<dataflow id="94" from="p_str1" to="StgValue_19" fromId="80" toId="19">
 </dataflow>
-<dataflow id="95" from="p_str110" to="StgValue_19" fromId="80" toId="19">
+<dataflow id="95" from="p_str1" to="StgValue_19" fromId="80" toId="19">
 </dataflow>
 <dataflow id="96" from="_ssdm_op_ReadReq.m_axi.floatP" to="bias_addr_rd_req" fromId="52" toId="20">
 </dataflow>

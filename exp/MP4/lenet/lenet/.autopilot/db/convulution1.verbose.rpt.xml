@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'convulution1'" level="0">
-<item name = "Date">Wed Nov  7 21:45:57 2018
+<item name = "Date">Thu Nov  8 11:27:43 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -48,7 +48,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, 0, 0, 783</column>
+<column name="Expression">-, 0, 0, 785</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, 10, 696, 1422</column>
 <column name="Memory">-, -, -, -</column>
@@ -89,7 +89,7 @@
 <column name="h_s_fu_1015_p2">+, 0, 0, 15, 1, 5</column>
 <column name="indvar_flatten_next2_fu_794_p2">+, 0, 0, 17, 13, 1</column>
 <column name="indvar_flatten_op_fu_866_p2">+, 0, 0, 14, 1, 10</column>
-<column name="tmp_106_fu_1624_p2">+, 0, 0, 12, 14, 14</column>
+<column name="tmp_106_fu_1624_p2">+, 0, 0, 13, 14, 14</column>
 <column name="tmp_31_1_fu_1198_p2">+, 0, 0, 15, 2, 5</column>
 <column name="tmp_31_2_fu_1223_p2">+, 0, 0, 15, 3, 5</column>
 <column name="tmp_31_2_mid1_fu_1168_p2">+, 0, 0, 15, 2, 5</column>
@@ -126,7 +126,7 @@
 <column name="tmp_s_fu_883_p2">+, 0, 0, 15, 1, 8</column>
 <column name="w_3_fu_918_p2">+, 0, 0, 15, 1, 5</column>
 <column name="tmp_89_fu_1572_p2">-, 0, 0, 15, 9, 9</column>
-<column name="tmp_92_fu_1615_p2">-, 0, 0, 12, 14, 14</column>
+<column name="tmp_92_fu_1615_p2">-, 0, 0, 13, 14, 14</column>
 <column name="exitcond2_mid_fu_846_p2">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond_flatten2_fu_788_p2">icmp, 0, 0, 13, 13, 13</column>
 <column name="exitcond_flatten_fu_806_p2">icmp, 0, 0, 13, 10, 9</column>

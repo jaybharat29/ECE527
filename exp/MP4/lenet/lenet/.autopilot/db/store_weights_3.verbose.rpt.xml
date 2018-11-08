@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'store_weights_3'" level="0">
-<item name = "Date">Wed Nov  7 21:45:52 2018
+<item name = "Date">Thu Nov  8 11:27:37 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -50,7 +50,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 323</column>
+<column name="Expression">-, -, 0, 325</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
@@ -83,12 +83,12 @@
 <column name="i_2_fu_154_p2">+, 0, 0, 15, 5, 1</column>
 <column name="j_2_fu_249_p2">+, 0, 0, 12, 3, 1</column>
 <column name="k_2_fu_318_p2">+, 0, 0, 12, 3, 1</column>
-<column name="tmp_14_fu_285_p2">+, 0, 0, 12, 64, 64</column>
+<column name="tmp_14_fu_285_p2">+, 0, 0, 13, 64, 64</column>
 <column name="tmp_18_fu_198_p2">+, 0, 0, 14, 10, 10</column>
 <column name="tmp_19_fu_219_p2">+, 0, 0, 71, 64, 64</column>
 <column name="tmp_21_fu_237_p2">+, 0, 0, 15, 8, 8</column>
 <column name="tmp_22_fu_263_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_23_fu_274_p2">+, 0, 0, 12, 64, 64</column>
+<column name="tmp_23_fu_274_p2">+, 0, 0, 13, 64, 64</column>
 <column name="tmp_24_fu_280_p2">+, 0, 0, 15, 8, 8</column>
 <column name="tmp_25_fu_306_p2">+, 0, 0, 14, 10, 10</column>
 <column name="tmp_26_fu_328_p2">+, 0, 0, 14, 10, 10</column>

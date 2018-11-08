@@ -269,8 +269,8 @@ set RtlHierarchyInfo {[
 					{"Name" : "bias_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "bias_offset", "Type" : "None", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U82", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U83", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U84", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U85", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

@@ -418,7 +418,8 @@ void convolution_5(float input[16][5][5], float weights_0[120][5][5],
               sum[14] = 0;
               sum[15] = 0;
              }
-    sum[0] += weights_0[co][m][n] * input[0][i][j];
+#pragma HLS PIPELINE II=5
+ sum[0] += weights_0[co][m][n] * input[0][i][j];
     sum[1] += weights_1[co][m][n] * input[1][i][j];
     sum[2] += weights_2[co][m][n] * input[2][i][j];
     sum[3] += weights_3[co][m][n] * input[3][i][j];

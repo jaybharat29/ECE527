@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'store_weights'
 ================================================================
-* Date:           Wed Nov  7 21:45:51 2018
+* Date:           Thu Nov  8 11:27:36 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -269,7 +269,7 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 1.76>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%weights_offset_read = call i30 @_ssdm_op_Read.ap_auto.i30(i30 %weights_offset)"   --->   Operation 13 'read' 'weights_offset_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 150, [12 x i8]* @p_str817, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 150, [12 x i8]* @p_str9, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext = zext i30 %weights_offset_read to i64"   --->   Operation 15 'zext' 'sext' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (1.76ns)   --->   "br label %.loopexit" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:16]   --->   Operation 16 'br' <Predicate = true> <Delay = 1.76>
 
@@ -460,7 +460,7 @@ StgValue_61         (br               ) [ 0011111111111]
 <pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str514"/></StgValue>
+<StgValue><ssdm name="p_str6"/></StgValue>
 </bind>
 </comp>
 
@@ -478,7 +478,7 @@ StgValue_61         (br               ) [ 0011111111111]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str110"/></StgValue>
+<StgValue><ssdm name="p_str1"/></StgValue>
 </bind>
 </comp>
 
@@ -496,7 +496,7 @@ StgValue_61         (br               ) [ 0011111111111]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str817"/></StgValue>
+<StgValue><ssdm name="p_str9"/></StgValue>
 </bind>
 </comp>
 
@@ -505,7 +505,7 @@ StgValue_61         (br               ) [ 0011111111111]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str716"/></StgValue>
+<StgValue><ssdm name="p_str8"/></StgValue>
 </bind>
 </comp>
 

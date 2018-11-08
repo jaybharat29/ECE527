@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'store_output'
 ================================================================
-* Date:           Wed Nov  7 21:45:45 2018
+* Date:           Thu Nov  8 11:27:27 2018
 
 * Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
 * Project:        lenet
@@ -96,7 +96,7 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 8.75>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%output_offset_read = call i30 @_ssdm_op_Read.ap_auto.i30(i30 %output_offset)"   --->   Operation 9 'read' 'output_offset_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %output_r, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 10, [12 x i8]* @p_str10, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %output_r, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 10, [12 x i8]* @p_str11, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext = zext i30 %output_offset_read to i64"   --->   Operation 11 'zext' 'sext' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%output_addr = getelementptr float* %output_r, i64 %sext"   --->   Operation 12 'getelementptr' 'output_addr' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (8.75ns)   --->   "%output_addr_wr_req = call i1 @_ssdm_op_WriteReq.m_axi.floatP(float* %output_addr, i32 10)" [ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp:78]   --->   Operation 13 'writereq' 'output_addr_wr_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>

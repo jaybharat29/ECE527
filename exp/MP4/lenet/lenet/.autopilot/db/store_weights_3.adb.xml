@@ -138,7 +138,7 @@
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str514, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 2400, [12 x i8]* @p_str817, [6 x i8]* @p_str716, [1 x i8]* @p_str110, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str110, [1 x i8]* @p_str110)
+:2  call void (...)* @_ssdm_op_SpecInterface(float* %weights, [6 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 2400, [12 x i8]* @p_str9, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1185,23 +1185,23 @@
 </dataflow>
 <dataflow id="107" from="weights" to="StgValue_15" fromId="95" toId="15">
 </dataflow>
-<dataflow id="109" from="p_str514" to="StgValue_15" fromId="108" toId="15">
+<dataflow id="109" from="p_str6" to="StgValue_15" fromId="108" toId="15">
 </dataflow>
 <dataflow id="111" from="StgValue_110" to="StgValue_15" fromId="110" toId="15">
 </dataflow>
 <dataflow id="112" from="StgValue_110" to="StgValue_15" fromId="110" toId="15">
 </dataflow>
-<dataflow id="114" from="p_str110" to="StgValue_15" fromId="113" toId="15">
+<dataflow id="114" from="p_str1" to="StgValue_15" fromId="113" toId="15">
 </dataflow>
 <dataflow id="115" from="StgValue_110" to="StgValue_15" fromId="110" toId="15">
 </dataflow>
 <dataflow id="117" from="StgValue_116" to="StgValue_15" fromId="116" toId="15">
 </dataflow>
-<dataflow id="119" from="p_str817" to="StgValue_15" fromId="118" toId="15">
+<dataflow id="119" from="p_str9" to="StgValue_15" fromId="118" toId="15">
 </dataflow>
-<dataflow id="121" from="p_str716" to="StgValue_15" fromId="120" toId="15">
+<dataflow id="121" from="p_str8" to="StgValue_15" fromId="120" toId="15">
 </dataflow>
-<dataflow id="122" from="p_str110" to="StgValue_15" fromId="113" toId="15">
+<dataflow id="122" from="p_str1" to="StgValue_15" fromId="113" toId="15">
 </dataflow>
 <dataflow id="124" from="StgValue_123" to="StgValue_15" fromId="123" toId="15">
 </dataflow>
@@ -1211,9 +1211,9 @@
 </dataflow>
 <dataflow id="127" from="StgValue_123" to="StgValue_15" fromId="123" toId="15">
 </dataflow>
-<dataflow id="128" from="p_str110" to="StgValue_15" fromId="113" toId="15">
+<dataflow id="128" from="p_str1" to="StgValue_15" fromId="113" toId="15">
 </dataflow>
-<dataflow id="129" from="p_str110" to="StgValue_15" fromId="113" toId="15">
+<dataflow id="129" from="p_str1" to="StgValue_15" fromId="113" toId="15">
 </dataflow>
 <dataflow id="130" from="input_channel_read" to="tmp_cast" fromId="13" toId="16">
 </dataflow>

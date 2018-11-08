@@ -400,7 +400,7 @@ conv1_fadd_32ns_3bkb #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-conv1_fadd_32ns_3bkb_U82(
+conv1_fadd_32ns_3bkb_U84(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_189_p0),
@@ -415,7 +415,7 @@ conv1_fmul_32ns_3cud #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-conv1_fmul_32ns_3cud_U83(
+conv1_fmul_32ns_3cud_U85(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(weights_addr_read_reg_404),

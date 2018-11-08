@@ -35,19 +35,19 @@
 <ID>532</ID>
 </Instance>
 <Instance>
-<InstName>grp_relu_4_fu_538</InstName>
-<ModuleName>relu_4</ModuleName>
+<InstName>grp_store_weights_5_fu_538</InstName>
+<ModuleName>store_weights_5</ModuleName>
 <ID>538</ID>
 </Instance>
 <Instance>
-<InstName>grp_relu_2_fu_543</InstName>
-<ModuleName>relu_2</ModuleName>
-<ID>543</ID>
+<InstName>grp_relu_4_fu_563</InstName>
+<ModuleName>relu_4</ModuleName>
+<ID>563</ID>
 </Instance>
 <Instance>
-<InstName>grp_store_weights_5_fu_548</InstName>
-<ModuleName>store_weights_5</ModuleName>
-<ID>548</ID>
+<InstName>grp_relu_2_fu_568</InstName>
+<ModuleName>relu_2</ModuleName>
+<ID>568</ID>
 </Instance>
 <Instance>
 <InstName>grp_store_weights_3_fu_573</InstName>
@@ -1456,7 +1456,7 @@
 <AreaEstimates>
 <Resources>
 <FF>233</FF>
-<LUT>433</LUT>
+<LUT>435</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -2120,7 +2120,7 @@
 <Resources>
 <BRAM_18K>0</BRAM_18K>
 <FF>490</FF>
-<LUT>575</LUT>
+<LUT>583</LUT>
 <DSP48E>0</DSP48E>
 </Resources>
 </AreaEstimates>
@@ -4740,7 +4740,7 @@
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>10</DSP48E>
 <FF>4307</FF>
-<LUT>3732</LUT>
+<LUT>3734</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -5429,7 +5429,7 @@
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>12</DSP48E>
 <FF>2844</FF>
-<LUT>3393</LUT>
+<LUT>3411</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -6226,60 +6226,31 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<EstimatedClockPeriod>9.043</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.703</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>58441</Best-caseLatency>
-<Average-caseLatency>178441</Average-caseLatency>
-<Worst-caseLatency>295441</Worst-caseLatency>
-<PipelineInitiationInterval>58441 ~ 295441</PipelineInitiationInterval>
+<Best-caseLatency>24087</Best-caseLatency>
+<Average-caseLatency>24087</Average-caseLatency>
+<Worst-caseLatency>24087</Worst-caseLatency>
+<PipelineInitiationInterval>24087</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <Name>Loop 1</Name>
-<TripCount>120</TripCount>
-<Latency>58440 ~ 295440</Latency>
-<IterationLatency>
-<range>
-<min>487</min>
-<max>2462</max>
-</range>
-</IterationLatency>
-<PipelineDepth>487 ~ 2462</PipelineDepth>
-<Loop1.1>
-<Name>Loop 1.1</Name>
-<TripCount>5</TripCount>
-<Latency>485 ~ 2460</Latency>
-<IterationLatency>
-<range>
-<min>97</min>
-<max>492</max>
-</range>
-</IterationLatency>
-<PipelineDepth>97 ~ 492</PipelineDepth>
-<Loop1.1.1>
-<Name>Loop 1.1.1</Name>
-<TripCount>5</TripCount>
-<Latency>95 ~ 490</Latency>
-<IterationLatency>
-<range>
-<min>19</min>
-<max>98</max>
-</range>
-</IterationLatency>
-<PipelineDepth>19 ~ 98</PipelineDepth>
-</Loop1.1.1>
-</Loop1.1>
+<TripCount>3000</TripCount>
+<Latency>24085</Latency>
+<PipelineII>8</PipelineII>
+<PipelineDepth>94</PipelineDepth>
 </Loop1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP48E>10</DSP48E>
-<FF>4006</FF>
-<LUT>3800</LUT>
 <BRAM_18K>0</BRAM_18K>
+<DSP48E>14</DSP48E>
+<FF>5566</FF>
+<LUT>4904</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -8860,13 +8831,13 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>1.25</ClockUncertainty>
-<EstimatedClockPeriod>9.043</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.750</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>407880</Best-caseLatency>
-<Average-caseLatency>527880</Average-caseLatency>
-<Worst-caseLatency>644880</Worst-caseLatency>
-<PipelineInitiationInterval>407881 ~ 644881</PipelineInitiationInterval>
+<Best-caseLatency>373526</Best-caseLatency>
+<Average-caseLatency>373526</Average-caseLatency>
+<Worst-caseLatency>373526</Worst-caseLatency>
+<PipelineInitiationInterval>373527</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -8889,9 +8860,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>174</BRAM_18K>
-<DSP48E>37</DSP48E>
-<FF>17491</FF>
-<LUT>22673</LUT>
+<DSP48E>41</DSP48E>
+<FF>19051</FF>
+<LUT>23807</LUT>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>

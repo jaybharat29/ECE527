@@ -193,13 +193,13 @@ set NewPortList {[
  	{ "name": "output_0_0_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "output_0_0", "role": "d0" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6"],
 		"CDFG" : "convolution_5",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "58441", "EstimateLatencyMax" : "295441",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "24087", "EstimateLatencyMax" : "24087",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -228,13 +228,15 @@ set RtlHierarchyInfo {[
 			{"Name" : "output_0_0", "Type" : "Memory", "Direction" : "O"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U59", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U60", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U61", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U62", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U61", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fadd_32ns_3bkb_U62", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U63", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.conv1_fmul_32ns_3cud_U64", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	convolution_5 {
-		input_r {Type I LastRead 11 FirstWrite -1}
+		input_r {Type I LastRead 10 FirstWrite -1}
 		weights_0 {Type I LastRead 3 FirstWrite -1}
 		weights_1 {Type I LastRead 3 FirstWrite -1}
 		weights_2 {Type I LastRead 4 FirstWrite -1}
@@ -251,17 +253,18 @@ set ArgLastReadFirstWriteLatency {
 		weights_13 {Type I LastRead 9 FirstWrite -1}
 		weights_14 {Type I LastRead 10 FirstWrite -1}
 		weights_15 {Type I LastRead 10 FirstWrite -1}
-		bias {Type I LastRead 93 FirstWrite -1}
-		output_0_0 {Type O LastRead -1 FirstWrite 100}}}
+		bias {Type I LastRead 87 FirstWrite -1}
+		output_0_0 {Type O LastRead -1 FirstWrite 94}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "58441", "Max" : "295441"}
-	, {"Name" : "Interval", "Min" : "58441", "Max" : "295441"}
+	{"Name" : "Latency", "Min" : "24087", "Max" : "24087"}
+	, {"Name" : "Interval", "Min" : "24087", "Max" : "24087"}
 ]}
 
 set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 
