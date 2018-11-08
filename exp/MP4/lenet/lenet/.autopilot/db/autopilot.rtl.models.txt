@@ -1,11 +1,10 @@
 conv1_fadd_32ns_3bkb
 conv1_fmul_32ns_3cud
 conv1_fcmp_32ns_3dEe
-conv1_mul_mul_6nseOg
 conv1_input_oc_0
 conv1_weights_oc_0
-conv1_weights_3_oc
-conv1_weights_5_oc
+conv1_weights_3_0eOg
+conv1_weights_5_0kbM
 conv1_bias_oc
 conv1_bias_3_oc
 conv1_bias_5_oc
@@ -27,11 +26,9 @@ store_bias
 store_bias_3
 store_bias_5
 convulution1
-relu_1
 maxpool_2
 relu_2
 convolution_3
-relu_3
 maxpool_4
 relu_4
 convolution_5

@@ -192,32 +192,30 @@ void store_weights(float weights[6][1][5][5], float weights_oc[6][1][5][5])
  }
 }
 
-void store_weights_3(float weights[16][6][5][5], float weights_oc[16][6][5][5])
+void store_weights_3(float weights[16][6][5][5], float weights_oc[16][5][5], int input_channel)
 {_ssdm_SpecArrayDimSize(weights, 16);_ssdm_SpecArrayDimSize(weights_oc, 16);
  for(int i = 0; i < 16; i++)
  {
-  for(int l = 0; l < 6; l++)
    for(int j = 0; j < 5; j ++)
    {
     for(int k = 0; k < 5; k++)
     {
-     weights_oc[i][l][j][k] = weights[i][l][j][k];
+     weights_oc[i][j][k] = weights[i][input_channel][j][k];
     }
    }
  }
 }
 
-void store_weights_5(float weights[120][16][5][5], float weights_oc[120][16][5][5])
+void store_weights_5(float weights[120][16][5][5], float weights_oc[120][5][5], int input_channel)
 {_ssdm_SpecArrayDimSize(weights, 120);_ssdm_SpecArrayDimSize(weights_oc, 120);
  for(int i = 0; i < 120; i++)
  {
-  for(int l = 0; l < 16; l++)
    for(int j = 0; j < 5; j ++)
    {
     for(int k = 0; k < 5; k++)
     {
 #pragma HLS PIPELINE II=1
- weights_oc[i][l][j][k] = weights[i][l][j][k];
+ weights_oc[i][j][k] = weights[i][input_channel][j][k];
     }
    }
  }
@@ -259,8 +257,7 @@ void convulution1(float input[1][32][32], float weights[6][1][5][5], float bias[
         for(int h = 0; h < 28; h++)
             for(int w = 0; w < 28; w++)
             {
-                float sum = 0;
-
+          float sum = 0;
                 for(int m = 0; m < (5); m++)
                 {
 
@@ -312,27 +309,44 @@ void relu_2(float output[6][14][14])
 }
 
 
-void convolution_3(float input[6][14][14], float weights[16][6][5][5], float bias[16], float output[16][10][10])
-{_ssdm_SpecArrayDimSize(input, 6);_ssdm_SpecArrayDimSize(weights, 16);_ssdm_SpecArrayDimSize(bias, 16);_ssdm_SpecArrayDimSize(output, 16);
+void convolution_3(float input[6][14][14], float weights_0[16][5][5], float weights_1[16][5][5],
+       float weights_2[16][5][5], float weights_3[16][5][5],
+       float weights_4[16][5][5], float weights_5[16][5][5],
+       float bias[16], float output[16][10][10])
+{_ssdm_SpecArrayDimSize(input, 6);_ssdm_SpecArrayDimSize(weights_0, 16);_ssdm_SpecArrayDimSize(weights_1, 16);_ssdm_SpecArrayDimSize(weights_2, 16);_ssdm_SpecArrayDimSize(weights_3, 16);_ssdm_SpecArrayDimSize(weights_4, 16);_ssdm_SpecArrayDimSize(weights_5, 16);_ssdm_SpecArrayDimSize(bias, 16);_ssdm_SpecArrayDimSize(output, 16);
+ float sum[6];
     for(int co = 0; co < 16; co++)
+
         for(int h = 0; h < 10; h++)
             for(int w = 0; w < 10; w++)
             {
-                    float sum = 0;
                     for(int m = 0; m < 5; m++)
                     {
-                        for(int n = 0; n < 5; n++)
+                     for(int n = 0; n < 5; n++)
                         {
+                      if(n == 0 && m == 0)
+                             {
+                       sum[0] = 0;
+                       sum[1] = 0;
+                       sum[2] = 0;
+                       sum[3] = 0;
+                       sum[4] = 0;
+                       sum[5] = 0;
+                             }
 
-                            for (int ci = 0; ci < 6; ci++)
-                            {
-
-                                sum += weights[co][ci][m][n] * input[ci][h+m][w+n];
-                            }
+#pragma HLS PIPELINE II=5
+ sum[0] += weights_0[co][m][n] * input[0][h+m][w+n];
+                                sum[1] += weights_1[co][m][n] * input[1][h+m][w+n];
+                                sum[2] += weights_2[co][m][n] * input[2][h+m][w+n];
+                                sum[3] += weights_3[co][m][n] * input[3][h+m][w+n];
+                                sum[4] += weights_4[co][m][n] * input[4][h+m][w+n];
+                                sum[5] += weights_5[co][m][n] * input[5][h+m][w+n];
+                                if(n == 4 && m == 4)
+                                    output[co][h][w] = sum[0] + sum[1] + sum[2] + sum[3] + sum[4] + sum[5] + bias[co];
                         }
                     }
-#pragma HLS PIPELINE II=75
- output[co][h][w] = sum + bias[co];
+
+
             }
 }
 
@@ -370,23 +384,65 @@ void relu_4(float output[16][5][5])
      output[i][j][k] = 0;
 }
 
-void convolution_5(float input[16][5][5], float weights[120][16][5][5], float bias[120], float output[120][1][1])
-{_ssdm_SpecArrayDimSize(input, 16);_ssdm_SpecArrayDimSize(weights, 120);_ssdm_SpecArrayDimSize(bias, 120);_ssdm_SpecArrayDimSize(output, 120);
+void convolution_5(float input[16][5][5], float weights_0[120][5][5],
+ float weights_1[120][5][5], float weights_2[120][5][5], float weights_3[120][5][5],
+ float weights_4[120][5][5], float weights_5[120][5][5], float weights_6[120][5][5],
+ float weights_7[120][5][5], float weights_8[120][5][5], float weights_9[120][5][5],
+ float weights_10[120][5][5], float weights_11[120][5][5], float weights_12[120][5][5],
+ float weights_13[120][5][5], float weights_14[120][5][5], float weights_15[120][5][5],
+ float bias[120], float output[120][1][1])
+{_ssdm_SpecArrayDimSize(input, 16);_ssdm_SpecArrayDimSize(weights_0, 120);_ssdm_SpecArrayDimSize(weights_1, 120);_ssdm_SpecArrayDimSize(weights_2, 120);_ssdm_SpecArrayDimSize(weights_3, 120);_ssdm_SpecArrayDimSize(weights_4, 120);_ssdm_SpecArrayDimSize(weights_5, 120);_ssdm_SpecArrayDimSize(weights_6, 120);_ssdm_SpecArrayDimSize(weights_7, 120);_ssdm_SpecArrayDimSize(weights_8, 120);_ssdm_SpecArrayDimSize(weights_9, 120);_ssdm_SpecArrayDimSize(weights_10, 120);_ssdm_SpecArrayDimSize(weights_11, 120);_ssdm_SpecArrayDimSize(weights_12, 120);_ssdm_SpecArrayDimSize(weights_13, 120);_ssdm_SpecArrayDimSize(weights_14, 120);_ssdm_SpecArrayDimSize(weights_15, 120);_ssdm_SpecArrayDimSize(bias, 120);_ssdm_SpecArrayDimSize(output, 120);
     for(int co = 0; co < 120; co++)
     {
-        float sum = 0;
+   float sum[16] = {0};
         for(int i = 0, m = 0; i < 5; i++, m++)
         {
             for(int j = 0, n = 0; j < 5; j++, n++)
             {
-                for (int ci = 0; ci < 16; ci++)
-                {
-#pragma HLS PIPELINE II=5
- sum += weights[co][ci][m][n] * input[ci][i][j];
-                }
+             if(j == 0 && i == 0)
+             {
+              sum[0] = 0;
+              sum[1] = 0;
+              sum[2] = 0;
+              sum[3] = 0;
+              sum[4] = 0;
+              sum[5] = 0;
+              sum[6] = 0;
+              sum[7] = 0;
+              sum[8] = 0;
+              sum[9] = 0;
+              sum[10] = 0;
+              sum[11] = 0;
+              sum[12] = 0;
+              sum[13] = 0;
+              sum[14] = 0;
+              sum[15] = 0;
+             }
+    sum[0] += weights_0[co][m][n] * input[0][i][j];
+    sum[1] += weights_1[co][m][n] * input[1][i][j];
+    sum[2] += weights_2[co][m][n] * input[2][i][j];
+    sum[3] += weights_3[co][m][n] * input[3][i][j];
+    sum[4] += weights_4[co][m][n] * input[4][i][j];
+    sum[5] += weights_5[co][m][n] * input[5][i][j];
+    sum[6] += weights_6[co][m][n] * input[6][i][j];
+    sum[7] += weights_7[co][m][n] * input[7][i][j];
+    sum[8] += weights_8[co][m][n] * input[8][i][j];
+    sum[9] += weights_9[co][m][n] * input[9][i][j];
+    sum[10] += weights_10[co][m][n] * input[10][i][j];
+    sum[11] += weights_11[co][m][n] * input[11][i][j];
+    sum[12] += weights_12[co][m][n] * input[12][i][j];
+    sum[13] += weights_13[co][m][n] * input[13][i][j];
+    sum[14] += weights_14[co][m][n] * input[14][i][j];
+    sum[15] += weights_15[co][m][n] * input[15][i][j];
+
+    if(j == 4 && i == 4)
+     output[co][0][0] = sum[0] + sum[1] + sum[2] + sum[3] + sum[4] + sum[5] +
+             sum[6] + sum[7] + sum[8] + sum[9] + sum[10] + sum[11] +
+            sum[12] + sum[13] + sum[14] + sum[15] + bias[co];
+
             }
         }
-        output[co][0][0] = sum + bias[co];
+
     }
 }
 
@@ -404,10 +460,10 @@ void fc_6(const float input[120][1][1], const float weights[10][120][1][1], cons
     for(int n = 0; n < 10; n++)
     {
         output[n] = 0;
-#pragma HLS unroll factor = 120
- for(int c = 0; c < 120; c++)
+        for(int c = 0; c < 120; c++)
         {
-            output[n] += weights[n][c][0][0] * input[c][0][0];
+#pragma HLS PIPELINE II=5
+ output[n] += weights[n][c][0][0] * input[c][0][0];
         }
         output[n]+=bias[n];
     }
@@ -449,12 +505,52 @@ int conv1(float input[1][32][32],
 
  store_input(input, input_oc);
  float weights_oc[6][1][5][5];
- float weights_3_oc[16][6][5][5];
- float weights_5_oc[120][16][5][5];
+ float weights_3_0_oc[16][5][5];
+ float weights_3_1_oc[16][5][5];
+ float weights_3_2_oc[16][5][5];
+ float weights_3_3_oc[16][5][5];
+ float weights_3_4_oc[16][5][5];
+ float weights_3_5_oc[16][5][5];
+ float weights_5_0_oc[120][5][5];
+ float weights_5_1_oc[120][5][5];
+ float weights_5_2_oc[120][5][5];
+ float weights_5_3_oc[120][5][5];
+ float weights_5_4_oc[120][5][5];
+ float weights_5_5_oc[120][5][5];
+ float weights_5_6_oc[120][5][5];
+ float weights_5_7_oc[120][5][5];
+ float weights_5_8_oc[120][5][5];
+ float weights_5_9_oc[120][5][5];
+ float weights_5_10_oc[120][5][5];
+ float weights_5_11_oc[120][5][5];
+ float weights_5_12_oc[120][5][5];
+ float weights_5_13_oc[120][5][5];
+ float weights_5_14_oc[120][5][5];
+ float weights_5_15_oc[120][5][5];
 
  store_weights(weights, weights_oc);
- store_weights_3(weights_3, weights_3_oc);
- store_weights_5(weights_5, weights_5_oc);
+ store_weights_3(weights_3, weights_3_0_oc, 0);
+ store_weights_3(weights_3, weights_3_1_oc, 1);
+ store_weights_3(weights_3, weights_3_2_oc, 2);
+ store_weights_3(weights_3, weights_3_3_oc, 3);
+ store_weights_3(weights_3, weights_3_4_oc, 4);
+ store_weights_3(weights_3, weights_3_5_oc, 5);
+ store_weights_5(weights_5, weights_5_0_oc, 0);
+ store_weights_5(weights_5, weights_5_1_oc, 1);
+ store_weights_5(weights_5, weights_5_2_oc, 2);
+ store_weights_5(weights_5, weights_5_3_oc, 3);
+ store_weights_5(weights_5, weights_5_4_oc, 4);
+ store_weights_5(weights_5, weights_5_5_oc, 5);
+ store_weights_5(weights_5, weights_5_6_oc, 6);
+ store_weights_5(weights_5, weights_5_7_oc, 7);
+ store_weights_5(weights_5, weights_5_8_oc, 8);
+ store_weights_5(weights_5, weights_5_9_oc, 9);
+ store_weights_5(weights_5, weights_5_10_oc, 10);
+ store_weights_5(weights_5, weights_5_11_oc, 11);
+ store_weights_5(weights_5, weights_5_12_oc, 12);
+ store_weights_5(weights_5, weights_5_13_oc, 13);
+ store_weights_5(weights_5, weights_5_14_oc, 14);
+ store_weights_5(weights_5, weights_5_15_oc, 15);
  float bias_oc[6];
  float bias_3_oc[16];
  float bias_5_oc[120];
@@ -470,22 +566,33 @@ int conv1(float input[1][32][32],
  float output6_oc[10];
 
  convulution1(input_oc, weights_oc, bias_oc, output1_oc);
- relu_1(output1_oc);
+
 
 
  maxpool_2(output1_oc, output2_oc);
  relu_2(output2_oc);
 
 
- convolution_3(output2_oc, weights_3_oc, bias_3_oc, output3_oc);
- relu_3(output3_oc);
+ convolution_3(output2_oc, weights_3_0_oc, weights_3_1_oc,
+         weights_3_2_oc, weights_3_3_oc,
+         weights_3_4_oc, weights_3_5_oc,
+         bias_3_oc, output3_oc);
+
 
 
  maxpool_4(output3_oc, output4_oc);
  relu_4(output4_oc);
 
 
- convolution_5(output4_oc, weights_5_oc, bias_5_oc, output5_oc);
+ convolution_5(output4_oc, weights_5_0_oc, weights_5_1_oc,
+         weights_5_2_oc, weights_5_3_oc,
+         weights_5_4_oc, weights_5_5_oc,
+        weights_5_6_oc, weights_5_7_oc,
+         weights_5_8_oc, weights_5_9_oc,
+        weights_5_10_oc, weights_5_11_oc,
+        weights_5_12_oc, weights_5_13_oc,
+        weights_5_14_oc, weights_5_15_oc,
+        bias_5_oc, output5_oc);
  relu_5(output5_oc);
 
 

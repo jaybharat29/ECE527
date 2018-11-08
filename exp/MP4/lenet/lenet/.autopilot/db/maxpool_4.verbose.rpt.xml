@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'maxpool_4'" level="0">
-<item name = "Date">Wed Oct 31 20:17:54 2018
+<item name = "Date">Wed Nov  7 21:46:05 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -66,7 +66,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="conv1_fcmp_32ns_3dEe_U53">conv1_fcmp_32ns_3dEe, 0, 0, 66, 239</column>
+<column name="conv1_fcmp_32ns_3dEe_U54">conv1_fcmp_32ns_3dEe, 0, 0, 66, 239</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -85,8 +85,9 @@
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="c_1_fu_178_p2">+, 0, 0, 15, 5, 1</column>
 <column name="h_1_fu_242_p2">+, 0, 0, 12, 3, 1</column>
-<column name="i_13_fu_313_p2">+, 0, 0, 10, 2, 1</column>
-<column name="j_9_fu_383_p2">+, 0, 0, 10, 2, 1</column>
+<column name="i_11_fu_313_p2">+, 0, 0, 10, 2, 1</column>
+<column name="j_7_fu_383_p2">+, 0, 0, 10, 2, 1</column>
+<column name="tmp_2_fu_319_p2">+, 0, 0, 13, 4, 4</column>
 <column name="tmp_41_fu_212_p2">+, 0, 0, 15, 9, 9</column>
 <column name="tmp_43_fu_230_p2">+, 0, 0, 15, 8, 8</column>
 <column name="tmp_44_fu_260_p2">+, 0, 0, 15, 8, 8</column>
@@ -95,11 +96,10 @@
 <column name="tmp_47_fu_328_p2">+, 0, 0, 15, 9, 9</column>
 <column name="tmp_48_fu_353_p2">+, 0, 0, 12, 12, 12</column>
 <column name="tmp_49_fu_398_p2">+, 0, 0, 12, 12, 12</column>
-<column name="tmp_7_fu_319_p2">+, 0, 0, 13, 4, 4</column>
-<column name="tmp_9_fu_389_p2">+, 0, 0, 13, 4, 4</column>
+<column name="tmp_4_fu_389_p2">+, 0, 0, 13, 4, 4</column>
 <column name="w_1_fu_289_p2">+, 0, 0, 12, 3, 1</column>
-<column name="tmp_27_fu_479_p2">and, 0, 0, 2, 1, 1</column>
-<column name="tmp_29_fu_485_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_18_fu_479_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_20_fu_485_p2">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond1_fu_307_p2">icmp, 0, 0, 9, 2, 3</column>
 <column name="exitcond2_fu_283_p2">icmp, 0, 0, 9, 3, 3</column>
 <column name="exitcond3_fu_236_p2">icmp, 0, 0, 9, 3, 3</column>
@@ -109,8 +109,8 @@
 <column name="notlhs_fu_443_p2">icmp, 0, 0, 11, 8, 2</column>
 <column name="notrhs7_fu_467_p2">icmp, 0, 0, 18, 23, 1</column>
 <column name="notrhs_fu_449_p2">icmp, 0, 0, 18, 23, 1</column>
-<column name="tmp_25_fu_455_p2">or, 0, 0, 2, 1, 1</column>
-<column name="tmp_26_fu_473_p2">or, 0, 0, 2, 1, 1</column>
+<column name="tmp_16_fu_455_p2">or, 0, 0, 2, 1, 1</column>
+<column name="tmp_17_fu_473_p2">or, 0, 0, 2, 1, 1</column>
 <column name="max_value_2_fu_491_p3">select, 0, 0, 32, 1, 32</column>
 </table>
 </item>
@@ -133,10 +133,10 @@
 <column name="c_reg_86">5, 0, 5, 0</column>
 <column name="h_1_reg_519">3, 0, 3, 0</column>
 <column name="h_reg_97">3, 0, 3, 0</column>
-<column name="i_13_reg_550">2, 0, 2, 0</column>
+<column name="i_11_reg_550">2, 0, 2, 0</column>
 <column name="i_reg_133">2, 0, 2, 0</column>
 <column name="input_load_reg_573">32, 0, 32, 0</column>
-<column name="j_9_reg_563">2, 0, 2, 0</column>
+<column name="j_7_reg_563">2, 0, 2, 0</column>
 <column name="j_reg_156">2, 0, 2, 0</column>
 <column name="max_value_1_reg_144">32, 0, 32, 0</column>
 <column name="max_value_reg_120">32, 0, 32, 0</column>
@@ -144,7 +144,7 @@
 <column name="tmp_43_reg_511">8, 0, 8, 0</column>
 <column name="tmp_45_reg_529">10, 0, 10, 0</column>
 <column name="tmp_48_reg_555">11, 0, 12, 1</column>
-<column name="tmp_5_reg_542">3, 0, 4, 1</column>
+<column name="tmp_9_reg_542">3, 0, 4, 1</column>
 <column name="tmp_s_reg_524">3, 0, 4, 1</column>
 <column name="w_1_reg_537">3, 0, 3, 0</column>
 <column name="w_reg_108">3, 0, 3, 0</column>

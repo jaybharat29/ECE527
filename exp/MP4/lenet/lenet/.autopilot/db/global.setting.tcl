@@ -14,7 +14,7 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 1
+set HasDSPModule 0
 set ResetLevelFlag 0
 set ResetStyle "control"
 set ResetSyncFlag 1
@@ -41,10 +41,10 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
-set SourceFiles {sc {} c {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp}}
+set SourceFiles {sc {} c {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_gold.cpp}}
 set SourceFlags {sc {} c {{} {} {}}}
 set DirectiveFile {C:/Users/nados/OneDrive/Documents/UIUC/Fall2018/ECE527/exp/MP4/lenet/lenet/lenet.directive}
-set TBFiles {verilog {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin} bc {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin} sc {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin} vhdl {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin} c {} cas {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin}}
+set TBFiles {verilog {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin} bc {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin} sc {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin} vhdl {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin} c {} cas {../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/images.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/labels.bin ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_tb.cpp ../../ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/params.bin}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -201,7 +201,7 @@
               <name>bias_addr_rd_req</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -216,7 +216,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
@@ -248,7 +248,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>67</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -263,7 +263,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>67</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
@@ -327,7 +327,7 @@
               <name>exitcond</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>67</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -342,7 +342,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>67</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
@@ -373,7 +373,7 @@
               <name>i_7</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>67</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -388,7 +388,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>67</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
@@ -419,7 +419,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>67</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -434,7 +434,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>67</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
@@ -466,7 +466,7 @@
               <name>tmp</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -481,7 +481,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
@@ -511,7 +511,7 @@
               <name>bias_addr_read</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -526,7 +526,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
@@ -558,7 +558,7 @@
               <name>bias_oc_addr</name>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -573,7 +573,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
@@ -605,7 +605,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>68</lineNumber>
+              <lineNumber>66</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -620,7 +620,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>68</second>
+                      <second>66</second>
                     </item>
                   </second>
                 </item>
@@ -651,7 +651,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>67</lineNumber>
+              <lineNumber>65</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -666,7 +666,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>67</second>
+                      <second>65</second>
                     </item>
                   </second>
                 </item>
@@ -696,7 +696,7 @@
               <name/>
               <fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>69</lineNumber>
+              <lineNumber>67</lineNumber>
               <contextFuncName>store_bias_3</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -711,7 +711,7 @@
                         <first>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</first>
                         <second>store_bias_3</second>
                       </first>
-                      <second>69</second>
+                      <second>67</second>
                     </item>
                   </second>
                 </item>

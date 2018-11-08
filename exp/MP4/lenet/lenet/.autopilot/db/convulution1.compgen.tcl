@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 22
+set id 24
 set name conv1_fadd_32ns_3bkb
 set corename simcore_fadd
 set op fadd
@@ -91,7 +91,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 24
+set id 26
 set name conv1_fmul_32ns_3cud
 set corename simcore_fmul
 set op fmul
@@ -193,7 +193,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 28 \
+    id 30 \
     name input_0 \
     reset_level 1 \
     sync_rst true \
@@ -212,7 +212,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 29 \
+    id 31 \
     name weights_0 \
     reset_level 1 \
     sync_rst true \
@@ -231,7 +231,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 30 \
+    id 32 \
     name bias \
     reset_level 1 \
     sync_rst true \
@@ -250,7 +250,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 31 \
+    id 33 \
     name output_r \
     reset_level 1 \
     sync_rst true \

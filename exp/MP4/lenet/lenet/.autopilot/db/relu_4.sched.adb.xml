@@ -214,10 +214,10 @@
 
 <Node id="13" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-.preheader3.preheader:3  %tmp_23 = add i8 %tmp_cast, %p_shl_cast
+.preheader3.preheader:3  %tmp_31 = add i8 %tmp_cast, %p_shl_cast
 
 ]]></Node>
-<StgValue><ssdm name="tmp_23"/></StgValue>
+<StgValue><ssdm name="tmp_31"/></StgValue>
 </operation>
 
 <operation id="17" st_id="2" stage="1" lat="1">
@@ -356,10 +356,10 @@
 
 <Node id="23" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-.preheader.preheader:1  %tmp_24 = add i8 %tmp_23, %tmp_cast_14
+.preheader.preheader:1  %tmp_32 = add i8 %tmp_31, %tmp_cast_14
 
 ]]></Node>
-<StgValue><ssdm name="tmp_24"/></StgValue>
+<StgValue><ssdm name="tmp_32"/></StgValue>
 </operation>
 
 <operation id="26" st_id="3" stage="1" lat="1">
@@ -372,10 +372,10 @@
 
 <Node id="24" bw="10" op_0_bw="8">
 <![CDATA[
-.preheader.preheader:2  %tmp_36_cast4 = zext i8 %tmp_24 to i10
+.preheader.preheader:2  %tmp_46_cast4 = zext i8 %tmp_32 to i10
 
 ]]></Node>
-<StgValue><ssdm name="tmp_36_cast4"/></StgValue>
+<StgValue><ssdm name="tmp_46_cast4"/></StgValue>
 </operation>
 
 <operation id="27" st_id="3" stage="1" lat="1">
@@ -388,7 +388,7 @@
 
 <Node id="25" bw="10" op_0_bw="10" op_1_bw="8" op_2_bw="2">
 <![CDATA[
-.preheader.preheader:3  %p_shl1_cast = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %tmp_24, i2 0)
+.preheader.preheader:3  %p_shl1_cast = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %tmp_32, i2 0)
 
 ]]></Node>
 <StgValue><ssdm name="p_shl1_cast"/></StgValue>
@@ -404,10 +404,10 @@
 
 <Node id="26" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-.preheader.preheader:4  %tmp_25 = add i10 %tmp_36_cast4, %p_shl1_cast
+.preheader.preheader:4  %tmp_33 = add i10 %tmp_46_cast4, %p_shl1_cast
 
 ]]></Node>
-<StgValue><ssdm name="tmp_25"/></StgValue>
+<StgValue><ssdm name="tmp_33"/></StgValue>
 </operation>
 
 <operation id="29" st_id="3" stage="1" lat="1">
@@ -530,10 +530,10 @@
 
 <Node id="35" bw="10" op_0_bw="3">
 <![CDATA[
-:0  %tmp_5_cast = zext i3 %k to i10
+:0  %tmp_4_cast = zext i3 %k to i10
 
 ]]></Node>
-<StgValue><ssdm name="tmp_5_cast"/></StgValue>
+<StgValue><ssdm name="tmp_4_cast"/></StgValue>
 </operation>
 
 <operation id="37" st_id="4" stage="1" lat="1">
@@ -546,10 +546,10 @@
 
 <Node id="36" bw="10" op_0_bw="10" op_1_bw="10">
 <![CDATA[
-:1  %tmp_26 = add i10 %tmp_25, %tmp_5_cast
+:1  %tmp_34 = add i10 %tmp_33, %tmp_4_cast
 
 ]]></Node>
-<StgValue><ssdm name="tmp_26"/></StgValue>
+<StgValue><ssdm name="tmp_34"/></StgValue>
 </operation>
 
 <operation id="38" st_id="4" stage="1" lat="1">
@@ -562,10 +562,10 @@
 
 <Node id="37" bw="64" op_0_bw="10">
 <![CDATA[
-:2  %tmp_39_cast = zext i10 %tmp_26 to i64
+:2  %tmp_49_cast = zext i10 %tmp_34 to i64
 
 ]]></Node>
-<StgValue><ssdm name="tmp_39_cast"/></StgValue>
+<StgValue><ssdm name="tmp_49_cast"/></StgValue>
 </operation>
 
 <operation id="39" st_id="4" stage="1" lat="1">
@@ -578,7 +578,7 @@
 
 <Node id="38" bw="9" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:3  %output_addr = getelementptr [400 x float]* %output_r, i64 0, i64 %tmp_39_cast
+:3  %output_addr = getelementptr [400 x float]* %output_r, i64 0, i64 %tmp_49_cast
 
 ]]></Node>
 <StgValue><ssdm name="output_addr"/></StgValue>
@@ -751,10 +751,10 @@
 
 <Node id="47" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-:12  %tmp_4 = and i1 %tmp_2, %tmp_3
+:12  %tmp_5 = and i1 %tmp_2, %tmp_3
 
 ]]></Node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="51" st_id="6" stage="1" lat="1">
@@ -766,7 +766,7 @@
 
 <Node id="48" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:13  br i1 %tmp_4, label %2, label %._crit_edge
+:13  br i1 %tmp_5, label %2, label %._crit_edge
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -776,7 +776,7 @@
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="19">
-<or_exp><and_exp><literal name="tmp_4" val="1"/>
+<or_exp><and_exp><literal name="tmp_5" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -792,7 +792,7 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="19">
-<or_exp><and_exp><literal name="tmp_4" val="1"/>
+<or_exp><and_exp><literal name="tmp_5" val="1"/>
 </and_exp></or_exp>
 </condition>
 

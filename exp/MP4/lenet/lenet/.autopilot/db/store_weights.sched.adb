@@ -521,7 +521,7 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>tmp_19</name>
+						<name>tmp_27</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -830,7 +830,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>tmp_20</name>
+						<name>tmp_28</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -876,7 +876,7 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>tmp_28_cast</name>
+						<name>tmp_38_cast</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1013,7 +1013,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_21</name>
+						<name>tmp_29</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1059,7 +1059,7 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>tmp_12</name>
+						<name>tmp_15</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1416,7 +1416,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>tmp_2</name>
+						<name>tmp_1</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1461,7 +1461,7 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>tmp_22</name>
+						<name>tmp_30</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>

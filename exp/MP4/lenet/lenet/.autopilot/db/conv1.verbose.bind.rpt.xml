@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'conv1'" level="0">
-<item name = "Date">Wed Oct 31 20:17:09 2018
+<item name = "Date">Wed Nov  7 21:45:49 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 9.571, 1.25</column>
+<column name="ap_clk">10.00, 9.043, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,31 +24,29 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">527161, 527161, 527161, 527161, none</column>
+<column name="">407880, 644880, 407880, 644880, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_convolution_3_fu_354">convolution_3, 120692, 120692, 120692, 120692, none</column>
-<column name="grp_convulution1_fu_362">convulution1, 61278, 61278, 61278, 61278, none</column>
-<column name="grp_fc_6_fu_370">fc_6, 13356, 13356, 13356, 13356, none</column>
-<column name="grp_convolution_5_fu_382">convolution_5, 242041, 242041, 242041, 242041, none</column>
-<column name="grp_maxpool_2_fu_390">maxpool_2, 21349, 21349, 21349, 21349, none</column>
-<column name="grp_maxpool_4_fu_396">maxpool_4, 7393, 7393, 7393, 7393, none</column>
-<column name="grp_store_weights_5_fu_402">store_weights_5, 48012, 48012, 48012, 48012, none</column>
-<column name="grp_store_weights_3_fu_410">store_weights_3, 9345, 9345, 9345, 9345, none</column>
-<column name="grp_relu_1_fu_418">relu_1, 14461, 14461, 14461, 14461, none</column>
-<column name="grp_relu_3_fu_423">relu_3, 5153, 5153, 5153, 5153, none</column>
-<column name="grp_relu_4_fu_428">relu_4, 1393, 1393, 1393, 1393, none</column>
-<column name="grp_relu_2_fu_433">relu_2, 3709, 3709, 3709, 3709, none</column>
-<column name="grp_store_weights_fu_438">store_weights, 583, 583, 583, 583, none</column>
-<column name="grp_store_input_fu_447">store_input, 2337, 2337, 2337, 2337, none</column>
-<column name="grp_store_bias_5_fu_456">store_bias_5, 247, 247, 247, 247, none</column>
-<column name="grp_store_bias_3_fu_464">store_bias_3, 39, 39, 39, 39, none</column>
-<column name="grp_store_output_fu_472">store_output, 35, 35, 35, 35, none</column>
-<column name="grp_store_bias_fu_480">store_bias, 19, 19, 19, 19, none</column>
+<column name="grp_convolution_5_fu_470">convolution_5, 58441, 295441, 58441, 295441, none</column>
+<column name="grp_convulution1_fu_493">convulution1, 61278, 61278, 61278, 61278, none</column>
+<column name="grp_convolution_3_fu_501">convolution_3, 200043, 200043, 200043, 200043, none</column>
+<column name="grp_fc_6_fu_514">fc_6, 6027, 6027, 6027, 6027, none</column>
+<column name="grp_maxpool_2_fu_526">maxpool_2, 21349, 21349, 21349, 21349, none</column>
+<column name="grp_maxpool_4_fu_532">maxpool_4, 7393, 7393, 7393, 7393, none</column>
+<column name="grp_relu_4_fu_538">relu_4, 1393, 1393, 1393, 1393, none</column>
+<column name="grp_relu_2_fu_543">relu_2, 3709, 3709, 3709, 3709, none</column>
+<column name="grp_store_weights_5_fu_548">store_weights_5, 3012, 3012, 3012, 3012, none</column>
+<column name="grp_store_weights_3_fu_573">store_weights_3, 1553, 1553, 1553, 1553, none</column>
+<column name="grp_store_weights_fu_588">store_weights, 583, 583, 583, 583, none</column>
+<column name="grp_store_input_fu_597">store_input, 2337, 2337, 2337, 2337, none</column>
+<column name="grp_store_bias_5_fu_606">store_bias_5, 247, 247, 247, 247, none</column>
+<column name="grp_store_bias_3_fu_614">store_bias_3, 39, 39, 39, 39, none</column>
+<column name="grp_store_output_fu_622">store_output, 35, 35, 35, 35, none</column>
+<column name="grp_store_bias_fu_630">store_bias, 19, 19, 19, 19, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

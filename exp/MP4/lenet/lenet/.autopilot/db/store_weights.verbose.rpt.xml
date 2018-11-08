@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'store_weights'" level="0">
-<item name = "Date">Wed Oct 31 20:17:12 2018
+<item name = "Date">Wed Nov  7 21:45:51 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -83,11 +83,11 @@
 <column name="i_3_fu_126_p2">+, 0, 0, 12, 3, 1</column>
 <column name="j_3_fu_160_p2">+, 0, 0, 12, 3, 1</column>
 <column name="k_3_fu_214_p2">+, 0, 0, 12, 3, 1</column>
-<column name="tmp_12_fu_197_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_19_fu_148_p2">+, 0, 0, 15, 6, 6</column>
-<column name="tmp_20_fu_170_p2">+, 0, 0, 15, 6, 6</column>
-<column name="tmp_21_fu_191_p2">+, 0, 0, 71, 64, 64</column>
-<column name="tmp_22_fu_224_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_15_fu_197_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_27_fu_148_p2">+, 0, 0, 15, 6, 6</column>
+<column name="tmp_28_fu_170_p2">+, 0, 0, 15, 6, 6</column>
+<column name="tmp_29_fu_191_p2">+, 0, 0, 71, 64, 64</column>
+<column name="tmp_30_fu_224_p2">+, 0, 0, 71, 64, 64</column>
 <column name="ap_block_state11">and, 0, 0, 2, 1, 1</column>
 <column name="exitcond1_fu_154_p2">icmp, 0, 0, 9, 3, 3</column>
 <column name="exitcond2_fu_120_p2">icmp, 0, 0, 9, 3, 3</column>
@@ -116,9 +116,9 @@
 <column name="k_3_reg_269">3, 0, 3, 0</column>
 <column name="k_reg_105">3, 0, 3, 0</column>
 <column name="sext_reg_229">30, 0, 64, 34</column>
-<column name="tmp_19_reg_242">6, 0, 6, 0</column>
-<column name="tmp_21_reg_255">64, 0, 64, 0</column>
-<column name="tmp_22_reg_274">64, 0, 64, 0</column>
+<column name="tmp_27_reg_242">6, 0, 6, 0</column>
+<column name="tmp_29_reg_255">64, 0, 64, 0</column>
+<column name="tmp_30_reg_274">64, 0, 64, 0</column>
 <column name="weights_addr_read_reg_279">32, 0, 32, 0</column>
 <column name="weights_addr_reg_260">32, 0, 32, 0</column>
 </table>

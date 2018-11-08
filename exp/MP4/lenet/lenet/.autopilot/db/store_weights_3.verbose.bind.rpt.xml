@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'store_weights_3'" level="0">
-<item name = "Date">Wed Oct 31 20:16:21 2018
+<item name = "Date">Wed Nov  7 21:45:28 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">9345, 9345, 9345, 9345, none</column>
+<column name="">1553, 1553, 1553, 1553, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,10 +35,9 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">9344, 9344, 584, -, -, 16, no</column>
-<column name=" + Loop 1.1">582, 582, 97, -, -, 6, no</column>
-<column name="  ++ Loop 1.1.1">95, 95, 19, -, -, 5, no</column>
-<column name="   +++ Loop 1.1.1.1">10, 10, 2, -, -, 5, no</column>
+<column name="- Loop 1">1552, 1552, 97, -, -, 16, no</column>
+<column name=" + Loop 1.1">95, 95, 19, -, -, 5, no</column>
+<column name="  ++ Loop 1.1.1">10, 10, 2, -, -, 5, no</column>
 </table>
 </item>
 </section>

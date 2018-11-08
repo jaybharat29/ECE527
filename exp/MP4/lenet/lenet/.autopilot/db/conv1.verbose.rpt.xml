@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'conv1'" level="0">
-<item name = "Date">Wed Oct 31 20:18:06 2018
+<item name = "Date">Wed Nov  7 21:46:17 2018
 </item>
 <item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">lenet</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 9.571, 1.25</column>
+<column name="ap_clk">10.00, 9.043, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,31 +24,29 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">527161, 527161, 527161, 527161, none</column>
+<column name="">407880, 644880, 407880, 644880, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_convolution_3_fu_354">convolution_3, 120692, 120692, 120692, 120692, none</column>
-<column name="grp_convulution1_fu_362">convulution1, 61278, 61278, 61278, 61278, none</column>
-<column name="grp_fc_6_fu_370">fc_6, 13356, 13356, 13356, 13356, none</column>
-<column name="grp_convolution_5_fu_382">convolution_5, 242041, 242041, 242041, 242041, none</column>
-<column name="grp_maxpool_2_fu_390">maxpool_2, 21349, 21349, 21349, 21349, none</column>
-<column name="grp_maxpool_4_fu_396">maxpool_4, 7393, 7393, 7393, 7393, none</column>
-<column name="grp_store_weights_5_fu_402">store_weights_5, 48012, 48012, 48012, 48012, none</column>
-<column name="grp_store_weights_3_fu_410">store_weights_3, 9345, 9345, 9345, 9345, none</column>
-<column name="grp_relu_1_fu_418">relu_1, 14461, 14461, 14461, 14461, none</column>
-<column name="grp_relu_3_fu_423">relu_3, 5153, 5153, 5153, 5153, none</column>
-<column name="grp_relu_4_fu_428">relu_4, 1393, 1393, 1393, 1393, none</column>
-<column name="grp_relu_2_fu_433">relu_2, 3709, 3709, 3709, 3709, none</column>
-<column name="grp_store_weights_fu_438">store_weights, 583, 583, 583, 583, none</column>
-<column name="grp_store_input_fu_447">store_input, 2337, 2337, 2337, 2337, none</column>
-<column name="grp_store_bias_5_fu_456">store_bias_5, 247, 247, 247, 247, none</column>
-<column name="grp_store_bias_3_fu_464">store_bias_3, 39, 39, 39, 39, none</column>
-<column name="grp_store_output_fu_472">store_output, 35, 35, 35, 35, none</column>
-<column name="grp_store_bias_fu_480">store_bias, 19, 19, 19, 19, none</column>
+<column name="grp_convolution_5_fu_470">convolution_5, 58441, 295441, 58441, 295441, none</column>
+<column name="grp_convulution1_fu_493">convulution1, 61278, 61278, 61278, 61278, none</column>
+<column name="grp_convolution_3_fu_501">convolution_3, 200043, 200043, 200043, 200043, none</column>
+<column name="grp_fc_6_fu_514">fc_6, 6027, 6027, 6027, 6027, none</column>
+<column name="grp_maxpool_2_fu_526">maxpool_2, 21349, 21349, 21349, 21349, none</column>
+<column name="grp_maxpool_4_fu_532">maxpool_4, 7393, 7393, 7393, 7393, none</column>
+<column name="grp_relu_4_fu_538">relu_4, 1393, 1393, 1393, 1393, none</column>
+<column name="grp_relu_2_fu_543">relu_2, 3709, 3709, 3709, 3709, none</column>
+<column name="grp_store_weights_5_fu_548">store_weights_5, 3012, 3012, 3012, 3012, none</column>
+<column name="grp_store_weights_3_fu_573">store_weights_3, 1553, 1553, 1553, 1553, none</column>
+<column name="grp_store_weights_fu_588">store_weights, 583, 583, 583, 583, none</column>
+<column name="grp_store_input_fu_597">store_input, 2337, 2337, 2337, 2337, none</column>
+<column name="grp_store_bias_5_fu_606">store_bias_5, 247, 247, 247, 247, none</column>
+<column name="grp_store_bias_3_fu_614">store_bias_3, 39, 39, 39, 39, none</column>
+<column name="grp_store_output_fu_622">store_output, 35, 35, 35, 35, none</column>
+<column name="grp_store_bias_fu_630">store_bias, 19, 19, 19, 19, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -67,14 +65,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 120</column>
+<column name="Expression">-, -, 0, 128</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">10, 33, 28223, 31055</column>
-<column name="Memory">167, -, 192, 16</column>
-<column name="Multiplexer">-, -, -, 1666</column>
-<column name="Register">-, -, 443, -</column>
+<column name="Instance">8, 37, 16830, 19914</column>
+<column name="Memory">166, -, 192, 16</column>
+<column name="Multiplexer">-, -, -, 2615</column>
+<column name="Register">-, -, 469, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">63, 15, 27, 61</specialColumn>
+<specialColumn name="Utilization (%)">62, 16, 16, 42</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -86,25 +84,23 @@
 <column name="conv1_DATA_INPUT_m_axi_U">conv1_DATA_INPUT_m_axi, 2, 0, 512, 580</column>
 <column name="conv1_DATA_OUTPUT_m_axi_U">conv1_DATA_OUTPUT_m_axi, 2, 0, 512, 580</column>
 <column name="conv1_DATA_WEIGHT_m_axi_U">conv1_DATA_WEIGHT_m_axi, 2, 0, 512, 580</column>
-<column name="conv1_fcmp_32ns_3dEe_U75">conv1_fcmp_32ns_3dEe, 0, 0, 66, 239</column>
-<column name="grp_convolution_3_fu_354">convolution_3, 0, 13, 15730, 13783</column>
-<column name="grp_convolution_5_fu_382">convolution_5, 0, 5, 749, 1274</column>
-<column name="grp_convulution1_fu_362">convulution1, 0, 10, 4307, 3742</column>
-<column name="grp_fc_6_fu_370">fc_6, 0, 5, 2421, 3421</column>
-<column name="grp_maxpool_2_fu_390">maxpool_2, 0, 0, 247, 698</column>
-<column name="grp_maxpool_4_fu_396">maxpool_4, 0, 0, 243, 688</column>
-<column name="grp_relu_1_fu_418">relu_1, 0, 0, 163, 492</column>
-<column name="grp_relu_2_fu_433">relu_2, 0, 0, 156, 471</column>
-<column name="grp_relu_3_fu_423">relu_3, 0, 0, 160, 476</column>
-<column name="grp_relu_4_fu_428">relu_4, 0, 0, 153, 478</column>
-<column name="grp_store_bias_fu_480">store_bias, 0, 0, 48, 106</column>
-<column name="grp_store_bias_3_fu_464">store_bias_3, 0, 0, 52, 111</column>
-<column name="grp_store_bias_5_fu_456">store_bias_5, 0, 0, 56, 111</column>
-<column name="grp_store_input_fu_447">store_input, 0, 0, 153, 202</column>
-<column name="grp_store_output_fu_472">store_output, 0, 0, 50, 120</column>
-<column name="grp_store_weights_fu_438">store_weights, 0, 0, 259, 418</column>
-<column name="grp_store_weights_3_fu_410">store_weights_3, 0, 0, 337, 597</column>
-<column name="grp_store_weights_5_fu_402">store_weights_5, 2, 0, 377, 564</column>
+<column name="conv1_fcmp_32ns_3dEe_U93">conv1_fcmp_32ns_3dEe, 0, 0, 66, 239</column>
+<column name="grp_convolution_3_fu_501">convolution_3, 0, 12, 2844, 3393</column>
+<column name="grp_convolution_5_fu_470">convolution_5, 0, 10, 4006, 3800</column>
+<column name="grp_convulution1_fu_493">convulution1, 0, 10, 4307, 3732</column>
+<column name="grp_fc_6_fu_514">fc_6, 0, 5, 971, 1275</column>
+<column name="grp_maxpool_2_fu_526">maxpool_2, 0, 0, 247, 698</column>
+<column name="grp_maxpool_4_fu_532">maxpool_4, 0, 0, 243, 688</column>
+<column name="grp_relu_2_fu_543">relu_2, 0, 0, 156, 471</column>
+<column name="grp_relu_4_fu_538">relu_4, 0, 0, 153, 478</column>
+<column name="grp_store_bias_fu_630">store_bias, 0, 0, 48, 106</column>
+<column name="grp_store_bias_3_fu_614">store_bias_3, 0, 0, 52, 111</column>
+<column name="grp_store_bias_5_fu_606">store_bias_5, 0, 0, 56, 111</column>
+<column name="grp_store_input_fu_597">store_input, 0, 0, 153, 202</column>
+<column name="grp_store_output_fu_622">store_output, 0, 0, 50, 120</column>
+<column name="grp_store_weights_fu_588">store_weights, 0, 0, 259, 418</column>
+<column name="grp_store_weights_3_fu_573">store_weights_3, 0, 0, 233, 433</column>
+<column name="grp_store_weights_5_fu_548">store_weights_5, 0, 0, 490, 575</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -121,10 +117,30 @@
 <column name="output1_oc_U">conv1_output1_oc, 16, 0, 0, 4704, 32, 1, 150528</column>
 <column name="output2_oc_U">conv1_output2_oc, 4, 0, 0, 1176, 32, 1, 37632</column>
 <column name="output3_oc_U">conv1_output3_oc, 4, 0, 0, 1600, 32, 1, 51200</column>
-<column name="output4_oc_U">conv1_output4_oc, 1, 0, 0, 400, 32, 1, 12800</column>
+<column name="output4_oc_U">conv1_output4_oc, 2, 0, 0, 400, 32, 1, 12800</column>
 <column name="output6_oc_U">conv1_output6_oc, 0, 64, 5, 10, 32, 1, 320</column>
-<column name="weights_3_oc_U">conv1_weights_3_oc, 8, 0, 0, 2400, 32, 1, 76800</column>
-<column name="weights_5_oc_U">conv1_weights_5_oc, 128, 0, 0, 48000, 32, 1, 1536000</column>
+<column name="weights_3_0_oc_U">conv1_weights_3_0eOg, 1, 0, 0, 400, 32, 1, 12800</column>
+<column name="weights_3_1_oc_U">conv1_weights_3_0eOg, 1, 0, 0, 400, 32, 1, 12800</column>
+<column name="weights_3_2_oc_U">conv1_weights_3_0eOg, 1, 0, 0, 400, 32, 1, 12800</column>
+<column name="weights_3_3_oc_U">conv1_weights_3_0eOg, 1, 0, 0, 400, 32, 1, 12800</column>
+<column name="weights_3_4_oc_U">conv1_weights_3_0eOg, 1, 0, 0, 400, 32, 1, 12800</column>
+<column name="weights_3_5_oc_U">conv1_weights_3_0eOg, 1, 0, 0, 400, 32, 1, 12800</column>
+<column name="weights_5_0_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_1_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_2_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_3_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_4_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_5_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_6_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_7_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_8_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_9_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_10_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_11_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_12_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_13_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_14_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
+<column name="weights_5_15_oc_U">conv1_weights_5_0kbM, 8, 0, 0, 3000, 32, 1, 96000</column>
 <column name="weights_oc_0_U">conv1_weights_oc_0, 2, 0, 0, 150, 32, 1, 4800</column>
 </table>
 </item>
@@ -134,21 +150,25 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_18_fu_661_p2">+, 0, 0, 13, 4, 1</column>
-<column name="i_fu_603_p2">+, 0, 0, 15, 7, 1</column>
-<column name="tmp_43_fu_649_p2">and, 0, 0, 2, 1, 1</column>
-<column name="tmp_47_fu_707_p2">and, 0, 0, 2, 1, 1</column>
-<column name="exitcond2_i_fu_597_p2">icmp, 0, 0, 11, 7, 5</column>
-<column name="exitcond_i1_fu_655_p2">icmp, 0, 0, 9, 4, 4</column>
-<column name="notlhs4_fu_689_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="notlhs_fu_631_p2">icmp, 0, 0, 11, 8, 2</column>
-<column name="notrhs5_fu_695_p2">icmp, 0, 0, 18, 23, 1</column>
-<column name="notrhs_fu_637_p2">icmp, 0, 0, 18, 23, 1</column>
+<column name="i_14_fu_811_p2">+, 0, 0, 13, 4, 1</column>
+<column name="i_fu_753_p2">+, 0, 0, 15, 7, 1</column>
+<column name="tmp_42_fu_857_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_47_fu_799_p2">and, 0, 0, 2, 1, 1</column>
+<column name="exitcond2_i_fu_747_p2">icmp, 0, 0, 11, 7, 5</column>
+<column name="exitcond_i1_fu_805_p2">icmp, 0, 0, 9, 4, 4</column>
+<column name="notlhs1_fu_839_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="notlhs_fu_781_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="notrhs1_fu_845_p2">icmp, 0, 0, 18, 23, 1</column>
+<column name="notrhs_fu_787_p2">icmp, 0, 0, 18, 23, 1</column>
+<column name="ap_block_state16_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state18_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state20_on_subcall_done">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_on_subcall_done">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state4_on_subcall_done">or, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state6_on_subcall_done">or, 0, 0, 2, 1, 1</column>
-<column name="tmp_41_fu_643_p2">or, 0, 0, 2, 1, 1</column>
-<column name="tmp_45_fu_701_p2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state8_on_subcall_done">or, 0, 0, 2, 1, 1</column>
+<column name="tmp_40_fu_851_p2">or, 0, 0, 2, 1, 1</column>
+<column name="tmp_45_fu_793_p2">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -184,7 +204,7 @@
 <column name="DATA_WEIGHT_ARUSER">27, 5, 1, 5</column>
 <column name="DATA_WEIGHT_ARVALID">27, 5, 1, 5</column>
 <column name="DATA_WEIGHT_RREADY">27, 5, 1, 5</column>
-<column name="ap_NS_fsm">133, 29, 1, 29</column>
+<column name="ap_NS_fsm">245, 57, 1, 57</column>
 <column name="bias_3_oc_address0">15, 3, 4, 12</column>
 <column name="bias_3_oc_ce0">15, 3, 1, 3</column>
 <column name="bias_3_oc_we0">9, 2, 1, 2</column>
@@ -194,28 +214,29 @@
 <column name="bias_oc_address0">15, 3, 3, 9</column>
 <column name="bias_oc_ce0">15, 3, 1, 3</column>
 <column name="bias_oc_we0">9, 2, 1, 2</column>
-<column name="grp_fu_489_p0">15, 3, 32, 96</column>
-<column name="i_i1_reg_343">9, 2, 4, 8</column>
-<column name="i_i_reg_332">9, 2, 7, 14</column>
+<column name="grp_fu_639_p0">15, 3, 32, 96</column>
+<column name="grp_store_weights_3_fu_573_input_channel">38, 7, 4, 28</column>
+<column name="grp_store_weights_5_fu_548_input_channel">85, 17, 5, 85</column>
+<column name="i_i1_reg_459">9, 2, 4, 8</column>
+<column name="i_i_reg_448">9, 2, 7, 14</column>
 <column name="input_oc_0_address0">15, 3, 10, 30</column>
 <column name="input_oc_0_ce0">15, 3, 1, 3</column>
 <column name="input_oc_0_ce1">9, 2, 1, 2</column>
 <column name="input_oc_0_we0">9, 2, 1, 2</column>
-<column name="output1_oc_address0">21, 4, 13, 52</column>
-<column name="output1_oc_ce0">21, 4, 1, 4</column>
-<column name="output1_oc_d0">15, 3, 32, 96</column>
-<column name="output1_oc_we0">15, 3, 1, 3</column>
+<column name="output1_oc_address0">15, 3, 13, 39</column>
+<column name="output1_oc_ce0">15, 3, 1, 3</column>
+<column name="output1_oc_we0">9, 2, 1, 2</column>
 <column name="output2_oc_address0">21, 4, 11, 44</column>
 <column name="output2_oc_ce0">21, 4, 1, 4</column>
 <column name="output2_oc_ce1">9, 2, 1, 2</column>
 <column name="output2_oc_d0">15, 3, 32, 96</column>
 <column name="output2_oc_we0">15, 3, 1, 3</column>
-<column name="output3_oc_address0">21, 4, 11, 44</column>
-<column name="output3_oc_ce0">21, 4, 1, 4</column>
-<column name="output3_oc_d0">15, 3, 32, 96</column>
-<column name="output3_oc_we0">15, 3, 1, 3</column>
+<column name="output3_oc_address0">15, 3, 11, 33</column>
+<column name="output3_oc_ce0">15, 3, 1, 3</column>
+<column name="output3_oc_we0">9, 2, 1, 2</column>
 <column name="output4_oc_address0">21, 4, 9, 36</column>
 <column name="output4_oc_ce0">21, 4, 1, 4</column>
+<column name="output4_oc_ce1">9, 2, 1, 2</column>
 <column name="output4_oc_d0">15, 3, 32, 96</column>
 <column name="output4_oc_we0">15, 3, 1, 3</column>
 <column name="output5_oc_0_0_address0">27, 5, 7, 35</column>
@@ -226,13 +247,72 @@
 <column name="output6_oc_ce0">21, 4, 1, 4</column>
 <column name="output6_oc_d0">15, 3, 32, 96</column>
 <column name="output6_oc_we0">15, 3, 1, 3</column>
-<column name="weights_3_oc_address0">15, 3, 12, 36</column>
-<column name="weights_3_oc_ce0">15, 3, 1, 3</column>
-<column name="weights_3_oc_ce1">9, 2, 1, 2</column>
-<column name="weights_3_oc_we0">9, 2, 1, 2</column>
-<column name="weights_5_oc_address0">15, 3, 16, 48</column>
-<column name="weights_5_oc_ce0">15, 3, 1, 3</column>
-<column name="weights_5_oc_we0">9, 2, 1, 2</column>
+<column name="weights_3_0_oc_address0">15, 3, 9, 27</column>
+<column name="weights_3_0_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_3_0_oc_we0">9, 2, 1, 2</column>
+<column name="weights_3_1_oc_address0">15, 3, 9, 27</column>
+<column name="weights_3_1_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_3_1_oc_we0">9, 2, 1, 2</column>
+<column name="weights_3_2_oc_address0">15, 3, 9, 27</column>
+<column name="weights_3_2_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_3_2_oc_we0">9, 2, 1, 2</column>
+<column name="weights_3_3_oc_address0">15, 3, 9, 27</column>
+<column name="weights_3_3_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_3_3_oc_we0">9, 2, 1, 2</column>
+<column name="weights_3_4_oc_address0">15, 3, 9, 27</column>
+<column name="weights_3_4_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_3_4_oc_we0">9, 2, 1, 2</column>
+<column name="weights_3_5_oc_address0">15, 3, 9, 27</column>
+<column name="weights_3_5_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_3_5_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_0_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_0_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_0_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_10_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_10_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_10_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_11_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_11_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_11_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_12_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_12_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_12_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_13_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_13_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_13_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_14_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_14_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_14_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_15_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_15_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_15_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_1_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_1_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_1_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_2_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_2_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_2_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_3_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_3_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_3_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_4_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_4_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_4_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_5_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_5_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_5_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_6_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_6_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_6_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_7_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_7_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_7_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_8_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_8_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_8_oc_we0">9, 2, 1, 2</column>
+<column name="weights_5_9_oc_address0">15, 3, 12, 36</column>
+<column name="weights_5_9_oc_ce0">15, 3, 1, 3</column>
+<column name="weights_5_9_oc_we0">9, 2, 1, 2</column>
 <column name="weights_oc_0_address0">15, 3, 8, 24</column>
 <column name="weights_oc_0_ce0">15, 3, 1, 3</column>
 <column name="weights_oc_0_ce1">9, 2, 1, 2</column>
@@ -241,43 +321,41 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">28, 0, 28, 0</column>
-<column name="bias1_reg_733">30, 0, 30, 0</column>
-<column name="bias_1_reg_723">30, 0, 30, 0</column>
-<column name="bias_2_reg_728">30, 0, 30, 0</column>
-<column name="bias_s_reg_718">30, 0, 30, 0</column>
-<column name="grp_convolution_3_fu_354_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_convolution_5_fu_382_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_convulution1_fu_362_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_fc_6_fu_370_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_maxpool_2_fu_390_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_maxpool_4_fu_396_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_relu_1_fu_418_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_relu_2_fu_433_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_relu_3_fu_423_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_relu_4_fu_428_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_store_bias_3_fu_464_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_store_bias_5_fu_456_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_store_bias_fu_480_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_store_input_fu_447_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_store_output_fu_472_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_store_weights_3_fu_410_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_store_weights_5_fu_402_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_store_weights_fu_438_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_18_reg_788">4, 0, 4, 0</column>
-<column name="i_i1_reg_343">4, 0, 4, 0</column>
-<column name="i_i_reg_332">7, 0, 7, 0</column>
-<column name="i_reg_766">7, 0, 7, 0</column>
-<column name="input1_reg_758">30, 0, 30, 0</column>
-<column name="output1_reg_713">30, 0, 30, 0</column>
-<column name="output5_oc_0_0_add_reg_771">7, 0, 7, 0</column>
-<column name="output5_oc_0_0_loa_reg_776">32, 0, 32, 0</column>
-<column name="output6_oc_addr_reg_793">4, 0, 4, 0</column>
-<column name="output6_oc_load_reg_798">32, 0, 32, 0</column>
-<column name="weights3_reg_753">30, 0, 30, 0</column>
-<column name="weights_1_reg_743">30, 0, 30, 0</column>
-<column name="weights_2_reg_748">30, 0, 30, 0</column>
-<column name="weights_s_reg_738">30, 0, 30, 0</column>
+<column name="ap_CS_fsm">56, 0, 56, 0</column>
+<column name="bias1_reg_883">30, 0, 30, 0</column>
+<column name="bias_1_reg_873">30, 0, 30, 0</column>
+<column name="bias_2_reg_878">30, 0, 30, 0</column>
+<column name="bias_s_reg_868">30, 0, 30, 0</column>
+<column name="grp_convolution_3_fu_501_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_convolution_5_fu_470_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_convulution1_fu_493_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_fc_6_fu_514_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_maxpool_2_fu_526_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_maxpool_4_fu_532_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_relu_2_fu_543_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_relu_4_fu_538_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_store_bias_3_fu_614_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_store_bias_5_fu_606_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_store_bias_fu_630_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_store_input_fu_597_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_store_output_fu_622_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_store_weights_3_fu_573_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_store_weights_5_fu_548_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_store_weights_fu_588_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_14_reg_938">4, 0, 4, 0</column>
+<column name="i_i1_reg_459">4, 0, 4, 0</column>
+<column name="i_i_reg_448">7, 0, 7, 0</column>
+<column name="i_reg_916">7, 0, 7, 0</column>
+<column name="input1_reg_908">30, 0, 30, 0</column>
+<column name="output1_reg_863">30, 0, 30, 0</column>
+<column name="output5_oc_0_0_add_reg_921">7, 0, 7, 0</column>
+<column name="output5_oc_0_0_loa_reg_926">32, 0, 32, 0</column>
+<column name="output6_oc_addr_reg_943">4, 0, 4, 0</column>
+<column name="output6_oc_load_reg_948">32, 0, 32, 0</column>
+<column name="weights3_reg_903">30, 0, 30, 0</column>
+<column name="weights_1_reg_893">30, 0, 30, 0</column>
+<column name="weights_2_reg_898">30, 0, 30, 0</column>
+<column name="weights_s_reg_888">30, 0, 30, 0</column>
 </table>
 </item>
 </section>

@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename weights_oc \
     op interface \
-    ports { weights_oc_address0 { O 12 vector } weights_oc_ce0 { O 1 bit } weights_oc_we0 { O 1 bit } weights_oc_d0 { O 32 vector } } \
+    ports { weights_oc_address0 { O 9 vector } weights_oc_ce0 { O 1 bit } weights_oc_we0 { O 1 bit } weights_oc_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'weights_oc'"
@@ -53,6 +53,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_weights_offset \
     op interface \
     ports { weights_offset { I 30 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 10 \
+    name input_channel \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_input_channel \
+    op interface \
+    ports { input_channel { I 4 vector } } \
 } "
 }
 

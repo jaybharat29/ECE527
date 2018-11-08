@@ -156,39 +156,39 @@ reg   [63:0] sext_reg_229;
 wire   [2:0] i_3_fu_126_p2;
 reg   [2:0] i_3_reg_237;
 wire    ap_CS_fsm_state2;
-wire   [5:0] tmp_19_fu_148_p2;
-reg   [5:0] tmp_19_reg_242;
+wire   [5:0] tmp_27_fu_148_p2;
+reg   [5:0] tmp_27_reg_242;
 wire   [0:0] exitcond2_fu_120_p2;
 wire   [2:0] j_3_fu_160_p2;
 reg   [2:0] j_3_reg_250;
 wire    ap_CS_fsm_state3;
-wire   [63:0] tmp_21_fu_191_p2;
-reg   [63:0] tmp_21_reg_255;
+wire   [63:0] tmp_29_fu_191_p2;
+reg   [63:0] tmp_29_reg_255;
 wire   [0:0] exitcond1_fu_154_p2;
 reg   [31:0] weights_addr_reg_260;
 wire   [2:0] k_3_fu_214_p2;
 reg   [2:0] k_3_reg_269;
 reg    ap_block_state11;
-wire   [63:0] tmp_22_fu_224_p2;
-reg   [63:0] tmp_22_reg_274;
+wire   [63:0] tmp_30_fu_224_p2;
+reg   [63:0] tmp_30_reg_274;
 reg   [31:0] weights_addr_read_reg_279;
 reg   [2:0] i_reg_83;
 reg   [2:0] j_reg_94;
 reg   [2:0] k_reg_105;
 wire    ap_CS_fsm_state12;
 wire    ap_CS_fsm_state10;
-wire   [63:0] tmp_12_fu_197_p2;
+wire   [63:0] tmp_15_fu_197_p2;
 reg    ap_reg_ioackin_m_axi_weights_ARREADY;
 reg    ap_sig_ioackin_m_axi_weights_ARREADY;
 wire   [4:0] tmp_s_fu_136_p3;
 wire   [5:0] tmp_cast_fu_132_p1;
 wire   [5:0] p_shl_cast_fu_144_p1;
 wire   [5:0] tmp_cast_10_fu_166_p1;
-wire   [5:0] tmp_20_fu_170_p2;
+wire   [5:0] tmp_28_fu_170_p2;
 wire   [7:0] tmp_fu_179_p3;
-wire   [63:0] tmp_28_cast_fu_175_p1;
+wire   [63:0] tmp_38_cast_fu_175_p1;
 wire   [63:0] p_shl1_fu_187_p1;
-wire   [63:0] tmp_2_fu_220_p1;
+wire   [63:0] tmp_1_fu_220_p1;
 reg   [11:0] ap_NS_fsm;
 
 // power-on initialization
@@ -269,20 +269,20 @@ end
 
 always @ (posedge ap_clk) begin
     if (((exitcond2_fu_120_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        tmp_19_reg_242 <= tmp_19_fu_148_p2;
+        tmp_27_reg_242 <= tmp_27_fu_148_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((exitcond1_fu_154_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        tmp_21_reg_255 <= tmp_21_fu_191_p2;
-        weights_addr_reg_260 <= tmp_12_fu_197_p2;
+        tmp_29_reg_255 <= tmp_29_fu_191_p2;
+        weights_addr_reg_260 <= tmp_15_fu_197_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((~((exitcond_fu_208_p2 == 1'd0) & (m_axi_weights_RVALID == 1'b0)) & (exitcond_fu_208_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state11))) begin
-        tmp_22_reg_274 <= tmp_22_fu_224_p2;
+        tmp_30_reg_274 <= tmp_30_fu_224_p2;
         weights_addr_read_reg_279 <= m_axi_weights_RDATA;
     end
 end
@@ -529,29 +529,29 @@ assign p_shl_cast_fu_144_p1 = tmp_s_fu_136_p3;
 
 assign sext_fu_116_p1 = weights_offset;
 
-assign tmp_12_fu_197_p2 = (sext_reg_229 + tmp_21_fu_191_p2);
+assign tmp_15_fu_197_p2 = (sext_reg_229 + tmp_29_fu_191_p2);
 
-assign tmp_19_fu_148_p2 = (tmp_cast_fu_132_p1 + p_shl_cast_fu_144_p1);
+assign tmp_1_fu_220_p1 = k_reg_105;
 
-assign tmp_20_fu_170_p2 = (tmp_19_reg_242 + tmp_cast_10_fu_166_p1);
+assign tmp_27_fu_148_p2 = (tmp_cast_fu_132_p1 + p_shl_cast_fu_144_p1);
 
-assign tmp_21_fu_191_p2 = (tmp_28_cast_fu_175_p1 + p_shl1_fu_187_p1);
+assign tmp_28_fu_170_p2 = (tmp_27_reg_242 + tmp_cast_10_fu_166_p1);
 
-assign tmp_22_fu_224_p2 = (tmp_2_fu_220_p1 + tmp_21_reg_255);
+assign tmp_29_fu_191_p2 = (tmp_38_cast_fu_175_p1 + p_shl1_fu_187_p1);
 
-assign tmp_28_cast_fu_175_p1 = tmp_20_fu_170_p2;
+assign tmp_30_fu_224_p2 = (tmp_1_fu_220_p1 + tmp_29_reg_255);
 
-assign tmp_2_fu_220_p1 = k_reg_105;
+assign tmp_38_cast_fu_175_p1 = tmp_28_fu_170_p2;
 
 assign tmp_cast_10_fu_166_p1 = j_reg_94;
 
 assign tmp_cast_fu_132_p1 = i_reg_83;
 
-assign tmp_fu_179_p3 = {{tmp_20_fu_170_p2}, {2'd0}};
+assign tmp_fu_179_p3 = {{tmp_28_fu_170_p2}, {2'd0}};
 
 assign tmp_s_fu_136_p3 = {{i_reg_83}, {2'd0}};
 
-assign weights_oc_0_address0 = tmp_22_reg_274;
+assign weights_oc_0_address0 = tmp_30_reg_274;
 
 assign weights_oc_0_d0 = weights_addr_read_reg_279;
 

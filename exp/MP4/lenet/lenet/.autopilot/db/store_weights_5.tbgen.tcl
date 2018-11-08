@@ -14,14 +14,16 @@ set C_modelType { void 0 }
 set C_modelArgList {
 	{ weights float 32 regular {axi_master 0}  }
 	{ weights_offset int 30 regular  }
-	{ weights_oc float 32 regular {array 48000 { 0 3 } 0 1 }  }
+	{ weights_oc float 32 regular {array 3000 { 0 3 } 0 1 }  }
+	{ input_channel int 5 regular  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "weights", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "weights_offset", "interface" : "wire", "bitwidth" : 30, "direction" : "READONLY"} , 
- 	{ "Name" : "weights_oc", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
+ 	{ "Name" : "weights_oc", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "input_channel", "interface" : "wire", "bitwidth" : 5, "direction" : "READONLY"} ]}
 # RTL Port declarations: 
-set portNum 56
+set portNum 57
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -75,10 +77,11 @@ set portList {
 	{ m_axi_weights_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_weights_BUSER sc_in sc_lv 1 signal 0 } 
 	{ weights_offset sc_in sc_lv 30 signal 1 } 
-	{ weights_oc_address0 sc_out sc_lv 16 signal 2 } 
+	{ weights_oc_address0 sc_out sc_lv 12 signal 2 } 
 	{ weights_oc_ce0 sc_out sc_logic 1 signal 2 } 
 	{ weights_oc_we0 sc_out sc_logic 1 signal 2 } 
 	{ weights_oc_d0 sc_out sc_lv 32 signal 2 } 
+	{ input_channel sc_in sc_lv 5 signal 3 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -133,10 +136,11 @@ set NewPortList {[
  	{ "name": "m_axi_weights_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "weights", "role": "BID" }} , 
  	{ "name": "m_axi_weights_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "weights", "role": "BUSER" }} , 
  	{ "name": "weights_offset", "direction": "in", "datatype": "sc_lv", "bitwidth":30, "type": "signal", "bundle":{"name": "weights_offset", "role": "default" }} , 
- 	{ "name": "weights_oc_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "weights_oc", "role": "address0" }} , 
+ 	{ "name": "weights_oc_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":12, "type": "signal", "bundle":{"name": "weights_oc", "role": "address0" }} , 
  	{ "name": "weights_oc_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "weights_oc", "role": "ce0" }} , 
  	{ "name": "weights_oc_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "weights_oc", "role": "we0" }} , 
- 	{ "name": "weights_oc_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "weights_oc", "role": "d0" }}  ]}
+ 	{ "name": "weights_oc_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "weights_oc", "role": "d0" }} , 
+ 	{ "name": "input_channel", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "input_channel", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
@@ -145,7 +149,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "48012", "EstimateLatencyMax" : "48012",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3012", "EstimateLatencyMax" : "3012",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -158,20 +162,22 @@ set RtlHierarchyInfo {[
 					{"Name" : "weights_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "weights_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "weights_offset", "Type" : "None", "Direction" : "I"},
-			{"Name" : "weights_oc", "Type" : "Memory", "Direction" : "O"}]}]}
+			{"Name" : "weights_oc", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "input_channel", "Type" : "None", "Direction" : "I"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	store_weights_5 {
 		weights {Type I LastRead 11 FirstWrite -1}
 		weights_offset {Type I LastRead 0 FirstWrite -1}
-		weights_oc {Type O LastRead -1 FirstWrite 12}}}
+		weights_oc {Type O LastRead -1 FirstWrite 12}
+		input_channel {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "48012", "Max" : "48012"}
-	, {"Name" : "Interval", "Min" : "48012", "Max" : "48012"}
+	{"Name" : "Latency", "Min" : "3012", "Max" : "3012"}
+	, {"Name" : "Interval", "Min" : "3012", "Max" : "3012"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -181,5 +187,6 @@ set PipelineEnableSignalInfo {[
 set Spec2ImplPortList { 
 	weights { m_axi {  { m_axi_weights_AWVALID VALID 1 1 }  { m_axi_weights_AWREADY READY 0 1 }  { m_axi_weights_AWADDR ADDR 1 32 }  { m_axi_weights_AWID ID 1 1 }  { m_axi_weights_AWLEN LEN 1 32 }  { m_axi_weights_AWSIZE SIZE 1 3 }  { m_axi_weights_AWBURST BURST 1 2 }  { m_axi_weights_AWLOCK LOCK 1 2 }  { m_axi_weights_AWCACHE CACHE 1 4 }  { m_axi_weights_AWPROT PROT 1 3 }  { m_axi_weights_AWQOS QOS 1 4 }  { m_axi_weights_AWREGION REGION 1 4 }  { m_axi_weights_AWUSER USER 1 1 }  { m_axi_weights_WVALID VALID 1 1 }  { m_axi_weights_WREADY READY 0 1 }  { m_axi_weights_WDATA DATA 1 32 }  { m_axi_weights_WSTRB STRB 1 4 }  { m_axi_weights_WLAST LAST 1 1 }  { m_axi_weights_WID ID 1 1 }  { m_axi_weights_WUSER USER 1 1 }  { m_axi_weights_ARVALID VALID 1 1 }  { m_axi_weights_ARREADY READY 0 1 }  { m_axi_weights_ARADDR ADDR 1 32 }  { m_axi_weights_ARID ID 1 1 }  { m_axi_weights_ARLEN LEN 1 32 }  { m_axi_weights_ARSIZE SIZE 1 3 }  { m_axi_weights_ARBURST BURST 1 2 }  { m_axi_weights_ARLOCK LOCK 1 2 }  { m_axi_weights_ARCACHE CACHE 1 4 }  { m_axi_weights_ARPROT PROT 1 3 }  { m_axi_weights_ARQOS QOS 1 4 }  { m_axi_weights_ARREGION REGION 1 4 }  { m_axi_weights_ARUSER USER 1 1 }  { m_axi_weights_RVALID VALID 0 1 }  { m_axi_weights_RREADY READY 1 1 }  { m_axi_weights_RDATA DATA 0 32 }  { m_axi_weights_RLAST LAST 0 1 }  { m_axi_weights_RID ID 0 1 }  { m_axi_weights_RUSER USER 0 1 }  { m_axi_weights_RRESP RESP 0 2 }  { m_axi_weights_BVALID VALID 0 1 }  { m_axi_weights_BREADY READY 1 1 }  { m_axi_weights_BRESP RESP 0 2 }  { m_axi_weights_BID ID 0 1 }  { m_axi_weights_BUSER USER 0 1 } } }
 	weights_offset { ap_none {  { weights_offset in_data 0 30 } } }
-	weights_oc { ap_memory {  { weights_oc_address0 mem_address 1 16 }  { weights_oc_ce0 mem_ce 1 1 }  { weights_oc_we0 mem_we 1 1 }  { weights_oc_d0 mem_din 1 32 } } }
+	weights_oc { ap_memory {  { weights_oc_address0 mem_address 1 12 }  { weights_oc_ce0 mem_ce 1 1 }  { weights_oc_we0 mem_we 1 1 }  { weights_oc_d0 mem_din 1 32 } } }
+	input_channel { ap_none {  { input_channel in_data 0 5 } } }
 }

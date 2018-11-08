@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 12 \
+    id 13 \
     name weights_oc \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename weights_oc \
     op interface \
-    ports { weights_oc_address0 { O 16 vector } weights_oc_ce0 { O 1 bit } weights_oc_we0 { O 1 bit } weights_oc_d0 { O 32 vector } } \
+    ports { weights_oc_address0 { O 12 vector } weights_oc_ce0 { O 1 bit } weights_oc_we0 { O 1 bit } weights_oc_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'weights_oc'"
@@ -29,7 +29,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
+    id 11 \
     name weights \
     type other \
     dir I \
@@ -44,7 +44,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 11 \
+    id 12 \
     name weights_offset \
     type other \
     dir I \
@@ -53,6 +53,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_weights_offset \
     op interface \
     ports { weights_offset { I 30 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 14 \
+    name input_channel \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_input_channel \
+    op interface \
+    ports { input_channel { I 5 vector } } \
 } "
 }
 

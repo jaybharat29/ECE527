@@ -521,7 +521,7 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>tmp_19</name>
+						<name>tmp_27</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -830,7 +830,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>tmp_20</name>
+						<name>tmp_28</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -876,7 +876,7 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>tmp_28_cast</name>
+						<name>tmp_38_cast</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1013,7 +1013,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_21</name>
+						<name>tmp_29</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1059,7 +1059,7 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>tmp_12</name>
+						<name>tmp_15</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1416,7 +1416,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>tmp_2</name>
+						<name>tmp_1</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -1461,7 +1461,7 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>tmp_22</name>
+						<name>tmp_30</name>
 						<fileName>ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/lenet_acc.cpp</fileName>
 						<fileDirectory>C:\Users\nados\OneDrive\Documents\UIUC\Fall2018\ECE527\exp\MP4</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -4330,7 +4330,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_12_fu_197</first>
+			<first>tmp_15_fu_197</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4338,7 +4338,15 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_19_fu_148</first>
+			<first>tmp_1_fu_220</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>44</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_27_fu_148</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4346,7 +4354,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_20_fu_170</first>
+			<first>tmp_28_fu_170</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4354,7 +4362,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_21_fu_191</first>
+			<first>tmp_29_fu_191</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4362,7 +4370,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_22_fu_224</first>
+			<first>tmp_30_fu_224</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4370,19 +4378,11 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_28_cast_fu_175</first>
+			<first>tmp_38_cast_fu_175</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>29</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_2_fu_220</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>44</item>
 			</second>
 		</item>
 		<item>
@@ -4651,7 +4651,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_19_reg_242</first>
+			<first>tmp_27_reg_242</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4659,7 +4659,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_21_reg_255</first>
+			<first>tmp_29_reg_255</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4667,7 +4667,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_22_reg_274</first>
+			<first>tmp_30_reg_274</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
